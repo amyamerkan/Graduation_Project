@@ -1,0 +1,377 @@
+{
+  "scope": "Development ablation: 16 hand-paraphrased known-positive queries, 50 random distractor documents/domain. Not an independent thesis benchmark or fact validation.",
+  "documents": 216,
+  "chunks": 588,
+  "variants": {
+    "baseline_e5": {
+      "cases": 16,
+      "hit_at_1": 0.8125,
+      "recall_at_5_known_positive": 0.9375,
+      "mrr_at_5": 0.859375,
+      "elapsed_seconds": 47.16296666600101,
+      "details": [
+        {
+          "question": "Vợ chồng chia tay thì căn nhà riêng đã dùng chung được xử lý thế nào?",
+          "rank": 2,
+          "retrieved_doc_ids": [
+            "1f916c87f2b088615d6e056481d365b18fa414606155cdf536ff2fbf10f71fa9",
+            "ecb89a376e9b874f3c2dd31e1b8eba88778325b30d9e01e259ed09f320233cc3",
+            "1f916c87f2b088615d6e056481d365b18fa414606155cdf536ff2fbf10f71fa9",
+            "1f916c87f2b088615d6e056481d365b18fa414606155cdf536ff2fbf10f71fa9",
+            "ecb89a376e9b874f3c2dd31e1b8eba88778325b30d9e01e259ed09f320233cc3"
+          ]
+        },
+        {
+          "question": "Đi chứng thực chữ ký cần đem giấy tờ tùy thân nào?",
+          "rank": 1,
+          "retrieved_doc_ids": [
+            "93c710de22b78b48e923f4ee3558701166f05572f326d75cfa06d43c02991787",
+            "93c710de22b78b48e923f4ee3558701166f05572f326d75cfa06d43c02991787",
+            "93c710de22b78b48e923f4ee3558701166f05572f326d75cfa06d43c02991787",
+            "cbf5ab35d41078c4d159e9b49e01c8a1ab1181e1b5eb3fc935a7d4eb01a353ba",
+            "956ad35b101a9852c4c920e398e7b92844393a430e27561fd1aa1837b08f5184"
+          ]
+        },
+        {
+          "question": "Sau ly hôn, người nuôi con muốn cho con đi du học khi người kia phản đối.",
+          "rank": 1,
+          "retrieved_doc_ids": [
+            "2a634a6a02205448c48897c0114bd17d522f2148810e0c6f9af604db8e4e3398",
+            "2a634a6a02205448c48897c0114bd17d522f2148810e0c6f9af604db8e4e3398",
+            "2a634a6a02205448c48897c0114bd17d522f2148810e0c6f9af604db8e4e3398",
+            "65240b5de139c2c8e0d6ded531f7bed6b86ca8fe2c03c7ff7277249c7e5d0024",
+            "1f916c87f2b088615d6e056481d365b18fa414606155cdf536ff2fbf10f71fa9"
+          ]
+        },
+        {
+          "question": "Cha mẹ nuôi có giữ quyền chăm sóc bé Linh khi mẹ ruột đòi lại con không?",
+          "rank": 1,
+          "retrieved_doc_ids": [
+            "65240b5de139c2c8e0d6ded531f7bed6b86ca8fe2c03c7ff7277249c7e5d0024",
+            "65240b5de139c2c8e0d6ded531f7bed6b86ca8fe2c03c7ff7277249c7e5d0024",
+            "65240b5de139c2c8e0d6ded531f7bed6b86ca8fe2c03c7ff7277249c7e5d0024",
+            "2a634a6a02205448c48897c0114bd17d522f2148810e0c6f9af604db8e4e3398",
+            "83e303d3b814be94b85e4b57ea6f0c980219ce71a3f70bbc6a6c0d7cb01c8542"
+          ]
+        },
+        {
+          "question": "Hà Nội là đơn vị hành chính cấp nào?",
+          "rank": 1,
+          "retrieved_doc_ids": [
+            "9a28af531ca201098c08dc8f8f42379880032bb44cd1d41241084e2dee7c58d1",
+            "bd4419e078f8e9073c04336540730fc57d957cbf33b75196873cec479b5583a3",
+            "c62056c948efa0da7c6adff6c69a545e7799f2f70c710e7de66c91be638b41c5",
+            "9da805e36c288cce013fbcd05e431a33fafcc40102cb7aabf7defc32924d64f5",
+            "250003fc17bc9ec8348708e5d0a08351fd43aa7b08946400b420171fce503073"
+          ]
+        },
+        {
+          "question": "Mã số hành chính của phường Ba Đình và thành phố quản lý phường này",
+          "rank": 1,
+          "retrieved_doc_ids": [
+            "c62056c948efa0da7c6adff6c69a545e7799f2f70c710e7de66c91be638b41c5",
+            "59aef8706eeea20f6a65086a08789e74d72705b3e7870eccacd22b370b95ac81",
+            "bd4419e078f8e9073c04336540730fc57d957cbf33b75196873cec479b5583a3",
+            "96443a494bb62b66331dc075e525867e3878344d5be935d17761f30b50584269",
+            "250003fc17bc9ec8348708e5d0a08351fd43aa7b08946400b420171fce503073"
+          ]
+        },
+        {
+          "question": "Ngọc Hà trực thuộc thành phố nào và có mã gì?",
+          "rank": 1,
+          "retrieved_doc_ids": [
+            "bd4419e078f8e9073c04336540730fc57d957cbf33b75196873cec479b5583a3",
+            "00e7d234d3b1f3f0d17cb6cf927c074c98e882b54479b361b32ab41cca2bbd3a",
+            "5ee6fb5c52ff331fc9c0b98bae91820acee8e2b22e012f1c9a4e6e334556907e",
+            "59aef8706eeea20f6a65086a08789e74d72705b3e7870eccacd22b370b95ac81",
+            "7a399dd3531b90a1ab48ffe05bb4c67681fa83c02eb5ca73638260e0521bde4d"
+          ]
+        },
+        {
+          "question": "Tra cứu thông tin đơn vị hành chính Giảng Võ",
+          "rank": 1,
+          "retrieved_doc_ids": [
+            "f3fe153527f49536188644d55ccac3abb18d59b3854d9d2e2859d89fd1e487a5",
+            "9c68bc8139fb8c385204f01e6e3892e2134196724d7c0270f8573b811855db94",
+            "59aef8706eeea20f6a65086a08789e74d72705b3e7870eccacd22b370b95ac81",
+            "8cac39c487025fb8c4dc841ddeed71a10bb6d04133d58eacb77e8a15a03ffa6d",
+            "5ee6fb5c52ff331fc9c0b98bae91820acee8e2b22e012f1c9a4e6e334556907e"
+          ]
+        },
+        {
+          "question": "Kỷ vật áo dù của tướng Lê Hữu Đức gắn liền với mặt trận nào?",
+          "rank": 1,
+          "retrieved_doc_ids": [
+            "ecd80fd17557687cf0c680457b21149ca4f8a262230575421d870088e9aaee5d",
+            "dd34ea6cc5cf59433ec336908600d81681b1ac5ce6a1a8cd5f585c5dbbdc0feb",
+            "6ce66bb6c42ec15818ce89972b8bbe7be8271249299cf03b8c0ec2bc74eb7d06",
+            "5c24cb5de26bc45c9431965b8c595016bbaa220ffd75ba96007992ad5a924209",
+            "a92baf8af651cc7728277022de53768113fb096272786e352ab02cccdc474d55"
+          ]
+        },
+        {
+          "question": "Dụng cụ khám chữa bệnh trên đảo Trường Sa Lớn được sử dụng trong giai đoạn nào?",
+          "rank": 1,
+          "retrieved_doc_ids": [
+            "3de31779e3cd7437c9806fbcefe31cd6896e037b6a75a9f8e60328ab3e97e787",
+            "1fafa1dfdbbb822684201823f9d4dc8e7d5ff135c895826dc03ba94b1eeb3ae0",
+            "5c24cb5de26bc45c9431965b8c595016bbaa220ffd75ba96007992ad5a924209",
+            "0d8c9b7cfebff3bfc4a80c193107ca4a548468f132c8e8adac07aea2a1362df4",
+            "dd2ddeeaaada735d8fd7185fbeefce560a8ba8d0be909dec7d0b6ac587810cb2"
+          ]
+        },
+        {
+          "question": "Ai là bác sĩ phụ trách bệnh xá Trường Sa Lớn gắn với bộ dụng cụ y tế?",
+          "rank": 1,
+          "retrieved_doc_ids": [
+            "1fafa1dfdbbb822684201823f9d4dc8e7d5ff135c895826dc03ba94b1eeb3ae0",
+            "3de31779e3cd7437c9806fbcefe31cd6896e037b6a75a9f8e60328ab3e97e787",
+            "ecd80fd17557687cf0c680457b21149ca4f8a262230575421d870088e9aaee5d",
+            "5c24cb5de26bc45c9431965b8c595016bbaa220ffd75ba96007992ad5a924209",
+            "dd2ddeeaaada735d8fd7185fbeefce560a8ba8d0be909dec7d0b6ac587810cb2"
+          ]
+        },
+        {
+          "question": "Trần Văn Vinh tham gia cứu trợ động đất năm 2023 ở nước nào?",
+          "rank": 1,
+          "retrieved_doc_ids": [
+            "5c24cb5de26bc45c9431965b8c595016bbaa220ffd75ba96007992ad5a924209",
+            "376c3f7cf29d7b0be0d239d736755b5eed619bae66e4a268621f8defe47260ee",
+            "e6e2ef41cb5cc095197222703f0ff430f06d6f3ff3cfb461a4e61d0f9af80655",
+            "376c3f7cf29d7b0be0d239d736755b5eed619bae66e4a268621f8defe47260ee",
+            "02cfad040f35364e8040197c8d7d9244493475299fd0bcf4834136b7fbaa579c"
+          ]
+        },
+        {
+          "question": "Tôi muốn nghỉ đông ở nơi có tuyết để trượt tuyết và nghỉ bên lò sưởi.",
+          "rank": 4,
+          "retrieved_doc_ids": [
+            "5f37e2990a0b35a450c854538bf0603430a5da64569ffb53f66fbe51a4304b87",
+            "313085b804a1a883543a519dc52158dad2ae0bb7c056b137bfacf60af8a64861",
+            "be14c95ba1384138fb94bde14764deaccd290be81422eb574f82bd54b14293fd",
+            "a86f0606a324dba9319c84ea14e35034a90b9056ff1a100bd264de73b8f044d2",
+            "019a31de48ea9991593f2fb8f0ee7d6d71c4b0b9f93b96aa97f9d3f35ba9cca7"
+          ]
+        },
+        {
+          "question": "Khách sạn The Little Nell ở Aspen có những tiện nghi gì?",
+          "rank": 1,
+          "retrieved_doc_ids": [
+            "be14c95ba1384138fb94bde14764deaccd290be81422eb574f82bd54b14293fd",
+            "313085b804a1a883543a519dc52158dad2ae0bb7c056b137bfacf60af8a64861",
+            "510fc50ad518bd23b6927872f0bb42a343d4d0ed877249b3276991bd0f920eb1",
+            "019a31de48ea9991593f2fb8f0ee7d6d71c4b0b9f93b96aa97f9d3f35ba9cca7",
+            "c7dd687cbb4196fbc70fd07f53f304842b271443bad7e58e686d1d65d317ea06"
+          ]
+        },
+        {
+          "question": "Gợi ý đi Chiang Mai để trải nghiệm ngoài trời và thưởng thức món ăn địa phương",
+          "rank": 1,
+          "retrieved_doc_ids": [
+            "cff0e0ee76208149c82fdca5c44f80293e47665c6d4dbf1d5e1f17753b86f1bd",
+            "cff0e0ee76208149c82fdca5c44f80293e47665c6d4dbf1d5e1f17753b86f1bd",
+            "9a3002de61857e2cc3f41fe57b96bd6bcee64139323ce460f6d5f6dff19b7e67",
+            "9a3002de61857e2cc3f41fe57b96bd6bcee64139323ce460f6d5f6dff19b7e67",
+            "8ca393ec6d506dd554ab1e417dafc19c4db8ddcff83bb873208a0eef99ca6935"
+          ]
+        },
+        {
+          "question": "Có thể lặn ngắm san hô và chơi những môn thể thao nào trong kỳ nghỉ ở biển?",
+          "rank": null,
+          "retrieved_doc_ids": [
+            "e6ecf4e904c01ccadccdb40009217606f6671ce7ce8d978749e0cee07877c5b5",
+            "c7dd687cbb4196fbc70fd07f53f304842b271443bad7e58e686d1d65d317ea06",
+            "e6ecf4e904c01ccadccdb40009217606f6671ce7ce8d978749e0cee07877c5b5",
+            "e6ecf4e904c01ccadccdb40009217606f6671ce7ce8d978749e0cee07877c5b5",
+            "c7dd687cbb4196fbc70fd07f53f304842b271443bad7e58e686d1d65d317ea06"
+          ]
+        }
+      ]
+    },
+    "domain_expansion": {
+      "cases": 16,
+      "hit_at_1": 0.875,
+      "recall_at_5_known_positive": 0.9375,
+      "mrr_at_5": 0.90625,
+      "elapsed_seconds": 42.02054899999348,
+      "details": [
+        {
+          "question": "Vợ chồng chia tay thì căn nhà riêng đã dùng chung được xử lý thế nào?",
+          "rank": 2,
+          "retrieved_doc_ids": [
+            "1f916c87f2b088615d6e056481d365b18fa414606155cdf536ff2fbf10f71fa9",
+            "ecb89a376e9b874f3c2dd31e1b8eba88778325b30d9e01e259ed09f320233cc3",
+            "1f916c87f2b088615d6e056481d365b18fa414606155cdf536ff2fbf10f71fa9",
+            "1f916c87f2b088615d6e056481d365b18fa414606155cdf536ff2fbf10f71fa9",
+            "ecb89a376e9b874f3c2dd31e1b8eba88778325b30d9e01e259ed09f320233cc3"
+          ]
+        },
+        {
+          "question": "Đi chứng thực chữ ký cần đem giấy tờ tùy thân nào?",
+          "rank": 1,
+          "retrieved_doc_ids": [
+            "93c710de22b78b48e923f4ee3558701166f05572f326d75cfa06d43c02991787",
+            "93c710de22b78b48e923f4ee3558701166f05572f326d75cfa06d43c02991787",
+            "93c710de22b78b48e923f4ee3558701166f05572f326d75cfa06d43c02991787",
+            "cbf5ab35d41078c4d159e9b49e01c8a1ab1181e1b5eb3fc935a7d4eb01a353ba",
+            "956ad35b101a9852c4c920e398e7b92844393a430e27561fd1aa1837b08f5184"
+          ]
+        },
+        {
+          "question": "Sau ly hôn, người nuôi con muốn cho con đi du học khi người kia phản đối.",
+          "rank": 1,
+          "retrieved_doc_ids": [
+            "2a634a6a02205448c48897c0114bd17d522f2148810e0c6f9af604db8e4e3398",
+            "2a634a6a02205448c48897c0114bd17d522f2148810e0c6f9af604db8e4e3398",
+            "2a634a6a02205448c48897c0114bd17d522f2148810e0c6f9af604db8e4e3398",
+            "65240b5de139c2c8e0d6ded531f7bed6b86ca8fe2c03c7ff7277249c7e5d0024",
+            "1f916c87f2b088615d6e056481d365b18fa414606155cdf536ff2fbf10f71fa9"
+          ]
+        },
+        {
+          "question": "Cha mẹ nuôi có giữ quyền chăm sóc bé Linh khi mẹ ruột đòi lại con không?",
+          "rank": 1,
+          "retrieved_doc_ids": [
+            "65240b5de139c2c8e0d6ded531f7bed6b86ca8fe2c03c7ff7277249c7e5d0024",
+            "65240b5de139c2c8e0d6ded531f7bed6b86ca8fe2c03c7ff7277249c7e5d0024",
+            "65240b5de139c2c8e0d6ded531f7bed6b86ca8fe2c03c7ff7277249c7e5d0024",
+            "2a634a6a02205448c48897c0114bd17d522f2148810e0c6f9af604db8e4e3398",
+            "83e303d3b814be94b85e4b57ea6f0c980219ce71a3f70bbc6a6c0d7cb01c8542"
+          ]
+        },
+        {
+          "question": "Hà Nội là đơn vị hành chính cấp nào?",
+          "rank": 1,
+          "retrieved_doc_ids": [
+            "9a28af531ca201098c08dc8f8f42379880032bb44cd1d41241084e2dee7c58d1",
+            "bd4419e078f8e9073c04336540730fc57d957cbf33b75196873cec479b5583a3",
+            "c62056c948efa0da7c6adff6c69a545e7799f2f70c710e7de66c91be638b41c5",
+            "9da805e36c288cce013fbcd05e431a33fafcc40102cb7aabf7defc32924d64f5",
+            "250003fc17bc9ec8348708e5d0a08351fd43aa7b08946400b420171fce503073"
+          ]
+        },
+        {
+          "question": "Mã số hành chính của phường Ba Đình và thành phố quản lý phường này",
+          "rank": 1,
+          "retrieved_doc_ids": [
+            "c62056c948efa0da7c6adff6c69a545e7799f2f70c710e7de66c91be638b41c5",
+            "59aef8706eeea20f6a65086a08789e74d72705b3e7870eccacd22b370b95ac81",
+            "bd4419e078f8e9073c04336540730fc57d957cbf33b75196873cec479b5583a3",
+            "96443a494bb62b66331dc075e525867e3878344d5be935d17761f30b50584269",
+            "250003fc17bc9ec8348708e5d0a08351fd43aa7b08946400b420171fce503073"
+          ]
+        },
+        {
+          "question": "Ngọc Hà trực thuộc thành phố nào và có mã gì?",
+          "rank": 1,
+          "retrieved_doc_ids": [
+            "bd4419e078f8e9073c04336540730fc57d957cbf33b75196873cec479b5583a3",
+            "00e7d234d3b1f3f0d17cb6cf927c074c98e882b54479b361b32ab41cca2bbd3a",
+            "5ee6fb5c52ff331fc9c0b98bae91820acee8e2b22e012f1c9a4e6e334556907e",
+            "59aef8706eeea20f6a65086a08789e74d72705b3e7870eccacd22b370b95ac81",
+            "7a399dd3531b90a1ab48ffe05bb4c67681fa83c02eb5ca73638260e0521bde4d"
+          ]
+        },
+        {
+          "question": "Tra cứu thông tin đơn vị hành chính Giảng Võ",
+          "rank": 1,
+          "retrieved_doc_ids": [
+            "f3fe153527f49536188644d55ccac3abb18d59b3854d9d2e2859d89fd1e487a5",
+            "9c68bc8139fb8c385204f01e6e3892e2134196724d7c0270f8573b811855db94",
+            "59aef8706eeea20f6a65086a08789e74d72705b3e7870eccacd22b370b95ac81",
+            "8cac39c487025fb8c4dc841ddeed71a10bb6d04133d58eacb77e8a15a03ffa6d",
+            "5ee6fb5c52ff331fc9c0b98bae91820acee8e2b22e012f1c9a4e6e334556907e"
+          ]
+        },
+        {
+          "question": "Kỷ vật áo dù của tướng Lê Hữu Đức gắn liền với mặt trận nào?",
+          "rank": 1,
+          "retrieved_doc_ids": [
+            "ecd80fd17557687cf0c680457b21149ca4f8a262230575421d870088e9aaee5d",
+            "dd34ea6cc5cf59433ec336908600d81681b1ac5ce6a1a8cd5f585c5dbbdc0feb",
+            "6ce66bb6c42ec15818ce89972b8bbe7be8271249299cf03b8c0ec2bc74eb7d06",
+            "5c24cb5de26bc45c9431965b8c595016bbaa220ffd75ba96007992ad5a924209",
+            "a92baf8af651cc7728277022de53768113fb096272786e352ab02cccdc474d55"
+          ]
+        },
+        {
+          "question": "Dụng cụ khám chữa bệnh trên đảo Trường Sa Lớn được sử dụng trong giai đoạn nào?",
+          "rank": 1,
+          "retrieved_doc_ids": [
+            "3de31779e3cd7437c9806fbcefe31cd6896e037b6a75a9f8e60328ab3e97e787",
+            "1fafa1dfdbbb822684201823f9d4dc8e7d5ff135c895826dc03ba94b1eeb3ae0",
+            "5c24cb5de26bc45c9431965b8c595016bbaa220ffd75ba96007992ad5a924209",
+            "0d8c9b7cfebff3bfc4a80c193107ca4a548468f132c8e8adac07aea2a1362df4",
+            "dd2ddeeaaada735d8fd7185fbeefce560a8ba8d0be909dec7d0b6ac587810cb2"
+          ]
+        },
+        {
+          "question": "Ai là bác sĩ phụ trách bệnh xá Trường Sa Lớn gắn với bộ dụng cụ y tế?",
+          "rank": 1,
+          "retrieved_doc_ids": [
+            "1fafa1dfdbbb822684201823f9d4dc8e7d5ff135c895826dc03ba94b1eeb3ae0",
+            "3de31779e3cd7437c9806fbcefe31cd6896e037b6a75a9f8e60328ab3e97e787",
+            "ecd80fd17557687cf0c680457b21149ca4f8a262230575421d870088e9aaee5d",
+            "5c24cb5de26bc45c9431965b8c595016bbaa220ffd75ba96007992ad5a924209",
+            "dd2ddeeaaada735d8fd7185fbeefce560a8ba8d0be909dec7d0b6ac587810cb2"
+          ]
+        },
+        {
+          "question": "Trần Văn Vinh tham gia cứu trợ động đất năm 2023 ở nước nào?",
+          "rank": 1,
+          "retrieved_doc_ids": [
+            "5c24cb5de26bc45c9431965b8c595016bbaa220ffd75ba96007992ad5a924209",
+            "376c3f7cf29d7b0be0d239d736755b5eed619bae66e4a268621f8defe47260ee",
+            "e6e2ef41cb5cc095197222703f0ff430f06d6f3ff3cfb461a4e61d0f9af80655",
+            "376c3f7cf29d7b0be0d239d736755b5eed619bae66e4a268621f8defe47260ee",
+            "02cfad040f35364e8040197c8d7d9244493475299fd0bcf4834136b7fbaa579c"
+          ]
+        },
+        {
+          "question": "Tôi muốn nghỉ đông ở nơi có tuyết để trượt tuyết và nghỉ bên lò sưởi.",
+          "rank": 1,
+          "retrieved_doc_ids": [
+            "a86f0606a324dba9319c84ea14e35034a90b9056ff1a100bd264de73b8f044d2",
+            "5f37e2990a0b35a450c854538bf0603430a5da64569ffb53f66fbe51a4304b87",
+            "313085b804a1a883543a519dc52158dad2ae0bb7c056b137bfacf60af8a64861",
+            "be14c95ba1384138fb94bde14764deaccd290be81422eb574f82bd54b14293fd",
+            "0cd8374afd4e3ef3c1c550240ca88d9c1be70adbd0fe970d0176299d665c253b"
+          ]
+        },
+        {
+          "question": "Khách sạn The Little Nell ở Aspen có những tiện nghi gì?",
+          "rank": 1,
+          "retrieved_doc_ids": [
+            "be14c95ba1384138fb94bde14764deaccd290be81422eb574f82bd54b14293fd",
+            "313085b804a1a883543a519dc52158dad2ae0bb7c056b137bfacf60af8a64861",
+            "510fc50ad518bd23b6927872f0bb42a343d4d0ed877249b3276991bd0f920eb1",
+            "019a31de48ea9991593f2fb8f0ee7d6d71c4b0b9f93b96aa97f9d3f35ba9cca7",
+            "c7dd687cbb4196fbc70fd07f53f304842b271443bad7e58e686d1d65d317ea06"
+          ]
+        },
+        {
+          "question": "Gợi ý đi Chiang Mai để trải nghiệm ngoài trời và thưởng thức món ăn địa phương",
+          "rank": 1,
+          "retrieved_doc_ids": [
+            "cff0e0ee76208149c82fdca5c44f80293e47665c6d4dbf1d5e1f17753b86f1bd",
+            "cff0e0ee76208149c82fdca5c44f80293e47665c6d4dbf1d5e1f17753b86f1bd",
+            "9a3002de61857e2cc3f41fe57b96bd6bcee64139323ce460f6d5f6dff19b7e67",
+            "9a3002de61857e2cc3f41fe57b96bd6bcee64139323ce460f6d5f6dff19b7e67",
+            "8ca393ec6d506dd554ab1e417dafc19c4db8ddcff83bb873208a0eef99ca6935"
+          ]
+        },
+        {
+          "question": "Có thể lặn ngắm san hô và chơi những môn thể thao nào trong kỳ nghỉ ở biển?",
+          "rank": null,
+          "retrieved_doc_ids": [
+            "e6ecf4e904c01ccadccdb40009217606f6671ce7ce8d978749e0cee07877c5b5",
+            "c7dd687cbb4196fbc70fd07f53f304842b271443bad7e58e686d1d65d317ea06",
+            "e6ecf4e904c01ccadccdb40009217606f6671ce7ce8d978749e0cee07877c5b5",
+            "e6ecf4e904c01ccadccdb40009217606f6671ce7ce8d978749e0cee07877c5b5",
+            "c7dd687cbb4196fbc70fd07f53f304842b271443bad7e58e686d1d65d317ea06"
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,8 @@
+PREFIX vn: <https://w3id.org/vn-assistant/ontology#>
+SELECT ?type (COUNT(DISTINCT ?entity) AS ?count) WHERE {
+  ?entity a ?type .
+  FILTER(STRSTARTS(STR(?type), "https://w3id.org/vn-assistant/ontology#"))
+}
+GROUP BY ?type
+ORDER BY DESC(?count)
+

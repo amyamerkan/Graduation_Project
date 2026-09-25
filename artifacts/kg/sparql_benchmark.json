@@ -1,0 +1,10 @@
+{
+  "query": "03_unit_by_code",
+  "code": "00070",
+  "runs": 5,
+  "method": "same graph, one warmup per variant, then alternating runs; includes parsing",
+  "baseline_median_ms": 363.9559170114808,
+  "optimized_median_ms": 3.5358330060262233,
+  "same_results": true,
+  "speedup": 102.93357078549244
+}

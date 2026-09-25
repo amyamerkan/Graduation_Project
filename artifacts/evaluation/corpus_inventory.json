@@ -1,0 +1,18 @@
+{
+  "documents": 130999,
+  "chunks": 456108,
+  "documents_by_domain": {
+    "law": 75779,
+    "tourism": 22672,
+    "administration": 3355,
+    "heritage": 29193
+  },
+  "chunks_by_domain": {
+    "law": 270755,
+    "tourism": 93614,
+    "administration": 3355,
+    "heritage": 88384
+  },
+  "chunk_size": 900,
+  "overlap": 150
+}

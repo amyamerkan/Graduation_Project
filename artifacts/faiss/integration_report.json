@@ -1,0 +1,16 @@
+{
+  "index_directory": "artifacts/faiss",
+  "backend": "transformer",
+  "vectors": 456108,
+  "passed": true,
+  "checks": [
+    "KG code",
+    "province ward list",
+    "year fallback",
+    "RAG law",
+    "cosine and full-domain top-k in four domains",
+    "hybrid",
+    "KG empty fallback"
+  ],
+  "scope": "Integration correctness, not factual accuracy of retrieved passages."
+}

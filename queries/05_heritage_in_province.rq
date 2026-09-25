@@ -1,0 +1,9 @@
+PREFIX vn: <https://w3id.org/vn-assistant/ontology#>
+SELECT DISTINCT ?heritage ?name ?type ?provinceName WHERE {
+  VALUES ?type { vn:Heritage vn:HeritageSite vn:WorldHeritage vn:IntangibleHeritage vn:Museum }
+  ?heritage a ?type ; vn:name ?name ; vn:locatedIn ?province .
+  ?province a vn:Province ; vn:name ?provinceName .
+  FILTER(CONTAINS(LCASE(STR(?provinceName)), LCASE("{{province}}")))
+}
+ORDER BY ?name
+

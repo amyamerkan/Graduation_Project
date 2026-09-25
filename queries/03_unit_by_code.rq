@@ -1,0 +1,7 @@
+PREFIX vn: <https://w3id.org/vn-assistant/ontology#>
+SELECT ?unit ?type ?name ?code ?validFrom ?validTo WHERE {
+  VALUES ?code { "{{code}}" }
+  ?unit vn:code ?code ; a ?type ; vn:name ?name .
+  OPTIONAL { ?unit vn:validFrom ?validFrom }
+  OPTIONAL { ?unit vn:validTo ?validTo }
+}

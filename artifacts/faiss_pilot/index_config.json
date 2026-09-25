@@ -1,0 +1,40 @@
+{
+  "backend": "transformer",
+  "production_ready": false,
+  "embedding": {
+    "model_name": "intfloat/multilingual-e5-base",
+    "device": "mps",
+    "batch_size": 16,
+    "query_prefix": "query: ",
+    "passage_prefix": "passage: ",
+    "expand_terms": true
+  },
+  "metric": "cosine_via_normalized_inner_product",
+  "documents": 32,
+  "vectors": 145,
+  "dimension": 768,
+  "chunks_by_domain": {
+    "law": 145
+  },
+  "chunk_size": 900,
+  "overlap": 150,
+  "build_signature": {
+    "dataset": "/Users/amyas/HK1 26-27/DATN/VN_Hybrid_Assistant_Project/data/rag_dataset_final.jsonl",
+    "dataset_size": 407702380,
+    "dataset_mtime_ns": 1789066690683156697,
+    "backend": "transformer",
+    "embedding": {
+      "model_name": "intfloat/multilingual-e5-base",
+      "device": "mps",
+      "batch_size": 16,
+      "query_prefix": "query: ",
+      "passage_prefix": "passage: ",
+      "expand_terms": true
+    },
+    "chunk_size": 900,
+    "overlap": 150,
+    "limit_documents": 32,
+    "format_version": 2
+  },
+  "scope": "pilot"
+}

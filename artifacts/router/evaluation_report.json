@@ -1,0 +1,190 @@
+{
+  "cases": 11,
+  "route_accuracy": 1.0,
+  "domain_accuracy": 1.0,
+  "joint_accuracy": 1.0,
+  "route_metrics": {
+    "hybrid": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 3.0
+    },
+    "kg": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 4.0
+    },
+    "rag": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 4.0
+    },
+    "accuracy": 1.0,
+    "macro avg": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 11.0
+    },
+    "weighted avg": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 11.0
+    }
+  },
+  "domain_metrics": {
+    "administration": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 3.0
+    },
+    "heritage": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 3.0
+    },
+    "law": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 2.0
+    },
+    "tourism": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 3.0
+    },
+    "accuracy": 1.0,
+    "macro avg": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 11.0
+    },
+    "weighted avg": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 11.0
+    }
+  },
+  "details": [
+    {
+      "question": "Xã có mã 31261 tên gì",
+      "route": "kg",
+      "domain": "administration",
+      "route_confidence": 0.7,
+      "domain_confidence": 0.7,
+      "method": "tfidf_logistic_regression",
+      "expected_route": "kg",
+      "expected_domain": "administration"
+    },
+    {
+      "question": "Phường cũ này nay sáp nhập vào đâu",
+      "route": "kg",
+      "domain": "administration",
+      "route_confidence": 0.7,
+      "domain_confidence": 0.7,
+      "method": "tfidf_logistic_regression",
+      "expected_route": "kg",
+      "expected_domain": "administration"
+    },
+    {
+      "question": "Hồ sơ đăng ký tạm trú cần những giấy tờ nào",
+      "route": "rag",
+      "domain": "administration",
+      "route_confidence": 0.5633185302067257,
+      "domain_confidence": 0.7,
+      "method": "tfidf_logistic_regression",
+      "expected_route": "rag",
+      "expected_domain": "administration"
+    },
+    {
+      "question": "Điều luật nào quy định và nội dung cụ thể ra sao",
+      "route": "hybrid",
+      "domain": "law",
+      "route_confidence": 0.7,
+      "domain_confidence": 0.7,
+      "method": "tfidf_logistic_regression",
+      "expected_route": "hybrid",
+      "expected_domain": "law"
+    },
+    {
+      "question": "Thời hạn xử lý hồ sơ theo pháp luật là bao lâu",
+      "route": "rag",
+      "domain": "law",
+      "route_confidence": 0.5351915953226267,
+      "domain_confidence": 0.7,
+      "method": "tfidf_logistic_regression",
+      "expected_route": "rag",
+      "expected_domain": "law"
+    },
+    {
+      "question": "Ca trù được xếp vào loại di sản nào",
+      "route": "kg",
+      "domain": "heritage",
+      "route_confidence": 0.7,
+      "domain_confidence": 0.7,
+      "method": "tfidf_logistic_regression",
+      "expected_route": "kg",
+      "expected_domain": "heritage"
+    },
+    {
+      "question": "Nguồn gốc và ý nghĩa của ca trù là gì",
+      "route": "rag",
+      "domain": "heritage",
+      "route_confidence": 0.7,
+      "domain_confidence": 0.7,
+      "method": "tfidf_logistic_regression",
+      "expected_route": "rag",
+      "expected_domain": "heritage"
+    },
+    {
+      "question": "Mỹ Sơn nằm ở đâu và có giá trị văn hóa gì",
+      "route": "hybrid",
+      "domain": "heritage",
+      "route_confidence": 0.7,
+      "domain_confidence": 0.7,
+      "method": "tfidf_logistic_regression",
+      "expected_route": "hybrid",
+      "expected_domain": "heritage"
+    },
+    {
+      "question": "Mùa nào thích hợp để du lịch Đà Nẵng",
+      "route": "rag",
+      "domain": "tourism",
+      "route_confidence": 0.47921656047870714,
+      "domain_confidence": 0.7,
+      "method": "tfidf_logistic_regression",
+      "expected_route": "rag",
+      "expected_domain": "tourism"
+    },
+    {
+      "question": "Điểm tham quan này thuộc tỉnh nào",
+      "route": "kg",
+      "domain": "tourism",
+      "route_confidence": 0.7,
+      "domain_confidence": 0.7,
+      "method": "tfidf_logistic_regression",
+      "expected_route": "kg",
+      "expected_domain": "tourism"
+    },
+    {
+      "question": "Đà Nẵng có điểm tham quan nào đáng chú ý",
+      "route": "hybrid",
+      "domain": "tourism",
+      "route_confidence": 0.5961751543740259,
+      "domain_confidence": 0.7,
+      "method": "tfidf_logistic_regression",
+      "expected_route": "hybrid",
+      "expected_domain": "tourism"
+    }
+  ]
+}

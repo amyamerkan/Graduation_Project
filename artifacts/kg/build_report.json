@@ -1,0 +1,21 @@
+{
+  "generated_at": "2026-09-15",
+  "dataset": "data/vn_complete_dataset_v2.json",
+  "records_seen": 193708,
+  "nodes": 17387,
+  "relationships": 59136,
+  "counts": {
+    "node:District": 696,
+    "node:Heritage": 2309,
+    "node:HistoricalAdministrativeUnit": 10014,
+    "node:Museum": 366,
+    "node:Province": 63,
+    "node:SourceDocument": 618,
+    "node:Ward": 3321,
+    "records_seen": 193708,
+    "relationship:LOCATED_IN": 35122,
+    "relationship:MENTIONS": 2820,
+    "relationship:MERGED_INTO": 10597,
+    "relationship:REPLACED_BY": 10597
+  }
+}

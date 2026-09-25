@@ -1,0 +1,1 @@
+{"backend": "transformer", "production_ready": false, "scope": "evaluation_sample", "embedding": {"model_name": "intfloat/multilingual-e5-base", "device": "mps", "batch_size": 8, "query_prefix": "query: ", "passage_prefix": "passage: ", "expand_terms": true}, "vectors": 588, "dimension": 768}

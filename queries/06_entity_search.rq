@@ -1,0 +1,10 @@
+PREFIX vn: <https://w3id.org/vn-assistant/ontology#>
+SELECT DISTINCT ?entity ?type ?name ?description WHERE {
+  ?entity a ?type ; vn:name ?name .
+  FILTER(STRSTARTS(STR(?type), "https://w3id.org/vn-assistant/ontology#"))
+  FILTER(CONTAINS(LCASE(STR(?name)), LCASE("{{keyword}}")))
+  OPTIONAL { ?entity vn:description ?description }
+}
+ORDER BY ?name
+LIMIT {{limit}}
+

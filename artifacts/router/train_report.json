@@ -1,0 +1,14 @@
+{
+  "training_rows": 44,
+  "route_labels": [
+    "hybrid",
+    "kg",
+    "rag"
+  ],
+  "domain_labels": [
+    "administration",
+    "heritage",
+    "law",
+    "tourism"
+  ]
+}

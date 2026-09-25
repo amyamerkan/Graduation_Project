@@ -1,0 +1,10 @@
+PREFIX vn: <https://w3id.org/vn-assistant/ontology#>
+SELECT DISTINCT ?oldUnit ?oldName ?newUnit ?newName ?newCode ?validFrom WHERE {
+  ?oldUnit vn:name ?oldName ; vn:mergedInto ?newUnit .
+  ?newUnit vn:name ?newName .
+  FILTER(CONTAINS(LCASE(STR(?oldName)), LCASE("{{old_name}}")))
+  OPTIONAL { ?newUnit vn:code ?newCode }
+  OPTIONAL { ?newUnit vn:validFrom ?validFrom }
+}
+ORDER BY ?newName
+

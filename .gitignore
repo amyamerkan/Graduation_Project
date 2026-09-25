@@ -1,0 +1,16 @@
+.venv/
+__pycache__/
+.pytest_cache/
+*.pyc
+.env
+data/*.json
+data/*.jsonl
+artifacts/faiss/*.index
+artifacts/faiss/*.sqlite3
+
+artifacts/**/*.index
+artifacts/**/*.sqlite3
+artifacts/**/*.sqlite3.tmp
+artifacts/**/*.f32
+artifacts/**/*.publishing
+artifacts/**/*.build/

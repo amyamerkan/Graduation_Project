@@ -1,0 +1,12 @@
+{"case_id": "province_count", "query": "01_list_provinces", "params": {}, "min_rows": 34, "must_contain": [{"name": "Thành phố Hà Nội", "code": "01"}]}
+{"case_id": "hanoi_ward", "query": "02_wards_in_province", "params": {"province": "Hà Nội"}, "min_rows": 1, "must_contain": [{"wardName": "Phường Ba Đình", "code": "00004"}]}
+{"case_id": "ward_code_lookup", "query": "03_unit_by_code", "params": {"code": "00070"}, "min_rows": 1, "expected_rows": [{"name": "Phường Hoàn Kiếm", "code": "00070"}]}
+{"case_id": "merger_co_do", "query": "04_merger_history", "params": {"old_name": "Thị trấn Cờ Đỏ"}, "min_rows": 1, "expected_rows": [{"oldName": "Thị trấn Cờ Đỏ", "newName": "Xã Cờ Đỏ", "newCode": "31261"}]}
+{"case_id": "unit_00004", "query": "03_unit_by_code", "params": {"code": "00004"}, "expected_rows": [{"name": "Phường Ba Đình", "code": "00004"}]}
+{"case_id": "unit_00008", "query": "03_unit_by_code", "params": {"code": "00008"}, "expected_rows": [{"name": "Phường Ngọc Hà", "code": "00008"}]}
+{"case_id": "unit_00025", "query": "03_unit_by_code", "params": {"code": "00025"}, "expected_rows": [{"name": "Phường Giảng Võ", "code": "00025"}]}
+{"case_id": "unit_31261", "query": "03_unit_by_code", "params": {"code": "31261"}, "expected_rows": [{"name": "Xã Cờ Đỏ", "code": "31261"}]}
+{"case_id": "unknown_code_8", "query": "03_unit_by_code", "params": {"code": "999999"}, "expected_rows": []}
+{"case_id": "unknown_code_9", "query": "03_unit_by_code", "params": {"code": "1999"}, "expected_rows": []}
+{"case_id": "unknown_code_10", "query": "03_unit_by_code", "params": {"code": "00070\" . ?s ?p ?o #"}, "expected_rows": []}
+{"case_id": "unknown_entity", "query": "08_entity_facts", "params": {"keyword": "__nonexistent_entity_9f27__", "limit": 10}, "expected_rows": []}

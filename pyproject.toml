@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "vn-hybrid-assistant"
+version = "1.0.0"
+description = "Knowledge Graph + FAISS RAG + question router for Vietnamese heritage, tourism and public administration"
+requires-python = ">=3.10"
+dependencies = [
+  "rdflib>=7.1,<8",
+  "ijson>=3.3,<4",
+  "numpy>=1.26,<3",
+  "scikit-learn>=1.5,<2",
+  "joblib>=1.4,<2",
+  "sentence-transformers>=3.2,<6",
+  "faiss-cpu>=1.9,<2",
+  "fastapi>=0.115,<1",
+  "uvicorn[standard]>=0.32,<1",
+  "neo4j>=5.26,<7",
+  "pydantic>=2.9,<3",
+]
+
+[project.scripts]
+vn-assistant = "vn_assistant.cli:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+
