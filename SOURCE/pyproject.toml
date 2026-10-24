@@ -1,0 +1,45 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "vn-hybrid-assistant"
+version = "1.2.0"
+description = "Knowledge Graph + FAISS RAG + LLM with evidence cross-check for Vietnamese administrative geography and tourism"
+requires-python = ">=3.10"
+dependencies = [
+  "rdflib>=7.1,<8",
+  "ijson>=3.3,<4",
+  "numpy>=1.26,<3",
+  "scikit-learn>=1.5,<2",
+  "joblib>=1.4,<2",
+  "sentence-transformers>=3.2,<6",
+  "faiss-cpu>=1.9,<2",
+  "fastapi>=0.115,<1",
+  "uvicorn[standard]>=0.32,<1",
+  "neo4j>=5.26,<7",
+  "pydantic>=2.9,<3",
+  "torch>=2.6,<3",
+  "transformers>=4.51,<5",
+  "python-dotenv>=1,<2",
+]
+
+[project.scripts]
+vn-assistant = "vn_assistant.cli:main"
+
+[project.optional-dependencies]
+dev = ["pytest>=8.3,<10", "httpx>=0.27,<1", "playwright>=1.55,<2"]
+data = ["requests>=2.32,<3", "beautifulsoup4>=4.13,<5", "vietnam-provinces==2026.9.0; python_version >= '3.12'"]
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+vn_assistant = ["prompt_templates/*.txt", "static/*.html", "static/*.css", "static/*.js", "static/*.svg"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]

@@ -1,0 +1,60 @@
+{
+  "created_at": "2026-10-24T16:59:06.708579+00:00",
+  "training_scope": "Retrain TF-IDF/Logistic Regression router; pretrained E5/Qwen weights unchanged",
+  "kg": {
+    "generated_at": "2026-10-24",
+    "dataset": "/Users/amyas/HK1 26-27/DATN/artifacts/domain_refresh_2026-10-24/release/data/structured_records.jsonl",
+    "records_seen": 31949,
+    "nodes": 17973,
+    "relationships": 28460,
+    "counts": {
+      "node:District": 696,
+      "node:HistoricalAdministrativeUnit": 10051,
+      "node:HistoricalProvince": 63,
+      "node:Province": 68,
+      "node:TourismPlace": 453,
+      "node:Ward": 6642,
+      "records_seen": 31949,
+      "relationship:LOCATED_IN": 17842,
+      "relationship:PARTLY_MERGED_INTO": 1105,
+      "relationship:REORGANIZED_INTO": 9513
+    }
+  },
+  "router_train": {
+    "training_rows": 3402,
+    "route_labels": [
+      "hybrid",
+      "kg",
+      "rag"
+    ],
+    "domain_labels": [
+      "administration",
+      "tourism"
+    ]
+  },
+  "router_evaluation": {
+    "cases": 26,
+    "route_accuracy": 1.0,
+    "domain_accuracy": 1.0,
+    "joint_accuracy": 1.0,
+    "model_without_rules": {
+      "route_accuracy": 0.8846153846153846,
+      "domain_accuracy": 0.9230769230769231,
+      "scope": "Raw Logistic Regression predictions before deterministic routing rules"
+    }
+  },
+  "kg_evaluation": {
+    "cases": 17,
+    "passed": 17,
+    "accuracy": 1.0,
+    "exhaustive_cases": 14,
+    "true_positives": 9,
+    "false_positives": 0,
+    "false_negatives": 0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "required_binding_recall": 1.0,
+    "metric_scope": "Precision/recall/F1 use exhaustive expected_rows cases only; must_contain cases check coverage."
+  }
+}

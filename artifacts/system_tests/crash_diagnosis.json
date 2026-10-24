@@ -1,0 +1,20 @@
+{
+  "process_id": 99066,
+  "capture_time": "2026-10-23 23:48:01.4089 +0700",
+  "exception": {
+    "codes": "0x0000000000000001, 0x176e000000000000",
+    "rawCodes": [
+      1,
+      1688286910310514688
+    ],
+    "type": "EXC_BAD_ACCESS",
+    "signal": "SIGSEGV",
+    "subtype": "KERN_INVALID_ADDRESS at 0x176e000000000000"
+  },
+  "faulting_thread": 8,
+  "mps_threads": [
+    6,
+    8
+  ],
+  "source": "/Users/amyas/Library/Logs/DiagnosticReports/Python-2026-10-23-234814.ips"
+}

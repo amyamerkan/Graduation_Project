@@ -1,0 +1,266 @@
+{
+  "created_at": "2026-10-24T17:00:04.377487+00:00",
+  "scope": "Development known-positive retrieval set for current corpus; manually authored, not an independent factual benchmark.",
+  "metric_scope": "Distinct documents within five retrieved chunks; known positives, unjudged alternatives may also be relevant.",
+  "mode": "full_faiss",
+  "cases": 16,
+  "hit_at_1": 0.75,
+  "known_positive_hit_at_5": 0.9375,
+  "mrr_at_5": 0.828125,
+  "domain_integrity": true,
+  "excluded_subject_free": true,
+  "details": [
+    {
+      "question": "Tra cứu mã 00070 Phường Hàng Trống trong danh mục trước sắp xếp tháng 7/2025.",
+      "domain": "administration",
+      "relevant_doc_ids": [
+        "administrative_snapshot_c9f4d748bfe6f9c8"
+      ],
+      "rank": 1,
+      "retrieved_doc_ids": [
+        "administrative_snapshot_c9f4d748bfe6f9c8",
+        "administrative_conversion_bd4fa976d970378d",
+        "administrative_conversion_2327de9de30d130b",
+        "administrative_reference_5d5c26929df61184",
+        "administrative_conversion_358f71a03328f1a7"
+      ],
+      "domain_integrity": true,
+      "excluded_subject_free": true
+    },
+    {
+      "question": "Danh mục sau sắp xếp năm 2025 ghi mã phường Hoàn Kiếm thế nào?",
+      "domain": "administration",
+      "relevant_doc_ids": [
+        "administrative_snapshot_7646a304872633a2"
+      ],
+      "rank": 1,
+      "retrieved_doc_ids": [
+        "administrative_snapshot_7646a304872633a2",
+        "administrative_reference_5d5c26929df61184",
+        "administrative_snapshot_31116b802a233015",
+        "administrative_snapshot_44ea96b7922b5a95",
+        "administrative_conversion_410f36907bdb849d"
+      ],
+      "domain_integrity": true,
+      "excluded_subject_free": true
+    },
+    {
+      "question": "Danh mục thu thập ngày 2026-10-24 ghi đơn vị có mã 22 là gì?",
+      "domain": "administration",
+      "relevant_doc_ids": [
+        "administrative_snapshot_bbddb37e3441378a"
+      ],
+      "rank": null,
+      "retrieved_doc_ids": [
+        "administrative_snapshot_3bd0bd469cd9af41",
+        "administrative_snapshot_9a15078ba8a8bcbe",
+        "administrative_conversion_9025ed8aeb1d57e7",
+        "administrative_snapshot_85170b856d1ced89",
+        "administrative_source_document_c2687bf0f6a60635"
+      ],
+      "domain_integrity": true,
+      "excluded_subject_free": true
+    },
+    {
+      "question": "Tra cứu mã hành chính 24 của Bắc Ninh theo danh mục thu thập 2026-10-24.",
+      "domain": "administration",
+      "relevant_doc_ids": [
+        "administrative_snapshot_ada52fbe866fbbd6"
+      ],
+      "rank": 2,
+      "retrieved_doc_ids": [
+        "administrative_snapshot_21462305c9c5eb3a",
+        "administrative_snapshot_ada52fbe866fbbd6",
+        "administrative_conversion_5028568f844dabd9",
+        "administrative_conversion_a4f98d474762f95c",
+        "administrative_snapshot_ab13e1bf6dc208d9"
+      ],
+      "domain_integrity": true,
+      "excluded_subject_free": true
+    },
+    {
+      "question": "Xã Cờ Đỏ có mã số 31261 trong danh mục hành chính hiện tại.",
+      "domain": "administration",
+      "relevant_doc_ids": [
+        "administrative_snapshot_fc0ab446a2bfe6f7"
+      ],
+      "rank": 1,
+      "retrieved_doc_ids": [
+        "administrative_snapshot_fc0ab446a2bfe6f7",
+        "administrative_reference_509476250b5164e0",
+        "administrative_snapshot_4d8960467ae5afd1",
+        "administrative_snapshot_944615d9d01f2f77",
+        "administrative_conversion_ff6ef8474f3db940"
+      ],
+      "domain_integrity": true,
+      "excluded_subject_free": true
+    },
+    {
+      "question": "Bảng đối chiếu Cục Thống kê ghi chú thay đổi Phường Ba Đình mã 00004 như thế nào?",
+      "domain": "administration",
+      "relevant_doc_ids": [
+        "administrative_reference_87e5746f4a04b272"
+      ],
+      "rank": 1,
+      "retrieved_doc_ids": [
+        "administrative_reference_87e5746f4a04b272",
+        "administrative_conversion_9bc0e63239db6699",
+        "administrative_conversion_6a704b6ca6dfdb33",
+        "administrative_conversion_e84bfda3c414fa4c",
+        "administrative_conversion_495ecd61f2ffb45e"
+      ],
+      "domain_integrity": true,
+      "excluded_subject_free": true
+    },
+    {
+      "question": "Bảng đối chiếu Cục Thống kê ghi chú thay đổi Phường Ngọc Hà mã 00008 như thế nào?",
+      "domain": "administration",
+      "relevant_doc_ids": [
+        "administrative_reference_d17f236f5391bd13"
+      ],
+      "rank": 1,
+      "retrieved_doc_ids": [
+        "administrative_reference_d17f236f5391bd13",
+        "administrative_conversion_8721d3873513379c",
+        "administrative_conversion_a2516fd491d4fe71",
+        "administrative_conversion_47d6ab4a8a786fc3",
+        "administrative_conversion_e16558a865b152a7"
+      ],
+      "domain_integrity": true,
+      "excluded_subject_free": true
+    },
+    {
+      "question": "Bảng đối chiếu Cục Thống kê ghi chú thay đổi Phường Bố Hạ mã 07294 như thế nào?",
+      "domain": "administration",
+      "relevant_doc_ids": [
+        "administrative_reference_c60290d4f16da113"
+      ],
+      "rank": 1,
+      "retrieved_doc_ids": [
+        "administrative_reference_c60290d4f16da113",
+        "administrative_conversion_a0b567d49efc05fc",
+        "administrative_snapshot_62aea57163fa1b11",
+        "administrative_snapshot_9689d2cc37966985",
+        "administrative_conversion_1ff4595c101fd22e"
+      ],
+      "domain_integrity": true,
+      "excluded_subject_free": true
+    },
+    {
+      "question": "Bảng đối chiếu Cục Thống kê ghi chú thay đổi Phường Long Thành mã 26368 như thế nào?",
+      "domain": "administration",
+      "relevant_doc_ids": [
+        "administrative_reference_04f3a649afba1091"
+      ],
+      "rank": 4,
+      "retrieved_doc_ids": [
+        "administrative_reference_2b4311dd4a5f97be",
+        "administrative_reference_1eb170f8f80ef7a1",
+        "administrative_reference_f7140f380c6af896",
+        "administrative_reference_04f3a649afba1091",
+        "administrative_conversion_ee44b8b660d15e50"
+      ],
+      "domain_integrity": true,
+      "excluded_subject_free": true
+    },
+    {
+      "question": "Tìm thông tin tham quan Hồ Hoàn Kiếm tại Hà Nội.",
+      "domain": "tourism",
+      "relevant_doc_ids": [
+        "tourism_place_490731a382b43104"
+      ],
+      "rank": 1,
+      "retrieved_doc_ids": [
+        "tourism_place_490731a382b43104",
+        "tourism_place_58cdacab5fdc9064",
+        "tourism_place_c73aba472178608d"
+      ],
+      "domain_integrity": true,
+      "excluded_subject_free": true
+    },
+    {
+      "question": "Tìm hiểu kiến trúc và tham quan Văn Miếu - Quốc Tử Giám.",
+      "domain": "tourism",
+      "relevant_doc_ids": [
+        "tourism_place_fc44765bd86b7133"
+      ],
+      "rank": 1,
+      "retrieved_doc_ids": [
+        "tourism_place_fc44765bd86b7133"
+      ],
+      "domain_integrity": true,
+      "excluded_subject_free": true
+    },
+    {
+      "question": "Tại khu phố cổ Hội An du khách có thể tham quan và trải nghiệm điều gì?",
+      "domain": "tourism",
+      "relevant_doc_ids": [
+        "tourism_place_2f617c4103c0b2ad"
+      ],
+      "rank": 2,
+      "retrieved_doc_ids": [
+        "tourism_place_c3a04c6bdeb7f546",
+        "tourism_place_2f617c4103c0b2ad",
+        "tourism_place_087c6ab0943580de"
+      ],
+      "domain_integrity": true,
+      "excluded_subject_free": true
+    },
+    {
+      "question": "Tìm thông tin vị trí của Vịnh Hạ Long ở Quảng Ninh.",
+      "domain": "tourism",
+      "relevant_doc_ids": [
+        "tourism_place_61405caaee60823b"
+      ],
+      "rank": 1,
+      "retrieved_doc_ids": [
+        "tourism_place_61405caaee60823b",
+        "tourism_place_687d3da7fbcc9192",
+        "tourism_place_7d9bc882691e8d19"
+      ],
+      "domain_integrity": true,
+      "excluded_subject_free": true
+    },
+    {
+      "question": "Khám phá cảnh quan thiên nhiên ở Động Phong Nha.",
+      "domain": "tourism",
+      "relevant_doc_ids": [
+        "tourism_place_c439d0b313cb3535"
+      ],
+      "rank": 1,
+      "retrieved_doc_ids": [
+        "tourism_place_c439d0b313cb3535",
+        "tourism_place_d29a232843e2b196"
+      ],
+      "domain_integrity": true,
+      "excluded_subject_free": true
+    },
+    {
+      "question": "Giới thiệu cảnh quan của Vịnh Nha Trang cho khách tham quan.",
+      "domain": "tourism",
+      "relevant_doc_ids": [
+        "tourism_place_9ecc7228e3d7fb98"
+      ],
+      "rank": 1,
+      "retrieved_doc_ids": [
+        "tourism_place_9ecc7228e3d7fb98"
+      ],
+      "domain_integrity": true,
+      "excluded_subject_free": true
+    },
+    {
+      "question": "Du lịch khám phá thiên nhiên Quần đảo Cát Bà.",
+      "domain": "tourism",
+      "relevant_doc_ids": [
+        "tourism_place_c1a1434dda0ac1ca"
+      ],
+      "rank": 1,
+      "retrieved_doc_ids": [
+        "tourism_place_c1a1434dda0ac1ca",
+        "tourism_place_770a8bbbc8f791de"
+      ],
+      "domain_integrity": true,
+      "excluded_subject_free": true
+    }
+  ]
+}

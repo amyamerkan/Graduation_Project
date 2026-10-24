@@ -1,0 +1,12 @@
+PREFIX vn: <https://w3id.org/vn-assistant/ontology#>
+SELECT DISTINCT ?oldUnit ?oldName ?newUnit ?newName ?newCode ?validFrom ?transitionType WHERE {
+  ?oldUnit vn:name ?oldName ; ?transition ?newUnit .
+  VALUES ?transition { vn:mergedInto vn:reorganizedInto vn:partlyMergedInto }
+  BIND(IF(?transition = vn:partlyMergedInto, "chuyển một phần địa bàn", "liên kết chuyển đổi sau sắp xếp") AS ?transitionType)
+  ?newUnit vn:name ?newName .
+  FILTER(CONTAINS(LCASE(STR(?oldName)), LCASE("{{old_name}}")))
+  OPTIONAL { ?newUnit vn:code ?newCode }
+  OPTIONAL { ?newUnit vn:validFrom ?validFrom }
+}
+ORDER BY ?newName
+

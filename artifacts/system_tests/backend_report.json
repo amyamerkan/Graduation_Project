@@ -1,0 +1,4612 @@
+{
+  "created_at": "2026-10-23T16:40:38.165950+00:00",
+  "python": "3.13.7",
+  "scope": "Real HTTP, full KG, Qwen and E5 weights; retrieval mode explicitly reported. Query development suite, not independent factual-accuracy benchmark.",
+  "cases": [
+    {
+      "id": "code_00070",
+      "question": "Đơn vị có mã 00070 là gì?",
+      "http_status": 200,
+      "latency_ms": 677.928,
+      "checks": {
+        "http_status": true,
+        "status": true,
+        "expected_fact": true,
+        "source_kinds": true,
+        "all_claims_verified": true,
+        "source_integrity": true
+      },
+      "passed": true,
+      "response": {
+        "question": "Đơn vị có mã 00070 là gì?",
+        "classification": {
+          "question": "Đơn vị có mã 00070 là gì?",
+          "route": "kg",
+          "domain": "administration",
+          "route_confidence": 0.7,
+          "domain_confidence": 0.7,
+          "method": "tfidf_logistic_regression"
+        },
+        "plan": {
+          "route": "kg",
+          "kg": {
+            "query": "03_unit_by_code",
+            "params": {
+              "code": "00070"
+            }
+          },
+          "rag": null,
+          "intent": "logical",
+          "constraints": {
+            "temporal": [],
+            "spatial": [],
+            "unsupported": []
+          },
+          "warnings": [],
+          "scope": "supported"
+        },
+        "effective_route": "kg",
+        "retrieval_status": "ready",
+        "status": "answered",
+        "answer": "Theo các minh chứng tìm được:\nTên thực thể: Phường Hoàn Kiếm. Mã của Phường Hoàn Kiếm: 00070. Tỉnh/thành phố trực thuộc của Phường Hoàn Kiếm: Thành phố Hà Nội. Loại thực thể của Phường Hoàn Kiếm: đơn vị hành chính cấp xã. [1]\n\nNguồn minh chứng:\n[1] Phường Hoàn Kiếm — bản ghi KG nội bộ; vietnam-administrative-division-json-server; vietnam-sap-nhap-phuong-xa.csv (15 bản ghi nguồn)",
+        "citations": [
+          {
+            "number": 1,
+            "evidence_id": "E01",
+            "kind": "kg",
+            "title": "Phường Hoàn Kiếm",
+            "source": "vietnam-administrative-division-json-server; vietnam-sap-nhap-phuong-xa.csv",
+            "source_url": null,
+            "source_record_ids": [
+              "00bce023d123231c64047b1f2bfb45aacbdf18f525f37a38c72ed38fdc903bbd",
+              "1ea080b7e735cd00dc62ae43cdab67b7c5ed4ab4feda07a47e072604099a125c",
+              "43e0df66051533b3a0866299d12d19d062a2abb1697a7331121230cf502891d5",
+              "4c8e04f25a0d00f5424746e9797800861218b913642a6783f2260527dcb8e1d1",
+              "5fb623bca580d4263da4249567e1ec41b7c93108c6f1f109888d8f97b9ca542c",
+              "77b4190301c71f452096adf1a81d66f34bc63630a5e1860137db628e59f20950",
+              "7e03a400c538e737677d7600db68fb337ce2747807ceb70d7bdb38a56722f330",
+              "94a1eced857aa8da40b511c062bdc357d6d2f40a23b021b3891189b764117777",
+              "b3f89fc9d4eb9d345c2471046f40ad98939d2f3890c002c55476cf7dec96e43a",
+              "b6d8c1292a9f67c5816c17df66cd7c5a2833c73469e6c14dd7d0659f00ca7027",
+              "c63e0f31b2788bcb465b27f5e25282bf7499664e0999940b13384612af76e9d5",
+              "e690d80feb717d67e71a7ba905a527c14e409f32a6ad4be4daefec89e19643b0",
+              "f0e6ec3fa13eb0fa76eec5ee2f3996deb1c5b32020b679271c4d693b22b5c01f",
+              "fbacad31aa7b4d1c3886a5bb604598851e04f9c1ec36dd264d7015db8c58f7d6",
+              "fcbe5c03b959dc1372d4ce38e60d22ef125c1cf06048bd29ecb1536ebe121978"
+            ],
+            "source_verified": false
+          }
+        ],
+        "claims": [
+          {
+            "claim_id": "E01-C01",
+            "mode": "fact",
+            "text": "Tên thực thể: Phường Hoàn Kiếm. Mã của Phường Hoàn Kiếm: 00070. Tỉnh/thành phố trực thuộc của Phường Hoàn Kiếm: Thành phố Hà Nội. Loại thực thể của Phường Hoàn Kiếm: đơn vị hành chính cấp xã.",
+            "evidence_ids": [
+              "E01"
+            ],
+            "fields": [
+              "name",
+              "code",
+              "provinceName",
+              "type"
+            ],
+            "fact_checks": [
+              {
+                "evidence_id": "E01",
+                "field": "name",
+                "value": "Phường Hoàn Kiếm"
+              },
+              {
+                "evidence_id": "E01",
+                "field": "code",
+                "value": "00070"
+              },
+              {
+                "evidence_id": "E01",
+                "field": "provinceName",
+                "value": "Thành phố Hà Nội"
+              },
+              {
+                "evidence_id": "E01",
+                "field": "type",
+                "value": "https://w3id.org/vn-assistant/ontology#Ward"
+              }
+            ],
+            "verification": "exact_kg_fact_match",
+            "source_verified": false
+          }
+        ],
+        "cross_check": {
+          "status": "supported",
+          "supported": [
+            {
+              "claim_id": "E01-C01",
+              "mode": "fact",
+              "text": "Tên thực thể: Phường Hoàn Kiếm. Mã của Phường Hoàn Kiếm: 00070. Tỉnh/thành phố trực thuộc của Phường Hoàn Kiếm: Thành phố Hà Nội. Loại thực thể của Phường Hoàn Kiếm: đơn vị hành chính cấp xã.",
+              "evidence_ids": [
+                "E01"
+              ],
+              "fields": [
+                "name",
+                "code",
+                "provinceName",
+                "type"
+              ],
+              "fact_checks": [
+                {
+                  "evidence_id": "E01",
+                  "field": "name",
+                  "value": "Phường Hoàn Kiếm"
+                },
+                {
+                  "evidence_id": "E01",
+                  "field": "code",
+                  "value": "00070"
+                },
+                {
+                  "evidence_id": "E01",
+                  "field": "provinceName",
+                  "value": "Thành phố Hà Nội"
+                },
+                {
+                  "evidence_id": "E01",
+                  "field": "type",
+                  "value": "https://w3id.org/vn-assistant/ontology#Ward"
+                }
+              ],
+              "verification": "exact_kg_fact_match",
+              "source_verified": false
+            }
+          ],
+          "rejected": [],
+          "checked_count": 1,
+          "supported_count": 1,
+          "rejected_count": 0,
+          "verification_scope": "extractive_text_and_structured_kg_facts",
+          "constraints_checked": false,
+          "kg_rechecked": true
+        },
+        "warnings": [],
+        "llm": {
+          "backend": "transformers",
+          "model": "/Users/amyas/HK1 26-27/DATN/models/Qwen3-0.6B",
+          "device": "mps",
+          "ready": true,
+          "context_window": 4096,
+          "max_new_tokens": 384,
+          "error": null,
+          "generation_count": 1,
+          "last_latency_ms": 635.48
+        },
+        "timings_ms": {
+          "question_processing": 26.404,
+          "generation": 636.071,
+          "kg_refresh": 0.705,
+          "cross_check": 0.043,
+          "total": 663.47
+        },
+        "original_question": "Đơn vị có mã 00070 là gì?",
+        "context_resolution": {
+          "question": "Đơn vị có mã 00070 là gì?",
+          "resolved": false,
+          "needs_context": false
+        },
+        "retrieval_mode": "lexical_candidates_faiss"
+      }
+    },
+    {
+      "id": "province_lookup",
+      "question": "Đơn vị mã 00070 thuộc tỉnh thành nào?",
+      "http_status": 200,
+      "latency_ms": 492.467,
+      "checks": {
+        "http_status": true,
+        "status": true,
+        "expected_fact": true,
+        "source_kinds": true,
+        "all_claims_verified": true,
+        "source_integrity": true
+      },
+      "passed": true,
+      "response": {
+        "question": "Đơn vị mã 00070 thuộc tỉnh thành nào?",
+        "classification": {
+          "question": "Đơn vị mã 00070 thuộc tỉnh thành nào?",
+          "route": "kg",
+          "domain": "administration",
+          "route_confidence": 0.7,
+          "domain_confidence": 0.7,
+          "method": "tfidf_logistic_regression"
+        },
+        "plan": {
+          "route": "kg",
+          "kg": {
+            "query": "03_unit_by_code",
+            "params": {
+              "code": "00070"
+            }
+          },
+          "rag": null,
+          "intent": "logical",
+          "constraints": {
+            "temporal": [],
+            "spatial": [],
+            "unsupported": []
+          },
+          "warnings": [],
+          "scope": "supported"
+        },
+        "effective_route": "kg",
+        "retrieval_status": "ready",
+        "status": "answered",
+        "answer": "Theo các minh chứng tìm được:\nTên thực thể: Phường Hoàn Kiếm. Mã của Phường Hoàn Kiếm: 00070. Tỉnh/thành phố trực thuộc của Phường Hoàn Kiếm: Thành phố Hà Nội. Loại thực thể của Phường Hoàn Kiếm: đơn vị hành chính cấp xã. [1]\n\nNguồn minh chứng:\n[1] Phường Hoàn Kiếm — bản ghi KG nội bộ; vietnam-administrative-division-json-server; vietnam-sap-nhap-phuong-xa.csv (15 bản ghi nguồn)",
+        "citations": [
+          {
+            "number": 1,
+            "evidence_id": "E01",
+            "kind": "kg",
+            "title": "Phường Hoàn Kiếm",
+            "source": "vietnam-administrative-division-json-server; vietnam-sap-nhap-phuong-xa.csv",
+            "source_url": null,
+            "source_record_ids": [
+              "00bce023d123231c64047b1f2bfb45aacbdf18f525f37a38c72ed38fdc903bbd",
+              "1ea080b7e735cd00dc62ae43cdab67b7c5ed4ab4feda07a47e072604099a125c",
+              "43e0df66051533b3a0866299d12d19d062a2abb1697a7331121230cf502891d5",
+              "4c8e04f25a0d00f5424746e9797800861218b913642a6783f2260527dcb8e1d1",
+              "5fb623bca580d4263da4249567e1ec41b7c93108c6f1f109888d8f97b9ca542c",
+              "77b4190301c71f452096adf1a81d66f34bc63630a5e1860137db628e59f20950",
+              "7e03a400c538e737677d7600db68fb337ce2747807ceb70d7bdb38a56722f330",
+              "94a1eced857aa8da40b511c062bdc357d6d2f40a23b021b3891189b764117777",
+              "b3f89fc9d4eb9d345c2471046f40ad98939d2f3890c002c55476cf7dec96e43a",
+              "b6d8c1292a9f67c5816c17df66cd7c5a2833c73469e6c14dd7d0659f00ca7027",
+              "c63e0f31b2788bcb465b27f5e25282bf7499664e0999940b13384612af76e9d5",
+              "e690d80feb717d67e71a7ba905a527c14e409f32a6ad4be4daefec89e19643b0",
+              "f0e6ec3fa13eb0fa76eec5ee2f3996deb1c5b32020b679271c4d693b22b5c01f",
+              "fbacad31aa7b4d1c3886a5bb604598851e04f9c1ec36dd264d7015db8c58f7d6",
+              "fcbe5c03b959dc1372d4ce38e60d22ef125c1cf06048bd29ecb1536ebe121978"
+            ],
+            "source_verified": false
+          }
+        ],
+        "claims": [
+          {
+            "claim_id": "E01-C01",
+            "mode": "fact",
+            "text": "Tên thực thể: Phường Hoàn Kiếm. Mã của Phường Hoàn Kiếm: 00070. Tỉnh/thành phố trực thuộc của Phường Hoàn Kiếm: Thành phố Hà Nội. Loại thực thể của Phường Hoàn Kiếm: đơn vị hành chính cấp xã.",
+            "evidence_ids": [
+              "E01"
+            ],
+            "fields": [
+              "name",
+              "code",
+              "provinceName",
+              "type"
+            ],
+            "fact_checks": [
+              {
+                "evidence_id": "E01",
+                "field": "name",
+                "value": "Phường Hoàn Kiếm"
+              },
+              {
+                "evidence_id": "E01",
+                "field": "code",
+                "value": "00070"
+              },
+              {
+                "evidence_id": "E01",
+                "field": "provinceName",
+                "value": "Thành phố Hà Nội"
+              },
+              {
+                "evidence_id": "E01",
+                "field": "type",
+                "value": "https://w3id.org/vn-assistant/ontology#Ward"
+              }
+            ],
+            "verification": "exact_kg_fact_match",
+            "source_verified": false
+          }
+        ],
+        "cross_check": {
+          "status": "supported",
+          "supported": [
+            {
+              "claim_id": "E01-C01",
+              "mode": "fact",
+              "text": "Tên thực thể: Phường Hoàn Kiếm. Mã của Phường Hoàn Kiếm: 00070. Tỉnh/thành phố trực thuộc của Phường Hoàn Kiếm: Thành phố Hà Nội. Loại thực thể của Phường Hoàn Kiếm: đơn vị hành chính cấp xã.",
+              "evidence_ids": [
+                "E01"
+              ],
+              "fields": [
+                "name",
+                "code",
+                "provinceName",
+                "type"
+              ],
+              "fact_checks": [
+                {
+                  "evidence_id": "E01",
+                  "field": "name",
+                  "value": "Phường Hoàn Kiếm"
+                },
+                {
+                  "evidence_id": "E01",
+                  "field": "code",
+                  "value": "00070"
+                },
+                {
+                  "evidence_id": "E01",
+                  "field": "provinceName",
+                  "value": "Thành phố Hà Nội"
+                },
+                {
+                  "evidence_id": "E01",
+                  "field": "type",
+                  "value": "https://w3id.org/vn-assistant/ontology#Ward"
+                }
+              ],
+              "verification": "exact_kg_fact_match",
+              "source_verified": false
+            }
+          ],
+          "rejected": [],
+          "checked_count": 1,
+          "supported_count": 1,
+          "rejected_count": 0,
+          "verification_scope": "extractive_text_and_structured_kg_facts",
+          "constraints_checked": false,
+          "kg_rechecked": true
+        },
+        "warnings": [],
+        "llm": {
+          "backend": "transformers",
+          "model": "/Users/amyas/HK1 26-27/DATN/models/Qwen3-0.6B",
+          "device": "mps",
+          "ready": true,
+          "context_window": 4096,
+          "max_new_tokens": 384,
+          "error": null,
+          "generation_count": 2,
+          "last_latency_ms": 487.16
+        },
+        "timings_ms": {
+          "question_processing": 3.073,
+          "generation": 487.282,
+          "kg_refresh": 0.659,
+          "cross_check": 0.034,
+          "total": 491.155
+        },
+        "original_question": "Đơn vị mã 00070 thuộc tỉnh thành nào?",
+        "context_resolution": {
+          "question": "Đơn vị mã 00070 thuộc tỉnh thành nào?",
+          "resolved": false,
+          "needs_context": false
+        },
+        "retrieval_mode": "lexical_candidates_faiss"
+      }
+    },
+    {
+      "id": "date_iso",
+      "question": "Ngày 2025-07-01, đơn vị có mã 00070 là gì?",
+      "http_status": 200,
+      "latency_ms": 537.999,
+      "checks": {
+        "http_status": true,
+        "status": true,
+        "expected_fact": true,
+        "independent_constraints_check": true,
+        "all_claims_verified": true,
+        "source_integrity": true
+      },
+      "passed": true,
+      "response": {
+        "question": "Ngày 2025-07-01, đơn vị có mã 00070 là gì?",
+        "classification": {
+          "question": "Ngày 2025-07-01, đơn vị có mã 00070 là gì?",
+          "route": "kg",
+          "domain": "administration",
+          "route_confidence": 0.7,
+          "domain_confidence": 0.7,
+          "method": "tfidf_logistic_regression"
+        },
+        "plan": {
+          "route": "kg",
+          "kg": {
+            "query": "09_unit_at_time",
+            "params": {
+              "code": "00070",
+              "as_of": "2025-07-01",
+              "province": ""
+            }
+          },
+          "rag": null,
+          "intent": "logical",
+          "constraints": {
+            "temporal": [
+              "2025-07-01"
+            ],
+            "spatial": [],
+            "unsupported": []
+          },
+          "warnings": [],
+          "scope": "supported"
+        },
+        "effective_route": "kg",
+        "retrieval_status": "ready",
+        "status": "answered",
+        "answer": "Theo các minh chứng tìm được:\nTên thực thể: Phường Hoàn Kiếm. Mã của Phường Hoàn Kiếm: 00070. Mốc bắt đầu hiệu lực được ghi trong KG của Phường Hoàn Kiếm: 2025-07-01. Tỉnh/thành phố trực thuộc của Phường Hoàn Kiếm: Thành phố Hà Nội. Loại thực thể của Phường Hoàn Kiếm: đơn vị hành chính cấp xã. [1]\n\nNguồn minh chứng:\n[1] Phường Hoàn Kiếm — bản ghi KG nội bộ; vietnam-administrative-division-json-server; vietnam-sap-nhap-phuong-xa.csv (15 bản ghi nguồn)",
+        "citations": [
+          {
+            "number": 1,
+            "evidence_id": "E01",
+            "kind": "kg",
+            "title": "Phường Hoàn Kiếm",
+            "source": "vietnam-administrative-division-json-server; vietnam-sap-nhap-phuong-xa.csv",
+            "source_url": null,
+            "source_record_ids": [
+              "00bce023d123231c64047b1f2bfb45aacbdf18f525f37a38c72ed38fdc903bbd",
+              "1ea080b7e735cd00dc62ae43cdab67b7c5ed4ab4feda07a47e072604099a125c",
+              "43e0df66051533b3a0866299d12d19d062a2abb1697a7331121230cf502891d5",
+              "4c8e04f25a0d00f5424746e9797800861218b913642a6783f2260527dcb8e1d1",
+              "5fb623bca580d4263da4249567e1ec41b7c93108c6f1f109888d8f97b9ca542c",
+              "77b4190301c71f452096adf1a81d66f34bc63630a5e1860137db628e59f20950",
+              "7e03a400c538e737677d7600db68fb337ce2747807ceb70d7bdb38a56722f330",
+              "94a1eced857aa8da40b511c062bdc357d6d2f40a23b021b3891189b764117777",
+              "b3f89fc9d4eb9d345c2471046f40ad98939d2f3890c002c55476cf7dec96e43a",
+              "b6d8c1292a9f67c5816c17df66cd7c5a2833c73469e6c14dd7d0659f00ca7027",
+              "c63e0f31b2788bcb465b27f5e25282bf7499664e0999940b13384612af76e9d5",
+              "e690d80feb717d67e71a7ba905a527c14e409f32a6ad4be4daefec89e19643b0",
+              "f0e6ec3fa13eb0fa76eec5ee2f3996deb1c5b32020b679271c4d693b22b5c01f",
+              "fbacad31aa7b4d1c3886a5bb604598851e04f9c1ec36dd264d7015db8c58f7d6",
+              "fcbe5c03b959dc1372d4ce38e60d22ef125c1cf06048bd29ecb1536ebe121978"
+            ],
+            "source_verified": false
+          }
+        ],
+        "claims": [
+          {
+            "claim_id": "E01-C01",
+            "mode": "fact",
+            "text": "Tên thực thể: Phường Hoàn Kiếm. Mã của Phường Hoàn Kiếm: 00070. Mốc bắt đầu hiệu lực được ghi trong KG của Phường Hoàn Kiếm: 2025-07-01. Tỉnh/thành phố trực thuộc của Phường Hoàn Kiếm: Thành phố Hà Nội. Loại thực thể của Phường Hoàn Kiếm: đơn vị hành chính cấp xã.",
+            "evidence_ids": [
+              "E01"
+            ],
+            "fields": [
+              "name",
+              "code",
+              "validFrom",
+              "provinceName",
+              "type"
+            ],
+            "fact_checks": [
+              {
+                "evidence_id": "E01",
+                "field": "name",
+                "value": "Phường Hoàn Kiếm"
+              },
+              {
+                "evidence_id": "E01",
+                "field": "code",
+                "value": "00070"
+              },
+              {
+                "evidence_id": "E01",
+                "field": "validFrom",
+                "value": "2025-07-01"
+              },
+              {
+                "evidence_id": "E01",
+                "field": "provinceName",
+                "value": "Thành phố Hà Nội"
+              },
+              {
+                "evidence_id": "E01",
+                "field": "type",
+                "value": "https://w3id.org/vn-assistant/ontology#Ward"
+              }
+            ],
+            "verification": "exact_kg_fact_match",
+            "source_verified": false
+          }
+        ],
+        "cross_check": {
+          "status": "supported",
+          "supported": [
+            {
+              "claim_id": "E01-C01",
+              "mode": "fact",
+              "text": "Tên thực thể: Phường Hoàn Kiếm. Mã của Phường Hoàn Kiếm: 00070. Mốc bắt đầu hiệu lực được ghi trong KG của Phường Hoàn Kiếm: 2025-07-01. Tỉnh/thành phố trực thuộc của Phường Hoàn Kiếm: Thành phố Hà Nội. Loại thực thể của Phường Hoàn Kiếm: đơn vị hành chính cấp xã.",
+              "evidence_ids": [
+                "E01"
+              ],
+              "fields": [
+                "name",
+                "code",
+                "validFrom",
+                "provinceName",
+                "type"
+              ],
+              "fact_checks": [
+                {
+                  "evidence_id": "E01",
+                  "field": "name",
+                  "value": "Phường Hoàn Kiếm"
+                },
+                {
+                  "evidence_id": "E01",
+                  "field": "code",
+                  "value": "00070"
+                },
+                {
+                  "evidence_id": "E01",
+                  "field": "validFrom",
+                  "value": "2025-07-01"
+                },
+                {
+                  "evidence_id": "E01",
+                  "field": "provinceName",
+                  "value": "Thành phố Hà Nội"
+                },
+                {
+                  "evidence_id": "E01",
+                  "field": "type",
+                  "value": "https://w3id.org/vn-assistant/ontology#Ward"
+                }
+              ],
+              "verification": "exact_kg_fact_match",
+              "source_verified": false
+            }
+          ],
+          "rejected": [],
+          "checked_count": 1,
+          "supported_count": 1,
+          "rejected_count": 0,
+          "verification_scope": "extractive_text_and_structured_kg_facts",
+          "constraints_checked": true,
+          "kg_rechecked": true
+        },
+        "warnings": [],
+        "llm": {
+          "backend": "transformers",
+          "model": "/Users/amyas/HK1 26-27/DATN/models/Qwen3-0.6B",
+          "device": "mps",
+          "ready": true,
+          "context_window": 4096,
+          "max_new_tokens": 384,
+          "error": null,
+          "generation_count": 3,
+          "last_latency_ms": 512.08
+        },
+        "timings_ms": {
+          "question_processing": 23.03,
+          "generation": 512.258,
+          "kg_refresh": 1.228,
+          "cross_check": 0.056,
+          "total": 536.726
+        },
+        "original_question": "Ngày 2025-07-01, đơn vị có mã 00070 là gì?",
+        "context_resolution": {
+          "question": "Ngày 2025-07-01, đơn vị có mã 00070 là gì?",
+          "resolved": false,
+          "needs_context": false
+        },
+        "retrieval_mode": "lexical_candidates_faiss"
+      }
+    },
+    {
+      "id": "joint_province_date",
+      "question": "Ngày 01/07/2025, đơn vị mã 00070 thuộc thành phố Hà Nội không?",
+      "http_status": 200,
+      "latency_ms": 520.742,
+      "checks": {
+        "http_status": true,
+        "status": true,
+        "expected_fact": true,
+        "independent_constraints_check": true,
+        "all_claims_verified": true,
+        "source_integrity": true
+      },
+      "passed": true,
+      "response": {
+        "question": "Ngày 01/07/2025, đơn vị mã 00070 thuộc thành phố Hà Nội không?",
+        "classification": {
+          "question": "Ngày 01/07/2025, đơn vị mã 00070 thuộc thành phố Hà Nội không?",
+          "route": "kg",
+          "domain": "administration",
+          "route_confidence": 0.7,
+          "domain_confidence": 0.7,
+          "method": "tfidf_logistic_regression"
+        },
+        "plan": {
+          "route": "kg",
+          "kg": {
+            "query": "09_unit_at_time",
+            "params": {
+              "code": "00070",
+              "as_of": "2025-07-01",
+              "province": "Hà Nội"
+            }
+          },
+          "rag": null,
+          "intent": "logical",
+          "constraints": {
+            "temporal": [
+              "01/07/2025"
+            ],
+            "spatial": [],
+            "unsupported": []
+          },
+          "warnings": [],
+          "scope": "supported"
+        },
+        "effective_route": "kg",
+        "retrieval_status": "ready",
+        "status": "answered",
+        "answer": "Theo các minh chứng tìm được:\nTên thực thể: Phường Hoàn Kiếm. Mã của Phường Hoàn Kiếm: 00070. Mốc bắt đầu hiệu lực được ghi trong KG của Phường Hoàn Kiếm: 2025-07-01. Tỉnh/thành phố trực thuộc của Phường Hoàn Kiếm: Thành phố Hà Nội. Loại thực thể của Phường Hoàn Kiếm: đơn vị hành chính cấp xã. [1]\n\nNguồn minh chứng:\n[1] Phường Hoàn Kiếm — bản ghi KG nội bộ; vietnam-administrative-division-json-server; vietnam-sap-nhap-phuong-xa.csv (15 bản ghi nguồn)",
+        "citations": [
+          {
+            "number": 1,
+            "evidence_id": "E01",
+            "kind": "kg",
+            "title": "Phường Hoàn Kiếm",
+            "source": "vietnam-administrative-division-json-server; vietnam-sap-nhap-phuong-xa.csv",
+            "source_url": null,
+            "source_record_ids": [
+              "00bce023d123231c64047b1f2bfb45aacbdf18f525f37a38c72ed38fdc903bbd",
+              "1ea080b7e735cd00dc62ae43cdab67b7c5ed4ab4feda07a47e072604099a125c",
+              "43e0df66051533b3a0866299d12d19d062a2abb1697a7331121230cf502891d5",
+              "4c8e04f25a0d00f5424746e9797800861218b913642a6783f2260527dcb8e1d1",
+              "5fb623bca580d4263da4249567e1ec41b7c93108c6f1f109888d8f97b9ca542c",
+              "77b4190301c71f452096adf1a81d66f34bc63630a5e1860137db628e59f20950",
+              "7e03a400c538e737677d7600db68fb337ce2747807ceb70d7bdb38a56722f330",
+              "94a1eced857aa8da40b511c062bdc357d6d2f40a23b021b3891189b764117777",
+              "b3f89fc9d4eb9d345c2471046f40ad98939d2f3890c002c55476cf7dec96e43a",
+              "b6d8c1292a9f67c5816c17df66cd7c5a2833c73469e6c14dd7d0659f00ca7027",
+              "c63e0f31b2788bcb465b27f5e25282bf7499664e0999940b13384612af76e9d5",
+              "e690d80feb717d67e71a7ba905a527c14e409f32a6ad4be4daefec89e19643b0",
+              "f0e6ec3fa13eb0fa76eec5ee2f3996deb1c5b32020b679271c4d693b22b5c01f",
+              "fbacad31aa7b4d1c3886a5bb604598851e04f9c1ec36dd264d7015db8c58f7d6",
+              "fcbe5c03b959dc1372d4ce38e60d22ef125c1cf06048bd29ecb1536ebe121978"
+            ],
+            "source_verified": false
+          }
+        ],
+        "claims": [
+          {
+            "claim_id": "E01-C01",
+            "mode": "fact",
+            "text": "Tên thực thể: Phường Hoàn Kiếm. Mã của Phường Hoàn Kiếm: 00070. Mốc bắt đầu hiệu lực được ghi trong KG của Phường Hoàn Kiếm: 2025-07-01. Tỉnh/thành phố trực thuộc của Phường Hoàn Kiếm: Thành phố Hà Nội. Loại thực thể của Phường Hoàn Kiếm: đơn vị hành chính cấp xã.",
+            "evidence_ids": [
+              "E01"
+            ],
+            "fields": [
+              "name",
+              "code",
+              "validFrom",
+              "provinceName",
+              "type"
+            ],
+            "fact_checks": [
+              {
+                "evidence_id": "E01",
+                "field": "name",
+                "value": "Phường Hoàn Kiếm"
+              },
+              {
+                "evidence_id": "E01",
+                "field": "code",
+                "value": "00070"
+              },
+              {
+                "evidence_id": "E01",
+                "field": "validFrom",
+                "value": "2025-07-01"
+              },
+              {
+                "evidence_id": "E01",
+                "field": "provinceName",
+                "value": "Thành phố Hà Nội"
+              },
+              {
+                "evidence_id": "E01",
+                "field": "type",
+                "value": "https://w3id.org/vn-assistant/ontology#Ward"
+              }
+            ],
+            "verification": "exact_kg_fact_match",
+            "source_verified": false
+          }
+        ],
+        "cross_check": {
+          "status": "supported",
+          "supported": [
+            {
+              "claim_id": "E01-C01",
+              "mode": "fact",
+              "text": "Tên thực thể: Phường Hoàn Kiếm. Mã của Phường Hoàn Kiếm: 00070. Mốc bắt đầu hiệu lực được ghi trong KG của Phường Hoàn Kiếm: 2025-07-01. Tỉnh/thành phố trực thuộc của Phường Hoàn Kiếm: Thành phố Hà Nội. Loại thực thể của Phường Hoàn Kiếm: đơn vị hành chính cấp xã.",
+              "evidence_ids": [
+                "E01"
+              ],
+              "fields": [
+                "name",
+                "code",
+                "validFrom",
+                "provinceName",
+                "type"
+              ],
+              "fact_checks": [
+                {
+                  "evidence_id": "E01",
+                  "field": "name",
+                  "value": "Phường Hoàn Kiếm"
+                },
+                {
+                  "evidence_id": "E01",
+                  "field": "code",
+                  "value": "00070"
+                },
+                {
+                  "evidence_id": "E01",
+                  "field": "validFrom",
+                  "value": "2025-07-01"
+                },
+                {
+                  "evidence_id": "E01",
+                  "field": "provinceName",
+                  "value": "Thành phố Hà Nội"
+                },
+                {
+                  "evidence_id": "E01",
+                  "field": "type",
+                  "value": "https://w3id.org/vn-assistant/ontology#Ward"
+                }
+              ],
+              "verification": "exact_kg_fact_match",
+              "source_verified": false
+            }
+          ],
+          "rejected": [],
+          "checked_count": 1,
+          "supported_count": 1,
+          "rejected_count": 0,
+          "verification_scope": "extractive_text_and_structured_kg_facts",
+          "constraints_checked": true,
+          "kg_rechecked": true
+        },
+        "warnings": [],
+        "llm": {
+          "backend": "transformers",
+          "model": "/Users/amyas/HK1 26-27/DATN/models/Qwen3-0.6B",
+          "device": "mps",
+          "ready": true,
+          "context_window": 4096,
+          "max_new_tokens": 384,
+          "error": null,
+          "generation_count": 4,
+          "last_latency_ms": 494.52
+        },
+        "timings_ms": {
+          "question_processing": 23.782,
+          "generation": 494.683,
+          "kg_refresh": 0.852,
+          "cross_check": 0.041,
+          "total": 519.474
+        },
+        "original_question": "Ngày 01/07/2025, đơn vị mã 00070 thuộc thành phố Hà Nội không?",
+        "context_resolution": {
+          "question": "Ngày 01/07/2025, đơn vị mã 00070 thuộc thành phố Hà Nội không?",
+          "resolved": false,
+          "needs_context": false
+        },
+        "retrieval_mode": "lexical_candidates_faiss"
+      }
+    },
+    {
+      "id": "joint_wrong_province",
+      "question": "Ngày 01/07/2025, mã 00070 thuộc tỉnh Quảng Ninh không?",
+      "http_status": 200,
+      "latency_ms": 20.262,
+      "checks": {
+        "http_status": true,
+        "status": true,
+        "no_unverified_claims": true
+      },
+      "passed": true,
+      "response": {
+        "question": "Ngày 01/07/2025, mã 00070 thuộc tỉnh Quảng Ninh không?",
+        "classification": {
+          "question": "Ngày 01/07/2025, mã 00070 thuộc tỉnh Quảng Ninh không?",
+          "route": "kg",
+          "domain": "administration",
+          "route_confidence": 0.7,
+          "domain_confidence": 0.7,
+          "method": "tfidf_logistic_regression"
+        },
+        "plan": {
+          "route": "kg",
+          "kg": {
+            "query": "09_unit_at_time",
+            "params": {
+              "code": "00070",
+              "as_of": "2025-07-01",
+              "province": "Quảng Ninh"
+            }
+          },
+          "rag": null,
+          "intent": "logical",
+          "constraints": {
+            "temporal": [
+              "01/07/2025"
+            ],
+            "spatial": [],
+            "unsupported": []
+          },
+          "warnings": [],
+          "scope": "supported"
+        },
+        "effective_route": "kg",
+        "retrieval_status": "no_evidence",
+        "status": "abstained",
+        "answer": "Mình chưa tìm được bản ghi KG khớp mã đơn vị và các điều kiện bạn yêu cầu. Bạn kiểm tra lại mã hoặc thay đổi ngày, địa phương cần tra cứu nhé.",
+        "citations": [],
+        "claims": [],
+        "cross_check": {
+          "status": "insufficient_evidence",
+          "supported": [],
+          "rejected": [],
+          "checked_count": 0,
+          "supported_count": 0,
+          "rejected_count": 0,
+          "verification_scope": "extractive_text_and_structured_kg_facts",
+          "reason": "missing_verified_code"
+        },
+        "warnings": [
+          "missing_verified_code"
+        ],
+        "llm": {
+          "backend": "transformers",
+          "model": "/Users/amyas/HK1 26-27/DATN/models/Qwen3-0.6B",
+          "device": "mps",
+          "ready": true,
+          "context_window": 4096,
+          "max_new_tokens": 384,
+          "error": null,
+          "generation_count": 4,
+          "last_latency_ms": 494.52
+        },
+        "timings_ms": {
+          "question_processing": 19.196,
+          "generation": 0.0,
+          "kg_refresh": 0.0,
+          "cross_check": 0.0,
+          "total": 19.198
+        },
+        "original_question": "Ngày 01/07/2025, mã 00070 thuộc tỉnh Quảng Ninh không?",
+        "context_resolution": {
+          "question": "Ngày 01/07/2025, mã 00070 thuộc tỉnh Quảng Ninh không?",
+          "resolved": false,
+          "needs_context": false
+        },
+        "retrieval_mode": "lexical_candidates_faiss"
+      }
+    },
+    {
+      "id": "before_effective_date",
+      "question": "Ngày 30/06/2025, mã 00070 thuộc thành phố Hà Nội không?",
+      "http_status": 200,
+      "latency_ms": 20.459,
+      "checks": {
+        "http_status": true,
+        "status": true,
+        "no_unverified_claims": true
+      },
+      "passed": true,
+      "response": {
+        "question": "Ngày 30/06/2025, mã 00070 thuộc thành phố Hà Nội không?",
+        "classification": {
+          "question": "Ngày 30/06/2025, mã 00070 thuộc thành phố Hà Nội không?",
+          "route": "kg",
+          "domain": "administration",
+          "route_confidence": 0.7,
+          "domain_confidence": 0.7,
+          "method": "tfidf_logistic_regression"
+        },
+        "plan": {
+          "route": "kg",
+          "kg": {
+            "query": "09_unit_at_time",
+            "params": {
+              "code": "00070",
+              "as_of": "2025-06-30",
+              "province": "Hà Nội"
+            }
+          },
+          "rag": null,
+          "intent": "logical",
+          "constraints": {
+            "temporal": [
+              "30/06/2025"
+            ],
+            "spatial": [],
+            "unsupported": []
+          },
+          "warnings": [],
+          "scope": "supported"
+        },
+        "effective_route": "kg",
+        "retrieval_status": "no_evidence",
+        "status": "abstained",
+        "answer": "Mình chưa tìm được bản ghi KG khớp mã đơn vị và các điều kiện bạn yêu cầu. Bạn kiểm tra lại mã hoặc thay đổi ngày, địa phương cần tra cứu nhé.",
+        "citations": [],
+        "claims": [],
+        "cross_check": {
+          "status": "insufficient_evidence",
+          "supported": [],
+          "rejected": [],
+          "checked_count": 0,
+          "supported_count": 0,
+          "rejected_count": 0,
+          "verification_scope": "extractive_text_and_structured_kg_facts",
+          "reason": "missing_verified_code"
+        },
+        "warnings": [
+          "missing_verified_code"
+        ],
+        "llm": {
+          "backend": "transformers",
+          "model": "/Users/amyas/HK1 26-27/DATN/models/Qwen3-0.6B",
+          "device": "mps",
+          "ready": true,
+          "context_window": 4096,
+          "max_new_tokens": 384,
+          "error": null,
+          "generation_count": 4,
+          "last_latency_ms": 494.52
+        },
+        "timings_ms": {
+          "question_processing": 19.562,
+          "generation": 0.0,
+          "kg_refresh": 0.0,
+          "cross_check": 0.0,
+          "total": 19.564
+        },
+        "original_question": "Ngày 30/06/2025, mã 00070 thuộc thành phố Hà Nội không?",
+        "context_resolution": {
+          "question": "Ngày 30/06/2025, mã 00070 thuộc thành phố Hà Nội không?",
+          "resolved": false,
+          "needs_context": false
+        },
+        "retrieval_mode": "lexical_candidates_faiss"
+      }
+    },
+    {
+      "id": "future_without_interval",
+      "question": "Ngày 23/10/2026, mã 00070 thuộc thành phố Hà Nội không?",
+      "http_status": 200,
+      "latency_ms": 19.859,
+      "checks": {
+        "http_status": true,
+        "status": true,
+        "no_unverified_claims": true
+      },
+      "passed": true,
+      "response": {
+        "question": "Ngày 23/10/2026, mã 00070 thuộc thành phố Hà Nội không?",
+        "classification": {
+          "question": "Ngày 23/10/2026, mã 00070 thuộc thành phố Hà Nội không?",
+          "route": "kg",
+          "domain": "administration",
+          "route_confidence": 0.7,
+          "domain_confidence": 0.7,
+          "method": "tfidf_logistic_regression"
+        },
+        "plan": {
+          "route": "kg",
+          "kg": {
+            "query": "09_unit_at_time",
+            "params": {
+              "code": "00070",
+              "as_of": "2026-10-23",
+              "province": "Hà Nội"
+            }
+          },
+          "rag": null,
+          "intent": "logical",
+          "constraints": {
+            "temporal": [
+              "23/10/2026"
+            ],
+            "spatial": [],
+            "unsupported": []
+          },
+          "warnings": [],
+          "scope": "supported"
+        },
+        "effective_route": "kg",
+        "retrieval_status": "no_evidence",
+        "status": "abstained",
+        "answer": "Mình chưa tìm được bản ghi KG khớp mã đơn vị và các điều kiện bạn yêu cầu. Bạn kiểm tra lại mã hoặc thay đổi ngày, địa phương cần tra cứu nhé.",
+        "citations": [],
+        "claims": [],
+        "cross_check": {
+          "status": "insufficient_evidence",
+          "supported": [],
+          "rejected": [],
+          "checked_count": 0,
+          "supported_count": 0,
+          "rejected_count": 0,
+          "verification_scope": "extractive_text_and_structured_kg_facts",
+          "reason": "missing_verified_code"
+        },
+        "warnings": [
+          "missing_verified_code"
+        ],
+        "llm": {
+          "backend": "transformers",
+          "model": "/Users/amyas/HK1 26-27/DATN/models/Qwen3-0.6B",
+          "device": "mps",
+          "ready": true,
+          "context_window": 4096,
+          "max_new_tokens": 384,
+          "error": null,
+          "generation_count": 4,
+          "last_latency_ms": 494.52
+        },
+        "timings_ms": {
+          "question_processing": 19.039,
+          "generation": 0.0,
+          "kg_refresh": 0.0,
+          "cross_check": 0.0,
+          "total": 19.04
+        },
+        "original_question": "Ngày 23/10/2026, mã 00070 thuộc thành phố Hà Nội không?",
+        "context_resolution": {
+          "question": "Ngày 23/10/2026, mã 00070 thuộc thành phố Hà Nội không?",
+          "resolved": false,
+          "needs_context": false
+        },
+        "retrieval_mode": "lexical_candidates_faiss"
+      }
+    },
+    {
+      "id": "province_without_date",
+      "question": "Mã 00070 thuộc thành phố Hà Nội không?",
+      "http_status": 200,
+      "latency_ms": 544.693,
+      "checks": {
+        "http_status": true,
+        "status": true,
+        "expected_fact": true,
+        "source_kinds": true,
+        "all_claims_verified": true,
+        "source_integrity": true
+      },
+      "passed": true,
+      "response": {
+        "question": "Mã 00070 thuộc thành phố Hà Nội không?",
+        "classification": {
+          "question": "Mã 00070 thuộc thành phố Hà Nội không?",
+          "route": "kg",
+          "domain": "administration",
+          "route_confidence": 0.7,
+          "domain_confidence": 0.7,
+          "method": "tfidf_logistic_regression"
+        },
+        "plan": {
+          "route": "kg",
+          "kg": {
+            "query": "09_unit_at_time",
+            "params": {
+              "code": "00070",
+              "as_of": "",
+              "province": "Hà Nội"
+            }
+          },
+          "rag": null,
+          "intent": "logical",
+          "constraints": {
+            "temporal": [],
+            "spatial": [],
+            "unsupported": []
+          },
+          "warnings": [],
+          "scope": "supported"
+        },
+        "effective_route": "kg",
+        "retrieval_status": "ready",
+        "status": "answered",
+        "answer": "Theo các minh chứng tìm được:\nTên thực thể: Phường Hoàn Kiếm. Mã của Phường Hoàn Kiếm: 00070. Tỉnh/thành phố trực thuộc của Phường Hoàn Kiếm: Thành phố Hà Nội. Loại thực thể của Phường Hoàn Kiếm: đơn vị hành chính cấp xã. [1]\n\nNguồn minh chứng:\n[1] Phường Hoàn Kiếm — bản ghi KG nội bộ; vietnam-administrative-division-json-server; vietnam-sap-nhap-phuong-xa.csv (15 bản ghi nguồn)",
+        "citations": [
+          {
+            "number": 1,
+            "evidence_id": "E01",
+            "kind": "kg",
+            "title": "Phường Hoàn Kiếm",
+            "source": "vietnam-administrative-division-json-server; vietnam-sap-nhap-phuong-xa.csv",
+            "source_url": null,
+            "source_record_ids": [
+              "00bce023d123231c64047b1f2bfb45aacbdf18f525f37a38c72ed38fdc903bbd",
+              "1ea080b7e735cd00dc62ae43cdab67b7c5ed4ab4feda07a47e072604099a125c",
+              "43e0df66051533b3a0866299d12d19d062a2abb1697a7331121230cf502891d5",
+              "4c8e04f25a0d00f5424746e9797800861218b913642a6783f2260527dcb8e1d1",
+              "5fb623bca580d4263da4249567e1ec41b7c93108c6f1f109888d8f97b9ca542c",
+              "77b4190301c71f452096adf1a81d66f34bc63630a5e1860137db628e59f20950",
+              "7e03a400c538e737677d7600db68fb337ce2747807ceb70d7bdb38a56722f330",
+              "94a1eced857aa8da40b511c062bdc357d6d2f40a23b021b3891189b764117777",
+              "b3f89fc9d4eb9d345c2471046f40ad98939d2f3890c002c55476cf7dec96e43a",
+              "b6d8c1292a9f67c5816c17df66cd7c5a2833c73469e6c14dd7d0659f00ca7027",
+              "c63e0f31b2788bcb465b27f5e25282bf7499664e0999940b13384612af76e9d5",
+              "e690d80feb717d67e71a7ba905a527c14e409f32a6ad4be4daefec89e19643b0",
+              "f0e6ec3fa13eb0fa76eec5ee2f3996deb1c5b32020b679271c4d693b22b5c01f",
+              "fbacad31aa7b4d1c3886a5bb604598851e04f9c1ec36dd264d7015db8c58f7d6",
+              "fcbe5c03b959dc1372d4ce38e60d22ef125c1cf06048bd29ecb1536ebe121978"
+            ],
+            "source_verified": false
+          }
+        ],
+        "claims": [
+          {
+            "claim_id": "E01-C01",
+            "mode": "fact",
+            "text": "Tên thực thể: Phường Hoàn Kiếm. Mã của Phường Hoàn Kiếm: 00070. Tỉnh/thành phố trực thuộc của Phường Hoàn Kiếm: Thành phố Hà Nội. Loại thực thể của Phường Hoàn Kiếm: đơn vị hành chính cấp xã.",
+            "evidence_ids": [
+              "E01"
+            ],
+            "fields": [
+              "name",
+              "code",
+              "provinceName",
+              "type"
+            ],
+            "fact_checks": [
+              {
+                "evidence_id": "E01",
+                "field": "name",
+                "value": "Phường Hoàn Kiếm"
+              },
+              {
+                "evidence_id": "E01",
+                "field": "code",
+                "value": "00070"
+              },
+              {
+                "evidence_id": "E01",
+                "field": "provinceName",
+                "value": "Thành phố Hà Nội"
+              },
+              {
+                "evidence_id": "E01",
+                "field": "type",
+                "value": "https://w3id.org/vn-assistant/ontology#Ward"
+              }
+            ],
+            "verification": "exact_kg_fact_match",
+            "source_verified": false
+          }
+        ],
+        "cross_check": {
+          "status": "supported",
+          "supported": [
+            {
+              "claim_id": "E01-C01",
+              "mode": "fact",
+              "text": "Tên thực thể: Phường Hoàn Kiếm. Mã của Phường Hoàn Kiếm: 00070. Tỉnh/thành phố trực thuộc của Phường Hoàn Kiếm: Thành phố Hà Nội. Loại thực thể của Phường Hoàn Kiếm: đơn vị hành chính cấp xã.",
+              "evidence_ids": [
+                "E01"
+              ],
+              "fields": [
+                "name",
+                "code",
+                "provinceName",
+                "type"
+              ],
+              "fact_checks": [
+                {
+                  "evidence_id": "E01",
+                  "field": "name",
+                  "value": "Phường Hoàn Kiếm"
+                },
+                {
+                  "evidence_id": "E01",
+                  "field": "code",
+                  "value": "00070"
+                },
+                {
+                  "evidence_id": "E01",
+                  "field": "provinceName",
+                  "value": "Thành phố Hà Nội"
+                },
+                {
+                  "evidence_id": "E01",
+                  "field": "type",
+                  "value": "https://w3id.org/vn-assistant/ontology#Ward"
+                }
+              ],
+              "verification": "exact_kg_fact_match",
+              "source_verified": false
+            }
+          ],
+          "rejected": [],
+          "checked_count": 1,
+          "supported_count": 1,
+          "rejected_count": 0,
+          "verification_scope": "extractive_text_and_structured_kg_facts",
+          "constraints_checked": true,
+          "kg_rechecked": true
+        },
+        "warnings": [],
+        "llm": {
+          "backend": "transformers",
+          "model": "/Users/amyas/HK1 26-27/DATN/models/Qwen3-0.6B",
+          "device": "mps",
+          "ready": true,
+          "context_window": 4096,
+          "max_new_tokens": 384,
+          "error": null,
+          "generation_count": 5,
+          "last_latency_ms": 522.95
+        },
+        "timings_ms": {
+          "question_processing": 19.505,
+          "generation": 523.087,
+          "kg_refresh": 0.942,
+          "cross_check": 0.035,
+          "total": 543.681
+        },
+        "original_question": "Mã 00070 thuộc thành phố Hà Nội không?",
+        "context_resolution": {
+          "question": "Mã 00070 thuộc thành phố Hà Nội không?",
+          "resolved": false,
+          "needs_context": false
+        },
+        "retrieval_mode": "lexical_candidates_faiss"
+      }
+    },
+    {
+      "id": "invalid_date",
+      "question": "Ngày 31/02/2025 mã 00070 thuộc tỉnh nào?",
+      "http_status": 200,
+      "latency_ms": 3.415,
+      "checks": {
+        "http_status": true,
+        "status": true,
+        "no_unverified_claims": true
+      },
+      "passed": true,
+      "response": {
+        "question": "Ngày 31/02/2025 mã 00070 thuộc tỉnh nào?",
+        "classification": {
+          "question": "Ngày 31/02/2025 mã 00070 thuộc tỉnh nào?",
+          "route": "kg",
+          "domain": "administration",
+          "route_confidence": 0.7,
+          "domain_confidence": 0.7,
+          "method": "tfidf_logistic_regression"
+        },
+        "plan": {
+          "route": "rag",
+          "kg": null,
+          "rag": {
+            "domain": "administration",
+            "top_k": 5
+          },
+          "intent": "logical",
+          "constraints": {
+            "temporal": [
+              "31/02/2025"
+            ],
+            "spatial": [],
+            "unsupported": [
+              "Chưa xác minh được đầy đủ ràng buộc thời gian bằng KG; cần mã đơn vị, ngày cụ thể được hỗ trợ và mốc hiệu lực trong dữ liệu."
+            ]
+          },
+          "warnings": [
+            "Chưa xác minh được đầy đủ ràng buộc thời gian bằng KG; cần mã đơn vị, ngày cụ thể được hỗ trợ và mốc hiệu lực trong dữ liệu."
+          ],
+          "scope": "supported"
+        },
+        "effective_route": "rag",
+        "retrieval_status": "unsupported_constraints",
+        "status": "abstained",
+        "answer": "Dữ liệu hiện có chưa đủ để xác nhận điều kiện thời gian hoặc khoảng cách trong câu hỏi. Bạn có thể hỏi mã đơn vị, tỉnh/thành trực thuộc hoặc tra mã tại một ngày cụ thể; truy vấn bán kính cần bổ sung tọa độ.",
+        "citations": [],
+        "claims": [],
+        "cross_check": {
+          "status": "insufficient_evidence",
+          "supported": [],
+          "rejected": [],
+          "checked_count": 0,
+          "supported_count": 0,
+          "rejected_count": 0,
+          "verification_scope": "extractive_text_and_structured_kg_facts",
+          "reason": "unsupported_constraints"
+        },
+        "warnings": [
+          "Chưa xác minh được đầy đủ ràng buộc thời gian bằng KG; cần mã đơn vị, ngày cụ thể được hỗ trợ và mốc hiệu lực trong dữ liệu.",
+          "unsupported_constraints"
+        ],
+        "llm": {
+          "backend": "transformers",
+          "model": "/Users/amyas/HK1 26-27/DATN/models/Qwen3-0.6B",
+          "device": "mps",
+          "ready": true,
+          "context_window": 4096,
+          "max_new_tokens": 384,
+          "error": null,
+          "generation_count": 5,
+          "last_latency_ms": 522.95
+        },
+        "timings_ms": {
+          "question_processing": 2.209,
+          "generation": 0.0,
+          "kg_refresh": 0.0,
+          "cross_check": 0.0,
+          "total": 2.211
+        },
+        "original_question": "Ngày 31/02/2025 mã 00070 thuộc tỉnh nào?",
+        "context_resolution": {
+          "question": "Ngày 31/02/2025 mã 00070 thuộc tỉnh nào?",
+          "resolved": false,
+          "needs_context": false
+        },
+        "retrieval_mode": "lexical_candidates_faiss"
+      }
+    },
+    {
+      "id": "time_range",
+      "question": "Mã 00070 thuộc tỉnh nào từ ngày 01/07/2025 đến ngày 01/08/2025?",
+      "http_status": 200,
+      "latency_ms": 3.582,
+      "checks": {
+        "http_status": true,
+        "status": true,
+        "no_unverified_claims": true
+      },
+      "passed": true,
+      "response": {
+        "question": "Mã 00070 thuộc tỉnh nào từ ngày 01/07/2025 đến ngày 01/08/2025?",
+        "classification": {
+          "question": "Mã 00070 thuộc tỉnh nào từ ngày 01/07/2025 đến ngày 01/08/2025?",
+          "route": "kg",
+          "domain": "administration",
+          "route_confidence": 0.7,
+          "domain_confidence": 0.7,
+          "method": "tfidf_logistic_regression"
+        },
+        "plan": {
+          "route": "rag",
+          "kg": null,
+          "rag": {
+            "domain": "administration",
+            "top_k": 5
+          },
+          "intent": "logical",
+          "constraints": {
+            "temporal": [
+              "01/07/2025",
+              "01/08/2025"
+            ],
+            "spatial": [],
+            "unsupported": [
+              "Chưa xác minh được đầy đủ ràng buộc thời gian bằng KG; cần mã đơn vị, ngày cụ thể được hỗ trợ và mốc hiệu lực trong dữ liệu."
+            ]
+          },
+          "warnings": [
+            "Chưa xác minh được đầy đủ ràng buộc thời gian bằng KG; cần mã đơn vị, ngày cụ thể được hỗ trợ và mốc hiệu lực trong dữ liệu."
+          ],
+          "scope": "supported"
+        },
+        "effective_route": "rag",
+        "retrieval_status": "unsupported_constraints",
+        "status": "abstained",
+        "answer": "Dữ liệu hiện có chưa đủ để xác nhận điều kiện thời gian hoặc khoảng cách trong câu hỏi. Bạn có thể hỏi mã đơn vị, tỉnh/thành trực thuộc hoặc tra mã tại một ngày cụ thể; truy vấn bán kính cần bổ sung tọa độ.",
+        "citations": [],
+        "claims": [],
+        "cross_check": {
+          "status": "insufficient_evidence",
+          "supported": [],
+          "rejected": [],
+          "checked_count": 0,
+          "supported_count": 0,
+          "rejected_count": 0,
+          "verification_scope": "extractive_text_and_structured_kg_facts",
+          "reason": "unsupported_constraints"
+        },
+        "warnings": [
+          "Chưa xác minh được đầy đủ ràng buộc thời gian bằng KG; cần mã đơn vị, ngày cụ thể được hỗ trợ và mốc hiệu lực trong dữ liệu.",
+          "unsupported_constraints"
+        ],
+        "llm": {
+          "backend": "transformers",
+          "model": "/Users/amyas/HK1 26-27/DATN/models/Qwen3-0.6B",
+          "device": "mps",
+          "ready": true,
+          "context_window": 4096,
+          "max_new_tokens": 384,
+          "error": null,
+          "generation_count": 5,
+          "last_latency_ms": 522.95
+        },
+        "timings_ms": {
+          "question_processing": 2.629,
+          "generation": 0.0,
+          "kg_refresh": 0.0,
+          "cross_check": 0.0,
+          "total": 2.631
+        },
+        "original_question": "Mã 00070 thuộc tỉnh nào từ ngày 01/07/2025 đến ngày 01/08/2025?",
+        "context_resolution": {
+          "question": "Mã 00070 thuộc tỉnh nào từ ngày 01/07/2025 đến ngày 01/08/2025?",
+          "resolved": false,
+          "needs_context": false
+        },
+        "retrieval_mode": "lexical_candidates_faiss"
+      }
+    },
+    {
+      "id": "strict_before",
+      "question": "Trước ngày 01/07/2025 mã 00070 thuộc đâu?",
+      "http_status": 200,
+      "latency_ms": 2.927,
+      "checks": {
+        "http_status": true,
+        "status": true,
+        "no_unverified_claims": true
+      },
+      "passed": true,
+      "response": {
+        "question": "Trước ngày 01/07/2025 mã 00070 thuộc đâu?",
+        "classification": {
+          "question": "Trước ngày 01/07/2025 mã 00070 thuộc đâu?",
+          "route": "kg",
+          "domain": "administration",
+          "route_confidence": 0.7,
+          "domain_confidence": 0.7,
+          "method": "tfidf_logistic_regression"
+        },
+        "plan": {
+          "route": "rag",
+          "kg": null,
+          "rag": {
+            "domain": "administration",
+            "top_k": 5
+          },
+          "intent": "logical",
+          "constraints": {
+            "temporal": [
+              "01/07/2025",
+              "thời điểm hoặc khoảng thời gian được yêu cầu"
+            ],
+            "spatial": [],
+            "unsupported": [
+              "Chưa xác minh được đầy đủ ràng buộc thời gian bằng KG; cần mã đơn vị, ngày cụ thể được hỗ trợ và mốc hiệu lực trong dữ liệu."
+            ]
+          },
+          "warnings": [
+            "Chưa xác minh được đầy đủ ràng buộc thời gian bằng KG; cần mã đơn vị, ngày cụ thể được hỗ trợ và mốc hiệu lực trong dữ liệu."
+          ],
+          "scope": "supported"
+        },
+        "effective_route": "rag",
+        "retrieval_status": "unsupported_constraints",
+        "status": "abstained",
+        "answer": "Dữ liệu hiện có chưa đủ để xác nhận điều kiện thời gian hoặc khoảng cách trong câu hỏi. Bạn có thể hỏi mã đơn vị, tỉnh/thành trực thuộc hoặc tra mã tại một ngày cụ thể; truy vấn bán kính cần bổ sung tọa độ.",
+        "citations": [],
+        "claims": [],
+        "cross_check": {
+          "status": "insufficient_evidence",
+          "supported": [],
+          "rejected": [],
+          "checked_count": 0,
+          "supported_count": 0,
+          "rejected_count": 0,
+          "verification_scope": "extractive_text_and_structured_kg_facts",
+          "reason": "unsupported_constraints"
+        },
+        "warnings": [
+          "Chưa xác minh được đầy đủ ràng buộc thời gian bằng KG; cần mã đơn vị, ngày cụ thể được hỗ trợ và mốc hiệu lực trong dữ liệu.",
+          "unsupported_constraints"
+        ],
+        "llm": {
+          "backend": "transformers",
+          "model": "/Users/amyas/HK1 26-27/DATN/models/Qwen3-0.6B",
+          "device": "mps",
+          "ready": true,
+          "context_window": 4096,
+          "max_new_tokens": 384,
+          "error": null,
+          "generation_count": 5,
+          "last_latency_ms": 522.95
+        },
+        "timings_ms": {
+          "question_processing": 2.163,
+          "generation": 0.0,
+          "kg_refresh": 0.0,
+          "cross_check": 0.0,
+          "total": 2.165
+        },
+        "original_question": "Trước ngày 01/07/2025 mã 00070 thuộc đâu?",
+        "context_resolution": {
+          "question": "Trước ngày 01/07/2025 mã 00070 thuộc đâu?",
+          "resolved": false,
+          "needs_context": false
+        },
+        "retrieval_mode": "lexical_candidates_faiss"
+      }
+    },
+    {
+      "id": "relative_yesterday_joint",
+      "question": "Hôm qua mã 00070 thuộc thành phố Hà Nội không?",
+      "http_status": 200,
+      "latency_ms": 2.791,
+      "checks": {
+        "http_status": true,
+        "status": true,
+        "no_unverified_claims": true
+      },
+      "passed": true,
+      "response": {
+        "question": "Hôm qua mã 00070 thuộc thành phố Hà Nội không?",
+        "classification": {
+          "question": "Hôm qua mã 00070 thuộc thành phố Hà Nội không?",
+          "route": "kg",
+          "domain": "administration",
+          "route_confidence": 0.7,
+          "domain_confidence": 0.7,
+          "method": "tfidf_logistic_regression"
+        },
+        "plan": {
+          "route": "rag",
+          "kg": null,
+          "rag": {
+            "domain": "administration",
+            "top_k": 5
+          },
+          "intent": "logical",
+          "constraints": {
+            "temporal": [
+              "thời điểm hoặc khoảng thời gian được yêu cầu"
+            ],
+            "spatial": [],
+            "unsupported": [
+              "Chưa xác minh được đầy đủ ràng buộc thời gian bằng KG; cần mã đơn vị, ngày cụ thể được hỗ trợ và mốc hiệu lực trong dữ liệu."
+            ]
+          },
+          "warnings": [
+            "Chưa xác minh được đầy đủ ràng buộc thời gian bằng KG; cần mã đơn vị, ngày cụ thể được hỗ trợ và mốc hiệu lực trong dữ liệu."
+          ],
+          "scope": "supported"
+        },
+        "effective_route": "rag",
+        "retrieval_status": "unsupported_constraints",
+        "status": "abstained",
+        "answer": "Dữ liệu hiện có chưa đủ để xác nhận điều kiện thời gian hoặc khoảng cách trong câu hỏi. Bạn có thể hỏi mã đơn vị, tỉnh/thành trực thuộc hoặc tra mã tại một ngày cụ thể; truy vấn bán kính cần bổ sung tọa độ.",
+        "citations": [],
+        "claims": [],
+        "cross_check": {
+          "status": "insufficient_evidence",
+          "supported": [],
+          "rejected": [],
+          "checked_count": 0,
+          "supported_count": 0,
+          "rejected_count": 0,
+          "verification_scope": "extractive_text_and_structured_kg_facts",
+          "reason": "unsupported_constraints"
+        },
+        "warnings": [
+          "Chưa xác minh được đầy đủ ràng buộc thời gian bằng KG; cần mã đơn vị, ngày cụ thể được hỗ trợ và mốc hiệu lực trong dữ liệu.",
+          "unsupported_constraints"
+        ],
+        "llm": {
+          "backend": "transformers",
+          "model": "/Users/amyas/HK1 26-27/DATN/models/Qwen3-0.6B",
+          "device": "mps",
+          "ready": true,
+          "context_window": 4096,
+          "max_new_tokens": 384,
+          "error": null,
+          "generation_count": 5,
+          "last_latency_ms": 522.95
+        },
+        "timings_ms": {
+          "question_processing": 2.083,
+          "generation": 0.0,
+          "kg_refresh": 0.0,
+          "cross_check": 0.0,
+          "total": 2.084
+        },
+        "original_question": "Hôm qua mã 00070 thuộc thành phố Hà Nội không?",
+        "context_resolution": {
+          "question": "Hôm qua mã 00070 thuộc thành phố Hà Nội không?",
+          "resolved": false,
+          "needs_context": false
+        },
+        "retrieval_mode": "lexical_candidates_faiss"
+      }
+    },
+    {
+      "id": "relative_today_joint",
+      "question": "Hôm nay mã 00070 thuộc thành phố Hà Nội không?",
+      "http_status": 200,
+      "latency_ms": 2.606,
+      "checks": {
+        "http_status": true,
+        "status": true,
+        "no_unverified_claims": true
+      },
+      "passed": true,
+      "response": {
+        "question": "Hôm nay mã 00070 thuộc thành phố Hà Nội không?",
+        "classification": {
+          "question": "Hôm nay mã 00070 thuộc thành phố Hà Nội không?",
+          "route": "kg",
+          "domain": "administration",
+          "route_confidence": 0.7,
+          "domain_confidence": 0.7,
+          "method": "tfidf_logistic_regression"
+        },
+        "plan": {
+          "route": "rag",
+          "kg": null,
+          "rag": {
+            "domain": "administration",
+            "top_k": 5
+          },
+          "intent": "logical",
+          "constraints": {
+            "temporal": [
+              "thời điểm hoặc khoảng thời gian được yêu cầu"
+            ],
+            "spatial": [],
+            "unsupported": [
+              "Chưa xác minh được đầy đủ ràng buộc thời gian bằng KG; cần mã đơn vị, ngày cụ thể được hỗ trợ và mốc hiệu lực trong dữ liệu."
+            ]
+          },
+          "warnings": [
+            "Chưa xác minh được đầy đủ ràng buộc thời gian bằng KG; cần mã đơn vị, ngày cụ thể được hỗ trợ và mốc hiệu lực trong dữ liệu."
+          ],
+          "scope": "supported"
+        },
+        "effective_route": "rag",
+        "retrieval_status": "unsupported_constraints",
+        "status": "abstained",
+        "answer": "Dữ liệu hiện có chưa đủ để xác nhận điều kiện thời gian hoặc khoảng cách trong câu hỏi. Bạn có thể hỏi mã đơn vị, tỉnh/thành trực thuộc hoặc tra mã tại một ngày cụ thể; truy vấn bán kính cần bổ sung tọa độ.",
+        "citations": [],
+        "claims": [],
+        "cross_check": {
+          "status": "insufficient_evidence",
+          "supported": [],
+          "rejected": [],
+          "checked_count": 0,
+          "supported_count": 0,
+          "rejected_count": 0,
+          "verification_scope": "extractive_text_and_structured_kg_facts",
+          "reason": "unsupported_constraints"
+        },
+        "warnings": [
+          "Chưa xác minh được đầy đủ ràng buộc thời gian bằng KG; cần mã đơn vị, ngày cụ thể được hỗ trợ và mốc hiệu lực trong dữ liệu.",
+          "unsupported_constraints"
+        ],
+        "llm": {
+          "backend": "transformers",
+          "model": "/Users/amyas/HK1 26-27/DATN/models/Qwen3-0.6B",
+          "device": "mps",
+          "ready": true,
+          "context_window": 4096,
+          "max_new_tokens": 384,
+          "error": null,
+          "generation_count": 5,
+          "last_latency_ms": 522.95
+        },
+        "timings_ms": {
+          "question_processing": 1.929,
+          "generation": 0.0,
+          "kg_refresh": 0.0,
+          "cross_check": 0.0,
+          "total": 1.93
+        },
+        "original_question": "Hôm nay mã 00070 thuộc thành phố Hà Nội không?",
+        "context_resolution": {
+          "question": "Hôm nay mã 00070 thuộc thành phố Hà Nội không?",
+          "resolved": false,
+          "needs_context": false
+        },
+        "retrieval_mode": "lexical_candidates_faiss"
+      }
+    },
+    {
+      "id": "relative_tomorrow_joint",
+      "question": "Ngày mai mã 00070 thuộc thành phố Hà Nội không?",
+      "http_status": 200,
+      "latency_ms": 2.475,
+      "checks": {
+        "http_status": true,
+        "status": true,
+        "no_unverified_claims": true
+      },
+      "passed": true,
+      "response": {
+        "question": "Ngày mai mã 00070 thuộc thành phố Hà Nội không?",
+        "classification": {
+          "question": "Ngày mai mã 00070 thuộc thành phố Hà Nội không?",
+          "route": "kg",
+          "domain": "administration",
+          "route_confidence": 0.7,
+          "domain_confidence": 0.7,
+          "method": "tfidf_logistic_regression"
+        },
+        "plan": {
+          "route": "rag",
+          "kg": null,
+          "rag": {
+            "domain": "administration",
+            "top_k": 5
+          },
+          "intent": "logical",
+          "constraints": {
+            "temporal": [
+              "thời điểm hoặc khoảng thời gian được yêu cầu"
+            ],
+            "spatial": [],
+            "unsupported": [
+              "Chưa xác minh được đầy đủ ràng buộc thời gian bằng KG; cần mã đơn vị, ngày cụ thể được hỗ trợ và mốc hiệu lực trong dữ liệu."
+            ]
+          },
+          "warnings": [
+            "Chưa xác minh được đầy đủ ràng buộc thời gian bằng KG; cần mã đơn vị, ngày cụ thể được hỗ trợ và mốc hiệu lực trong dữ liệu."
+          ],
+          "scope": "supported"
+        },
+        "effective_route": "rag",
+        "retrieval_status": "unsupported_constraints",
+        "status": "abstained",
+        "answer": "Dữ liệu hiện có chưa đủ để xác nhận điều kiện thời gian hoặc khoảng cách trong câu hỏi. Bạn có thể hỏi mã đơn vị, tỉnh/thành trực thuộc hoặc tra mã tại một ngày cụ thể; truy vấn bán kính cần bổ sung tọa độ.",
+        "citations": [],
+        "claims": [],
+        "cross_check": {
+          "status": "insufficient_evidence",
+          "supported": [],
+          "rejected": [],
+          "checked_count": 0,
+          "supported_count": 0,
+          "rejected_count": 0,
+          "verification_scope": "extractive_text_and_structured_kg_facts",
+          "reason": "unsupported_constraints"
+        },
+        "warnings": [
+          "Chưa xác minh được đầy đủ ràng buộc thời gian bằng KG; cần mã đơn vị, ngày cụ thể được hỗ trợ và mốc hiệu lực trong dữ liệu.",
+          "unsupported_constraints"
+        ],
+        "llm": {
+          "backend": "transformers",
+          "model": "/Users/amyas/HK1 26-27/DATN/models/Qwen3-0.6B",
+          "device": "mps",
+          "ready": true,
+          "context_window": 4096,
+          "max_new_tokens": 384,
+          "error": null,
+          "generation_count": 5,
+          "last_latency_ms": 522.95
+        },
+        "timings_ms": {
+          "question_processing": 1.865,
+          "generation": 0.0,
+          "kg_refresh": 0.0,
+          "cross_check": 0.0,
+          "total": 1.866
+        },
+        "original_question": "Ngày mai mã 00070 thuộc thành phố Hà Nội không?",
+        "context_resolution": {
+          "question": "Ngày mai mã 00070 thuộc thành phố Hà Nội không?",
+          "resolved": false,
+          "needs_context": false
+        },
+        "retrieval_mode": "lexical_candidates_faiss"
+      }
+    },
+    {
+      "id": "year_joint",
+      "question": "Mã 00070 thuộc thành phố Hà Nội vào năm 2020 không?",
+      "http_status": 200,
+      "latency_ms": 4.758,
+      "checks": {
+        "http_status": true,
+        "status": true,
+        "no_unverified_claims": true
+      },
+      "passed": true,
+      "response": {
+        "question": "Mã 00070 thuộc thành phố Hà Nội vào năm 2020 không?",
+        "classification": {
+          "question": "Mã 00070 thuộc thành phố Hà Nội vào năm 2020 không?",
+          "route": "kg",
+          "domain": "administration",
+          "route_confidence": 0.7,
+          "domain_confidence": 0.7,
+          "method": "tfidf_logistic_regression"
+        },
+        "plan": {
+          "route": "rag",
+          "kg": null,
+          "rag": {
+            "domain": "administration",
+            "top_k": 5
+          },
+          "intent": "logical",
+          "constraints": {
+            "temporal": [
+              "năm 2020"
+            ],
+            "spatial": [],
+            "unsupported": [
+              "Chưa xác minh được đầy đủ ràng buộc thời gian bằng KG; cần mã đơn vị, ngày cụ thể được hỗ trợ và mốc hiệu lực trong dữ liệu."
+            ]
+          },
+          "warnings": [
+            "Chưa xác minh được đầy đủ ràng buộc thời gian bằng KG; cần mã đơn vị, ngày cụ thể được hỗ trợ và mốc hiệu lực trong dữ liệu."
+          ],
+          "scope": "supported"
+        },
+        "effective_route": "rag",
+        "retrieval_status": "unsupported_constraints",
+        "status": "abstained",
+        "answer": "Dữ liệu hiện có chưa đủ để xác nhận điều kiện thời gian hoặc khoảng cách trong câu hỏi. Bạn có thể hỏi mã đơn vị, tỉnh/thành trực thuộc hoặc tra mã tại một ngày cụ thể; truy vấn bán kính cần bổ sung tọa độ.",
+        "citations": [],
+        "claims": [],
+        "cross_check": {
+          "status": "insufficient_evidence",
+          "supported": [],
+          "rejected": [],
+          "checked_count": 0,
+          "supported_count": 0,
+          "rejected_count": 0,
+          "verification_scope": "extractive_text_and_structured_kg_facts",
+          "reason": "unsupported_constraints"
+        },
+        "warnings": [
+          "Chưa xác minh được đầy đủ ràng buộc thời gian bằng KG; cần mã đơn vị, ngày cụ thể được hỗ trợ và mốc hiệu lực trong dữ liệu.",
+          "unsupported_constraints"
+        ],
+        "llm": {
+          "backend": "transformers",
+          "model": "/Users/amyas/HK1 26-27/DATN/models/Qwen3-0.6B",
+          "device": "mps",
+          "ready": true,
+          "context_window": 4096,
+          "max_new_tokens": 384,
+          "error": null,
+          "generation_count": 5,
+          "last_latency_ms": 522.95
+        },
+        "timings_ms": {
+          "question_processing": 2.261,
+          "generation": 0.0,
+          "kg_refresh": 0.0,
+          "cross_check": 0.0,
+          "total": 2.263
+        },
+        "original_question": "Mã 00070 thuộc thành phố Hà Nội vào năm 2020 không?",
+        "context_resolution": {
+          "question": "Mã 00070 thuộc thành phố Hà Nội vào năm 2020 không?",
+          "resolved": false,
+          "needs_context": false
+        },
+        "retrieval_mode": "lexical_candidates_faiss"
+      }
+    },
+    {
+      "id": "mixed_date_and_year",
+      "question": "Ngày 01/07/2025 mã 00070 thuộc thành phố Hà Nội, còn năm 2020 thì sao?",
+      "http_status": 200,
+      "latency_ms": 2.853,
+      "checks": {
+        "http_status": true,
+        "status": true,
+        "no_unverified_claims": true
+      },
+      "passed": true,
+      "response": {
+        "question": "Ngày 01/07/2025 mã 00070 thuộc thành phố Hà Nội, còn năm 2020 thì sao?",
+        "classification": {
+          "question": "Ngày 01/07/2025 mã 00070 thuộc thành phố Hà Nội, còn năm 2020 thì sao?",
+          "route": "kg",
+          "domain": "administration",
+          "route_confidence": 0.7,
+          "domain_confidence": 0.7,
+          "method": "tfidf_logistic_regression"
+        },
+        "plan": {
+          "route": "rag",
+          "kg": null,
+          "rag": {
+            "domain": "administration",
+            "top_k": 5
+          },
+          "intent": "logical",
+          "constraints": {
+            "temporal": [
+              "01/07/2025",
+              "năm 2020"
+            ],
+            "spatial": [],
+            "unsupported": [
+              "Chưa xác minh được đầy đủ ràng buộc thời gian bằng KG; cần mã đơn vị, ngày cụ thể được hỗ trợ và mốc hiệu lực trong dữ liệu."
+            ]
+          },
+          "warnings": [
+            "Chưa xác minh được đầy đủ ràng buộc thời gian bằng KG; cần mã đơn vị, ngày cụ thể được hỗ trợ và mốc hiệu lực trong dữ liệu."
+          ],
+          "scope": "supported"
+        },
+        "effective_route": "rag",
+        "retrieval_status": "unsupported_constraints",
+        "status": "abstained",
+        "answer": "Dữ liệu hiện có chưa đủ để xác nhận điều kiện thời gian hoặc khoảng cách trong câu hỏi. Bạn có thể hỏi mã đơn vị, tỉnh/thành trực thuộc hoặc tra mã tại một ngày cụ thể; truy vấn bán kính cần bổ sung tọa độ.",
+        "citations": [],
+        "claims": [],
+        "cross_check": {
+          "status": "insufficient_evidence",
+          "supported": [],
+          "rejected": [],
+          "checked_count": 0,
+          "supported_count": 0,
+          "rejected_count": 0,
+          "verification_scope": "extractive_text_and_structured_kg_facts",
+          "reason": "unsupported_constraints"
+        },
+        "warnings": [
+          "Chưa xác minh được đầy đủ ràng buộc thời gian bằng KG; cần mã đơn vị, ngày cụ thể được hỗ trợ và mốc hiệu lực trong dữ liệu.",
+          "unsupported_constraints"
+        ],
+        "llm": {
+          "backend": "transformers",
+          "model": "/Users/amyas/HK1 26-27/DATN/models/Qwen3-0.6B",
+          "device": "mps",
+          "ready": true,
+          "context_window": 4096,
+          "max_new_tokens": 384,
+          "error": null,
+          "generation_count": 5,
+          "last_latency_ms": 522.95
+        },
+        "timings_ms": {
+          "question_processing": 2.023,
+          "generation": 0.0,
+          "kg_refresh": 0.0,
+          "cross_check": 0.0,
+          "total": 2.024
+        },
+        "original_question": "Ngày 01/07/2025 mã 00070 thuộc thành phố Hà Nội, còn năm 2020 thì sao?",
+        "context_resolution": {
+          "question": "Ngày 01/07/2025 mã 00070 thuộc thành phố Hà Nội, còn năm 2020 thì sao?",
+          "resolved": false,
+          "needs_context": false
+        },
+        "retrieval_mode": "lexical_candidates_faiss"
+      }
+    },
+    {
+      "id": "unsupported_date_format",
+      "question": "Mã 00070 thuộc thành phố Hà Nội ngày 01.07.2025 không?",
+      "http_status": 200,
+      "latency_ms": 2.595,
+      "checks": {
+        "http_status": true,
+        "status": true,
+        "no_unverified_claims": true
+      },
+      "passed": true,
+      "response": {
+        "question": "Mã 00070 thuộc thành phố Hà Nội ngày 01.07.2025 không?",
+        "classification": {
+          "question": "Mã 00070 thuộc thành phố Hà Nội ngày 01.07.2025 không?",
+          "route": "kg",
+          "domain": "administration",
+          "route_confidence": 0.7,
+          "domain_confidence": 0.7,
+          "method": "tfidf_logistic_regression"
+        },
+        "plan": {
+          "route": "rag",
+          "kg": null,
+          "rag": {
+            "domain": "administration",
+            "top_k": 5
+          },
+          "intent": "logical",
+          "constraints": {
+            "temporal": [
+              "01.07.2025"
+            ],
+            "spatial": [],
+            "unsupported": [
+              "Chưa xác minh được đầy đủ ràng buộc thời gian bằng KG; cần mã đơn vị, ngày cụ thể được hỗ trợ và mốc hiệu lực trong dữ liệu."
+            ]
+          },
+          "warnings": [
+            "Chưa xác minh được đầy đủ ràng buộc thời gian bằng KG; cần mã đơn vị, ngày cụ thể được hỗ trợ và mốc hiệu lực trong dữ liệu."
+          ],
+          "scope": "supported"
+        },
+        "effective_route": "rag",
+        "retrieval_status": "unsupported_constraints",
+        "status": "abstained",
+        "answer": "Dữ liệu hiện có chưa đủ để xác nhận điều kiện thời gian hoặc khoảng cách trong câu hỏi. Bạn có thể hỏi mã đơn vị, tỉnh/thành trực thuộc hoặc tra mã tại một ngày cụ thể; truy vấn bán kính cần bổ sung tọa độ.",
+        "citations": [],
+        "claims": [],
+        "cross_check": {
+          "status": "insufficient_evidence",
+          "supported": [],
+          "rejected": [],
+          "checked_count": 0,
+          "supported_count": 0,
+          "rejected_count": 0,
+          "verification_scope": "extractive_text_and_structured_kg_facts",
+          "reason": "unsupported_constraints"
+        },
+        "warnings": [
+          "Chưa xác minh được đầy đủ ràng buộc thời gian bằng KG; cần mã đơn vị, ngày cụ thể được hỗ trợ và mốc hiệu lực trong dữ liệu.",
+          "unsupported_constraints"
+        ],
+        "llm": {
+          "backend": "transformers",
+          "model": "/Users/amyas/HK1 26-27/DATN/models/Qwen3-0.6B",
+          "device": "mps",
+          "ready": true,
+          "context_window": 4096,
+          "max_new_tokens": 384,
+          "error": null,
+          "generation_count": 5,
+          "last_latency_ms": 522.95
+        },
+        "timings_ms": {
+          "question_processing": 1.928,
+          "generation": 0.0,
+          "kg_refresh": 0.0,
+          "cross_check": 0.0,
+          "total": 1.929
+        },
+        "original_question": "Mã 00070 thuộc thành phố Hà Nội ngày 01.07.2025 không?",
+        "context_resolution": {
+          "question": "Mã 00070 thuộc thành phố Hà Nội ngày 01.07.2025 không?",
+          "resolved": false,
+          "needs_context": false
+        },
+        "retrieval_mode": "lexical_candidates_faiss"
+      }
+    },
+    {
+      "id": "before_without_day_word",
+      "question": "Trước 01/07/2025 mã 00070 thuộc thành phố Hà Nội không?",
+      "http_status": 200,
+      "latency_ms": 2.464,
+      "checks": {
+        "http_status": true,
+        "status": true,
+        "no_unverified_claims": true
+      },
+      "passed": true,
+      "response": {
+        "question": "Trước 01/07/2025 mã 00070 thuộc thành phố Hà Nội không?",
+        "classification": {
+          "question": "Trước 01/07/2025 mã 00070 thuộc thành phố Hà Nội không?",
+          "route": "kg",
+          "domain": "administration",
+          "route_confidence": 0.7,
+          "domain_confidence": 0.7,
+          "method": "tfidf_logistic_regression"
+        },
+        "plan": {
+          "route": "rag",
+          "kg": null,
+          "rag": {
+            "domain": "administration",
+            "top_k": 5
+          },
+          "intent": "logical",
+          "constraints": {
+            "temporal": [
+              "01/07/2025"
+            ],
+            "spatial": [],
+            "unsupported": [
+              "Chưa xác minh được đầy đủ ràng buộc thời gian bằng KG; cần mã đơn vị, ngày cụ thể được hỗ trợ và mốc hiệu lực trong dữ liệu."
+            ]
+          },
+          "warnings": [
+            "Chưa xác minh được đầy đủ ràng buộc thời gian bằng KG; cần mã đơn vị, ngày cụ thể được hỗ trợ và mốc hiệu lực trong dữ liệu."
+          ],
+          "scope": "supported"
+        },
+        "effective_route": "rag",
+        "retrieval_status": "unsupported_constraints",
+        "status": "abstained",
+        "answer": "Dữ liệu hiện có chưa đủ để xác nhận điều kiện thời gian hoặc khoảng cách trong câu hỏi. Bạn có thể hỏi mã đơn vị, tỉnh/thành trực thuộc hoặc tra mã tại một ngày cụ thể; truy vấn bán kính cần bổ sung tọa độ.",
+        "citations": [],
+        "claims": [],
+        "cross_check": {
+          "status": "insufficient_evidence",
+          "supported": [],
+          "rejected": [],
+          "checked_count": 0,
+          "supported_count": 0,
+          "rejected_count": 0,
+          "verification_scope": "extractive_text_and_structured_kg_facts",
+          "reason": "unsupported_constraints"
+        },
+        "warnings": [
+          "Chưa xác minh được đầy đủ ràng buộc thời gian bằng KG; cần mã đơn vị, ngày cụ thể được hỗ trợ và mốc hiệu lực trong dữ liệu.",
+          "unsupported_constraints"
+        ],
+        "llm": {
+          "backend": "transformers",
+          "model": "/Users/amyas/HK1 26-27/DATN/models/Qwen3-0.6B",
+          "device": "mps",
+          "ready": true,
+          "context_window": 4096,
+          "max_new_tokens": 384,
+          "error": null,
+          "generation_count": 5,
+          "last_latency_ms": 522.95
+        },
+        "timings_ms": {
+          "question_processing": 1.829,
+          "generation": 0.0,
+          "kg_refresh": 0.0,
+          "cross_check": 0.0,
+          "total": 1.829
+        },
+        "original_question": "Trước 01/07/2025 mã 00070 thuộc thành phố Hà Nội không?",
+        "context_resolution": {
+          "question": "Trước 01/07/2025 mã 00070 thuộc thành phố Hà Nội không?",
+          "resolved": false,
+          "needs_context": false
+        },
+        "retrieval_mode": "lexical_candidates_faiss"
+      }
+    },
+    {
+      "id": "since_single_date",
+      "question": "Mã 00070 thuộc thành phố Hà Nội từ ngày 01/07/2025 không?",
+      "http_status": 200,
+      "latency_ms": 2.485,
+      "checks": {
+        "http_status": true,
+        "status": true,
+        "no_unverified_claims": true
+      },
+      "passed": true,
+      "response": {
+        "question": "Mã 00070 thuộc thành phố Hà Nội từ ngày 01/07/2025 không?",
+        "classification": {
+          "question": "Mã 00070 thuộc thành phố Hà Nội từ ngày 01/07/2025 không?",
+          "route": "kg",
+          "domain": "administration",
+          "route_confidence": 0.7,
+          "domain_confidence": 0.7,
+          "method": "tfidf_logistic_regression"
+        },
+        "plan": {
+          "route": "rag",
+          "kg": null,
+          "rag": {
+            "domain": "administration",
+            "top_k": 5
+          },
+          "intent": "logical",
+          "constraints": {
+            "temporal": [
+              "01/07/2025"
+            ],
+            "spatial": [],
+            "unsupported": [
+              "Chưa xác minh được đầy đủ ràng buộc thời gian bằng KG; cần mã đơn vị, ngày cụ thể được hỗ trợ và mốc hiệu lực trong dữ liệu."
+            ]
+          },
+          "warnings": [
+            "Chưa xác minh được đầy đủ ràng buộc thời gian bằng KG; cần mã đơn vị, ngày cụ thể được hỗ trợ và mốc hiệu lực trong dữ liệu."
+          ],
+          "scope": "supported"
+        },
+        "effective_route": "rag",
+        "retrieval_status": "unsupported_constraints",
+        "status": "abstained",
+        "answer": "Dữ liệu hiện có chưa đủ để xác nhận điều kiện thời gian hoặc khoảng cách trong câu hỏi. Bạn có thể hỏi mã đơn vị, tỉnh/thành trực thuộc hoặc tra mã tại một ngày cụ thể; truy vấn bán kính cần bổ sung tọa độ.",
+        "citations": [],
+        "claims": [],
+        "cross_check": {
+          "status": "insufficient_evidence",
+          "supported": [],
+          "rejected": [],
+          "checked_count": 0,
+          "supported_count": 0,
+          "rejected_count": 0,
+          "verification_scope": "extractive_text_and_structured_kg_facts",
+          "reason": "unsupported_constraints"
+        },
+        "warnings": [
+          "Chưa xác minh được đầy đủ ràng buộc thời gian bằng KG; cần mã đơn vị, ngày cụ thể được hỗ trợ và mốc hiệu lực trong dữ liệu.",
+          "unsupported_constraints"
+        ],
+        "llm": {
+          "backend": "transformers",
+          "model": "/Users/amyas/HK1 26-27/DATN/models/Qwen3-0.6B",
+          "device": "mps",
+          "ready": true,
+          "context_window": 4096,
+          "max_new_tokens": 384,
+          "error": null,
+          "generation_count": 5,
+          "last_latency_ms": 522.95
+        },
+        "timings_ms": {
+          "question_processing": 1.883,
+          "generation": 0.0,
+          "kg_refresh": 0.0,
+          "cross_check": 0.0,
+          "total": 1.884
+        },
+        "original_question": "Mã 00070 thuộc thành phố Hà Nội từ ngày 01/07/2025 không?",
+        "context_resolution": {
+          "question": "Mã 00070 thuộc thành phố Hà Nội từ ngày 01/07/2025 không?",
+          "resolved": false,
+          "needs_context": false
+        },
+        "retrieval_mode": "lexical_candidates_faiss"
+      }
+    },
+    {
+      "id": "historical_year",
+      "question": "Phường Long Biên thuộc tỉnh nào trong năm 2020?",
+      "http_status": 200,
+      "latency_ms": 2.522,
+      "checks": {
+        "http_status": true,
+        "status": true,
+        "no_unverified_claims": true
+      },
+      "passed": true,
+      "response": {
+        "question": "Phường Long Biên thuộc tỉnh nào trong năm 2020?",
+        "classification": {
+          "question": "Phường Long Biên thuộc tỉnh nào trong năm 2020?",
+          "route": "kg",
+          "domain": "administration",
+          "route_confidence": 0.7,
+          "domain_confidence": 0.7,
+          "method": "tfidf_logistic_regression"
+        },
+        "plan": {
+          "route": "rag",
+          "kg": null,
+          "rag": {
+            "domain": "administration",
+            "top_k": 5
+          },
+          "intent": "logical",
+          "constraints": {
+            "temporal": [
+              "năm 2020"
+            ],
+            "spatial": [],
+            "unsupported": [
+              "Chưa xác minh được đầy đủ ràng buộc thời gian bằng KG; cần mã đơn vị, ngày cụ thể được hỗ trợ và mốc hiệu lực trong dữ liệu."
+            ]
+          },
+          "warnings": [
+            "Chưa xác minh được đầy đủ ràng buộc thời gian bằng KG; cần mã đơn vị, ngày cụ thể được hỗ trợ và mốc hiệu lực trong dữ liệu."
+          ],
+          "scope": "supported"
+        },
+        "effective_route": "rag",
+        "retrieval_status": "unsupported_constraints",
+        "status": "abstained",
+        "answer": "Dữ liệu hiện có chưa đủ để xác nhận điều kiện thời gian hoặc khoảng cách trong câu hỏi. Bạn có thể hỏi mã đơn vị, tỉnh/thành trực thuộc hoặc tra mã tại một ngày cụ thể; truy vấn bán kính cần bổ sung tọa độ.",
+        "citations": [],
+        "claims": [],
+        "cross_check": {
+          "status": "insufficient_evidence",
+          "supported": [],
+          "rejected": [],
+          "checked_count": 0,
+          "supported_count": 0,
+          "rejected_count": 0,
+          "verification_scope": "extractive_text_and_structured_kg_facts",
+          "reason": "unsupported_constraints"
+        },
+        "warnings": [
+          "Chưa xác minh được đầy đủ ràng buộc thời gian bằng KG; cần mã đơn vị, ngày cụ thể được hỗ trợ và mốc hiệu lực trong dữ liệu.",
+          "unsupported_constraints"
+        ],
+        "llm": {
+          "backend": "transformers",
+          "model": "/Users/amyas/HK1 26-27/DATN/models/Qwen3-0.6B",
+          "device": "mps",
+          "ready": true,
+          "context_window": 4096,
+          "max_new_tokens": 384,
+          "error": null,
+          "generation_count": 5,
+          "last_latency_ms": 522.95
+        },
+        "timings_ms": {
+          "question_processing": 1.87,
+          "generation": 0.0,
+          "kg_refresh": 0.0,
+          "cross_check": 0.0,
+          "total": 1.871
+        },
+        "original_question": "Phường Long Biên thuộc tỉnh nào trong năm 2020?",
+        "context_resolution": {
+          "question": "Phường Long Biên thuộc tỉnh nào trong năm 2020?",
+          "resolved": false,
+          "needs_context": false
+        },
+        "retrieval_mode": "lexical_candidates_faiss"
+      }
+    },
+    {
+      "id": "radius",
+      "question": "Di sản nào gần Hội An nhất trong bán kính 5 km?",
+      "http_status": 200,
+      "latency_ms": 3.054,
+      "checks": {
+        "http_status": true,
+        "status": true,
+        "no_unverified_claims": true
+      },
+      "passed": true,
+      "response": {
+        "question": "Di sản nào gần Hội An nhất trong bán kính 5 km?",
+        "classification": {
+          "question": "Di sản nào gần Hội An nhất trong bán kính 5 km?",
+          "route": "kg",
+          "domain": "heritage",
+          "route_confidence": 0.37461021120760296,
+          "domain_confidence": 0.7,
+          "method": "tfidf_logistic_regression"
+        },
+        "plan": {
+          "route": "rag",
+          "kg": null,
+          "rag": {
+            "domain": "heritage",
+            "top_k": 5
+          },
+          "intent": "logical",
+          "constraints": {
+            "temporal": [],
+            "spatial": [
+              "bán kính",
+              "quan hệ gần về không gian",
+              "khoảng cách theo đơn vị đo"
+            ],
+            "unsupported": [
+              "KG hiện tại chưa có truy vấn hình học hoặc khoảng cách; kết quả RAG không tự xác nhận ràng buộc không gian."
+            ]
+          },
+          "warnings": [
+            "KG hiện tại chưa có truy vấn hình học hoặc khoảng cách; kết quả RAG không tự xác nhận ràng buộc không gian."
+          ],
+          "scope": "supported"
+        },
+        "effective_route": "rag",
+        "retrieval_status": "unsupported_constraints",
+        "status": "abstained",
+        "answer": "Dữ liệu hiện có chưa đủ để xác nhận điều kiện thời gian hoặc khoảng cách trong câu hỏi. Bạn có thể hỏi mã đơn vị, tỉnh/thành trực thuộc hoặc tra mã tại một ngày cụ thể; truy vấn bán kính cần bổ sung tọa độ.",
+        "citations": [],
+        "claims": [],
+        "cross_check": {
+          "status": "insufficient_evidence",
+          "supported": [],
+          "rejected": [],
+          "checked_count": 0,
+          "supported_count": 0,
+          "rejected_count": 0,
+          "verification_scope": "extractive_text_and_structured_kg_facts",
+          "reason": "unsupported_constraints"
+        },
+        "warnings": [
+          "KG hiện tại chưa có truy vấn hình học hoặc khoảng cách; kết quả RAG không tự xác nhận ràng buộc không gian.",
+          "unsupported_constraints"
+        ],
+        "llm": {
+          "backend": "transformers",
+          "model": "/Users/amyas/HK1 26-27/DATN/models/Qwen3-0.6B",
+          "device": "mps",
+          "ready": true,
+          "context_window": 4096,
+          "max_new_tokens": 384,
+          "error": null,
+          "generation_count": 5,
+          "last_latency_ms": 522.95
+        },
+        "timings_ms": {
+          "question_processing": 2.297,
+          "generation": 0.0,
+          "kg_refresh": 0.0,
+          "cross_check": 0.0,
+          "total": 2.298
+        },
+        "original_question": "Di sản nào gần Hội An nhất trong bán kính 5 km?",
+        "context_resolution": {
+          "question": "Di sản nào gần Hội An nhất trong bán kính 5 km?",
+          "resolved": false,
+          "needs_context": false
+        },
+        "retrieval_mode": "lexical_candidates_faiss"
+      }
+    },
+    {
+      "id": "distance",
+      "question": "Từ Hội An đến Mỹ Sơn cách bao nhiêu km?",
+      "http_status": 200,
+      "latency_ms": 2.495,
+      "checks": {
+        "http_status": true,
+        "status": true,
+        "no_unverified_claims": true
+      },
+      "passed": true,
+      "response": {
+        "question": "Từ Hội An đến Mỹ Sơn cách bao nhiêu km?",
+        "classification": {
+          "question": "Từ Hội An đến Mỹ Sơn cách bao nhiêu km?",
+          "route": "kg",
+          "domain": "heritage",
+          "route_confidence": 0.7,
+          "domain_confidence": 0.7,
+          "method": "tfidf_logistic_regression"
+        },
+        "plan": {
+          "route": "rag",
+          "kg": null,
+          "rag": {
+            "domain": "heritage",
+            "top_k": 5
+          },
+          "intent": "logical",
+          "constraints": {
+            "temporal": [],
+            "spatial": [
+              "tính khoảng cách"
+            ],
+            "unsupported": [
+              "KG hiện tại chưa có truy vấn hình học hoặc khoảng cách; kết quả RAG không tự xác nhận ràng buộc không gian."
+            ]
+          },
+          "warnings": [
+            "KG hiện tại chưa có truy vấn hình học hoặc khoảng cách; kết quả RAG không tự xác nhận ràng buộc không gian."
+          ],
+          "scope": "supported"
+        },
+        "effective_route": "rag",
+        "retrieval_status": "unsupported_constraints",
+        "status": "abstained",
+        "answer": "Dữ liệu hiện có chưa đủ để xác nhận điều kiện thời gian hoặc khoảng cách trong câu hỏi. Bạn có thể hỏi mã đơn vị, tỉnh/thành trực thuộc hoặc tra mã tại một ngày cụ thể; truy vấn bán kính cần bổ sung tọa độ.",
+        "citations": [],
+        "claims": [],
+        "cross_check": {
+          "status": "insufficient_evidence",
+          "supported": [],
+          "rejected": [],
+          "checked_count": 0,
+          "supported_count": 0,
+          "rejected_count": 0,
+          "verification_scope": "extractive_text_and_structured_kg_facts",
+          "reason": "unsupported_constraints"
+        },
+        "warnings": [
+          "KG hiện tại chưa có truy vấn hình học hoặc khoảng cách; kết quả RAG không tự xác nhận ràng buộc không gian.",
+          "unsupported_constraints"
+        ],
+        "llm": {
+          "backend": "transformers",
+          "model": "/Users/amyas/HK1 26-27/DATN/models/Qwen3-0.6B",
+          "device": "mps",
+          "ready": true,
+          "context_window": 4096,
+          "max_new_tokens": 384,
+          "error": null,
+          "generation_count": 5,
+          "last_latency_ms": 522.95
+        },
+        "timings_ms": {
+          "question_processing": 1.822,
+          "generation": 0.0,
+          "kg_refresh": 0.0,
+          "cross_check": 0.0,
+          "total": 1.823
+        },
+        "original_question": "Từ Hội An đến Mỹ Sơn cách bao nhiêu km?",
+        "context_resolution": {
+          "question": "Từ Hội An đến Mỹ Sơn cách bao nhiêu km?",
+          "resolved": false,
+          "needs_context": false
+        },
+        "retrieval_mode": "lexical_candidates_faiss"
+      }
+    },
+    {
+      "id": "coordinates",
+      "question": "Tọa độ của Mỹ Sơn là gì?",
+      "http_status": 200,
+      "latency_ms": 2.374,
+      "checks": {
+        "http_status": true,
+        "status": true,
+        "no_unverified_claims": true
+      },
+      "passed": true,
+      "response": {
+        "question": "Tọa độ của Mỹ Sơn là gì?",
+        "classification": {
+          "question": "Tọa độ của Mỹ Sơn là gì?",
+          "route": "rag",
+          "domain": "heritage",
+          "route_confidence": 0.506538788833621,
+          "domain_confidence": 0.7,
+          "method": "tfidf_logistic_regression"
+        },
+        "plan": {
+          "route": "rag",
+          "kg": null,
+          "rag": {
+            "domain": "heritage",
+            "top_k": 5
+          },
+          "intent": "textual",
+          "constraints": {
+            "temporal": [],
+            "spatial": [
+              "tọa độ"
+            ],
+            "unsupported": [
+              "KG hiện tại chưa có truy vấn hình học hoặc khoảng cách; kết quả RAG không tự xác nhận ràng buộc không gian."
+            ]
+          },
+          "warnings": [
+            "KG hiện tại chưa có truy vấn hình học hoặc khoảng cách; kết quả RAG không tự xác nhận ràng buộc không gian."
+          ],
+          "scope": "supported"
+        },
+        "effective_route": "rag",
+        "retrieval_status": "unsupported_constraints",
+        "status": "abstained",
+        "answer": "Dữ liệu hiện có chưa đủ để xác nhận điều kiện thời gian hoặc khoảng cách trong câu hỏi. Bạn có thể hỏi mã đơn vị, tỉnh/thành trực thuộc hoặc tra mã tại một ngày cụ thể; truy vấn bán kính cần bổ sung tọa độ.",
+        "citations": [],
+        "claims": [],
+        "cross_check": {
+          "status": "insufficient_evidence",
+          "supported": [],
+          "rejected": [],
+          "checked_count": 0,
+          "supported_count": 0,
+          "rejected_count": 0,
+          "verification_scope": "extractive_text_and_structured_kg_facts",
+          "reason": "unsupported_constraints"
+        },
+        "warnings": [
+          "KG hiện tại chưa có truy vấn hình học hoặc khoảng cách; kết quả RAG không tự xác nhận ràng buộc không gian.",
+          "unsupported_constraints"
+        ],
+        "llm": {
+          "backend": "transformers",
+          "model": "/Users/amyas/HK1 26-27/DATN/models/Qwen3-0.6B",
+          "device": "mps",
+          "ready": true,
+          "context_window": 4096,
+          "max_new_tokens": 384,
+          "error": null,
+          "generation_count": 5,
+          "last_latency_ms": 522.95
+        },
+        "timings_ms": {
+          "question_processing": 1.778,
+          "generation": 0.0,
+          "kg_refresh": 0.0,
+          "cross_check": 0.0,
+          "total": 1.779
+        },
+        "original_question": "Tọa độ của Mỹ Sơn là gì?",
+        "context_resolution": {
+          "question": "Tọa độ của Mỹ Sơn là gì?",
+          "resolved": false,
+          "needs_context": false
+        },
+        "retrieval_mode": "lexical_candidates_faiss"
+      }
+    },
+    {
+      "id": "nearest",
+      "question": "Bảo tàng nào gần Hội An nhất?",
+      "http_status": 200,
+      "latency_ms": 2.354,
+      "checks": {
+        "http_status": true,
+        "status": true,
+        "no_unverified_claims": true
+      },
+      "passed": true,
+      "response": {
+        "question": "Bảo tàng nào gần Hội An nhất?",
+        "classification": {
+          "question": "Bảo tàng nào gần Hội An nhất?",
+          "route": "kg",
+          "domain": "heritage",
+          "route_confidence": 0.451994728862067,
+          "domain_confidence": 0.7,
+          "method": "tfidf_logistic_regression"
+        },
+        "plan": {
+          "route": "rag",
+          "kg": null,
+          "rag": {
+            "domain": "heritage",
+            "top_k": 5
+          },
+          "intent": "logical",
+          "constraints": {
+            "temporal": [],
+            "spatial": [
+              "quan hệ gần về không gian"
+            ],
+            "unsupported": [
+              "KG hiện tại chưa có truy vấn hình học hoặc khoảng cách; kết quả RAG không tự xác nhận ràng buộc không gian."
+            ]
+          },
+          "warnings": [
+            "KG hiện tại chưa có truy vấn hình học hoặc khoảng cách; kết quả RAG không tự xác nhận ràng buộc không gian."
+          ],
+          "scope": "supported"
+        },
+        "effective_route": "rag",
+        "retrieval_status": "unsupported_constraints",
+        "status": "abstained",
+        "answer": "Dữ liệu hiện có chưa đủ để xác nhận điều kiện thời gian hoặc khoảng cách trong câu hỏi. Bạn có thể hỏi mã đơn vị, tỉnh/thành trực thuộc hoặc tra mã tại một ngày cụ thể; truy vấn bán kính cần bổ sung tọa độ.",
+        "citations": [],
+        "claims": [],
+        "cross_check": {
+          "status": "insufficient_evidence",
+          "supported": [],
+          "rejected": [],
+          "checked_count": 0,
+          "supported_count": 0,
+          "rejected_count": 0,
+          "verification_scope": "extractive_text_and_structured_kg_facts",
+          "reason": "unsupported_constraints"
+        },
+        "warnings": [
+          "KG hiện tại chưa có truy vấn hình học hoặc khoảng cách; kết quả RAG không tự xác nhận ràng buộc không gian.",
+          "unsupported_constraints"
+        ],
+        "llm": {
+          "backend": "transformers",
+          "model": "/Users/amyas/HK1 26-27/DATN/models/Qwen3-0.6B",
+          "device": "mps",
+          "ready": true,
+          "context_window": 4096,
+          "max_new_tokens": 384,
+          "error": null,
+          "generation_count": 5,
+          "last_latency_ms": 522.95
+        },
+        "timings_ms": {
+          "question_processing": 1.761,
+          "generation": 0.0,
+          "kg_refresh": 0.0,
+          "cross_check": 0.0,
+          "total": 1.762
+        },
+        "original_question": "Bảo tàng nào gần Hội An nhất?",
+        "context_resolution": {
+          "question": "Bảo tàng nào gần Hội An nhất?",
+          "resolved": false,
+          "needs_context": false
+        },
+        "retrieval_mode": "lexical_candidates_faiss"
+      }
+    },
+    {
+      "id": "recognition_year",
+      "question": "Ca trù được công nhận năm nào?",
+      "http_status": 200,
+      "latency_ms": 2.482,
+      "checks": {
+        "http_status": true,
+        "status": true,
+        "no_unverified_claims": true
+      },
+      "passed": true,
+      "response": {
+        "question": "Ca trù được công nhận năm nào?",
+        "classification": {
+          "question": "Ca trù được công nhận năm nào?",
+          "route": "kg",
+          "domain": "heritage",
+          "route_confidence": 0.7,
+          "domain_confidence": 0.7,
+          "method": "tfidf_logistic_regression"
+        },
+        "plan": {
+          "route": "rag",
+          "kg": null,
+          "rag": {
+            "domain": "heritage",
+            "top_k": 5
+          },
+          "intent": "logical",
+          "constraints": {
+            "temporal": [],
+            "spatial": [],
+            "unsupported": [
+              "KG chưa có truy vấn năm công nhận hoặc sự kiện đầy đủ; cần minh chứng văn bản."
+            ]
+          },
+          "warnings": [
+            "KG chưa có truy vấn năm công nhận hoặc sự kiện đầy đủ; cần minh chứng văn bản."
+          ],
+          "scope": "supported"
+        },
+        "effective_route": "rag",
+        "retrieval_status": "unsupported_constraints",
+        "status": "abstained",
+        "answer": "Dữ liệu hiện có chưa đủ để xác nhận điều kiện thời gian hoặc khoảng cách trong câu hỏi. Bạn có thể hỏi mã đơn vị, tỉnh/thành trực thuộc hoặc tra mã tại một ngày cụ thể; truy vấn bán kính cần bổ sung tọa độ.",
+        "citations": [],
+        "claims": [],
+        "cross_check": {
+          "status": "insufficient_evidence",
+          "supported": [],
+          "rejected": [],
+          "checked_count": 0,
+          "supported_count": 0,
+          "rejected_count": 0,
+          "verification_scope": "extractive_text_and_structured_kg_facts",
+          "reason": "unsupported_constraints"
+        },
+        "warnings": [
+          "KG chưa có truy vấn năm công nhận hoặc sự kiện đầy đủ; cần minh chứng văn bản.",
+          "unsupported_constraints"
+        ],
+        "llm": {
+          "backend": "transformers",
+          "model": "/Users/amyas/HK1 26-27/DATN/models/Qwen3-0.6B",
+          "device": "mps",
+          "ready": true,
+          "context_window": 4096,
+          "max_new_tokens": 384,
+          "error": null,
+          "generation_count": 5,
+          "last_latency_ms": 522.95
+        },
+        "timings_ms": {
+          "question_processing": 1.885,
+          "generation": 0.0,
+          "kg_refresh": 0.0,
+          "cross_check": 0.0,
+          "total": 1.886
+        },
+        "original_question": "Ca trù được công nhận năm nào?",
+        "context_resolution": {
+          "question": "Ca trù được công nhận năm nào?",
+          "resolved": false,
+          "needs_context": false
+        },
+        "retrieval_mode": "lexical_candidates_faiss"
+      }
+    },
+    {
+      "id": "missing_code",
+      "question": "Đơn vị có mã 99999 là gì?",
+      "http_status": 200,
+      "latency_ms": 12.716,
+      "checks": {
+        "http_status": true,
+        "status": true,
+        "no_unverified_claims": true
+      },
+      "passed": true,
+      "response": {
+        "question": "Đơn vị có mã 99999 là gì?",
+        "classification": {
+          "question": "Đơn vị có mã 99999 là gì?",
+          "route": "kg",
+          "domain": "administration",
+          "route_confidence": 0.7,
+          "domain_confidence": 0.7,
+          "method": "tfidf_logistic_regression"
+        },
+        "plan": {
+          "route": "kg",
+          "kg": {
+            "query": "03_unit_by_code",
+            "params": {
+              "code": "99999"
+            }
+          },
+          "rag": null,
+          "intent": "logical",
+          "constraints": {
+            "temporal": [],
+            "spatial": [],
+            "unsupported": []
+          },
+          "warnings": [],
+          "scope": "supported"
+        },
+        "effective_route": "kg",
+        "retrieval_status": "no_evidence",
+        "status": "abstained",
+        "answer": "Mình chưa tìm được bản ghi KG khớp mã đơn vị và các điều kiện bạn yêu cầu. Bạn kiểm tra lại mã hoặc thay đổi ngày, địa phương cần tra cứu nhé.",
+        "citations": [],
+        "claims": [],
+        "cross_check": {
+          "status": "insufficient_evidence",
+          "supported": [],
+          "rejected": [],
+          "checked_count": 0,
+          "supported_count": 0,
+          "rejected_count": 0,
+          "verification_scope": "extractive_text_and_structured_kg_facts",
+          "reason": "missing_verified_code"
+        },
+        "warnings": [
+          "missing_verified_code"
+        ],
+        "llm": {
+          "backend": "transformers",
+          "model": "/Users/amyas/HK1 26-27/DATN/models/Qwen3-0.6B",
+          "device": "mps",
+          "ready": true,
+          "context_window": 4096,
+          "max_new_tokens": 384,
+          "error": null,
+          "generation_count": 5,
+          "last_latency_ms": 522.95
+        },
+        "timings_ms": {
+          "question_processing": 11.944,
+          "generation": 0.0,
+          "kg_refresh": 0.0,
+          "cross_check": 0.0,
+          "total": 11.946
+        },
+        "original_question": "Đơn vị có mã 99999 là gì?",
+        "context_resolution": {
+          "question": "Đơn vị có mã 99999 là gì?",
+          "resolved": false,
+          "needs_context": false
+        },
+        "retrieval_mode": "lexical_candidates_faiss"
+      }
+    },
+    {
+      "id": "wrong_entity_domain",
+      "question": "Mỹ Sơn thuộc tỉnh nào và có giá trị gì?",
+      "http_status": 200,
+      "latency_ms": 105.639,
+      "checks": {
+        "http_status": true,
+        "status": true,
+        "no_unverified_claims": true
+      },
+      "passed": true,
+      "response": {
+        "question": "Mỹ Sơn thuộc tỉnh nào và có giá trị gì?",
+        "classification": {
+          "question": "Mỹ Sơn thuộc tỉnh nào và có giá trị gì?",
+          "route": "hybrid",
+          "domain": "heritage",
+          "route_confidence": 0.7,
+          "domain_confidence": 0.7,
+          "method": "tfidf_logistic_regression"
+        },
+        "plan": {
+          "route": "hybrid",
+          "kg": {
+            "query": "08_entity_facts",
+            "params": {
+              "keyword": "Mỹ Sơn",
+              "limit": 10
+            }
+          },
+          "rag": {
+            "domain": "heritage",
+            "top_k": 5
+          },
+          "intent": "hybrid",
+          "constraints": {
+            "temporal": [],
+            "spatial": [],
+            "unsupported": []
+          },
+          "warnings": [],
+          "scope": "supported"
+        },
+        "effective_route": "hybrid",
+        "retrieval_status": "no_evidence",
+        "status": "abstained",
+        "answer": "Mình chưa tìm được minh chứng đủ phù hợp trong dữ liệu hiện có. Bạn có thể bổ sung tên đầy đủ, địa phương hoặc mã đơn vị để mình tra cứu chính xác hơn.",
+        "citations": [],
+        "claims": [],
+        "cross_check": {
+          "status": "insufficient_evidence",
+          "supported": [],
+          "rejected": [],
+          "checked_count": 0,
+          "supported_count": 0,
+          "rejected_count": 0,
+          "verification_scope": "extractive_text_and_structured_kg_facts",
+          "reason": "no_eligible_evidence"
+        },
+        "warnings": [
+          "domain_scope_mismatch: Loại thực thể KG không khớp miền câu hỏi; đã loại khỏi minh chứng.",
+          "no_eligible_evidence"
+        ],
+        "llm": {
+          "backend": "transformers",
+          "model": "/Users/amyas/HK1 26-27/DATN/models/Qwen3-0.6B",
+          "device": "mps",
+          "ready": true,
+          "context_window": 4096,
+          "max_new_tokens": 384,
+          "error": null,
+          "generation_count": 5,
+          "last_latency_ms": 522.95
+        },
+        "timings_ms": {
+          "question_processing": 104.655,
+          "generation": 0.0,
+          "kg_refresh": 0.0,
+          "cross_check": 0.0,
+          "total": 104.666
+        },
+        "original_question": "Mỹ Sơn thuộc tỉnh nào và có giá trị gì?",
+        "context_resolution": {
+          "question": "Mỹ Sơn thuộc tỉnh nào và có giá trị gì?",
+          "resolved": false,
+          "needs_context": false
+        },
+        "retrieval_mode": "lexical_candidates_faiss"
+      }
+    },
+    {
+      "id": "rag_cultural",
+      "question": "Giới thiệu giá trị văn hóa của Ca trù.",
+      "http_status": 200,
+      "latency_ms": 2576.164,
+      "checks": {
+        "http_status": true,
+        "status": true,
+        "source_kinds": true,
+        "all_claims_verified": true,
+        "source_integrity": true
+      },
+      "passed": true,
+      "response": {
+        "question": "Giới thiệu giá trị văn hóa của Ca trù.",
+        "classification": {
+          "question": "Giới thiệu giá trị văn hóa của Ca trù.",
+          "route": "rag",
+          "domain": "heritage",
+          "route_confidence": 0.7,
+          "domain_confidence": 0.7,
+          "method": "tfidf_logistic_regression"
+        },
+        "plan": {
+          "route": "rag",
+          "kg": null,
+          "rag": {
+            "domain": "heritage",
+            "top_k": 5
+          },
+          "intent": "textual",
+          "constraints": {
+            "temporal": [],
+            "spatial": [],
+            "unsupported": []
+          },
+          "warnings": [],
+          "scope": "supported"
+        },
+        "effective_route": "rag",
+        "retrieval_status": "ready",
+        "status": "answered",
+        "answer": "Theo các minh chứng tìm được:\nCa trù phản ánh giá trị tinh thần, thẩm mỹ và xã hội của người Việt, góp phần hình thành và định hình bản sắc văn hóa dân tộc. [1]\nCa trù là một phần không thể thiếu trong kho tàng văn hóa Việt Nam, mang giá trị lịch sử, nghệ thuật và xã hội to lớn. [2]\nCa trù là di sản văn hóa phi vật thể của nhân loại, được UNESCO công nhận, thể hiện sự tinh tế, sang trọng và sâu sắc trong văn hóa Việt Nam. [2]\n\nNguồn minh chứng:\n[1] Ca trù performance — tài liệu trong bộ dữ liệu cục bộ\n[2] Ca trù performance — tài liệu trong bộ dữ liệu cục bộ",
+        "citations": [
+          {
+            "number": 1,
+            "evidence_id": "E01",
+            "kind": "rag",
+            "title": "Ca trù performance",
+            "source": "viet-cultural-vqa",
+            "source_url": null,
+            "source_record_ids": [
+              "331ca6d9e2326ac660cf3f5d05d9bcecc84a206fd774d52da4393878fd9bd78f"
+            ],
+            "source_verified": false
+          },
+          {
+            "number": 2,
+            "evidence_id": "E05",
+            "kind": "rag",
+            "title": "Ca trù performance",
+            "source": "viet-cultural-vqa",
+            "source_url": null,
+            "source_record_ids": [
+              "9454b0e4275d92abcf5c930308147fe37840d8820ab15d65566492135753c2f4"
+            ],
+            "source_verified": false
+          }
+        ],
+        "claims": [
+          {
+            "claim_id": "E01-C01",
+            "mode": "extractive",
+            "text": "Ca trù phản ánh giá trị tinh thần, thẩm mỹ và xã hội của người Việt, góp phần hình thành và định hình bản sắc văn hóa dân tộc.",
+            "evidence_ids": [
+              "E01"
+            ],
+            "verification": "exact_evidence_match",
+            "source_verified": false
+          },
+          {
+            "claim_id": "E05-C01",
+            "mode": "extractive",
+            "text": "Ca trù là một phần không thể thiếu trong kho tàng văn hóa Việt Nam, mang giá trị lịch sử, nghệ thuật và xã hội to lớn.",
+            "evidence_ids": [
+              "E05"
+            ],
+            "verification": "exact_evidence_match",
+            "source_verified": false
+          },
+          {
+            "claim_id": "E05-C02",
+            "mode": "extractive",
+            "text": "Ca trù là di sản văn hóa phi vật thể của nhân loại, được UNESCO công nhận, thể hiện sự tinh tế, sang trọng và sâu sắc trong văn hóa Việt Nam.",
+            "evidence_ids": [
+              "E05"
+            ],
+            "verification": "exact_evidence_match",
+            "source_verified": false
+          }
+        ],
+        "cross_check": {
+          "status": "supported",
+          "supported": [
+            {
+              "claim_id": "E01-C01",
+              "mode": "extractive",
+              "text": "Ca trù phản ánh giá trị tinh thần, thẩm mỹ và xã hội của người Việt, góp phần hình thành và định hình bản sắc văn hóa dân tộc.",
+              "evidence_ids": [
+                "E01"
+              ],
+              "verification": "exact_evidence_match",
+              "source_verified": false
+            },
+            {
+              "claim_id": "E05-C01",
+              "mode": "extractive",
+              "text": "Ca trù là một phần không thể thiếu trong kho tàng văn hóa Việt Nam, mang giá trị lịch sử, nghệ thuật và xã hội to lớn.",
+              "evidence_ids": [
+                "E05"
+              ],
+              "verification": "exact_evidence_match",
+              "source_verified": false
+            },
+            {
+              "claim_id": "E05-C02",
+              "mode": "extractive",
+              "text": "Ca trù là di sản văn hóa phi vật thể của nhân loại, được UNESCO công nhận, thể hiện sự tinh tế, sang trọng và sâu sắc trong văn hóa Việt Nam.",
+              "evidence_ids": [
+                "E05"
+              ],
+              "verification": "exact_evidence_match",
+              "source_verified": false
+            }
+          ],
+          "rejected": [],
+          "checked_count": 3,
+          "supported_count": 3,
+          "rejected_count": 0,
+          "verification_scope": "extractive_text_and_structured_kg_facts",
+          "constraints_checked": false,
+          "kg_rechecked": false
+        },
+        "warnings": [],
+        "llm": {
+          "backend": "transformers",
+          "model": "/Users/amyas/HK1 26-27/DATN/models/Qwen3-0.6B",
+          "device": "mps",
+          "ready": true,
+          "context_window": 4096,
+          "max_new_tokens": 384,
+          "error": null,
+          "generation_count": 6,
+          "last_latency_ms": 1234.3
+        },
+        "timings_ms": {
+          "question_processing": 1340.085,
+          "generation": 1234.468,
+          "kg_refresh": 0.002,
+          "cross_check": 0.065,
+          "total": 2574.99
+        },
+        "original_question": "Giới thiệu giá trị văn hóa của Ca trù.",
+        "context_resolution": {
+          "question": "Giới thiệu giá trị văn hóa của Ca trù.",
+          "resolved": false,
+          "needs_context": false
+        },
+        "retrieval_mode": "lexical_candidates_faiss"
+      }
+    },
+    {
+      "id": "hybrid_cultural",
+      "question": "Ca trù thuộc loại di sản nào và có giá trị văn hóa gì?",
+      "http_status": 200,
+      "latency_ms": 5811.025,
+      "checks": {
+        "http_status": true,
+        "status": true,
+        "source_kinds": true,
+        "all_claims_verified": true,
+        "source_integrity": true
+      },
+      "passed": true,
+      "response": {
+        "question": "Ca trù thuộc loại di sản nào và có giá trị văn hóa gì?",
+        "classification": {
+          "question": "Ca trù thuộc loại di sản nào và có giá trị văn hóa gì?",
+          "route": "hybrid",
+          "domain": "heritage",
+          "route_confidence": 0.7,
+          "domain_confidence": 0.7,
+          "method": "tfidf_logistic_regression"
+        },
+        "plan": {
+          "route": "hybrid",
+          "kg": {
+            "query": "08_entity_facts",
+            "params": {
+              "keyword": "Ca trù",
+              "limit": 10
+            }
+          },
+          "rag": {
+            "domain": "heritage",
+            "top_k": 5
+          },
+          "intent": "hybrid",
+          "constraints": {
+            "temporal": [],
+            "spatial": [],
+            "unsupported": []
+          },
+          "warnings": [],
+          "scope": "supported"
+        },
+        "effective_route": "hybrid",
+        "retrieval_status": "ready",
+        "status": "answered",
+        "answer": "Theo các minh chứng tìm được:\nTên thực thể: Ca trù performance. Loại thực thể của Ca trù performance: di sản. [1]\nCa trù là một di sản văn hóa phi vật thể quan trọng của Việt Nam, thể hiện sự tinh tế trong âm nhạc, ca từ và diễn xuất. [2]\nCa trù là di sản văn hóa phi vật thể quý giá của Việt Nam, phản ánh tinh thần và đời sống văn hóa tâm linh của người Việt. [3]\n\nNguồn minh chứng:\n[1] Ca trù performance — bản ghi KG nội bộ; viet-cultural-vqa (58 bản ghi nguồn)\n[2] Ca trù performance — tài liệu trong bộ dữ liệu cục bộ\n[3] Ca trù performance — tài liệu trong bộ dữ liệu cục bộ",
+        "citations": [
+          {
+            "number": 1,
+            "evidence_id": "E01",
+            "kind": "kg",
+            "title": "Ca trù performance",
+            "source": "viet-cultural-vqa",
+            "source_url": null,
+            "source_record_ids": [
+              "0402bba36f8b92b18afe70209b0f690263e6d086290293d9a4b8fd68aa0934c9",
+              "04c128678f550fc5771d52902a6d8f1ccb02eb4cb475d7ecb299334642800642",
+              "0520d2f6469e7f7c5badb829ed6612c984b714f037cb56d842039afa679acc73",
+              "0d3fe6c18efc1d04f76270d68426136f32240fbfc4da711578d3eaa35d5d7dae",
+              "0f9889b40d26a44ead669fa9f6d6d7bca360190d2a1efe13290cb5cef0724424",
+              "0fbbe95de26306981f5aaadaa4c3334a462a93fa49ae1ea920afea8acbe567dc",
+              "13d4e2a82349658c5f96cff2dab297de519dc01cb3fef07ee3f04772da8b5ef6",
+              "1a31e98b95b4efac4bd869330d47d77f8f544b2a91b2eef60fd29990dd59c75d",
+              "31c73b987f080d7787e82e5c5c7cad7b355298443f207c5f4383cf9928a6a5b7",
+              "3234b67381a6eb44ea445c380f8e15bec27e62c88d797ee542023d9632080bd7",
+              "32f4908140507a3728c997e2137972422c89aa1dfaef94c294024b81d5f001c4",
+              "331ca6d9e2326ac660cf3f5d05d9bcecc84a206fd774d52da4393878fd9bd78f",
+              "3669504502978cfbc2e2cadd053d52b79284cddbdacd7fac59fb56f2396f6573",
+              "3ba7c61d5b3eafb9e342cec0cbfb6c9c56876ef0457c2a11fd3395e592625a43",
+              "405ff3d962e930ed007ca4a73a9d4aab2e8ebf0d0001a284b33a35c670dd0afa",
+              "45147368a7103910d3c705665ade296ee8c263d122bdede4eb36ce179c0641be",
+              "4603bfb9fc4484c8a9b55a1651d4e91db5b8c0dfb83425365ea9528701a1ec8c",
+              "46dab8f7487e499e394e0104ce39da7b6d25fe8a56af18bd1027d659b50fa9b5",
+              "4a302acd947ec2aa388117fa8e0946cac1dd232fb219e1baaec6497d60ae5b65",
+              "4b4f446163d12e7938c276eef8d339a8a142638824cd35d26371370fc190e625",
+              "57efc094f07011985a12cca7c2abf6dd7b491b70aa67fd0ed9d618166bb536cd",
+              "59e788a3371eb9f03b699ac7b3bc3b138bd505fb3a39e1fa8d0d68920494f4bc",
+              "614ea6fbdf1092bb6d760a9d024ceeff82b91c5f84a3f7302dcd410bb88b8fe9",
+              "62fcd3ee75ce62c6c6510488062c6ff9c63ac1aaacc063ec9264dce5cb3d860b",
+              "67662270495f2b7a5137e3aac533beac453fc864986fef16251818b32a887883",
+              "67ad57908235398755d67e2779fb126af966339c4e999a80a3b085f1c30b3375",
+              "683f6ef1efa994844ae480bdc84f2dcb7887fa9c992570711c959347fab7df59",
+              "68ed553130e59cd226fb7507417c7b84f3aee58f5b1010840be79424051f1b98",
+              "6b3ddd88a58bb33c9eca5fff37de1f89ee700117755d3dc931b6391b160b8157",
+              "6c9571673750541d8b9ddc5768823c1fc4eea05773d7415030c31b0f5b0a2742",
+              "6f8aaebcf17c37dcd00883b47e0ad1dc9eae0fb27c82bc8bba96e9b77e752eb2",
+              "7555dc77b794e911d65e0a03ced37fb0f4feec7090d041be2e24aa7e2a80ad89",
+              "75b5e35db81e7237df6e71eca13bd117183e2bb5928421661f950e754e140d7c",
+              "75e7521864da6dcf76f9a2a80998bd7c9342ba8309f3034607126f27a122d7d0",
+              "78b5d808207255d7df78e89ccd89fda9e59a639979223f65762b5cc40a939253",
+              "8b74367b9f8780816f7be77773cdc6b7b663998c82ea9b1a03f7da1bee91bd65",
+              "8d25e600e17e552fd930b495a68534fb733d9298bdf7abad31db3727aec269b9",
+              "90aea2440f6bf72fb30e1513f78704e48b87589180a62fca1e0621c6bd68e4d2",
+              "914a35a6cce57cf00937b34b42c44db17f87507dfc379e847ca911e029146217",
+              "9454b0e4275d92abcf5c930308147fe37840d8820ab15d65566492135753c2f4",
+              "97c4d3559678d59b9c413e39b724a852a4c685a342beccbad0d71c80f49d1ce4",
+              "984b8c5bdfb171436ef6b3099b55efd7013e19d31e66df7abc137518060329d5",
+              "9fb44921d1efb27d2bf6c8335fcb98175fbae245b9b728d4cff3ec3a5b82a831",
+              "a4ddb7fa6e9b5a6700a6922661d4d8af30b646758a851a92e300894296af96d6",
+              "ab392244592b7041ed6e5e9f57b7d74b19ae247c4d0c919d6a4bc9fb2f90cc33",
+              "b06812379d6497163e4f19b1a18e411dc8db4e5505fc6ebb55e9479e31fa5ce3",
+              "b18998adaa815afcbd1e21ce763db2fb490d258b8fbe1e4d81c1795644c89b29",
+              "b475526e07ebcee3d3eec2ec689f515d2709e9d23ebe26725f0484396dfd47f0",
+              "c43f6b7d0be2a794bdeb06129a7741eea69a799a81e9ae9662ff1cdf28c81a06",
+              "d00322f4177fb6fb565b61a7aa8f0ce04af9c8781caddc59e90d5da53e461ffa",
+              "d06a2161fea18013a989b129c176b775fff8b77d2346806b6abc2c43baa096dd",
+              "d09cc7f2c47a702c4efff361834084b1038fa263ebe28c16d6ed1abbaefb8c46",
+              "d1489e36addee0e81c59db012f8ea86976c41bb7f4d4d8b45506c05b2be4f26e",
+              "d22d031a68d84c472a4ea3d409e1c160d25af93ff0ec9c0ef2d94bed21c3382a",
+              "d59b4acd7d52a8b64a948e91a66ccc7bb75e17d743cd652fd3f4ea4517e19afb",
+              "d8789f5e6a5ab959e48cb0810da7e356837546f6d313c2182f699d9a7579c72f",
+              "e4b070a07579c7c6c6a82fe3d912f8992026e7baaccb1b114dd2f476fe4a7128",
+              "f8b8f410f72036934e0f3dc5f5b64b1680ffdd5057dfa78fa359081bad761c16"
+            ],
+            "source_verified": false
+          },
+          {
+            "number": 2,
+            "evidence_id": "E04",
+            "kind": "rag",
+            "title": "Ca trù performance",
+            "source": "viet-cultural-vqa",
+            "source_url": null,
+            "source_record_ids": [
+              "d59b4acd7d52a8b64a948e91a66ccc7bb75e17d743cd652fd3f4ea4517e19afb"
+            ],
+            "source_verified": false
+          },
+          {
+            "number": 3,
+            "evidence_id": "E05",
+            "kind": "rag",
+            "title": "Ca trù performance",
+            "source": "viet-cultural-vqa",
+            "source_url": null,
+            "source_record_ids": [
+              "3669504502978cfbc2e2cadd053d52b79284cddbdacd7fac59fb56f2396f6573"
+            ],
+            "source_verified": false
+          }
+        ],
+        "claims": [
+          {
+            "claim_id": "E01-C01",
+            "mode": "fact",
+            "text": "Tên thực thể: Ca trù performance. Loại thực thể của Ca trù performance: di sản.",
+            "evidence_ids": [
+              "E01"
+            ],
+            "fields": [
+              "name",
+              "type"
+            ],
+            "fact_checks": [
+              {
+                "evidence_id": "E01",
+                "field": "name",
+                "value": "Ca trù performance"
+              },
+              {
+                "evidence_id": "E01",
+                "field": "type",
+                "value": "https://w3id.org/vn-assistant/ontology#Heritage"
+              }
+            ],
+            "verification": "exact_kg_fact_match",
+            "source_verified": false
+          },
+          {
+            "claim_id": "E04-C01",
+            "mode": "extractive",
+            "text": "Ca trù là một di sản văn hóa phi vật thể quan trọng của Việt Nam, thể hiện sự tinh tế trong âm nhạc, ca từ và diễn xuất.",
+            "evidence_ids": [
+              "E04"
+            ],
+            "verification": "exact_evidence_match",
+            "source_verified": false
+          },
+          {
+            "claim_id": "E05-C01",
+            "mode": "extractive",
+            "text": "Ca trù là di sản văn hóa phi vật thể quý giá của Việt Nam, phản ánh tinh thần và đời sống văn hóa tâm linh của người Việt.",
+            "evidence_ids": [
+              "E05"
+            ],
+            "verification": "exact_evidence_match",
+            "source_verified": false
+          }
+        ],
+        "cross_check": {
+          "status": "supported",
+          "supported": [
+            {
+              "claim_id": "E01-C01",
+              "mode": "fact",
+              "text": "Tên thực thể: Ca trù performance. Loại thực thể của Ca trù performance: di sản.",
+              "evidence_ids": [
+                "E01"
+              ],
+              "fields": [
+                "name",
+                "type"
+              ],
+              "fact_checks": [
+                {
+                  "evidence_id": "E01",
+                  "field": "name",
+                  "value": "Ca trù performance"
+                },
+                {
+                  "evidence_id": "E01",
+                  "field": "type",
+                  "value": "https://w3id.org/vn-assistant/ontology#Heritage"
+                }
+              ],
+              "verification": "exact_kg_fact_match",
+              "source_verified": false
+            },
+            {
+              "claim_id": "E04-C01",
+              "mode": "extractive",
+              "text": "Ca trù là một di sản văn hóa phi vật thể quan trọng của Việt Nam, thể hiện sự tinh tế trong âm nhạc, ca từ và diễn xuất.",
+              "evidence_ids": [
+                "E04"
+              ],
+              "verification": "exact_evidence_match",
+              "source_verified": false
+            },
+            {
+              "claim_id": "E05-C01",
+              "mode": "extractive",
+              "text": "Ca trù là di sản văn hóa phi vật thể quý giá của Việt Nam, phản ánh tinh thần và đời sống văn hóa tâm linh của người Việt.",
+              "evidence_ids": [
+                "E05"
+              ],
+              "verification": "exact_evidence_match",
+              "source_verified": false
+            }
+          ],
+          "rejected": [],
+          "checked_count": 3,
+          "supported_count": 3,
+          "rejected_count": 0,
+          "verification_scope": "extractive_text_and_structured_kg_facts",
+          "constraints_checked": false,
+          "kg_rechecked": true
+        },
+        "warnings": [],
+        "llm": {
+          "backend": "transformers",
+          "model": "/Users/amyas/HK1 26-27/DATN/models/Qwen3-0.6B",
+          "device": "mps",
+          "ready": true,
+          "context_window": 4096,
+          "max_new_tokens": 384,
+          "error": null,
+          "generation_count": 7,
+          "last_latency_ms": 1368.12
+        },
+        "timings_ms": {
+          "question_processing": 4418.683,
+          "generation": 1368.387,
+          "kg_refresh": 22.247,
+          "cross_check": 0.091,
+          "total": 5809.845
+        },
+        "original_question": "Ca trù thuộc loại di sản nào và có giá trị văn hóa gì?",
+        "context_resolution": {
+          "question": "Ca trù thuộc loại di sản nào và có giá trị văn hóa gì?",
+          "resolved": false,
+          "needs_context": false
+        },
+        "retrieval_mode": "lexical_candidates_faiss"
+      }
+    },
+    {
+      "id": "context_missing",
+      "question": "Đơn vị đó thuộc tỉnh nào?",
+      "http_status": 200,
+      "latency_ms": 1.327,
+      "checks": {
+        "http_status": true,
+        "status": true,
+        "no_unverified_claims": true
+      },
+      "passed": true,
+      "response": {
+        "question": "Đơn vị đó thuộc tỉnh nào?",
+        "status": "needs_clarification",
+        "answer": "Bạn muốn hỏi về đơn vị hoặc di sản nào? Hãy cho mình tên đầy đủ hoặc mã đơn vị nhé.",
+        "claims": [],
+        "citations": [],
+        "warnings": [
+          "missing_conversation_context"
+        ],
+        "cross_check": {
+          "status": "insufficient_evidence",
+          "supported_count": 0
+        },
+        "timings_ms": {
+          "total": 0
+        },
+        "context_resolution": {
+          "question": "Đơn vị đó thuộc tỉnh nào?",
+          "resolved": false,
+          "needs_context": true
+        }
+      }
+    },
+    {
+      "id": "context_unit",
+      "question": "Đơn vị đó thuộc tỉnh nào?",
+      "http_status": 200,
+      "latency_ms": 504.061,
+      "checks": {
+        "http_status": true,
+        "status": true,
+        "expected_fact": true,
+        "context_resolution": true,
+        "all_claims_verified": true,
+        "source_integrity": true
+      },
+      "passed": true,
+      "response": {
+        "question": "đơn vị có mã 00070 thuộc tỉnh nào?",
+        "classification": {
+          "question": "đơn vị có mã 00070 thuộc tỉnh nào?",
+          "route": "kg",
+          "domain": "administration",
+          "route_confidence": 0.7,
+          "domain_confidence": 0.7,
+          "method": "tfidf_logistic_regression"
+        },
+        "plan": {
+          "route": "kg",
+          "kg": {
+            "query": "03_unit_by_code",
+            "params": {
+              "code": "00070"
+            }
+          },
+          "rag": null,
+          "intent": "logical",
+          "constraints": {
+            "temporal": [],
+            "spatial": [],
+            "unsupported": []
+          },
+          "warnings": [],
+          "scope": "supported"
+        },
+        "effective_route": "kg",
+        "retrieval_status": "ready",
+        "status": "answered",
+        "answer": "Theo các minh chứng tìm được:\nTên thực thể: Phường Hoàn Kiếm. Mã của Phường Hoàn Kiếm: 00070. Tỉnh/thành phố trực thuộc của Phường Hoàn Kiếm: Thành phố Hà Nội. Loại thực thể của Phường Hoàn Kiếm: đơn vị hành chính cấp xã. [1]\n\nNguồn minh chứng:\n[1] Phường Hoàn Kiếm — bản ghi KG nội bộ; vietnam-administrative-division-json-server; vietnam-sap-nhap-phuong-xa.csv (15 bản ghi nguồn)",
+        "citations": [
+          {
+            "number": 1,
+            "evidence_id": "E01",
+            "kind": "kg",
+            "title": "Phường Hoàn Kiếm",
+            "source": "vietnam-administrative-division-json-server; vietnam-sap-nhap-phuong-xa.csv",
+            "source_url": null,
+            "source_record_ids": [
+              "00bce023d123231c64047b1f2bfb45aacbdf18f525f37a38c72ed38fdc903bbd",
+              "1ea080b7e735cd00dc62ae43cdab67b7c5ed4ab4feda07a47e072604099a125c",
+              "43e0df66051533b3a0866299d12d19d062a2abb1697a7331121230cf502891d5",
+              "4c8e04f25a0d00f5424746e9797800861218b913642a6783f2260527dcb8e1d1",
+              "5fb623bca580d4263da4249567e1ec41b7c93108c6f1f109888d8f97b9ca542c",
+              "77b4190301c71f452096adf1a81d66f34bc63630a5e1860137db628e59f20950",
+              "7e03a400c538e737677d7600db68fb337ce2747807ceb70d7bdb38a56722f330",
+              "94a1eced857aa8da40b511c062bdc357d6d2f40a23b021b3891189b764117777",
+              "b3f89fc9d4eb9d345c2471046f40ad98939d2f3890c002c55476cf7dec96e43a",
+              "b6d8c1292a9f67c5816c17df66cd7c5a2833c73469e6c14dd7d0659f00ca7027",
+              "c63e0f31b2788bcb465b27f5e25282bf7499664e0999940b13384612af76e9d5",
+              "e690d80feb717d67e71a7ba905a527c14e409f32a6ad4be4daefec89e19643b0",
+              "f0e6ec3fa13eb0fa76eec5ee2f3996deb1c5b32020b679271c4d693b22b5c01f",
+              "fbacad31aa7b4d1c3886a5bb604598851e04f9c1ec36dd264d7015db8c58f7d6",
+              "fcbe5c03b959dc1372d4ce38e60d22ef125c1cf06048bd29ecb1536ebe121978"
+            ],
+            "source_verified": false
+          }
+        ],
+        "claims": [
+          {
+            "claim_id": "E01-C01",
+            "mode": "fact",
+            "text": "Tên thực thể: Phường Hoàn Kiếm. Mã của Phường Hoàn Kiếm: 00070. Tỉnh/thành phố trực thuộc của Phường Hoàn Kiếm: Thành phố Hà Nội. Loại thực thể của Phường Hoàn Kiếm: đơn vị hành chính cấp xã.",
+            "evidence_ids": [
+              "E01"
+            ],
+            "fields": [
+              "name",
+              "code",
+              "provinceName",
+              "type"
+            ],
+            "fact_checks": [
+              {
+                "evidence_id": "E01",
+                "field": "name",
+                "value": "Phường Hoàn Kiếm"
+              },
+              {
+                "evidence_id": "E01",
+                "field": "code",
+                "value": "00070"
+              },
+              {
+                "evidence_id": "E01",
+                "field": "provinceName",
+                "value": "Thành phố Hà Nội"
+              },
+              {
+                "evidence_id": "E01",
+                "field": "type",
+                "value": "https://w3id.org/vn-assistant/ontology#Ward"
+              }
+            ],
+            "verification": "exact_kg_fact_match",
+            "source_verified": false
+          }
+        ],
+        "cross_check": {
+          "status": "supported",
+          "supported": [
+            {
+              "claim_id": "E01-C01",
+              "mode": "fact",
+              "text": "Tên thực thể: Phường Hoàn Kiếm. Mã của Phường Hoàn Kiếm: 00070. Tỉnh/thành phố trực thuộc của Phường Hoàn Kiếm: Thành phố Hà Nội. Loại thực thể của Phường Hoàn Kiếm: đơn vị hành chính cấp xã.",
+              "evidence_ids": [
+                "E01"
+              ],
+              "fields": [
+                "name",
+                "code",
+                "provinceName",
+                "type"
+              ],
+              "fact_checks": [
+                {
+                  "evidence_id": "E01",
+                  "field": "name",
+                  "value": "Phường Hoàn Kiếm"
+                },
+                {
+                  "evidence_id": "E01",
+                  "field": "code",
+                  "value": "00070"
+                },
+                {
+                  "evidence_id": "E01",
+                  "field": "provinceName",
+                  "value": "Thành phố Hà Nội"
+                },
+                {
+                  "evidence_id": "E01",
+                  "field": "type",
+                  "value": "https://w3id.org/vn-assistant/ontology#Ward"
+                }
+              ],
+              "verification": "exact_kg_fact_match",
+              "source_verified": false
+            }
+          ],
+          "rejected": [],
+          "checked_count": 1,
+          "supported_count": 1,
+          "rejected_count": 0,
+          "verification_scope": "extractive_text_and_structured_kg_facts",
+          "constraints_checked": false,
+          "kg_rechecked": true
+        },
+        "warnings": [],
+        "llm": {
+          "backend": "transformers",
+          "model": "/Users/amyas/HK1 26-27/DATN/models/Qwen3-0.6B",
+          "device": "mps",
+          "ready": true,
+          "context_window": 4096,
+          "max_new_tokens": 384,
+          "error": null,
+          "generation_count": 8,
+          "last_latency_ms": 498.18
+        },
+        "timings_ms": {
+          "question_processing": 3.512,
+          "generation": 498.29,
+          "kg_refresh": 0.665,
+          "cross_check": 0.032,
+          "total": 502.607
+        },
+        "original_question": "Đơn vị đó thuộc tỉnh nào?",
+        "context_resolution": {
+          "question": "đơn vị có mã 00070 thuộc tỉnh nào?",
+          "resolved": true,
+          "needs_context": false
+        },
+        "retrieval_mode": "lexical_candidates_faiss"
+      }
+    },
+    {
+      "id": "context_cultural",
+      "question": "Di sản đó có giá trị gì?",
+      "http_status": 200,
+      "latency_ms": 1679.41,
+      "checks": {
+        "http_status": true,
+        "status": true,
+        "context_resolution": true,
+        "all_claims_verified": true,
+        "source_integrity": true
+      },
+      "passed": true,
+      "response": {
+        "question": "Ca trù có giá trị gì?",
+        "classification": {
+          "question": "Ca trù có giá trị gì?",
+          "route": "rag",
+          "domain": "heritage",
+          "route_confidence": 0.7,
+          "domain_confidence": 0.7,
+          "method": "tfidf_logistic_regression"
+        },
+        "plan": {
+          "route": "rag",
+          "kg": null,
+          "rag": {
+            "domain": "heritage",
+            "top_k": 5
+          },
+          "intent": "textual",
+          "constraints": {
+            "temporal": [],
+            "spatial": [],
+            "unsupported": []
+          },
+          "warnings": [],
+          "scope": "supported"
+        },
+        "effective_route": "rag",
+        "retrieval_status": "ready",
+        "status": "answered",
+        "answer": "Theo các minh chứng tìm được:\nCa trù phản ánh giá trị tinh thần, thẩm mỹ và xã hội của người Việt, góp phần hình thành và định hình bản sắc văn hóa dân tộc. [1]\nSự khác biệt này tạo nên nét độc đáo và giá trị riêng của Ca trù trong hệ thống nghệ thuật dân gian phong phú của Việt Nam. [2]\nSự khác biệt này thể hiện sự đa dạng và phong phú của nền văn hóa Việt Nam, đồng thời làm nổi bật lên giá trị độc đáo của Ca trù. [3]\n\nNguồn minh chứng:\n[1] Ca trù performance — tài liệu trong bộ dữ liệu cục bộ\n[2] Ca trù performance — tài liệu trong bộ dữ liệu cục bộ\n[3] Ca trù performance — tài liệu trong bộ dữ liệu cục bộ",
+        "citations": [
+          {
+            "number": 1,
+            "evidence_id": "E01",
+            "kind": "rag",
+            "title": "Ca trù performance",
+            "source": "viet-cultural-vqa",
+            "source_url": null,
+            "source_record_ids": [
+              "331ca6d9e2326ac660cf3f5d05d9bcecc84a206fd774d52da4393878fd9bd78f"
+            ],
+            "source_verified": false
+          },
+          {
+            "number": 2,
+            "evidence_id": "E02",
+            "kind": "rag",
+            "title": "Ca trù performance",
+            "source": "viet-cultural-vqa",
+            "source_url": null,
+            "source_record_ids": [
+              "67ad57908235398755d67e2779fb126af966339c4e999a80a3b085f1c30b3375"
+            ],
+            "source_verified": false
+          },
+          {
+            "number": 3,
+            "evidence_id": "E03",
+            "kind": "rag",
+            "title": "Ca trù performance",
+            "source": "viet-cultural-vqa",
+            "source_url": null,
+            "source_record_ids": [
+              "62fcd3ee75ce62c6c6510488062c6ff9c63ac1aaacc063ec9264dce5cb3d860b"
+            ],
+            "source_verified": false
+          }
+        ],
+        "claims": [
+          {
+            "claim_id": "E01-C01",
+            "mode": "extractive",
+            "text": "Ca trù phản ánh giá trị tinh thần, thẩm mỹ và xã hội của người Việt, góp phần hình thành và định hình bản sắc văn hóa dân tộc.",
+            "evidence_ids": [
+              "E01"
+            ],
+            "verification": "exact_evidence_match",
+            "source_verified": false
+          },
+          {
+            "claim_id": "E02-C02",
+            "mode": "extractive",
+            "text": "Sự khác biệt này tạo nên nét độc đáo và giá trị riêng của Ca trù trong hệ thống nghệ thuật dân gian phong phú của Việt Nam.",
+            "evidence_ids": [
+              "E02"
+            ],
+            "verification": "exact_evidence_match",
+            "source_verified": false
+          },
+          {
+            "claim_id": "E03-C01",
+            "mode": "extractive",
+            "text": "Sự khác biệt này thể hiện sự đa dạng và phong phú của nền văn hóa Việt Nam, đồng thời làm nổi bật lên giá trị độc đáo của Ca trù.",
+            "evidence_ids": [
+              "E03"
+            ],
+            "verification": "exact_evidence_match",
+            "source_verified": false
+          }
+        ],
+        "cross_check": {
+          "status": "supported",
+          "supported": [
+            {
+              "claim_id": "E01-C01",
+              "mode": "extractive",
+              "text": "Ca trù phản ánh giá trị tinh thần, thẩm mỹ và xã hội của người Việt, góp phần hình thành và định hình bản sắc văn hóa dân tộc.",
+              "evidence_ids": [
+                "E01"
+              ],
+              "verification": "exact_evidence_match",
+              "source_verified": false
+            },
+            {
+              "claim_id": "E02-C02",
+              "mode": "extractive",
+              "text": "Sự khác biệt này tạo nên nét độc đáo và giá trị riêng của Ca trù trong hệ thống nghệ thuật dân gian phong phú của Việt Nam.",
+              "evidence_ids": [
+                "E02"
+              ],
+              "verification": "exact_evidence_match",
+              "source_verified": false
+            },
+            {
+              "claim_id": "E03-C01",
+              "mode": "extractive",
+              "text": "Sự khác biệt này thể hiện sự đa dạng và phong phú của nền văn hóa Việt Nam, đồng thời làm nổi bật lên giá trị độc đáo của Ca trù.",
+              "evidence_ids": [
+                "E03"
+              ],
+              "verification": "exact_evidence_match",
+              "source_verified": false
+            }
+          ],
+          "rejected": [],
+          "checked_count": 3,
+          "supported_count": 3,
+          "rejected_count": 0,
+          "verification_scope": "extractive_text_and_structured_kg_facts",
+          "constraints_checked": false,
+          "kg_rechecked": false
+        },
+        "warnings": [],
+        "llm": {
+          "backend": "transformers",
+          "model": "/Users/amyas/HK1 26-27/DATN/models/Qwen3-0.6B",
+          "device": "mps",
+          "ready": true,
+          "context_window": 4096,
+          "max_new_tokens": 384,
+          "error": null,
+          "generation_count": 9,
+          "last_latency_ms": 1257.4
+        },
+        "timings_ms": {
+          "question_processing": 419.427,
+          "generation": 1257.64,
+          "kg_refresh": 0.001,
+          "cross_check": 0.071,
+          "total": 1677.4
+        },
+        "original_question": "Di sản đó có giá trị gì?",
+        "context_resolution": {
+          "question": "Ca trù có giá trị gì?",
+          "resolved": true,
+          "needs_context": false
+        },
+        "retrieval_mode": "lexical_candidates_faiss"
+      }
+    },
+    {
+      "id": "out_of_scope_market",
+      "question": "Dự đoán giá bitcoin ngày mai?",
+      "http_status": 200,
+      "latency_ms": 3.928,
+      "checks": {
+        "http_status": true,
+        "status": true,
+        "no_unverified_claims": true
+      },
+      "passed": true,
+      "response": {
+        "question": "Dự đoán giá bitcoin ngày mai?",
+        "classification": {
+          "question": "Dự đoán giá bitcoin ngày mai?",
+          "route": "rag",
+          "domain": "administration",
+          "route_confidence": 0.40380425835969025,
+          "domain_confidence": 0.2741508837424027,
+          "method": "tfidf_logistic_regression"
+        },
+        "plan": {
+          "route": "rag",
+          "kg": null,
+          "rag": {
+            "domain": "administration",
+            "top_k": 5
+          },
+          "intent": "textual",
+          "constraints": {
+            "temporal": [
+              "thời điểm hoặc khoảng thời gian được yêu cầu"
+            ],
+            "spatial": [],
+            "unsupported": [
+              "Chưa xác minh được đầy đủ ràng buộc thời gian bằng KG; cần mã đơn vị, ngày cụ thể được hỗ trợ và mốc hiệu lực trong dữ liệu."
+            ]
+          },
+          "warnings": [
+            "Chưa xác minh được đầy đủ ràng buộc thời gian bằng KG; cần mã đơn vị, ngày cụ thể được hỗ trợ và mốc hiệu lực trong dữ liệu."
+          ],
+          "scope": "out_of_scope"
+        },
+        "effective_route": "rag",
+        "retrieval_status": "unsupported_constraints",
+        "status": "abstained",
+        "answer": "Dữ liệu hiện có chưa đủ để xác nhận điều kiện thời gian hoặc khoảng cách trong câu hỏi. Bạn có thể hỏi mã đơn vị, tỉnh/thành trực thuộc hoặc tra mã tại một ngày cụ thể; truy vấn bán kính cần bổ sung tọa độ.",
+        "citations": [],
+        "claims": [],
+        "cross_check": {
+          "status": "insufficient_evidence",
+          "supported": [],
+          "rejected": [],
+          "checked_count": 0,
+          "supported_count": 0,
+          "rejected_count": 0,
+          "verification_scope": "extractive_text_and_structured_kg_facts",
+          "reason": "unsupported_constraints"
+        },
+        "warnings": [
+          "Chưa xác minh được đầy đủ ràng buộc thời gian bằng KG; cần mã đơn vị, ngày cụ thể được hỗ trợ và mốc hiệu lực trong dữ liệu.",
+          "unsupported_constraints"
+        ],
+        "llm": {
+          "backend": "transformers",
+          "model": "/Users/amyas/HK1 26-27/DATN/models/Qwen3-0.6B",
+          "device": "mps",
+          "ready": true,
+          "context_window": 4096,
+          "max_new_tokens": 384,
+          "error": null,
+          "generation_count": 9,
+          "last_latency_ms": 1257.4
+        },
+        "timings_ms": {
+          "question_processing": 2.701,
+          "generation": 0.0,
+          "kg_refresh": 0.0,
+          "cross_check": 0.0,
+          "total": 2.703
+        },
+        "original_question": "Dự đoán giá bitcoin ngày mai?",
+        "context_resolution": {
+          "question": "Dự đoán giá bitcoin ngày mai?",
+          "resolved": false,
+          "needs_context": false
+        },
+        "retrieval_mode": "lexical_candidates_faiss"
+      }
+    },
+    {
+      "id": "out_of_scope_code",
+      "question": "Viết code lập trình Python giúp tôi?",
+      "http_status": 200,
+      "latency_ms": 2.59,
+      "checks": {
+        "http_status": true,
+        "status": true,
+        "no_unverified_claims": true
+      },
+      "passed": true,
+      "response": {
+        "question": "Viết code lập trình Python giúp tôi?",
+        "classification": {
+          "question": "Viết code lập trình Python giúp tôi?",
+          "route": "rag",
+          "domain": "administration",
+          "route_confidence": 0.5470427108942058,
+          "domain_confidence": 0.3091028982529065,
+          "method": "tfidf_logistic_regression"
+        },
+        "plan": {
+          "route": "rag",
+          "kg": null,
+          "rag": {
+            "domain": "administration",
+            "top_k": 5
+          },
+          "intent": "textual",
+          "constraints": {
+            "temporal": [],
+            "spatial": [],
+            "unsupported": []
+          },
+          "warnings": [],
+          "scope": "out_of_scope"
+        },
+        "effective_route": "rag",
+        "retrieval_status": "out_of_scope",
+        "status": "abstained",
+        "answer": "Mình hỗ trợ tra cứu địa giới hành chính, di sản, du lịch và các văn bản liên quan trong bộ dữ liệu. Câu hỏi này nằm ngoài phạm vi đó; bạn có thể chọn một câu hỏi gợi ý để bắt đầu.",
+        "citations": [],
+        "claims": [],
+        "cross_check": {
+          "status": "insufficient_evidence",
+          "supported": [],
+          "rejected": [],
+          "checked_count": 0,
+          "supported_count": 0,
+          "rejected_count": 0,
+          "verification_scope": "extractive_text_and_structured_kg_facts",
+          "reason": "out_of_scope"
+        },
+        "warnings": [
+          "out_of_scope"
+        ],
+        "llm": {
+          "backend": "transformers",
+          "model": "/Users/amyas/HK1 26-27/DATN/models/Qwen3-0.6B",
+          "device": "mps",
+          "ready": true,
+          "context_window": 4096,
+          "max_new_tokens": 384,
+          "error": null,
+          "generation_count": 9,
+          "last_latency_ms": 1257.4
+        },
+        "timings_ms": {
+          "question_processing": 1.866,
+          "generation": 0.0,
+          "kg_refresh": 0.0,
+          "cross_check": 0.0,
+          "total": 1.867
+        },
+        "original_question": "Viết code lập trình Python giúp tôi?",
+        "context_resolution": {
+          "question": "Viết code lập trình Python giúp tôi?",
+          "resolved": false,
+          "needs_context": false
+        },
+        "retrieval_mode": "lexical_candidates_faiss"
+      }
+    },
+    {
+      "id": "out_of_scope_medical",
+      "question": "Chẩn đoán bệnh qua triệu chứng giúp tôi?",
+      "http_status": 200,
+      "latency_ms": 2.529,
+      "checks": {
+        "http_status": true,
+        "status": true,
+        "no_unverified_claims": true
+      },
+      "passed": true,
+      "response": {
+        "question": "Chẩn đoán bệnh qua triệu chứng giúp tôi?",
+        "classification": {
+          "question": "Chẩn đoán bệnh qua triệu chứng giúp tôi?",
+          "route": "rag",
+          "domain": "administration",
+          "route_confidence": 0.4441119914303535,
+          "domain_confidence": 0.3213854910211099,
+          "method": "tfidf_logistic_regression"
+        },
+        "plan": {
+          "route": "rag",
+          "kg": null,
+          "rag": {
+            "domain": "administration",
+            "top_k": 5
+          },
+          "intent": "textual",
+          "constraints": {
+            "temporal": [],
+            "spatial": [],
+            "unsupported": []
+          },
+          "warnings": [],
+          "scope": "out_of_scope"
+        },
+        "effective_route": "rag",
+        "retrieval_status": "out_of_scope",
+        "status": "abstained",
+        "answer": "Mình hỗ trợ tra cứu địa giới hành chính, di sản, du lịch và các văn bản liên quan trong bộ dữ liệu. Câu hỏi này nằm ngoài phạm vi đó; bạn có thể chọn một câu hỏi gợi ý để bắt đầu.",
+        "citations": [],
+        "claims": [],
+        "cross_check": {
+          "status": "insufficient_evidence",
+          "supported": [],
+          "rejected": [],
+          "checked_count": 0,
+          "supported_count": 0,
+          "rejected_count": 0,
+          "verification_scope": "extractive_text_and_structured_kg_facts",
+          "reason": "out_of_scope"
+        },
+        "warnings": [
+          "out_of_scope"
+        ],
+        "llm": {
+          "backend": "transformers",
+          "model": "/Users/amyas/HK1 26-27/DATN/models/Qwen3-0.6B",
+          "device": "mps",
+          "ready": true,
+          "context_window": 4096,
+          "max_new_tokens": 384,
+          "error": null,
+          "generation_count": 9,
+          "last_latency_ms": 1257.4
+        },
+        "timings_ms": {
+          "question_processing": 1.84,
+          "generation": 0.0,
+          "kg_refresh": 0.0,
+          "cross_check": 0.0,
+          "total": 1.841
+        },
+        "original_question": "Chẩn đoán bệnh qua triệu chứng giúp tôi?",
+        "context_resolution": {
+          "question": "Chẩn đoán bệnh qua triệu chứng giúp tôi?",
+          "resolved": false,
+          "needs_context": false
+        },
+        "retrieval_mode": "lexical_candidates_faiss"
+      }
+    },
+    {
+      "id": "empty",
+      "question": "   ",
+      "http_status": 422,
+      "latency_ms": 0.733,
+      "checks": {
+        "http_status": true
+      },
+      "passed": true,
+      "response": {
+        "detail": [
+          {
+            "type": "value_error",
+            "loc": [
+              "body",
+              "question"
+            ],
+            "msg": "Value error, Câu hỏi cần ít nhất 2 ký tự sau khi chuẩn hóa",
+            "input": "   ",
+            "ctx": {
+              "error": {}
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "invalid_history_role",
+      "question": "Địa giới Hà Nội?",
+      "http_status": 422,
+      "latency_ms": 0.564,
+      "checks": {
+        "http_status": true
+      },
+      "passed": true,
+      "response": {
+        "detail": [
+          {
+            "type": "literal_error",
+            "loc": [
+              "body",
+              "history",
+              0,
+              "role"
+            ],
+            "msg": "Input should be 'user' or 'assistant'",
+            "input": "system",
+            "ctx": {
+              "expected": "'user' or 'assistant'"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "invalid_top_k",
+      "question": "Đơn vị mã 00070 là gì?",
+      "http_status": 422,
+      "latency_ms": 0.469,
+      "checks": {
+        "http_status": true
+      },
+      "passed": true,
+      "response": {
+        "detail": [
+          {
+            "type": "less_than_equal",
+            "loc": [
+              "body",
+              "top_k"
+            ],
+            "msg": "Input should be less than or equal to 20",
+            "input": 1000,
+            "ctx": {
+              "le": 20
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "warm_repeat_a",
+      "question": "Đơn vị có mã 00070 là gì?",
+      "http_status": 200,
+      "latency_ms": 538.128,
+      "checks": {
+        "http_status": true,
+        "status": true,
+        "expected_fact": true,
+        "all_claims_verified": true,
+        "source_integrity": true
+      },
+      "passed": true,
+      "response": {
+        "question": "Đơn vị có mã 00070 là gì?",
+        "classification": {
+          "question": "Đơn vị có mã 00070 là gì?",
+          "route": "kg",
+          "domain": "administration",
+          "route_confidence": 0.7,
+          "domain_confidence": 0.7,
+          "method": "tfidf_logistic_regression"
+        },
+        "plan": {
+          "route": "kg",
+          "kg": {
+            "query": "03_unit_by_code",
+            "params": {
+              "code": "00070"
+            }
+          },
+          "rag": null,
+          "intent": "logical",
+          "constraints": {
+            "temporal": [],
+            "spatial": [],
+            "unsupported": []
+          },
+          "warnings": [],
+          "scope": "supported"
+        },
+        "effective_route": "kg",
+        "retrieval_status": "ready",
+        "status": "answered",
+        "answer": "Theo các minh chứng tìm được:\nTên thực thể: Phường Hoàn Kiếm. Mã của Phường Hoàn Kiếm: 00070. Tỉnh/thành phố trực thuộc của Phường Hoàn Kiếm: Thành phố Hà Nội. Loại thực thể của Phường Hoàn Kiếm: đơn vị hành chính cấp xã. [1]\n\nNguồn minh chứng:\n[1] Phường Hoàn Kiếm — bản ghi KG nội bộ; vietnam-administrative-division-json-server; vietnam-sap-nhap-phuong-xa.csv (15 bản ghi nguồn)",
+        "citations": [
+          {
+            "number": 1,
+            "evidence_id": "E01",
+            "kind": "kg",
+            "title": "Phường Hoàn Kiếm",
+            "source": "vietnam-administrative-division-json-server; vietnam-sap-nhap-phuong-xa.csv",
+            "source_url": null,
+            "source_record_ids": [
+              "00bce023d123231c64047b1f2bfb45aacbdf18f525f37a38c72ed38fdc903bbd",
+              "1ea080b7e735cd00dc62ae43cdab67b7c5ed4ab4feda07a47e072604099a125c",
+              "43e0df66051533b3a0866299d12d19d062a2abb1697a7331121230cf502891d5",
+              "4c8e04f25a0d00f5424746e9797800861218b913642a6783f2260527dcb8e1d1",
+              "5fb623bca580d4263da4249567e1ec41b7c93108c6f1f109888d8f97b9ca542c",
+              "77b4190301c71f452096adf1a81d66f34bc63630a5e1860137db628e59f20950",
+              "7e03a400c538e737677d7600db68fb337ce2747807ceb70d7bdb38a56722f330",
+              "94a1eced857aa8da40b511c062bdc357d6d2f40a23b021b3891189b764117777",
+              "b3f89fc9d4eb9d345c2471046f40ad98939d2f3890c002c55476cf7dec96e43a",
+              "b6d8c1292a9f67c5816c17df66cd7c5a2833c73469e6c14dd7d0659f00ca7027",
+              "c63e0f31b2788bcb465b27f5e25282bf7499664e0999940b13384612af76e9d5",
+              "e690d80feb717d67e71a7ba905a527c14e409f32a6ad4be4daefec89e19643b0",
+              "f0e6ec3fa13eb0fa76eec5ee2f3996deb1c5b32020b679271c4d693b22b5c01f",
+              "fbacad31aa7b4d1c3886a5bb604598851e04f9c1ec36dd264d7015db8c58f7d6",
+              "fcbe5c03b959dc1372d4ce38e60d22ef125c1cf06048bd29ecb1536ebe121978"
+            ],
+            "source_verified": false
+          }
+        ],
+        "claims": [
+          {
+            "claim_id": "E01-C01",
+            "mode": "fact",
+            "text": "Tên thực thể: Phường Hoàn Kiếm. Mã của Phường Hoàn Kiếm: 00070. Tỉnh/thành phố trực thuộc của Phường Hoàn Kiếm: Thành phố Hà Nội. Loại thực thể của Phường Hoàn Kiếm: đơn vị hành chính cấp xã.",
+            "evidence_ids": [
+              "E01"
+            ],
+            "fields": [
+              "name",
+              "code",
+              "provinceName",
+              "type"
+            ],
+            "fact_checks": [
+              {
+                "evidence_id": "E01",
+                "field": "name",
+                "value": "Phường Hoàn Kiếm"
+              },
+              {
+                "evidence_id": "E01",
+                "field": "code",
+                "value": "00070"
+              },
+              {
+                "evidence_id": "E01",
+                "field": "provinceName",
+                "value": "Thành phố Hà Nội"
+              },
+              {
+                "evidence_id": "E01",
+                "field": "type",
+                "value": "https://w3id.org/vn-assistant/ontology#Ward"
+              }
+            ],
+            "verification": "exact_kg_fact_match",
+            "source_verified": false
+          }
+        ],
+        "cross_check": {
+          "status": "supported",
+          "supported": [
+            {
+              "claim_id": "E01-C01",
+              "mode": "fact",
+              "text": "Tên thực thể: Phường Hoàn Kiếm. Mã của Phường Hoàn Kiếm: 00070. Tỉnh/thành phố trực thuộc của Phường Hoàn Kiếm: Thành phố Hà Nội. Loại thực thể của Phường Hoàn Kiếm: đơn vị hành chính cấp xã.",
+              "evidence_ids": [
+                "E01"
+              ],
+              "fields": [
+                "name",
+                "code",
+                "provinceName",
+                "type"
+              ],
+              "fact_checks": [
+                {
+                  "evidence_id": "E01",
+                  "field": "name",
+                  "value": "Phường Hoàn Kiếm"
+                },
+                {
+                  "evidence_id": "E01",
+                  "field": "code",
+                  "value": "00070"
+                },
+                {
+                  "evidence_id": "E01",
+                  "field": "provinceName",
+                  "value": "Thành phố Hà Nội"
+                },
+                {
+                  "evidence_id": "E01",
+                  "field": "type",
+                  "value": "https://w3id.org/vn-assistant/ontology#Ward"
+                }
+              ],
+              "verification": "exact_kg_fact_match",
+              "source_verified": false
+            }
+          ],
+          "rejected": [],
+          "checked_count": 1,
+          "supported_count": 1,
+          "rejected_count": 0,
+          "verification_scope": "extractive_text_and_structured_kg_facts",
+          "constraints_checked": false,
+          "kg_rechecked": true
+        },
+        "warnings": [],
+        "llm": {
+          "backend": "transformers",
+          "model": "/Users/amyas/HK1 26-27/DATN/models/Qwen3-0.6B",
+          "device": "mps",
+          "ready": true,
+          "context_window": 4096,
+          "max_new_tokens": 384,
+          "error": null,
+          "generation_count": 10,
+          "last_latency_ms": 532.36
+        },
+        "timings_ms": {
+          "question_processing": 3.953,
+          "generation": 532.513,
+          "kg_refresh": 0.668,
+          "cross_check": 0.033,
+          "total": 537.276
+        },
+        "original_question": "Đơn vị có mã 00070 là gì?",
+        "context_resolution": {
+          "question": "Đơn vị có mã 00070 là gì?",
+          "resolved": false,
+          "needs_context": false
+        },
+        "retrieval_mode": "lexical_candidates_faiss"
+      }
+    },
+    {
+      "id": "warm_repeat_b",
+      "question": "Giới thiệu giá trị văn hóa của Ca trù.",
+      "http_status": 200,
+      "latency_ms": 1309.376,
+      "checks": {
+        "http_status": true,
+        "status": true,
+        "source_kinds": true,
+        "all_claims_verified": true,
+        "source_integrity": true
+      },
+      "passed": true,
+      "response": {
+        "question": "Giới thiệu giá trị văn hóa của Ca trù.",
+        "classification": {
+          "question": "Giới thiệu giá trị văn hóa của Ca trù.",
+          "route": "rag",
+          "domain": "heritage",
+          "route_confidence": 0.7,
+          "domain_confidence": 0.7,
+          "method": "tfidf_logistic_regression"
+        },
+        "plan": {
+          "route": "rag",
+          "kg": null,
+          "rag": {
+            "domain": "heritage",
+            "top_k": 5
+          },
+          "intent": "textual",
+          "constraints": {
+            "temporal": [],
+            "spatial": [],
+            "unsupported": []
+          },
+          "warnings": [],
+          "scope": "supported"
+        },
+        "effective_route": "rag",
+        "retrieval_status": "ready",
+        "status": "answered",
+        "answer": "Theo các minh chứng tìm được:\nCa trù phản ánh giá trị tinh thần, thẩm mỹ và xã hội của người Việt, góp phần hình thành và định hình bản sắc văn hóa dân tộc. [1]\nCa trù là một phần không thể thiếu trong kho tàng văn hóa Việt Nam, mang giá trị lịch sử, nghệ thuật và xã hội to lớn. [2]\nCa trù là di sản văn hóa phi vật thể của nhân loại, được UNESCO công nhận, thể hiện sự tinh tế, sang trọng và sâu sắc trong văn hóa Việt Nam. [2]\n\nNguồn minh chứng:\n[1] Ca trù performance — tài liệu trong bộ dữ liệu cục bộ\n[2] Ca trù performance — tài liệu trong bộ dữ liệu cục bộ",
+        "citations": [
+          {
+            "number": 1,
+            "evidence_id": "E01",
+            "kind": "rag",
+            "title": "Ca trù performance",
+            "source": "viet-cultural-vqa",
+            "source_url": null,
+            "source_record_ids": [
+              "331ca6d9e2326ac660cf3f5d05d9bcecc84a206fd774d52da4393878fd9bd78f"
+            ],
+            "source_verified": false
+          },
+          {
+            "number": 2,
+            "evidence_id": "E05",
+            "kind": "rag",
+            "title": "Ca trù performance",
+            "source": "viet-cultural-vqa",
+            "source_url": null,
+            "source_record_ids": [
+              "9454b0e4275d92abcf5c930308147fe37840d8820ab15d65566492135753c2f4"
+            ],
+            "source_verified": false
+          }
+        ],
+        "claims": [
+          {
+            "claim_id": "E01-C01",
+            "mode": "extractive",
+            "text": "Ca trù phản ánh giá trị tinh thần, thẩm mỹ và xã hội của người Việt, góp phần hình thành và định hình bản sắc văn hóa dân tộc.",
+            "evidence_ids": [
+              "E01"
+            ],
+            "verification": "exact_evidence_match",
+            "source_verified": false
+          },
+          {
+            "claim_id": "E05-C01",
+            "mode": "extractive",
+            "text": "Ca trù là một phần không thể thiếu trong kho tàng văn hóa Việt Nam, mang giá trị lịch sử, nghệ thuật và xã hội to lớn.",
+            "evidence_ids": [
+              "E05"
+            ],
+            "verification": "exact_evidence_match",
+            "source_verified": false
+          },
+          {
+            "claim_id": "E05-C02",
+            "mode": "extractive",
+            "text": "Ca trù là di sản văn hóa phi vật thể của nhân loại, được UNESCO công nhận, thể hiện sự tinh tế, sang trọng và sâu sắc trong văn hóa Việt Nam.",
+            "evidence_ids": [
+              "E05"
+            ],
+            "verification": "exact_evidence_match",
+            "source_verified": false
+          }
+        ],
+        "cross_check": {
+          "status": "supported",
+          "supported": [
+            {
+              "claim_id": "E01-C01",
+              "mode": "extractive",
+              "text": "Ca trù phản ánh giá trị tinh thần, thẩm mỹ và xã hội của người Việt, góp phần hình thành và định hình bản sắc văn hóa dân tộc.",
+              "evidence_ids": [
+                "E01"
+              ],
+              "verification": "exact_evidence_match",
+              "source_verified": false
+            },
+            {
+              "claim_id": "E05-C01",
+              "mode": "extractive",
+              "text": "Ca trù là một phần không thể thiếu trong kho tàng văn hóa Việt Nam, mang giá trị lịch sử, nghệ thuật và xã hội to lớn.",
+              "evidence_ids": [
+                "E05"
+              ],
+              "verification": "exact_evidence_match",
+              "source_verified": false
+            },
+            {
+              "claim_id": "E05-C02",
+              "mode": "extractive",
+              "text": "Ca trù là di sản văn hóa phi vật thể của nhân loại, được UNESCO công nhận, thể hiện sự tinh tế, sang trọng và sâu sắc trong văn hóa Việt Nam.",
+              "evidence_ids": [
+                "E05"
+              ],
+              "verification": "exact_evidence_match",
+              "source_verified": false
+            }
+          ],
+          "rejected": [],
+          "checked_count": 3,
+          "supported_count": 3,
+          "rejected_count": 0,
+          "verification_scope": "extractive_text_and_structured_kg_facts",
+          "constraints_checked": false,
+          "kg_rechecked": false
+        },
+        "warnings": [],
+        "llm": {
+          "backend": "transformers",
+          "model": "/Users/amyas/HK1 26-27/DATN/models/Qwen3-0.6B",
+          "device": "mps",
+          "ready": true,
+          "context_window": 4096,
+          "max_new_tokens": 384,
+          "error": null,
+          "generation_count": 11,
+          "last_latency_ms": 1249.55
+        },
+        "timings_ms": {
+          "question_processing": 58.082,
+          "generation": 1249.759,
+          "kg_refresh": 0.001,
+          "cross_check": 0.058,
+          "total": 1308.196
+        },
+        "original_question": "Giới thiệu giá trị văn hóa của Ca trù.",
+        "context_resolution": {
+          "question": "Giới thiệu giá trị văn hóa của Ca trù.",
+          "resolved": false,
+          "needs_context": false
+        },
+        "retrieval_mode": "lexical_candidates_faiss"
+      }
+    }
+  ],
+  "warmup": {
+    "http_status": 200,
+    "status": {
+      "status": "ready",
+      "llm": {
+        "backend": "transformers",
+        "model": "/Users/amyas/HK1 26-27/DATN/models/Qwen3-0.6B",
+        "device": "mps",
+        "ready": true,
+        "context_window": 4096,
+        "max_new_tokens": 384,
+        "error": null,
+        "generation_count": 0,
+        "last_latency_ms": null
+      },
+      "kg_ready": true,
+      "rag_ready": true,
+      "elapsed_ms": 22053.934
+    },
+    "elapsed_ms": 22074.648
+  },
+  "health": {
+    "status": "ok",
+    "router_ready": true,
+    "kg_ready": true,
+    "faiss_ready": true,
+    "retrieval_mode": "lexical_candidates_faiss",
+    "artifacts_present": {
+      "router": true,
+      "kg": true,
+      "faiss": false
+    },
+    "llm": {
+      "backend": "transformers",
+      "model": "/Users/amyas/HK1 26-27/DATN/models/Qwen3-0.6B",
+      "device": "mps",
+      "ready": true,
+      "context_window": 4096,
+      "max_new_tokens": 384,
+      "error": null,
+      "generation_count": 11,
+      "last_latency_ms": 1249.55
+    },
+    "capabilities": {
+      "unit_at_date": true,
+      "unit_in_province_at_date": true,
+      "geometry_distance": false,
+      "citation_verification": "evidence_match"
+    }
+  },
+  "latency_ms": {
+    "p50": 3.2344999999999997,
+    "p95": 1679.41,
+    "max": 5811.025,
+    "sample_size": 40,
+    "includes_first_retrieval_load": false,
+    "initialization_measured_separately": true
+  },
+  "latency_by_outcome_ms": {
+    "answered": {
+      "samples": 11,
+      "p50": 544.693,
+      "p95": 5811.025,
+      "max": 5811.025
+    },
+    "abstained": {
+      "samples": 25,
+      "p50": 2.791,
+      "p95": 20.459,
+      "max": 105.639
+    },
+    "needs_clarification": {
+      "samples": 1,
+      "p50": 1.327,
+      "p95": 1.327,
+      "max": 1.327
+    }
+  },
+  "passed": true,
+  "passed_cases": 40
+}

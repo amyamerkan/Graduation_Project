@@ -1,0 +1,10 @@
+PREFIX vn: <https://w3id.org/vn-assistant/ontology#>
+SELECT DISTINCT ?entity ?name ?type ?province ?provinceName ?address WHERE {
+  ?entity a vn:TourismPlace ; vn:name ?name ; vn:locatedIn ?province .
+  BIND(vn:TourismPlace AS ?type)
+  ?province vn:name ?provinceName .
+  FILTER(CONTAINS(LCASE(STR(?provinceName)), LCASE("{{province}}")))
+  OPTIONAL { ?entity vn:address ?address }
+}
+ORDER BY ?name
+LIMIT {{limit}}

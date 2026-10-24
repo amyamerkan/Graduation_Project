@@ -1,0 +1,12 @@
+PREFIX vn: <https://w3id.org/vn-assistant/ontology#>
+SELECT ?unit ?type ?name ?code ?provinceName ?validFrom ?validTo ?snapshotDate WHERE {
+  VALUES ?code { "{{code}}" }
+  ?unit vn:code ?code ; a ?type ; vn:name ?name .
+  FILTER(?type IN (vn:Province, vn:Ward))
+  OPTIONAL { ?unit vn:isCurrentSnapshot ?current }
+  FILTER(!BOUND(?current) || ?current = true)
+  OPTIONAL { ?unit vn:snapshotDate ?snapshotDate }
+  OPTIONAL { ?unit vn:validFrom ?validFrom }
+  OPTIONAL { ?unit vn:validTo ?validTo }
+  OPTIONAL { ?unit vn:locatedIn ?province . ?province a vn:Province ; vn:name ?provinceName }
+}

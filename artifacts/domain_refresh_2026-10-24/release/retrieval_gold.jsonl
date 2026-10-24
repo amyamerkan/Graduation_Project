@@ -1,0 +1,16 @@
+{"question": "Tra cứu mã 00070 Phường Hàng Trống trong danh mục trước sắp xếp tháng 7/2025.", "domain": "administration", "relevant_doc_ids": ["administrative_snapshot_c9f4d748bfe6f9c8"]}
+{"question": "Danh mục sau sắp xếp năm 2025 ghi mã phường Hoàn Kiếm thế nào?", "domain": "administration", "relevant_doc_ids": ["administrative_snapshot_7646a304872633a2"]}
+{"question": "Danh mục thu thập ngày 2026-10-24 ghi đơn vị có mã 22 là gì?", "domain": "administration", "relevant_doc_ids": ["administrative_snapshot_bbddb37e3441378a"]}
+{"question": "Tra cứu mã hành chính 24 của Bắc Ninh theo danh mục thu thập 2026-10-24.", "domain": "administration", "relevant_doc_ids": ["administrative_snapshot_ada52fbe866fbbd6"]}
+{"question": "Xã Cờ Đỏ có mã số 31261 trong danh mục hành chính hiện tại.", "domain": "administration", "relevant_doc_ids": ["administrative_snapshot_fc0ab446a2bfe6f7"]}
+{"question": "Bảng đối chiếu Cục Thống kê ghi chú thay đổi Phường Ba Đình mã 00004 như thế nào?", "domain": "administration", "relevant_doc_ids": ["administrative_reference_87e5746f4a04b272"]}
+{"question": "Bảng đối chiếu Cục Thống kê ghi chú thay đổi Phường Ngọc Hà mã 00008 như thế nào?", "domain": "administration", "relevant_doc_ids": ["administrative_reference_d17f236f5391bd13"]}
+{"question": "Bảng đối chiếu Cục Thống kê ghi chú thay đổi Phường Bố Hạ mã 07294 như thế nào?", "domain": "administration", "relevant_doc_ids": ["administrative_reference_c60290d4f16da113"]}
+{"question": "Bảng đối chiếu Cục Thống kê ghi chú thay đổi Phường Long Thành mã 26368 như thế nào?", "domain": "administration", "relevant_doc_ids": ["administrative_reference_04f3a649afba1091"]}
+{"question": "Tìm thông tin tham quan Hồ Hoàn Kiếm tại Hà Nội.", "domain": "tourism", "relevant_doc_ids": ["tourism_place_490731a382b43104"]}
+{"question": "Tìm hiểu kiến trúc và tham quan Văn Miếu - Quốc Tử Giám.", "domain": "tourism", "relevant_doc_ids": ["tourism_place_fc44765bd86b7133"]}
+{"question": "Tại khu phố cổ Hội An du khách có thể tham quan và trải nghiệm điều gì?", "domain": "tourism", "relevant_doc_ids": ["tourism_place_2f617c4103c0b2ad"]}
+{"question": "Tìm thông tin vị trí của Vịnh Hạ Long ở Quảng Ninh.", "domain": "tourism", "relevant_doc_ids": ["tourism_place_61405caaee60823b"]}
+{"question": "Khám phá cảnh quan thiên nhiên ở Động Phong Nha.", "domain": "tourism", "relevant_doc_ids": ["tourism_place_c439d0b313cb3535"]}
+{"question": "Giới thiệu cảnh quan của Vịnh Nha Trang cho khách tham quan.", "domain": "tourism", "relevant_doc_ids": ["tourism_place_9ecc7228e3d7fb98"]}
+{"question": "Du lịch khám phá thiên nhiên Quần đảo Cát Bà.", "domain": "tourism", "relevant_doc_ids": ["tourism_place_c1a1434dda0ac1ca"]}

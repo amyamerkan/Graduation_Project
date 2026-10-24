@@ -1,0 +1,19 @@
+{
+  "created_at": "2026-10-24T16:53:28.805666+00:00",
+  "archives": {
+    "rag_dataset_final.nonheritage.jsonl.gz": {
+      "before_records": 101793,
+      "retained_records": 101792,
+      "removed_sentences": 191,
+      "edited_records": 66,
+      "removed_records": 1
+    },
+    "vn_complete_dataset.nonheritage.jsonl.gz": {
+      "before_records": 81017,
+      "retained_records": 81017,
+      "removed_sentences": 72,
+      "edited_records": 58
+    }
+  },
+  "raw_policy": "Original HTTP source snapshots are provenance evidence, excluded from training/retrieval."
+}

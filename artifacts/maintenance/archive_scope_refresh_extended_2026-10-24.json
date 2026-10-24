@@ -1,0 +1,22 @@
+{
+  "created_at": "2026-10-24T16:57:34.817358+00:00",
+  "archives": {
+    "rag_dataset_final.nonheritage.jsonl.gz": {
+      "before_records": 101792,
+      "retained_records": 101778,
+      "removed_sentences": 401,
+      "edited_records": 315,
+      "removed_records": 14
+    },
+    "vn_complete_dataset.nonheritage.jsonl.gz": {
+      "before_records": 81017,
+      "retained_records": 81017,
+      "removed_sentences": 253,
+      "edited_records": 200
+    }
+  },
+  "raw_policy": "Original HTTP source snapshots are provenance evidence, excluded from training/retrieval.",
+  "fidelity_warning": "This historical-archive pass used accent folding and may have removed unrelated geographical/travel sentences. The overly broad rule was corrected before preparing the final active corpus. The archives are inactive and were not used for retraining; all 202 prior active destinations were preserved and verified against the active input.",
+  "review_status": "Requires comparison with original upstream data before reusing these historical archives.",
+  "rule_corrected_at": "2026-10-24T17:00:40.721193+00:00"
+}

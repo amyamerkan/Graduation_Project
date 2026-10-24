@@ -1,21 +1,19 @@
 {
-  "generated_at": "2026-09-15",
-  "dataset": "data/vn_complete_dataset_v2.json",
-  "records_seen": 193708,
-  "nodes": 17387,
-  "relationships": 59136,
+  "generated_at": "2026-10-24",
+  "dataset": "/Users/amyas/HK1 26-27/DATN/artifacts/domain_refresh_2026-10-24/release/data/structured_records.jsonl",
+  "records_seen": 31949,
+  "nodes": 17973,
+  "relationships": 28460,
   "counts": {
     "node:District": 696,
-    "node:Heritage": 2309,
-    "node:HistoricalAdministrativeUnit": 10014,
-    "node:Museum": 366,
-    "node:Province": 63,
-    "node:SourceDocument": 618,
-    "node:Ward": 3321,
-    "records_seen": 193708,
-    "relationship:LOCATED_IN": 35122,
-    "relationship:MENTIONS": 2820,
-    "relationship:MERGED_INTO": 10597,
-    "relationship:REPLACED_BY": 10597
+    "node:HistoricalAdministrativeUnit": 10051,
+    "node:HistoricalProvince": 63,
+    "node:Province": 68,
+    "node:TourismPlace": 453,
+    "node:Ward": 6642,
+    "records_seen": 31949,
+    "relationship:LOCATED_IN": 17842,
+    "relationship:PARTLY_MERGED_INTO": 1105,
+    "relationship:REORGANIZED_INTO": 9513
   }
 }

@@ -1,0 +1,155 @@
+{
+  "created_at": "2026-10-24T17:08:18.483825+00:00",
+  "corpus": {
+    "created_at": "2026-10-24T16:59:00.114366+00:00",
+    "before_documents": 28377,
+    "scope": "Vietnam administrative geography and visitor destinations; no intangible-heritage QA",
+    "official_matches": {
+      "current:province": 34,
+      "current:ward": 3321,
+      "reorganized2025:province": 34
+    },
+    "after_documents": 31949,
+    "added_documents": 3572,
+    "documents_by_domain": {
+      "administration": 31496,
+      "tourism": 453
+    },
+    "record_types": {
+      "administrative_snapshot": 17520,
+      "administrative_conversion": 10618,
+      "tourism_place": 453,
+      "administrative_source_document": 37,
+      "administrative_reference": 3321
+    },
+    "removed_sentences": 52,
+    "excluded_subject_matches_in_active_data": 0,
+    "rag_sha256": "a41a6545e0b960d780ece8494dbd3ec9ca81ceff08dedf4e9933b73253f3f568"
+  },
+  "training": {
+    "created_at": "2026-10-24T16:59:06.708579+00:00",
+    "training_scope": "Retrain TF-IDF/Logistic Regression router; pretrained E5/Qwen weights unchanged",
+    "kg": {
+      "generated_at": "2026-10-24",
+      "dataset": "/Users/amyas/HK1 26-27/DATN/artifacts/domain_refresh_2026-10-24/release/data/structured_records.jsonl",
+      "records_seen": 31949,
+      "nodes": 17973,
+      "relationships": 28460,
+      "counts": {
+        "node:District": 696,
+        "node:HistoricalAdministrativeUnit": 10051,
+        "node:HistoricalProvince": 63,
+        "node:Province": 68,
+        "node:TourismPlace": 453,
+        "node:Ward": 6642,
+        "records_seen": 31949,
+        "relationship:LOCATED_IN": 17842,
+        "relationship:PARTLY_MERGED_INTO": 1105,
+        "relationship:REORGANIZED_INTO": 9513
+      }
+    },
+    "router_train": {
+      "training_rows": 3402,
+      "route_labels": [
+        "hybrid",
+        "kg",
+        "rag"
+      ],
+      "domain_labels": [
+        "administration",
+        "tourism"
+      ]
+    },
+    "router_evaluation": {
+      "cases": 26,
+      "route_accuracy": 1.0,
+      "domain_accuracy": 1.0,
+      "joint_accuracy": 1.0,
+      "model_without_rules": {
+        "route_accuracy": 0.8846153846153846,
+        "domain_accuracy": 0.9230769230769231,
+        "scope": "Raw Logistic Regression predictions before deterministic routing rules"
+      }
+    },
+    "kg_evaluation": {
+      "cases": 17,
+      "passed": 17,
+      "accuracy": 1.0,
+      "exhaustive_cases": 14,
+      "true_positives": 9,
+      "false_positives": 0,
+      "false_negatives": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "required_binding_recall": 1.0,
+      "metric_scope": "Precision/recall/F1 use exhaustive expected_rows cases only; must_contain cases check coverage."
+    }
+  },
+  "index": {
+    "backend": "transformer",
+    "production_ready": true,
+    "embedding": {
+      "model_name": "intfloat/multilingual-e5-base",
+      "device": "mps",
+      "batch_size": 32,
+      "query_prefix": "query: ",
+      "passage_prefix": "passage: ",
+      "expand_terms": true
+    },
+    "metric": "cosine_via_normalized_inner_product",
+    "documents": 31949,
+    "vectors": 33169,
+    "dimension": 768,
+    "chunks_by_domain": {
+      "administration": 31496,
+      "tourism": 1673
+    },
+    "chunk_size": 900,
+    "overlap": 150,
+    "reused_vectors": 32907,
+    "encoded_vectors": 262,
+    "build_signature": {
+      "dataset": "/Users/amyas/HK1 26-27/DATN/artifacts/domain_refresh_2026-10-24/release/data/rag_dataset_final.jsonl",
+      "dataset_sha256": "a41a6545e0b960d780ece8494dbd3ec9ca81ceff08dedf4e9933b73253f3f568",
+      "seed_config_sha256": "cebadd2c4a8ca3c53a5030c57a69b14123ad8b9a63819306a44edd38152715e8",
+      "embedding": {
+        "model_name": "intfloat/multilingual-e5-base",
+        "device": "mps",
+        "batch_size": 32,
+        "query_prefix": "query: ",
+        "passage_prefix": "passage: ",
+        "expand_terms": true
+      },
+      "backend": "transformer",
+      "format_version": 3
+    },
+    "refresh_scope": "Identical passage text reuses vectors with saved encoder settings; changed/new passages re-encoded. No E5 fine-tuning."
+  },
+  "retrieval": {
+    "created_at": "2026-10-24T17:00:04.377487+00:00",
+    "scope": "Development known-positive retrieval set for current corpus; manually authored, not an independent factual benchmark.",
+    "metric_scope": "Distinct documents within five retrieved chunks; known positives, unjudged alternatives may also be relevant.",
+    "mode": "full_faiss",
+    "cases": 16,
+    "hit_at_1": 0.75,
+    "known_positive_hit_at_5": 0.9375,
+    "mrr_at_5": 0.828125,
+    "domain_integrity": true,
+    "excluded_subject_free": true
+  },
+  "backend": {
+    "cases": 57,
+    "passed": true,
+    "passed_cases": 57
+  },
+  "unit_tests": 264,
+  "report": "SOURCE/docs/DATA_REFRESH_2026-10-25.md",
+  "archive_warning": "Historical archive filtering may have removed unrelated sentences; raw restoration incomplete. Archives were not used for this release.",
+  "active_service": {
+    "passed": true,
+    "url": "http://127.0.0.1:8001",
+    "retrieval_mode": "full_faiss",
+    "llm_ready": true
+  }
+}

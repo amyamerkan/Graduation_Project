@@ -1,0 +1,58 @@
+{
+  "date": "2026-09-26T15:01:44.775368",
+  "canonical_dataset": "/Users/amyas/HK1 26-27/DATN/VN_Hybrid_Assistant_Project/data/rag_dataset_final.jsonl",
+  "sha256": "db86a01e10333c1c9d33c02e6cbf0e8359fb83150ebca651dad1721015b5f542",
+  "deleted": [
+    {
+      "path": "/Users/amyas/HK1 26-27/DATN/VN_Hybrid_Assistant_Project/artifacts/faiss/vn.index.build",
+      "bytes": 2112684528
+    },
+    {
+      "path": "/Users/amyas/HK1 26-27/DATN/VN_Hybrid_Assistant_Project/artifacts/faiss/metadata.sqlite3.tmp",
+      "bytes": 20480
+    },
+    {
+      "path": "/Users/amyas/HK1 26-27/DATN/VN_Hybrid_Assistant_Project/artifacts/faiss_pilot/vn.index.build",
+      "bytes": 773617
+    },
+    {
+      "path": "/Users/amyas/HK1 26-27/DATN/VN_Hybrid_Assistant_Project/artifacts/faiss_pilot/vn.index",
+      "bytes": 446690
+    },
+    {
+      "path": "/Users/amyas/HK1 26-27/DATN/VN_Hybrid_Assistant_Project/artifacts/faiss_pilot/metadata.sqlite3",
+      "bytes": 327680
+    },
+    {
+      "path": "/Users/amyas/HK1 26-27/DATN/VN_Hybrid_Assistant_Project/.pytest_cache",
+      "bytes": 1210
+    },
+    {
+      "path": "/Users/amyas/HK1 26-27/DATN/VN_Hybrid_Assistant_Project/tests/__pycache__",
+      "bytes": 32251
+    },
+    {
+      "path": "/Users/amyas/HK1 26-27/DATN/VN_Hybrid_Assistant_Project/scripts/__pycache__",
+      "bytes": 28530
+    },
+    {
+      "path": "/Users/amyas/HK1 26-27/DATN/VN_Hybrid_Assistant_Project/src/vn_assistant/__pycache__",
+      "bytes": 114437
+    }
+  ],
+  "deduplicated": [
+    {
+      "path": "/Users/amyas/HK1 26-27/DATN/Final_dataset.jsonl",
+      "bytes": 407702380,
+      "replacement": "relative symlink to canonical dataset"
+    },
+    {
+      "path": "/Users/amyas/HK1 26-27/DATN/vn_assistant/output_prepared/rag_dataset.jsonl",
+      "bytes": 407702380,
+      "replacement": "relative symlink to canonical dataset"
+    }
+  ],
+  "free_bytes_before": 1031344128,
+  "removed_file_bytes": 2929834183,
+  "free_bytes_after": 4004519936
+}

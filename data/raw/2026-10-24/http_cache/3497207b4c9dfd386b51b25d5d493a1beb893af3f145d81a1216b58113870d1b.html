@@ -1,0 +1,1258 @@
+<!doctype html>
+<html>
+<head>
+
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">	
+		<meta name="copyright" content="TITC">
+		<meta name="author" content="TITC">
+		<meta name="robots" content="index,follow"/>
+		<meta name="revisit-after" content="days">
+		<meta http-equiv="content-language" content="vi">
+		<meta name="geo.region" content="VN" />
+		<meta name="geo.placename" content="Hanoi" />
+		<meta name="geo.position" content="21.023897;105.844719" />
+		<meta name="ICBM" content="21.023897, 105.844719" />
+		<meta name="revisit-after" content="days">
+
+				<!-- HTML Meta Tags -->
+		<title>Cơ sở dữ liệu ngành Du lịch - csdl.vietnamtourism.gov.vn</title>
+		
+		<meta name="description" content="Cơ sở dữ liệu ngành Du lịch - csdl.vietnamtourism.gov.vn">
+		<meta name="keywords" content="Cơ sở dữ liệu ngành Du lịch, Di san, Ha Noi, Hanoi, Hue, Saigon, Ho Chi Minh, Danang, Da Nang, Hoi An, Quang Nam, Halong, Ha Long, Quang Ninh, Phong Nha - Ke Bang, Phu Quoc, Kien Giang, Mui Ne, Camau, Le hoi, thang, nam, Giao thong, di lai, khach san, nha hang, cong ty du lich, tour, dich vu, kham pha, Khách sạn ở Đà Nẵng, Khách sạn ở Khánh Hòa, Khách sạn ở Huế, Khách sạn ở Quảng Nam, Khách sạn ở Hà Nội, Khách sạn ở Quảng Ninh, Khách sạn ở Bình Thuận, Khach san, Nha nghi, Khach san tai Viet nam, Khach san tai Vietnam">
+		<link rel="canonical" href="https://csdl.vietnamtourism.gov.vn/" />
+		<link rel="publisher" href="https://csdl.vietnamtourism.gov.vn/"/>
+		<link rel="dns-prefetch" href="//www.google-analytics.com"/>
+		<link rel="amphtml" href="https://csdl.vietnamtourism.gov.vn/" />
+
+		<!-- Google / Search Engine Tags -->
+		<meta itemprop="name" content="Cơ sở dữ liệu ngành Du lịch - csdl.vietnamtourism.gov.vn">
+		<meta itemprop="description" content="Cơ sở dữ liệu ngành Du lịch - csdl.vietnamtourism.gov.vn">
+		<meta itemprop="image" content="https://csdl.vietnamtourism.gov.vn/web/templates/2018/image/logo_default.png">
+
+		<!-- Facebook Meta Tags -->
+
+
+
+
+
+		<meta property="og:url" content="https://csdl.vietnamtourism.gov.vn/">
+		<meta property="og:type" content="website">
+		<meta property="og:title" content="Cơ sở dữ liệu ngành Du lịch - csdl.vietnamtourism.gov.vn">
+		<meta property="og:description" content="Cơ sở dữ liệu ngành Du lịch - csdl.vietnamtourism.gov.vn">
+		<meta property="og:image" content="https://csdl.vietnamtourism.gov.vn/web/templates/2018/image/logo_default.png">
+
+		<!-- Twitter Meta Tags -->
+		<meta name="twitter:card" content="summary_large_image">
+		<meta name="twitter:title" content="Cơ sở dữ liệu ngành Du lịch - csdl.vietnamtourism.gov.vn">
+		<meta name="twitter:description" content="Cơ sở dữ liệu ngành Du lịch - csdl.vietnamtourism.gov.vn">
+		<meta name="twitter:image" content="https://csdl.vietnamtourism.gov.vn/web/templates/2018/image/logo_default.png">
+
+
+
+
+		
+		<meta name="dc.source" CONTENT="https://csdl.vietnamtourism.gov.vn/">
+
+		<meta name="dc.publisher" content="csdl.vietnamtourism.gov.vn" />
+		<meta name="dc.rights.copyright" content="csdl.vietnamtourism.gov.vn" />
+		<meta name="dc.creator.name" content="csdl.vietnamtourism.gov.vn" />
+		<meta name="dc.creator.email" content="httt@vietnamtourism.gov.vn" />
+		<meta name="dc.identifier" content="csdl.vietnamtourism.gov.vn" />
+		<meta name="dc.title" CONTENT="Cơ sở dữ liệu ngành Du lịch - csdl.vietnamtourism.gov.vn">
+		<meta name="dc.subject" CONTENT="Cơ sở dữ liệu ngành Du lịch - csdl.vietnamtourism.gov.vn">
+		<meta name="dc.keywords" CONTENT="Cơ sở dữ liệu ngành Du lịch, Di san, Ha Noi, Hanoi, Hue, Saigon, Ho Chi Minh, Danang, Da Nang, Hoi An, Quang Nam, Halong, Ha Long, Quang Ninh, Phong Nha - Ke Bang, Phu Quoc, Kien Giang, Mui Ne, Camau, Le hoi, thang, nam, Giao thong, di lai, khach san, nha hang, cong ty du lich, tour, dich vu, kham pha, Khách sạn ở Đà Nẵng, Khách sạn ở Khánh Hòa, Khách sạn ở Huế, Khách sạn ở Quảng Nam, Khách sạn ở Hà Nội, Khách sạn ở Quảng Ninh, Khách sạn ở Bình Thuận, Khach san, Nha nghi, Khach san tai Viet nam, Khach san tai Vietnam">
+		<meta name="dc.description" CONTENT="Website của Tổng cục Du lịch Việt Nam, Cập nhật tin tức về lĩnh vực văn hóa, du lịch, Giới thiệu về đất nước và con người Việt Nam, Danh sách khách sạn tại Việt Nam">
+		<link rel="Shortcut Icon" href="/web/templates/2025/2025/images/favicon.png" type="image/x-icon" />
+<link rel="stylesheet" type="text/css" href="/web/templates/2025/2025/css/4.0.0.0/bootstrap.min.css" />
+<link rel="stylesheet" type="text/css" href="/web/templates/2025/2025/css/ekko-lightbox.css" />
+<link rel="stylesheet" type="text/css" href="/web/templates/2025/2025/css/4.0.0.0/font-awesome.4.5.0.min.css" />
+<link rel="stylesheet" type="text/css" href="/web/templates/2025/2025/css/dropdown.css" />
+<link rel="stylesheet" type="text/css" href="/web/templates/2025/2025/css/dropdown.linear.css" />
+<link rel="stylesheet" type="text/css" href="/web/templates/2025/2025/css/styles.css" />
+<link rel="stylesheet" type="text/css" href="/web/templates/2025/2025/css/rrssb.css" />
+<link rel="stylesheet" type="text/css" href="/web/templates/2025/2025/css/ekko-lightbox.css" />
+<link rel="stylesheet" type="text/css" href="/web/templates/2025/2025/css/material-scrolltop.css" />
+
+</head>
+<script type="text/javascript">
+		var imgArr;
+</script>
+<body>	
+	<div class="container-fluid page-bg px-0 mx-0">
+		<header class="page-header menu2020">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-12 text-center">						
+						<img src="https://csdl.vietnamtourism.gov.vn/web/templates/2025/2025/image/tieude_1.png" class="img-fluid" alt="Cơ sở dữ liệu du lịch Việt Nam"/>
+					</div>
+				</div>				
+				<div class="row">
+					<div class="container">
+						<div class="col-md-12 col-sm-12">
+												<nav class="navbar navbar-expand-xl navbar-dark py-0 px-0 navbar-fixed-bottom  mt-md-3">							
+							<button class="navbar-toggler ml-lg-0" type="button" data-toggle="collapse" data-target="#top-menuid" aria-controls="top-menuid" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span>
+							</button>
+							<div class="collapse navbar-collapse" id="top-menuid" style="padding-top: 1px;">
+								<ul class="navbar-nav justify-content-center dropdown dropdown-linear  w-100">
+																	<li class="  pad0 nav-item " >
+																					<a href="/" class="nav-link" >Trang chủ</a>
+											
+									</li>
+																		<li class="  pad1 nav-item " >
+																					<a href="/nldl/news" class="nav-link" >Tin tức - Sự kiện</a>
+											
+									</li>
+																		<li class="  pad2 nav-item " >
+																					<a href="https://vietnamtourism.gov.vn/index.php/cat/2010" class="nav-link" >Văn bản pháp quy</a>
+											
+									</li>
+																		<li class="  pad3 nav-item " >
+																					<a href="https://vietnamtourism.gov.vn/index.php/cat/07" class="nav-link" >Hướng dẫn thủ tục</a>
+											
+									</li>
+									                        
+								</ul>
+							</div>
+						</nav>
+					</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="container-fluid px-0">
+						<div class="col-md-12 col-sm-12 px-0">														
+															<!-- Nav pills -->
+								<ul class="nav nav-pills justify-content-md-center">
+																	
+									<li class="active"><a href="#tab-54" data-toggle="tab" class="nav-link"><img src="https://csdl.vietnamtourism.gov.vn/uploads/images/01_3/icon/2022/white/ic-luutru.png" class="img-fluid" alt="Cơ sở lưu trú"/></a></li>
+																		
+									<li class=""><a href="#tab-55" data-toggle="tab" class="nav-link"><img src="https://csdl.vietnamtourism.gov.vn/uploads/images/01_3/icon/2022/white/ic-ctyluhanh.png" class="img-fluid" alt="Doanh nghiệp lữ hành"/></a></li>
+																		
+									<li class=""><a href="#tab-56" data-toggle="tab" class="nav-link"><img src="https://csdl.vietnamtourism.gov.vn/uploads/images/01_3/icon/2022/white/ic-huongdanvien.png" class="img-fluid" alt="Hướng dẫn viên"/></a></li>
+																		
+									<li class=""><a href="#tab-58" data-toggle="tab" class="nav-link"><img src="https://csdl.vietnamtourism.gov.vn/uploads/images/01_3/icon/2022/white/ic-nhahang.png" class="img-fluid" alt="Nhà hàng"/></a></li>
+																		
+									<li class=""><a href="#tab-57" data-toggle="tab" class="nav-link"><img src="https://csdl.vietnamtourism.gov.vn/uploads/images/01_3/icon/2022/white/ic-diemdulich.png" class="img-fluid" alt="Điểm đến"/></a></li>
+																		
+									<li class=""><a href="#tab-121" data-toggle="tab" class="nav-link"><img src="https://csdl.vietnamtourism.gov.vn/uploads/images/01_3/2026/ic-khudulich.png" class="img-fluid" alt="Khu du lịch"/></a></li>
+																		
+									<li class=""><a href="#tab-59" data-toggle="tab" class="nav-link"><img src="https://csdl.vietnamtourism.gov.vn/uploads/images/01_3/icon/2022/white/ic-muasam.png" class="img-fluid" alt="Điểm mua sắm"/></a></li>
+																		
+									<li class=""><a href="#tab-79" data-toggle="tab" class="nav-link"><img src="https://csdl.vietnamtourism.gov.vn/uploads/images/01_3/icon/2022/white/ic-vantai.png" class="img-fluid" alt="Vận tải khách du lịch"/></a></li>
+																		
+									<li class=""><a href="#tab-82" data-toggle="tab" class="nav-link"><img src="https://csdl.vietnamtourism.gov.vn/uploads/images/01_3/icon/2022/white/ic-giaitri.png" class="img-fluid" alt="Vui chơi giải trí"/></a></li>
+																		
+									<li class=""><a href="#tab-85" data-toggle="tab" class="nav-link"><img src="https://csdl.vietnamtourism.gov.vn/uploads/images/01_3/icon/2022/white/ic-thethao.png" class="img-fluid" alt="Thể thao"/></a></li>
+																		
+									<li class=""><a href="#tab-88" data-toggle="tab" class="nav-link"><img src="https://csdl.vietnamtourism.gov.vn/uploads/images/01_3/icon/2022/white/ic-suckhoe.png" class="img-fluid" alt="Chăm sóc sức khỏe"/></a></li>
+																		
+									<li class=""><a href="#tab-91" data-toggle="tab" class="nav-link"><img src="https://csdl.vietnamtourism.gov.vn/uploads/images/01_3/icon/2022/white/ic-hiephoi.png" class="img-fluid" alt="Hiệp hội"/></a></li>
+																		
+									<li class=""><a href="#tab-97" data-toggle="tab" class="nav-link"><img src="https://csdl.vietnamtourism.gov.vn/uploads/images/01_3/icon/2022/white/ic-daotao.png" class="img-fluid" alt="Cơ sở đào tạo"/></a></li>
+																		
+									<li class=""><a href="#tab-71" data-toggle="tab" class="nav-link"><img src="https://csdl.vietnamtourism.gov.vn/uploads/images/01_3/icon/2022/white/ic-nhanluc.png" class="img-fluid" alt="Nhân lực du lịch"/></a></li>
+																		
+									<li class=""><a href="#tab-61" data-toggle="tab" class="nav-link"><img src="https://csdl.vietnamtourism.gov.vn/uploads/images/01_3/icon/2022/white/ic-xuctien.png" class="img-fluid" alt="Xúc tiến du lịch"/></a></li>
+																	</ul>
+								<!-- Tab panes -->
+								<div class="tab-content well p-0" style="border: 0px;">
+																	<div class="tab-pane " id="tab-54">
+										<div class="container">
+											<div class="row">
+												<div class="col-12">
+																										<a href="https://csdl.vietnamtourism.gov.vn/index.php/cslt" class="nav-link dropdown-toggle padding-left-0">Cơ sở lưu trú</a>
+																									</div>
+											</div>
+										</div>
+																				<div class="ontainer-fluid" style="background: url('https://csdl.vietnamtourism.gov.vn/uploads/images/01_3/banner/2022/image-luutru.png') top left no-repeat; height: 140px; margin:0px;" style="">
+										</div>
+									</div>
+																		<div class="tab-pane " id="tab-55">
+										<div class="container">
+											<div class="row">
+												<div class="col-12">
+																										<a href="https://quanlyluhanh.vn/" class="nav-link dropdown-toggle padding-left-1">Doanh nghiệp lữ hành</a>
+																									</div>
+											</div>
+										</div>
+																				<div class="ontainer-fluid" style="background: url('https://csdl.vietnamtourism.gov.vn/uploads/images/01_3/banner/2022/image-luhanh.png') top left no-repeat; height: 140px; margin:0px;" style="">
+										</div>
+									</div>
+																		<div class="tab-pane " id="tab-56">
+										<div class="container">
+											<div class="row">
+												<div class="col-12">
+																										<a href="https://huongdanvien.vn/" class="nav-link dropdown-toggle padding-left-2">Hướng dẫn viên</a>
+																									</div>
+											</div>
+										</div>
+																				<div class="ontainer-fluid" style="background: url('https://csdl.vietnamtourism.gov.vn/uploads/images/01_3/banner/2022/image-huongdanvien.png') top left no-repeat; height: 140px; margin:0px;" style="">
+										</div>
+									</div>
+																		<div class="tab-pane " id="tab-58">
+										<div class="container">
+											<div class="row">
+												<div class="col-12">
+																										<a href="https://csdl.vietnamtourism.gov.vn/index.php/rest" class="nav-link dropdown-toggle padding-left-3">Nhà hàng</a>
+																									</div>
+											</div>
+										</div>
+																				<div class="ontainer-fluid" style="background: url('https://csdl.vietnamtourism.gov.vn/uploads/images/01_3/banner/2022/image-nhahang.png') top left no-repeat; height: 140px; margin:0px;" style="">
+										</div>
+									</div>
+																		<div class="tab-pane " id="tab-57">
+										<div class="container">
+											<div class="row">
+												<div class="col-12">
+																										<a href="https://csdl.vietnamtourism.gov.vn/index.php/dest" class="nav-link dropdown-toggle padding-left-4">Điểm đến</a>
+																									</div>
+											</div>
+										</div>
+																				<div class="ontainer-fluid" style="background: url('https://csdl.vietnamtourism.gov.vn/uploads/images/01_3/banner/2022/image-diemdulich.png') top left no-repeat; height: 140px; margin:0px;" style="">
+										</div>
+									</div>
+																		<div class="tab-pane " id="tab-121">
+										<div class="container">
+											<div class="row">
+												<div class="col-12">
+																										<a href="https://csdl.vietnamtourism.gov.vn/index.php/area" class="nav-link dropdown-toggle padding-left-5">Khu du lịch</a>
+																									</div>
+											</div>
+										</div>
+																				<div class="ontainer-fluid" style="background: url('https://csdl.vietnamtourism.gov.vn/uploads/images/01_3/banner/2022/image-diemdulich.png') top left no-repeat; height: 140px; margin:0px;" style="">
+										</div>
+									</div>
+																		<div class="tab-pane " id="tab-59">
+										<div class="container">
+											<div class="row">
+												<div class="col-12">
+																										<a href="https://csdl.vietnamtourism.gov.vn/index.php/shop" class="nav-link dropdown-toggle padding-left-6">Điểm mua sắm</a>
+																									</div>
+											</div>
+										</div>
+																				<div class="ontainer-fluid" style="background: url('https://csdl.vietnamtourism.gov.vn/uploads/images/01_3/banner/2022/image-muasam.png') top left no-repeat; height: 140px; margin:0px;" style="">
+										</div>
+									</div>
+																		<div class="tab-pane " id="tab-79">
+										<div class="container">
+											<div class="row">
+												<div class="col-12">
+																										<a href="https://csdl.vietnamtourism.gov.vn/index.php/vtkdl" class="nav-link dropdown-toggle padding-left-7">Vận tải khách du lịch</a>
+																									</div>
+											</div>
+										</div>
+																				<div class="ontainer-fluid" style="background: url('https://csdl.vietnamtourism.gov.vn/uploads/images/01_3/banner/2022/image-vantai.png') top left no-repeat; height: 140px; margin:0px;" style="">
+										</div>
+									</div>
+																		<div class="tab-pane " id="tab-82">
+										<div class="container">
+											<div class="row">
+												<div class="col-12">
+																										<a href="https://csdl.vietnamtourism.gov.vn/index.php/vcgt" class="nav-link dropdown-toggle padding-left-8">Vui chơi giải trí</a>
+																									</div>
+											</div>
+										</div>
+																				<div class="ontainer-fluid" style="background: url('https://csdl.vietnamtourism.gov.vn/uploads/images/01_3/banner/2022/image-giaitri.png') top left no-repeat; height: 140px; margin:0px;" style="">
+										</div>
+									</div>
+																		<div class="tab-pane " id="tab-85">
+										<div class="container">
+											<div class="row">
+												<div class="col-12">
+																										<a href="https://csdl.vietnamtourism.gov.vn/index.php/tt" class="nav-link dropdown-toggle padding-left-9">Thể thao</a>
+																									</div>
+											</div>
+										</div>
+																				<div class="ontainer-fluid" style="background: url('https://csdl.vietnamtourism.gov.vn/uploads/images/01_3/banner/2022/image-thethao.png') top left no-repeat; height: 140px; margin:0px;" style="">
+										</div>
+									</div>
+																		<div class="tab-pane " id="tab-88">
+										<div class="container">
+											<div class="row">
+												<div class="col-12">
+																										<a href="https://csdl.vietnamtourism.gov.vn/index.php/cssk" class="nav-link dropdown-toggle padding-left-10">Chăm sóc sức khỏe</a>
+																									</div>
+											</div>
+										</div>
+																				<div class="ontainer-fluid" style="background: url('https://csdl.vietnamtourism.gov.vn/uploads/images/01_3/banner/2022/image-suckhoe.png') top left no-repeat; height: 140px; margin:0px;" style="">
+										</div>
+									</div>
+																		<div class="tab-pane " id="tab-91">
+										<div class="container">
+											<div class="row">
+												<div class="col-12">
+																										<a href="https://csdl.vietnamtourism.gov.vn/index.php/hh" class="nav-link dropdown-toggle padding-left-11">Hiệp hội</a>
+																									</div>
+											</div>
+										</div>
+																				<div class="ontainer-fluid" style="background: url('https://csdl.vietnamtourism.gov.vn/uploads/images/01_3/banner/2022/image-hiephoi.png') top left no-repeat; height: 140px; margin:0px;" style="">
+										</div>
+									</div>
+																		<div class="tab-pane " id="tab-97">
+										<div class="container">
+											<div class="row">
+												<div class="col-12">
+																										<a href="https://csdl.vietnamtourism.gov.vn/index.php/csdt" class="nav-link dropdown-toggle padding-left-12">Cơ sở đào tạo</a>
+																									</div>
+											</div>
+										</div>
+																				<div class="ontainer-fluid" style="background: url('https://csdl.vietnamtourism.gov.vn/uploads/images/01_3/banner/2022/image-khoahoc.png') top left no-repeat; height: 140px; margin:0px;" style="">
+										</div>
+									</div>
+																		<div class="tab-pane " id="tab-71">
+										<div class="container">
+											<div class="row">
+												<div class="col-12">
+																										<a href="https://csdl.vietnamtourism.gov.vn/index.php/nldl" class="nav-link dropdown-toggle padding-left-13">Nhân lực du lịch</a>
+																									</div>
+											</div>
+										</div>
+																				<div class="ontainer-fluid" style="background: url('https://csdl.vietnamtourism.gov.vn/uploads/images/01_3/banner/2022/image-hiephoi.png') top left no-repeat; height: 140px; margin:0px;" style="">
+										</div>
+									</div>
+																		<div class="tab-pane " id="tab-61">
+										<div class="container">
+											<div class="row">
+												<div class="col-12">
+																										<a href="https://csdl.vietnamtourism.gov.vn/index.php/pro" class="nav-link dropdown-toggle padding-left-14">Xúc tiến du lịch</a>
+																									</div>
+											</div>
+										</div>
+																				<div class="ontainer-fluid" style="background: url('https://csdl.vietnamtourism.gov.vn/uploads/images/01_3/banner/2022/image-xuctien.png') top left no-repeat; height: 140px; margin:0px;" style="">
+										</div>
+									</div>
+																	</div>
+															
+													</div>
+					</div>
+				</div>
+			</div>
+		</header><main class="container-fluid px-0 mx-0 mt-3">
+        <form class="srcFrom" action="https://csdl.vietnamtourism.gov.vn/vcgt/" id="frmseach_doc" name="frmseach_doc" method="post" enctype="multipart/form-data" accept-charset="utf-8">
+		<input type="hidden" class="txt_csrfname" id="csrf_name" name="csrf_name" value="3e963e3ffa4cf4a85349d1e22408ab66" data-url-name="csrf_name">
+    <div class="container">        
+                <div class="row">
+            <div class="col-lg-4">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">                         
+                                
+                                <span class="input-group-text" id="title1"><i class="fa fa-search" aria-hidden="true"></i></span>                                    
+                            </div>
+                            <input type="text" class="form-control" placeholder="Tên doanh nghiệp" aria-label="Tên doanh nghiệp" aria-describedby="title1" name="title" id="title" value="" data-url-name="cslt">
+                        </div>
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="province1"><i class="fa fa-university" aria-hidden="true"></i></span>                                    
+                            </div>
+                            <select class="form-control" id="province" name="province" aria-describedby="province1" data-url-name="cslt">
+                                <option selected="selected" value="">Tỉnh, thành phố</option>
+                                                                    <option value="01" >Thành phố Hà Nội</option>
+                                                                        <option value="79,77,74" >Thành phố Hồ Chí Minh</option>
+                                                                        <option value="48,49" >Thành phố Đà Nẵng</option>
+                                                                        <option value="31,30" >Thành phố Hải Phòng</option>
+                                                                        <option value="92,94,93" >Thành phố Cần Thơ</option>
+                                                                        <option value="91,89" >An Giang</option>
+                                                                        <option value="24,27" >Bắc Ninh</option>
+                                                                        <option value="96,95" >Cà Mau</option>
+                                                                        <option value="04" >Cao Bằng</option>
+                                                                        <option value="66,54" >Đắc Lắk</option>
+                                                                        <option value="75,70" >Đồng Nai</option>
+                                                                        <option value="82,87" >Đồng Tháp</option>
+                                                                        <option value="11" >Điện Biên</option>
+                                                                        <option value="52,64" >Gia Lai</option>
+                                                                        <option value="42" >Hà Tĩnh</option>
+                                                                        <option value="33,34" >Hưng Yên</option>
+                                                                        <option value="56,58" >Khánh Hoà</option>
+                                                                        <option value="12" >Lai Châu</option>
+                                                                        <option value="15,10" >Lào Cai</option>
+                                                                        <option value="20" >Lạng Sơn</option>
+                                                                        <option value="68,60,67" >Lâm Đồng</option>
+                                                                        <option value="40" >Nghệ An</option>
+                                                                        <option value="37,36,35" >Ninh Bình</option>
+                                                                        <option value="25,26,17" >Phú Thọ</option>
+                                                                        <option value="51,62" >Quảng Ngãi</option>
+                                                                        <option value="22" >Quảng Ninh</option>
+                                                                        <option value="44,45" >Quảng Trị</option>
+                                                                        <option value="14" >Sơn La</option>
+                                                                        <option value="80,72" >Tây Ninh</option>
+                                                                        <option value="19,06" >Thái Nguyên</option>
+                                                                        <option value="38" >Thanh Hoá</option>
+                                                                        <option value="46" >Thành phố Huế</option>
+                                                                        <option value="08,02" >Tuyên Quang</option>
+                                                                        <option value="86,84,83" >Vĩnh Long</option>
+                                                                </select>
+                        </div>                                                                                                     
+                        <div class="form-group">
+                            <nav class="navbar navbar-expand-xl navbar-light  float-left flex-column px-0">
+                                <a class="navbar-brand" href="#" style="color: #495e96;font-weight: 600;font-size: 0.8rem" data-toggle="collapse" data-target="#collapsingRate">Vui chơi giải trí&nbsp;&nbsp;<span class="d-inline d-xl-none"  style="color: #495e96;font-weight: 600;font-size: 1rem"><i class="fa fa-angle-double-down" aria-hidden="true"></i></span></a>
+                                <div class="navbar-collapse collapse" id="collapsingRate">
+                                    <ul class="no-ul-list navbar-nav">
+                                        <li class="nav-item">
+                                            <input id="type000" class="checkbox-custom checkBoxVal" name="type[]" type="radio" value="" checked="checked" data-url-name="cslt">
+                                            <label for="type000" class="checkbox-custom-label">Tất cả</label>
+                                        </li>
+                                                                                    <li class="nav-item">
+                                                <input id="type0" class="checkbox-custom checkBoxVal" name="type[]" type="radio" value="54"   data-url-name="cslt">
+                                                <label for="type0" class="checkbox-custom-label">Công viên</label>
+                                            </li>
+                                                                                        <li class="nav-item">
+                                                <input id="type1" class="checkbox-custom checkBoxVal" name="type[]" type="radio" value="56"   data-url-name="cslt">
+                                                <label for="type1" class="checkbox-custom-label">Nhà hát</label>
+                                            </li>
+                                                                                </ul>                                        
+                                </div>
+                            </nav>                            
+                        </div>                         
+                        <div class="form-group">
+                            <button id="searchbutton" name="searchbutton" class="btn btn-success mb-2 col-md-12" type="submit" data-button-type="search" data-button-value="cslt" data-action-value="/vcgt/">Tra cứu</button>
+                        </div>
+                    </div>                        
+                </div>                
+            </div> <!-- Tìm kiếm  -->
+            <div class="col-lg-8">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="shorting-wrap">
+                                                        <h5 class="shorting-title font-weight-bold">Tổng số: 1 kết quả </h5>
+                                                            
+                            <div class="shorting-right dropdown-toggle">
+                                <label>Sắp xếp:</label>
+                                <select name="sort_by_order" id="sort_by_order" data-button-type="search" data-button-value="cslt" data-action-value="/vcgt/">
+                                    <option value="" selected="selected">Mặc định</option>
+                                    <option value="province_code" >Địa phương quản lý</option>
+                                    <option value="title_vn" >Tên điểm vui chơi</option>
+                                    <option value="type_code" >Loại hình</option>
+                                </select>
+                            </div>
+                        </div>                        
+                    </div>                    
+                </div>
+                                <div class="row">
+                                            <div class="col-lg-12 col-md-12 col-sm-12 h-100">      
+                                <div class="verticleilist listing-shot">
+                                    <div class="container-fluid">
+                                        <div class="row">
+                                                                            
+                                            <div class="col-md-4 px-0">
+                                                <a>
+                                                    <div class="listing-items">
+                                                        <div class="listing-shot-img" style="display: -webkit-box;display: -moz-box;display: -ms-flexbox;display: -webkit-flex;display: flex;display: flex;align-items: center;justify-content: center;">                                            
+                                                            <img src="https://csdl.vietnamtourism.gov.vn/uploads/logo/01_3/2024/VUICHOIGIAITRI2024/Sonla/RungthongBanang/Rungthongbanang01.jpg">
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                                                                        <div class="col-md-8 h-100 cslt-detail">
+                                                <div class="header">
+                                                    <h4><a>Rừng thông Bản Áng</a></h4>
+                                                </div>
+                                                                                                <span class="d-block">
+                                                    <i class="fa fa-map-marker" aria-hidden="true"></i>&nbsp;
+                                                    Địa chỉ: , Huyện Mộc Châu, Sơn La                                                </span>
+                                                                                            </div>                                            
+                                            <div class="col-12 py-2">
+                                                <span class="d-block"></span>                                            </div>
+                                                                                        <div class="col-12 py-2">
+                                                <p style="text-align: justify;">
+	<!--[if gte mso 9]><xml>
+ <o:OfficeDocumentSettings>
+  <o:RelyOnVML/>
+  <o:AllowPNG/>
+ </o:OfficeDocumentSettings>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:View>Normal</w:View>
+  <w:Zoom>0</w:Zoom>
+  <w:TrackMoves/>
+  <w:TrackFormatting/>
+  <w:PunctuationKerning/>
+  <w:ValidateAgainstSchemas/>
+  <w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+  <w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+  <w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+  <w:DoNotPromoteQF/>
+  <w:LidThemeOther>EN-US</w:LidThemeOther>
+  <w:LidThemeAsian>X-NONE</w:LidThemeAsian>
+  <w:LidThemeComplexScript>X-NONE</w:LidThemeComplexScript>
+  <w:Compatibility>
+   <w:BreakWrappedTables/>
+   <w:SnapToGridInCell/>
+   <w:WrapTextWithPunct/>
+   <w:UseAsianBreakRules/>
+   <w:DontGrowAutofit/>
+   <w:SplitPgBreakAndParaMark/>
+   <w:EnableOpenTypeKerning/>
+   <w:DontFlipMirrorIndents/>
+   <w:OverrideTableStyleHps/>
+  </w:Compatibility>
+  <m:mathPr>
+   <m:mathFont m:val="Cambria Math"/>
+   <m:brkBin m:val="before"/>
+   <m:brkBinSub m:val="&#45;-"/>
+   <m:smallFrac m:val="off"/>
+   <m:dispDef/>
+   <m:lMargin m:val="0"/>
+   <m:rMargin m:val="0"/>
+   <m:defJc m:val="centerGroup"/>
+   <m:wrapIndent m:val="1440"/>
+   <m:intLim m:val="subSup"/>
+   <m:naryLim m:val="undOvr"/>
+  </m:mathPr></w:WordDocument>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:LatentStyles DefLockedState="false" DefUnhideWhenUsed="false"
+  DefSemiHidden="false" DefQFormat="false" DefPriority="99"
+  LatentStyleCount="376">
+  <w:LsdException Locked="false" Priority="0" QFormat="true" Name="Normal"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 1"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="heading 2"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="heading 3"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="heading 4"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="heading 5"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="heading 6"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="heading 7"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="heading 8"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="heading 9"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index 4"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index 5"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index 6"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index 7"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index 8"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index 9"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" Name="toc 1"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" Name="toc 2"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" Name="toc 3"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" Name="toc 4"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" Name="toc 5"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" Name="toc 6"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" Name="toc 7"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" Name="toc 8"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" Name="toc 9"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Normal Indent"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="footnote text"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="annotation text"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="header"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="footer"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index heading"/>
+  <w:LsdException Locked="false" Priority="35" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="caption"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="table of figures"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="envelope address"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="envelope return"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="footnote reference"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="annotation reference"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="line number"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="page number"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="endnote reference"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="endnote text"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="table of authorities"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="macro"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="toa heading"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Bullet"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Number"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List 4"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List 5"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Bullet 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Bullet 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Bullet 4"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Bullet 5"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Number 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Number 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Number 4"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Number 5"/>
+  <w:LsdException Locked="false" Priority="10" QFormat="true" Name="Title"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Closing"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Signature"/>
+  <w:LsdException Locked="false" Priority="1" SemiHidden="true"
+   UnhideWhenUsed="true" Name="Default Paragraph Font"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Body Text"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Body Text Indent"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Continue"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Continue 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Continue 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Continue 4"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Continue 5"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Message Header"/>
+  <w:LsdException Locked="false" Priority="11" QFormat="true" Name="Subtitle"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Salutation"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Date"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Body Text First Indent"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Body Text First Indent 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Note Heading"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Body Text 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Body Text 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Body Text Indent 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Body Text Indent 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Block Text"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Hyperlink"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="FollowedHyperlink"/>
+  <w:LsdException Locked="false" Priority="22" QFormat="true" Name="Strong"/>
+  <w:LsdException Locked="false" Priority="20" QFormat="true" Name="Emphasis"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Document Map"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Plain Text"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="E-mail Signature"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Top of Form"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Bottom of Form"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Normal (Web)"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Acronym"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Address"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Cite"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Code"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Definition"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Keyboard"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Preformatted"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Sample"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Typewriter"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Variable"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Normal Table"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="annotation subject"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="No List"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Outline List 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Outline List 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Outline List 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Simple 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Simple 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Simple 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Classic 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Classic 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Classic 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Classic 4"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Colorful 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Colorful 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Colorful 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Columns 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Columns 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Columns 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Columns 4"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Columns 5"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Grid 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Grid 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Grid 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Grid 4"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Grid 5"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Grid 6"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Grid 7"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Grid 8"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table List 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table List 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table List 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table List 4"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table List 5"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table List 6"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table List 7"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table List 8"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table 3D effects 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table 3D effects 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table 3D effects 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Contemporary"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Elegant"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Professional"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Subtle 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Subtle 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Web 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Web 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Web 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Balloon Text"/>
+  <w:LsdException Locked="false" Priority="39" Name="Table Grid"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Theme"/>
+  <w:LsdException Locked="false" SemiHidden="true" Name="Placeholder Text"/>
+  <w:LsdException Locked="false" Priority="1" QFormat="true" Name="No Spacing"/>
+  <w:LsdException Locked="false" Priority="60" Name="Light Shading"/>
+  <w:LsdException Locked="false" Priority="61" Name="Light List"/>
+  <w:LsdException Locked="false" Priority="62" Name="Light Grid"/>
+  <w:LsdException Locked="false" Priority="63" Name="Medium Shading 1"/>
+  <w:LsdException Locked="false" Priority="64" Name="Medium Shading 2"/>
+  <w:LsdException Locked="false" Priority="65" Name="Medium List 1"/>
+  <w:LsdException Locked="false" Priority="66" Name="Medium List 2"/>
+  <w:LsdException Locked="false" Priority="67" Name="Medium Grid 1"/>
+  <w:LsdException Locked="false" Priority="68" Name="Medium Grid 2"/>
+  <w:LsdException Locked="false" Priority="69" Name="Medium Grid 3"/>
+  <w:LsdException Locked="false" Priority="70" Name="Dark List"/>
+  <w:LsdException Locked="false" Priority="71" Name="Colorful Shading"/>
+  <w:LsdException Locked="false" Priority="72" Name="Colorful List"/>
+  <w:LsdException Locked="false" Priority="73" Name="Colorful Grid"/>
+  <w:LsdException Locked="false" Priority="60" Name="Light Shading Accent 1"/>
+  <w:LsdException Locked="false" Priority="61" Name="Light List Accent 1"/>
+  <w:LsdException Locked="false" Priority="62" Name="Light Grid Accent 1"/>
+  <w:LsdException Locked="false" Priority="63" Name="Medium Shading 1 Accent 1"/>
+  <w:LsdException Locked="false" Priority="64" Name="Medium Shading 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="65" Name="Medium List 1 Accent 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" Name="Revision"/>
+  <w:LsdException Locked="false" Priority="34" QFormat="true"
+   Name="List Paragraph"/>
+  <w:LsdException Locked="false" Priority="29" QFormat="true" Name="Quote"/>
+  <w:LsdException Locked="false" Priority="30" QFormat="true"
+   Name="Intense Quote"/>
+  <w:LsdException Locked="false" Priority="66" Name="Medium List 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="67" Name="Medium Grid 1 Accent 1"/>
+  <w:LsdException Locked="false" Priority="68" Name="Medium Grid 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="69" Name="Medium Grid 3 Accent 1"/>
+  <w:LsdException Locked="false" Priority="70" Name="Dark List Accent 1"/>
+  <w:LsdException Locked="false" Priority="71" Name="Colorful Shading Accent 1"/>
+  <w:LsdException Locked="false" Priority="72" Name="Colorful List Accent 1"/>
+  <w:LsdException Locked="false" Priority="73" Name="Colorful Grid Accent 1"/>
+  <w:LsdException Locked="false" Priority="60" Name="Light Shading Accent 2"/>
+  <w:LsdException Locked="false" Priority="61" Name="Light List Accent 2"/>
+  <w:LsdException Locked="false" Priority="62" Name="Light Grid Accent 2"/>
+  <w:LsdException Locked="false" Priority="63" Name="Medium Shading 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="64" Name="Medium Shading 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="65" Name="Medium List 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="66" Name="Medium List 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="67" Name="Medium Grid 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="68" Name="Medium Grid 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="69" Name="Medium Grid 3 Accent 2"/>
+  <w:LsdException Locked="false" Priority="70" Name="Dark List Accent 2"/>
+  <w:LsdException Locked="false" Priority="71" Name="Colorful Shading Accent 2"/>
+  <w:LsdException Locked="false" Priority="72" Name="Colorful List Accent 2"/>
+  <w:LsdException Locked="false" Priority="73" Name="Colorful Grid Accent 2"/>
+  <w:LsdException Locked="false" Priority="60" Name="Light Shading Accent 3"/>
+  <w:LsdException Locked="false" Priority="61" Name="Light List Accent 3"/>
+  <w:LsdException Locked="false" Priority="62" Name="Light Grid Accent 3"/>
+  <w:LsdException Locked="false" Priority="63" Name="Medium Shading 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="64" Name="Medium Shading 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="65" Name="Medium List 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="66" Name="Medium List 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="67" Name="Medium Grid 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="68" Name="Medium Grid 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="69" Name="Medium Grid 3 Accent 3"/>
+  <w:LsdException Locked="false" Priority="70" Name="Dark List Accent 3"/>
+  <w:LsdException Locked="false" Priority="71" Name="Colorful Shading Accent 3"/>
+  <w:LsdException Locked="false" Priority="72" Name="Colorful List Accent 3"/>
+  <w:LsdException Locked="false" Priority="73" Name="Colorful Grid Accent 3"/>
+  <w:LsdException Locked="false" Priority="60" Name="Light Shading Accent 4"/>
+  <w:LsdException Locked="false" Priority="61" Name="Light List Accent 4"/>
+  <w:LsdException Locked="false" Priority="62" Name="Light Grid Accent 4"/>
+  <w:LsdException Locked="false" Priority="63" Name="Medium Shading 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="64" Name="Medium Shading 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="65" Name="Medium List 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="66" Name="Medium List 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="67" Name="Medium Grid 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="68" Name="Medium Grid 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="69" Name="Medium Grid 3 Accent 4"/>
+  <w:LsdException Locked="false" Priority="70" Name="Dark List Accent 4"/>
+  <w:LsdException Locked="false" Priority="71" Name="Colorful Shading Accent 4"/>
+  <w:LsdException Locked="false" Priority="72" Name="Colorful List Accent 4"/>
+  <w:LsdException Locked="false" Priority="73" Name="Colorful Grid Accent 4"/>
+  <w:LsdException Locked="false" Priority="60" Name="Light Shading Accent 5"/>
+  <w:LsdException Locked="false" Priority="61" Name="Light List Accent 5"/>
+  <w:LsdException Locked="false" Priority="62" Name="Light Grid Accent 5"/>
+  <w:LsdException Locked="false" Priority="63" Name="Medium Shading 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="64" Name="Medium Shading 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="65" Name="Medium List 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="66" Name="Medium List 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="67" Name="Medium Grid 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="68" Name="Medium Grid 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="69" Name="Medium Grid 3 Accent 5"/>
+  <w:LsdException Locked="false" Priority="70" Name="Dark List Accent 5"/>
+  <w:LsdException Locked="false" Priority="71" Name="Colorful Shading Accent 5"/>
+  <w:LsdException Locked="false" Priority="72" Name="Colorful List Accent 5"/>
+  <w:LsdException Locked="false" Priority="73" Name="Colorful Grid Accent 5"/>
+  <w:LsdException Locked="false" Priority="60" Name="Light Shading Accent 6"/>
+  <w:LsdException Locked="false" Priority="61" Name="Light List Accent 6"/>
+  <w:LsdException Locked="false" Priority="62" Name="Light Grid Accent 6"/>
+  <w:LsdException Locked="false" Priority="63" Name="Medium Shading 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="64" Name="Medium Shading 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="65" Name="Medium List 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="66" Name="Medium List 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="67" Name="Medium Grid 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="68" Name="Medium Grid 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="69" Name="Medium Grid 3 Accent 6"/>
+  <w:LsdException Locked="false" Priority="70" Name="Dark List Accent 6"/>
+  <w:LsdException Locked="false" Priority="71" Name="Colorful Shading Accent 6"/>
+  <w:LsdException Locked="false" Priority="72" Name="Colorful List Accent 6"/>
+  <w:LsdException Locked="false" Priority="73" Name="Colorful Grid Accent 6"/>
+  <w:LsdException Locked="false" Priority="19" QFormat="true"
+   Name="Subtle Emphasis"/>
+  <w:LsdException Locked="false" Priority="21" QFormat="true"
+   Name="Intense Emphasis"/>
+  <w:LsdException Locked="false" Priority="31" QFormat="true"
+   Name="Subtle Reference"/>
+  <w:LsdException Locked="false" Priority="32" QFormat="true"
+   Name="Intense Reference"/>
+  <w:LsdException Locked="false" Priority="33" QFormat="true" Name="Book Title"/>
+  <w:LsdException Locked="false" Priority="37" SemiHidden="true"
+   UnhideWhenUsed="true" Name="Bibliography"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="TOC Heading"/>
+  <w:LsdException Locked="false" Priority="41" Name="Plain Table 1"/>
+  <w:LsdException Locked="false" Priority="42" Name="Plain Table 2"/>
+  <w:LsdException Locked="false" Priority="43" Name="Plain Table 3"/>
+  <w:LsdException Locked="false" Priority="44" Name="Plain Table 4"/>
+  <w:LsdException Locked="false" Priority="45" Name="Plain Table 5"/>
+  <w:LsdException Locked="false" Priority="40" Name="Grid Table Light"/>
+  <w:LsdException Locked="false" Priority="46" Name="Grid Table 1 Light"/>
+  <w:LsdException Locked="false" Priority="47" Name="Grid Table 2"/>
+  <w:LsdException Locked="false" Priority="48" Name="Grid Table 3"/>
+  <w:LsdException Locked="false" Priority="49" Name="Grid Table 4"/>
+  <w:LsdException Locked="false" Priority="50" Name="Grid Table 5 Dark"/>
+  <w:LsdException Locked="false" Priority="51" Name="Grid Table 6 Colorful"/>
+  <w:LsdException Locked="false" Priority="52" Name="Grid Table 7 Colorful"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="Grid Table 1 Light Accent 1"/>
+  <w:LsdException Locked="false" Priority="47" Name="Grid Table 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="48" Name="Grid Table 3 Accent 1"/>
+  <w:LsdException Locked="false" Priority="49" Name="Grid Table 4 Accent 1"/>
+  <w:LsdException Locked="false" Priority="50" Name="Grid Table 5 Dark Accent 1"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="Grid Table 6 Colorful Accent 1"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="Grid Table 7 Colorful Accent 1"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="Grid Table 1 Light Accent 2"/>
+  <w:LsdException Locked="false" Priority="47" Name="Grid Table 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="48" Name="Grid Table 3 Accent 2"/>
+  <w:LsdException Locked="false" Priority="49" Name="Grid Table 4 Accent 2"/>
+  <w:LsdException Locked="false" Priority="50" Name="Grid Table 5 Dark Accent 2"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="Grid Table 6 Colorful Accent 2"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="Grid Table 7 Colorful Accent 2"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="Grid Table 1 Light Accent 3"/>
+  <w:LsdException Locked="false" Priority="47" Name="Grid Table 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="48" Name="Grid Table 3 Accent 3"/>
+  <w:LsdException Locked="false" Priority="49" Name="Grid Table 4 Accent 3"/>
+  <w:LsdException Locked="false" Priority="50" Name="Grid Table 5 Dark Accent 3"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="Grid Table 6 Colorful Accent 3"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="Grid Table 7 Colorful Accent 3"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="Grid Table 1 Light Accent 4"/>
+  <w:LsdException Locked="false" Priority="47" Name="Grid Table 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="48" Name="Grid Table 3 Accent 4"/>
+  <w:LsdException Locked="false" Priority="49" Name="Grid Table 4 Accent 4"/>
+  <w:LsdException Locked="false" Priority="50" Name="Grid Table 5 Dark Accent 4"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="Grid Table 6 Colorful Accent 4"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="Grid Table 7 Colorful Accent 4"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="Grid Table 1 Light Accent 5"/>
+  <w:LsdException Locked="false" Priority="47" Name="Grid Table 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="48" Name="Grid Table 3 Accent 5"/>
+  <w:LsdException Locked="false" Priority="49" Name="Grid Table 4 Accent 5"/>
+  <w:LsdException Locked="false" Priority="50" Name="Grid Table 5 Dark Accent 5"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="Grid Table 6 Colorful Accent 5"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="Grid Table 7 Colorful Accent 5"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="Grid Table 1 Light Accent 6"/>
+  <w:LsdException Locked="false" Priority="47" Name="Grid Table 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="48" Name="Grid Table 3 Accent 6"/>
+  <w:LsdException Locked="false" Priority="49" Name="Grid Table 4 Accent 6"/>
+  <w:LsdException Locked="false" Priority="50" Name="Grid Table 5 Dark Accent 6"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="Grid Table 6 Colorful Accent 6"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="Grid Table 7 Colorful Accent 6"/>
+  <w:LsdException Locked="false" Priority="46" Name="List Table 1 Light"/>
+  <w:LsdException Locked="false" Priority="47" Name="List Table 2"/>
+  <w:LsdException Locked="false" Priority="48" Name="List Table 3"/>
+  <w:LsdException Locked="false" Priority="49" Name="List Table 4"/>
+  <w:LsdException Locked="false" Priority="50" Name="List Table 5 Dark"/>
+  <w:LsdException Locked="false" Priority="51" Name="List Table 6 Colorful"/>
+  <w:LsdException Locked="false" Priority="52" Name="List Table 7 Colorful"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="List Table 1 Light Accent 1"/>
+  <w:LsdException Locked="false" Priority="47" Name="List Table 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="48" Name="List Table 3 Accent 1"/>
+  <w:LsdException Locked="false" Priority="49" Name="List Table 4 Accent 1"/>
+  <w:LsdException Locked="false" Priority="50" Name="List Table 5 Dark Accent 1"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="List Table 6 Colorful Accent 1"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="List Table 7 Colorful Accent 1"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="List Table 1 Light Accent 2"/>
+  <w:LsdException Locked="false" Priority="47" Name="List Table 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="48" Name="List Table 3 Accent 2"/>
+  <w:LsdException Locked="false" Priority="49" Name="List Table 4 Accent 2"/>
+  <w:LsdException Locked="false" Priority="50" Name="List Table 5 Dark Accent 2"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="List Table 6 Colorful Accent 2"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="List Table 7 Colorful Accent 2"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="List Table 1 Light Accent 3"/>
+  <w:LsdException Locked="false" Priority="47" Name="List Table 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="48" Name="List Table 3 Accent 3"/>
+  <w:LsdException Locked="false" Priority="49" Name="List Table 4 Accent 3"/>
+  <w:LsdException Locked="false" Priority="50" Name="List Table 5 Dark Accent 3"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="List Table 6 Colorful Accent 3"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="List Table 7 Colorful Accent 3"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="List Table 1 Light Accent 4"/>
+  <w:LsdException Locked="false" Priority="47" Name="List Table 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="48" Name="List Table 3 Accent 4"/>
+  <w:LsdException Locked="false" Priority="49" Name="List Table 4 Accent 4"/>
+  <w:LsdException Locked="false" Priority="50" Name="List Table 5 Dark Accent 4"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="List Table 6 Colorful Accent 4"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="List Table 7 Colorful Accent 4"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="List Table 1 Light Accent 5"/>
+  <w:LsdException Locked="false" Priority="47" Name="List Table 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="48" Name="List Table 3 Accent 5"/>
+  <w:LsdException Locked="false" Priority="49" Name="List Table 4 Accent 5"/>
+  <w:LsdException Locked="false" Priority="50" Name="List Table 5 Dark Accent 5"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="List Table 6 Colorful Accent 5"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="List Table 7 Colorful Accent 5"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="List Table 1 Light Accent 6"/>
+  <w:LsdException Locked="false" Priority="47" Name="List Table 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="48" Name="List Table 3 Accent 6"/>
+  <w:LsdException Locked="false" Priority="49" Name="List Table 4 Accent 6"/>
+  <w:LsdException Locked="false" Priority="50" Name="List Table 5 Dark Accent 6"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="List Table 6 Colorful Accent 6"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="List Table 7 Colorful Accent 6"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Mention"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Smart Hyperlink"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Hashtag"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Unresolved Mention"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Smart Link"/>
+ </w:LatentStyles>
+</xml><![endif]--><!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:"Table Normal";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-parent:"";
+	mso-padding-alt:0cm 5.4pt 0cm 5.4pt;
+	mso-para-margin-top:0cm;
+	mso-para-margin-right:0cm;
+	mso-para-margin-bottom:8.0pt;
+	mso-para-margin-left:0cm;
+	line-height:107%;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	mso-bidi-font-size:11.0pt;
+	font-family:"Times New Roman",serif;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;}
+</style>
+<![endif]--><span style="mso-bidi-font-size:
+12.0pt;line-height:107%;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+&quot;Times New Roman&quot;">Rừng th&ocirc;ng Bản &Aacute;ng l&agrave; một địa danh nằm trong khu vực bản &Aacute;ng thuộc x&atilde; Đ&ocirc;ng Sang, huyện Mộc Ch&acirc;u, tỉnh Sơn La. Sở hữu tổng diện t&iacute;ch c&oacute; quy m&ocirc; l&ecirc;n đến khoảng 43 ha, nơi đ&acirc;y bao gồm khu rừng th&ocirc;ng xanh cao v&uacute;t, trải d&agrave;i tr&ecirc;n những triền đồi n&acirc;u đỏ, v&agrave; đi c&ugrave;ng với đ&oacute; l&agrave; một hồ nước trong veo rộng l&ecirc;n đến 5 ha, đ&atilde; trở th&agrave;nh một điểm đến điểm cắm trại v&ocirc; c&ugrave;ng mới mẻ cho kh&aacute;ch du lịch tại miền Bắc.</span></p>
+<p class="MsoNormal" style="text-align: justify;">
+	Rừng th&ocirc;ng Bản &Aacute;ng nằm c&aacute;ch trung t&acirc;m thị trấn Mộc Ch&acirc;u chỉ khoảng chừng 3km. Nếu xuất ph&aacute;t từ trung t&acirc;m th&agrave;nh phố, bạn chỉ cần đi men theo con đường Phan Đ&igrave;nh Gi&oacute;t khoảng chừng 2km hướng ph&iacute;a Nam. Sau đ&oacute;, bạn tiếp tục đi thẳng đến ng&atilde; tư, nơi c&oacute; biển chỉ dẫn với 3 hướng rẽ kh&aacute;c nhau. Cụ thể cho mỗi hướng rẽ như sau: đi thẳng l&agrave; hướng dẫn đến khu l&agrave;ng Bản &Aacute;ng, rẽ tr&aacute;i l&agrave; khu vực hồ tự nhi&ecirc;n của rừng th&ocirc;ng v&agrave; rẽ tr&aacute;i c&ograve;n l&agrave; khu vườn hoa cải, hoa nhiệt đới. V&igrave; thế, bạn chỉ cần đi theo bảng hướng dẫn n&agrave;y l&agrave; đ&atilde; c&oacute; thể đến với địa danh rừng th&ocirc;ng Bản &Aacute;ng n&agrave;y.</p>
+<p class="MsoNormal" style="text-align: justify;">
+	Thời điểm l&yacute; tưởng nhất m&agrave; bạn c&oacute; thể lựa chọn tham quan rừng th&ocirc;ng Bản &Aacute;ng n&agrave;y l&agrave; v&agrave;o khoảng thời gian từ th&aacute;ng 1 cho đến th&aacute;ng 3. L&uacute;c n&agrave;y, thời tiết tại Mộc Ch&acirc;u thường se lạnh, c&oacute; sương m&ugrave; nhẹ, c&ugrave;ng với đ&oacute; l&agrave; tr&agrave;n ngập những m&ugrave;a hoa trải d&agrave;i tr&ecirc;n khắp nẻo đường, tạo điều kiện v&ocirc; c&ugrave;ng thuận lợi để cho bạn c&oacute; thể sở hữu những bức ảnh check-in &ldquo;cực chill&rdquo; cũng như ngắm nh&igrave;n cảnh sắc thi&ecirc;n nhi&ecirc;n thơ mộng tại khu vực n&agrave;y.</p>
+<p class="MsoNormal" style="text-align: justify;">
+	Sau đ&acirc;y l&agrave; một số th&ocirc;ng tin về giờ mở cửa v&agrave; gi&aacute; v&eacute; tham quan tại rừng th&ocirc;ng Bản &Aacute;ng m&agrave; Zoom Travel gợi &yacute; để bạn c&oacute; thể dễ d&agrave;ng tham khảo, cũng như chuẩn bị cho chuyến h&agrave;nh tr&igrave;nh tham quan của m&igrave;nh:</p>
+                                            </div>
+                                                                                    </div>
+                                    </div>
+                                    
+                            
+                                    <div class="album-content row mx-0">
+                                        <div class="col-md-12 mx-0 list-3">
+                                                                                </div>
+                                    </div>
+                                </div>
+                                <div class="verticleilist listing-shot">
+                                    <div class="row">
+                                        <div class="col-md-5 cslt-detail">
+                                                                                        <div class="header">
+                                                <h4><a href="/vcgt/?item=5">Công viên Văn Miếu</a> <span class="approve-listing"><i class="fa fa-check"></i></span></h4>
+                                            </div>
+                                                                                        
+                                        </div>
+                                        <div class="col-md-2"></div>
+                                        <div class="col-md-5 cslt-detail">
+                                                                                        <div class="header">
+                                                <h4><a href="/vcgt/?item=569">YOKI Sơn La</a> <span class="approve-listing"><i class="fa fa-check"></i></span></h4>
+                                            </div>
+                                                                                        
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                                                </div>
+                            </div> <!-- Nội dung phải  -->
+        </div>        
+    </div>
+    </form>
+</main>
+						<footer style="margin-top: 10px;background-color: #3b4753; border-top: 3px solid #1fbcbc">			
+			<div class="container">
+				<div class="row">
+					<div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-xs-12">
+						<img src="https://csdl.vietnamtourism.gov.vn/web/templates/2025/2025/image/logo-bottom.png" width="183" height="203" alt=""/>
+						<a style="display: block;margin: 15px 0px 0px 15px;" href="https://tinnhiemmang.vn/danh-ba-tin-nhiem/csdlvietnamtourismgovvn-1717729196" title="Chứng nhận Tín Nhiệm Mạng" target="_blank"><img src="https://tinnhiemmang.vn/handle_cert?id=csdl.vietnamtourism.gov.vn" width="150px" height="auto" alt="Chứng nhận Tín Nhiệm Mạng"></a>
+					</div>
+					<div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12" style="column-gap: normal;columns: 2">
+						<ul class="navbar-nav mr-auto">
+					<li class="nav-item"><a href="/" class="nav-link text-white" >Trang chủ</a></li><li class="nav-item"><a href="http://csdl.vietnamtourism.gov.vn/index.php/search/?data=cslt" class="nav-link text-white" >Cơ sở dữ liệu</a><ul><li class="nav-item"><a href="https://csdl.vietnamtourism.gov.vn/index.php/cslt" class="nav-link text-secondary  pl-3" >Cơ sở lưu trú</a></li><li class="nav-item"><a href="https://quanlyluhanh.vn/" class="nav-link text-secondary  pl-3" >Doanh nghiệp lữ hành</a></li><li class="nav-item"><a href="https://huongdanvien.vn/" class="nav-link text-secondary  pl-3" >Hướng dẫn viên</a></li><li class="nav-item"><a href="https://csdl.vietnamtourism.gov.vn/index.php/dest" class="nav-link text-secondary  pl-3" >Điểm đến</a></li><li class="nav-item"><a href="https://csdl.vietnamtourism.gov.vn/index.php/rest" class="nav-link text-secondary  pl-3" >Nhà hàng</a></li><li class="nav-item"><a href="https://csdl.vietnamtourism.gov.vn/index.php/shop" class="nav-link text-secondary  pl-3" >Điểm mua sắm</a></li><li class="nav-item"><a href="https://csdl.vietnamtourism.gov.vn/index.php/pro" class="nav-link text-secondary  pl-3" >Xúc tiến du lịch</a></li><li class="nav-item"><a href="https://csdl.vietnamtourism.gov.vn/index.php/nldl" class="nav-link text-secondary  pl-3" >Nhân lực du lịch</a></li><li class="nav-item"><a href="https://csdl.vietnamtourism.gov.vn/index.php/vtkdl" class="nav-link text-secondary  pl-3" >Vận tải khách du lịch</a></li><li class="nav-item"><a href="https://csdl.vietnamtourism.gov.vn/index.php/vcgt" class="nav-link text-secondary  pl-3" >Vui chơi giải trí</a></li><li class="nav-item"><a href="https://csdl.vietnamtourism.gov.vn/index.php/tt" class="nav-link text-secondary  pl-3" >Thể thao</a></li><li class="nav-item"><a href="https://csdl.vietnamtourism.gov.vn/index.php/cssk" class="nav-link text-secondary  pl-3" >Chăm sóc sức khỏe</a></li><li class="nav-item"><a href="https://csdl.vietnamtourism.gov.vn/index.php/hh" class="nav-link text-secondary  pl-3" >Hiệp hội</a></li><li class="nav-item"><a href="https://csdl.vietnamtourism.gov.vn/index.php/csdt" class="nav-link text-secondary  pl-3" >Cơ sở đào tạo</a></li><li class="nav-item"><a href="https://csdl.vietnamtourism.gov.vn/index.php/area" class="nav-link text-secondary  pl-3" >Khu du lịch</a></li></ul></li><li class="nav-item"><a href="https://vietnamtourism.gov.vn/index.php/cat/2010" class="nav-link text-white" >Văn bản pháp quy</a></li><li class="nav-item"><a href="https://vietnamtourism.gov.vn/index.php/cat/07" class="nav-link text-white" >Hướng dẫn thủ tục</a></li><li class="nav-item"><a href="https://vietnamtourism.gov.vn/index.php/cat/50" class="nav-link text-white" >Tin tức - Sự kiện</a></li>						</ul>
+					</div>
+					<div class="col-xl-3 col-lg-3 col-md-12 col-sm-12 col-xs-12">
+						<div class="section-main-footer-contact-wrapper">
+							<div class="row px-0">
+								<div class="col-xl-12 col-lg-12 col-md-3 col-sm-6 col-xs-6 col-6">
+									<div class="footer-contact-image">
+										<a href="https://vietnam.travel/" class="nav-link main-nav-link px-0"><img src="https://images.vietnamtourism.gov.vn/vn//images/gov2022/ic-vietnam-travel.png"></a>
+									</div>
+								</div>
+								<div class="col-xl-12 col-lg-12 col-md-3 col-sm-6 col-xs-6 col-6">
+									<div class="footer-contact-image">
+										<a href="https://moitruongdulich.vn/" class="nav-link main-nav-link px-0"><img src="https://images.vietnamtourism.gov.vn/vn//images/gov2022/ic-moitruogndulich-vn.png"></a>
+									</div>
+								</div>
+								<div class="col-xl-12 col-lg-12 col-md-3 col-sm-6 col-xs-6 col-6">
+									<div class="footer-contact-image">
+										<a href="https://dulichvn.org.vn/" class="nav-link main-nav-link px-0"><img src="https://images.vietnamtourism.gov.vn/vn//images/gov2022/ic-dulichvn-org.png"></a>
+									</div>
+								</div>
+								<div class="col-xl-12 col-lg-12 col-md-3 col-sm-6 col-xs-6 col-6">
+									<div class="footer-contact-image">
+										<a href="https://nentangso.vietnamtourism.gov.vn/" class="nav-link main-nav-link px-0" ><img src="https://images.vietnamtourism.gov.vn/vn//images/gov2022/nentangso.png"></a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+					</footer>
+	</div>
+	<!-- Material button -->
+    <button class="material-scrolltop" type="button"></button>
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script type="application/ld+json">window.jQuery || document.write('<script src="/web/templates/2025/js/jquery.min.js"><\/script>')</script>
+		
+	<script type="text/javascript" src="/web/templates/2025/js/4.0.0/bootstrap.min.js?evl=22586"></script>
+	<script type="text/javascript" src="/web/templates/2025/js/holder.min.js?evl=22586"></script>
+	<script type="text/javascript" src="/web/templates/2025/js/popper.min.js?evl=5822"></script>
+	<script type="text/javascript" src="/web/templates/2025/js/rrssb.min.js?evl=22586"></script>
+	<script type="text/javascript" src="/web/templates/2025/js/lightbox/ekko-lightbox.min.js"></script>
+	<script type="text/javascript" src="/web/templates/2025/js/front.js"></script>
+	<script src="/web/templates/2025/js/ekko-lightbox.js"></script>
+	<script type="text/javascript" src="/web/templates/2025/js/material-scrolltop.js"></script>
+	<script type="text/javascript" src="/web/templates/2025/2025/js/bootstrap-hover-tabs.js"></script>
+	<script type="text/javascript">
+		(function () {
+		  'use strict';
+
+		  if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
+			var msViewportStyle = document.createElement('style')
+			msViewportStyle.appendChild(
+			  document.createTextNode(
+				'@-ms-viewport{width:auto!important}'
+			  )
+			)
+			document.querySelector('head').appendChild(msViewportStyle)
+		  }
+
+		})();
+		$(document).ready(function ($) {
+			$(imgArr).preload();		
+			$(document).on('click', '[data-toggle="lightbox"]', function(event) {
+				event.preventDefault();
+				$(this).ekkoLightbox();
+			});
+			
+			// CSS
+			//$("div.left-content").css("height", $("div.ad-item:last-child ").height()+parseInt($("div.ad-item:last-child ").css("top").replace("px","")));
+			$('html, body').materialScrollTop();
+		});	
+		$.fn.preload = function() {
+			this.each(function(index, value){
+				if(typeof(value) != "undefined"){
+					var tmp = new Image();
+
+					/* $.each( value, function( key, value ) {
+					  console.log( key + ": " + value );
+
+					}); */
+					tmp.src = value.src;
+					if(value.width>0){
+						tmp.width = value.width;				
+						tmp.width = '100%';//value.width;				
+					}
+					if(value.height>0){
+						tmp.height = value.height;
+					}
+					tmp.alt = value.alt;
+					tmp.srcset = value.src;
+					//console.log(value.src);
+					if(tmp.src.length>0){
+						$("img#preload_"+index).replaceWith(tmp);
+					}
+				}
+			});
+		}	
+	</script>
+</body>
+</html>

@@ -4,39 +4,37 @@
   "embedding": {
     "model_name": "intfloat/multilingual-e5-base",
     "device": "mps",
-    "batch_size": 16,
+    "batch_size": 32,
     "query_prefix": "query: ",
     "passage_prefix": "passage: ",
     "expand_terms": true
   },
   "metric": "cosine_via_normalized_inner_product",
-  "documents": 130999,
-  "vectors": 456108,
+  "documents": 31949,
+  "vectors": 33169,
   "dimension": 768,
   "chunks_by_domain": {
-    "administration": 3355,
-    "heritage": 88384,
-    "law": 270755,
-    "tourism": 93614
+    "administration": 31496,
+    "tourism": 1673
   },
   "chunk_size": 900,
   "overlap": 150,
+  "reused_vectors": 32907,
+  "encoded_vectors": 262,
   "build_signature": {
-    "dataset": "/Users/amyas/HK1 26-27/DATN/VN_Hybrid_Assistant_Project/data/rag_dataset_final.jsonl",
-    "dataset_size": 407702380,
-    "dataset_mtime_ns": 1789066690683156697,
-    "backend": "transformer",
+    "dataset": "/Users/amyas/HK1 26-27/DATN/artifacts/domain_refresh_2026-10-24/release/data/rag_dataset_final.jsonl",
+    "dataset_sha256": "a41a6545e0b960d780ece8494dbd3ec9ca81ceff08dedf4e9933b73253f3f568",
+    "seed_config_sha256": "cebadd2c4a8ca3c53a5030c57a69b14123ad8b9a63819306a44edd38152715e8",
     "embedding": {
       "model_name": "intfloat/multilingual-e5-base",
       "device": "mps",
-      "batch_size": 16,
+      "batch_size": 32,
       "query_prefix": "query: ",
       "passage_prefix": "passage: ",
       "expand_terms": true
     },
-    "chunk_size": 900,
-    "overlap": 150,
-    "limit_documents": 0,
-    "format_version": 2
-  }
+    "backend": "transformer",
+    "format_version": 3
+  },
+  "refresh_scope": "Identical passage text reuses vectors with saved encoder settings; changed/new passages re-encoded. No E5 fine-tuning."
 }

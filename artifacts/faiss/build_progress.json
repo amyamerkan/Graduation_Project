@@ -1,9 +1,12 @@
 {
   "status": "complete",
-  "vectors": 456108,
-  "resumed_vectors": 163696,
-  "elapsed_seconds": 8057.9618870419945,
-  "vectors_per_second": 36.28858067326276,
+  "vectors": 33169,
+  "total": 33169,
+  "reused_vectors": 32907,
+  "encoded_vectors": 262,
+  "new_vectors_total": 262,
+  "elapsed_seconds": 10.799,
   "device": "mps",
-  "dataset": "/Users/amyas/HK1 26-27/DATN/VN_Hybrid_Assistant_Project/data/rag_dataset_final.jsonl"
+  "dataset": "/Users/amyas/HK1 26-27/DATN/artifacts/domain_refresh_2026-10-24/release/data/rag_dataset_final.jsonl",
+  "updated_at": "2026-10-24T16:59:16.477819+00:00"
 }

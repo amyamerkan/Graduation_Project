@@ -1,0 +1,35 @@
+{
+  "retrieved_on": "2026-10-24",
+  "sources": [
+    {
+      "name": "VietnamProvinces",
+      "url": "https://pypi.org/project/vietnam-provinces/2026.9.0/",
+      "version": "2026.9.0",
+      "type": "community_reference_catalogue",
+      "license": "GPL-3.0-or-later",
+      "independently_verified": false
+    },
+    {
+      "name": "Cơ sở dữ liệu ngành Du lịch",
+      "url": "https://csdl.vietnamtourism.gov.vn/",
+      "type": "official_tourism_directory",
+      "extraction_scope": "place name, verbatim source address and description; 186 retained destination records"
+    },
+    {
+      "name": "Cổng thông tin điện tử Chính phủ",
+      "url": "https://baochinhphu.vn/34-nghi-quyet-cua-ubtvqh-ve-sap-xep-cac-don-vi-hanh-chinh-cap-xa-102250618163209716.htm",
+      "type": "official_document_catalogue",
+      "extraction_scope": "37 document metadata pages; signed annexes not transcribed"
+    }
+  ],
+  "limitations": [
+    "Legacy administrative catalogue is a reference snapshot, not a complete legal timeline.",
+    "Do not treat community provenance or a citation as independent factual verification.",
+    "Tourism addresses may contain legacy locality names."
+  ],
+  "excluded_source": {
+    "url": "https://vietnam.travel/term-conditions",
+    "reason": "Website terms require permission for storing content; no content crawled from this source."
+  },
+  "dependency_archive_sha256": "b5f3540a98937d38b9bebcbdb792fa4f5b9712737d41b05c7254beb2308ebcd1"
+}

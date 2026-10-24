@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#173f35" />
+    <meta
+      name="description"
+      content="Trợ lý hỏi đáp về địa giới hành chính cũ–mới và du lịch Việt Nam, kèm minh chứng để đối chiếu."
+    />
+    <title>Tri Việt · Trợ lý tri thức Việt Nam</title>
+    <link rel="icon" href="/assets/mark.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="/assets/style.css" />
+    <script src="/assets/app.js" defer></script>
+  </head>
+  <body>
+    <button
+      id="shade"
+      class="shade"
+      aria-label="Đóng danh sách trò chuyện"
+      hidden
+    ></button>
+    <aside class="sidebar" id="sidebar" aria-label="Danh sách trò chuyện">
+      <a class="brand" href="/" aria-label="Tri Việt, trang chủ"
+        ><img src="/assets/mark.svg" alt="" width="38" height="38" /><span
+          >Tri Việt<small>TRỢ LÝ TRI THỨC VIỆT NAM</small></span
+        ></a
+      >
+      <button class="new-chat" id="new-chat">
+        <span aria-hidden="true">＋</span> Cuộc trò chuyện mới <kbd>⌘ K</kbd>
+      </button>
+      <div class="history-label">
+        CUỘC TRÒ CHUYỆN <span id="session-count">0</span>
+      </div>
+      <nav id="sessions" class="sessions" aria-label="Lịch sử trò chuyện"></nav>
+      <div class="sidebar-bottom">
+        <div class="scope-card">
+          <span class="scope-symbol" aria-hidden="true">✧</span
+          ><strong>Hiểu Việt Nam, từ những điều cụ thể.</strong>
+          <p>Tra cứu địa giới cũ–mới và khám phá các điểm đến Việt Nam.</p>
+          <button id="about" class="text-button">
+            Phạm vi dữ liệu <span aria-hidden="true">↗</span>
+          </button>
+        </div>
+        <div class="connection">
+          <span id="connection-dot" class="dot"></span
+          ><span id="connection-label">Đang kết nối…</span
+          ><button
+            id="reconnect"
+            aria-label="Kiểm tra lại kết nối"
+            title="Kiểm tra lại kết nối"
+          >
+            ↻
+          </button>
+        </div>
+      </div>
+    </aside>
+    <main class="workspace">
+      <header class="topbar">
+        <div class="header-left">
+          <button
+            id="menu"
+            class="icon-button mobile-only"
+            aria-label="Mở danh sách trò chuyện"
+            aria-expanded="false"
+          >
+            ☰</button
+          ><span
+            >Không gian hỏi đáp <span class="header-divider">/</span>
+            <strong>Tri Việt</strong></span
+          >
+        </div>
+        <button
+          id="clear-chat"
+          class="icon-button"
+          aria-label="Xóa cuộc trò chuyện hiện tại"
+          title="Xóa cuộc trò chuyện"
+        >
+          ⌫
+        </button>
+      </header>
+      <div class="conversation-scroll" id="conversation-scroll">
+        <section id="welcome" class="welcome">
+          <div class="eyebrow">
+            <span></span> TRI THỨC CÓ NGUỒN, CÂU TRẢ LỜI CÓ CĂN CỨ
+          </div>
+          <h1>Mỗi câu hỏi,<br />một góc nhìn <em>Việt Nam.</em></h1>
+          <p class="intro">
+            Từ một địa danh vừa thay đổi đến trải nghiệm tại một điểm đến.<br
+              class="desktop-only"
+            />
+            Bạn muốn tìm hiểu điều gì hôm nay?
+          </p>
+          <div class="topic-tags">
+            <span>Địa giới hành chính</span><span>Điểm đến &amp; trải nghiệm</span
+            ><span>Du lịch Việt Nam</span>
+          </div>
+          <div class="suggestions" aria-label="Câu hỏi gợi ý">
+            <button data-prompt="Đơn vị có mã 00070 thuộc tỉnh thành nào?">
+              <span class="card-icon">⌖</span
+              ><span
+                ><small>ĐỊA GIỚI HÀNH CHÍNH</small
+                ><strong>Một mã đơn vị, một địa danh</strong>
+                <p>Tra cứu đơn vị có mã 00070</p></span
+              ><span class="arrow">↗</span>
+            </button>
+            <button data-prompt="Giới thiệu các hoạt động tham quan tại Hồ Hoàn Kiếm.">
+              <span class="card-icon">❋</span
+              ><span
+                ><small>DI SẢN &amp; VĂN HÓA</small
+                ><strong>Dạo quanh Hồ Hoàn Kiếm</strong>
+                <p>Khám phá điểm đến và trải nghiệm tham quan</p></span
+              ><span class="arrow">↗</span>
+            </button>
+            <button
+              data-prompt="Ngày 01/07/2025, đơn vị mã 00070 thuộc thành phố Hà Nội không?"
+            >
+              <span class="card-icon">◷</span
+              ><span
+                ><small>TRA CỨU THEO THỜI ĐIỂM</small
+                ><strong>Địa giới ở một mốc thời gian</strong>
+                <p>Đối chiếu mã, địa phương và ngày hiệu lực</p></span
+              ><span class="arrow">↗</span>
+            </button>
+            <button
+              data-prompt="Di sản nào gần Hội An nhất trong bán kính 5 km?"
+            >
+              <span class="card-icon">◇</span
+              ><span
+                ><small>KHÁM PHÁ PHẠM VI DỮ LIỆU</small
+                ><strong>Điều kiện không gian phức tạp</strong>
+                <p>Kiểm tra khả năng tra cứu theo bán kính</p></span
+              ><span class="arrow">↗</span>
+            </button>
+          </div>
+        </section>
+        <section
+          class="messages"
+          id="messages"
+          aria-label="Nội dung trò chuyện"
+          aria-live="polite"
+          aria-relevant="additions"
+        ></section>
+      </div>
+      <div class="composer-area">
+        <div id="notice" class="notice" role="status" hidden></div>
+        <form id="chat-form" class="composer">
+          <label class="sr-only" for="question">Câu hỏi của bạn</label
+          ><textarea
+            id="question"
+            rows="1"
+            maxlength="2000"
+            placeholder="Hỏi về địa giới cũ–mới hoặc một điểm đến Việt Nam…"
+            aria-describedby="input-help"
+          ></textarea>
+          <div class="composer-row">
+            <span class="composer-caption"
+              ><span aria-hidden="true">✧</span> Hỏi đáp cùng Tri Việt</span
+            >
+            <div class="composer-actions">
+              <span id="character-count">0 / 2000</span
+              ><button id="stop" class="stop-button" type="button" hidden>
+                Dừng chờ</button
+              ><button
+                id="send"
+                class="send-button"
+                type="submit"
+                aria-label="Gửi câu hỏi"
+                disabled
+              >
+                ↑
+              </button>
+            </div>
+          </div>
+        </form>
+        <p id="input-help" class="input-help">
+          <span>Câu trả lời đi kèm minh chứng để bạn đối chiếu.</span
+          ><span><kbd>Enter</kbd> gửi · <kbd>Shift Enter</kbd> xuống dòng</span>
+        </p>
+      </div>
+    </main>
+    <dialog id="scope-dialog">
+      <button
+        class="dialog-close icon-button"
+        id="close-about"
+        aria-label="Đóng thông tin"
+      >
+        ×</button
+      ><span class="eyebrow">VỀ TRI VIỆT</span>
+      <h2>Hỏi rõ. Tra cứu có căn cứ.</h2>
+      <p>
+        Tri Việt kết hợp đồ thị tri thức, truy xuất văn bản và mô hình ngôn ngữ
+        để trả lời về địa giới hành chính và du lịch Việt Nam.
+      </p>
+      <ul>
+        <li>Tra mã đơn vị và tỉnh/thành trực thuộc.</li>
+        <li>
+          Đối chiếu mã đơn vị với địa phương tại một ngày cụ thể theo mốc hiệu
+          lực được ghi trong KG.
+        </li>
+        <li>
+          Truy xuất và trích dẫn thông tin tham quan, điểm đến và trải nghiệm du lịch.
+        </li>
+      </ul>
+      <p class="scope-limit">
+        Bản dữ liệu địa giới lưu riêng các snapshot 30/06/2025, 01/07/2025 và 24/10/2026. Các điều kiện
+        khoảng cách, bán kính hoặc tọa độ chưa được hỗ trợ. Kết quả khớp nguồn
+        chưa phải xác nhận độc lập rằng nguồn luôn đúng hoặc đã cập nhật mới
+        nhất.
+      </p>
+    </dialog>
+  </body>
+</html>

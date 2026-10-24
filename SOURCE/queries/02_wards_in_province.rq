@@ -1,0 +1,11 @@
+PREFIX vn: <https://w3id.org/vn-assistant/ontology#>
+SELECT DISTINCT ?ward ?wardName ?code WHERE {
+  ?ward a vn:Ward ; vn:name ?wardName ; vn:locatedIn ?province .
+  OPTIONAL { ?ward vn:isCurrentSnapshot ?current }
+  FILTER(!BOUND(?current) || ?current = true)
+  ?province a vn:Province ; vn:name ?provinceName .
+  FILTER(CONTAINS(LCASE(STR(?provinceName)), LCASE("{{province}}")))
+  OPTIONAL { ?ward vn:code ?code }
+}
+ORDER BY ?wardName
+

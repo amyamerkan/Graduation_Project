@@ -1,0 +1,27 @@
+question,route,domain
+Mã 00070 là đơn vị nào?,kg,administration
+Đơn vị mã 22 thuộc danh mục ngày 01/07/2025 tên gì?,kg,administration
+Phường Hoàn Kiếm thuộc tỉnh thành nào?,kg,administration
+Tỉnh Bình Dương sáp nhập vào đâu?,kg,administration
+Tỉnh Bà Rịa - Vũng Tàu sắp xếp như thế nào?,hybrid,administration
+Danh sách các phường xã ở tỉnh An Giang.,kg,administration
+Cho mình thông tin về bảng danh mục đơn vị hành chính Việt Nam.,rag,administration
+Giới thiệu cách tổ chức danh mục địa giới cũ và mới.,rag,administration
+Mô tả dữ liệu đơn vị hành chính trong danh mục cũ.,rag,administration
+Mã 00070 ở ngày 30/06/2025 thuộc tỉnh nào và mô tả dữ liệu.,hybrid,administration
+Tỉnh Hà Giang sáp nhập vào đâu và giải thích thông tin liên quan.,kg,administration
+Mã số 79 là đơn vị nào?,kg,administration
+Hồ Hoàn Kiếm ở đâu?,kg,tourism
+Văn Miếu - Quốc Tử Giám nằm ở đâu?,kg,tourism
+Địa chỉ của Vườn thú Hà Nội là gì?,kg,tourism
+Rừng ngập mặn Rú Chá thuộc tỉnh nào?,kg,tourism
+Các điểm du lịch nào ở tỉnh Khánh Hòa?,kg,tourism
+Danh sách điểm tham quan tại Hà Nội.,kg,tourism
+Giới thiệu hoạt động tham quan tại Hồ Hoàn Kiếm.,rag,tourism
+Mô tả cảnh quan của Rừng ngập mặn Rú Chá.,rag,tourism
+Du lịch ở Vườn thú Hà Nội có gì đặc sắc?,rag,tourism
+Gợi ý trải nghiệm tham quan Văn Miếu - Quốc Tử Giám.,rag,tourism
+Hồ Hoàn Kiếm ở đâu và có gì đáng chú ý?,hybrid,tourism
+Văn Miếu - Quốc Tử Giám thuộc tỉnh nào và giới thiệu về địa điểm này.,hybrid,tourism
+Rừng ngập mặn Rú Chá nằm ở đâu và mô tả cảnh quan.,hybrid,tourism
+Vườn thú Hà Nội ở đâu và tham quan như thế nào?,hybrid,tourism

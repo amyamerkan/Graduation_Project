@@ -1,0 +1,353 @@
+{
+  "created_at": "2026-10-24T16:52:46.026567+00:00",
+  "current_provinces": [
+    {
+      "code": "01",
+      "name": "Thành phố Hà Nội",
+      "division_type": "Thành phố Trung ương",
+      "legal_reference": ""
+    },
+    {
+      "code": "04",
+      "name": "Tỉnh Cao Bằng",
+      "division_type": "Tỉnh",
+      "legal_reference": ""
+    },
+    {
+      "code": "08",
+      "name": "Tỉnh Tuyên Quang",
+      "division_type": "Tỉnh",
+      "legal_reference": "202/2025/QH15 - 12/06/2025"
+    },
+    {
+      "code": "11",
+      "name": "Tỉnh Điện Biên",
+      "division_type": "Tỉnh",
+      "legal_reference": "202/2025/QH15 - 12/06/2025"
+    },
+    {
+      "code": "12",
+      "name": "Tỉnh Lai Châu",
+      "division_type": "Tỉnh",
+      "legal_reference": "202/2025/QH15 - 12/06/2025"
+    },
+    {
+      "code": "14",
+      "name": "Tỉnh Sơn La",
+      "division_type": "Tỉnh",
+      "legal_reference": "202/2025/QH15 - 12/06/2025"
+    },
+    {
+      "code": "15",
+      "name": "Tỉnh Lào Cai",
+      "division_type": "Tỉnh",
+      "legal_reference": ""
+    },
+    {
+      "code": "19",
+      "name": "Tỉnh Thái Nguyên",
+      "division_type": "Tỉnh",
+      "legal_reference": "202/2025/QH15 - 12/06/2025"
+    },
+    {
+      "code": "20",
+      "name": "Tỉnh Lạng Sơn",
+      "division_type": "Tỉnh",
+      "legal_reference": "202/2025/QH15 - 12/06/2025"
+    },
+    {
+      "code": "22",
+      "name": "Thành phố Quảng Ninh",
+      "division_type": "Thành phố Trung ương",
+      "legal_reference": "36/2026/QH16 - 24/08/2026"
+    },
+    {
+      "code": "24",
+      "name": "Thành phố Bắc Ninh",
+      "division_type": "Thành phố Trung ương",
+      "legal_reference": "39/2026/QH16 - 24/08/2026"
+    },
+    {
+      "code": "25",
+      "name": "Tỉnh Phú Thọ",
+      "division_type": "Tỉnh",
+      "legal_reference": "202/2025/QH15 - 12/06/2025"
+    },
+    {
+      "code": "31",
+      "name": "Thành phố Hải Phòng",
+      "division_type": "Thành phố Trung ương",
+      "legal_reference": "202/2025/QH15 - 12/06/2025"
+    },
+    {
+      "code": "33",
+      "name": "Tỉnh Hưng Yên",
+      "division_type": "Tỉnh",
+      "legal_reference": "202/2025/QH15 - 12/06/2025"
+    },
+    {
+      "code": "37",
+      "name": "Tỉnh Ninh Bình",
+      "division_type": "Tỉnh",
+      "legal_reference": "202/2025/QH15 - 12/06/2025"
+    },
+    {
+      "code": "38",
+      "name": "Tỉnh Thanh Hóa",
+      "division_type": "Tỉnh",
+      "legal_reference": "202/2025/QH15 - 12/06/2025"
+    },
+    {
+      "code": "40",
+      "name": "Tỉnh Nghệ An",
+      "division_type": "Tỉnh",
+      "legal_reference": "202/2025/QH15 - 12/06/2025"
+    },
+    {
+      "code": "42",
+      "name": "Tỉnh Hà Tĩnh",
+      "division_type": "Tỉnh",
+      "legal_reference": "202/2025/QH15 - 12/06/2025"
+    },
+    {
+      "code": "44",
+      "name": "Tỉnh Quảng Trị",
+      "division_type": "Tỉnh",
+      "legal_reference": ""
+    },
+    {
+      "code": "46",
+      "name": "Thành phố Huế",
+      "division_type": "Thành phố Trung ương",
+      "legal_reference": "202/2025/QH15 - 12/06/2025"
+    },
+    {
+      "code": "48",
+      "name": "Thành phố Đà Nẵng",
+      "division_type": "Thành phố Trung ương",
+      "legal_reference": "202/2025/QH15 - 12/06/2025"
+    },
+    {
+      "code": "51",
+      "name": "Tỉnh Quảng Ngãi",
+      "division_type": "Tỉnh",
+      "legal_reference": "202/2025/QH15 - 12/06/2025"
+    },
+    {
+      "code": "52",
+      "name": "Tỉnh Gia Lai",
+      "division_type": "Tỉnh",
+      "legal_reference": ""
+    },
+    {
+      "code": "56",
+      "name": "Tỉnh Khánh Hòa",
+      "division_type": "Tỉnh",
+      "legal_reference": "202/2025/QH15 - 12/06/2025"
+    },
+    {
+      "code": "66",
+      "name": "Tỉnh Đắk Lắk",
+      "division_type": "Tỉnh",
+      "legal_reference": "202/2025/QH15 - 12/06/2025"
+    },
+    {
+      "code": "68",
+      "name": "Tỉnh Lâm Đồng",
+      "division_type": "Tỉnh",
+      "legal_reference": "202/2025/QH15 - 12/06/2025"
+    },
+    {
+      "code": "75",
+      "name": "Thành phố Đồng Nai",
+      "division_type": "Thành phố Trung ương",
+      "legal_reference": "30/2026/QH16 - 24/04/2026"
+    },
+    {
+      "code": "79",
+      "name": "Thành phố Hồ Chí Minh",
+      "division_type": "Thành phố Trung ương",
+      "legal_reference": "202/2025/QH15 - 12/06/2025"
+    },
+    {
+      "code": "80",
+      "name": "Tỉnh Tây Ninh",
+      "division_type": "Tỉnh",
+      "legal_reference": ""
+    },
+    {
+      "code": "82",
+      "name": "Tỉnh Đồng Tháp",
+      "division_type": "Tỉnh",
+      "legal_reference": ""
+    },
+    {
+      "code": "86",
+      "name": "Tỉnh Vĩnh Long",
+      "division_type": "Tỉnh",
+      "legal_reference": "202/2025/QH15 - 12/06/2025"
+    },
+    {
+      "code": "91",
+      "name": "Tỉnh An Giang",
+      "division_type": "Tỉnh",
+      "legal_reference": ""
+    },
+    {
+      "code": "92",
+      "name": "Thành phố Cần Thơ",
+      "division_type": "Thành phố Trung ương",
+      "legal_reference": "202/2025/QH15 - 12/06/2025"
+    },
+    {
+      "code": "96",
+      "name": "Tỉnh Cà Mau",
+      "division_type": "Tỉnh",
+      "legal_reference": "202/2025/QH15 - 12/06/2025"
+    }
+  ],
+  "baseline_provinces": [
+    {
+      "code": "01",
+      "name": "Thành phố Hà Nội"
+    },
+    {
+      "code": "04",
+      "name": "Tỉnh Cao Bằng"
+    },
+    {
+      "code": "08",
+      "name": "Tỉnh Tuyên Quang"
+    },
+    {
+      "code": "11",
+      "name": "Tỉnh Điện Biên"
+    },
+    {
+      "code": "12",
+      "name": "Tỉnh Lai Châu"
+    },
+    {
+      "code": "14",
+      "name": "Tỉnh Sơn La"
+    },
+    {
+      "code": "15",
+      "name": "Tỉnh Lào Cai"
+    },
+    {
+      "code": "19",
+      "name": "Tỉnh Thái Nguyên"
+    },
+    {
+      "code": "20",
+      "name": "Tỉnh Lạng Sơn"
+    },
+    {
+      "code": "22",
+      "name": "Tỉnh Quảng Ninh"
+    },
+    {
+      "code": "24",
+      "name": "Tỉnh Bắc Ninh"
+    },
+    {
+      "code": "25",
+      "name": "Tỉnh Phú Thọ"
+    },
+    {
+      "code": "31",
+      "name": "Thành phố Hải Phòng"
+    },
+    {
+      "code": "33",
+      "name": "Tỉnh Hưng Yên"
+    },
+    {
+      "code": "37",
+      "name": "Tỉnh Ninh Bình"
+    },
+    {
+      "code": "38",
+      "name": "Tỉnh Thanh Hóa"
+    },
+    {
+      "code": "40",
+      "name": "Tỉnh Nghệ An"
+    },
+    {
+      "code": "42",
+      "name": "Tỉnh Hà Tĩnh"
+    },
+    {
+      "code": "44",
+      "name": "Tỉnh Quảng Trị"
+    },
+    {
+      "code": "46",
+      "name": "Thành phố Huế"
+    },
+    {
+      "code": "48",
+      "name": "Thành phố Đà Nẵng"
+    },
+    {
+      "code": "51",
+      "name": "Tỉnh Quảng Ngãi"
+    },
+    {
+      "code": "52",
+      "name": "Tỉnh Gia Lai"
+    },
+    {
+      "code": "56",
+      "name": "Tỉnh Khánh Hòa"
+    },
+    {
+      "code": "66",
+      "name": "Tỉnh Đắk Lắk"
+    },
+    {
+      "code": "68",
+      "name": "Tỉnh Lâm Đồng"
+    },
+    {
+      "code": "75",
+      "name": "Tỉnh Đồng Nai"
+    },
+    {
+      "code": "79",
+      "name": "Thành phố Hồ Chí Minh"
+    },
+    {
+      "code": "80",
+      "name": "Tỉnh Tây Ninh"
+    },
+    {
+      "code": "82",
+      "name": "Tỉnh Đồng Tháp"
+    },
+    {
+      "code": "86",
+      "name": "Tỉnh Vĩnh Long"
+    },
+    {
+      "code": "91",
+      "name": "Tỉnh An Giang"
+    },
+    {
+      "code": "92",
+      "name": "Thành phố Cần Thơ"
+    },
+    {
+      "code": "96",
+      "name": "Tỉnh Cà Mau"
+    }
+  ],
+  "comparison_rows": 3321,
+  "observed_date": "24/10/2026",
+  "reference_date": "31/10/2025",
+  "current_source": "https://danhmuchanhchinh.nso.gov.vn/",
+  "baseline_source": "https://baochinhphu.vn/bang-danh-muc-va-ma-so-cua-34-tinh-thanh-moi-3321-don-vi-hanh-chinh-cap-xa-moi-102250704153652947.htm",
+  "comparison_source": "https://danhmuchanhchinh.nso.gov.vn/Doi_Chieu_Moi.aspx"
+}

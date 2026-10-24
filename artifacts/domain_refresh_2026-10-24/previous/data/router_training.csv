@@ -1,0 +1,1903 @@
+question,route,domain
+Mã 01 thuộc tỉnh nào?,kg,administration
+Thành phố Hà Nội có mã hành chính gì?,kg,administration
+Tra cứu tên đơn vị có mã 01.,kg,administration
+Giới thiệu danh mục hành chính của Thành phố Hà Nội.,rag,administration
+Mô tả thông tin đơn vị Thành phố Hà Nội trong dữ liệu.,rag,administration
+Thành phố Hà Nội thuộc tỉnh nào và giới thiệu thông tin đơn vị.,hybrid,administration
+Mã 04 thuộc tỉnh nào?,kg,administration
+Tỉnh Cao Bằng có mã hành chính gì?,kg,administration
+Tra cứu tên đơn vị có mã 04.,kg,administration
+Giới thiệu danh mục hành chính của Tỉnh Cao Bằng.,rag,administration
+Mô tả thông tin đơn vị Tỉnh Cao Bằng trong dữ liệu.,rag,administration
+Tỉnh Cao Bằng thuộc tỉnh nào và giới thiệu thông tin đơn vị.,hybrid,administration
+Mã 08 thuộc tỉnh nào?,kg,administration
+Tỉnh Tuyên Quang có mã hành chính gì?,kg,administration
+Tra cứu tên đơn vị có mã 08.,kg,administration
+Giới thiệu danh mục hành chính của Tỉnh Tuyên Quang.,rag,administration
+Mô tả thông tin đơn vị Tỉnh Tuyên Quang trong dữ liệu.,rag,administration
+Tỉnh Tuyên Quang thuộc tỉnh nào và giới thiệu thông tin đơn vị.,hybrid,administration
+Mã 11 thuộc tỉnh nào?,kg,administration
+Tỉnh Điện Biên có mã hành chính gì?,kg,administration
+Tra cứu tên đơn vị có mã 11.,kg,administration
+Giới thiệu danh mục hành chính của Tỉnh Điện Biên.,rag,administration
+Mô tả thông tin đơn vị Tỉnh Điện Biên trong dữ liệu.,rag,administration
+Tỉnh Điện Biên thuộc tỉnh nào và giới thiệu thông tin đơn vị.,hybrid,administration
+Mã 12 thuộc tỉnh nào?,kg,administration
+Tỉnh Lai Châu có mã hành chính gì?,kg,administration
+Tra cứu tên đơn vị có mã 12.,kg,administration
+Giới thiệu danh mục hành chính của Tỉnh Lai Châu.,rag,administration
+Mô tả thông tin đơn vị Tỉnh Lai Châu trong dữ liệu.,rag,administration
+Tỉnh Lai Châu thuộc tỉnh nào và giới thiệu thông tin đơn vị.,hybrid,administration
+Mã 14 thuộc tỉnh nào?,kg,administration
+Tỉnh Sơn La có mã hành chính gì?,kg,administration
+Tra cứu tên đơn vị có mã 14.,kg,administration
+Giới thiệu danh mục hành chính của Tỉnh Sơn La.,rag,administration
+Mô tả thông tin đơn vị Tỉnh Sơn La trong dữ liệu.,rag,administration
+Tỉnh Sơn La thuộc tỉnh nào và giới thiệu thông tin đơn vị.,hybrid,administration
+Mã 15 thuộc tỉnh nào?,kg,administration
+Tỉnh Lào Cai có mã hành chính gì?,kg,administration
+Tra cứu tên đơn vị có mã 15.,kg,administration
+Giới thiệu danh mục hành chính của Tỉnh Lào Cai.,rag,administration
+Mô tả thông tin đơn vị Tỉnh Lào Cai trong dữ liệu.,rag,administration
+Tỉnh Lào Cai thuộc tỉnh nào và giới thiệu thông tin đơn vị.,hybrid,administration
+Mã 19 thuộc tỉnh nào?,kg,administration
+Tỉnh Thái Nguyên có mã hành chính gì?,kg,administration
+Tra cứu tên đơn vị có mã 19.,kg,administration
+Giới thiệu danh mục hành chính của Tỉnh Thái Nguyên.,rag,administration
+Mô tả thông tin đơn vị Tỉnh Thái Nguyên trong dữ liệu.,rag,administration
+Tỉnh Thái Nguyên thuộc tỉnh nào và giới thiệu thông tin đơn vị.,hybrid,administration
+Mã 20 thuộc tỉnh nào?,kg,administration
+Tỉnh Lạng Sơn có mã hành chính gì?,kg,administration
+Tra cứu tên đơn vị có mã 20.,kg,administration
+Giới thiệu danh mục hành chính của Tỉnh Lạng Sơn.,rag,administration
+Mô tả thông tin đơn vị Tỉnh Lạng Sơn trong dữ liệu.,rag,administration
+Tỉnh Lạng Sơn thuộc tỉnh nào và giới thiệu thông tin đơn vị.,hybrid,administration
+Mã 22 thuộc tỉnh nào?,kg,administration
+Thành phố Quảng Ninh có mã hành chính gì?,kg,administration
+Tra cứu tên đơn vị có mã 22.,kg,administration
+Giới thiệu danh mục hành chính của Thành phố Quảng Ninh.,rag,administration
+Mô tả thông tin đơn vị Thành phố Quảng Ninh trong dữ liệu.,rag,administration
+Thành phố Quảng Ninh thuộc tỉnh nào và giới thiệu thông tin đơn vị.,hybrid,administration
+Mã 24 thuộc tỉnh nào?,kg,administration
+Thành phố Bắc Ninh có mã hành chính gì?,kg,administration
+Tra cứu tên đơn vị có mã 24.,kg,administration
+Giới thiệu danh mục hành chính của Thành phố Bắc Ninh.,rag,administration
+Mô tả thông tin đơn vị Thành phố Bắc Ninh trong dữ liệu.,rag,administration
+Thành phố Bắc Ninh thuộc tỉnh nào và giới thiệu thông tin đơn vị.,hybrid,administration
+Mã 25 thuộc tỉnh nào?,kg,administration
+Tỉnh Phú Thọ có mã hành chính gì?,kg,administration
+Tra cứu tên đơn vị có mã 25.,kg,administration
+Giới thiệu danh mục hành chính của Tỉnh Phú Thọ.,rag,administration
+Mô tả thông tin đơn vị Tỉnh Phú Thọ trong dữ liệu.,rag,administration
+Tỉnh Phú Thọ thuộc tỉnh nào và giới thiệu thông tin đơn vị.,hybrid,administration
+Mã 31 thuộc tỉnh nào?,kg,administration
+Thành phố Hải Phòng có mã hành chính gì?,kg,administration
+Tra cứu tên đơn vị có mã 31.,kg,administration
+Giới thiệu danh mục hành chính của Thành phố Hải Phòng.,rag,administration
+Mô tả thông tin đơn vị Thành phố Hải Phòng trong dữ liệu.,rag,administration
+Thành phố Hải Phòng thuộc tỉnh nào và giới thiệu thông tin đơn vị.,hybrid,administration
+Mã 33 thuộc tỉnh nào?,kg,administration
+Tỉnh Hưng Yên có mã hành chính gì?,kg,administration
+Tra cứu tên đơn vị có mã 33.,kg,administration
+Giới thiệu danh mục hành chính của Tỉnh Hưng Yên.,rag,administration
+Mô tả thông tin đơn vị Tỉnh Hưng Yên trong dữ liệu.,rag,administration
+Tỉnh Hưng Yên thuộc tỉnh nào và giới thiệu thông tin đơn vị.,hybrid,administration
+Mã 37 thuộc tỉnh nào?,kg,administration
+Tỉnh Ninh Bình có mã hành chính gì?,kg,administration
+Tra cứu tên đơn vị có mã 37.,kg,administration
+Giới thiệu danh mục hành chính của Tỉnh Ninh Bình.,rag,administration
+Mô tả thông tin đơn vị Tỉnh Ninh Bình trong dữ liệu.,rag,administration
+Tỉnh Ninh Bình thuộc tỉnh nào và giới thiệu thông tin đơn vị.,hybrid,administration
+Mã 38 thuộc tỉnh nào?,kg,administration
+Tỉnh Thanh Hóa có mã hành chính gì?,kg,administration
+Tra cứu tên đơn vị có mã 38.,kg,administration
+Giới thiệu danh mục hành chính của Tỉnh Thanh Hóa.,rag,administration
+Mô tả thông tin đơn vị Tỉnh Thanh Hóa trong dữ liệu.,rag,administration
+Tỉnh Thanh Hóa thuộc tỉnh nào và giới thiệu thông tin đơn vị.,hybrid,administration
+Mã 40 thuộc tỉnh nào?,kg,administration
+Tỉnh Nghệ An có mã hành chính gì?,kg,administration
+Tra cứu tên đơn vị có mã 40.,kg,administration
+Giới thiệu danh mục hành chính của Tỉnh Nghệ An.,rag,administration
+Mô tả thông tin đơn vị Tỉnh Nghệ An trong dữ liệu.,rag,administration
+Tỉnh Nghệ An thuộc tỉnh nào và giới thiệu thông tin đơn vị.,hybrid,administration
+Mã 42 thuộc tỉnh nào?,kg,administration
+Tỉnh Hà Tĩnh có mã hành chính gì?,kg,administration
+Tra cứu tên đơn vị có mã 42.,kg,administration
+Giới thiệu danh mục hành chính của Tỉnh Hà Tĩnh.,rag,administration
+Mô tả thông tin đơn vị Tỉnh Hà Tĩnh trong dữ liệu.,rag,administration
+Tỉnh Hà Tĩnh thuộc tỉnh nào và giới thiệu thông tin đơn vị.,hybrid,administration
+Mã 44 thuộc tỉnh nào?,kg,administration
+Tỉnh Quảng Trị có mã hành chính gì?,kg,administration
+Tra cứu tên đơn vị có mã 44.,kg,administration
+Giới thiệu danh mục hành chính của Tỉnh Quảng Trị.,rag,administration
+Mô tả thông tin đơn vị Tỉnh Quảng Trị trong dữ liệu.,rag,administration
+Tỉnh Quảng Trị thuộc tỉnh nào và giới thiệu thông tin đơn vị.,hybrid,administration
+Mã 46 thuộc tỉnh nào?,kg,administration
+Thành phố Huế có mã hành chính gì?,kg,administration
+Tra cứu tên đơn vị có mã 46.,kg,administration
+Giới thiệu danh mục hành chính của Thành phố Huế.,rag,administration
+Mô tả thông tin đơn vị Thành phố Huế trong dữ liệu.,rag,administration
+Thành phố Huế thuộc tỉnh nào và giới thiệu thông tin đơn vị.,hybrid,administration
+Mã 48 thuộc tỉnh nào?,kg,administration
+Thành phố Đà Nẵng có mã hành chính gì?,kg,administration
+Tra cứu tên đơn vị có mã 48.,kg,administration
+Giới thiệu danh mục hành chính của Thành phố Đà Nẵng.,rag,administration
+Mô tả thông tin đơn vị Thành phố Đà Nẵng trong dữ liệu.,rag,administration
+Thành phố Đà Nẵng thuộc tỉnh nào và giới thiệu thông tin đơn vị.,hybrid,administration
+Mã 51 thuộc tỉnh nào?,kg,administration
+Tỉnh Quảng Ngãi có mã hành chính gì?,kg,administration
+Tra cứu tên đơn vị có mã 51.,kg,administration
+Giới thiệu danh mục hành chính của Tỉnh Quảng Ngãi.,rag,administration
+Mô tả thông tin đơn vị Tỉnh Quảng Ngãi trong dữ liệu.,rag,administration
+Tỉnh Quảng Ngãi thuộc tỉnh nào và giới thiệu thông tin đơn vị.,hybrid,administration
+Mã 52 thuộc tỉnh nào?,kg,administration
+Tỉnh Gia Lai có mã hành chính gì?,kg,administration
+Tra cứu tên đơn vị có mã 52.,kg,administration
+Giới thiệu danh mục hành chính của Tỉnh Gia Lai.,rag,administration
+Mô tả thông tin đơn vị Tỉnh Gia Lai trong dữ liệu.,rag,administration
+Tỉnh Gia Lai thuộc tỉnh nào và giới thiệu thông tin đơn vị.,hybrid,administration
+Mã 56 thuộc tỉnh nào?,kg,administration
+Tỉnh Khánh Hòa có mã hành chính gì?,kg,administration
+Tra cứu tên đơn vị có mã 56.,kg,administration
+Giới thiệu danh mục hành chính của Tỉnh Khánh Hòa.,rag,administration
+Mô tả thông tin đơn vị Tỉnh Khánh Hòa trong dữ liệu.,rag,administration
+Tỉnh Khánh Hòa thuộc tỉnh nào và giới thiệu thông tin đơn vị.,hybrid,administration
+Mã 66 thuộc tỉnh nào?,kg,administration
+Tỉnh Đắk Lắk có mã hành chính gì?,kg,administration
+Tra cứu tên đơn vị có mã 66.,kg,administration
+Giới thiệu danh mục hành chính của Tỉnh Đắk Lắk.,rag,administration
+Mô tả thông tin đơn vị Tỉnh Đắk Lắk trong dữ liệu.,rag,administration
+Tỉnh Đắk Lắk thuộc tỉnh nào và giới thiệu thông tin đơn vị.,hybrid,administration
+Mã 68 thuộc tỉnh nào?,kg,administration
+Tỉnh Lâm Đồng có mã hành chính gì?,kg,administration
+Tra cứu tên đơn vị có mã 68.,kg,administration
+Giới thiệu danh mục hành chính của Tỉnh Lâm Đồng.,rag,administration
+Mô tả thông tin đơn vị Tỉnh Lâm Đồng trong dữ liệu.,rag,administration
+Tỉnh Lâm Đồng thuộc tỉnh nào và giới thiệu thông tin đơn vị.,hybrid,administration
+Mã 75 thuộc tỉnh nào?,kg,administration
+Thành phố Đồng Nai có mã hành chính gì?,kg,administration
+Tra cứu tên đơn vị có mã 75.,kg,administration
+Giới thiệu danh mục hành chính của Thành phố Đồng Nai.,rag,administration
+Mô tả thông tin đơn vị Thành phố Đồng Nai trong dữ liệu.,rag,administration
+Thành phố Đồng Nai thuộc tỉnh nào và giới thiệu thông tin đơn vị.,hybrid,administration
+Mã 79 thuộc tỉnh nào?,kg,administration
+Thành phố Hồ Chí Minh có mã hành chính gì?,kg,administration
+Tra cứu tên đơn vị có mã 79.,kg,administration
+Giới thiệu danh mục hành chính của Thành phố Hồ Chí Minh.,rag,administration
+Mô tả thông tin đơn vị Thành phố Hồ Chí Minh trong dữ liệu.,rag,administration
+Thành phố Hồ Chí Minh thuộc tỉnh nào và giới thiệu thông tin đơn vị.,hybrid,administration
+Mã 80 thuộc tỉnh nào?,kg,administration
+Tỉnh Tây Ninh có mã hành chính gì?,kg,administration
+Tra cứu tên đơn vị có mã 80.,kg,administration
+Giới thiệu danh mục hành chính của Tỉnh Tây Ninh.,rag,administration
+Mô tả thông tin đơn vị Tỉnh Tây Ninh trong dữ liệu.,rag,administration
+Tỉnh Tây Ninh thuộc tỉnh nào và giới thiệu thông tin đơn vị.,hybrid,administration
+Mã 82 thuộc tỉnh nào?,kg,administration
+Tỉnh Đồng Tháp có mã hành chính gì?,kg,administration
+Tra cứu tên đơn vị có mã 82.,kg,administration
+Giới thiệu danh mục hành chính của Tỉnh Đồng Tháp.,rag,administration
+Mô tả thông tin đơn vị Tỉnh Đồng Tháp trong dữ liệu.,rag,administration
+Tỉnh Đồng Tháp thuộc tỉnh nào và giới thiệu thông tin đơn vị.,hybrid,administration
+Mã 86 thuộc tỉnh nào?,kg,administration
+Tỉnh Vĩnh Long có mã hành chính gì?,kg,administration
+Tra cứu tên đơn vị có mã 86.,kg,administration
+Giới thiệu danh mục hành chính của Tỉnh Vĩnh Long.,rag,administration
+Mô tả thông tin đơn vị Tỉnh Vĩnh Long trong dữ liệu.,rag,administration
+Tỉnh Vĩnh Long thuộc tỉnh nào và giới thiệu thông tin đơn vị.,hybrid,administration
+Mã 91 thuộc tỉnh nào?,kg,administration
+Tỉnh An Giang có mã hành chính gì?,kg,administration
+Tra cứu tên đơn vị có mã 91.,kg,administration
+Giới thiệu danh mục hành chính của Tỉnh An Giang.,rag,administration
+Mô tả thông tin đơn vị Tỉnh An Giang trong dữ liệu.,rag,administration
+Tỉnh An Giang thuộc tỉnh nào và giới thiệu thông tin đơn vị.,hybrid,administration
+Mã 92 thuộc tỉnh nào?,kg,administration
+Thành phố Cần Thơ có mã hành chính gì?,kg,administration
+Tra cứu tên đơn vị có mã 92.,kg,administration
+Giới thiệu danh mục hành chính của Thành phố Cần Thơ.,rag,administration
+Mô tả thông tin đơn vị Thành phố Cần Thơ trong dữ liệu.,rag,administration
+Thành phố Cần Thơ thuộc tỉnh nào và giới thiệu thông tin đơn vị.,hybrid,administration
+Mã 96 thuộc tỉnh nào?,kg,administration
+Tỉnh Cà Mau có mã hành chính gì?,kg,administration
+Tra cứu tên đơn vị có mã 96.,kg,administration
+Giới thiệu danh mục hành chính của Tỉnh Cà Mau.,rag,administration
+Mô tả thông tin đơn vị Tỉnh Cà Mau trong dữ liệu.,rag,administration
+Tỉnh Cà Mau thuộc tỉnh nào và giới thiệu thông tin đơn vị.,hybrid,administration
+Mã 00235 thuộc tỉnh nào?,kg,administration
+Phường Đống Đa có mã hành chính gì?,kg,administration
+Tra cứu tên đơn vị có mã 00235.,kg,administration
+Giới thiệu danh mục hành chính của Phường Đống Đa.,rag,administration
+Mô tả thông tin đơn vị Phường Đống Đa trong dữ liệu.,rag,administration
+Phường Đống Đa thuộc tỉnh nào và giới thiệu thông tin đơn vị.,hybrid,administration
+Mã 00376 thuộc tỉnh nào?,kg,administration
+Xã Sóc Sơn có mã hành chính gì?,kg,administration
+Tra cứu tên đơn vị có mã 00376.,kg,administration
+Giới thiệu danh mục hành chính của Xã Sóc Sơn.,rag,administration
+Mô tả thông tin đơn vị Xã Sóc Sơn trong dữ liệu.,rag,administration
+Xã Sóc Sơn thuộc tỉnh nào và giới thiệu thông tin đơn vị.,hybrid,administration
+Mã 00611 thuộc tỉnh nào?,kg,administration
+Phường Xuân Đỉnh có mã hành chính gì?,kg,administration
+Tra cứu tên đơn vị có mã 00611.,kg,administration
+Giới thiệu danh mục hành chính của Phường Xuân Đỉnh.,rag,administration
+Mô tả thông tin đơn vị Phường Xuân Đỉnh trong dữ liệu.,rag,administration
+Phường Xuân Đỉnh thuộc tỉnh nào và giới thiệu thông tin đơn vị.,hybrid,administration
+Mã 01363 thuộc tỉnh nào?,kg,administration
+Xã Thông Nông có mã hành chính gì?,kg,administration
+Tra cứu tên đơn vị có mã 01363.,kg,administration
+Giới thiệu danh mục hành chính của Xã Thông Nông.,rag,administration
+Mô tả thông tin đơn vị Xã Thông Nông trong dữ liệu.,rag,administration
+Xã Thông Nông thuộc tỉnh nào và giới thiệu thông tin đơn vị.,hybrid,administration
+Mã 01786 thuộc tỉnh nào?,kg,administration
+Xã Đông Khê có mã hành chính gì?,kg,administration
+Tra cứu tên đơn vị có mã 01786.,kg,administration
+Giới thiệu danh mục hành chính của Xã Đông Khê.,rag,administration
+Mô tả thông tin đơn vị Xã Đông Khê trong dữ liệu.,rag,administration
+Xã Đông Khê thuộc tỉnh nào và giới thiệu thông tin đơn vị.,hybrid,administration
+Mã 02350 thuộc tỉnh nào?,kg,administration
+Xã Kim Bình có mã hành chính gì?,kg,administration
+Tra cứu tên đơn vị có mã 02350.,kg,administration
+Giới thiệu danh mục hành chính của Xã Kim Bình.,rag,administration
+Mô tả thông tin đơn vị Xã Kim Bình trong dữ liệu.,rag,administration
+Xã Kim Bình thuộc tỉnh nào và giới thiệu thông tin đơn vị.,hybrid,administration
+Mã 03478 thuộc tỉnh nào?,kg,administration
+Xã Sìn Hồ có mã hành chính gì?,kg,administration
+Tra cứu tên đơn vị có mã 03478.,kg,administration
+Giới thiệu danh mục hành chính của Xã Sìn Hồ.,rag,administration
+Mô tả thông tin đơn vị Xã Sìn Hồ trong dữ liệu.,rag,administration
+Xã Sìn Hồ thuộc tỉnh nào và giới thiệu thông tin đơn vị.,hybrid,administration
+Mã 03760 thuộc tỉnh nào?,kg,administration
+Xã Mường Bám có mã hành chính gì?,kg,administration
+Tra cứu tên đơn vị có mã 03760.,kg,administration
+Giới thiệu danh mục hành chính của Xã Mường Bám.,rag,administration
+Mô tả thông tin đơn vị Xã Mường Bám trong dữ liệu.,rag,administration
+Xã Mường Bám thuộc tỉnh nào và giới thiệu thông tin đơn vị.,hybrid,administration
+Mã 03901 thuộc tỉnh nào?,kg,administration
+Xã Suối Tọ có mã hành chính gì?,kg,administration
+Tra cứu tên đơn vị có mã 03901.,kg,administration
+Giới thiệu danh mục hành chính của Xã Suối Tọ.,rag,administration
+Mô tả thông tin đơn vị Xã Suối Tọ trong dữ liệu.,rag,administration
+Xã Suối Tọ thuộc tỉnh nào và giới thiệu thông tin đơn vị.,hybrid,administration
+Mã 04136 thuộc tỉnh nào?,kg,administration
+Xã Tà Hộc có mã hành chính gì?,kg,administration
+Tra cứu tên đơn vị có mã 04136.,kg,administration
+Giới thiệu danh mục hành chính của Xã Tà Hộc.,rag,administration
+Mô tả thông tin đơn vị Xã Tà Hộc trong dữ liệu.,rag,administration
+Xã Tà Hộc thuộc tỉnh nào và giới thiệu thông tin đơn vị.,hybrid,administration
+Mã 04183 thuộc tỉnh nào?,kg,administration
+Xã Mường Lầm có mã hành chính gì?,kg,administration
+Tra cứu tên đơn vị có mã 04183.,kg,administration
+Giới thiệu danh mục hành chính của Xã Mường Lầm.,rag,administration
+Mô tả thông tin đơn vị Xã Mường Lầm trong dữ liệu.,rag,administration
+Xã Mường Lầm thuộc tỉnh nào và giới thiệu thông tin đơn vị.,hybrid,administration
+Mã 04465 thuộc tỉnh nào?,kg,administration
+Xã Khao Mang có mã hành chính gì?,kg,administration
+Tra cứu tên đơn vị có mã 04465.,kg,administration
+Giới thiệu danh mục hành chính của Xã Khao Mang.,rag,administration
+Mô tả thông tin đơn vị Xã Khao Mang trong dữ liệu.,rag,administration
+Xã Khao Mang thuộc tỉnh nào và giới thiệu thông tin đơn vị.,hybrid,administration
+Mã 04606 thuộc tỉnh nào?,kg,administration
+Xã Trạm Tấu có mã hành chính gì?,kg,administration
+Tra cứu tên đơn vị có mã 04606.,kg,administration
+Giới thiệu danh mục hành chính của Xã Trạm Tấu.,rag,administration
+Mô tả thông tin đơn vị Xã Trạm Tấu trong dữ liệu.,rag,administration
+Xã Trạm Tấu thuộc tỉnh nào và giới thiệu thông tin đơn vị.,hybrid,administration
+Mã 06298 thuộc tỉnh nào?,kg,administration
+Xã Yên Phúc có mã hành chính gì?,kg,administration
+Tra cứu tên đơn vị có mã 06298.,kg,administration
+Giới thiệu danh mục hành chính của Xã Yên Phúc.,rag,administration
+Mô tả thông tin đơn vị Xã Yên Phúc trong dữ liệu.,rag,administration
+Xã Yên Phúc thuộc tỉnh nào và giới thiệu thông tin đơn vị.,hybrid,administration
+Mã 06862 thuộc tỉnh nào?,kg,administration
+Xã Tiên Yên có mã hành chính gì?,kg,administration
+Tra cứu tên đơn vị có mã 06862.,kg,administration
+Giới thiệu danh mục hành chính của Xã Tiên Yên.,rag,administration
+Mô tả thông tin đơn vị Xã Tiên Yên trong dữ liệu.,rag,administration
+Xã Tiên Yên thuộc tỉnh nào và giới thiệu thông tin đơn vị.,hybrid,administration
+Mã 09400 thuộc tỉnh nào?,kg,administration
+Phường Thuận Thành có mã hành chính gì?,kg,administration
+Tra cứu tên đơn vị có mã 09400.,kg,administration
+Giới thiệu danh mục hành chính của Phường Thuận Thành.,rag,administration
+Mô tả thông tin đơn vị Phường Thuận Thành trong dữ liệu.,rag,administration
+Phường Thuận Thành thuộc tỉnh nào và giới thiệu thông tin đơn vị.,hybrid,administration
+Mã 12361 thuộc tỉnh nào?,kg,administration
+Xã Tiên Hoa có mã hành chính gì?,kg,administration
+Tra cứu tên đơn vị có mã 12361.,kg,administration
+Giới thiệu danh mục hành chính của Xã Tiên Hoa.,rag,administration
+Mô tả thông tin đơn vị Xã Tiên Hoa trong dữ liệu.,rag,administration
+Xã Tiên Hoa thuộc tỉnh nào và giới thiệu thông tin đơn vị.,hybrid,administration
+Mã 13066 thuộc tỉnh nào?,kg,administration
+Xã Hưng Phú có mã hành chính gì?,kg,administration
+Tra cứu tên đơn vị có mã 13066.,kg,administration
+Giới thiệu danh mục hành chính của Xã Hưng Phú.,rag,administration
+Mô tả thông tin đơn vị Xã Hưng Phú trong dữ liệu.,rag,administration
+Xã Hưng Phú thuộc tỉnh nào và giới thiệu thông tin đơn vị.,hybrid,administration
+Mã 13348 thuộc tỉnh nào?,kg,administration
+Phường Đồng Văn có mã hành chính gì?,kg,administration
+Tra cứu tên đơn vị có mã 13348.,kg,administration
+Giới thiệu danh mục hành chính của Phường Đồng Văn.,rag,administration
+Mô tả thông tin đơn vị Phường Đồng Văn trong dữ liệu.,rag,administration
+Phường Đồng Văn thuộc tỉnh nào và giới thiệu thông tin đơn vị.,hybrid,administration
+Mã 13489 thuộc tỉnh nào?,kg,administration
+Xã Thanh Lâm có mã hành chính gì?,kg,administration
+Tra cứu tên đơn vị có mã 13489.,kg,administration
+Giới thiệu danh mục hành chính của Xã Thanh Lâm.,rag,administration
+Mô tả thông tin đơn vị Xã Thanh Lâm trong dữ liệu.,rag,administration
+Xã Thanh Lâm thuộc tỉnh nào và giới thiệu thông tin đơn vị.,hybrid,administration
+Mã 14053 thuộc tỉnh nào?,kg,administration
+Xã Trực Ninh có mã hành chính gì?,kg,administration
+Tra cứu tên đơn vị có mã 14053.,kg,administration
+Giới thiệu danh mục hành chính của Xã Trực Ninh.,rag,administration
+Mô tả thông tin đơn vị Xã Trực Ninh trong dữ liệu.,rag,administration
+Xã Trực Ninh thuộc tỉnh nào và giới thiệu thông tin đơn vị.,hybrid,administration
+Mã 14194 thuộc tỉnh nào?,kg,administration
+Xã Giao Bình có mã hành chính gì?,kg,administration
+Tra cứu tên đơn vị có mã 14194.,kg,administration
+Giới thiệu danh mục hành chính của Xã Giao Bình.,rag,administration
+Mô tả thông tin đơn vị Xã Giao Bình trong dữ liệu.,rag,administration
+Xã Giao Bình thuộc tỉnh nào và giới thiệu thông tin đơn vị.,hybrid,administration
+Mã 14758 thuộc tỉnh nào?,kg,administration
+Phường Hàm Rồng có mã hành chính gì?,kg,administration
+Tra cứu tên đơn vị có mã 14758.,kg,administration
+Giới thiệu danh mục hành chính của Phường Hàm Rồng.,rag,administration
+Mô tả thông tin đơn vị Phường Hàm Rồng trong dữ liệu.,rag,administration
+Phường Hàm Rồng thuộc tỉnh nào và giới thiệu thông tin đơn vị.,hybrid,administration
+Mã 16309 thuộc tỉnh nào?,kg,administration
+Xã Thắng Lợi có mã hành chính gì?,kg,administration
+Tra cứu tên đơn vị có mã 16309.,kg,administration
+Giới thiệu danh mục hành chính của Xã Thắng Lợi.,rag,administration
+Mô tả thông tin đơn vị Xã Thắng Lợi trong dữ liệu.,rag,administration
+Xã Thắng Lợi thuộc tỉnh nào và giới thiệu thông tin đơn vị.,hybrid,administration
+Mã 16591 thuộc tỉnh nào?,kg,administration
+Xã Các Sơn có mã hành chính gì?,kg,administration
+Tra cứu tên đơn vị có mã 16591.,kg,administration
+Giới thiệu danh mục hành chính của Xã Các Sơn.,rag,administration
+Mô tả thông tin đơn vị Xã Các Sơn trong dữ liệu.,rag,administration
+Xã Các Sơn thuộc tỉnh nào và giới thiệu thông tin đơn vị.,hybrid,administration
+Mã 16732 thuộc tỉnh nào?,kg,administration
+Phường Cửa Lò có mã hành chính gì?,kg,administration
+Tra cứu tên đơn vị có mã 16732.,kg,administration
+Giới thiệu danh mục hành chính của Phường Cửa Lò.,rag,administration
+Mô tả thông tin đơn vị Phường Cửa Lò trong dữ liệu.,rag,administration
+Phường Cửa Lò thuộc tỉnh nào và giới thiệu thông tin đơn vị.,hybrid,administration
+Mã 18001 thuộc tỉnh nào?,kg,administration
+Xã Hưng Nguyên có mã hành chính gì?,kg,administration
+Tra cứu tên đơn vị có mã 18001.,kg,administration
+Giới thiệu danh mục hành chính của Xã Hưng Nguyên.,rag,administration
+Mô tả thông tin đơn vị Xã Hưng Nguyên trong dữ liệu.,rag,administration
+Xã Hưng Nguyên thuộc tỉnh nào và giới thiệu thông tin đơn vị.,hybrid,administration
+Mã 19975 thuộc tỉnh nào?,kg,administration
+Phường Hương Thủy có mã hành chính gì?,kg,administration
+Tra cứu tên đơn vị có mã 19975.,kg,administration
+Giới thiệu danh mục hành chính của Phường Hương Thủy.,rag,administration
+Mô tả thông tin đơn vị Phường Hương Thủy trong dữ liệu.,rag,administration
+Phường Hương Thủy thuộc tỉnh nào và giới thiệu thông tin đơn vị.,hybrid,administration
+Mã 20257 thuộc tỉnh nào?,kg,administration
+Phường Hòa Cường có mã hành chính gì?,kg,administration
+Tra cứu tên đơn vị có mã 20257.,kg,administration
+Giới thiệu danh mục hành chính của Phường Hòa Cường.,rag,administration
+Mô tả thông tin đơn vị Phường Hòa Cường trong dữ liệu.,rag,administration
+Phường Hòa Cường thuộc tỉnh nào và giới thiệu thông tin đơn vị.,hybrid,administration
+Mã 20539 thuộc tỉnh nào?,kg,administration
+Xã Vu Gia có mã hành chính gì?,kg,administration
+Tra cứu tên đơn vị có mã 20539.,kg,administration
+Giới thiệu danh mục hành chính của Xã Vu Gia.,rag,administration
+Mô tả thông tin đơn vị Xã Vu Gia trong dữ liệu.,rag,administration
+Xã Vu Gia thuộc tỉnh nào và giới thiệu thông tin đơn vị.,hybrid,administration
+Mã 21244 thuộc tỉnh nào?,kg,administration
+Xã Trà Giang có mã hành chính gì?,kg,administration
+Tra cứu tên đơn vị có mã 21244.,kg,administration
+Giới thiệu danh mục hành chính của Xã Trà Giang.,rag,administration
+Mô tả thông tin đơn vị Xã Trà Giang trong dữ liệu.,rag,administration
+Xã Trà Giang thuộc tỉnh nào và giới thiệu thông tin đơn vị.,hybrid,administration
+Mã 21385 thuộc tỉnh nào?,kg,administration
+Xã Đình Cương có mã hành chính gì?,kg,administration
+Tra cứu tên đơn vị có mã 21385.,kg,administration
+Giới thiệu danh mục hành chính của Xã Đình Cương.,rag,administration
+Mô tả thông tin đơn vị Xã Đình Cương trong dữ liệu.,rag,administration
+Xã Đình Cương thuộc tỉnh nào và giới thiệu thông tin đơn vị.,hybrid,administration
+Mã 21808 thuộc tỉnh nào?,kg,administration
+Xã Tây Sơn có mã hành chính gì?,kg,administration
+Tra cứu tên đơn vị có mã 21808.,kg,administration
+Giới thiệu danh mục hành chính của Xã Tây Sơn.,rag,administration
+Mô tả thông tin đơn vị Xã Tây Sơn trong dữ liệu.,rag,administration
+Xã Tây Sơn thuộc tỉnh nào và giới thiệu thông tin đơn vị.,hybrid,administration
+Mã 22090 thuộc tỉnh nào?,kg,administration
+Xã Xuân Lãnh có mã hành chính gì?,kg,administration
+Tra cứu tên đơn vị có mã 22090.,kg,administration
+Giới thiệu danh mục hành chính của Xã Xuân Lãnh.,rag,administration
+Mô tả thông tin đơn vị Xã Xuân Lãnh trong dữ liệu.,rag,administration
+Xã Xuân Lãnh thuộc tỉnh nào và giới thiệu thông tin đơn vị.,hybrid,administration
+Mã 22795 thuộc tỉnh nào?,kg,administration
+Xã Bác Ái có mã hành chính gì?,kg,administration
+Tra cứu tên đơn vị có mã 22795.,kg,administration
+Giới thiệu danh mục hành chính của Xã Bác Ái.,rag,administration
+Mô tả thông tin đơn vị Xã Bác Ái trong dữ liệu.,rag,administration
+Xã Bác Ái thuộc tỉnh nào và giới thiệu thông tin đơn vị.,hybrid,administration
+Mã 23500 thuộc tỉnh nào?,kg,administration
+Xã Đăk Hà có mã hành chính gì?,kg,administration
+Tra cứu tên đơn vị có mã 23500.,kg,administration
+Giới thiệu danh mục hành chính của Xã Đăk Hà.,rag,administration
+Mô tả thông tin đơn vị Xã Đăk Hà trong dữ liệu.,rag,administration
+Xã Đăk Hà thuộc tỉnh nào và giới thiệu thông tin đơn vị.,hybrid,administration
+Mã 23782 thuộc tỉnh nào?,kg,administration
+Xã Ia O có mã hành chính gì?,kg,administration
+Tra cứu tên đơn vị có mã 23782.,kg,administration
+Giới thiệu danh mục hành chính của Xã Ia O.,rag,administration
+Mô tả thông tin đơn vị Xã Ia O trong dữ liệu.,rag,administration
+Xã Ia O thuộc tỉnh nào và giới thiệu thông tin đơn vị.,hybrid,administration
+Mã 24346 thuộc tỉnh nào?,kg,administration
+Xã Dliê Ya có mã hành chính gì?,kg,administration
+Tra cứu tên đơn vị có mã 24346.,kg,administration
+Giới thiệu danh mục hành chính của Xã Dliê Ya.,rag,administration
+Mô tả thông tin đơn vị Xã Dliê Ya trong dữ liệu.,rag,administration
+Xã Dliê Ya thuộc tỉnh nào và giới thiệu thông tin đơn vị.,hybrid,administration
+Mã 24722 thuộc tỉnh nào?,kg,administration
+Xã Thuận Hạnh có mã hành chính gì?,kg,administration
+Tra cứu tên đơn vị có mã 24722.,kg,administration
+Giới thiệu danh mục hành chính của Xã Thuận Hạnh.,rag,administration
+Mô tả thông tin đơn vị Xã Thuận Hạnh trong dữ liệu.,rag,administration
+Xã Thuận Hạnh thuộc tỉnh nào và giới thiệu thông tin đơn vị.,hybrid,administration
+Mã 25051 thuộc tỉnh nào?,kg,administration
+Xã Sơn Điền có mã hành chính gì?,kg,administration
+Tra cứu tên đơn vị có mã 25051.,kg,administration
+Giới thiệu danh mục hành chính của Xã Sơn Điền.,rag,administration
+Mô tả thông tin đơn vị Xã Sơn Điền trong dữ liệu.,rag,administration
+Xã Sơn Điền thuộc tỉnh nào và giới thiệu thông tin đơn vị.,hybrid,administration
+Mã 25333 thuộc tỉnh nào?,kg,administration
+Phường An Lộc có mã hành chính gì?,kg,administration
+Tra cứu tên đơn vị có mã 25333.,kg,administration
+Giới thiệu danh mục hành chính của Phường An Lộc.,rag,administration
+Mô tả thông tin đơn vị Phường An Lộc trong dữ liệu.,rag,administration
+Phường An Lộc thuộc tỉnh nào và giới thiệu thông tin đơn vị.,hybrid,administration
+Mã 26179 thuộc tỉnh nào?,kg,administration
+Xã Tân An có mã hành chính gì?,kg,administration
+Tra cứu tên đơn vị có mã 26179.,kg,administration
+Giới thiệu danh mục hành chính của Xã Tân An.,rag,administration
+Mô tả thông tin đơn vị Xã Tân An trong dữ liệu.,rag,administration
+Xã Tân An thuộc tỉnh nào và giới thiệu thông tin đơn vị.,hybrid,administration
+Mã 26461 thuộc tỉnh nào?,kg,administration
+Xã Xuân Định có mã hành chính gì?,kg,administration
+Tra cứu tên đơn vị có mã 26461.,kg,administration
+Giới thiệu danh mục hành chính của Xã Xuân Định.,rag,administration
+Mô tả thông tin đơn vị Xã Xuân Định trong dữ liệu.,rag,administration
+Xã Xuân Định thuộc tỉnh nào và giới thiệu thông tin đơn vị.,hybrid,administration
+Mã 26743 thuộc tỉnh nào?,kg,administration
+Phường Bến Thành có mã hành chính gì?,kg,administration
+Tra cứu tên đơn vị có mã 26743.,kg,administration
+Giới thiệu danh mục hành chính của Phường Bến Thành.,rag,administration
+Mô tả thông tin đơn vị Phường Bến Thành trong dữ liệu.,rag,administration
+Phường Bến Thành thuộc tỉnh nào và giới thiệu thông tin đơn vị.,hybrid,administration
+Mã 26884 thuộc tỉnh nào?,kg,administration
+Phường Gò Vấp có mã hành chính gì?,kg,administration
+Tra cứu tên đơn vị có mã 26884.,kg,administration
+Giới thiệu danh mục hành chính của Phường Gò Vấp.,rag,administration
+Mô tả thông tin đơn vị Phường Gò Vấp trong dữ liệu.,rag,administration
+Phường Gò Vấp thuộc tỉnh nào và giới thiệu thông tin đơn vị.,hybrid,administration
+Mã 27448 thuộc tỉnh nào?,kg,administration
+Phường Bình Trị Đông có mã hành chính gì?,kg,administration
+Tra cứu tên đơn vị có mã 27448.,kg,administration
+Giới thiệu danh mục hành chính của Phường Bình Trị Đông.,rag,administration
+Mô tả thông tin đơn vị Phường Bình Trị Đông trong dữ liệu.,rag,administration
+Phường Bình Trị Đông thuộc tỉnh nào và giới thiệu thông tin đơn vị.,hybrid,administration
+Mã 28435 thuộc tỉnh nào?,kg,administration
+Phường Mỹ Phước Tây có mã hành chính gì?,kg,administration
+Tra cứu tên đơn vị có mã 28435.,kg,administration
+Giới thiệu danh mục hành chính của Phường Mỹ Phước Tây.,rag,administration
+Mô tả thông tin đơn vị Phường Mỹ Phước Tây trong dữ liệu.,rag,administration
+Phường Mỹ Phước Tây thuộc tỉnh nào và giới thiệu thông tin đơn vị.,hybrid,administration
+Mã 28576 thuộc tỉnh nào?,kg,administration
+Xã Vĩnh Kim có mã hành chính gì?,kg,administration
+Tra cứu tên đơn vị có mã 28576.,kg,administration
+Giới thiệu danh mục hành chính của Xã Vĩnh Kim.,rag,administration
+Mô tả thông tin đơn vị Xã Vĩnh Kim trong dữ liệu.,rag,administration
+Xã Vĩnh Kim thuộc tỉnh nào và giới thiệu thông tin đơn vị.,hybrid,administration
+Mã 28858 thuộc tỉnh nào?,kg,administration
+Phường Phú Tân có mã hành chính gì?,kg,administration
+Tra cứu tên đơn vị có mã 28858.,kg,administration
+Giới thiệu danh mục hành chính của Phường Phú Tân.,rag,administration
+Mô tả thông tin đơn vị Phường Phú Tân trong dữ liệu.,rag,administration
+Phường Phú Tân thuộc tỉnh nào và giới thiệu thông tin đơn vị.,hybrid,administration
+Mã 29516 thuộc tỉnh nào?,kg,administration
+Phường Trường Long Hòa có mã hành chính gì?,kg,administration
+Tra cứu tên đơn vị có mã 29516.,kg,administration
+Giới thiệu danh mục hành chính của Phường Trường Long Hòa.,rag,administration
+Mô tả thông tin đơn vị Phường Trường Long Hòa trong dữ liệu.,rag,administration
+Phường Trường Long Hòa thuộc tỉnh nào và giới thiệu thông tin đơn vị.,hybrid,administration
+Mã 29845 thuộc tỉnh nào?,kg,administration
+Xã Vĩnh Xuân có mã hành chính gì?,kg,administration
+Tra cứu tên đơn vị có mã 29845.,kg,administration
+Giới thiệu danh mục hành chính của Xã Vĩnh Xuân.,rag,administration
+Mô tả thông tin đơn vị Xã Vĩnh Xuân trong dữ liệu.,rag,administration
+Xã Vĩnh Xuân thuộc tỉnh nào và giới thiệu thông tin đơn vị.,hybrid,administration
+Mã 30409 thuộc tỉnh nào?,kg,administration
+Xã Chợ Vàm có mã hành chính gì?,kg,administration
+Tra cứu tên đơn vị có mã 30409.,kg,administration
+Giới thiệu danh mục hành chính của Xã Chợ Vàm.,rag,administration
+Mô tả thông tin đơn vị Xã Chợ Vàm trong dữ liệu.,rag,administration
+Xã Chợ Vàm thuộc tỉnh nào và giới thiệu thông tin đơn vị.,hybrid,administration
+Mã 30691 thuộc tỉnh nào?,kg,administration
+Xã Tây Phú có mã hành chính gì?,kg,administration
+Tra cứu tên đơn vị có mã 30691.,kg,administration
+Giới thiệu danh mục hành chính của Xã Tây Phú.,rag,administration
+Mô tả thông tin đơn vị Xã Tây Phú trong dữ liệu.,rag,administration
+Xã Tây Phú thuộc tỉnh nào và giới thiệu thông tin đơn vị.,hybrid,administration
+Mã 31255 thuộc tỉnh nào?,kg,administration
+Xã Trung Hưng có mã hành chính gì?,kg,administration
+Tra cứu tên đơn vị có mã 31255.,kg,administration
+Giới thiệu danh mục hành chính của Xã Trung Hưng.,rag,administration
+Mô tả thông tin đơn vị Xã Trung Hưng trong dữ liệu.,rag,administration
+Xã Trung Hưng thuộc tỉnh nào và giới thiệu thông tin đơn vị.,hybrid,administration
+Mã 31396 thuộc tỉnh nào?,kg,administration
+Xã Hiệp Hưng có mã hành chính gì?,kg,administration
+Tra cứu tên đơn vị có mã 31396.,kg,administration
+Giới thiệu danh mục hành chính của Xã Hiệp Hưng.,rag,administration
+Mô tả thông tin đơn vị Xã Hiệp Hưng trong dữ liệu.,rag,administration
+Xã Hiệp Hưng thuộc tỉnh nào và giới thiệu thông tin đơn vị.,hybrid,administration
+Mã 31537 thuộc tỉnh nào?,kg,administration
+Xã Phong Nẫm có mã hành chính gì?,kg,administration
+Tra cứu tên đơn vị có mã 31537.,kg,administration
+Giới thiệu danh mục hành chính của Xã Phong Nẫm.,rag,administration
+Mô tả thông tin đơn vị Xã Phong Nẫm trong dữ liệu.,rag,administration
+Xã Phong Nẫm thuộc tỉnh nào và giới thiệu thông tin đơn vị.,hybrid,administration
+Thành phố Hà Nội sáp nhập vào đâu?,kg,administration
+Thành phố Hà Nội sắp xếp như thế nào và thuộc tỉnh nào?,hybrid,administration
+Tỉnh Hà Giang sáp nhập vào đâu?,kg,administration
+Tỉnh Hà Giang sắp xếp như thế nào và thuộc tỉnh nào?,hybrid,administration
+Tỉnh Cao Bằng sáp nhập vào đâu?,kg,administration
+Tỉnh Cao Bằng sắp xếp như thế nào và thuộc tỉnh nào?,hybrid,administration
+Tỉnh Bắc Kạn sáp nhập vào đâu?,kg,administration
+Tỉnh Bắc Kạn sắp xếp như thế nào và thuộc tỉnh nào?,hybrid,administration
+Tỉnh Tuyên Quang sáp nhập vào đâu?,kg,administration
+Tỉnh Tuyên Quang sắp xếp như thế nào và thuộc tỉnh nào?,hybrid,administration
+Tỉnh Lào Cai sáp nhập vào đâu?,kg,administration
+Tỉnh Lào Cai sắp xếp như thế nào và thuộc tỉnh nào?,hybrid,administration
+Tỉnh Điện Biên sáp nhập vào đâu?,kg,administration
+Tỉnh Điện Biên sắp xếp như thế nào và thuộc tỉnh nào?,hybrid,administration
+Tỉnh Lai Châu sáp nhập vào đâu?,kg,administration
+Tỉnh Lai Châu sắp xếp như thế nào và thuộc tỉnh nào?,hybrid,administration
+Tỉnh Sơn La sáp nhập vào đâu?,kg,administration
+Tỉnh Sơn La sắp xếp như thế nào và thuộc tỉnh nào?,hybrid,administration
+Tỉnh Yên Bái sáp nhập vào đâu?,kg,administration
+Tỉnh Yên Bái sắp xếp như thế nào và thuộc tỉnh nào?,hybrid,administration
+Tỉnh Hoà Bình sáp nhập vào đâu?,kg,administration
+Tỉnh Hoà Bình sắp xếp như thế nào và thuộc tỉnh nào?,hybrid,administration
+Tỉnh Thái Nguyên sáp nhập vào đâu?,kg,administration
+Tỉnh Thái Nguyên sắp xếp như thế nào và thuộc tỉnh nào?,hybrid,administration
+Tỉnh Lạng Sơn sáp nhập vào đâu?,kg,administration
+Tỉnh Lạng Sơn sắp xếp như thế nào và thuộc tỉnh nào?,hybrid,administration
+Tỉnh Quảng Ninh sáp nhập vào đâu?,kg,administration
+Tỉnh Quảng Ninh sắp xếp như thế nào và thuộc tỉnh nào?,hybrid,administration
+Tỉnh Bắc Giang sáp nhập vào đâu?,kg,administration
+Tỉnh Bắc Giang sắp xếp như thế nào và thuộc tỉnh nào?,hybrid,administration
+Tỉnh Phú Thọ sáp nhập vào đâu?,kg,administration
+Tỉnh Phú Thọ sắp xếp như thế nào và thuộc tỉnh nào?,hybrid,administration
+Tỉnh Vĩnh Phúc sáp nhập vào đâu?,kg,administration
+Tỉnh Vĩnh Phúc sắp xếp như thế nào và thuộc tỉnh nào?,hybrid,administration
+Tỉnh Bắc Ninh sáp nhập vào đâu?,kg,administration
+Tỉnh Bắc Ninh sắp xếp như thế nào và thuộc tỉnh nào?,hybrid,administration
+Tỉnh Hải Dương sáp nhập vào đâu?,kg,administration
+Tỉnh Hải Dương sắp xếp như thế nào và thuộc tỉnh nào?,hybrid,administration
+Thành phố Hải Phòng sáp nhập vào đâu?,kg,administration
+Thành phố Hải Phòng sắp xếp như thế nào và thuộc tỉnh nào?,hybrid,administration
+Tỉnh Hưng Yên sáp nhập vào đâu?,kg,administration
+Tỉnh Hưng Yên sắp xếp như thế nào và thuộc tỉnh nào?,hybrid,administration
+Tỉnh Thái Bình sáp nhập vào đâu?,kg,administration
+Tỉnh Thái Bình sắp xếp như thế nào và thuộc tỉnh nào?,hybrid,administration
+Tỉnh Hà Nam sáp nhập vào đâu?,kg,administration
+Tỉnh Hà Nam sắp xếp như thế nào và thuộc tỉnh nào?,hybrid,administration
+Tỉnh Nam Định sáp nhập vào đâu?,kg,administration
+Tỉnh Nam Định sắp xếp như thế nào và thuộc tỉnh nào?,hybrid,administration
+Tỉnh Ninh Bình sáp nhập vào đâu?,kg,administration
+Tỉnh Ninh Bình sắp xếp như thế nào và thuộc tỉnh nào?,hybrid,administration
+Tỉnh Thanh Hóa sáp nhập vào đâu?,kg,administration
+Tỉnh Thanh Hóa sắp xếp như thế nào và thuộc tỉnh nào?,hybrid,administration
+Tỉnh Nghệ An sáp nhập vào đâu?,kg,administration
+Tỉnh Nghệ An sắp xếp như thế nào và thuộc tỉnh nào?,hybrid,administration
+Tỉnh Hà Tĩnh sáp nhập vào đâu?,kg,administration
+Tỉnh Hà Tĩnh sắp xếp như thế nào và thuộc tỉnh nào?,hybrid,administration
+Tỉnh Quảng Bình sáp nhập vào đâu?,kg,administration
+Tỉnh Quảng Bình sắp xếp như thế nào và thuộc tỉnh nào?,hybrid,administration
+Tỉnh Quảng Trị sáp nhập vào đâu?,kg,administration
+Tỉnh Quảng Trị sắp xếp như thế nào và thuộc tỉnh nào?,hybrid,administration
+Thành phố Huế sáp nhập vào đâu?,kg,administration
+Thành phố Huế sắp xếp như thế nào và thuộc tỉnh nào?,hybrid,administration
+Thành phố Đà Nẵng sáp nhập vào đâu?,kg,administration
+Thành phố Đà Nẵng sắp xếp như thế nào và thuộc tỉnh nào?,hybrid,administration
+Tỉnh Quảng Nam sáp nhập vào đâu?,kg,administration
+Tỉnh Quảng Nam sắp xếp như thế nào và thuộc tỉnh nào?,hybrid,administration
+Tỉnh Quảng Ngãi sáp nhập vào đâu?,kg,administration
+Tỉnh Quảng Ngãi sắp xếp như thế nào và thuộc tỉnh nào?,hybrid,administration
+Tỉnh Bình Định sáp nhập vào đâu?,kg,administration
+Tỉnh Bình Định sắp xếp như thế nào và thuộc tỉnh nào?,hybrid,administration
+Tỉnh Phú Yên sáp nhập vào đâu?,kg,administration
+Tỉnh Phú Yên sắp xếp như thế nào và thuộc tỉnh nào?,hybrid,administration
+Tỉnh Khánh Hòa sáp nhập vào đâu?,kg,administration
+Tỉnh Khánh Hòa sắp xếp như thế nào và thuộc tỉnh nào?,hybrid,administration
+Tỉnh Ninh Thuận sáp nhập vào đâu?,kg,administration
+Tỉnh Ninh Thuận sắp xếp như thế nào và thuộc tỉnh nào?,hybrid,administration
+Tỉnh Bình Thuận sáp nhập vào đâu?,kg,administration
+Tỉnh Bình Thuận sắp xếp như thế nào và thuộc tỉnh nào?,hybrid,administration
+Tỉnh Kon Tum sáp nhập vào đâu?,kg,administration
+Tỉnh Kon Tum sắp xếp như thế nào và thuộc tỉnh nào?,hybrid,administration
+Tỉnh Gia Lai sáp nhập vào đâu?,kg,administration
+Tỉnh Gia Lai sắp xếp như thế nào và thuộc tỉnh nào?,hybrid,administration
+Tỉnh Đắk Lắk sáp nhập vào đâu?,kg,administration
+Tỉnh Đắk Lắk sắp xếp như thế nào và thuộc tỉnh nào?,hybrid,administration
+Tỉnh Đắk Nông sáp nhập vào đâu?,kg,administration
+Tỉnh Đắk Nông sắp xếp như thế nào và thuộc tỉnh nào?,hybrid,administration
+Tỉnh Lâm Đồng sáp nhập vào đâu?,kg,administration
+Tỉnh Lâm Đồng sắp xếp như thế nào và thuộc tỉnh nào?,hybrid,administration
+Tỉnh Bình Phước sáp nhập vào đâu?,kg,administration
+Tỉnh Bình Phước sắp xếp như thế nào và thuộc tỉnh nào?,hybrid,administration
+Tỉnh Tây Ninh sáp nhập vào đâu?,kg,administration
+Tỉnh Tây Ninh sắp xếp như thế nào và thuộc tỉnh nào?,hybrid,administration
+Tỉnh Bình Dương sắp xếp như thế nào và thuộc tỉnh nào?,hybrid,administration
+Tỉnh Đồng Nai sáp nhập vào đâu?,kg,administration
+Tỉnh Đồng Nai sắp xếp như thế nào và thuộc tỉnh nào?,hybrid,administration
+Tỉnh Bà Rịa - Vũng Tàu sáp nhập vào đâu?,kg,administration
+Tỉnh Bà Rịa - Vũng Tàu sắp xếp như thế nào và thuộc tỉnh nào?,hybrid,administration
+Thành phố Hồ Chí Minh sáp nhập vào đâu?,kg,administration
+Thành phố Hồ Chí Minh sắp xếp như thế nào và thuộc tỉnh nào?,hybrid,administration
+Tỉnh Long An sáp nhập vào đâu?,kg,administration
+Tỉnh Long An sắp xếp như thế nào và thuộc tỉnh nào?,hybrid,administration
+Tỉnh Tiền Giang sáp nhập vào đâu?,kg,administration
+Tỉnh Tiền Giang sắp xếp như thế nào và thuộc tỉnh nào?,hybrid,administration
+Tỉnh Bến Tre sáp nhập vào đâu?,kg,administration
+Tỉnh Bến Tre sắp xếp như thế nào và thuộc tỉnh nào?,hybrid,administration
+Tỉnh Trà Vinh sáp nhập vào đâu?,kg,administration
+Tỉnh Trà Vinh sắp xếp như thế nào và thuộc tỉnh nào?,hybrid,administration
+Tỉnh Vĩnh Long sáp nhập vào đâu?,kg,administration
+Tỉnh Vĩnh Long sắp xếp như thế nào và thuộc tỉnh nào?,hybrid,administration
+Tỉnh Đồng Tháp sáp nhập vào đâu?,kg,administration
+Tỉnh Đồng Tháp sắp xếp như thế nào và thuộc tỉnh nào?,hybrid,administration
+Tỉnh An Giang sáp nhập vào đâu?,kg,administration
+Tỉnh An Giang sắp xếp như thế nào và thuộc tỉnh nào?,hybrid,administration
+Tỉnh Kiên Giang sáp nhập vào đâu?,kg,administration
+Tỉnh Kiên Giang sắp xếp như thế nào và thuộc tỉnh nào?,hybrid,administration
+Thành phố Cần Thơ sáp nhập vào đâu?,kg,administration
+Thành phố Cần Thơ sắp xếp như thế nào và thuộc tỉnh nào?,hybrid,administration
+Tỉnh Hậu Giang sáp nhập vào đâu?,kg,administration
+Tỉnh Hậu Giang sắp xếp như thế nào và thuộc tỉnh nào?,hybrid,administration
+Tỉnh Sóc Trăng sáp nhập vào đâu?,kg,administration
+Tỉnh Sóc Trăng sắp xếp như thế nào và thuộc tỉnh nào?,hybrid,administration
+Tỉnh Bạc Liêu sáp nhập vào đâu?,kg,administration
+Tỉnh Bạc Liêu sắp xếp như thế nào và thuộc tỉnh nào?,hybrid,administration
+Tỉnh Cà Mau sáp nhập vào đâu?,kg,administration
+Tỉnh Cà Mau sắp xếp như thế nào và thuộc tỉnh nào?,hybrid,administration
+Giới thiệu Văn Miếu - Quốc Tử Giám.,rag,tourism
+Tham quan Văn Miếu - Quốc Tử Giám có gì đặc sắc?,rag,tourism
+Mô tả trải nghiệm du lịch tại Văn Miếu - Quốc Tử Giám.,rag,tourism
+Địa chỉ của Văn Miếu - Quốc Tử Giám là gì?,kg,tourism
+Văn Miếu - Quốc Tử Giám thuộc tỉnh nào và có gì đáng chú ý?,hybrid,tourism
+Các điểm du lịch nào ở Thành phố Hà Nội?,kg,tourism
+Giới thiệu Hồ Hoàn Kiếm.,rag,tourism
+Tham quan Hồ Hoàn Kiếm có gì đặc sắc?,rag,tourism
+Mô tả trải nghiệm du lịch tại Hồ Hoàn Kiếm.,rag,tourism
+Hồ Hoàn Kiếm nằm ở đâu?,kg,tourism
+Địa chỉ của Hồ Hoàn Kiếm là gì?,kg,tourism
+Hồ Hoàn Kiếm thuộc tỉnh nào và có gì đáng chú ý?,hybrid,tourism
+Giới thiệu Vườn thú Hà Nội.,rag,tourism
+Tham quan Vườn thú Hà Nội có gì đặc sắc?,rag,tourism
+Mô tả trải nghiệm du lịch tại Vườn thú Hà Nội.,rag,tourism
+Vườn thú Hà Nội nằm ở đâu?,kg,tourism
+Vườn thú Hà Nội thuộc tỉnh nào và có gì đáng chú ý?,hybrid,tourism
+Giới thiệu Điểm du lịch làng nghề sinh vật cảnh Hồng Vân.,rag,tourism
+Tham quan Điểm du lịch làng nghề sinh vật cảnh Hồng Vân có gì đặc sắc?,rag,tourism
+Mô tả trải nghiệm du lịch tại Điểm du lịch làng nghề sinh vật cảnh Hồng Vân.,rag,tourism
+Điểm du lịch làng nghề sinh vật cảnh Hồng Vân nằm ở đâu?,kg,tourism
+Địa chỉ của Điểm du lịch làng nghề sinh vật cảnh Hồng Vân là gì?,kg,tourism
+Điểm du lịch làng nghề sinh vật cảnh Hồng Vân thuộc tỉnh nào và có gì đáng chú ý?,hybrid,tourism
+Giới thiệu Điểm du lịch làng nghề may Vân Từ.,rag,tourism
+Tham quan Điểm du lịch làng nghề may Vân Từ có gì đặc sắc?,rag,tourism
+Mô tả trải nghiệm du lịch tại Điểm du lịch làng nghề may Vân Từ.,rag,tourism
+Điểm du lịch làng nghề may Vân Từ nằm ở đâu?,kg,tourism
+Địa chỉ của Điểm du lịch làng nghề may Vân Từ là gì?,kg,tourism
+Điểm du lịch làng nghề may Vân Từ thuộc tỉnh nào và có gì đáng chú ý?,hybrid,tourism
+Giới thiệu Điểm du lịch làng nghề khảm trai - sơn mài Chuyên Mỹ.,rag,tourism
+Tham quan Điểm du lịch làng nghề khảm trai - sơn mài Chuyên Mỹ có gì đặc sắc?,rag,tourism
+Mô tả trải nghiệm du lịch tại Điểm du lịch làng nghề khảm trai - sơn mài Chuyên Mỹ.,rag,tourism
+Điểm du lịch làng nghề khảm trai - sơn mài Chuyên Mỹ nằm ở đâu?,kg,tourism
+Địa chỉ của Điểm du lịch làng nghề khảm trai - sơn mài Chuyên Mỹ là gì?,kg,tourism
+Điểm du lịch làng nghề khảm trai - sơn mài Chuyên Mỹ thuộc tỉnh nào và có gì đáng chú ý?,hybrid,tourism
+Giới thiệu Chùa Đống Lân.,rag,tourism
+Tham quan Chùa Đống Lân có gì đặc sắc?,rag,tourism
+Mô tả trải nghiệm du lịch tại Chùa Đống Lân.,rag,tourism
+Chùa Đống Lân nằm ở đâu?,kg,tourism
+Địa chỉ của Chùa Đống Lân là gì?,kg,tourism
+Chùa Đống Lân thuộc tỉnh nào và có gì đáng chú ý?,hybrid,tourism
+Các điểm du lịch nào ở Tỉnh Cao Bằng?,kg,tourism
+Giới thiệu Vườn hoa cẩm tú.,rag,tourism
+Tham quan Vườn hoa cẩm tú có gì đặc sắc?,rag,tourism
+Mô tả trải nghiệm du lịch tại Vườn hoa cẩm tú.,rag,tourism
+Vườn hoa cẩm tú nằm ở đâu?,kg,tourism
+Địa chỉ của Vườn hoa cẩm tú là gì?,kg,tourism
+Vườn hoa cẩm tú thuộc tỉnh nào và có gì đáng chú ý?,hybrid,tourism
+Giới thiệu Đèo Mã Phục.,rag,tourism
+Tham quan Đèo Mã Phục có gì đặc sắc?,rag,tourism
+Mô tả trải nghiệm du lịch tại Đèo Mã Phục.,rag,tourism
+Đèo Mã Phục nằm ở đâu?,kg,tourism
+Địa chỉ của Đèo Mã Phục là gì?,kg,tourism
+Đèo Mã Phục thuộc tỉnh nào và có gì đáng chú ý?,hybrid,tourism
+Giới thiệu Hồ Thang Hen.,rag,tourism
+Tham quan Hồ Thang Hen có gì đặc sắc?,rag,tourism
+Mô tả trải nghiệm du lịch tại Hồ Thang Hen.,rag,tourism
+Hồ Thang Hen nằm ở đâu?,kg,tourism
+Địa chỉ của Hồ Thang Hen là gì?,kg,tourism
+Hồ Thang Hen thuộc tỉnh nào và có gì đáng chú ý?,hybrid,tourism
+Giới thiệu Danh thắng thác Bản Ba.,rag,tourism
+Tham quan Danh thắng thác Bản Ba có gì đặc sắc?,rag,tourism
+Mô tả trải nghiệm du lịch tại Danh thắng thác Bản Ba.,rag,tourism
+Danh thắng thác Bản Ba nằm ở đâu?,kg,tourism
+Địa chỉ của Danh thắng thác Bản Ba là gì?,kg,tourism
+Danh thắng thác Bản Ba thuộc tỉnh nào và có gì đáng chú ý?,hybrid,tourism
+Các điểm du lịch nào ở Tỉnh Tuyên Quang?,kg,tourism
+Giới thiệu Khu du lịch Núi Dùm – Cổng Trời.,rag,tourism
+Tham quan Khu du lịch Núi Dùm – Cổng Trời có gì đặc sắc?,rag,tourism
+Mô tả trải nghiệm du lịch tại Khu du lịch Núi Dùm – Cổng Trời.,rag,tourism
+Khu du lịch Núi Dùm – Cổng Trời nằm ở đâu?,kg,tourism
+Địa chỉ của Khu du lịch Núi Dùm – Cổng Trời là gì?,kg,tourism
+Khu du lịch Núi Dùm – Cổng Trời thuộc tỉnh nào và có gì đáng chú ý?,hybrid,tourism
+Giới thiệu Ruộng bậc thang Hồng Thái.,rag,tourism
+Tham quan Ruộng bậc thang Hồng Thái có gì đặc sắc?,rag,tourism
+Mô tả trải nghiệm du lịch tại Ruộng bậc thang Hồng Thái.,rag,tourism
+Ruộng bậc thang Hồng Thái nằm ở đâu?,kg,tourism
+Địa chỉ của Ruộng bậc thang Hồng Thái là gì?,kg,tourism
+Ruộng bậc thang Hồng Thái thuộc tỉnh nào và có gì đáng chú ý?,hybrid,tourism
+Giới thiệu Chùa Phúc Lâm – Dấu tích nhà Phật nơi miền sơn cước.,rag,tourism
+Tham quan Chùa Phúc Lâm – Dấu tích nhà Phật nơi miền sơn cước có gì đặc sắc?,rag,tourism
+Mô tả trải nghiệm du lịch tại Chùa Phúc Lâm – Dấu tích nhà Phật nơi miền sơn cước.,rag,tourism
+Chùa Phúc Lâm – Dấu tích nhà Phật nơi miền sơn cước nằm ở đâu?,kg,tourism
+Địa chỉ của Chùa Phúc Lâm – Dấu tích nhà Phật nơi miền sơn cước là gì?,kg,tourism
+Chùa Phúc Lâm – Dấu tích nhà Phật nơi miền sơn cước thuộc tỉnh nào và có gì đáng chú ý?,hybrid,tourism
+Giới thiệu Khám phá động Song Long.,rag,tourism
+Tham quan Khám phá động Song Long có gì đặc sắc?,rag,tourism
+Mô tả trải nghiệm du lịch tại Khám phá động Song Long.,rag,tourism
+Khám phá động Song Long nằm ở đâu?,kg,tourism
+Địa chỉ của Khám phá động Song Long là gì?,kg,tourism
+Khám phá động Song Long thuộc tỉnh nào và có gì đáng chú ý?,hybrid,tourism
+Giới thiệu Thác Khuổi Nhi – điểm du lịch hấp dẫn.,rag,tourism
+Tham quan Thác Khuổi Nhi – điểm du lịch hấp dẫn có gì đặc sắc?,rag,tourism
+Mô tả trải nghiệm du lịch tại Thác Khuổi Nhi – điểm du lịch hấp dẫn.,rag,tourism
+Thác Khuổi Nhi – điểm du lịch hấp dẫn nằm ở đâu?,kg,tourism
+Địa chỉ của Thác Khuổi Nhi – điểm du lịch hấp dẫn là gì?,kg,tourism
+Thác Khuổi Nhi – điểm du lịch hấp dẫn thuộc tỉnh nào và có gì đáng chú ý?,hybrid,tourism
+Giới thiệu Tượng đường kéo pháo.,rag,tourism
+Tham quan Tượng đường kéo pháo có gì đặc sắc?,rag,tourism
+Mô tả trải nghiệm du lịch tại Tượng đường kéo pháo.,rag,tourism
+Tượng đường kéo pháo nằm ở đâu?,kg,tourism
+Địa chỉ của Tượng đường kéo pháo là gì?,kg,tourism
+Tượng đường kéo pháo thuộc tỉnh nào và có gì đáng chú ý?,hybrid,tourism
+Các điểm du lịch nào ở Tỉnh Điện Biên?,kg,tourism
+Giới thiệu Thị xã Mường Lay.,rag,tourism
+Tham quan Thị xã Mường Lay có gì đặc sắc?,rag,tourism
+Mô tả trải nghiệm du lịch tại Thị xã Mường Lay.,rag,tourism
+Thị xã Mường Lay nằm ở đâu?,kg,tourism
+Địa chỉ của Thị xã Mường Lay là gì?,kg,tourism
+Thị xã Mường Lay thuộc tỉnh nào và có gì đáng chú ý?,hybrid,tourism
+Giới thiệu Tháp Chiềng Sơ.,rag,tourism
+Tham quan Tháp Chiềng Sơ có gì đặc sắc?,rag,tourism
+Mô tả trải nghiệm du lịch tại Tháp Chiềng Sơ.,rag,tourism
+Tháp Chiềng Sơ nằm ở đâu?,kg,tourism
+Địa chỉ của Tháp Chiềng Sơ là gì?,kg,tourism
+Tháp Chiềng Sơ thuộc tỉnh nào và có gì đáng chú ý?,hybrid,tourism
+Giới thiệu Tây Bắc Bách Hoa Viên.,rag,tourism
+Tham quan Tây Bắc Bách Hoa Viên có gì đặc sắc?,rag,tourism
+Mô tả trải nghiệm du lịch tại Tây Bắc Bách Hoa Viên.,rag,tourism
+Tây Bắc Bách Hoa Viên nằm ở đâu?,kg,tourism
+Địa chỉ của Tây Bắc Bách Hoa Viên là gì?,kg,tourism
+Tây Bắc Bách Hoa Viên thuộc tỉnh nào và có gì đáng chú ý?,hybrid,tourism
+Giới thiệu Nghĩa trang liệt sỹ A1.,rag,tourism
+Tham quan Nghĩa trang liệt sỹ A1 có gì đặc sắc?,rag,tourism
+Mô tả trải nghiệm du lịch tại Nghĩa trang liệt sỹ A1.,rag,tourism
+Nghĩa trang liệt sỹ A1 nằm ở đâu?,kg,tourism
+Địa chỉ của Nghĩa trang liệt sỹ A1 là gì?,kg,tourism
+Nghĩa trang liệt sỹ A1 thuộc tỉnh nào và có gì đáng chú ý?,hybrid,tourism
+Giới thiệu Hồ Pá Khoang.,rag,tourism
+Tham quan Hồ Pá Khoang có gì đặc sắc?,rag,tourism
+Mô tả trải nghiệm du lịch tại Hồ Pá Khoang.,rag,tourism
+Hồ Pá Khoang nằm ở đâu?,kg,tourism
+Địa chỉ của Hồ Pá Khoang là gì?,kg,tourism
+Hồ Pá Khoang thuộc tỉnh nào và có gì đáng chú ý?,hybrid,tourism
+Giới thiệu Sìn Hồ.,rag,tourism
+Tham quan Sìn Hồ có gì đặc sắc?,rag,tourism
+Mô tả trải nghiệm du lịch tại Sìn Hồ.,rag,tourism
+Sìn Hồ nằm ở đâu?,kg,tourism
+Địa chỉ của Sìn Hồ là gì?,kg,tourism
+Sìn Hồ thuộc tỉnh nào và có gì đáng chú ý?,hybrid,tourism
+Các điểm du lịch nào ở Tỉnh Lai Châu?,kg,tourism
+Giới thiệu Chợ rừng Dào San.,rag,tourism
+Tham quan Chợ rừng Dào San có gì đặc sắc?,rag,tourism
+Mô tả trải nghiệm du lịch tại Chợ rừng Dào San.,rag,tourism
+Chợ rừng Dào San nằm ở đâu?,kg,tourism
+Địa chỉ của Chợ rừng Dào San là gì?,kg,tourism
+Chợ rừng Dào San thuộc tỉnh nào và có gì đáng chú ý?,hybrid,tourism
+Giới thiệu Khu di tích nhà tù và bảo tàng tỉnh Sơn La.,rag,tourism
+Tham quan Khu di tích nhà tù và bảo tàng tỉnh Sơn La có gì đặc sắc?,rag,tourism
+Mô tả trải nghiệm du lịch tại Khu di tích nhà tù và bảo tàng tỉnh Sơn La.,rag,tourism
+Khu di tích nhà tù và bảo tàng tỉnh Sơn La nằm ở đâu?,kg,tourism
+Địa chỉ của Khu di tích nhà tù và bảo tàng tỉnh Sơn La là gì?,kg,tourism
+Khu di tích nhà tù và bảo tàng tỉnh Sơn La thuộc tỉnh nào và có gì đáng chú ý?,hybrid,tourism
+Các điểm du lịch nào ở Tỉnh Sơn La?,kg,tourism
+Giới thiệu Cao nguyên Mộc Châu.,rag,tourism
+Tham quan Cao nguyên Mộc Châu có gì đặc sắc?,rag,tourism
+Mô tả trải nghiệm du lịch tại Cao nguyên Mộc Châu.,rag,tourism
+Cao nguyên Mộc Châu nằm ở đâu?,kg,tourism
+Địa chỉ của Cao nguyên Mộc Châu là gì?,kg,tourism
+Cao nguyên Mộc Châu thuộc tỉnh nào và có gì đáng chú ý?,hybrid,tourism
+Giới thiệu Thác Háng Tề Chơ.,rag,tourism
+Tham quan Thác Háng Tề Chơ có gì đặc sắc?,rag,tourism
+Mô tả trải nghiệm du lịch tại Thác Háng Tề Chơ.,rag,tourism
+Thác Háng Tề Chơ nằm ở đâu?,kg,tourism
+Địa chỉ của Thác Háng Tề Chơ là gì?,kg,tourism
+Thác Háng Tề Chơ thuộc tỉnh nào và có gì đáng chú ý?,hybrid,tourism
+Các điểm du lịch nào ở Tỉnh Lào Cai?,kg,tourism
+Giới thiệu Thác Pú Nhu.,rag,tourism
+Tham quan Thác Pú Nhu có gì đặc sắc?,rag,tourism
+Mô tả trải nghiệm du lịch tại Thác Pú Nhu.,rag,tourism
+Thác Pú Nhu nằm ở đâu?,kg,tourism
+Địa chỉ của Thác Pú Nhu là gì?,kg,tourism
+Thác Pú Nhu thuộc tỉnh nào và có gì đáng chú ý?,hybrid,tourism
+Giới thiệu Suối Giàng.,rag,tourism
+Tham quan Suối Giàng có gì đặc sắc?,rag,tourism
+Mô tả trải nghiệm du lịch tại Suối Giàng.,rag,tourism
+Suối Giàng nằm ở đâu?,kg,tourism
+Địa chỉ của Suối Giàng là gì?,kg,tourism
+Suối Giàng thuộc tỉnh nào và có gì đáng chú ý?,hybrid,tourism
+Giới thiệu Đền Đại Cại - núi Hắc Y.,rag,tourism
+Tham quan Đền Đại Cại - núi Hắc Y có gì đặc sắc?,rag,tourism
+Mô tả trải nghiệm du lịch tại Đền Đại Cại - núi Hắc Y.,rag,tourism
+Đền Đại Cại - núi Hắc Y nằm ở đâu?,kg,tourism
+Địa chỉ của Đền Đại Cại - núi Hắc Y là gì?,kg,tourism
+Đền Đại Cại - núi Hắc Y thuộc tỉnh nào và có gì đáng chú ý?,hybrid,tourism
+Giới thiệu Thành cổ Nghị Lang.,rag,tourism
+Tham quan Thành cổ Nghị Lang có gì đặc sắc?,rag,tourism
+Mô tả trải nghiệm du lịch tại Thành cổ Nghị Lang.,rag,tourism
+Thành cổ Nghị Lang nằm ở đâu?,kg,tourism
+Địa chỉ của Thành cổ Nghị Lang là gì?,kg,tourism
+Thành cổ Nghị Lang thuộc tỉnh nào và có gì đáng chú ý?,hybrid,tourism
+Giới thiệu Vườn Quốc gia Hoàng Liên.,rag,tourism
+Tham quan Vườn Quốc gia Hoàng Liên có gì đặc sắc?,rag,tourism
+Mô tả trải nghiệm du lịch tại Vườn Quốc gia Hoàng Liên.,rag,tourism
+Vườn Quốc gia Hoàng Liên nằm ở đâu?,kg,tourism
+Địa chỉ của Vườn Quốc gia Hoàng Liên là gì?,kg,tourism
+Vườn Quốc gia Hoàng Liên thuộc tỉnh nào và có gì đáng chú ý?,hybrid,tourism
+Giới thiệu Làng nhà sàn Thái Hải.,rag,tourism
+Tham quan Làng nhà sàn Thái Hải có gì đặc sắc?,rag,tourism
+Mô tả trải nghiệm du lịch tại Làng nhà sàn Thái Hải.,rag,tourism
+Làng nhà sàn Thái Hải nằm ở đâu?,kg,tourism
+Địa chỉ của Làng nhà sàn Thái Hải là gì?,kg,tourism
+Làng nhà sàn Thái Hải thuộc tỉnh nào và có gì đáng chú ý?,hybrid,tourism
+Các điểm du lịch nào ở Tỉnh Thái Nguyên?,kg,tourism
+Giới thiệu Trại ngựa Bá Vân.,rag,tourism
+Tham quan Trại ngựa Bá Vân có gì đặc sắc?,rag,tourism
+Mô tả trải nghiệm du lịch tại Trại ngựa Bá Vân.,rag,tourism
+Trại ngựa Bá Vân nằm ở đâu?,kg,tourism
+Địa chỉ của Trại ngựa Bá Vân là gì?,kg,tourism
+Trại ngựa Bá Vân thuộc tỉnh nào và có gì đáng chú ý?,hybrid,tourism
+Giới thiệu Hồ Vai Miếu.,rag,tourism
+Tham quan Hồ Vai Miếu có gì đặc sắc?,rag,tourism
+Mô tả trải nghiệm du lịch tại Hồ Vai Miếu.,rag,tourism
+Hồ Vai Miếu nằm ở đâu?,kg,tourism
+Địa chỉ của Hồ Vai Miếu là gì?,kg,tourism
+Hồ Vai Miếu thuộc tỉnh nào và có gì đáng chú ý?,hybrid,tourism
+Giới thiệu Thác Khuôn Tát.,rag,tourism
+Tham quan Thác Khuôn Tát có gì đặc sắc?,rag,tourism
+Mô tả trải nghiệm du lịch tại Thác Khuôn Tát.,rag,tourism
+Thác Khuôn Tát nằm ở đâu?,kg,tourism
+Địa chỉ của Thác Khuôn Tát là gì?,kg,tourism
+Thác Khuôn Tát thuộc tỉnh nào và có gì đáng chú ý?,hybrid,tourism
+Giới thiệu Hồ Ghềnh Chè.,rag,tourism
+Tham quan Hồ Ghềnh Chè có gì đặc sắc?,rag,tourism
+Mô tả trải nghiệm du lịch tại Hồ Ghềnh Chè.,rag,tourism
+Hồ Ghềnh Chè nằm ở đâu?,kg,tourism
+Địa chỉ của Hồ Ghềnh Chè là gì?,kg,tourism
+Hồ Ghềnh Chè thuộc tỉnh nào và có gì đáng chú ý?,hybrid,tourism
+Giới thiệu Chùa Hang Thái Nguyên.,rag,tourism
+Tham quan Chùa Hang Thái Nguyên có gì đặc sắc?,rag,tourism
+Mô tả trải nghiệm du lịch tại Chùa Hang Thái Nguyên.,rag,tourism
+Chùa Hang Thái Nguyên nằm ở đâu?,kg,tourism
+Địa chỉ của Chùa Hang Thái Nguyên là gì?,kg,tourism
+Chùa Hang Thái Nguyên thuộc tỉnh nào và có gì đáng chú ý?,hybrid,tourism
+Giới thiệu Núi Mẫu Sơn.,rag,tourism
+Tham quan Núi Mẫu Sơn có gì đặc sắc?,rag,tourism
+Mô tả trải nghiệm du lịch tại Núi Mẫu Sơn.,rag,tourism
+Núi Mẫu Sơn nằm ở đâu?,kg,tourism
+Địa chỉ của Núi Mẫu Sơn là gì?,kg,tourism
+Núi Mẫu Sơn thuộc tỉnh nào và có gì đáng chú ý?,hybrid,tourism
+Các điểm du lịch nào ở Tỉnh Lạng Sơn?,kg,tourism
+Giới thiệu Động Tam Thanh.,rag,tourism
+Tham quan Động Tam Thanh có gì đặc sắc?,rag,tourism
+Mô tả trải nghiệm du lịch tại Động Tam Thanh.,rag,tourism
+Động Tam Thanh nằm ở đâu?,kg,tourism
+Địa chỉ của Động Tam Thanh là gì?,kg,tourism
+Động Tam Thanh thuộc tỉnh nào và có gì đáng chú ý?,hybrid,tourism
+Giới thiệu Khu du lịch Hồ Yên Trung.,rag,tourism
+Tham quan Khu du lịch Hồ Yên Trung có gì đặc sắc?,rag,tourism
+Mô tả trải nghiệm du lịch tại Khu du lịch Hồ Yên Trung.,rag,tourism
+Khu du lịch Hồ Yên Trung nằm ở đâu?,kg,tourism
+Địa chỉ của Khu du lịch Hồ Yên Trung là gì?,kg,tourism
+Khu du lịch Hồ Yên Trung thuộc tỉnh nào và có gì đáng chú ý?,hybrid,tourism
+Các điểm du lịch nào ở Thành phố Quảng Ninh?,kg,tourism
+Giới thiệu Khu Du lịch cấp quốc gia Trà Cổ Móng Cái.,rag,tourism
+Tham quan Khu Du lịch cấp quốc gia Trà Cổ Móng Cái có gì đặc sắc?,rag,tourism
+Mô tả trải nghiệm du lịch tại Khu Du lịch cấp quốc gia Trà Cổ Móng Cái.,rag,tourism
+Khu Du lịch cấp quốc gia Trà Cổ Móng Cái nằm ở đâu?,kg,tourism
+Địa chỉ của Khu Du lịch cấp quốc gia Trà Cổ Móng Cái là gì?,kg,tourism
+Khu Du lịch cấp quốc gia Trà Cổ Móng Cái thuộc tỉnh nào và có gì đáng chú ý?,hybrid,tourism
+Giới thiệu Khu Du lịch Bình Liêu.,rag,tourism
+Tham quan Khu Du lịch Bình Liêu có gì đặc sắc?,rag,tourism
+Mô tả trải nghiệm du lịch tại Khu Du lịch Bình Liêu.,rag,tourism
+Khu Du lịch Bình Liêu nằm ở đâu?,kg,tourism
+Địa chỉ của Khu Du lịch Bình Liêu là gì?,kg,tourism
+Khu Du lịch Bình Liêu thuộc tỉnh nào và có gì đáng chú ý?,hybrid,tourism
+Giới thiệu Đền Bà Chúa Kho.,rag,tourism
+Tham quan Đền Bà Chúa Kho có gì đặc sắc?,rag,tourism
+Mô tả trải nghiệm du lịch tại Đền Bà Chúa Kho.,rag,tourism
+Đền Bà Chúa Kho nằm ở đâu?,kg,tourism
+Địa chỉ của Đền Bà Chúa Kho là gì?,kg,tourism
+Đền Bà Chúa Kho thuộc tỉnh nào và có gì đáng chú ý?,hybrid,tourism
+Các điểm du lịch nào ở Thành phố Bắc Ninh?,kg,tourism
+Giới thiệu Đền Vua Bà.,rag,tourism
+Tham quan Đền Vua Bà có gì đặc sắc?,rag,tourism
+Mô tả trải nghiệm du lịch tại Đền Vua Bà.,rag,tourism
+Đền Vua Bà nằm ở đâu?,kg,tourism
+Địa chỉ của Đền Vua Bà là gì?,kg,tourism
+Đền Vua Bà thuộc tỉnh nào và có gì đáng chú ý?,hybrid,tourism
+Giới thiệu Đình Đẩu Hàn.,rag,tourism
+Tham quan Đình Đẩu Hàn có gì đặc sắc?,rag,tourism
+Mô tả trải nghiệm du lịch tại Đình Đẩu Hàn.,rag,tourism
+Đình Đẩu Hàn nằm ở đâu?,kg,tourism
+Địa chỉ của Đình Đẩu Hàn là gì?,kg,tourism
+Đình Đẩu Hàn thuộc tỉnh nào và có gì đáng chú ý?,hybrid,tourism
+Giới thiệu Nhà thờ Chính tòa Bắc Ninh.,rag,tourism
+Tham quan Nhà thờ Chính tòa Bắc Ninh có gì đặc sắc?,rag,tourism
+Mô tả trải nghiệm du lịch tại Nhà thờ Chính tòa Bắc Ninh.,rag,tourism
+Nhà thờ Chính tòa Bắc Ninh nằm ở đâu?,kg,tourism
+Địa chỉ của Nhà thờ Chính tòa Bắc Ninh là gì?,kg,tourism
+Nhà thờ Chính tòa Bắc Ninh thuộc tỉnh nào và có gì đáng chú ý?,hybrid,tourism
+Giới thiệu Giếng Ngọc - Đền Cùng.,rag,tourism
+Tham quan Giếng Ngọc - Đền Cùng có gì đặc sắc?,rag,tourism
+Mô tả trải nghiệm du lịch tại Giếng Ngọc - Đền Cùng.,rag,tourism
+Giếng Ngọc - Đền Cùng nằm ở đâu?,kg,tourism
+Địa chỉ của Giếng Ngọc - Đền Cùng là gì?,kg,tourism
+Giếng Ngọc - Đền Cùng thuộc tỉnh nào và có gì đáng chú ý?,hybrid,tourism
+Giới thiệu Khu du lịch Đầm Vạc.,rag,tourism
+Tham quan Khu du lịch Đầm Vạc có gì đặc sắc?,rag,tourism
+Mô tả trải nghiệm du lịch tại Khu du lịch Đầm Vạc.,rag,tourism
+Khu du lịch Đầm Vạc nằm ở đâu?,kg,tourism
+Địa chỉ của Khu du lịch Đầm Vạc là gì?,kg,tourism
+Khu du lịch Đầm Vạc thuộc tỉnh nào và có gì đáng chú ý?,hybrid,tourism
+Các điểm du lịch nào ở Tỉnh Phú Thọ?,kg,tourism
+Giới thiệu Hồ Xạ Hương.,rag,tourism
+Tham quan Hồ Xạ Hương có gì đặc sắc?,rag,tourism
+Mô tả trải nghiệm du lịch tại Hồ Xạ Hương.,rag,tourism
+Hồ Xạ Hương nằm ở đâu?,kg,tourism
+Địa chỉ của Hồ Xạ Hương là gì?,kg,tourism
+Hồ Xạ Hương thuộc tỉnh nào và có gì đáng chú ý?,hybrid,tourism
+Giới thiệu Làng gốm Hương Canh.,rag,tourism
+Tham quan Làng gốm Hương Canh có gì đặc sắc?,rag,tourism
+Mô tả trải nghiệm du lịch tại Làng gốm Hương Canh.,rag,tourism
+Làng gốm Hương Canh nằm ở đâu?,kg,tourism
+Địa chỉ của Làng gốm Hương Canh là gì?,kg,tourism
+Làng gốm Hương Canh thuộc tỉnh nào và có gì đáng chú ý?,hybrid,tourism
+Giới thiệu Vườn cò Hải Lựu.,rag,tourism
+Tham quan Vườn cò Hải Lựu có gì đặc sắc?,rag,tourism
+Mô tả trải nghiệm du lịch tại Vườn cò Hải Lựu.,rag,tourism
+Vườn cò Hải Lựu nằm ở đâu?,kg,tourism
+Địa chỉ của Vườn cò Hải Lựu là gì?,kg,tourism
+Vườn cò Hải Lựu thuộc tỉnh nào và có gì đáng chú ý?,hybrid,tourism
+Giới thiệu Mộ Cổ Đống Thếch.,rag,tourism
+Tham quan Mộ Cổ Đống Thếch có gì đặc sắc?,rag,tourism
+Mô tả trải nghiệm du lịch tại Mộ Cổ Đống Thếch.,rag,tourism
+Mộ Cổ Đống Thếch nằm ở đâu?,kg,tourism
+Địa chỉ của Mộ Cổ Đống Thếch là gì?,kg,tourism
+Mộ Cổ Đống Thếch thuộc tỉnh nào và có gì đáng chú ý?,hybrid,tourism
+Giới thiệu Hang Chiều.,rag,tourism
+Tham quan Hang Chiều có gì đặc sắc?,rag,tourism
+Mô tả trải nghiệm du lịch tại Hang Chiều.,rag,tourism
+Hang Chiều nằm ở đâu?,kg,tourism
+Địa chỉ của Hang Chiều là gì?,kg,tourism
+Hang Chiều thuộc tỉnh nào và có gì đáng chú ý?,hybrid,tourism
+Giới thiệu Linh Sơn Viên Giác Tự.,rag,tourism
+Tham quan Linh Sơn Viên Giác Tự có gì đặc sắc?,rag,tourism
+Mô tả trải nghiệm du lịch tại Linh Sơn Viên Giác Tự.,rag,tourism
+Linh Sơn Viên Giác Tự nằm ở đâu?,kg,tourism
+Địa chỉ của Linh Sơn Viên Giác Tự là gì?,kg,tourism
+Linh Sơn Viên Giác Tự thuộc tỉnh nào và có gì đáng chú ý?,hybrid,tourism
+Các điểm du lịch nào ở Thành phố Hải Phòng?,kg,tourism
+Giới thiệu Khu Di tích núi Voi.,rag,tourism
+Tham quan Khu Di tích núi Voi có gì đặc sắc?,rag,tourism
+Mô tả trải nghiệm du lịch tại Khu Di tích núi Voi.,rag,tourism
+Khu Di tích núi Voi nằm ở đâu?,kg,tourism
+Địa chỉ của Khu Di tích núi Voi là gì?,kg,tourism
+Khu Di tích núi Voi thuộc tỉnh nào và có gì đáng chú ý?,hybrid,tourism
+Giới thiệu Chùa Cao Linh.,rag,tourism
+Tham quan Chùa Cao Linh có gì đặc sắc?,rag,tourism
+Mô tả trải nghiệm du lịch tại Chùa Cao Linh.,rag,tourism
+Chùa Cao Linh nằm ở đâu?,kg,tourism
+Địa chỉ của Chùa Cao Linh là gì?,kg,tourism
+Chùa Cao Linh thuộc tỉnh nào và có gì đáng chú ý?,hybrid,tourism
+Giới thiệu Vườn Quốc Gia Cát Bà.,rag,tourism
+Tham quan Vườn Quốc Gia Cát Bà có gì đặc sắc?,rag,tourism
+Mô tả trải nghiệm du lịch tại Vườn Quốc Gia Cát Bà.,rag,tourism
+Vườn Quốc Gia Cát Bà nằm ở đâu?,kg,tourism
+Địa chỉ của Vườn Quốc Gia Cát Bà là gì?,kg,tourism
+Vườn Quốc Gia Cát Bà thuộc tỉnh nào và có gì đáng chú ý?,hybrid,tourism
+Giới thiệu Vịnh Lan Hạ.,rag,tourism
+Tham quan Vịnh Lan Hạ có gì đặc sắc?,rag,tourism
+Mô tả trải nghiệm du lịch tại Vịnh Lan Hạ.,rag,tourism
+Vịnh Lan Hạ nằm ở đâu?,kg,tourism
+Địa chỉ của Vịnh Lan Hạ là gì?,kg,tourism
+Vịnh Lan Hạ thuộc tỉnh nào và có gì đáng chú ý?,hybrid,tourism
+Giới thiệu Quán Hoa.,rag,tourism
+Tham quan Quán Hoa có gì đặc sắc?,rag,tourism
+Mô tả trải nghiệm du lịch tại Quán Hoa.,rag,tourism
+Quán Hoa nằm ở đâu?,kg,tourism
+Địa chỉ của Quán Hoa là gì?,kg,tourism
+Quán Hoa thuộc tỉnh nào và có gì đáng chú ý?,hybrid,tourism
+Giới thiệu Làng nghề dệt chiếu Hới.,rag,tourism
+Tham quan Làng nghề dệt chiếu Hới có gì đặc sắc?,rag,tourism
+Mô tả trải nghiệm du lịch tại Làng nghề dệt chiếu Hới.,rag,tourism
+Làng nghề dệt chiếu Hới nằm ở đâu?,kg,tourism
+Địa chỉ của Làng nghề dệt chiếu Hới là gì?,kg,tourism
+Làng nghề dệt chiếu Hới thuộc tỉnh nào và có gì đáng chú ý?,hybrid,tourism
+Các điểm du lịch nào ở Tỉnh Hưng Yên?,kg,tourism
+Giới thiệu Khu du lịch Cồn Đen.,rag,tourism
+Tham quan Khu du lịch Cồn Đen có gì đặc sắc?,rag,tourism
+Mô tả trải nghiệm du lịch tại Khu du lịch Cồn Đen.,rag,tourism
+Khu du lịch Cồn Đen nằm ở đâu?,kg,tourism
+Địa chỉ của Khu du lịch Cồn Đen là gì?,kg,tourism
+Khu du lịch Cồn Đen thuộc tỉnh nào và có gì đáng chú ý?,hybrid,tourism
+Giới thiệu Nhà thờ Bác Trạch.,rag,tourism
+Tham quan Nhà thờ Bác Trạch có gì đặc sắc?,rag,tourism
+Mô tả trải nghiệm du lịch tại Nhà thờ Bác Trạch.,rag,tourism
+Nhà thờ Bác Trạch nằm ở đâu?,kg,tourism
+Địa chỉ của Nhà thờ Bác Trạch là gì?,kg,tourism
+Nhà thờ Bác Trạch thuộc tỉnh nào và có gì đáng chú ý?,hybrid,tourism
+Giới thiệu Làng nghề tương Bần.,rag,tourism
+Tham quan Làng nghề tương Bần có gì đặc sắc?,rag,tourism
+Mô tả trải nghiệm du lịch tại Làng nghề tương Bần.,rag,tourism
+Làng nghề tương Bần nằm ở đâu?,kg,tourism
+Địa chỉ của Làng nghề tương Bần là gì?,kg,tourism
+Làng nghề tương Bần thuộc tỉnh nào và có gì đáng chú ý?,hybrid,tourism
+Giới thiệu Làng nghề Đúc đồng Lộng Thượng.,rag,tourism
+Tham quan Làng nghề Đúc đồng Lộng Thượng có gì đặc sắc?,rag,tourism
+Mô tả trải nghiệm du lịch tại Làng nghề Đúc đồng Lộng Thượng.,rag,tourism
+Làng nghề Đúc đồng Lộng Thượng nằm ở đâu?,kg,tourism
+Địa chỉ của Làng nghề Đúc đồng Lộng Thượng là gì?,kg,tourism
+Làng nghề Đúc đồng Lộng Thượng thuộc tỉnh nào và có gì đáng chú ý?,hybrid,tourism
+Giới thiệu Hồ Bán Nguyệt.,rag,tourism
+Tham quan Hồ Bán Nguyệt có gì đặc sắc?,rag,tourism
+Mô tả trải nghiệm du lịch tại Hồ Bán Nguyệt.,rag,tourism
+Hồ Bán Nguyệt nằm ở đâu?,kg,tourism
+Địa chỉ của Hồ Bán Nguyệt là gì?,kg,tourism
+Hồ Bán Nguyệt thuộc tỉnh nào và có gì đáng chú ý?,hybrid,tourism
+Giới thiệu Khu du lịch sinh thái Tràng An.,rag,tourism
+Tham quan Khu du lịch sinh thái Tràng An có gì đặc sắc?,rag,tourism
+Mô tả trải nghiệm du lịch tại Khu du lịch sinh thái Tràng An.,rag,tourism
+Khu du lịch sinh thái Tràng An nằm ở đâu?,kg,tourism
+Địa chỉ của Khu du lịch sinh thái Tràng An là gì?,kg,tourism
+Khu du lịch sinh thái Tràng An thuộc tỉnh nào và có gì đáng chú ý?,hybrid,tourism
+Các điểm du lịch nào ở Tỉnh Ninh Bình?,kg,tourism
+Giới thiệu Tam Cốc - Bích Động.,rag,tourism
+Tham quan Tam Cốc - Bích Động có gì đặc sắc?,rag,tourism
+Mô tả trải nghiệm du lịch tại Tam Cốc - Bích Động.,rag,tourism
+Tam Cốc - Bích Động nằm ở đâu?,kg,tourism
+Địa chỉ của Tam Cốc - Bích Động là gì?,kg,tourism
+Tam Cốc - Bích Động thuộc tỉnh nào và có gì đáng chú ý?,hybrid,tourism
+Giới thiệu Chùa Phổ Minh.,rag,tourism
+Tham quan Chùa Phổ Minh có gì đặc sắc?,rag,tourism
+Mô tả trải nghiệm du lịch tại Chùa Phổ Minh.,rag,tourism
+Chùa Phổ Minh nằm ở đâu?,kg,tourism
+Địa chỉ của Chùa Phổ Minh là gì?,kg,tourism
+Chùa Phổ Minh thuộc tỉnh nào và có gì đáng chú ý?,hybrid,tourism
+Giới thiệu Vườn quốc gia Xuân Thủy.,rag,tourism
+Tham quan Vườn quốc gia Xuân Thủy có gì đặc sắc?,rag,tourism
+Mô tả trải nghiệm du lịch tại Vườn quốc gia Xuân Thủy.,rag,tourism
+Vườn quốc gia Xuân Thủy nằm ở đâu?,kg,tourism
+Địa chỉ của Vườn quốc gia Xuân Thủy là gì?,kg,tourism
+Vườn quốc gia Xuân Thủy thuộc tỉnh nào và có gì đáng chú ý?,hybrid,tourism
+Giới thiệu Chùa Cổ Lễ.,rag,tourism
+Tham quan Chùa Cổ Lễ có gì đặc sắc?,rag,tourism
+Mô tả trải nghiệm du lịch tại Chùa Cổ Lễ.,rag,tourism
+Chùa Cổ Lễ nằm ở đâu?,kg,tourism
+Địa chỉ của Chùa Cổ Lễ là gì?,kg,tourism
+Chùa Cổ Lễ thuộc tỉnh nào và có gì đáng chú ý?,hybrid,tourism
+Giới thiệu Vườn Quốc gia Cúc Phương.,rag,tourism
+Tham quan Vườn Quốc gia Cúc Phương có gì đặc sắc?,rag,tourism
+Mô tả trải nghiệm du lịch tại Vườn Quốc gia Cúc Phương.,rag,tourism
+Vườn Quốc gia Cúc Phương nằm ở đâu?,kg,tourism
+Địa chỉ của Vườn Quốc gia Cúc Phương là gì?,kg,tourism
+Vườn Quốc gia Cúc Phương thuộc tỉnh nào và có gì đáng chú ý?,hybrid,tourism
+Giới thiệu Động Tiên Sơn.,rag,tourism
+Tham quan Động Tiên Sơn có gì đặc sắc?,rag,tourism
+Mô tả trải nghiệm du lịch tại Động Tiên Sơn.,rag,tourism
+Động Tiên Sơn nằm ở đâu?,kg,tourism
+Địa chỉ của Động Tiên Sơn là gì?,kg,tourism
+Động Tiên Sơn thuộc tỉnh nào và có gì đáng chú ý?,hybrid,tourism
+Các điểm du lịch nào ở Tỉnh Thanh Hóa?,kg,tourism
+Giới thiệu Thái miếu nhà Hậu Lê.,rag,tourism
+Tham quan Thái miếu nhà Hậu Lê có gì đặc sắc?,rag,tourism
+Mô tả trải nghiệm du lịch tại Thái miếu nhà Hậu Lê.,rag,tourism
+Thái miếu nhà Hậu Lê nằm ở đâu?,kg,tourism
+Địa chỉ của Thái miếu nhà Hậu Lê là gì?,kg,tourism
+Thái miếu nhà Hậu Lê thuộc tỉnh nào và có gì đáng chú ý?,hybrid,tourism
+Giới thiệu Khu bảo tồn thiên nhiên Pù Luông.,rag,tourism
+Tham quan Khu bảo tồn thiên nhiên Pù Luông có gì đặc sắc?,rag,tourism
+Mô tả trải nghiệm du lịch tại Khu bảo tồn thiên nhiên Pù Luông.,rag,tourism
+Khu bảo tồn thiên nhiên Pù Luông nằm ở đâu?,kg,tourism
+Địa chỉ của Khu bảo tồn thiên nhiên Pù Luông là gì?,kg,tourism
+Khu bảo tồn thiên nhiên Pù Luông thuộc tỉnh nào và có gì đáng chú ý?,hybrid,tourism
+Giới thiệu KHU LƯU NIỆM - NƠI THÀNH LẬP CHI BỘ ĐẢNG ĐẦU TIÊN CỦA SẦM SƠN.,rag,tourism
+Tham quan KHU LƯU NIỆM - NƠI THÀNH LẬP CHI BỘ ĐẢNG ĐẦU TIÊN CỦA SẦM SƠN có gì đặc sắc?,rag,tourism
+Mô tả trải nghiệm du lịch tại KHU LƯU NIỆM - NƠI THÀNH LẬP CHI BỘ ĐẢNG ĐẦU TIÊN CỦA SẦM SƠN.,rag,tourism
+KHU LƯU NIỆM - NƠI THÀNH LẬP CHI BỘ ĐẢNG ĐẦU TIÊN CỦA SẦM SƠN nằm ở đâu?,kg,tourism
+Địa chỉ của KHU LƯU NIỆM - NƠI THÀNH LẬP CHI BỘ ĐẢNG ĐẦU TIÊN CỦA SẦM SƠN là gì?,kg,tourism
+KHU LƯU NIỆM - NƠI THÀNH LẬP CHI BỘ ĐẢNG ĐẦU TIÊN CỦA SẦM SƠN thuộc tỉnh nào và có gì đáng chú ý?,hybrid,tourism
+Giới thiệu ĐỀN THỜ TRẦN HƯNG ĐẠO.,rag,tourism
+Tham quan ĐỀN THỜ TRẦN HƯNG ĐẠO có gì đặc sắc?,rag,tourism
+Mô tả trải nghiệm du lịch tại ĐỀN THỜ TRẦN HƯNG ĐẠO.,rag,tourism
+ĐỀN THỜ TRẦN HƯNG ĐẠO nằm ở đâu?,kg,tourism
+Địa chỉ của ĐỀN THỜ TRẦN HƯNG ĐẠO là gì?,kg,tourism
+ĐỀN THỜ TRẦN HƯNG ĐẠO thuộc tỉnh nào và có gì đáng chú ý?,hybrid,tourism
+Giới thiệu DI CHỈ KHẢO CỔ HỌC VĂN HOÁ ĐÔNG SƠN.,rag,tourism
+Tham quan DI CHỈ KHẢO CỔ HỌC VĂN HOÁ ĐÔNG SƠN có gì đặc sắc?,rag,tourism
+Mô tả trải nghiệm du lịch tại DI CHỈ KHẢO CỔ HỌC VĂN HOÁ ĐÔNG SƠN.,rag,tourism
+DI CHỈ KHẢO CỔ HỌC VĂN HOÁ ĐÔNG SƠN nằm ở đâu?,kg,tourism
+Địa chỉ của DI CHỈ KHẢO CỔ HỌC VĂN HOÁ ĐÔNG SƠN là gì?,kg,tourism
+DI CHỈ KHẢO CỔ HỌC VĂN HOÁ ĐÔNG SƠN thuộc tỉnh nào và có gì đáng chú ý?,hybrid,tourism
+Giới thiệu Thác Mưa.,rag,tourism
+Tham quan Thác Mưa có gì đặc sắc?,rag,tourism
+Mô tả trải nghiệm du lịch tại Thác Mưa.,rag,tourism
+Thác Mưa nằm ở đâu?,kg,tourism
+Địa chỉ của Thác Mưa là gì?,kg,tourism
+Thác Mưa thuộc tỉnh nào và có gì đáng chú ý?,hybrid,tourism
+Các điểm du lịch nào ở Tỉnh Nghệ An?,kg,tourism
+Giới thiệu Đền Hồng Sơn.,rag,tourism
+Tham quan Đền Hồng Sơn có gì đặc sắc?,rag,tourism
+Mô tả trải nghiệm du lịch tại Đền Hồng Sơn.,rag,tourism
+Đền Hồng Sơn nằm ở đâu?,kg,tourism
+Địa chỉ của Đền Hồng Sơn là gì?,kg,tourism
+Đền Hồng Sơn thuộc tỉnh nào và có gì đáng chú ý?,hybrid,tourism
+Giới thiệu Điểm du lịch cộng đồng Bản Nưa.,rag,tourism
+Tham quan Điểm du lịch cộng đồng Bản Nưa có gì đặc sắc?,rag,tourism
+Mô tả trải nghiệm du lịch tại Điểm du lịch cộng đồng Bản Nưa.,rag,tourism
+Điểm du lịch cộng đồng Bản Nưa nằm ở đâu?,kg,tourism
+Địa chỉ của Điểm du lịch cộng đồng Bản Nưa là gì?,kg,tourism
+Điểm du lịch cộng đồng Bản Nưa thuộc tỉnh nào và có gì đáng chú ý?,hybrid,tourism
+Giới thiệu Hang Thắm Nàng Màn.,rag,tourism
+Tham quan Hang Thắm Nàng Màn có gì đặc sắc?,rag,tourism
+Mô tả trải nghiệm du lịch tại Hang Thắm Nàng Màn.,rag,tourism
+Hang Thắm Nàng Màn nằm ở đâu?,kg,tourism
+Địa chỉ của Hang Thắm Nàng Màn là gì?,kg,tourism
+Hang Thắm Nàng Màn thuộc tỉnh nào và có gì đáng chú ý?,hybrid,tourism
+Giới thiệu Di tích Mộ bà Hoàng Thị Loan.,rag,tourism
+Tham quan Di tích Mộ bà Hoàng Thị Loan có gì đặc sắc?,rag,tourism
+Mô tả trải nghiệm du lịch tại Di tích Mộ bà Hoàng Thị Loan.,rag,tourism
+Di tích Mộ bà Hoàng Thị Loan nằm ở đâu?,kg,tourism
+Địa chỉ của Di tích Mộ bà Hoàng Thị Loan là gì?,kg,tourism
+Di tích Mộ bà Hoàng Thị Loan thuộc tỉnh nào và có gì đáng chú ý?,hybrid,tourism
+Giới thiệu Cụm di tích Làng Sen.,rag,tourism
+Tham quan Cụm di tích Làng Sen có gì đặc sắc?,rag,tourism
+Mô tả trải nghiệm du lịch tại Cụm di tích Làng Sen.,rag,tourism
+Cụm di tích Làng Sen nằm ở đâu?,kg,tourism
+Địa chỉ của Cụm di tích Làng Sen là gì?,kg,tourism
+Cụm di tích Làng Sen thuộc tỉnh nào và có gì đáng chú ý?,hybrid,tourism
+Giới thiệu Khu di tích Tổng Bí thư Trần Phú.,rag,tourism
+Tham quan Khu di tích Tổng Bí thư Trần Phú có gì đặc sắc?,rag,tourism
+Mô tả trải nghiệm du lịch tại Khu di tích Tổng Bí thư Trần Phú.,rag,tourism
+Khu di tích Tổng Bí thư Trần Phú nằm ở đâu?,kg,tourism
+Địa chỉ của Khu di tích Tổng Bí thư Trần Phú là gì?,kg,tourism
+Khu di tích Tổng Bí thư Trần Phú thuộc tỉnh nào và có gì đáng chú ý?,hybrid,tourism
+Các điểm du lịch nào ở Tỉnh Hà Tĩnh?,kg,tourism
+Giới thiệu Bãi biển Hoành Sơn.,rag,tourism
+Tham quan Bãi biển Hoành Sơn có gì đặc sắc?,rag,tourism
+Mô tả trải nghiệm du lịch tại Bãi biển Hoành Sơn.,rag,tourism
+Bãi biển Hoành Sơn nằm ở đâu?,kg,tourism
+Địa chỉ của Bãi biển Hoành Sơn là gì?,kg,tourism
+Bãi biển Hoành Sơn thuộc tỉnh nào và có gì đáng chú ý?,hybrid,tourism
+Giới thiệu Bãi biển Thiên Cầm.,rag,tourism
+Tham quan Bãi biển Thiên Cầm có gì đặc sắc?,rag,tourism
+Mô tả trải nghiệm du lịch tại Bãi biển Thiên Cầm.,rag,tourism
+Bãi biển Thiên Cầm nằm ở đâu?,kg,tourism
+Địa chỉ của Bãi biển Thiên Cầm là gì?,kg,tourism
+Bãi biển Thiên Cầm thuộc tỉnh nào và có gì đáng chú ý?,hybrid,tourism
+Giới thiệu Biển Thạch Hải.,rag,tourism
+Tham quan Biển Thạch Hải có gì đặc sắc?,rag,tourism
+Mô tả trải nghiệm du lịch tại Biển Thạch Hải.,rag,tourism
+Biển Thạch Hải nằm ở đâu?,kg,tourism
+Địa chỉ của Biển Thạch Hải là gì?,kg,tourism
+Biển Thạch Hải thuộc tỉnh nào và có gì đáng chú ý?,hybrid,tourism
+Giới thiệu Chùa Hương Tích.,rag,tourism
+Tham quan Chùa Hương Tích có gì đặc sắc?,rag,tourism
+Mô tả trải nghiệm du lịch tại Chùa Hương Tích.,rag,tourism
+Chùa Hương Tích nằm ở đâu?,kg,tourism
+Địa chỉ của Chùa Hương Tích là gì?,kg,tourism
+Chùa Hương Tích thuộc tỉnh nào và có gì đáng chú ý?,hybrid,tourism
+Giới thiệu Nhà thờ Hải Thượng Lãn Ông.,rag,tourism
+Tham quan Nhà thờ Hải Thượng Lãn Ông có gì đặc sắc?,rag,tourism
+Mô tả trải nghiệm du lịch tại Nhà thờ Hải Thượng Lãn Ông.,rag,tourism
+Nhà thờ Hải Thượng Lãn Ông nằm ở đâu?,kg,tourism
+Địa chỉ của Nhà thờ Hải Thượng Lãn Ông là gì?,kg,tourism
+Nhà thờ Hải Thượng Lãn Ông thuộc tỉnh nào và có gì đáng chú ý?,hybrid,tourism
+Giới thiệu Thác Tầm Lu.,rag,tourism
+Tham quan Thác Tầm Lu có gì đặc sắc?,rag,tourism
+Mô tả trải nghiệm du lịch tại Thác Tầm Lu.,rag,tourism
+Thác Tầm Lu nằm ở đâu?,kg,tourism
+Địa chỉ của Thác Tầm Lu là gì?,kg,tourism
+Thác Tầm Lu thuộc tỉnh nào và có gì đáng chú ý?,hybrid,tourism
+Các điểm du lịch nào ở Tỉnh Quảng Trị?,kg,tourism
+Giới thiệu Thác A Dơi.,rag,tourism
+Tham quan Thác A Dơi có gì đặc sắc?,rag,tourism
+Mô tả trải nghiệm du lịch tại Thác A Dơi.,rag,tourism
+Thác A Dơi nằm ở đâu?,kg,tourism
+Địa chỉ của Thác A Dơi là gì?,kg,tourism
+Thác A Dơi thuộc tỉnh nào và có gì đáng chú ý?,hybrid,tourism
+Giới thiệu Thác Gió.,rag,tourism
+Tham quan Thác Gió có gì đặc sắc?,rag,tourism
+Mô tả trải nghiệm du lịch tại Thác Gió.,rag,tourism
+Thác Gió nằm ở đâu?,kg,tourism
+Địa chỉ của Thác Gió là gì?,kg,tourism
+Thác Gió thuộc tỉnh nào và có gì đáng chú ý?,hybrid,tourism
+Giới thiệu Thánh địa La Vang.,rag,tourism
+Tham quan Thánh địa La Vang có gì đặc sắc?,rag,tourism
+Mô tả trải nghiệm du lịch tại Thánh địa La Vang.,rag,tourism
+Thánh địa La Vang nằm ở đâu?,kg,tourism
+Địa chỉ của Thánh địa La Vang là gì?,kg,tourism
+Thánh địa La Vang thuộc tỉnh nào và có gì đáng chú ý?,hybrid,tourism
+Giới thiệu Thác Tà Puồng.,rag,tourism
+Tham quan Thác Tà Puồng có gì đặc sắc?,rag,tourism
+Mô tả trải nghiệm du lịch tại Thác Tà Puồng.,rag,tourism
+Thác Tà Puồng nằm ở đâu?,kg,tourism
+Địa chỉ của Thác Tà Puồng là gì?,kg,tourism
+Thác Tà Puồng thuộc tỉnh nào và có gì đáng chú ý?,hybrid,tourism
+Giới thiệu Thác Chênh Vênh.,rag,tourism
+Tham quan Thác Chênh Vênh có gì đặc sắc?,rag,tourism
+Mô tả trải nghiệm du lịch tại Thác Chênh Vênh.,rag,tourism
+Thác Chênh Vênh nằm ở đâu?,kg,tourism
+Địa chỉ của Thác Chênh Vênh là gì?,kg,tourism
+Thác Chênh Vênh thuộc tỉnh nào và có gì đáng chú ý?,hybrid,tourism
+Giới thiệu Đồi Vọng Cảnh.,rag,tourism
+Tham quan Đồi Vọng Cảnh có gì đặc sắc?,rag,tourism
+Mô tả trải nghiệm du lịch tại Đồi Vọng Cảnh.,rag,tourism
+Đồi Vọng Cảnh nằm ở đâu?,kg,tourism
+Địa chỉ của Đồi Vọng Cảnh là gì?,kg,tourism
+Đồi Vọng Cảnh thuộc tỉnh nào và có gì đáng chú ý?,hybrid,tourism
+Các điểm du lịch nào ở Thành phố Huế?,kg,tourism
+Giới thiệu Làng Hương Thủy Xuân.,rag,tourism
+Tham quan Làng Hương Thủy Xuân có gì đặc sắc?,rag,tourism
+Mô tả trải nghiệm du lịch tại Làng Hương Thủy Xuân.,rag,tourism
+Làng Hương Thủy Xuân nằm ở đâu?,kg,tourism
+Địa chỉ của Làng Hương Thủy Xuân là gì?,kg,tourism
+Làng Hương Thủy Xuân thuộc tỉnh nào và có gì đáng chú ý?,hybrid,tourism
+Giới thiệu Rừng ngập mặn Rú Chá.,rag,tourism
+Tham quan Rừng ngập mặn Rú Chá có gì đặc sắc?,rag,tourism
+Mô tả trải nghiệm du lịch tại Rừng ngập mặn Rú Chá.,rag,tourism
+Rừng ngập mặn Rú Chá nằm ở đâu?,kg,tourism
+Địa chỉ của Rừng ngập mặn Rú Chá là gì?,kg,tourism
+Rừng ngập mặn Rú Chá thuộc tỉnh nào và có gì đáng chú ý?,hybrid,tourism
+Giới thiệu Nhà thờ Phủ Cam.,rag,tourism
+Tham quan Nhà thờ Phủ Cam có gì đặc sắc?,rag,tourism
+Mô tả trải nghiệm du lịch tại Nhà thờ Phủ Cam.,rag,tourism
+Nhà thờ Phủ Cam nằm ở đâu?,kg,tourism
+Địa chỉ của Nhà thờ Phủ Cam là gì?,kg,tourism
+Nhà thờ Phủ Cam thuộc tỉnh nào và có gì đáng chú ý?,hybrid,tourism
+Giới thiệu Hồ Tịnh Tâm.,rag,tourism
+Tham quan Hồ Tịnh Tâm có gì đặc sắc?,rag,tourism
+Mô tả trải nghiệm du lịch tại Hồ Tịnh Tâm.,rag,tourism
+Hồ Tịnh Tâm nằm ở đâu?,kg,tourism
+Địa chỉ của Hồ Tịnh Tâm là gì?,kg,tourism
+Hồ Tịnh Tâm thuộc tỉnh nào và có gì đáng chú ý?,hybrid,tourism
+Giới thiệu Bảo tàng văn hóa Sa Huỳnh.,rag,tourism
+Tham quan Bảo tàng văn hóa Sa Huỳnh có gì đặc sắc?,rag,tourism
+Mô tả trải nghiệm du lịch tại Bảo tàng văn hóa Sa Huỳnh.,rag,tourism
+Bảo tàng văn hóa Sa Huỳnh nằm ở đâu?,kg,tourism
+Địa chỉ của Bảo tàng văn hóa Sa Huỳnh là gì?,kg,tourism
+Bảo tàng văn hóa Sa Huỳnh thuộc tỉnh nào và có gì đáng chú ý?,hybrid,tourism
+Các điểm du lịch nào ở Thành phố Đà Nẵng?,kg,tourism
+Giới thiệu Nhà cổ Phùng Hưng.,rag,tourism
+Tham quan Nhà cổ Phùng Hưng có gì đặc sắc?,rag,tourism
+Mô tả trải nghiệm du lịch tại Nhà cổ Phùng Hưng.,rag,tourism
+Nhà cổ Phùng Hưng nằm ở đâu?,kg,tourism
+Địa chỉ của Nhà cổ Phùng Hưng là gì?,kg,tourism
+Nhà cổ Phùng Hưng thuộc tỉnh nào và có gì đáng chú ý?,hybrid,tourism
+Giới thiệu Hội Quán Phước Kiến.,rag,tourism
+Tham quan Hội Quán Phước Kiến có gì đặc sắc?,rag,tourism
+Mô tả trải nghiệm du lịch tại Hội Quán Phước Kiến.,rag,tourism
+Hội Quán Phước Kiến nằm ở đâu?,kg,tourism
+Địa chỉ của Hội Quán Phước Kiến là gì?,kg,tourism
+Hội Quán Phước Kiến thuộc tỉnh nào và có gì đáng chú ý?,hybrid,tourism
+Giới thiệu Khu du lịch Sinh thái Lái Thiêu.,rag,tourism
+Tham quan Khu du lịch Sinh thái Lái Thiêu có gì đặc sắc?,rag,tourism
+Mô tả trải nghiệm du lịch tại Khu du lịch Sinh thái Lái Thiêu.,rag,tourism
+Khu du lịch Sinh thái Lái Thiêu nằm ở đâu?,kg,tourism
+Địa chỉ của Khu du lịch Sinh thái Lái Thiêu là gì?,kg,tourism
+Khu du lịch Sinh thái Lái Thiêu thuộc tỉnh nào và có gì đáng chú ý?,hybrid,tourism
+Giới thiệu Đình làng Hải Châu.,rag,tourism
+Tham quan Đình làng Hải Châu có gì đặc sắc?,rag,tourism
+Mô tả trải nghiệm du lịch tại Đình làng Hải Châu.,rag,tourism
+Đình làng Hải Châu nằm ở đâu?,kg,tourism
+Địa chỉ của Đình làng Hải Châu là gì?,kg,tourism
+Đình làng Hải Châu thuộc tỉnh nào và có gì đáng chú ý?,hybrid,tourism
+Giới thiệu Công viên Châu Á.,rag,tourism
+Tham quan Công viên Châu Á có gì đặc sắc?,rag,tourism
+Mô tả trải nghiệm du lịch tại Công viên Châu Á.,rag,tourism
+Công viên Châu Á nằm ở đâu?,kg,tourism
+Địa chỉ của Công viên Châu Á là gì?,kg,tourism
+Công viên Châu Á thuộc tỉnh nào và có gì đáng chú ý?,hybrid,tourism
+Giới thiệu Thác Sơ Roách và thác Hơ Kook.,rag,tourism
+Tham quan Thác Sơ Roách và thác Hơ Kook có gì đặc sắc?,rag,tourism
+Mô tả trải nghiệm du lịch tại Thác Sơ Roách và thác Hơ Kook.,rag,tourism
+Thác Sơ Roách và thác Hơ Kook nằm ở đâu?,kg,tourism
+Địa chỉ của Thác Sơ Roách và thác Hơ Kook là gì?,kg,tourism
+Thác Sơ Roách và thác Hơ Kook thuộc tỉnh nào và có gì đáng chú ý?,hybrid,tourism
+Các điểm du lịch nào ở Tỉnh Quảng Ngãi?,kg,tourism
+Giới thiệu Núi Thiên Ấn.,rag,tourism
+Tham quan Núi Thiên Ấn có gì đặc sắc?,rag,tourism
+Mô tả trải nghiệm du lịch tại Núi Thiên Ấn.,rag,tourism
+Núi Thiên Ấn nằm ở đâu?,kg,tourism
+Địa chỉ của Núi Thiên Ấn là gì?,kg,tourism
+Núi Thiên Ấn thuộc tỉnh nào và có gì đáng chú ý?,hybrid,tourism
+Giới thiệu Thác Trắng.,rag,tourism
+Tham quan Thác Trắng có gì đặc sắc?,rag,tourism
+Mô tả trải nghiệm du lịch tại Thác Trắng.,rag,tourism
+Thác Trắng nằm ở đâu?,kg,tourism
+Địa chỉ của Thác Trắng là gì?,kg,tourism
+Thác Trắng thuộc tỉnh nào và có gì đáng chú ý?,hybrid,tourism
+Giới thiệu Thác Pa Sỹ.,rag,tourism
+Tham quan Thác Pa Sỹ có gì đặc sắc?,rag,tourism
+Mô tả trải nghiệm du lịch tại Thác Pa Sỹ.,rag,tourism
+Thác Pa Sỹ nằm ở đâu?,kg,tourism
+Địa chỉ của Thác Pa Sỹ là gì?,kg,tourism
+Thác Pa Sỹ thuộc tỉnh nào và có gì đáng chú ý?,hybrid,tourism
+Giới thiệu Núi Chư Hreng.,rag,tourism
+Tham quan Núi Chư Hreng có gì đặc sắc?,rag,tourism
+Mô tả trải nghiệm du lịch tại Núi Chư Hreng.,rag,tourism
+Núi Chư Hreng nằm ở đâu?,kg,tourism
+Địa chỉ của Núi Chư Hreng là gì?,kg,tourism
+Núi Chư Hreng thuộc tỉnh nào và có gì đáng chú ý?,hybrid,tourism
+Giới thiệu Hồ Đăk Ke.,rag,tourism
+Tham quan Hồ Đăk Ke có gì đặc sắc?,rag,tourism
+Mô tả trải nghiệm du lịch tại Hồ Đăk Ke.,rag,tourism
+Hồ Đăk Ke nằm ở đâu?,kg,tourism
+Địa chỉ của Hồ Đăk Ke là gì?,kg,tourism
+Hồ Đăk Ke thuộc tỉnh nào và có gì đáng chú ý?,hybrid,tourism
+Giới thiệu Thác Phú Cường.,rag,tourism
+Tham quan Thác Phú Cường có gì đặc sắc?,rag,tourism
+Mô tả trải nghiệm du lịch tại Thác Phú Cường.,rag,tourism
+Thác Phú Cường nằm ở đâu?,kg,tourism
+Địa chỉ của Thác Phú Cường là gì?,kg,tourism
+Thác Phú Cường thuộc tỉnh nào và có gì đáng chú ý?,hybrid,tourism
+Các điểm du lịch nào ở Tỉnh Gia Lai?,kg,tourism
+Giới thiệu Thác Lệ Kim.,rag,tourism
+Tham quan Thác Lệ Kim có gì đặc sắc?,rag,tourism
+Mô tả trải nghiệm du lịch tại Thác Lệ Kim.,rag,tourism
+Thác Lệ Kim nằm ở đâu?,kg,tourism
+Địa chỉ của Thác Lệ Kim là gì?,kg,tourism
+Thác Lệ Kim thuộc tỉnh nào và có gì đáng chú ý?,hybrid,tourism
+Giới thiệu Thác Chín Tầng.,rag,tourism
+Tham quan Thác Chín Tầng có gì đặc sắc?,rag,tourism
+Mô tả trải nghiệm du lịch tại Thác Chín Tầng.,rag,tourism
+Thác Chín Tầng nằm ở đâu?,kg,tourism
+Địa chỉ của Thác Chín Tầng là gì?,kg,tourism
+Thác Chín Tầng thuộc tỉnh nào và có gì đáng chú ý?,hybrid,tourism
+Giới thiệu Thác Bàu Cạn.,rag,tourism
+Tham quan Thác Bàu Cạn có gì đặc sắc?,rag,tourism
+Mô tả trải nghiệm du lịch tại Thác Bàu Cạn.,rag,tourism
+Thác Bàu Cạn nằm ở đâu?,kg,tourism
+Địa chỉ của Thác Bàu Cạn là gì?,kg,tourism
+Thác Bàu Cạn thuộc tỉnh nào và có gì đáng chú ý?,hybrid,tourism
+Giới thiệu Núi Hàm Rồng.,rag,tourism
+Tham quan Núi Hàm Rồng có gì đặc sắc?,rag,tourism
+Mô tả trải nghiệm du lịch tại Núi Hàm Rồng.,rag,tourism
+Núi Hàm Rồng nằm ở đâu?,kg,tourism
+Địa chỉ của Núi Hàm Rồng là gì?,kg,tourism
+Núi Hàm Rồng thuộc tỉnh nào và có gì đáng chú ý?,hybrid,tourism
+Giới thiệu Biển Quy Nhơn.,rag,tourism
+Tham quan Biển Quy Nhơn có gì đặc sắc?,rag,tourism
+Mô tả trải nghiệm du lịch tại Biển Quy Nhơn.,rag,tourism
+Biển Quy Nhơn nằm ở đâu?,kg,tourism
+Địa chỉ của Biển Quy Nhơn là gì?,kg,tourism
+Biển Quy Nhơn thuộc tỉnh nào và có gì đáng chú ý?,hybrid,tourism
+Giới thiệu Thác Chapơr.,rag,tourism
+Tham quan Thác Chapơr có gì đặc sắc?,rag,tourism
+Mô tả trải nghiệm du lịch tại Thác Chapơr.,rag,tourism
+Thác Chapơr nằm ở đâu?,kg,tourism
+Địa chỉ của Thác Chapơr là gì?,kg,tourism
+Thác Chapơr thuộc tỉnh nào và có gì đáng chú ý?,hybrid,tourism
+Giới thiệu Mũi Đá Vách.,rag,tourism
+Tham quan Mũi Đá Vách có gì đặc sắc?,rag,tourism
+Mô tả trải nghiệm du lịch tại Mũi Đá Vách.,rag,tourism
+Mũi Đá Vách nằm ở đâu?,kg,tourism
+Địa chỉ của Mũi Đá Vách là gì?,kg,tourism
+Mũi Đá Vách thuộc tỉnh nào và có gì đáng chú ý?,hybrid,tourism
+Giới thiệu Hòn Chồng.,rag,tourism
+Tham quan Hòn Chồng có gì đặc sắc?,rag,tourism
+Mô tả trải nghiệm du lịch tại Hòn Chồng.,rag,tourism
+Hòn Chồng nằm ở đâu?,kg,tourism
+Địa chỉ của Hòn Chồng là gì?,kg,tourism
+Hòn Chồng thuộc tỉnh nào và có gì đáng chú ý?,hybrid,tourism
+Giới thiệu Vịnh Cam Ranh.,rag,tourism
+Tham quan Vịnh Cam Ranh có gì đặc sắc?,rag,tourism
+Mô tả trải nghiệm du lịch tại Vịnh Cam Ranh.,rag,tourism
+Vịnh Cam Ranh nằm ở đâu?,kg,tourism
+Địa chỉ của Vịnh Cam Ranh là gì?,kg,tourism
+Vịnh Cam Ranh thuộc tỉnh nào và có gì đáng chú ý?,hybrid,tourism
+Giới thiệu Thác Tà Gụ.,rag,tourism
+Tham quan Thác Tà Gụ có gì đặc sắc?,rag,tourism
+Mô tả trải nghiệm du lịch tại Thác Tà Gụ.,rag,tourism
+Thác Tà Gụ nằm ở đâu?,kg,tourism
+Địa chỉ của Thác Tà Gụ là gì?,kg,tourism
+Thác Tà Gụ thuộc tỉnh nào và có gì đáng chú ý?,hybrid,tourism
+Giới thiệu Suối Hoa Lan.,rag,tourism
+Tham quan Suối Hoa Lan có gì đặc sắc?,rag,tourism
+Mô tả trải nghiệm du lịch tại Suối Hoa Lan.,rag,tourism
+Suối Hoa Lan nằm ở đâu?,kg,tourism
+Địa chỉ của Suối Hoa Lan là gì?,kg,tourism
+Suối Hoa Lan thuộc tỉnh nào và có gì đáng chú ý?,hybrid,tourism
+Giới thiệu Tháp Yang Prong.,rag,tourism
+Tham quan Tháp Yang Prong có gì đặc sắc?,rag,tourism
+Mô tả trải nghiệm du lịch tại Tháp Yang Prong.,rag,tourism
+Tháp Yang Prong nằm ở đâu?,kg,tourism
+Địa chỉ của Tháp Yang Prong là gì?,kg,tourism
+Tháp Yang Prong thuộc tỉnh nào và có gì đáng chú ý?,hybrid,tourism
+Các điểm du lịch nào ở Tỉnh Đắk Lắk?,kg,tourism
+Giới thiệu Thác Thủy Tiên.,rag,tourism
+Tham quan Thác Thủy Tiên có gì đặc sắc?,rag,tourism
+Mô tả trải nghiệm du lịch tại Thác Thủy Tiên.,rag,tourism
+Thác Thủy Tiên nằm ở đâu?,kg,tourism
+Địa chỉ của Thác Thủy Tiên là gì?,kg,tourism
+Thác Thủy Tiên thuộc tỉnh nào và có gì đáng chú ý?,hybrid,tourism
+Giới thiệu Thác Dray Nur.,rag,tourism
+Tham quan Thác Dray Nur có gì đặc sắc?,rag,tourism
+Mô tả trải nghiệm du lịch tại Thác Dray Nur.,rag,tourism
+Thác Dray Nur nằm ở đâu?,kg,tourism
+Địa chỉ của Thác Dray Nur là gì?,kg,tourism
+Thác Dray Nur thuộc tỉnh nào và có gì đáng chú ý?,hybrid,tourism
+Giới thiệu Đình Lạc Giao.,rag,tourism
+Tham quan Đình Lạc Giao có gì đặc sắc?,rag,tourism
+Mô tả trải nghiệm du lịch tại Đình Lạc Giao.,rag,tourism
+Đình Lạc Giao nằm ở đâu?,kg,tourism
+Địa chỉ của Đình Lạc Giao là gì?,kg,tourism
+Đình Lạc Giao thuộc tỉnh nào và có gì đáng chú ý?,hybrid,tourism
+Giới thiệu Bảo tàng Đắk Lắk.,rag,tourism
+Tham quan Bảo tàng Đắk Lắk có gì đặc sắc?,rag,tourism
+Mô tả trải nghiệm du lịch tại Bảo tàng Đắk Lắk.,rag,tourism
+Bảo tàng Đắk Lắk nằm ở đâu?,kg,tourism
+Địa chỉ của Bảo tàng Đắk Lắk là gì?,kg,tourism
+Bảo tàng Đắk Lắk thuộc tỉnh nào và có gì đáng chú ý?,hybrid,tourism
+Giới thiệu Nhà thờ Mằng Lăng.,rag,tourism
+Tham quan Nhà thờ Mằng Lăng có gì đặc sắc?,rag,tourism
+Mô tả trải nghiệm du lịch tại Nhà thờ Mằng Lăng.,rag,tourism
+Nhà thờ Mằng Lăng nằm ở đâu?,kg,tourism
+Địa chỉ của Nhà thờ Mằng Lăng là gì?,kg,tourism
+Nhà thờ Mằng Lăng thuộc tỉnh nào và có gì đáng chú ý?,hybrid,tourism
+Giới thiệu Suối Tiên Mũi Né.,rag,tourism
+Tham quan Suối Tiên Mũi Né có gì đặc sắc?,rag,tourism
+Mô tả trải nghiệm du lịch tại Suối Tiên Mũi Né.,rag,tourism
+Suối Tiên Mũi Né nằm ở đâu?,kg,tourism
+Địa chỉ của Suối Tiên Mũi Né là gì?,kg,tourism
+Suối Tiên Mũi Né thuộc tỉnh nào và có gì đáng chú ý?,hybrid,tourism
+Các điểm du lịch nào ở Tỉnh Lâm Đồng?,kg,tourism
+Giới thiệu Khu du lịch Thác Bảo Đại.,rag,tourism
+Tham quan Khu du lịch Thác Bảo Đại có gì đặc sắc?,rag,tourism
+Mô tả trải nghiệm du lịch tại Khu du lịch Thác Bảo Đại.,rag,tourism
+Khu du lịch Thác Bảo Đại nằm ở đâu?,kg,tourism
+Địa chỉ của Khu du lịch Thác Bảo Đại là gì?,kg,tourism
+Khu du lịch Thác Bảo Đại thuộc tỉnh nào và có gì đáng chú ý?,hybrid,tourism
+Giới thiệu Đồi chè Cầu Đất.,rag,tourism
+Tham quan Đồi chè Cầu Đất có gì đặc sắc?,rag,tourism
+Mô tả trải nghiệm du lịch tại Đồi chè Cầu Đất.,rag,tourism
+Đồi chè Cầu Đất nằm ở đâu?,kg,tourism
+Địa chỉ của Đồi chè Cầu Đất là gì?,kg,tourism
+Đồi chè Cầu Đất thuộc tỉnh nào và có gì đáng chú ý?,hybrid,tourism
+Giới thiệu Thác đá Granite.,rag,tourism
+Tham quan Thác đá Granite có gì đặc sắc?,rag,tourism
+Mô tả trải nghiệm du lịch tại Thác đá Granite.,rag,tourism
+Thác đá Granite nằm ở đâu?,kg,tourism
+Địa chỉ của Thác đá Granite là gì?,kg,tourism
+Thác đá Granite thuộc tỉnh nào và có gì đáng chú ý?,hybrid,tourism
+Giới thiệu Núi lửa Băng Mo.,rag,tourism
+Tham quan Núi lửa Băng Mo có gì đặc sắc?,rag,tourism
+Mô tả trải nghiệm du lịch tại Núi lửa Băng Mo.,rag,tourism
+Núi lửa Băng Mo nằm ở đâu?,kg,tourism
+Địa chỉ của Núi lửa Băng Mo là gì?,kg,tourism
+Núi lửa Băng Mo thuộc tỉnh nào và có gì đáng chú ý?,hybrid,tourism
+Giới thiệu Di tích lịch sử Ngục Đắk Mil.,rag,tourism
+Tham quan Di tích lịch sử Ngục Đắk Mil có gì đặc sắc?,rag,tourism
+Mô tả trải nghiệm du lịch tại Di tích lịch sử Ngục Đắk Mil.,rag,tourism
+Di tích lịch sử Ngục Đắk Mil nằm ở đâu?,kg,tourism
+Địa chỉ của Di tích lịch sử Ngục Đắk Mil là gì?,kg,tourism
+Di tích lịch sử Ngục Đắk Mil thuộc tỉnh nào và có gì đáng chú ý?,hybrid,tourism
+Giới thiệu Thác Voi.,rag,tourism
+Tham quan Thác Voi có gì đặc sắc?,rag,tourism
+Mô tả trải nghiệm du lịch tại Thác Voi.,rag,tourism
+Thác Voi nằm ở đâu?,kg,tourism
+Địa chỉ của Thác Voi là gì?,kg,tourism
+Thác Voi thuộc tỉnh nào và có gì đáng chú ý?,hybrid,tourism
+Các điểm du lịch nào ở Thành phố Đồng Nai?,kg,tourism
+Giới thiệu Mộ cổ Hàng Gòn.,rag,tourism
+Tham quan Mộ cổ Hàng Gòn có gì đặc sắc?,rag,tourism
+Mô tả trải nghiệm du lịch tại Mộ cổ Hàng Gòn.,rag,tourism
+Mộ cổ Hàng Gòn nằm ở đâu?,kg,tourism
+Địa chỉ của Mộ cổ Hàng Gòn là gì?,kg,tourism
+Mộ cổ Hàng Gòn thuộc tỉnh nào và có gì đáng chú ý?,hybrid,tourism
+Giới thiệu Chùa Bửu Phong.,rag,tourism
+Tham quan Chùa Bửu Phong có gì đặc sắc?,rag,tourism
+Mô tả trải nghiệm du lịch tại Chùa Bửu Phong.,rag,tourism
+Chùa Bửu Phong nằm ở đâu?,kg,tourism
+Địa chỉ của Chùa Bửu Phong là gì?,kg,tourism
+Chùa Bửu Phong thuộc tỉnh nào và có gì đáng chú ý?,hybrid,tourism
+Giới thiệu Khu du lịch Bửu Long - hồ Long Ẩn.,rag,tourism
+Tham quan Khu du lịch Bửu Long - hồ Long Ẩn có gì đặc sắc?,rag,tourism
+Mô tả trải nghiệm du lịch tại Khu du lịch Bửu Long - hồ Long Ẩn.,rag,tourism
+Khu du lịch Bửu Long - hồ Long Ẩn nằm ở đâu?,kg,tourism
+Địa chỉ của Khu du lịch Bửu Long - hồ Long Ẩn là gì?,kg,tourism
+Khu du lịch Bửu Long - hồ Long Ẩn thuộc tỉnh nào và có gì đáng chú ý?,hybrid,tourism
+Giới thiệu Vườn quốc gia Cát Tiên.,rag,tourism
+Tham quan Vườn quốc gia Cát Tiên có gì đặc sắc?,rag,tourism
+Mô tả trải nghiệm du lịch tại Vườn quốc gia Cát Tiên.,rag,tourism
+Vườn quốc gia Cát Tiên nằm ở đâu?,kg,tourism
+Địa chỉ của Vườn quốc gia Cát Tiên là gì?,kg,tourism
+Vườn quốc gia Cát Tiên thuộc tỉnh nào và có gì đáng chú ý?,hybrid,tourism
+Giới thiệu Khu du lịch sinh thái Bà Rá – Thác Mơ.,rag,tourism
+Tham quan Khu du lịch sinh thái Bà Rá – Thác Mơ có gì đặc sắc?,rag,tourism
+Mô tả trải nghiệm du lịch tại Khu du lịch sinh thái Bà Rá – Thác Mơ.,rag,tourism
+Khu du lịch sinh thái Bà Rá – Thác Mơ nằm ở đâu?,kg,tourism
+Địa chỉ của Khu du lịch sinh thái Bà Rá – Thác Mơ là gì?,kg,tourism
+Khu du lịch sinh thái Bà Rá – Thác Mơ thuộc tỉnh nào và có gì đáng chú ý?,hybrid,tourism
+Giới thiệu Công viên nước Thanh Lễ.,rag,tourism
+Tham quan Công viên nước Thanh Lễ có gì đặc sắc?,rag,tourism
+Mô tả trải nghiệm du lịch tại Công viên nước Thanh Lễ.,rag,tourism
+Công viên nước Thanh Lễ nằm ở đâu?,kg,tourism
+Địa chỉ của Công viên nước Thanh Lễ là gì?,kg,tourism
+Công viên nước Thanh Lễ thuộc tỉnh nào và có gì đáng chú ý?,hybrid,tourism
+Các điểm du lịch nào ở Thành phố Hồ Chí Minh?,kg,tourism
+Giới thiệu Quán Café Gió & Nước Bình Dương.,rag,tourism
+Tham quan Quán Café Gió & Nước Bình Dương có gì đặc sắc?,rag,tourism
+Mô tả trải nghiệm du lịch tại Quán Café Gió & Nước Bình Dương.,rag,tourism
+Quán Café Gió & Nước Bình Dương nằm ở đâu?,kg,tourism
+Địa chỉ của Quán Café Gió & Nước Bình Dương là gì?,kg,tourism
+Quán Café Gió & Nước Bình Dương thuộc tỉnh nào và có gì đáng chú ý?,hybrid,tourism
+Giới thiệu Cụm du lịch hồ Dầu Tiếng.,rag,tourism
+Tham quan Cụm du lịch hồ Dầu Tiếng có gì đặc sắc?,rag,tourism
+Mô tả trải nghiệm du lịch tại Cụm du lịch hồ Dầu Tiếng.,rag,tourism
+Cụm du lịch hồ Dầu Tiếng nằm ở đâu?,kg,tourism
+Địa chỉ của Cụm du lịch hồ Dầu Tiếng là gì?,kg,tourism
+Cụm du lịch hồ Dầu Tiếng thuộc tỉnh nào và có gì đáng chú ý?,hybrid,tourism
+Giới thiệu Khu Du Lịch Thủy Châu.,rag,tourism
+Tham quan Khu Du Lịch Thủy Châu có gì đặc sắc?,rag,tourism
+Mô tả trải nghiệm du lịch tại Khu Du Lịch Thủy Châu.,rag,tourism
+Khu Du Lịch Thủy Châu nằm ở đâu?,kg,tourism
+Địa chỉ của Khu Du Lịch Thủy Châu là gì?,kg,tourism
+Khu Du Lịch Thủy Châu thuộc tỉnh nào và có gì đáng chú ý?,hybrid,tourism
+Giới thiệu Làng Tre Phú An.,rag,tourism
+Tham quan Làng Tre Phú An có gì đặc sắc?,rag,tourism
+Mô tả trải nghiệm du lịch tại Làng Tre Phú An.,rag,tourism
+Làng Tre Phú An nằm ở đâu?,kg,tourism
+Địa chỉ của Làng Tre Phú An là gì?,kg,tourism
+Làng Tre Phú An thuộc tỉnh nào và có gì đáng chú ý?,hybrid,tourism
+Giới thiệu Côn Đảo.,rag,tourism
+Tham quan Côn Đảo có gì đặc sắc?,rag,tourism
+Mô tả trải nghiệm du lịch tại Côn Đảo.,rag,tourism
+Côn Đảo nằm ở đâu?,kg,tourism
+Địa chỉ của Côn Đảo là gì?,kg,tourism
+Côn Đảo thuộc tỉnh nào và có gì đáng chú ý?,hybrid,tourism
+Giới thiệu Vườn trái cây Gò Chùa.,rag,tourism
+Tham quan Vườn trái cây Gò Chùa có gì đặc sắc?,rag,tourism
+Mô tả trải nghiệm du lịch tại Vườn trái cây Gò Chùa.,rag,tourism
+Vườn trái cây Gò Chùa nằm ở đâu?,kg,tourism
+Địa chỉ của Vườn trái cây Gò Chùa là gì?,kg,tourism
+Vườn trái cây Gò Chùa thuộc tỉnh nào và có gì đáng chú ý?,hybrid,tourism
+Các điểm du lịch nào ở Tỉnh Tây Ninh?,kg,tourism
+Giới thiệu Tháp cổ Bình Thạnh.,rag,tourism
+Tham quan Tháp cổ Bình Thạnh có gì đặc sắc?,rag,tourism
+Mô tả trải nghiệm du lịch tại Tháp cổ Bình Thạnh.,rag,tourism
+Tháp cổ Bình Thạnh nằm ở đâu?,kg,tourism
+Địa chỉ của Tháp cổ Bình Thạnh là gì?,kg,tourism
+Tháp cổ Bình Thạnh thuộc tỉnh nào và có gì đáng chú ý?,hybrid,tourism
+Giới thiệu Khu du lịch làng cổ Phước Lộc Thọ.,rag,tourism
+Tham quan Khu du lịch làng cổ Phước Lộc Thọ có gì đặc sắc?,rag,tourism
+Mô tả trải nghiệm du lịch tại Khu du lịch làng cổ Phước Lộc Thọ.,rag,tourism
+Khu du lịch làng cổ Phước Lộc Thọ nằm ở đâu?,kg,tourism
+Địa chỉ của Khu du lịch làng cổ Phước Lộc Thọ là gì?,kg,tourism
+Khu du lịch làng cổ Phước Lộc Thọ thuộc tỉnh nào và có gì đáng chú ý?,hybrid,tourism
+Giới thiệu Hàng cau vua Tân Trụ.,rag,tourism
+Tham quan Hàng cau vua Tân Trụ có gì đặc sắc?,rag,tourism
+Mô tả trải nghiệm du lịch tại Hàng cau vua Tân Trụ.,rag,tourism
+Hàng cau vua Tân Trụ nằm ở đâu?,kg,tourism
+Địa chỉ của Hàng cau vua Tân Trụ là gì?,kg,tourism
+Hàng cau vua Tân Trụ thuộc tỉnh nào và có gì đáng chú ý?,hybrid,tourism
+Giới thiệu Khu du lịch Cánh Đồng Bất Tận.,rag,tourism
+Tham quan Khu du lịch Cánh Đồng Bất Tận có gì đặc sắc?,rag,tourism
+Mô tả trải nghiệm du lịch tại Khu du lịch Cánh Đồng Bất Tận.,rag,tourism
+Khu du lịch Cánh Đồng Bất Tận nằm ở đâu?,kg,tourism
+Địa chỉ của Khu du lịch Cánh Đồng Bất Tận là gì?,kg,tourism
+Khu du lịch Cánh Đồng Bất Tận thuộc tỉnh nào và có gì đáng chú ý?,hybrid,tourism
+Giới thiệu Làng nổi Tân Lập.,rag,tourism
+Tham quan Làng nổi Tân Lập có gì đặc sắc?,rag,tourism
+Mô tả trải nghiệm du lịch tại Làng nổi Tân Lập.,rag,tourism
+Làng nổi Tân Lập nằm ở đâu?,kg,tourism
+Địa chỉ của Làng nổi Tân Lập là gì?,kg,tourism
+Làng nổi Tân Lập thuộc tỉnh nào và có gì đáng chú ý?,hybrid,tourism
+Giới thiệu Khu du lịch Văn hóa Phương Nam - Nam Phương Linh Từ.,rag,tourism
+Tham quan Khu du lịch Văn hóa Phương Nam - Nam Phương Linh Từ có gì đặc sắc?,rag,tourism
+Mô tả trải nghiệm du lịch tại Khu du lịch Văn hóa Phương Nam - Nam Phương Linh Từ.,rag,tourism
+Khu du lịch Văn hóa Phương Nam - Nam Phương Linh Từ nằm ở đâu?,kg,tourism
+Địa chỉ của Khu du lịch Văn hóa Phương Nam - Nam Phương Linh Từ là gì?,kg,tourism
+Khu du lịch Văn hóa Phương Nam - Nam Phương Linh Từ thuộc tỉnh nào và có gì đáng chú ý?,hybrid,tourism
+Các điểm du lịch nào ở Tỉnh Đồng Tháp?,kg,tourism
+Giới thiệu Khu di tích Gò Tháp.,rag,tourism
+Tham quan Khu di tích Gò Tháp có gì đặc sắc?,rag,tourism
+Mô tả trải nghiệm du lịch tại Khu di tích Gò Tháp.,rag,tourism
+Khu di tích Gò Tháp nằm ở đâu?,kg,tourism
+Địa chỉ của Khu di tích Gò Tháp là gì?,kg,tourism
+Khu di tích Gò Tháp thuộc tỉnh nào và có gì đáng chú ý?,hybrid,tourism
+Giới thiệu Chùa Phước Kiển (Chùa Lá Sen).,rag,tourism
+Tham quan Chùa Phước Kiển (Chùa Lá Sen) có gì đặc sắc?,rag,tourism
+Mô tả trải nghiệm du lịch tại Chùa Phước Kiển (Chùa Lá Sen).,rag,tourism
+Chùa Phước Kiển (Chùa Lá Sen) nằm ở đâu?,kg,tourism
+Địa chỉ của Chùa Phước Kiển (Chùa Lá Sen) là gì?,kg,tourism
+Chùa Phước Kiển (Chùa Lá Sen) thuộc tỉnh nào và có gì đáng chú ý?,hybrid,tourism
+Giới thiệu Khu du lịch sinh thái Gáo Giồng.,rag,tourism
+Tham quan Khu du lịch sinh thái Gáo Giồng có gì đặc sắc?,rag,tourism
+Mô tả trải nghiệm du lịch tại Khu du lịch sinh thái Gáo Giồng.,rag,tourism
+Khu du lịch sinh thái Gáo Giồng nằm ở đâu?,kg,tourism
+Địa chỉ của Khu du lịch sinh thái Gáo Giồng là gì?,kg,tourism
+Khu du lịch sinh thái Gáo Giồng thuộc tỉnh nào và có gì đáng chú ý?,hybrid,tourism
+Giới thiệu Khu du lịch Cánh đồng Hoa Hồng Sa Đéc.,rag,tourism
+Tham quan Khu du lịch Cánh đồng Hoa Hồng Sa Đéc có gì đặc sắc?,rag,tourism
+Mô tả trải nghiệm du lịch tại Khu du lịch Cánh đồng Hoa Hồng Sa Đéc.,rag,tourism
+Khu du lịch Cánh đồng Hoa Hồng Sa Đéc nằm ở đâu?,kg,tourism
+Địa chỉ của Khu du lịch Cánh đồng Hoa Hồng Sa Đéc là gì?,kg,tourism
+Khu du lịch Cánh đồng Hoa Hồng Sa Đéc thuộc tỉnh nào và có gì đáng chú ý?,hybrid,tourism
+Giới thiệu Nhà cổ Huỳnh Thủy Lê.,rag,tourism
+Tham quan Nhà cổ Huỳnh Thủy Lê có gì đặc sắc?,rag,tourism
+Mô tả trải nghiệm du lịch tại Nhà cổ Huỳnh Thủy Lê.,rag,tourism
+Nhà cổ Huỳnh Thủy Lê nằm ở đâu?,kg,tourism
+Địa chỉ của Nhà cổ Huỳnh Thủy Lê là gì?,kg,tourism
+Nhà cổ Huỳnh Thủy Lê thuộc tỉnh nào và có gì đáng chú ý?,hybrid,tourism
+Giới thiệu Cồn Phú Đa.,rag,tourism
+Tham quan Cồn Phú Đa có gì đặc sắc?,rag,tourism
+Mô tả trải nghiệm du lịch tại Cồn Phú Đa.,rag,tourism
+Cồn Phú Đa nằm ở đâu?,kg,tourism
+Địa chỉ của Cồn Phú Đa là gì?,kg,tourism
+Cồn Phú Đa thuộc tỉnh nào và có gì đáng chú ý?,hybrid,tourism
+Các điểm du lịch nào ở Tỉnh Vĩnh Long?,kg,tourism
+Giới thiệu Khu du lịch Làng bè.,rag,tourism
+Tham quan Khu du lịch Làng bè có gì đặc sắc?,rag,tourism
+Mô tả trải nghiệm du lịch tại Khu du lịch Làng bè.,rag,tourism
+Khu du lịch Làng bè nằm ở đâu?,kg,tourism
+Địa chỉ của Khu du lịch Làng bè là gì?,kg,tourism
+Khu du lịch Làng bè thuộc tỉnh nào và có gì đáng chú ý?,hybrid,tourism
+Giới thiệu Khu du lịch Lan Vương.,rag,tourism
+Tham quan Khu du lịch Lan Vương có gì đặc sắc?,rag,tourism
+Mô tả trải nghiệm du lịch tại Khu du lịch Lan Vương.,rag,tourism
+Khu du lịch Lan Vương nằm ở đâu?,kg,tourism
+Địa chỉ của Khu du lịch Lan Vương là gì?,kg,tourism
+Khu du lịch Lan Vương thuộc tỉnh nào và có gì đáng chú ý?,hybrid,tourism
+Giới thiệu Bãi biển Thừa Đức Bình Đại.,rag,tourism
+Tham quan Bãi biển Thừa Đức Bình Đại có gì đặc sắc?,rag,tourism
+Mô tả trải nghiệm du lịch tại Bãi biển Thừa Đức Bình Đại.,rag,tourism
+Bãi biển Thừa Đức Bình Đại nằm ở đâu?,kg,tourism
+Địa chỉ của Bãi biển Thừa Đức Bình Đại là gì?,kg,tourism
+Bãi biển Thừa Đức Bình Đại thuộc tỉnh nào và có gì đáng chú ý?,hybrid,tourism
+Giới thiệu Khu Sinh thái Nhà Xưa.,rag,tourism
+Tham quan Khu Sinh thái Nhà Xưa có gì đặc sắc?,rag,tourism
+Mô tả trải nghiệm du lịch tại Khu Sinh thái Nhà Xưa.,rag,tourism
+Khu Sinh thái Nhà Xưa nằm ở đâu?,kg,tourism
+Địa chỉ của Khu Sinh thái Nhà Xưa là gì?,kg,tourism
+Khu Sinh thái Nhà Xưa thuộc tỉnh nào và có gì đáng chú ý?,hybrid,tourism
+Giới thiệu Khu du lịch Vinh Sang.,rag,tourism
+Tham quan Khu du lịch Vinh Sang có gì đặc sắc?,rag,tourism
+Mô tả trải nghiệm du lịch tại Khu du lịch Vinh Sang.,rag,tourism
+Khu du lịch Vinh Sang nằm ở đâu?,kg,tourism
+Địa chỉ của Khu du lịch Vinh Sang là gì?,kg,tourism
+Khu du lịch Vinh Sang thuộc tỉnh nào và có gì đáng chú ý?,hybrid,tourism
+Giới thiệu Vườn Dâu Tằm Mỹ Khánh ở An Giang.,rag,tourism
+Tham quan Vườn Dâu Tằm Mỹ Khánh ở An Giang có gì đặc sắc?,rag,tourism
+Mô tả trải nghiệm du lịch tại Vườn Dâu Tằm Mỹ Khánh ở An Giang.,rag,tourism
+Vườn Dâu Tằm Mỹ Khánh ở An Giang nằm ở đâu?,kg,tourism
+Địa chỉ của Vườn Dâu Tằm Mỹ Khánh ở An Giang là gì?,kg,tourism
+Vườn Dâu Tằm Mỹ Khánh ở An Giang thuộc tỉnh nào và có gì đáng chú ý?,hybrid,tourism
+Các điểm du lịch nào ở Tỉnh An Giang?,kg,tourism
+Giới thiệu Du lịch sinh thái Rừng tràm Tân Tuyến.,rag,tourism
+Tham quan Du lịch sinh thái Rừng tràm Tân Tuyến có gì đặc sắc?,rag,tourism
+Mô tả trải nghiệm du lịch tại Du lịch sinh thái Rừng tràm Tân Tuyến.,rag,tourism
+Du lịch sinh thái Rừng tràm Tân Tuyến nằm ở đâu?,kg,tourism
+Địa chỉ của Du lịch sinh thái Rừng tràm Tân Tuyến là gì?,kg,tourism
+Du lịch sinh thái Rừng tràm Tân Tuyến thuộc tỉnh nào và có gì đáng chú ý?,hybrid,tourism
+Giới thiệu Búng Bình Thiên.,rag,tourism
+Tham quan Búng Bình Thiên có gì đặc sắc?,rag,tourism
+Mô tả trải nghiệm du lịch tại Búng Bình Thiên.,rag,tourism
+Búng Bình Thiên nằm ở đâu?,kg,tourism
+Địa chỉ của Búng Bình Thiên là gì?,kg,tourism
+Búng Bình Thiên thuộc tỉnh nào và có gì đáng chú ý?,hybrid,tourism
+Giới thiệu Quần đảo Nam Du.,rag,tourism
+Tham quan Quần đảo Nam Du có gì đặc sắc?,rag,tourism
+Mô tả trải nghiệm du lịch tại Quần đảo Nam Du.,rag,tourism
+Quần đảo Nam Du nằm ở đâu?,kg,tourism
+Địa chỉ của Quần đảo Nam Du là gì?,kg,tourism
+Quần đảo Nam Du thuộc tỉnh nào và có gì đáng chú ý?,hybrid,tourism
+Giới thiệu Hòn Một.,rag,tourism
+Tham quan Hòn Một có gì đặc sắc?,rag,tourism
+Mô tả trải nghiệm du lịch tại Hòn Một.,rag,tourism
+Hòn Một nằm ở đâu?,kg,tourism
+Địa chỉ của Hòn Một là gì?,kg,tourism
+Hòn Một thuộc tỉnh nào và có gì đáng chú ý?,hybrid,tourism
+Giới thiệu Hòn Gầm Ghì.,rag,tourism
+Tham quan Hòn Gầm Ghì có gì đặc sắc?,rag,tourism
+Mô tả trải nghiệm du lịch tại Hòn Gầm Ghì.,rag,tourism
+Hòn Gầm Ghì nằm ở đâu?,kg,tourism
+Địa chỉ của Hòn Gầm Ghì là gì?,kg,tourism
+Hòn Gầm Ghì thuộc tỉnh nào và có gì đáng chú ý?,hybrid,tourism
+Giới thiệu Thiền viện Trúc Lâm Hậu Giang.,rag,tourism
+Tham quan Thiền viện Trúc Lâm Hậu Giang có gì đặc sắc?,rag,tourism
+Mô tả trải nghiệm du lịch tại Thiền viện Trúc Lâm Hậu Giang.,rag,tourism
+Thiền viện Trúc Lâm Hậu Giang nằm ở đâu?,kg,tourism
+Địa chỉ của Thiền viện Trúc Lâm Hậu Giang là gì?,kg,tourism
+Thiền viện Trúc Lâm Hậu Giang thuộc tỉnh nào và có gì đáng chú ý?,hybrid,tourism
+Các điểm du lịch nào ở Thành phố Cần Thơ?,kg,tourism
+Giới thiệu Rừng Tràm Vị Thủy - Khu du lịch sinh thái Việt Úc.,rag,tourism
+Tham quan Rừng Tràm Vị Thủy - Khu du lịch sinh thái Việt Úc có gì đặc sắc?,rag,tourism
+Mô tả trải nghiệm du lịch tại Rừng Tràm Vị Thủy - Khu du lịch sinh thái Việt Úc.,rag,tourism
+Rừng Tràm Vị Thủy - Khu du lịch sinh thái Việt Úc nằm ở đâu?,kg,tourism
+Địa chỉ của Rừng Tràm Vị Thủy - Khu du lịch sinh thái Việt Úc là gì?,kg,tourism
+Rừng Tràm Vị Thủy - Khu du lịch sinh thái Việt Úc thuộc tỉnh nào và có gì đáng chú ý?,hybrid,tourism
+Giới thiệu Làng trầu Vị Thủy.,rag,tourism
+Tham quan Làng trầu Vị Thủy có gì đặc sắc?,rag,tourism
+Mô tả trải nghiệm du lịch tại Làng trầu Vị Thủy.,rag,tourism
+Làng trầu Vị Thủy nằm ở đâu?,kg,tourism
+Địa chỉ của Làng trầu Vị Thủy là gì?,kg,tourism
+Làng trầu Vị Thủy thuộc tỉnh nào và có gì đáng chú ý?,hybrid,tourism
+Giới thiệu Khu du lịch sinh thái Tầm Vu.,rag,tourism
+Tham quan Khu du lịch sinh thái Tầm Vu có gì đặc sắc?,rag,tourism
+Mô tả trải nghiệm du lịch tại Khu du lịch sinh thái Tầm Vu.,rag,tourism
+Khu du lịch sinh thái Tầm Vu nằm ở đâu?,kg,tourism
+Địa chỉ của Khu du lịch sinh thái Tầm Vu là gì?,kg,tourism
+Khu du lịch sinh thái Tầm Vu thuộc tỉnh nào và có gì đáng chú ý?,hybrid,tourism
+Giới thiệu Khu căn cứ Tỉnh ủy (căn cứ Bà Bái).,rag,tourism
+Tham quan Khu căn cứ Tỉnh ủy (căn cứ Bà Bái) có gì đặc sắc?,rag,tourism
+Mô tả trải nghiệm du lịch tại Khu căn cứ Tỉnh ủy (căn cứ Bà Bái).,rag,tourism
+Khu căn cứ Tỉnh ủy (căn cứ Bà Bái) nằm ở đâu?,kg,tourism
+Địa chỉ của Khu căn cứ Tỉnh ủy (căn cứ Bà Bái) là gì?,kg,tourism
+Khu căn cứ Tỉnh ủy (căn cứ Bà Bái) thuộc tỉnh nào và có gì đáng chú ý?,hybrid,tourism
+Giới thiệu Khu Bảo tồn Thiên nhiên Lung Ngọc Hoàng.,rag,tourism
+Tham quan Khu Bảo tồn Thiên nhiên Lung Ngọc Hoàng có gì đặc sắc?,rag,tourism
+Mô tả trải nghiệm du lịch tại Khu Bảo tồn Thiên nhiên Lung Ngọc Hoàng.,rag,tourism
+Khu Bảo tồn Thiên nhiên Lung Ngọc Hoàng nằm ở đâu?,kg,tourism
+Địa chỉ của Khu Bảo tồn Thiên nhiên Lung Ngọc Hoàng là gì?,kg,tourism
+Khu Bảo tồn Thiên nhiên Lung Ngọc Hoàng thuộc tỉnh nào và có gì đáng chú ý?,hybrid,tourism
+Giới thiệu Khu Lưu Niệm Nhạc Sĩ Cao Văn Lầu.,rag,tourism
+Tham quan Khu Lưu Niệm Nhạc Sĩ Cao Văn Lầu có gì đặc sắc?,rag,tourism
+Mô tả trải nghiệm du lịch tại Khu Lưu Niệm Nhạc Sĩ Cao Văn Lầu.,rag,tourism
+Khu Lưu Niệm Nhạc Sĩ Cao Văn Lầu nằm ở đâu?,kg,tourism
+Địa chỉ của Khu Lưu Niệm Nhạc Sĩ Cao Văn Lầu là gì?,kg,tourism
+Khu Lưu Niệm Nhạc Sĩ Cao Văn Lầu thuộc tỉnh nào và có gì đáng chú ý?,hybrid,tourism
+Các điểm du lịch nào ở Tỉnh Cà Mau?,kg,tourism
+Giới thiệu Vườn chim Bạc Liêu.,rag,tourism
+Tham quan Vườn chim Bạc Liêu có gì đặc sắc?,rag,tourism
+Mô tả trải nghiệm du lịch tại Vườn chim Bạc Liêu.,rag,tourism
+Vườn chim Bạc Liêu nằm ở đâu?,kg,tourism
+Địa chỉ của Vườn chim Bạc Liêu là gì?,kg,tourism
+Vườn chim Bạc Liêu thuộc tỉnh nào và có gì đáng chú ý?,hybrid,tourism
+Giới thiệu Khu du lịch Nhà Mát.,rag,tourism
+Tham quan Khu du lịch Nhà Mát có gì đặc sắc?,rag,tourism
+Mô tả trải nghiệm du lịch tại Khu du lịch Nhà Mát.,rag,tourism
+Khu du lịch Nhà Mát nằm ở đâu?,kg,tourism
+Địa chỉ của Khu du lịch Nhà Mát là gì?,kg,tourism
+Khu du lịch Nhà Mát thuộc tỉnh nào và có gì đáng chú ý?,hybrid,tourism
+Giới thiệu Mũi Cà Mau.,rag,tourism
+Tham quan Mũi Cà Mau có gì đặc sắc?,rag,tourism
+Mô tả trải nghiệm du lịch tại Mũi Cà Mau.,rag,tourism
+Mũi Cà Mau nằm ở đâu?,kg,tourism
+Địa chỉ của Mũi Cà Mau là gì?,kg,tourism
+Mũi Cà Mau thuộc tỉnh nào và có gì đáng chú ý?,hybrid,tourism
+Giới thiệu Vườn Quốc gia Mũi Cà Mau.,rag,tourism
+Tham quan Vườn Quốc gia Mũi Cà Mau có gì đặc sắc?,rag,tourism
+Mô tả trải nghiệm du lịch tại Vườn Quốc gia Mũi Cà Mau.,rag,tourism
+Vườn Quốc gia Mũi Cà Mau nằm ở đâu?,kg,tourism
+Địa chỉ của Vườn Quốc gia Mũi Cà Mau là gì?,kg,tourism
+Vườn Quốc gia Mũi Cà Mau thuộc tỉnh nào và có gì đáng chú ý?,hybrid,tourism
+Giới thiệu Vườn chim trong thành phố.,rag,tourism
+Tham quan Vườn chim trong thành phố có gì đặc sắc?,rag,tourism
+Mô tả trải nghiệm du lịch tại Vườn chim trong thành phố.,rag,tourism
+Vườn chim trong thành phố nằm ở đâu?,kg,tourism
+Địa chỉ của Vườn chim trong thành phố là gì?,kg,tourism
+Vườn chim trong thành phố thuộc tỉnh nào và có gì đáng chú ý?,hybrid,tourism
+Giới thiệu Khu phố cổ Hội An.,rag,tourism
+Tham quan Khu phố cổ Hội An có gì đặc sắc?,rag,tourism
+Mô tả trải nghiệm du lịch tại Khu phố cổ Hội An.,rag,tourism
+Khu phố cổ Hội An nằm ở đâu?,kg,tourism
+Địa chỉ của Khu phố cổ Hội An là gì?,kg,tourism
+Khu phố cổ Hội An thuộc tỉnh nào và có gì đáng chú ý?,hybrid,tourism
+Giới thiệu Thành phố Hội An.,rag,tourism
+Tham quan Thành phố Hội An có gì đặc sắc?,rag,tourism
+Mô tả trải nghiệm du lịch tại Thành phố Hội An.,rag,tourism
+Thành phố Hội An nằm ở đâu?,kg,tourism
+Địa chỉ của Thành phố Hội An là gì?,kg,tourism
+Thành phố Hội An thuộc tỉnh nào và có gì đáng chú ý?,hybrid,tourism
+Giới thiệu Di sản văn hóa Mỹ Sơn.,rag,tourism
+Tham quan Di sản văn hóa Mỹ Sơn có gì đặc sắc?,rag,tourism
+Mô tả trải nghiệm du lịch tại Di sản văn hóa Mỹ Sơn.,rag,tourism
+Di sản văn hóa Mỹ Sơn nằm ở đâu?,kg,tourism
+Địa chỉ của Di sản văn hóa Mỹ Sơn là gì?,kg,tourism
+Di sản văn hóa Mỹ Sơn thuộc tỉnh nào và có gì đáng chú ý?,hybrid,tourism
+Giới thiệu Trung tâm Mỹ Ngọc - Công ty CP Ngọc trai Hạ Long.,rag,tourism
+Tham quan Trung tâm Mỹ Ngọc - Công ty CP Ngọc trai Hạ Long có gì đặc sắc?,rag,tourism
+Mô tả trải nghiệm du lịch tại Trung tâm Mỹ Ngọc - Công ty CP Ngọc trai Hạ Long.,rag,tourism
+Trung tâm Mỹ Ngọc - Công ty CP Ngọc trai Hạ Long nằm ở đâu?,kg,tourism
+Địa chỉ của Trung tâm Mỹ Ngọc - Công ty CP Ngọc trai Hạ Long là gì?,kg,tourism
+Trung tâm Mỹ Ngọc - Công ty CP Ngọc trai Hạ Long thuộc tỉnh nào và có gì đáng chú ý?,hybrid,tourism
+Giới thiệu Trung tâm Thương mại Vincom Hạ Long center.,rag,tourism
+Tham quan Trung tâm Thương mại Vincom Hạ Long center có gì đặc sắc?,rag,tourism
+Mô tả trải nghiệm du lịch tại Trung tâm Thương mại Vincom Hạ Long center.,rag,tourism
+Trung tâm Thương mại Vincom Hạ Long center nằm ở đâu?,kg,tourism
+Địa chỉ của Trung tâm Thương mại Vincom Hạ Long center là gì?,kg,tourism
+Trung tâm Thương mại Vincom Hạ Long center thuộc tỉnh nào và có gì đáng chú ý?,hybrid,tourism
+Giới thiệu Làng Cát Cát ở Sa Pa.,rag,tourism
+Tham quan Làng Cát Cát ở Sa Pa có gì đặc sắc?,rag,tourism
+Mô tả trải nghiệm du lịch tại Làng Cát Cát ở Sa Pa.,rag,tourism
+Làng Cát Cát ở Sa Pa nằm ở đâu?,kg,tourism
+Địa chỉ của Làng Cát Cát ở Sa Pa là gì?,kg,tourism
+Làng Cát Cát ở Sa Pa thuộc tỉnh nào và có gì đáng chú ý?,hybrid,tourism
+Giới thiệu Nhà tù Phú Quốc.,rag,tourism
+Tham quan Nhà tù Phú Quốc có gì đặc sắc?,rag,tourism
+Mô tả trải nghiệm du lịch tại Nhà tù Phú Quốc.,rag,tourism
+Nhà tù Phú Quốc nằm ở đâu?,kg,tourism
+Địa chỉ của Nhà tù Phú Quốc là gì?,kg,tourism
+Nhà tù Phú Quốc thuộc tỉnh nào và có gì đáng chú ý?,hybrid,tourism
+Giới thiệu Vườn Quốc gia Phú Quốc.,rag,tourism
+Tham quan Vườn Quốc gia Phú Quốc có gì đặc sắc?,rag,tourism
+Mô tả trải nghiệm du lịch tại Vườn Quốc gia Phú Quốc.,rag,tourism
+Vườn Quốc gia Phú Quốc nằm ở đâu?,kg,tourism
+Địa chỉ của Vườn Quốc gia Phú Quốc là gì?,kg,tourism
+Vườn Quốc gia Phú Quốc thuộc tỉnh nào và có gì đáng chú ý?,hybrid,tourism
+Giới thiệu Vịnh Nha Trang.,rag,tourism
+Tham quan Vịnh Nha Trang có gì đặc sắc?,rag,tourism
+Mô tả trải nghiệm du lịch tại Vịnh Nha Trang.,rag,tourism
+Vịnh Nha Trang nằm ở đâu?,kg,tourism
+Địa chỉ của Vịnh Nha Trang là gì?,kg,tourism
+Vịnh Nha Trang thuộc tỉnh nào và có gì đáng chú ý?,hybrid,tourism
+Giới thiệu Nhà thờ Đá Nha Trang.,rag,tourism
+Tham quan Nhà thờ Đá Nha Trang có gì đặc sắc?,rag,tourism
+Mô tả trải nghiệm du lịch tại Nhà thờ Đá Nha Trang.,rag,tourism
+Nhà thờ Đá Nha Trang nằm ở đâu?,kg,tourism
+Địa chỉ của Nhà thờ Đá Nha Trang là gì?,kg,tourism
+Nhà thờ Đá Nha Trang thuộc tỉnh nào và có gì đáng chú ý?,hybrid,tourism
+Giới thiệu Nhà thờ Đà Lạt.,rag,tourism
+Tham quan Nhà thờ Đà Lạt có gì đặc sắc?,rag,tourism
+Mô tả trải nghiệm du lịch tại Nhà thờ Đà Lạt.,rag,tourism
+Nhà thờ Đà Lạt nằm ở đâu?,kg,tourism
+Địa chỉ của Nhà thờ Đà Lạt là gì?,kg,tourism
+Nhà thờ Đà Lạt thuộc tỉnh nào và có gì đáng chú ý?,hybrid,tourism
+Giới thiệu Thành phố Đà Lạt.,rag,tourism
+Tham quan Thành phố Đà Lạt có gì đặc sắc?,rag,tourism
+Mô tả trải nghiệm du lịch tại Thành phố Đà Lạt.,rag,tourism
+Thành phố Đà Lạt nằm ở đâu?,kg,tourism
+Địa chỉ của Thành phố Đà Lạt là gì?,kg,tourism
+Thành phố Đà Lạt thuộc tỉnh nào và có gì đáng chú ý?,hybrid,tourism
+Giới thiệu Động Phong Nha.,rag,tourism
+Tham quan Động Phong Nha có gì đặc sắc?,rag,tourism
+Mô tả trải nghiệm du lịch tại Động Phong Nha.,rag,tourism
+Động Phong Nha nằm ở đâu?,kg,tourism
+Địa chỉ của Động Phong Nha là gì?,kg,tourism
+Động Phong Nha thuộc tỉnh nào và có gì đáng chú ý?,hybrid,tourism
+Giới thiệu Di sản thiên nhiên thế giới Phong Nha - Kẻ Bàng.,rag,tourism
+Tham quan Di sản thiên nhiên thế giới Phong Nha - Kẻ Bàng có gì đặc sắc?,rag,tourism
+Mô tả trải nghiệm du lịch tại Di sản thiên nhiên thế giới Phong Nha - Kẻ Bàng.,rag,tourism
+Di sản thiên nhiên thế giới Phong Nha - Kẻ Bàng nằm ở đâu?,kg,tourism
+Địa chỉ của Di sản thiên nhiên thế giới Phong Nha - Kẻ Bàng là gì?,kg,tourism
+Di sản thiên nhiên thế giới Phong Nha - Kẻ Bàng thuộc tỉnh nào và có gì đáng chú ý?,hybrid,tourism
+Giới thiệu Quần đảo Cát Bà.,rag,tourism
+Tham quan Quần đảo Cát Bà có gì đặc sắc?,rag,tourism
+Mô tả trải nghiệm du lịch tại Quần đảo Cát Bà.,rag,tourism
+Quần đảo Cát Bà nằm ở đâu?,kg,tourism
+Địa chỉ của Quần đảo Cát Bà là gì?,kg,tourism
+Quần đảo Cát Bà thuộc tỉnh nào và có gì đáng chú ý?,hybrid,tourism
+Giới thiệu Vịnh Hạ Long.,rag,tourism
+Tham quan Vịnh Hạ Long có gì đặc sắc?,rag,tourism
+Mô tả trải nghiệm du lịch tại Vịnh Hạ Long.,rag,tourism
+Vịnh Hạ Long nằm ở đâu?,kg,tourism
+Địa chỉ của Vịnh Hạ Long là gì?,kg,tourism
+Vịnh Hạ Long thuộc tỉnh nào và có gì đáng chú ý?,hybrid,tourism

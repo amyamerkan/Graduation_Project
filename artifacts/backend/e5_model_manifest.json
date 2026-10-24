@@ -1,0 +1,6 @@
+{
+  "model_id": "intfloat/multilingual-e5-base",
+  "revision": "d128750597153bb5987e10b1c3493a34e5a4502a",
+  "snapshot": "/Users/amyas/.cache/huggingface/hub/models--intfloat--multilingual-e5-base/snapshots/d128750597153bb5987e10b1c3493a34e5a4502a",
+  "downloaded_at": "2026-10-10T14:15:27.581103+00:00"
+}

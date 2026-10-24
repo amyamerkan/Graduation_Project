@@ -1,0 +1,80 @@
+@prefix vn: <https://w3id.org/vn-assistant/ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix schema: <https://schema.org/> .
+
+<https://w3id.org/vn-assistant/ontology> a owl:Ontology ;
+    dct:title "Vietnam Heritage, Tourism and Administration Ontology"@en,
+        "Ontology di sản, du lịch và hành chính Việt Nam"@vi ;
+    dct:description "Lược đồ OWL cho Knowledge Graph của trợ lý ảo Việt Nam."@vi ;
+    owl:versionInfo "1.0.0" .
+
+vn:Entity a owl:Class ; rdfs:label "Thực thể"@vi .
+vn:AdministrativeUnit a owl:Class ; rdfs:subClassOf vn:Entity ; rdfs:label "Đơn vị hành chính"@vi .
+vn:Province a owl:Class ; rdfs:subClassOf vn:AdministrativeUnit ; rdfs:label "Tỉnh hoặc thành phố trực thuộc trung ương"@vi .
+vn:HistoricalProvince a owl:Class ; rdfs:subClassOf vn:AdministrativeUnit ; rdfs:label "Tỉnh hoặc thành phố trong danh mục lịch sử"@vi .
+vn:District a owl:Class ; rdfs:subClassOf vn:AdministrativeUnit ; rdfs:label "Quận hoặc huyện lịch sử"@vi .
+vn:Ward a owl:Class ; rdfs:subClassOf vn:AdministrativeUnit ; rdfs:label "Xã, phường hoặc đặc khu"@vi .
+vn:HistoricalAdministrativeUnit a owl:Class ; rdfs:subClassOf vn:AdministrativeUnit ; rdfs:label "Đơn vị hành chính lịch sử"@vi .
+
+vn:Heritage a owl:Class ; rdfs:subClassOf vn:Entity ; rdfs:label "Di sản"@vi .
+vn:TangibleHeritage a owl:Class ; rdfs:subClassOf vn:Heritage ; rdfs:label "Di sản vật thể"@vi .
+vn:IntangibleHeritage a owl:Class ; rdfs:subClassOf vn:Heritage ; rdfs:label "Di sản phi vật thể"@vi .
+vn:WorldHeritage a owl:Class ; rdfs:subClassOf vn:Heritage ; rdfs:label "Di sản thế giới"@vi .
+vn:HeritageSite a owl:Class ; rdfs:subClassOf vn:TangibleHeritage ; rdfs:label "Di tích hoặc địa điểm di sản"@vi .
+vn:Museum a owl:Class ; rdfs:subClassOf vn:Heritage ; rdfs:label "Bảo tàng"@vi .
+
+vn:TourismEntity a owl:Class ; rdfs:subClassOf vn:Entity ; rdfs:label "Thực thể du lịch"@vi .
+vn:TourismPlace a owl:Class ; rdfs:subClassOf vn:TourismEntity ; rdfs:label "Điểm đến du lịch"@vi .
+vn:TourismActivity a owl:Class ; rdfs:subClassOf vn:TourismEntity ; rdfs:label "Hoạt động du lịch"@vi .
+
+vn:LegalEntity a owl:Class ; rdfs:subClassOf vn:Entity ; rdfs:label "Thực thể pháp luật và hành chính công"@vi .
+vn:LegalDocument a owl:Class ; rdfs:subClassOf vn:LegalEntity ; rdfs:label "Văn bản pháp luật"@vi .
+vn:LegalArticle a owl:Class ; rdfs:subClassOf vn:LegalEntity ; rdfs:label "Điều luật"@vi .
+vn:AdministrativeProcedure a owl:Class ; rdfs:subClassOf vn:LegalEntity ; rdfs:label "Thủ tục hành chính"@vi .
+vn:Organization a owl:Class ; rdfs:subClassOf vn:Entity ; rdfs:label "Tổ chức"@vi .
+vn:SourceDocument a owl:Class ; rdfs:subClassOf vn:Entity ; rdfs:label "Tài liệu nguồn"@vi .
+
+vn:locatedIn a owl:ObjectProperty, owl:TransitiveProperty ;
+    rdfs:domain vn:Entity ; rdfs:range vn:AdministrativeUnit ; rdfs:label "nằm tại"@vi .
+vn:contains a owl:ObjectProperty ;
+    owl:inverseOf vn:locatedIn ; rdfs:domain vn:AdministrativeUnit ; rdfs:range vn:Entity ; rdfs:label "chứa"@vi .
+vn:mergedInto a owl:ObjectProperty ;
+    rdfs:domain vn:AdministrativeUnit ; rdfs:range vn:AdministrativeUnit ; rdfs:label "sáp nhập vào"@vi .
+vn:reorganizedInto a owl:ObjectProperty ; rdfs:domain vn:AdministrativeUnit ; rdfs:range vn:AdministrativeUnit ; rdfs:label "liên kết chuyển đổi danh mục"@vi .
+vn:partlyMergedInto a owl:ObjectProperty ; rdfs:domain vn:AdministrativeUnit ; rdfs:range vn:AdministrativeUnit ; rdfs:label "chuyển một phần địa bàn vào"@vi .
+vn:address a owl:DatatypeProperty ; rdfs:domain vn:TourismPlace ; rdfs:range xsd:string ; rdfs:label "địa chỉ do nguồn ghi nhận"@vi .
+vn:snapshotDate a owl:DatatypeProperty ; rdfs:domain vn:AdministrativeUnit ; rdfs:range xsd:date ; rdfs:label "ngày chụp danh mục"@vi .
+vn:isCurrentSnapshot a owl:DatatypeProperty ; rdfs:domain vn:AdministrativeUnit ; rdfs:range xsd:boolean ; rdfs:label "phiên bản danh mục hiện tại của ứng dụng"@vi .
+vn:replacedBy a owl:ObjectProperty, owl:TransitiveProperty ;
+    rdfs:domain vn:Entity ; rdfs:range vn:Entity ; rdfs:label "được thay thế bởi"@vi .
+vn:recognizedBy a owl:ObjectProperty ;
+    rdfs:domain vn:Heritage ; rdfs:range vn:Organization ; rdfs:label "được công nhận bởi"@vi .
+vn:governedBy a owl:ObjectProperty ;
+    rdfs:domain vn:LegalEntity ; rdfs:range vn:Organization ; rdfs:label "do cơ quan quản lý"@vi .
+vn:hasArticle a owl:ObjectProperty ;
+    rdfs:domain vn:LegalDocument ; rdfs:range vn:LegalArticle ; rdfs:label "có điều luật"@vi .
+vn:mentions a owl:ObjectProperty ;
+    rdfs:domain vn:SourceDocument ; rdfs:range vn:Entity ; rdfs:label "đề cập"@vi .
+vn:hasSource a owl:ObjectProperty ;
+    rdfs:domain vn:Entity ; rdfs:range vn:SourceDocument ; rdfs:label "có nguồn"@vi .
+
+vn:name a owl:DatatypeProperty, owl:FunctionalProperty ;
+    rdfs:domain vn:Entity ; rdfs:range xsd:string ; rdfs:label "tên"@vi .
+vn:code a owl:DatatypeProperty ; rdfs:domain vn:Entity ; rdfs:range xsd:string ; rdfs:label "mã"@vi .
+vn:description a owl:DatatypeProperty ; rdfs:domain vn:Entity ; rdfs:range xsd:string ; rdfs:label "mô tả"@vi .
+vn:validFrom a owl:DatatypeProperty ; rdfs:domain vn:Entity ; rdfs:range xsd:date ; rdfs:label "có hiệu lực từ"@vi .
+vn:validTo a owl:DatatypeProperty ; rdfs:domain vn:Entity ; rdfs:range xsd:date ; rdfs:label "có hiệu lực đến"@vi .
+vn:latitude a owl:DatatypeProperty ; rdfs:domain vn:Entity ; rdfs:range xsd:decimal ; rdfs:label "vĩ độ"@vi .
+vn:longitude a owl:DatatypeProperty ; rdfs:domain vn:Entity ; rdfs:range xsd:decimal ; rdfs:label "kinh độ"@vi .
+vn:inscriptionYear a owl:DatatypeProperty ; rdfs:domain vn:Heritage ; rdfs:range xsd:gYear ; rdfs:label "năm ghi danh"@vi .
+vn:sourceName a owl:DatatypeProperty ; rdfs:domain vn:Entity ; rdfs:range xsd:string ; rdfs:label "tên nguồn"@vi .
+vn:sourceRecordId a owl:DatatypeProperty ; rdfs:domain vn:Entity ; rdfs:range xsd:string ; rdfs:label "mã bản ghi nguồn"@vi .
+vn:sourceUrl a owl:DatatypeProperty ; rdfs:domain vn:SourceDocument ; rdfs:range xsd:anyURI ; rdfs:label "URL nguồn"@vi .
+
+vn:Province owl:disjointWith vn:Ward, vn:District .
+vn:LegalDocument owl:disjointWith vn:AdministrativeUnit, vn:Heritage .
+

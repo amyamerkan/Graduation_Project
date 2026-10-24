@@ -1,0 +1,108 @@
+{
+  "created_at": "2026-10-23T18:14:46.316059+00:00",
+  "administration": {
+    "current_provinces": 34,
+    "current_wards": 3321,
+    "legacy_provinces": 63,
+    "legacy_districts": 696,
+    "legacy_wards": 10051,
+    "records": 28138,
+    "conversion_links": 10618,
+    "skipped_conversion_links": [
+      {
+        "level": "ward",
+        "old_code": 3980
+      },
+      {
+        "level": "ward",
+        "old_code": 3983
+      },
+      {
+        "level": "ward",
+        "old_code": 3984
+      },
+      {
+        "level": "ward",
+        "old_code": 26929
+      },
+      {
+        "level": "ward",
+        "old_code": 26953
+      },
+      {
+        "level": "ward",
+        "old_code": 27076
+      },
+      {
+        "level": "ward",
+        "old_code": 27226
+      },
+      {
+        "level": "ward",
+        "old_code": 27232
+      },
+      {
+        "level": "ward",
+        "old_code": 27367
+      },
+      {
+        "level": "ward",
+        "old_code": 27373
+      }
+    ],
+    "snapshot_dates": [
+      "2025-06-30",
+      "2025-07-01",
+      "2026-10-24"
+    ],
+    "source": "https://pypi.org/project/vietnam-provinces/2026.9.0/",
+    "license": "GPL-3.0-or-later",
+    "source_verified": false,
+    "scope": "Versioned community catalogue attributed to NSO; 2025 snapshot and conversion reference, not proof of every current 2026 boundary."
+  },
+  "tourism": {
+    "documents": 189,
+    "province_coverage": {
+      "01": 6,
+      "04": 6,
+      "08": 6,
+      "11": 6,
+      "12": 2,
+      "14": 2,
+      "15": 6,
+      "19": 6,
+      "20": 2,
+      "22": 3,
+      "24": 6,
+      "25": 6,
+      "31": 6,
+      "33": 6,
+      "37": 6,
+      "38": 6,
+      "40": 6,
+      "42": 6,
+      "44": 6,
+      "46": 6,
+      "48": 6,
+      "51": 6,
+      "52": 6,
+      "56": 6,
+      "66": 6,
+      "68": 6,
+      "75": 6,
+      "79": 6,
+      "80": 6,
+      "82": 6,
+      "86": 6,
+      "91": 6,
+      "92": 6,
+      "96": 6
+    },
+    "errors": [],
+    "source": "https://csdl.vietnamtourism.gov.vn",
+    "country": "VN",
+    "per_province_target": 6
+  },
+  "final_tourism_documents_after_scope_filter": 186,
+  "scope_filter": "Independent festival entries removed; visitor attractions retained."
+}

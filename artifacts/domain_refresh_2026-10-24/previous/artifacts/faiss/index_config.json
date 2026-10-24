@@ -1,0 +1,41 @@
+{
+  "backend": "transformer",
+  "production_ready": true,
+  "embedding": {
+    "model_name": "intfloat/multilingual-e5-base",
+    "device": "mps",
+    "batch_size": 32,
+    "query_prefix": "query: ",
+    "passage_prefix": "passage: ",
+    "expand_terms": true
+  },
+  "metric": "cosine_via_normalized_inner_product",
+  "documents": 28377,
+  "vectors": 28909,
+  "dimension": 768,
+  "resumed_vectors": 28847,
+  "chunks_by_domain": {
+    "administration": 28175,
+    "tourism": 734
+  },
+  "chunk_size": 900,
+  "overlap": 150,
+  "build_signature": {
+    "dataset": "/Users/amyas/HK1 26-27/DATN/data/rag_dataset_final.jsonl",
+    "dataset_size": 16862646,
+    "dataset_mtime_ns": 1792848428378946003,
+    "backend": "transformer",
+    "embedding": {
+      "model_name": "intfloat/multilingual-e5-base",
+      "device": "mps",
+      "batch_size": 32,
+      "query_prefix": "query: ",
+      "passage_prefix": "passage: ",
+      "expand_terms": true
+    },
+    "chunk_size": 900,
+    "overlap": 150,
+    "limit_documents": 0,
+    "format_version": 2
+  }
+}

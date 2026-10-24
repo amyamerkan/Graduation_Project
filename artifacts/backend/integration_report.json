@@ -1,0 +1,1869 @@
+{
+  "started_at_utc": "2026-10-10T14:29:58.977329+00:00",
+  "scope": "Kiểm thử tích hợp chức năng trên 7 câu được chọn từ dữ liệu hiện có; không phải đánh giá độ chính xác tổng quát, xác nhận nguồn chính thống hoặc benchmark độ trễ.",
+  "cases_file": "/Users/amyas/HK1 26-27/DATN/SOURCE/evaluation/backend_smoke.json",
+  "top_k": 5,
+  "configuration": {
+    "project_root": "/Users/amyas/HK1 26-27/DATN/SOURCE",
+    "workspace_root": "/Users/amyas/HK1 26-27/DATN",
+    "llm": {
+      "backend": "transformers",
+      "model": "/Users/amyas/HK1 26-27/DATN/models/Qwen3-0.6B",
+      "device": "auto",
+      "max_new_tokens": 384,
+      "context_window": 4096,
+      "timeout_s": 60.0,
+      "local_files_only": true,
+      "base_url": null,
+      "api_key_configured": false
+    },
+    "embedding": {
+      "model": "intfloat/multilingual-e5-base",
+      "device": "cpu"
+    },
+    "evidence": {
+      "max_evidence": 6,
+      "min_rag_score": 0.7
+    },
+    "artifacts": {
+      "kg": {
+        "path": "/Users/amyas/HK1 26-27/DATN/artifacts/kg/vn_knowledge_graph.ttl",
+        "exists": true,
+        "bytes": 12015318,
+        "modified_at_utc": "2026-09-15T07:08:54.093695+00:00"
+      },
+      "router": {
+        "path": "/Users/amyas/HK1 26-27/DATN/artifacts/router/router.joblib",
+        "exists": true,
+        "bytes": 246686,
+        "modified_at_utc": "2026-09-15T07:09:06.342792+00:00"
+      },
+      "faiss_index": {
+        "path": "/Users/amyas/HK1 26-27/DATN/artifacts/faiss/vn.index",
+        "exists": true,
+        "bytes": 1404812730,
+        "modified_at_utc": "2026-09-24T21:14:49.784223+00:00"
+      },
+      "faiss_metadata": {
+        "path": "/Users/amyas/HK1 26-27/DATN/artifacts/faiss/metadata.sqlite3",
+        "exists": true,
+        "bytes": 711520256,
+        "modified_at_utc": "2026-09-24T21:14:52.383158+00:00"
+      }
+    },
+    "index": {
+      "backend": "transformer",
+      "documents": 130999,
+      "vectors": 456108,
+      "dimension": 768,
+      "metric": "cosine_via_normalized_inner_product",
+      "chunk_size": 900,
+      "overlap": 150,
+      "chunks_by_domain": {
+        "administration": 3355,
+        "heritage": 88384,
+        "law": 270755,
+        "tourism": 93614
+      },
+      "embedding": {
+        "model_name": "intfloat/multilingual-e5-base",
+        "device": "mps",
+        "batch_size": 16,
+        "query_prefix": "query: ",
+        "passage_prefix": "passage: ",
+        "expand_terms": true
+      }
+    }
+  },
+  "hardware": {
+    "os": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+    "machine": "arm64",
+    "processor": "arm",
+    "python": "3.13.7",
+    "executable": "/Users/amyas/HK1 26-27/DATN/.venv/bin/python",
+    "memory_bytes": 17179869184,
+    "logical_cores": 10
+  },
+  "package_versions": {
+    "torch": "2.14.1",
+    "transformers": "4.57.6",
+    "sentence-transformers": "5.7.0",
+    "faiss-cpu": "1.15.1",
+    "rdflib": "7.6.0",
+    "scikit-learn": "1.9.1",
+    "fastapi": "0.143.0",
+    "numpy": "2.5.3"
+  },
+  "cases": [
+    {
+      "case_id": "kg_verified_code",
+      "question": "Đơn vị có mã 00070 là gì?",
+      "expect": {
+        "status": "answered",
+        "route": "kg",
+        "domain": "administration",
+        "min_kg_rows": 1,
+        "max_rag_rows": 0,
+        "kg_must_contain": {
+          "name": "Phường Hoàn Kiếm",
+          "code": "00070"
+        },
+        "citation_kinds": [
+          "kg"
+        ],
+        "llm_calls": 1
+      },
+      "faiss_not_loaded_before_case": true,
+      "response": {
+        "question": "Đơn vị có mã 00070 là gì?",
+        "classification": {
+          "question": "Đơn vị có mã 00070 là gì?",
+          "route": "kg",
+          "domain": "administration",
+          "route_confidence": 0.7,
+          "domain_confidence": 0.7,
+          "method": "tfidf_logistic_regression"
+        },
+        "plan": {
+          "route": "kg",
+          "kg": {
+            "query": "03_unit_by_code",
+            "params": {
+              "code": "00070"
+            }
+          },
+          "rag": null,
+          "intent": "logical",
+          "constraints": {
+            "temporal": [],
+            "spatial": [],
+            "unsupported": []
+          },
+          "warnings": []
+        },
+        "effective_route": "kg",
+        "retrieval_status": "ready",
+        "status": "answered",
+        "answer": "Theo các minh chứng tìm được:\nTên thực thể: Phường Hoàn Kiếm. Mã của Phường Hoàn Kiếm: 00070. Loại thực thể của Phường Hoàn Kiếm: đơn vị hành chính cấp xã. [1]\n\nNguồn minh chứng:\n[1] Phường Hoàn Kiếm — bản ghi KG nội bộ; vietnam-administrative-division-json-server; vietnam-sap-nhap-phuong-xa.csv (15 bản ghi nguồn)",
+        "citations": [
+          {
+            "number": 1,
+            "evidence_id": "E01",
+            "kind": "kg",
+            "title": "Phường Hoàn Kiếm",
+            "source": "vietnam-administrative-division-json-server; vietnam-sap-nhap-phuong-xa.csv",
+            "source_url": null,
+            "source_record_ids": [
+              "00bce023d123231c64047b1f2bfb45aacbdf18f525f37a38c72ed38fdc903bbd",
+              "1ea080b7e735cd00dc62ae43cdab67b7c5ed4ab4feda07a47e072604099a125c",
+              "43e0df66051533b3a0866299d12d19d062a2abb1697a7331121230cf502891d5",
+              "4c8e04f25a0d00f5424746e9797800861218b913642a6783f2260527dcb8e1d1",
+              "5fb623bca580d4263da4249567e1ec41b7c93108c6f1f109888d8f97b9ca542c",
+              "77b4190301c71f452096adf1a81d66f34bc63630a5e1860137db628e59f20950",
+              "7e03a400c538e737677d7600db68fb337ce2747807ceb70d7bdb38a56722f330",
+              "94a1eced857aa8da40b511c062bdc357d6d2f40a23b021b3891189b764117777",
+              "b3f89fc9d4eb9d345c2471046f40ad98939d2f3890c002c55476cf7dec96e43a",
+              "b6d8c1292a9f67c5816c17df66cd7c5a2833c73469e6c14dd7d0659f00ca7027",
+              "c63e0f31b2788bcb465b27f5e25282bf7499664e0999940b13384612af76e9d5",
+              "e690d80feb717d67e71a7ba905a527c14e409f32a6ad4be4daefec89e19643b0",
+              "f0e6ec3fa13eb0fa76eec5ee2f3996deb1c5b32020b679271c4d693b22b5c01f",
+              "fbacad31aa7b4d1c3886a5bb604598851e04f9c1ec36dd264d7015db8c58f7d6",
+              "fcbe5c03b959dc1372d4ce38e60d22ef125c1cf06048bd29ecb1536ebe121978"
+            ],
+            "source_verified": false
+          }
+        ],
+        "claims": [
+          {
+            "claim_id": "E01-C01",
+            "mode": "fact",
+            "text": "Tên thực thể: Phường Hoàn Kiếm. Mã của Phường Hoàn Kiếm: 00070. Loại thực thể của Phường Hoàn Kiếm: đơn vị hành chính cấp xã.",
+            "evidence_ids": [
+              "E01"
+            ],
+            "fields": [
+              "name",
+              "code",
+              "type"
+            ],
+            "fact_checks": [
+              {
+                "evidence_id": "E01",
+                "field": "name",
+                "value": "Phường Hoàn Kiếm"
+              },
+              {
+                "evidence_id": "E01",
+                "field": "code",
+                "value": "00070"
+              },
+              {
+                "evidence_id": "E01",
+                "field": "type",
+                "value": "https://w3id.org/vn-assistant/ontology#Ward"
+              }
+            ],
+            "verification": "exact_kg_fact_match",
+            "source_verified": false
+          }
+        ],
+        "cross_check": {
+          "status": "supported",
+          "supported": [
+            {
+              "claim_id": "E01-C01",
+              "mode": "fact",
+              "text": "Tên thực thể: Phường Hoàn Kiếm. Mã của Phường Hoàn Kiếm: 00070. Loại thực thể của Phường Hoàn Kiếm: đơn vị hành chính cấp xã.",
+              "evidence_ids": [
+                "E01"
+              ],
+              "fields": [
+                "name",
+                "code",
+                "type"
+              ],
+              "fact_checks": [
+                {
+                  "evidence_id": "E01",
+                  "field": "name",
+                  "value": "Phường Hoàn Kiếm"
+                },
+                {
+                  "evidence_id": "E01",
+                  "field": "code",
+                  "value": "00070"
+                },
+                {
+                  "evidence_id": "E01",
+                  "field": "type",
+                  "value": "https://w3id.org/vn-assistant/ontology#Ward"
+                }
+              ],
+              "verification": "exact_kg_fact_match",
+              "source_verified": false
+            }
+          ],
+          "rejected": [],
+          "checked_count": 1,
+          "supported_count": 1,
+          "rejected_count": 0,
+          "verification_scope": "extractive_text_and_structured_kg_facts"
+        },
+        "warnings": [],
+        "llm": {
+          "backend": "transformers",
+          "model": "/Users/amyas/HK1 26-27/DATN/models/Qwen3-0.6B",
+          "device": "mps",
+          "ready": true,
+          "context_window": 4096,
+          "max_new_tokens": 384,
+          "error": null,
+          "generation_count": 1,
+          "last_latency_ms": 719.43
+        },
+        "timings_ms": {
+          "question_processing": 9.313,
+          "generation": 719.611,
+          "kg_refresh": 2.823,
+          "cross_check": 0.034,
+          "total": 731.969
+        }
+      },
+      "retrieval": {
+        "kg_rows": 1,
+        "rag_rows": 0,
+        "kg_results": [
+          {
+            "unit": "https://w3id.org/vn-assistant/resource/ward_6dbe60d56bc9a531",
+            "type": "https://w3id.org/vn-assistant/ontology#Ward",
+            "name": "Phường Hoàn Kiếm",
+            "code": "00070",
+            "validFrom": "2025-07-01",
+            "source_record_ids": [
+              "00bce023d123231c64047b1f2bfb45aacbdf18f525f37a38c72ed38fdc903bbd",
+              "1ea080b7e735cd00dc62ae43cdab67b7c5ed4ab4feda07a47e072604099a125c",
+              "43e0df66051533b3a0866299d12d19d062a2abb1697a7331121230cf502891d5",
+              "4c8e04f25a0d00f5424746e9797800861218b913642a6783f2260527dcb8e1d1",
+              "5fb623bca580d4263da4249567e1ec41b7c93108c6f1f109888d8f97b9ca542c",
+              "77b4190301c71f452096adf1a81d66f34bc63630a5e1860137db628e59f20950",
+              "7e03a400c538e737677d7600db68fb337ce2747807ceb70d7bdb38a56722f330",
+              "94a1eced857aa8da40b511c062bdc357d6d2f40a23b021b3891189b764117777",
+              "b3f89fc9d4eb9d345c2471046f40ad98939d2f3890c002c55476cf7dec96e43a",
+              "b6d8c1292a9f67c5816c17df66cd7c5a2833c73469e6c14dd7d0659f00ca7027",
+              "c63e0f31b2788bcb465b27f5e25282bf7499664e0999940b13384612af76e9d5",
+              "e690d80feb717d67e71a7ba905a527c14e409f32a6ad4be4daefec89e19643b0",
+              "f0e6ec3fa13eb0fa76eec5ee2f3996deb1c5b32020b679271c4d693b22b5c01f",
+              "fbacad31aa7b4d1c3886a5bb604598851e04f9c1ec36dd264d7015db8c58f7d6",
+              "fcbe5c03b959dc1372d4ce38e60d22ef125c1cf06048bd29ecb1536ebe121978"
+            ],
+            "source_names": [
+              "vietnam-administrative-division-json-server",
+              "vietnam-sap-nhap-phuong-xa.csv"
+            ]
+          }
+        ],
+        "rag_results": [],
+        "physical_filters": {
+          "domain": "administration",
+          "doc_ids": null,
+          "entity_terms": null
+        },
+        "warnings": [],
+        "timings_ms": {
+          "classification": 6.111,
+          "kg": 3.174,
+          "rag": 0.0,
+          "total": 9.288
+        }
+      },
+      "selected_citation_kinds": [
+        "kg"
+      ],
+      "generation_counter_delta": 1,
+      "checks": {
+        "answer_status": true,
+        "answer_and_citations": true,
+        "supported_cross_check": true,
+        "citation_consistency": true,
+        "route": true,
+        "domain": true,
+        "min_kg_rows": true,
+        "max_rag_rows": true,
+        "kg_must_contain": true,
+        "citation_kinds": true,
+        "llm_calls": true,
+        "valid_timings": true,
+        "generation_measured": true
+      },
+      "passed": true,
+      "hybrid_note": null,
+      "wall_latency_ms": 731.999
+    },
+    {
+      "case_id": "hybrid_ca_tru",
+      "question": "Ca trù thuộc loại di sản nào và có giá trị văn hóa gì?",
+      "expect": {
+        "status": "answered",
+        "route": "hybrid",
+        "domain": "heritage",
+        "min_kg_rows": 1,
+        "min_rag_rows": 1,
+        "physical_kg_scope": true,
+        "llm_calls": 1
+      },
+      "faiss_not_loaded_before_case": true,
+      "response": {
+        "question": "Ca trù thuộc loại di sản nào và có giá trị văn hóa gì?",
+        "classification": {
+          "question": "Ca trù thuộc loại di sản nào và có giá trị văn hóa gì?",
+          "route": "hybrid",
+          "domain": "heritage",
+          "route_confidence": 0.7,
+          "domain_confidence": 0.7,
+          "method": "tfidf_logistic_regression"
+        },
+        "plan": {
+          "route": "hybrid",
+          "kg": {
+            "query": "08_entity_facts",
+            "params": {
+              "keyword": "Ca trù",
+              "limit": 10
+            }
+          },
+          "rag": {
+            "domain": "heritage",
+            "top_k": 5
+          },
+          "intent": "hybrid",
+          "constraints": {
+            "temporal": [],
+            "spatial": [],
+            "unsupported": []
+          },
+          "warnings": []
+        },
+        "effective_route": "hybrid",
+        "retrieval_status": "ready",
+        "status": "answered",
+        "answer": "Theo các minh chứng tìm được:\nTên thực thể: Ca trù performance. Loại thực thể của Ca trù performance: di sản. [1]\nCa trù không chỉ là một hình thức giải trí mà còn là một kho tàng văn hoá vô giá, cần được gìn giữ và phát triển để truyền lại cho các thế hệ mai sau. [2]\nCa trù góp phần làm phong phú thêm kho tàng văn hóa Việt Nam và được UNESCO công nhận là di sản văn hóa phi vật thể cần được bảo vệ. [3]\n\nNguồn minh chứng:\n[1] Ca trù performance — bản ghi KG nội bộ; viet-cultural-vqa (58 bản ghi nguồn)\n[2] Ca trù performance — tài liệu trong bộ dữ liệu cục bộ\n[3] Ca trù performance — tài liệu trong bộ dữ liệu cục bộ",
+        "citations": [
+          {
+            "number": 1,
+            "evidence_id": "E01",
+            "kind": "kg",
+            "title": "Ca trù performance",
+            "source": "viet-cultural-vqa",
+            "source_url": null,
+            "source_record_ids": [
+              "0402bba36f8b92b18afe70209b0f690263e6d086290293d9a4b8fd68aa0934c9",
+              "04c128678f550fc5771d52902a6d8f1ccb02eb4cb475d7ecb299334642800642",
+              "0520d2f6469e7f7c5badb829ed6612c984b714f037cb56d842039afa679acc73",
+              "0d3fe6c18efc1d04f76270d68426136f32240fbfc4da711578d3eaa35d5d7dae",
+              "0f9889b40d26a44ead669fa9f6d6d7bca360190d2a1efe13290cb5cef0724424",
+              "0fbbe95de26306981f5aaadaa4c3334a462a93fa49ae1ea920afea8acbe567dc",
+              "13d4e2a82349658c5f96cff2dab297de519dc01cb3fef07ee3f04772da8b5ef6",
+              "1a31e98b95b4efac4bd869330d47d77f8f544b2a91b2eef60fd29990dd59c75d",
+              "31c73b987f080d7787e82e5c5c7cad7b355298443f207c5f4383cf9928a6a5b7",
+              "3234b67381a6eb44ea445c380f8e15bec27e62c88d797ee542023d9632080bd7",
+              "32f4908140507a3728c997e2137972422c89aa1dfaef94c294024b81d5f001c4",
+              "331ca6d9e2326ac660cf3f5d05d9bcecc84a206fd774d52da4393878fd9bd78f",
+              "3669504502978cfbc2e2cadd053d52b79284cddbdacd7fac59fb56f2396f6573",
+              "3ba7c61d5b3eafb9e342cec0cbfb6c9c56876ef0457c2a11fd3395e592625a43",
+              "405ff3d962e930ed007ca4a73a9d4aab2e8ebf0d0001a284b33a35c670dd0afa",
+              "45147368a7103910d3c705665ade296ee8c263d122bdede4eb36ce179c0641be",
+              "4603bfb9fc4484c8a9b55a1651d4e91db5b8c0dfb83425365ea9528701a1ec8c",
+              "46dab8f7487e499e394e0104ce39da7b6d25fe8a56af18bd1027d659b50fa9b5",
+              "4a302acd947ec2aa388117fa8e0946cac1dd232fb219e1baaec6497d60ae5b65",
+              "4b4f446163d12e7938c276eef8d339a8a142638824cd35d26371370fc190e625",
+              "57efc094f07011985a12cca7c2abf6dd7b491b70aa67fd0ed9d618166bb536cd",
+              "59e788a3371eb9f03b699ac7b3bc3b138bd505fb3a39e1fa8d0d68920494f4bc",
+              "614ea6fbdf1092bb6d760a9d024ceeff82b91c5f84a3f7302dcd410bb88b8fe9",
+              "62fcd3ee75ce62c6c6510488062c6ff9c63ac1aaacc063ec9264dce5cb3d860b",
+              "67662270495f2b7a5137e3aac533beac453fc864986fef16251818b32a887883",
+              "67ad57908235398755d67e2779fb126af966339c4e999a80a3b085f1c30b3375",
+              "683f6ef1efa994844ae480bdc84f2dcb7887fa9c992570711c959347fab7df59",
+              "68ed553130e59cd226fb7507417c7b84f3aee58f5b1010840be79424051f1b98",
+              "6b3ddd88a58bb33c9eca5fff37de1f89ee700117755d3dc931b6391b160b8157",
+              "6c9571673750541d8b9ddc5768823c1fc4eea05773d7415030c31b0f5b0a2742",
+              "6f8aaebcf17c37dcd00883b47e0ad1dc9eae0fb27c82bc8bba96e9b77e752eb2",
+              "7555dc77b794e911d65e0a03ced37fb0f4feec7090d041be2e24aa7e2a80ad89",
+              "75b5e35db81e7237df6e71eca13bd117183e2bb5928421661f950e754e140d7c",
+              "75e7521864da6dcf76f9a2a80998bd7c9342ba8309f3034607126f27a122d7d0",
+              "78b5d808207255d7df78e89ccd89fda9e59a639979223f65762b5cc40a939253",
+              "8b74367b9f8780816f7be77773cdc6b7b663998c82ea9b1a03f7da1bee91bd65",
+              "8d25e600e17e552fd930b495a68534fb733d9298bdf7abad31db3727aec269b9",
+              "90aea2440f6bf72fb30e1513f78704e48b87589180a62fca1e0621c6bd68e4d2",
+              "914a35a6cce57cf00937b34b42c44db17f87507dfc379e847ca911e029146217",
+              "9454b0e4275d92abcf5c930308147fe37840d8820ab15d65566492135753c2f4",
+              "97c4d3559678d59b9c413e39b724a852a4c685a342beccbad0d71c80f49d1ce4",
+              "984b8c5bdfb171436ef6b3099b55efd7013e19d31e66df7abc137518060329d5",
+              "9fb44921d1efb27d2bf6c8335fcb98175fbae245b9b728d4cff3ec3a5b82a831",
+              "a4ddb7fa6e9b5a6700a6922661d4d8af30b646758a851a92e300894296af96d6",
+              "ab392244592b7041ed6e5e9f57b7d74b19ae247c4d0c919d6a4bc9fb2f90cc33",
+              "b06812379d6497163e4f19b1a18e411dc8db4e5505fc6ebb55e9479e31fa5ce3",
+              "b18998adaa815afcbd1e21ce763db2fb490d258b8fbe1e4d81c1795644c89b29",
+              "b475526e07ebcee3d3eec2ec689f515d2709e9d23ebe26725f0484396dfd47f0",
+              "c43f6b7d0be2a794bdeb06129a7741eea69a799a81e9ae9662ff1cdf28c81a06",
+              "d00322f4177fb6fb565b61a7aa8f0ce04af9c8781caddc59e90d5da53e461ffa",
+              "d06a2161fea18013a989b129c176b775fff8b77d2346806b6abc2c43baa096dd",
+              "d09cc7f2c47a702c4efff361834084b1038fa263ebe28c16d6ed1abbaefb8c46",
+              "d1489e36addee0e81c59db012f8ea86976c41bb7f4d4d8b45506c05b2be4f26e",
+              "d22d031a68d84c472a4ea3d409e1c160d25af93ff0ec9c0ef2d94bed21c3382a",
+              "d59b4acd7d52a8b64a948e91a66ccc7bb75e17d743cd652fd3f4ea4517e19afb",
+              "d8789f5e6a5ab959e48cb0810da7e356837546f6d313c2182f699d9a7579c72f",
+              "e4b070a07579c7c6c6a82fe3d912f8992026e7baaccb1b114dd2f476fe4a7128",
+              "f8b8f410f72036934e0f3dc5f5b64b1680ffdd5057dfa78fa359081bad761c16"
+            ],
+            "source_verified": false
+          },
+          {
+            "number": 2,
+            "evidence_id": "E02",
+            "kind": "rag",
+            "title": "Ca trù performance",
+            "source": "viet-cultural-vqa",
+            "source_url": null,
+            "source_record_ids": [
+              "67ad57908235398755d67e2779fb126af966339c4e999a80a3b085f1c30b3375"
+            ],
+            "source_verified": false
+          },
+          {
+            "number": 3,
+            "evidence_id": "E05",
+            "kind": "rag",
+            "title": "Ca trù performance",
+            "source": "viet-cultural-vqa",
+            "source_url": null,
+            "source_record_ids": [
+              "ab392244592b7041ed6e5e9f57b7d74b19ae247c4d0c919d6a4bc9fb2f90cc33"
+            ],
+            "source_verified": false
+          }
+        ],
+        "claims": [
+          {
+            "claim_id": "E01-C01",
+            "mode": "fact",
+            "text": "Tên thực thể: Ca trù performance. Loại thực thể của Ca trù performance: di sản.",
+            "evidence_ids": [
+              "E01"
+            ],
+            "fields": [
+              "name",
+              "type"
+            ],
+            "fact_checks": [
+              {
+                "evidence_id": "E01",
+                "field": "name",
+                "value": "Ca trù performance"
+              },
+              {
+                "evidence_id": "E01",
+                "field": "type",
+                "value": "https://w3id.org/vn-assistant/ontology#Heritage"
+              }
+            ],
+            "verification": "exact_kg_fact_match",
+            "source_verified": false
+          },
+          {
+            "claim_id": "E02-C03",
+            "mode": "extractive",
+            "text": "Ca trù không chỉ là một hình thức giải trí mà còn là một kho tàng văn hoá vô giá, cần được gìn giữ và phát triển để truyền lại cho các thế hệ mai sau.",
+            "evidence_ids": [
+              "E02"
+            ],
+            "verification": "exact_evidence_match",
+            "source_verified": false
+          },
+          {
+            "claim_id": "E05-C01",
+            "mode": "extractive",
+            "text": "Ca trù góp phần làm phong phú thêm kho tàng văn hóa Việt Nam và được UNESCO công nhận là di sản văn hóa phi vật thể cần được bảo vệ.",
+            "evidence_ids": [
+              "E05"
+            ],
+            "verification": "exact_evidence_match",
+            "source_verified": false
+          }
+        ],
+        "cross_check": {
+          "status": "supported",
+          "supported": [
+            {
+              "claim_id": "E01-C01",
+              "mode": "fact",
+              "text": "Tên thực thể: Ca trù performance. Loại thực thể của Ca trù performance: di sản.",
+              "evidence_ids": [
+                "E01"
+              ],
+              "fields": [
+                "name",
+                "type"
+              ],
+              "fact_checks": [
+                {
+                  "evidence_id": "E01",
+                  "field": "name",
+                  "value": "Ca trù performance"
+                },
+                {
+                  "evidence_id": "E01",
+                  "field": "type",
+                  "value": "https://w3id.org/vn-assistant/ontology#Heritage"
+                }
+              ],
+              "verification": "exact_kg_fact_match",
+              "source_verified": false
+            },
+            {
+              "claim_id": "E02-C03",
+              "mode": "extractive",
+              "text": "Ca trù không chỉ là một hình thức giải trí mà còn là một kho tàng văn hoá vô giá, cần được gìn giữ và phát triển để truyền lại cho các thế hệ mai sau.",
+              "evidence_ids": [
+                "E02"
+              ],
+              "verification": "exact_evidence_match",
+              "source_verified": false
+            },
+            {
+              "claim_id": "E05-C01",
+              "mode": "extractive",
+              "text": "Ca trù góp phần làm phong phú thêm kho tàng văn hóa Việt Nam và được UNESCO công nhận là di sản văn hóa phi vật thể cần được bảo vệ.",
+              "evidence_ids": [
+                "E05"
+              ],
+              "verification": "exact_evidence_match",
+              "source_verified": false
+            }
+          ],
+          "rejected": [],
+          "checked_count": 3,
+          "supported_count": 3,
+          "rejected_count": 0,
+          "verification_scope": "extractive_text_and_structured_kg_facts"
+        },
+        "warnings": [],
+        "llm": {
+          "backend": "transformers",
+          "model": "/Users/amyas/HK1 26-27/DATN/models/Qwen3-0.6B",
+          "device": "mps",
+          "ready": true,
+          "context_window": 4096,
+          "max_new_tokens": 384,
+          "error": null,
+          "generation_count": 2,
+          "last_latency_ms": 1274.99
+        },
+        "timings_ms": {
+          "question_processing": 12265.893,
+          "generation": 1275.537,
+          "kg_refresh": 34.386,
+          "cross_check": 0.079,
+          "total": 13576.556
+        }
+      },
+      "retrieval": {
+        "kg_rows": 1,
+        "rag_rows": 5,
+        "kg_results": [
+          {
+            "entity": "https://w3id.org/vn-assistant/resource/heritage_25fcf9c1f359c557",
+            "type": "https://w3id.org/vn-assistant/ontology#Heritage",
+            "name": "Ca trù performance",
+            "description": "Hình ảnh chụp một buổi lễ trao tặng danh hiệu Nghệ nhân nhân dân cho bà Nguyễn Thị Tam, một nghệ sĩ Ca trù. Bức ảnh ghi lại khoảnh khắc bà nhận bằng khen, đứng giữa các quan khách và một dàn nhạc cụ Ca trù. Ca trù là loại hình nghệ thuật đặc trưng của vùng đồng bằng Bắc Bộ, Việt Nam. Ca trù có lịch sử lâu đời, phát triển mạnh từ thế kỷ 15-19, từng là nghệ thuật cung đình, sau đó phổ biến trong dân gian. Danh hiệu Nghệ nhân nhân dân là sự ghi nhận cao nhất của Nhà nước đối với những người có đóng góp xuất sắc cho nghệ thuật truyền thống. Ca trù đang được bảo tồn và phát triển, thu hút sự quan tâm của giới trẻ và du khách quốc tế. Việc trao tặng danh hiệu này thể hiện sự nỗ lực bảo tồn di sản văn hóa phi vật thể của Việt Nam. Hình ảnh này phản ánh sự quan tâm của Nhà nước trong việc bảo tồn và phát huy các giá trị văn hoá truyền thống, đặc biệt là các loại hình nghệ thuật dân gian. Hình ảnh nhấn mạnh vai trò quan trọng của việc bảo tồn và phát huy các giá trị văn hoá truyền thống trong đời sống hiện đại. Hình ảnh này khẳng định tầm quan trọng của việc kế thừa và phát triển các loại hình nghệ thuật truyền thống, góp phần làm phong phú thêm bản sắc văn hoá dân tộc. Ca trù là một chứng tích lịch sử quý giá, thể hiện sự phát triển văn hoá Việt Nam qua các thời kỳ. Bảo tồn Ca trù là bảo tồn một phần ký ức collective của dân tộc. Sự đa dạng của các loại hình nghệ thuật truyền thống phản ánh sự phong phú và đa dạng của văn hoá Việt Nam.",
+            "source_record_ids": [
+              "0402bba36f8b92b18afe70209b0f690263e6d086290293d9a4b8fd68aa0934c9",
+              "04c128678f550fc5771d52902a6d8f1ccb02eb4cb475d7ecb299334642800642",
+              "0520d2f6469e7f7c5badb829ed6612c984b714f037cb56d842039afa679acc73",
+              "0d3fe6c18efc1d04f76270d68426136f32240fbfc4da711578d3eaa35d5d7dae",
+              "0f9889b40d26a44ead669fa9f6d6d7bca360190d2a1efe13290cb5cef0724424",
+              "0fbbe95de26306981f5aaadaa4c3334a462a93fa49ae1ea920afea8acbe567dc",
+              "13d4e2a82349658c5f96cff2dab297de519dc01cb3fef07ee3f04772da8b5ef6",
+              "1a31e98b95b4efac4bd869330d47d77f8f544b2a91b2eef60fd29990dd59c75d",
+              "31c73b987f080d7787e82e5c5c7cad7b355298443f207c5f4383cf9928a6a5b7",
+              "3234b67381a6eb44ea445c380f8e15bec27e62c88d797ee542023d9632080bd7",
+              "32f4908140507a3728c997e2137972422c89aa1dfaef94c294024b81d5f001c4",
+              "331ca6d9e2326ac660cf3f5d05d9bcecc84a206fd774d52da4393878fd9bd78f",
+              "3669504502978cfbc2e2cadd053d52b79284cddbdacd7fac59fb56f2396f6573",
+              "3ba7c61d5b3eafb9e342cec0cbfb6c9c56876ef0457c2a11fd3395e592625a43",
+              "405ff3d962e930ed007ca4a73a9d4aab2e8ebf0d0001a284b33a35c670dd0afa",
+              "45147368a7103910d3c705665ade296ee8c263d122bdede4eb36ce179c0641be",
+              "4603bfb9fc4484c8a9b55a1651d4e91db5b8c0dfb83425365ea9528701a1ec8c",
+              "46dab8f7487e499e394e0104ce39da7b6d25fe8a56af18bd1027d659b50fa9b5",
+              "4a302acd947ec2aa388117fa8e0946cac1dd232fb219e1baaec6497d60ae5b65",
+              "4b4f446163d12e7938c276eef8d339a8a142638824cd35d26371370fc190e625",
+              "57efc094f07011985a12cca7c2abf6dd7b491b70aa67fd0ed9d618166bb536cd",
+              "59e788a3371eb9f03b699ac7b3bc3b138bd505fb3a39e1fa8d0d68920494f4bc",
+              "614ea6fbdf1092bb6d760a9d024ceeff82b91c5f84a3f7302dcd410bb88b8fe9",
+              "62fcd3ee75ce62c6c6510488062c6ff9c63ac1aaacc063ec9264dce5cb3d860b",
+              "67662270495f2b7a5137e3aac533beac453fc864986fef16251818b32a887883",
+              "67ad57908235398755d67e2779fb126af966339c4e999a80a3b085f1c30b3375",
+              "683f6ef1efa994844ae480bdc84f2dcb7887fa9c992570711c959347fab7df59",
+              "68ed553130e59cd226fb7507417c7b84f3aee58f5b1010840be79424051f1b98",
+              "6b3ddd88a58bb33c9eca5fff37de1f89ee700117755d3dc931b6391b160b8157",
+              "6c9571673750541d8b9ddc5768823c1fc4eea05773d7415030c31b0f5b0a2742",
+              "6f8aaebcf17c37dcd00883b47e0ad1dc9eae0fb27c82bc8bba96e9b77e752eb2",
+              "7555dc77b794e911d65e0a03ced37fb0f4feec7090d041be2e24aa7e2a80ad89",
+              "75b5e35db81e7237df6e71eca13bd117183e2bb5928421661f950e754e140d7c",
+              "75e7521864da6dcf76f9a2a80998bd7c9342ba8309f3034607126f27a122d7d0",
+              "78b5d808207255d7df78e89ccd89fda9e59a639979223f65762b5cc40a939253",
+              "8b74367b9f8780816f7be77773cdc6b7b663998c82ea9b1a03f7da1bee91bd65",
+              "8d25e600e17e552fd930b495a68534fb733d9298bdf7abad31db3727aec269b9",
+              "90aea2440f6bf72fb30e1513f78704e48b87589180a62fca1e0621c6bd68e4d2",
+              "914a35a6cce57cf00937b34b42c44db17f87507dfc379e847ca911e029146217",
+              "9454b0e4275d92abcf5c930308147fe37840d8820ab15d65566492135753c2f4",
+              "97c4d3559678d59b9c413e39b724a852a4c685a342beccbad0d71c80f49d1ce4",
+              "984b8c5bdfb171436ef6b3099b55efd7013e19d31e66df7abc137518060329d5",
+              "9fb44921d1efb27d2bf6c8335fcb98175fbae245b9b728d4cff3ec3a5b82a831",
+              "a4ddb7fa6e9b5a6700a6922661d4d8af30b646758a851a92e300894296af96d6",
+              "ab392244592b7041ed6e5e9f57b7d74b19ae247c4d0c919d6a4bc9fb2f90cc33",
+              "b06812379d6497163e4f19b1a18e411dc8db4e5505fc6ebb55e9479e31fa5ce3",
+              "b18998adaa815afcbd1e21ce763db2fb490d258b8fbe1e4d81c1795644c89b29",
+              "b475526e07ebcee3d3eec2ec689f515d2709e9d23ebe26725f0484396dfd47f0",
+              "c43f6b7d0be2a794bdeb06129a7741eea69a799a81e9ae9662ff1cdf28c81a06",
+              "d00322f4177fb6fb565b61a7aa8f0ce04af9c8781caddc59e90d5da53e461ffa",
+              "d06a2161fea18013a989b129c176b775fff8b77d2346806b6abc2c43baa096dd",
+              "d09cc7f2c47a702c4efff361834084b1038fa263ebe28c16d6ed1abbaefb8c46",
+              "d1489e36addee0e81c59db012f8ea86976c41bb7f4d4d8b45506c05b2be4f26e",
+              "d22d031a68d84c472a4ea3d409e1c160d25af93ff0ec9c0ef2d94bed21c3382a",
+              "d59b4acd7d52a8b64a948e91a66ccc7bb75e17d743cd652fd3f4ea4517e19afb",
+              "d8789f5e6a5ab959e48cb0810da7e356837546f6d313c2182f699d9a7579c72f",
+              "e4b070a07579c7c6c6a82fe3d912f8992026e7baaccb1b114dd2f476fe4a7128",
+              "f8b8f410f72036934e0f3dc5f5b64b1680ffdd5057dfa78fa359081bad761c16"
+            ],
+            "source_names": [
+              "viet-cultural-vqa"
+            ]
+          }
+        ],
+        "rag_results": [
+          {
+            "vector_id": 399147,
+            "chunk_id": "67ad57908235398755d67e2779fb126af966339c4e999a80a3b085f1c30b3375:1",
+            "doc_id": "67ad57908235398755d67e2779fb126af966339c4e999a80a3b085f1c30b3375",
+            "text": "hình ảnh văn hoá Việt Nam. Ca trù là một phần quan trọng của di sản văn hoá Việt Nam, phản ánh sự tinh tế, thanh lịch và triết lý sống của người Việt. Việc kết hợp này cho thấy sự quan tâm của xã hội đối với việc bảo tồn và phát triển Ca trù trong thời đại mới, đảm bảo giá trị văn hoá được lưu giữ và kế thừa. Ca trù không chỉ là nghệ thuật âm nhạc mà còn là một phần quan trọng của văn hoá Việt Nam, mang tính lịch sử, xã hội và tâm linh sâu sắc. Ca trù không chỉ là một hình thức giải trí mà còn là một kho tàng văn hoá vô giá, cần được gìn giữ và phát triển để truyền lại cho các thế hệ mai sau. Sự khác biệt này tạo nên nét độc đáo và giá trị riêng của Ca trù trong hệ thống nghệ thuật dân gian phong phú của Việt Nam.",
+            "title": "Ca trù performance",
+            "domain": "heritage",
+            "source": "viet-cultural-vqa",
+            "source_url": "",
+            "score": 0.9064854383468628
+          },
+          {
+            "vector_id": 369834,
+            "chunk_id": "b06812379d6497163e4f19b1a18e411dc8db4e5505fc6ebb55e9479e31fa5ce3:1",
+            "doc_id": "b06812379d6497163e4f19b1a18e411dc8db4e5505fc6ebb55e9479e31fa5ce3",
+            "text": "diễn tại các sự kiện văn hóa, du lịch. Ca trù phản ánh tinh thần và văn hóa của người Việt, thể hiện sự tế nhị, thanh tao và sâu sắc trong nghệ thuật. Nó là một phần quan trọng của di sản văn hóa phi vật thể của Việt Nam, được UNESCO công nhận. Sự kết hợp giữa trang phục và nhạc cụ tạo nên sự hòa quyện giữa âm nhạc và thị giác, làm nổi bật vẻ đẹp truyền thống của Việt Nam. Đây là những yếu tố quan trọng giúp bảo tồn và quảng bá nghệ thuật truyền thống. Ca trù được xem là một loại hình nghệ thuật có giá trị tinh thần cao, thể hiện sự tinh tế, thanh lịch và tri thức của người Việt. Việc bảo tồn và phát triển Ca trù đóng góp vào việc gìn giữ bản sắc văn hóa dân tộc. Bảo tồn Ca trù là trách nhiệm của toàn xã hội để giữ gìn giá trị văn hóa độc đáo này cho thế hệ mai sau. Việc này đòi hỏi sự đầu tư, hỗ trợ từ nhà nước, cộng đồng và sự quan tâm của công chúng.",
+            "title": "Ca trù performance",
+            "domain": "heritage",
+            "source": "viet-cultural-vqa",
+            "source_url": "",
+            "score": 0.90158611536026
+          },
+          {
+            "vector_id": 408840,
+            "chunk_id": "331ca6d9e2326ac660cf3f5d05d9bcecc84a206fd774d52da4393878fd9bd78f:2",
+            "doc_id": "331ca6d9e2326ac660cf3f5d05d9bcecc84a206fd774d52da4393878fd9bd78f",
+            "text": "thẩm mỹ của người Việt. Ca trù phản ánh giá trị tinh thần, thẩm mỹ và xã hội của người Việt, góp phần hình thành và định hình bản sắc văn hóa dân tộc. Sự độc đáo này tạo nên giá trị đặc biệt của Ca trù trong kho tàng văn hóa Việt Nam, khẳng định vị trí riêng biệt của nó trong bức tranh văn hóa đa dạng của đất nước. Đây là loại hình nghệ thuật gì? Hình ảnh này mô tả điều gì? Một buổi biểu diễn Ca trù Ý nghĩa văn hóa của hình ảnh này là gì? Bảo tồn và phát triển di sản văn hóa phi vật thể Tại sao Ca trù lại quan trọng đối với văn hóa Việt Nam? Giá trị lịch sử, nghệ thuật và xã hội Ca trù có gì khác biệt so với các loại hình âm nhạc dân gian khác ở Việt Nam? Sự kết hợp độc đáo giữa hát nói, nhạc cụ và thi ca",
+            "title": "Ca trù performance",
+            "domain": "heritage",
+            "source": "viet-cultural-vqa",
+            "source_url": "",
+            "score": 0.9006805419921875
+          },
+          {
+            "vector_id": 380904,
+            "chunk_id": "ab392244592b7041ed6e5e9f57b7d74b19ae247c4d0c919d6a4bc9fb2f90cc33:1",
+            "doc_id": "ab392244592b7041ed6e5e9f57b7d74b19ae247c4d0c919d6a4bc9fb2f90cc33",
+            "text": "văn hóa Việt Nam. Ca trù thể hiện sự tinh tế và thanh lịch trong văn hóa Việt Nam, là minh chứng cho sự giao thoa giữa âm nhạc cung đình và dân gian. Sự tối giản trong hình ảnh phản ánh tính chất tinh tế và trang trọng của Ca trù, thể hiện sự tôn trọng đối với nghệ thuật truyền thống. Ca trù góp phần làm phong phú thêm kho tàng văn hóa Việt Nam và được UNESCO công nhận là di sản văn hóa phi vật thể cần được bảo vệ. Ca trù đóng vai trò quan trọng trong việc giáo dục, nâng cao nhận thức về giá trị văn hóa truyền thống và thúc đẩy sự phát triển bền vững của văn hóa Việt Nam. Sự khác biệt này thể hiện sự đa dạng và phong phú của văn hóa nghệ thuật Việt Nam, cho thấy khả năng sáng tạo và thích ứng của người dân trong việc tạo ra các loại hình nghệ thuật độc đáo.",
+            "title": "Ca trù performance",
+            "domain": "heritage",
+            "source": "viet-cultural-vqa",
+            "source_url": "",
+            "score": 0.8995376825332642
+          },
+          {
+            "vector_id": 390997,
+            "chunk_id": "8b74367b9f8780816f7be77773cdc6b7b663998c82ea9b1a03f7da1bee91bd65:3",
+            "doc_id": "8b74367b9f8780816f7be77773cdc6b7b663998c82ea9b1a03f7da1bee91bd65",
+            "text": "phần trên? Tranh minh họa một buổi biểu diễn Ca trù với các nghệ sĩ mặc trang phục truyền thống, sử dụng các nhạc cụ dân tộc như đàn nguyệt, phách... Ý nghĩa văn hóa của Ca trù trong xã hội Việt Nam là gì? Ca trù phản ánh tinh thần, triết lý và thẩm mỹ của người Việt, gắn liền với lịch sử và đời sống văn hóa tinh thần. Tại sao Ca trù được UNESCO công nhận là di sản văn hóa phi vật thể cần được bảo vệ khẩn cấp? Do nguy cơ mai một và cần được bảo tồn khẩn cấp để gìn giữ nét đẹp văn hóa truyền thống. So sánh Ca trù với các loại hình nghệ thuật truyền thống khác ở Việt Nam (ví dụ: Hát Xẩm, Chèo)? Ca trù khác biệt về tính chất tao nhã, tinh tế, không gian biểu diễn và đối tượng khán giả so với Hát Xẩm và Chèo.",
+            "title": "Ca trù performance",
+            "domain": "heritage",
+            "source": "viet-cultural-vqa",
+            "source_url": "",
+            "score": 0.8974283933639526
+          }
+        ],
+        "physical_filters": {
+          "domain": "heritage",
+          "doc_ids": [
+            "0402bba36f8b92b18afe70209b0f690263e6d086290293d9a4b8fd68aa0934c9",
+            "04c128678f550fc5771d52902a6d8f1ccb02eb4cb475d7ecb299334642800642",
+            "0520d2f6469e7f7c5badb829ed6612c984b714f037cb56d842039afa679acc73",
+            "0d3fe6c18efc1d04f76270d68426136f32240fbfc4da711578d3eaa35d5d7dae",
+            "0f9889b40d26a44ead669fa9f6d6d7bca360190d2a1efe13290cb5cef0724424",
+            "0fbbe95de26306981f5aaadaa4c3334a462a93fa49ae1ea920afea8acbe567dc",
+            "13d4e2a82349658c5f96cff2dab297de519dc01cb3fef07ee3f04772da8b5ef6",
+            "1a31e98b95b4efac4bd869330d47d77f8f544b2a91b2eef60fd29990dd59c75d",
+            "31c73b987f080d7787e82e5c5c7cad7b355298443f207c5f4383cf9928a6a5b7",
+            "3234b67381a6eb44ea445c380f8e15bec27e62c88d797ee542023d9632080bd7",
+            "32f4908140507a3728c997e2137972422c89aa1dfaef94c294024b81d5f001c4",
+            "331ca6d9e2326ac660cf3f5d05d9bcecc84a206fd774d52da4393878fd9bd78f",
+            "3669504502978cfbc2e2cadd053d52b79284cddbdacd7fac59fb56f2396f6573",
+            "3ba7c61d5b3eafb9e342cec0cbfb6c9c56876ef0457c2a11fd3395e592625a43",
+            "405ff3d962e930ed007ca4a73a9d4aab2e8ebf0d0001a284b33a35c670dd0afa",
+            "45147368a7103910d3c705665ade296ee8c263d122bdede4eb36ce179c0641be",
+            "4603bfb9fc4484c8a9b55a1651d4e91db5b8c0dfb83425365ea9528701a1ec8c",
+            "46dab8f7487e499e394e0104ce39da7b6d25fe8a56af18bd1027d659b50fa9b5",
+            "4a302acd947ec2aa388117fa8e0946cac1dd232fb219e1baaec6497d60ae5b65",
+            "4b4f446163d12e7938c276eef8d339a8a142638824cd35d26371370fc190e625",
+            "57efc094f07011985a12cca7c2abf6dd7b491b70aa67fd0ed9d618166bb536cd",
+            "59e788a3371eb9f03b699ac7b3bc3b138bd505fb3a39e1fa8d0d68920494f4bc",
+            "614ea6fbdf1092bb6d760a9d024ceeff82b91c5f84a3f7302dcd410bb88b8fe9",
+            "62fcd3ee75ce62c6c6510488062c6ff9c63ac1aaacc063ec9264dce5cb3d860b",
+            "67662270495f2b7a5137e3aac533beac453fc864986fef16251818b32a887883",
+            "67ad57908235398755d67e2779fb126af966339c4e999a80a3b085f1c30b3375",
+            "683f6ef1efa994844ae480bdc84f2dcb7887fa9c992570711c959347fab7df59",
+            "68ed553130e59cd226fb7507417c7b84f3aee58f5b1010840be79424051f1b98",
+            "6b3ddd88a58bb33c9eca5fff37de1f89ee700117755d3dc931b6391b160b8157",
+            "6c9571673750541d8b9ddc5768823c1fc4eea05773d7415030c31b0f5b0a2742",
+            "6f8aaebcf17c37dcd00883b47e0ad1dc9eae0fb27c82bc8bba96e9b77e752eb2",
+            "7555dc77b794e911d65e0a03ced37fb0f4feec7090d041be2e24aa7e2a80ad89",
+            "75b5e35db81e7237df6e71eca13bd117183e2bb5928421661f950e754e140d7c",
+            "75e7521864da6dcf76f9a2a80998bd7c9342ba8309f3034607126f27a122d7d0",
+            "78b5d808207255d7df78e89ccd89fda9e59a639979223f65762b5cc40a939253",
+            "8b74367b9f8780816f7be77773cdc6b7b663998c82ea9b1a03f7da1bee91bd65",
+            "8d25e600e17e552fd930b495a68534fb733d9298bdf7abad31db3727aec269b9",
+            "90aea2440f6bf72fb30e1513f78704e48b87589180a62fca1e0621c6bd68e4d2",
+            "914a35a6cce57cf00937b34b42c44db17f87507dfc379e847ca911e029146217",
+            "9454b0e4275d92abcf5c930308147fe37840d8820ab15d65566492135753c2f4",
+            "97c4d3559678d59b9c413e39b724a852a4c685a342beccbad0d71c80f49d1ce4",
+            "984b8c5bdfb171436ef6b3099b55efd7013e19d31e66df7abc137518060329d5",
+            "9fb44921d1efb27d2bf6c8335fcb98175fbae245b9b728d4cff3ec3a5b82a831",
+            "a4ddb7fa6e9b5a6700a6922661d4d8af30b646758a851a92e300894296af96d6",
+            "ab392244592b7041ed6e5e9f57b7d74b19ae247c4d0c919d6a4bc9fb2f90cc33",
+            "b06812379d6497163e4f19b1a18e411dc8db4e5505fc6ebb55e9479e31fa5ce3",
+            "b18998adaa815afcbd1e21ce763db2fb490d258b8fbe1e4d81c1795644c89b29",
+            "b475526e07ebcee3d3eec2ec689f515d2709e9d23ebe26725f0484396dfd47f0",
+            "c43f6b7d0be2a794bdeb06129a7741eea69a799a81e9ae9662ff1cdf28c81a06",
+            "d00322f4177fb6fb565b61a7aa8f0ce04af9c8781caddc59e90d5da53e461ffa",
+            "d06a2161fea18013a989b129c176b775fff8b77d2346806b6abc2c43baa096dd",
+            "d09cc7f2c47a702c4efff361834084b1038fa263ebe28c16d6ed1abbaefb8c46",
+            "d1489e36addee0e81c59db012f8ea86976c41bb7f4d4d8b45506c05b2be4f26e",
+            "d22d031a68d84c472a4ea3d409e1c160d25af93ff0ec9c0ef2d94bed21c3382a",
+            "d59b4acd7d52a8b64a948e91a66ccc7bb75e17d743cd652fd3f4ea4517e19afb",
+            "d8789f5e6a5ab959e48cb0810da7e356837546f6d313c2182f699d9a7579c72f",
+            "e4b070a07579c7c6c6a82fe3d912f8992026e7baaccb1b114dd2f476fe4a7128",
+            "f8b8f410f72036934e0f3dc5f5b64b1680ffdd5057dfa78fa359081bad761c16"
+          ],
+          "entity_terms": [
+            "Ca trù performance"
+          ]
+        },
+        "warnings": [],
+        "timings_ms": {
+          "classification": 2.811,
+          "kg": 29.615,
+          "rag": 12233.392,
+          "total": 12265.826
+        }
+      },
+      "selected_citation_kinds": [
+        "kg",
+        "rag"
+      ],
+      "generation_counter_delta": 1,
+      "checks": {
+        "answer_status": true,
+        "answer_and_citations": true,
+        "supported_cross_check": true,
+        "citation_consistency": true,
+        "route": true,
+        "domain": true,
+        "min_kg_rows": true,
+        "min_rag_rows": true,
+        "physical_kg_scope": true,
+        "llm_calls": true,
+        "valid_timings": true,
+        "generation_measured": true
+      },
+      "passed": true,
+      "hybrid_note": "Hai nhánh cùng truy xuất không bắt buộc LLM chọn mệnh đề từ cả hai nhánh; loại nguồn được chọn được ghi riêng.",
+      "wall_latency_ms": 13576.598
+    },
+    {
+      "case_id": "rag_ca_tru",
+      "question": "Giới thiệu giá trị văn hóa của Ca trù.",
+      "expect": {
+        "status": "answered",
+        "route": "rag",
+        "domain": "heritage",
+        "max_kg_rows": 0,
+        "min_rag_rows": 1,
+        "citation_kinds": [
+          "rag"
+        ],
+        "llm_calls": 1
+      },
+      "faiss_not_loaded_before_case": false,
+      "response": {
+        "question": "Giới thiệu giá trị văn hóa của Ca trù.",
+        "classification": {
+          "question": "Giới thiệu giá trị văn hóa của Ca trù.",
+          "route": "rag",
+          "domain": "heritage",
+          "route_confidence": 0.7,
+          "domain_confidence": 0.7,
+          "method": "tfidf_logistic_regression"
+        },
+        "plan": {
+          "route": "rag",
+          "kg": null,
+          "rag": {
+            "domain": "heritage",
+            "top_k": 5
+          },
+          "intent": "textual",
+          "constraints": {
+            "temporal": [],
+            "spatial": [],
+            "unsupported": []
+          },
+          "warnings": []
+        },
+        "effective_route": "rag",
+        "retrieval_status": "ready",
+        "status": "answered",
+        "answer": "Theo các minh chứng tìm được:\nCa trù phản ánh giá trị tinh thần, thẩm mỹ và xã hội của người Việt, góp phần hình thành và định hình bản sắc văn hóa dân tộc. [1]\nDo nguy cơ mai một và cần được bảo tồn khẩn cấp để gìn giữ nét đẹp văn hóa truyền thống. [2]\nViệc kết hợp này cho thấy sự quan tâm của xã hội đối với việc bảo tồn và phát triển Ca trù trong thời đại mới, đảm bảo giá trị văn hoá được lưu giữ và kế thừa. [3]\n\nNguồn minh chứng:\n[1] Ca trù performance — tài liệu trong bộ dữ liệu cục bộ\n[2] Ca trù performance — tài liệu trong bộ dữ liệu cục bộ\n[3] Ca trù performance — tài liệu trong bộ dữ liệu cục bộ",
+        "citations": [
+          {
+            "number": 1,
+            "evidence_id": "E01",
+            "kind": "rag",
+            "title": "Ca trù performance",
+            "source": "viet-cultural-vqa",
+            "source_url": null,
+            "source_record_ids": [
+              "331ca6d9e2326ac660cf3f5d05d9bcecc84a206fd774d52da4393878fd9bd78f"
+            ],
+            "source_verified": false
+          },
+          {
+            "number": 2,
+            "evidence_id": "E03",
+            "kind": "rag",
+            "title": "Ca trù performance",
+            "source": "viet-cultural-vqa",
+            "source_url": null,
+            "source_record_ids": [
+              "8b74367b9f8780816f7be77773cdc6b7b663998c82ea9b1a03f7da1bee91bd65"
+            ],
+            "source_verified": false
+          },
+          {
+            "number": 3,
+            "evidence_id": "E05",
+            "kind": "rag",
+            "title": "Ca trù performance",
+            "source": "viet-cultural-vqa",
+            "source_url": null,
+            "source_record_ids": [
+              "67ad57908235398755d67e2779fb126af966339c4e999a80a3b085f1c30b3375"
+            ],
+            "source_verified": false
+          }
+        ],
+        "claims": [
+          {
+            "claim_id": "E01-C01",
+            "mode": "extractive",
+            "text": "Ca trù phản ánh giá trị tinh thần, thẩm mỹ và xã hội của người Việt, góp phần hình thành và định hình bản sắc văn hóa dân tộc.",
+            "evidence_ids": [
+              "E01"
+            ],
+            "verification": "exact_evidence_match",
+            "source_verified": false
+          },
+          {
+            "claim_id": "E03-C03",
+            "mode": "extractive",
+            "text": "Do nguy cơ mai một và cần được bảo tồn khẩn cấp để gìn giữ nét đẹp văn hóa truyền thống.",
+            "evidence_ids": [
+              "E03"
+            ],
+            "verification": "exact_evidence_match",
+            "source_verified": false
+          },
+          {
+            "claim_id": "E05-C01",
+            "mode": "extractive",
+            "text": "Việc kết hợp này cho thấy sự quan tâm của xã hội đối với việc bảo tồn và phát triển Ca trù trong thời đại mới, đảm bảo giá trị văn hoá được lưu giữ và kế thừa.",
+            "evidence_ids": [
+              "E05"
+            ],
+            "verification": "exact_evidence_match",
+            "source_verified": false
+          }
+        ],
+        "cross_check": {
+          "status": "supported",
+          "supported": [
+            {
+              "claim_id": "E01-C01",
+              "mode": "extractive",
+              "text": "Ca trù phản ánh giá trị tinh thần, thẩm mỹ và xã hội của người Việt, góp phần hình thành và định hình bản sắc văn hóa dân tộc.",
+              "evidence_ids": [
+                "E01"
+              ],
+              "verification": "exact_evidence_match",
+              "source_verified": false
+            },
+            {
+              "claim_id": "E03-C03",
+              "mode": "extractive",
+              "text": "Do nguy cơ mai một và cần được bảo tồn khẩn cấp để gìn giữ nét đẹp văn hóa truyền thống.",
+              "evidence_ids": [
+                "E03"
+              ],
+              "verification": "exact_evidence_match",
+              "source_verified": false
+            },
+            {
+              "claim_id": "E05-C01",
+              "mode": "extractive",
+              "text": "Việc kết hợp này cho thấy sự quan tâm của xã hội đối với việc bảo tồn và phát triển Ca trù trong thời đại mới, đảm bảo giá trị văn hoá được lưu giữ và kế thừa.",
+              "evidence_ids": [
+                "E05"
+              ],
+              "verification": "exact_evidence_match",
+              "source_verified": false
+            }
+          ],
+          "rejected": [],
+          "checked_count": 3,
+          "supported_count": 3,
+          "rejected_count": 0,
+          "verification_scope": "extractive_text_and_structured_kg_facts"
+        },
+        "warnings": [],
+        "llm": {
+          "backend": "transformers",
+          "model": "/Users/amyas/HK1 26-27/DATN/models/Qwen3-0.6B",
+          "device": "mps",
+          "ready": true,
+          "context_window": 4096,
+          "max_new_tokens": 384,
+          "error": null,
+          "generation_count": 3,
+          "last_latency_ms": 1215.71
+        },
+        "timings_ms": {
+          "question_processing": 40.347,
+          "generation": 1215.91,
+          "kg_refresh": 0.001,
+          "cross_check": 0.056,
+          "total": 1256.649
+        }
+      },
+      "retrieval": {
+        "kg_rows": 0,
+        "rag_rows": 5,
+        "kg_results": [],
+        "rag_results": [
+          {
+            "vector_id": 408840,
+            "chunk_id": "331ca6d9e2326ac660cf3f5d05d9bcecc84a206fd774d52da4393878fd9bd78f:2",
+            "doc_id": "331ca6d9e2326ac660cf3f5d05d9bcecc84a206fd774d52da4393878fd9bd78f",
+            "text": "thẩm mỹ của người Việt. Ca trù phản ánh giá trị tinh thần, thẩm mỹ và xã hội của người Việt, góp phần hình thành và định hình bản sắc văn hóa dân tộc. Sự độc đáo này tạo nên giá trị đặc biệt của Ca trù trong kho tàng văn hóa Việt Nam, khẳng định vị trí riêng biệt của nó trong bức tranh văn hóa đa dạng của đất nước. Đây là loại hình nghệ thuật gì? Hình ảnh này mô tả điều gì? Một buổi biểu diễn Ca trù Ý nghĩa văn hóa của hình ảnh này là gì? Bảo tồn và phát triển di sản văn hóa phi vật thể Tại sao Ca trù lại quan trọng đối với văn hóa Việt Nam? Giá trị lịch sử, nghệ thuật và xã hội Ca trù có gì khác biệt so với các loại hình âm nhạc dân gian khác ở Việt Nam? Sự kết hợp độc đáo giữa hát nói, nhạc cụ và thi ca",
+            "title": "Ca trù performance",
+            "domain": "heritage",
+            "source": "viet-cultural-vqa",
+            "source_url": "",
+            "score": 0.9061422348022461
+          },
+          {
+            "vector_id": 340883,
+            "chunk_id": "d59b4acd7d52a8b64a948e91a66ccc7bb75e17d743cd652fd3f4ea4517e19afb:1",
+            "doc_id": "d59b4acd7d52a8b64a948e91a66ccc7bb75e17d743cd652fd3f4ea4517e19afb",
+            "text": "và phục hồi, trở thành một phần quan trọng trong di sản văn hóa phi vật thể của Việt Nam, thu hút du khách và người yêu thích nghệ thuật truyền thống. Ca trù là một di sản văn hóa phi vật thể quan trọng của Việt Nam, thể hiện sự tinh tế trong âm nhạc, ca từ và diễn xuất. Nó phản ánh quan niệm về tình yêu, đạo đức và triết lý sống của người Việt xưa. Cách trình diễn, trang phục và nhạc cụ phản ánh tính chất trang trọng và cổ điển của Ca trù, nhấn mạnh vẻ đẹp truyền thống và sự tinh tế của nghệ thuật Việt Nam. Ca trù phản ánh những giá trị văn hóa sâu sắc, từ triết lý sống đến tình cảm con người, giúp chúng ta hiểu hơn về lịch sử và văn hóa Việt Nam. Ca trù đóng vai trò quan trọng trong việc giáo dục, truyền dạy và gìn giữ giá trị văn hóa truyền thống cho các thế hệ. Sự đa dạng của các loại hình nghệ thuật dân gian phản ánh sự phong phú và đa dạng của văn hóa Việt Nam.",
+            "title": "Ca trù performance",
+            "domain": "heritage",
+            "source": "viet-cultural-vqa",
+            "source_url": "",
+            "score": 0.9024631381034851
+          },
+          {
+            "vector_id": 390997,
+            "chunk_id": "8b74367b9f8780816f7be77773cdc6b7b663998c82ea9b1a03f7da1bee91bd65:3",
+            "doc_id": "8b74367b9f8780816f7be77773cdc6b7b663998c82ea9b1a03f7da1bee91bd65",
+            "text": "phần trên? Tranh minh họa một buổi biểu diễn Ca trù với các nghệ sĩ mặc trang phục truyền thống, sử dụng các nhạc cụ dân tộc như đàn nguyệt, phách... Ý nghĩa văn hóa của Ca trù trong xã hội Việt Nam là gì? Ca trù phản ánh tinh thần, triết lý và thẩm mỹ của người Việt, gắn liền với lịch sử và đời sống văn hóa tinh thần. Tại sao Ca trù được UNESCO công nhận là di sản văn hóa phi vật thể cần được bảo vệ khẩn cấp? Do nguy cơ mai một và cần được bảo tồn khẩn cấp để gìn giữ nét đẹp văn hóa truyền thống. So sánh Ca trù với các loại hình nghệ thuật truyền thống khác ở Việt Nam (ví dụ: Hát Xẩm, Chèo)? Ca trù khác biệt về tính chất tao nhã, tinh tế, không gian biểu diễn và đối tượng khán giả so với Hát Xẩm và Chèo.",
+            "title": "Ca trù performance",
+            "domain": "heritage",
+            "source": "viet-cultural-vqa",
+            "source_url": "",
+            "score": 0.9016262292861938
+          },
+          {
+            "vector_id": 393259,
+            "chunk_id": "d06a2161fea18013a989b129c176b775fff8b77d2346806b6abc2c43baa096dd:2",
+            "doc_id": "d06a2161fea18013a989b129c176b775fff8b77d2346806b6abc2c43baa096dd",
+            "text": "hã nhặn và sâu sắc trong tâm hồn người Việt. Bảo tồn Ca trù là trách nhiệm của cả cộng đồng để giữ gìn bản sắc văn hóa dân tộc cho các thế hệ mai sau. Sự độc đáo của Ca trù nằm ở sự kết hợp tinh tế giữa âm nhạc, ca từ và nghệ thuật trình diễn, tạo nên một nét đẹp riêng biệt trong kho tàng văn hóa Việt Nam. Đây là hình ảnh về loại hình nghệ thuật nào của Việt Nam? Hình ảnh này mô tả điều gì về buổi biểu diễn Ca trù? Một buổi biểu diễn Ca trù chuyên nghiệp với không gian hiện đại nhưng vẫn giữ được nét truyền thống. Ý nghĩa văn hóa của Ca trù trong xã hội Việt Nam là gì? Ca trù phản ánh tinh thần, văn hóa và tâm hồn người Việt. Tại sao việc bảo tồn và phát triển Ca trù lại quan trọng đối với Việt Nam? Bảo tồn Ca trù là bảo tồn một phần di sản văn hóa phi vật thể quý giá của Việt Nam.",
+            "title": "Ca trù performance",
+            "domain": "heritage",
+            "source": "viet-cultural-vqa",
+            "source_url": "",
+            "score": 0.9014322757720947
+          },
+          {
+            "vector_id": 399147,
+            "chunk_id": "67ad57908235398755d67e2779fb126af966339c4e999a80a3b085f1c30b3375:1",
+            "doc_id": "67ad57908235398755d67e2779fb126af966339c4e999a80a3b085f1c30b3375",
+            "text": "hình ảnh văn hoá Việt Nam. Ca trù là một phần quan trọng của di sản văn hoá Việt Nam, phản ánh sự tinh tế, thanh lịch và triết lý sống của người Việt. Việc kết hợp này cho thấy sự quan tâm của xã hội đối với việc bảo tồn và phát triển Ca trù trong thời đại mới, đảm bảo giá trị văn hoá được lưu giữ và kế thừa. Ca trù không chỉ là nghệ thuật âm nhạc mà còn là một phần quan trọng của văn hoá Việt Nam, mang tính lịch sử, xã hội và tâm linh sâu sắc. Ca trù không chỉ là một hình thức giải trí mà còn là một kho tàng văn hoá vô giá, cần được gìn giữ và phát triển để truyền lại cho các thế hệ mai sau. Sự khác biệt này tạo nên nét độc đáo và giá trị riêng của Ca trù trong hệ thống nghệ thuật dân gian phong phú của Việt Nam.",
+            "title": "Ca trù performance",
+            "domain": "heritage",
+            "source": "viet-cultural-vqa",
+            "source_url": "",
+            "score": 0.9011315107345581
+          }
+        ],
+        "physical_filters": {
+          "domain": "heritage",
+          "doc_ids": null,
+          "entity_terms": null
+        },
+        "warnings": [],
+        "timings_ms": {
+          "classification": 3.534,
+          "kg": 0.0,
+          "rag": 36.789,
+          "total": 40.326
+        }
+      },
+      "selected_citation_kinds": [
+        "rag"
+      ],
+      "generation_counter_delta": 1,
+      "checks": {
+        "answer_status": true,
+        "answer_and_citations": true,
+        "supported_cross_check": true,
+        "citation_consistency": true,
+        "route": true,
+        "domain": true,
+        "max_kg_rows": true,
+        "min_rag_rows": true,
+        "citation_kinds": true,
+        "llm_calls": true,
+        "valid_timings": true,
+        "generation_measured": true
+      },
+      "passed": true,
+      "hybrid_note": null,
+      "wall_latency_ms": 1256.677
+    },
+    {
+      "case_id": "my_son_wrong_entity_scope",
+      "question": "Mỹ Sơn thuộc tỉnh nào và có giá trị gì?",
+      "expect": {
+        "status": "abstained",
+        "domain": "heritage",
+        "max_kg_rows": 0,
+        "warning_prefix": "domain_scope_mismatch"
+      },
+      "faiss_not_loaded_before_case": false,
+      "response": {
+        "question": "Mỹ Sơn thuộc tỉnh nào và có giá trị gì?",
+        "classification": {
+          "question": "Mỹ Sơn thuộc tỉnh nào và có giá trị gì?",
+          "route": "hybrid",
+          "domain": "heritage",
+          "route_confidence": 0.7,
+          "domain_confidence": 0.7,
+          "method": "tfidf_logistic_regression"
+        },
+        "plan": {
+          "route": "hybrid",
+          "kg": {
+            "query": "08_entity_facts",
+            "params": {
+              "keyword": "Mỹ Sơn",
+              "limit": 10
+            }
+          },
+          "rag": {
+            "domain": "heritage",
+            "top_k": 5
+          },
+          "intent": "hybrid",
+          "constraints": {
+            "temporal": [],
+            "spatial": [],
+            "unsupported": []
+          },
+          "warnings": []
+        },
+        "effective_route": "rag_fallback",
+        "retrieval_status": "partial",
+        "status": "abstained",
+        "answer": "Mình chưa có đủ minh chứng phù hợp để trả lời câu hỏi này một cách đáng tin cậy.",
+        "citations": [],
+        "claims": [],
+        "cross_check": {
+          "status": "insufficient_evidence",
+          "supported": [],
+          "rejected": [],
+          "checked_count": 0,
+          "supported_count": 0,
+          "rejected_count": 0,
+          "verification_scope": "extractive_text_and_structured_kg_facts",
+          "reason": "no_eligible_evidence"
+        },
+        "warnings": [
+          "domain_scope_mismatch: Loại thực thể KG không khớp miền câu hỏi; đã loại khỏi minh chứng.",
+          "no_eligible_evidence"
+        ],
+        "llm": {
+          "backend": "transformers",
+          "model": "/Users/amyas/HK1 26-27/DATN/models/Qwen3-0.6B",
+          "device": "mps",
+          "ready": true,
+          "context_window": 4096,
+          "max_new_tokens": 384,
+          "error": null,
+          "generation_count": 3,
+          "last_latency_ms": 1215.71
+        },
+        "timings_ms": {
+          "question_processing": 53.896,
+          "generation": 0.0,
+          "kg_refresh": 0.0,
+          "cross_check": 0.0,
+          "total": 54.056
+        }
+      },
+      "retrieval": {
+        "kg_rows": 0,
+        "rag_rows": 5,
+        "kg_results": [],
+        "rag_results": [
+          {
+            "vector_id": 335573,
+            "chunk_id": "f8c9aacc45bdadc3a545babd1d54d20b92ba284d5a8f528ca0417e62f770005c:0",
+            "doc_id": "f8c9aacc45bdadc3a545babd1d54d20b92ba284d5a8f528ca0417e62f770005c",
+            "text": "cồn Thoi Son Hình ảnh là bản đồ Google Maps hiển thị Cù lao Thới Sơn, một cù lao nằm trên sông Mê Kông thuộc tỉnh Tiền Giang, Việt Nam. Bản đồ cho thấy vị trí địa lý của cù lao, các tuyến đường giao thông xung quanh, và các địa điểm lân cận. Cù lao Thới Sơn là một phần quan trọng của vùng Đồng bằng Sông Cửu Long, nổi tiếng với vườn trái cây, cảnh quan thiên nhiên và văn hóa người dân địa phương. Cù lao Thới Sơn đã tồn tại từ lâu đời, gắn liền với lịch sử hình thành và phát triển của vùng Đồng bằng Sông Cửu Long. Việc hình thành cù lao liên quan đến quá trình bồi tụ phù sa của sông Mê Kông. Cù lao Thới Sơn hiện nay là điểm đến du lịch nổi tiếng, thu hút khách du lịch trong và ngoài nước bởi cảnh quan thiên nhiên tươi đẹp, các vườn trái cây và các hoạt động du lịch sinh thái.",
+            "title": "cồn Thoi Son",
+            "domain": "heritage",
+            "source": "viet-cultural-vqa",
+            "source_url": "",
+            "score": 0.8049890398979187
+          },
+          {
+            "vector_id": 328344,
+            "chunk_id": "ebd8326a99335a56cc141c6cf0d3bea4e2ab443180da05bb21cae02f587084ba:1",
+            "doc_id": "ebd8326a99335a56cc141c6cf0d3bea4e2ab443180da05bb21cae02f587084ba",
+            "text": "tồn giá trị lịch sử. Võ Tây Sơn là một bộ môn võ thuật quan trọng, phản ánh tinh thần quật cường và kỹ thuật chiến đấu hiệu quả của quân đội Tây Sơn. Nó là một phần di sản văn hóa phi vật thể của Việt Nam. Bài Độc Đao phản ánh triết lý võ thuật của võ Tây Sơn, tập trung vào hiệu quả thực chiến và khả năng thích ứng cao. Võ Tây Sơn góp phần bảo tồn và phát huy những giá trị văn hoá truyền thống của dân tộc Việt Nam, khơi dậy lòng tự hào dân tộc và góp phần thúc đẩy du lịch văn hóa. Võ Tây Sơn đóng góp quan trọng vào việc duy trì và phát triển bản sắc văn hóa Việt Nam, khơi dậy tinh thần tự hào dân tộc và giáo dục thế hệ trẻ. Sự đa dạng của các môn võ thuật ở Việt Nam phản ánh sự phong phú về văn hóa và lịch sử của đất nước. Mỗi môn võ thuật đều có giá trị riêng và góp phần làm nên bức tranh đa sắc màu của văn hóa Việt Nam.",
+            "title": "võ Tây Sơn",
+            "domain": "heritage",
+            "source": "viet-cultural-vqa",
+            "source_url": "",
+            "score": 0.8030520677566528
+          },
+          {
+            "vector_id": 326784,
+            "chunk_id": "837e83403f25d955d6fd1143cea6385d15912207c5e1451bbdb1819e3b92d678:1",
+            "doc_id": "837e83403f25d955d6fd1143cea6385d15912207c5e1451bbdb1819e3b92d678",
+            "text": "i giải trí của người dân Đà Nẵng. Sự phát triển đô thị hiện đại đã làm thay đổi diện mạo khu vực, nhưng vẻ đẹp tự nhiên của bãi biển vẫn được giữ gìn. Bãi biển Mỹ Khê đóng vai trò quan trọng trong ngành du lịch của Đà Nẵng và Việt Nam, đóng góp vào kinh tế và tạo ra nhiều công ăn việc làm. Hình ảnh phản ánh sự phát triển du lịch biển của Việt Nam và sự thay đổi trong lối sống của người dân. Bãi biển Mỹ Khê là biểu tượng của du lịch biển Đà Nẵng, góp phần quan trọng vào sự phát triển kinh tế của thành phố và thu hút du khách quốc tế. Việc tổ chức các hoạt động cộng đồng trên bãi biển phản ánh văn hóa biển của người Việt, tình yêu thiên nhiên và tinh thần đoàn kết cộng đồng. Hình ảnh thể hiện một khía cạnh tích cực của du lịch Việt Nam, nơi du khách có thể trải nghiệm vẻ đẹp tự nhiên và sự ấm áp của con người Việt.",
+            "title": "biển Đa Nẵng",
+            "domain": "heritage",
+            "source": "viet-cultural-vqa",
+            "source_url": "",
+            "score": 0.8027379512786865
+          },
+          {
+            "vector_id": 328345,
+            "chunk_id": "ebd8326a99335a56cc141c6cf0d3bea4e2ab443180da05bb21cae02f587084ba:2",
+            "doc_id": "ebd8326a99335a56cc141c6cf0d3bea4e2ab443180da05bb21cae02f587084ba",
+            "text": "sự phong phú về văn hóa và lịch sử của đất nước. Mỗi môn võ thuật đều có giá trị riêng và góp phần làm nên bức tranh đa sắc màu của văn hóa Việt Nam. Đây là hình ảnh về môn võ thuật nào? Võ Tây Sơn Mô tả ngắn gọn về bài võ được thể hiện trong hình ảnh. Bài Độc Đao trong Võ Tây Sơn Ý nghĩa văn hóa của võ Tây Sơn là gì? Bảo tồn di sản văn hóa, rèn luyện tinh thần Tại sao võ Tây Sơn lại quan trọng đối với văn hóa Việt Nam? Di sản lịch sử, giá trị văn hóa phi vật thể So sánh võ Tây Sơn với các loại hình võ thuật khác ở Việt Nam? Đặc điểm riêng biệt về nguồn gốc và kỹ thuật",
+            "title": "võ Tây Sơn",
+            "domain": "heritage",
+            "source": "viet-cultural-vqa",
+            "source_url": "",
+            "score": 0.8021851181983948
+          },
+          {
+            "vector_id": 340179,
+            "chunk_id": "171e1ec3ee9e6b46cc7f475f21ef1540d9cf4e72a17db6d83e51cf38bb54fc66:1",
+            "doc_id": "171e1ec3ee9e6b46cc7f475f21ef1540d9cf4e72a17db6d83e51cf38bb54fc66",
+            "text": "quan trọng. Sầm Sơn là minh chứng cho sự phát triển du lịch của Việt Nam, sự kết hợp giữa thiên nhiên tươi đẹp và sự đầu tư phát triển cơ sở hạ tầng. Đây là một ví dụ điển hình của quá trình đô thị hóa và phát triển du lịch ở Việt Nam, trong đó giữ gìn và phát huy bản sắc văn hóa địa phương là rất quan trọng. Thuyền đánh cá thể hiện sự cần cù, chịu thương, chịu khó của người dân Việt Nam trong lao động sản xuất. Nó cũng phản ánh mối quan hệ mật thiết giữa con người và thiên nhiên. Đây là vấn đề nan giải mà nhiều khu du lịch ở Việt Nam đang phải đối mặt. Cần có những chính sách hợp lý để đảm bảo sự phát triển bền vững, không làm mất đi nét đẹp văn hóa truyền thống và gây ảnh hưởng đến môi trường. Sự kết hợp này tạo nên một nét đặc trưng riêng biệt cho Sầm Sơn, thu hút khách du lịch bởi sự đa dạng và độc đáo của nó. Đây là đâu? Bãi biển Sầm Sơn, Thanh Hóa.",
+            "title": "biển Sầm Sơn",
+            "domain": "heritage",
+            "source": "viet-cultural-vqa",
+            "source_url": "",
+            "score": 0.8013373613357544
+          }
+        ],
+        "physical_filters": {
+          "domain": "heritage",
+          "doc_ids": null,
+          "entity_terms": null
+        },
+        "warnings": [
+          "domain_scope_mismatch: Loại thực thể KG không khớp miền câu hỏi; đã loại khỏi minh chứng."
+        ],
+        "timings_ms": {
+          "classification": 2.252,
+          "kg": 29.072,
+          "rag": 22.555,
+          "total": 53.883
+        }
+      },
+      "selected_citation_kinds": [],
+      "generation_counter_delta": 0,
+      "checks": {
+        "answer_status": true,
+        "no_unsupported_claims": true,
+        "domain": true,
+        "max_kg_rows": true,
+        "scope_warning": true,
+        "valid_timings": true
+      },
+      "passed": true,
+      "hybrid_note": null,
+      "wall_latency_ms": 54.081
+    },
+    {
+      "case_id": "unsupported_geometry",
+      "question": "Di sản nào ở gần Hội An nhất trong bán kính 5 km?",
+      "expect": {
+        "status": "abstained",
+        "route": "rag",
+        "retrieval_status": "unsupported_constraints",
+        "max_kg_rows": 0,
+        "reason": "unsupported_constraints",
+        "llm_calls": 0
+      },
+      "faiss_not_loaded_before_case": false,
+      "response": {
+        "question": "Di sản nào ở gần Hội An nhất trong bán kính 5 km?",
+        "classification": {
+          "question": "Di sản nào ở gần Hội An nhất trong bán kính 5 km?",
+          "route": "kg",
+          "domain": "heritage",
+          "route_confidence": 0.37399261331304595,
+          "domain_confidence": 0.7,
+          "method": "tfidf_logistic_regression"
+        },
+        "plan": {
+          "route": "rag",
+          "kg": null,
+          "rag": {
+            "domain": "heritage",
+            "top_k": 5
+          },
+          "intent": "logical",
+          "constraints": {
+            "temporal": [],
+            "spatial": [
+              "bán kính",
+              "quan hệ gần về không gian",
+              "khoảng cách theo đơn vị đo"
+            ],
+            "unsupported": [
+              "KG hiện tại chưa có truy vấn hình học hoặc khoảng cách; kết quả RAG không tự xác nhận ràng buộc không gian."
+            ]
+          },
+          "warnings": [
+            "KG hiện tại chưa có truy vấn hình học hoặc khoảng cách; kết quả RAG không tự xác nhận ràng buộc không gian."
+          ]
+        },
+        "effective_route": "rag",
+        "retrieval_status": "unsupported_constraints",
+        "status": "abstained",
+        "answer": "Mình chưa có đủ minh chứng phù hợp để trả lời câu hỏi này một cách đáng tin cậy.",
+        "citations": [],
+        "claims": [],
+        "cross_check": {
+          "status": "insufficient_evidence",
+          "supported": [],
+          "rejected": [],
+          "checked_count": 0,
+          "supported_count": 0,
+          "rejected_count": 0,
+          "verification_scope": "extractive_text_and_structured_kg_facts",
+          "reason": "unsupported_constraints"
+        },
+        "warnings": [
+          "KG hiện tại chưa có truy vấn hình học hoặc khoảng cách; kết quả RAG không tự xác nhận ràng buộc không gian.",
+          "unsupported_constraints"
+        ],
+        "llm": {
+          "backend": "transformers",
+          "model": "/Users/amyas/HK1 26-27/DATN/models/Qwen3-0.6B",
+          "device": "mps",
+          "ready": true,
+          "context_window": 4096,
+          "max_new_tokens": 384,
+          "error": null,
+          "generation_count": 3,
+          "last_latency_ms": 1215.71
+        },
+        "timings_ms": {
+          "question_processing": 26.221,
+          "generation": 0.0,
+          "kg_refresh": 0.0,
+          "cross_check": 0.0,
+          "total": 26.223
+        }
+      },
+      "retrieval": {
+        "kg_rows": 0,
+        "rag_rows": 5,
+        "kg_results": [],
+        "rag_results": [
+          {
+            "vector_id": 382204,
+            "chunk_id": "774f34a2254d46a0b1696471077dbb611648b4af22bb30711f05f72cc8ea038b:1",
+            "doc_id": "774f34a2254d46a0b1696471077dbb611648b4af22bb30711f05f72cc8ea038b",
+            "text": "cảng Hội An trong thời kỳ đó. Phố cổ Hội An hiện nay được bảo tồn và phát triển thành điểm du lịch quan trọng, góp phần vào nền kinh tế của Việt Nam. Kiến trúc cổ được bảo tồn, tôn tạo, song song với việc phát triển các hoạt động du lịch, thương mại, vẫn giữ được vẻ đẹp và hồn cốt của phố cổ. Phố cổ Hội An là di sản văn hoá thế giới, được UNESCO công nhận. Kiến trúc và không gian sống phản ánh lịch sử lâu đời và sự giao thoa văn hoá phong phú của vùng đất này. Đây là minh chứng cho sự thành công trong việc bảo tồn và phát triển di sản văn hoá. Sự kết hợp hài hoà giữa kiến trúc cổ kính và đời sống hiện đại tạo nên sức hấp dẫn riêng biệt của Hội An. Đèn lồng thể hiện sự ấm áp, thân thiện và lòng hiếu khách của người dân Hội An đối với du khách. Chúng là một phần không thể thiếu tạo nên vẻ đẹp quyến rũ của phố cổ.",
+            "title": "Hoi An ancient town",
+            "domain": "heritage",
+            "source": "viet-cultural-vqa",
+            "source_url": "",
+            "score": 0.8518809080123901
+          },
+          {
+            "vector_id": 378816,
+            "chunk_id": "cacc9af04ac6b622b6c23c4874f61f1da2d1608a56d04b66ff657840ab841156:0",
+            "doc_id": "cacc9af04ac6b622b6c23c4874f61f1da2d1608a56d04b66ff657840ab841156",
+            "text": "Hoi An ancient town Hình ảnh là một bộ ba ảnh ghép, miêu tả nhiều khía cạnh của phố cổ Hội An, tỉnh Quảng Nam, Việt Nam. Ảnh bên trái cho thấy kiến trúc nhà cửa truyền thống, ảnh giữa thể hiện cảnh quan sông nước về đêm, và ảnh bên phải tập trung vào một khía cạnh văn hoá ẩm thực hiện đại. Hội An là một trung tâm thương mại sầm uất từ thế kỷ 16-19, kiến trúc và văn hoá phản ánh sự giao thoa giữa Việt Nam, Trung Quốc, Nhật Bản và phương Tây. Vùng miền Trung Việt Nam có nhiều ảnh hưởng từ văn hoá Champa. Kiến trúc nhà cổ phản ánh lịch sử hàng trăm năm của Hội An, sự giao thoa văn hoá và sự phát triển thương mại. Sông Hoài là chứng nhân lịch sử của phố cổ. Đèn lồng là biểu tượng văn hoá của Hội An. Hội An là điểm đến du lịch nổi tiếng thế giới, giữ gìn và phát triển văn hoá truyền thống đồng thời thích ứng với du lịch hiện đại.",
+            "title": "Hoi An ancient town",
+            "domain": "heritage",
+            "source": "viet-cultural-vqa",
+            "source_url": "",
+            "score": 0.8487153649330139
+          },
+          {
+            "vector_id": 376003,
+            "chunk_id": "47efabb733e92a3e11efd85aaeb9e98d4fc0e08acd0389ef7bf8ac18edf9b1ca:1",
+            "doc_id": "47efabb733e92a3e11efd85aaeb9e98d4fc0e08acd0389ef7bf8ac18edf9b1ca",
+            "text": "văn hóa Việt Nam ra thế giới. Phố cổ Hội An là di sản văn hóa thế giới, phản ánh sự giao thoa văn hóa độc đáo và giá trị lịch sử lâu đời của Việt Nam. Kiến trúc nhà cửa ở Hội An phản ánh sự tinh tế, khéo léo trong kiến trúc truyền thống Việt Nam và sự ảnh hưởng của các nền văn hoá khác. Chúng là chứng tích lịch sử quý giá, góp phần tạo nên bản sắc văn hoá độc đáo của Hội An và Việt Nam. Phố cổ Hội An là một tài sản vô giá, cần được bảo tồn và phát huy để thế hệ mai sau có thể hiểu và trân trọng di sản văn hoá của dân tộc. Sự khác biệt này phản ánh sự đa dạng về văn hoá kiến trúc của Việt Nam, điều kiện tự nhiên và lối sống của người dân ở từng vùng miền. Đây là đâu? Phố cổ Hội An Mô tả đặc điểm kiến trúc nổi bật trong hình ảnh. Nhà cổ Hội An với màu vàng đặc trưng, mái ngói âm dương.",
+            "title": "Hoi An ancient town",
+            "domain": "heritage",
+            "source": "viet-cultural-vqa",
+            "source_url": "",
+            "score": 0.8485094308853149
+          },
+          {
+            "vector_id": 375226,
+            "chunk_id": "f804bb93904c269c43c94b2fe767b8efb60f2f3b511141b2c8a368c0dffa2d69:1",
+            "doc_id": "f804bb93904c269c43c94b2fe767b8efb60f2f3b511141b2c8a368c0dffa2d69",
+            "text": "nay là điểm đến du lịch nổi tiếng, đóng góp quan trọng vào nền kinh tế địa phương. Việc bảo tồn và phát triển di sản văn hóa này là ưu tiên hàng đầu. Phố cổ Hội An là minh chứng sống động cho sự giao thoa văn hóa đa dạng trong lịch sử Việt Nam, kết hợp hài hòa giữa kiến trúc truyền thống và ảnh hưởng từ các nền văn hóa khác. Đèn lồng Hội An gắn liền với đời sống tín ngưỡng và văn hóa của người dân, phản ánh sự đa dạng và giàu bản sắc của vùng đất này. Kiến trúc này là minh chứng cho sự phát triển kinh tế và văn hóa của Hội An trong thời kỳ là thương cảng sầm uất, đồng thời phản ánh sự hòa nhập và đa dạng văn hóa của Việt Nam. Sự khác biệt này phản ánh điều kiện tự nhiên, kinh tế - xã hội và văn hóa đặc trưng của từng vùng miền, góp phần làm nên bức tranh văn hóa đa dạng của Việt Nam.",
+            "title": "nha cổ Hoi An",
+            "domain": "heritage",
+            "source": "viet-cultural-vqa",
+            "source_url": "",
+            "score": 0.8484413027763367
+          },
+          {
+            "vector_id": 350794,
+            "chunk_id": "c9dabbda71f71dcb59d68707ecd011ea9cbdef2a2e3e2f6ded83994f94377f08:1",
+            "doc_id": "c9dabbda71f71dcb59d68707ecd011ea9cbdef2a2e3e2f6ded83994f94377f08",
+            "text": "của Hội An, từ một thương cảng sầm uất đến di sản văn hóa thế giới ngày nay. Phố cổ Hội An được UNESCO công nhận là di sản văn hóa thế giới năm 1999. Sông Thu Bồn và phố cổ Hội An là điểm đến du lịch nổi tiếng, thu hút du khách trong và ngoài nước. Du lịch sông nước và tham quan phố cổ là hoạt động kinh tế quan trọng của người dân địa phương. Hội An là một biểu tượng văn hóa của Việt Nam, thể hiện sự giao thoa văn hóa, sự kết hợp hài hòa giữa thiên nhiên và con người. Nó phản ánh sự phát triển bền vững, bảo tồn di sản và du lịch cộng đồng. Sự kết hợp giữa dòng sông, phố cổ và thuyền bè thể hiện một bức tranh sinh động về cuộc sống cộng đồng, giao thương và sự hòa quyện giữa con người với thiên nhiên. Điều này phản ánh nét đẹp văn hóa đặc trưng của vùng sông nước miền Trung Việt Nam.",
+            "title": "sông Thu Bồn",
+            "domain": "heritage",
+            "source": "viet-cultural-vqa",
+            "source_url": "",
+            "score": 0.8484028577804565
+          }
+        ],
+        "physical_filters": {
+          "domain": "heritage",
+          "doc_ids": null,
+          "entity_terms": null
+        },
+        "warnings": [
+          "KG hiện tại chưa có truy vấn hình học hoặc khoảng cách; kết quả RAG không tự xác nhận ràng buộc không gian."
+        ],
+        "timings_ms": {
+          "classification": 2.484,
+          "kg": 0.0,
+          "rag": 23.721,
+          "total": 26.207
+        }
+      },
+      "selected_citation_kinds": [],
+      "generation_counter_delta": 0,
+      "checks": {
+        "answer_status": true,
+        "no_unsupported_claims": true,
+        "route": true,
+        "retrieval_status": true,
+        "max_kg_rows": true,
+        "abstention_reason": true,
+        "llm_calls": true,
+        "valid_timings": true,
+        "generation_skipped": true
+      },
+      "passed": true,
+      "hybrid_note": null,
+      "wall_latency_ms": 26.245
+    },
+    {
+      "case_id": "unsupported_history_2020",
+      "question": "Phường Long Biên thuộc tỉnh nào trong năm 2020?",
+      "expect": {
+        "status": "abstained",
+        "route": "rag",
+        "retrieval_status": "unsupported_constraints",
+        "max_kg_rows": 0,
+        "reason": "unsupported_constraints",
+        "llm_calls": 0
+      },
+      "faiss_not_loaded_before_case": false,
+      "response": {
+        "question": "Phường Long Biên thuộc tỉnh nào trong năm 2020?",
+        "classification": {
+          "question": "Phường Long Biên thuộc tỉnh nào trong năm 2020?",
+          "route": "kg",
+          "domain": "administration",
+          "route_confidence": 0.7,
+          "domain_confidence": 0.7,
+          "method": "tfidf_logistic_regression"
+        },
+        "plan": {
+          "route": "rag",
+          "kg": null,
+          "rag": {
+            "domain": "administration",
+            "top_k": 5
+          },
+          "intent": "logical",
+          "constraints": {
+            "temporal": [
+              "năm 2020"
+            ],
+            "spatial": [],
+            "unsupported": [
+              "KG hiện tại chưa hỗ trợ lọc quan hệ theo thời điểm; cần minh chứng văn bản có đúng mốc thời gian."
+            ]
+          },
+          "warnings": [
+            "KG hiện tại chưa hỗ trợ lọc quan hệ theo thời điểm; cần minh chứng văn bản có đúng mốc thời gian."
+          ]
+        },
+        "effective_route": "rag",
+        "retrieval_status": "unsupported_constraints",
+        "status": "abstained",
+        "answer": "Mình chưa có đủ minh chứng phù hợp để trả lời câu hỏi này một cách đáng tin cậy.",
+        "citations": [],
+        "claims": [],
+        "cross_check": {
+          "status": "insufficient_evidence",
+          "supported": [],
+          "rejected": [],
+          "checked_count": 0,
+          "supported_count": 0,
+          "rejected_count": 0,
+          "verification_scope": "extractive_text_and_structured_kg_facts",
+          "reason": "unsupported_constraints"
+        },
+        "warnings": [
+          "KG hiện tại chưa hỗ trợ lọc quan hệ theo thời điểm; cần minh chứng văn bản có đúng mốc thời gian.",
+          "unsupported_constraints"
+        ],
+        "llm": {
+          "backend": "transformers",
+          "model": "/Users/amyas/HK1 26-27/DATN/models/Qwen3-0.6B",
+          "device": "mps",
+          "ready": true,
+          "context_window": 4096,
+          "max_new_tokens": 384,
+          "error": null,
+          "generation_count": 3,
+          "last_latency_ms": 1215.71
+        },
+        "timings_ms": {
+          "question_processing": 25.435,
+          "generation": 0.0,
+          "kg_refresh": 0.0,
+          "cross_check": 0.0,
+          "total": 25.436
+        }
+      },
+      "retrieval": {
+        "kg_rows": 0,
+        "rag_rows": 5,
+        "kg_results": [],
+        "rag_results": [
+          {
+            "vector_id": 48266,
+            "chunk_id": "58aaaea4a52103d32d0f004912b7beb54b50bc731437688ba40df3707d98bafc:0",
+            "doc_id": "58aaaea4a52103d32d0f004912b7beb54b50bc731437688ba40df3707d98bafc",
+            "text": "Phường Long Biên Phường Long Biên co ma don vi 00145 va thuoc Thành phố Hà Nội (ma tinh 01) trong snapshot hien tai cua bo du lieu.",
+            "title": "Phường Long Biên",
+            "domain": "administration",
+            "source": "vietnamese-provinces-database",
+            "source_url": "",
+            "score": 0.8424649238586426
+          },
+          {
+            "vector_id": 51367,
+            "chunk_id": "fd15b780080230f901d5c97d50a860d63e8626e9df973fac434674b467d82771:0",
+            "doc_id": "fd15b780080230f901d5c97d50a860d63e8626e9df973fac434674b467d82771",
+            "text": "Phường Tịnh Biên Phường Tịnh Biên co ma don vi 30520 va thuoc Tỉnh An Giang (ma tinh 91) trong snapshot hien tai cua bo du lieu.",
+            "title": "Phường Tịnh Biên",
+            "domain": "administration",
+            "source": "vietnamese-provinces-database",
+            "source_url": "",
+            "score": 0.8299276828765869
+          },
+          {
+            "vector_id": 51567,
+            "chunk_id": "91a0f18a3e109c27d69e462377e6d109a2fa7e8af158b4751ca6f5c5296ae49d:0",
+            "doc_id": "91a0f18a3e109c27d69e462377e6d109a2fa7e8af158b4751ca6f5c5296ae49d",
+            "text": "Xã Long Điền Xã Long Điền co ma don vi 31985 va thuoc Tỉnh Cà Mau (ma tinh 96) trong snapshot hien tai cua bo du lieu.",
+            "title": "Xã Long Điền",
+            "domain": "administration",
+            "source": "vietnamese-provinces-database",
+            "source_url": "",
+            "score": 0.8276159167289734
+          },
+          {
+            "vector_id": 51381,
+            "chunk_id": "ec31912aaacc2b114b6eb00e14dde1714c4772f11a72584ebf7ee2ff1fe0918e:0",
+            "doc_id": "ec31912aaacc2b114b6eb00e14dde1714c4772f11a72584ebf7ee2ff1fe0918e",
+            "text": "Xã Long Điền Xã Long Điền co ma don vi 30631 va thuoc Tỉnh An Giang (ma tinh 91) trong snapshot hien tai cua bo du lieu.",
+            "title": "Xã Long Điền",
+            "domain": "administration",
+            "source": "vietnamese-provinces-database",
+            "source_url": "",
+            "score": 0.8225775957107544
+          },
+          {
+            "vector_id": 50900,
+            "chunk_id": "e527b0d92c1faeb6e11f30b014255c6ff53ba73e38637cd1c47e68b8b8f598bf:0",
+            "doc_id": "e527b0d92c1faeb6e11f30b014255c6ff53ba73e38637cd1c47e68b8b8f598bf",
+            "text": "Xã Long Điền Xã Long Điền co ma don vi 26659 va thuoc Thành phố Hồ Chí Minh (ma tinh 79) trong snapshot hien tai cua bo du lieu.",
+            "title": "Xã Long Điền",
+            "domain": "administration",
+            "source": "vietnamese-provinces-database",
+            "source_url": "",
+            "score": 0.8193336129188538
+          }
+        ],
+        "physical_filters": {
+          "domain": "administration",
+          "doc_ids": null,
+          "entity_terms": null
+        },
+        "warnings": [
+          "KG hiện tại chưa hỗ trợ lọc quan hệ theo thời điểm; cần minh chứng văn bản có đúng mốc thời gian."
+        ],
+        "timings_ms": {
+          "classification": 2.463,
+          "kg": 0.0,
+          "rag": 22.958,
+          "total": 25.423
+        }
+      },
+      "selected_citation_kinds": [],
+      "generation_counter_delta": 0,
+      "checks": {
+        "answer_status": true,
+        "no_unsupported_claims": true,
+        "route": true,
+        "retrieval_status": true,
+        "max_kg_rows": true,
+        "abstention_reason": true,
+        "llm_calls": true,
+        "valid_timings": true,
+        "generation_skipped": true
+      },
+      "passed": true,
+      "hybrid_note": null,
+      "wall_latency_ms": 25.454
+    },
+    {
+      "case_id": "missing_administrative_code",
+      "question": "Đơn vị có mã 99999 là gì?",
+      "expect": {
+        "status": "abstained",
+        "domain": "administration",
+        "max_kg_rows": 0,
+        "reason": "missing_verified_code",
+        "llm_calls": 0
+      },
+      "faiss_not_loaded_before_case": false,
+      "response": {
+        "question": "Đơn vị có mã 99999 là gì?",
+        "classification": {
+          "question": "Đơn vị có mã 99999 là gì?",
+          "route": "kg",
+          "domain": "administration",
+          "route_confidence": 0.7,
+          "domain_confidence": 0.7,
+          "method": "tfidf_logistic_regression"
+        },
+        "plan": {
+          "route": "kg",
+          "kg": {
+            "query": "03_unit_by_code",
+            "params": {
+              "code": "99999"
+            }
+          },
+          "rag": null,
+          "intent": "logical",
+          "constraints": {
+            "temporal": [],
+            "spatial": [],
+            "unsupported": []
+          },
+          "warnings": []
+        },
+        "effective_route": "rag_fallback",
+        "retrieval_status": "ready",
+        "status": "abstained",
+        "answer": "Mình chưa có đủ minh chứng phù hợp để trả lời câu hỏi này một cách đáng tin cậy.",
+        "citations": [],
+        "claims": [],
+        "cross_check": {
+          "status": "insufficient_evidence",
+          "supported": [],
+          "rejected": [],
+          "checked_count": 0,
+          "supported_count": 0,
+          "rejected_count": 0,
+          "verification_scope": "extractive_text_and_structured_kg_facts",
+          "reason": "missing_verified_code"
+        },
+        "warnings": [
+          "missing_verified_code"
+        ],
+        "llm": {
+          "backend": "transformers",
+          "model": "/Users/amyas/HK1 26-27/DATN/models/Qwen3-0.6B",
+          "device": "mps",
+          "ready": true,
+          "context_window": 4096,
+          "max_new_tokens": 384,
+          "error": null,
+          "generation_count": 3,
+          "last_latency_ms": 1215.71
+        },
+        "timings_ms": {
+          "question_processing": 24.206,
+          "generation": 0.0,
+          "kg_refresh": 0.0,
+          "cross_check": 0.0,
+          "total": 24.208
+        }
+      },
+      "retrieval": {
+        "kg_rows": 0,
+        "rag_rows": 5,
+        "kg_results": [],
+        "rag_results": [
+          {
+            "vector_id": 49110,
+            "chunk_id": "65c4b7fd116e1f6b8b362a0a5f755ddd636e6a751c5eddbae5980e29423a5e01:0",
+            "doc_id": "65c4b7fd116e1f6b8b362a0a5f755ddd636e6a751c5eddbae5980e29423a5e01",
+            "text": "Phường Bồng Lai Phường Bồng Lai co ma don vi 09295 va thuoc Tỉnh Bắc Ninh (ma tinh 24) trong snapshot hien tai cua bo du lieu.",
+            "title": "Phường Bồng Lai",
+            "domain": "administration",
+            "source": "vietnamese-provinces-database",
+            "source_url": "",
+            "score": 0.8233726024627686
+          },
+          {
+            "vector_id": 50936,
+            "chunk_id": "596b4bd9d8d130ea25d30b2e29aedaab400c38c68618c4447d4dd846bb1e6746:0",
+            "doc_id": "596b4bd9d8d130ea25d30b2e29aedaab400c38c68618c4447d4dd846bb1e6746",
+            "text": "Phường Bình Thạnh Phường Bình Thạnh co ma don vi 26929 va thuoc Thành phố Hồ Chí Minh (ma tinh 79) trong snapshot hien tai cua bo du lieu.",
+            "title": "Phường Bình Thạnh",
+            "domain": "administration",
+            "source": "vietnamese-provinces-database",
+            "source_url": "",
+            "score": 0.8226710557937622
+          },
+          {
+            "vector_id": 48686,
+            "chunk_id": "bf3532a3c2f2dba1a16e8e1e95fcb8080e5e257ea02017049107357c60610247:0",
+            "doc_id": "bf3532a3c2f2dba1a16e8e1e95fcb8080e5e257ea02017049107357c60610247",
+            "text": "Phường Mộc Sơn Phường Mộc Sơn co ma don vi 03979 va thuoc Tỉnh Sơn La (ma tinh 14) trong snapshot hien tai cua bo du lieu.",
+            "title": "Phường Mộc Sơn",
+            "domain": "administration",
+            "source": "vietnamese-provinces-database",
+            "source_url": "",
+            "score": 0.8207439184188843
+          },
+          {
+            "vector_id": 49097,
+            "chunk_id": "75cbf267efd5f066cb216d9a59378ae9f76f959ab799b92422b4cebe36cae709:0",
+            "doc_id": "75cbf267efd5f066cb216d9a59378ae9f76f959ab799b92422b4cebe36cae709",
+            "text": "Phường Vũ Ninh Phường Vũ Ninh co ma don vi 09169 va thuoc Tỉnh Bắc Ninh (ma tinh 24) trong snapshot hien tai cua bo du lieu.",
+            "title": "Phường Vũ Ninh",
+            "domain": "administration",
+            "source": "vietnamese-provinces-database",
+            "source_url": "",
+            "score": 0.8126192092895508
+          },
+          {
+            "vector_id": 50874,
+            "chunk_id": "2672913da1835247205873bb55403081661c6adc955b78bb2518cdeb3180c035:0",
+            "doc_id": "2672913da1835247205873bb55403081661c6adc955b78bb2518cdeb3180c035",
+            "text": "Phường Đông Hoà Phường Đông Hoà co ma don vi 25951 va thuoc Thành phố Hồ Chí Minh (ma tinh 79) trong snapshot hien tai cua bo du lieu.",
+            "title": "Phường Đông Hoà",
+            "domain": "administration",
+            "source": "vietnamese-provinces-database",
+            "source_url": "",
+            "score": 0.8110640048980713
+          }
+        ],
+        "physical_filters": {
+          "domain": "administration",
+          "doc_ids": null,
+          "entity_terms": null
+        },
+        "warnings": [],
+        "timings_ms": {
+          "classification": 2.183,
+          "kg": 3.467,
+          "rag": 18.54,
+          "total": 24.193
+        }
+      },
+      "selected_citation_kinds": [],
+      "generation_counter_delta": 0,
+      "checks": {
+        "answer_status": true,
+        "no_unsupported_claims": true,
+        "domain": true,
+        "max_kg_rows": true,
+        "abstention_reason": true,
+        "llm_calls": true,
+        "valid_timings": true,
+        "generation_skipped": true
+      },
+      "passed": true,
+      "hybrid_note": null,
+      "wall_latency_ms": 24.234
+    }
+  ],
+  "passed": true,
+  "generator_class": "TransformerGenerator",
+  "warmup": {
+    "status": {
+      "backend": "transformers",
+      "model": "/Users/amyas/HK1 26-27/DATN/models/Qwen3-0.6B",
+      "device": "mps",
+      "ready": true,
+      "context_window": 4096,
+      "max_new_tokens": 384,
+      "error": null,
+      "generation_count": 0,
+      "last_latency_ms": null
+    },
+    "latency_ms": 8342.904
+  },
+  "model_parameter_count": 596049920,
+  "service_initialization_ms": 2673.456,
+  "preflight": {
+    "known_code_00070": [
+      {
+        "unit": "https://w3id.org/vn-assistant/resource/ward_6dbe60d56bc9a531",
+        "type": "https://w3id.org/vn-assistant/ontology#Ward",
+        "name": "Phường Hoàn Kiếm",
+        "code": "00070",
+        "validFrom": "2025-07-01"
+      }
+    ],
+    "missing_code_99999_rows": 0,
+    "ca_tru_eligible_kg_names": [
+      "Ca trù performance"
+    ],
+    "ca_tru_text_chunks": 287,
+    "my_son_kg_matches": [
+      {
+        "name": "Xã Mỹ Sơn",
+        "type": "https://w3id.org/vn-assistant/ontology#HistoricalAdministrativeUnit"
+      },
+      {
+        "name": "Xã Mỹ Sơn",
+        "type": "https://w3id.org/vn-assistant/ontology#HistoricalAdministrativeUnit"
+      },
+      {
+        "name": "Xã Mỹ Sơn",
+        "type": "https://w3id.org/vn-assistant/ontology#Ward"
+      }
+    ],
+    "my_son_eligible_heritage_rows": 0,
+    "fixture_scope": "Tên Mỹ Sơn trong KG hiện chỉ khớp đơn vị hành chính. Ca trù được dùng cho luồng di sản hybrid; kiểm thử xác minh luồng và độ bám dữ liệu cục bộ.",
+    "checks": {
+      "known_code": true,
+      "missing_code": true,
+      "ca_tru_kg": true,
+      "ca_tru_rag": true,
+      "my_son_scope": true
+    },
+    "passed": true
+  },
+  "llm_final_status": {
+    "backend": "transformers",
+    "model": "/Users/amyas/HK1 26-27/DATN/models/Qwen3-0.6B",
+    "device": "mps",
+    "ready": true,
+    "context_window": 4096,
+    "max_new_tokens": 384,
+    "error": null,
+    "generation_count": 3,
+    "last_latency_ms": 1215.71
+  },
+  "completed_at_utc": "2026-10-10T14:30:26.525692+00:00",
+  "elapsed_ms": 27548.465,
+  "case_count": 7,
+  "passed_case_count": 7
+}

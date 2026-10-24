@@ -1,0 +1,129 @@
+{
+  "created_at": "2026-10-23T16:54:41.324152+00:00",
+  "scope": "Real Chromium UI and two real backend exchanges; explicit network fault simulation for exception tests.",
+  "checks": [
+    {
+      "name": "welcome_desktop",
+      "passed": true
+    },
+    {
+      "name": "empty_send_disabled",
+      "passed": true
+    },
+    {
+      "name": "real_kg_response",
+      "passed": true
+    },
+    {
+      "name": "real_sources_visible",
+      "passed": true
+    },
+    {
+      "name": "real_conversational_context",
+      "passed": true
+    },
+    {
+      "name": "context_resolution_displayed",
+      "passed": true
+    },
+    {
+      "name": "mobile_navigation_initially_hidden",
+      "passed": true
+    },
+    {
+      "name": "copy_answer",
+      "passed": true
+    },
+    {
+      "name": "history_persisted",
+      "passed": true
+    },
+    {
+      "name": "restored_answer",
+      "passed": true
+    },
+    {
+      "name": "new_chat_keeps_history",
+      "passed": true
+    },
+    {
+      "name": "scope_dialog",
+      "passed": true
+    },
+    {
+      "name": "scope_dialog_closes",
+      "passed": true
+    },
+    {
+      "name": "shift_enter_newline",
+      "passed": true
+    },
+    {
+      "name": "pending_prevents_duplicate",
+      "passed": true
+    },
+    {
+      "name": "enter_does_not_duplicate_pending",
+      "passed": true
+    },
+    {
+      "name": "cancel_releases_composer",
+      "passed": true
+    },
+    {
+      "name": "server_503_is_explained",
+      "passed": true
+    },
+    {
+      "name": "retry_restores_question",
+      "passed": true
+    },
+    {
+      "name": "malformed_json_is_explained",
+      "passed": true
+    },
+    {
+      "name": "offline_is_explained",
+      "passed": true
+    },
+    {
+      "name": "html_is_text_not_executed",
+      "passed": true
+    },
+    {
+      "name": "unsafe_source_link_rejected",
+      "passed": true
+    },
+    {
+      "name": "mobile_no_horizontal_overflow",
+      "passed": true
+    },
+    {
+      "name": "mobile_send_visible",
+      "passed": true
+    },
+    {
+      "name": "mobile_navigation_opens",
+      "passed": true
+    },
+    {
+      "name": "mobile_navigation_closes",
+      "passed": true
+    },
+    {
+      "name": "delete_chat_keeps_other_history",
+      "passed": true
+    },
+    {
+      "name": "mobile_welcome_starts_at_top",
+      "passed": true
+    },
+    {
+      "name": "no_browser_javascript_errors",
+      "passed": true
+    }
+  ],
+  "browser_errors": [],
+  "passed": true,
+  "check_count": 30
+}

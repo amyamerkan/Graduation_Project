@@ -1,0 +1,70 @@
+{
+  "updated_at": "2026-10-23T18:45:51.082248+00:00",
+  "active_domains": [
+    "administration",
+    "tourism"
+  ],
+  "legacy_policy": "Nonheritage legacy data retained compressed and inactive; unverified image QA and foreign travel excluded from training.",
+  "deleted_artifacts": [
+    {
+      "path": "artifacts/faiss",
+      "bytes": 2300327878
+    },
+    {
+      "path": "artifacts/faiss_pilot",
+      "bytes": 1302
+    },
+    {
+      "path": "artifacts/kg",
+      "bytes": 47284471
+    },
+    {
+      "path": "artifacts/router",
+      "bytes": 251817
+    },
+    {
+      "path": "artifacts/evaluation/sample_index",
+      "bytes": 2655592
+    }
+  ],
+  "rag_dataset_final.jsonl": {
+    "retained_nonheritage": 101793,
+    "removed_heritage": 29206
+  },
+  "vn_complete_dataset.json": {
+    "retained_nonheritage": 81017,
+    "removed_heritage": 73
+  },
+  "structured_records": 28361,
+  "active_documents": 28361,
+  "documents_by_domain": {
+    "administration": 28175,
+    "tourism": 186
+  },
+  "documents_by_source": {
+    "vietnam-provinces": 28138,
+    "Cơ sở dữ liệu ngành Du lịch — TITC": 186,
+    "Cổng thông tin điện tử Chính phủ": 37
+  },
+  "rejected_new_records": [
+    {
+      "title": "Lễ hội chùa Đống Lân",
+      "source_url": "https://csdl.vietnamtourism.gov.vn/dest/?item=888"
+    },
+    {
+      "title": "Lễ hội Đền Vua Lê",
+      "source_url": "https://csdl.vietnamtourism.gov.vn/dest/?item=884"
+    },
+    {
+      "title": "Lễ hội Đình Sàn",
+      "source_url": "https://csdl.vietnamtourism.gov.vn/dest/?item=807"
+    }
+  ],
+  "active_corpus_sha256": "862102efaaf6b90ba382d20a9b9e4abed01d348a2e04180fa9d9fd93b8686146",
+  "active_heritage_documents": 0,
+  "raw_festival_cleanup": {
+    "records_removed": 3,
+    "cached_detail_pages_removed": 3,
+    "note": "Titles and URLs remain only in the audit log."
+  }
+}

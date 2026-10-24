@@ -1,0 +1,12 @@
+{
+  "status": "complete",
+  "vectors": 32910,
+  "total": 32910,
+  "reused_vectors": 28854,
+  "encoded_vectors": 4056,
+  "new_vectors_total": 4056,
+  "elapsed_seconds": 75.864,
+  "device": "mps",
+  "dataset": "/Users/amyas/HK1 26-27/DATN/artifacts/domain_refresh_2026-10-24/prebuild/data/rag_dataset_final.jsonl",
+  "updated_at": "2026-10-24T16:55:52.022940+00:00"
+}

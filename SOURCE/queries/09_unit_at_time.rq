@@ -1,0 +1,15 @@
+PREFIX vn: <https://w3id.org/vn-assistant/ontology#>
+SELECT DISTINCT ?unit ?type ?name ?code ?provinceName ?validFrom ?validTo ?snapshotDate WHERE {
+  VALUES ?code { "{{code}}" }
+  ?unit vn:code ?code ; a ?type ; vn:name ?name .
+  OPTIONAL { ?unit vn:validFrom ?validFrom }
+  OPTIONAL { ?unit vn:validTo ?validTo }
+  OPTIONAL { ?unit vn:snapshotDate ?snapshotDate }
+  OPTIONAL { ?unit vn:isCurrentSnapshot ?current }
+  OPTIONAL { ?unit vn:locatedIn+ ?province . ?province a ?provinceType ; vn:name ?provinceName . FILTER(?provinceType IN (vn:Province, vn:HistoricalProvince)) }
+  FILTER("{{as_of}}" != "" || !BOUND(?current) || ?current = true)
+  FILTER("{{as_of}}" = "" || (BOUND(?snapshotDate) && STR(?snapshotDate) = "{{as_of}}") || (!BOUND(?snapshotDate) && ((BOUND(?validFrom) || BOUND(?validTo)) && (!BOUND(?validFrom) || STR(?validFrom) <= "{{as_of}}") && (!BOUND(?validTo) || STR(?validTo) >= "{{as_of}}"))))
+  FILTER("{{as_of}}" = "" || BOUND(?snapshotDate) || (BOUND(?validFrom) && BOUND(?validTo)) || (BOUND(?validFrom) && STR(?validFrom) = "{{as_of}}") || (BOUND(?validTo) && STR(?validTo) = "{{as_of}}"))
+  FILTER("{{province}}" = "" || (BOUND(?provinceName) && CONTAINS(LCASE(STR(?provinceName)), LCASE("{{province}}"))))
+}
+ORDER BY ?name

@@ -1,16 +1,35 @@
-.venv/
-__pycache__/
-.pytest_cache/
-*.pyc
-.env
-data/*.json
-data/*.jsonl
-artifacts/faiss/*.index
-artifacts/faiss/*.sqlite3
+# macOS
+.DS_Store
 
-artifacts/**/*.index
-artifacts/**/*.sqlite3
-artifacts/**/*.sqlite3.tmp
-artifacts/**/*.f32
-artifacts/**/*.publishing
-artifacts/**/*.build/
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Virtual Environment
+.venv/
+venv/
+
+# Environment
+.env
+.env.*
+!.env.example
+
+# IDE
+.vscode/
+.idea/
+
+# Cache
+.pytest_cache/
+.mypy_cache/
+.ipynb_checkpoints/
+
+# Logs
+*.log
+
+# Large AI model weights
+models/**/*.safetensors
+
+# FAISS vector indexes
+artifacts/**/faiss/**/*.index
+artifacts/**/faiss/**/*.f32

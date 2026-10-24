@@ -1,0 +1,1166 @@
+{
+  "created_at": "2026-10-23T16:52:57.546063+00:00",
+  "scope": "Concurrent real model initialization and mixed requests, with current index recovery left running.",
+  "cold_start": true,
+  "initial_health": {
+    "path": "/health",
+    "passed": true,
+    "http_status": 200,
+    "latency_ms": 27.134,
+    "response": {
+      "status": "ok",
+      "router_ready": false,
+      "kg_ready": false,
+      "faiss_ready": false,
+      "artifacts_present": {
+        "router": true,
+        "kg": true,
+        "faiss": false
+      },
+      "llm": {
+        "backend": "transformers",
+        "model": "/Users/amyas/HK1 26-27/DATN/models/Qwen3-0.6B",
+        "device": "auto",
+        "ready": false,
+        "context_window": 4096,
+        "max_new_tokens": 384,
+        "error": null,
+        "generation_count": 0,
+        "last_latency_ms": null
+      },
+      "retrieval_mode": "lexical_candidates_faiss",
+      "capabilities": {
+        "unit_at_date": true,
+        "unit_in_province_at_date": true,
+        "geometry_distance": false,
+        "citation_verification": "evidence_match"
+      }
+    }
+  },
+  "phases": [
+    {
+      "name": "simultaneous_initialization",
+      "passed": true,
+      "requests": [
+        {
+          "path": "/v1/system/warmup",
+          "passed": true,
+          "http_status": 200,
+          "latency_ms": 34858.764,
+          "response": {
+            "status": "ready",
+            "llm": {
+              "backend": "transformers",
+              "model": "/Users/amyas/HK1 26-27/DATN/models/Qwen3-0.6B",
+              "device": "mps",
+              "ready": true,
+              "context_window": 4096,
+              "max_new_tokens": 384,
+              "error": null,
+              "generation_count": 1,
+              "last_latency_ms": 28928.77
+            },
+            "kg_ready": true,
+            "rag_ready": true,
+            "elapsed_ms": 34855.625
+          }
+        },
+        {
+          "path": "/v1/system/warmup",
+          "passed": true,
+          "http_status": 200,
+          "latency_ms": 34858.23,
+          "response": {
+            "status": "ready",
+            "llm": {
+              "backend": "transformers",
+              "model": "/Users/amyas/HK1 26-27/DATN/models/Qwen3-0.6B",
+              "device": "mps",
+              "ready": true,
+              "context_window": 4096,
+              "max_new_tokens": 384,
+              "error": null,
+              "generation_count": 1,
+              "last_latency_ms": 28928.77
+            },
+            "kg_ready": true,
+            "rag_ready": true,
+            "elapsed_ms": 34855.651
+          }
+        },
+        {
+          "path": "/v1/system/warmup",
+          "passed": true,
+          "http_status": 200,
+          "latency_ms": 34858.923,
+          "response": {
+            "status": "ready",
+            "llm": {
+              "backend": "transformers",
+              "model": "/Users/amyas/HK1 26-27/DATN/models/Qwen3-0.6B",
+              "device": "mps",
+              "ready": true,
+              "context_window": 4096,
+              "max_new_tokens": 384,
+              "error": null,
+              "generation_count": 1,
+              "last_latency_ms": 28928.77
+            },
+            "kg_ready": true,
+            "rag_ready": true,
+            "elapsed_ms": 34855.792
+          }
+        },
+        {
+          "path": "/v1/system/warmup",
+          "passed": true,
+          "http_status": 200,
+          "latency_ms": 34858.538,
+          "response": {
+            "status": "ready",
+            "llm": {
+              "backend": "transformers",
+              "model": "/Users/amyas/HK1 26-27/DATN/models/Qwen3-0.6B",
+              "device": "mps",
+              "ready": true,
+              "context_window": 4096,
+              "max_new_tokens": 384,
+              "error": null,
+              "generation_count": 1,
+              "last_latency_ms": 28928.77
+            },
+            "kg_ready": true,
+            "rag_ready": true,
+            "elapsed_ms": 34855.577
+          }
+        },
+        {
+          "path": "/v1/llm/warmup",
+          "passed": true,
+          "http_status": 200,
+          "latency_ms": 16206.409,
+          "response": {
+            "backend": "transformers",
+            "model": "/Users/amyas/HK1 26-27/DATN/models/Qwen3-0.6B",
+            "device": "mps",
+            "ready": true,
+            "context_window": 4096,
+            "max_new_tokens": 384,
+            "error": null,
+            "generation_count": 0,
+            "last_latency_ms": null
+          }
+        },
+        {
+          "path": "/v1/chat",
+          "passed": true,
+          "http_status": 200,
+          "latency_ms": 34742.624,
+          "response": {
+            "question": "Đơn vị có mã 00070 là gì?",
+            "classification": {
+              "question": "Đơn vị có mã 00070 là gì?",
+              "route": "kg",
+              "domain": "administration",
+              "route_confidence": 0.7,
+              "domain_confidence": 0.7,
+              "method": "tfidf_logistic_regression"
+            },
+            "plan": {
+              "route": "kg",
+              "kg": {
+                "query": "03_unit_by_code",
+                "params": {
+                  "code": "00070"
+                }
+              },
+              "rag": null,
+              "intent": "logical",
+              "constraints": {
+                "temporal": [],
+                "spatial": [],
+                "unsupported": []
+              },
+              "warnings": [],
+              "scope": "supported"
+            },
+            "effective_route": "kg",
+            "retrieval_status": "ready",
+            "status": "answered",
+            "answer": "Theo các minh chứng tìm được:\nTên thực thể: Phường Hoàn Kiếm. Mã của Phường Hoàn Kiếm: 00070. Tỉnh/thành phố trực thuộc của Phường Hoàn Kiếm: Thành phố Hà Nội. Loại thực thể của Phường Hoàn Kiếm: đơn vị hành chính cấp xã. [1]\n\nNguồn minh chứng:\n[1] Phường Hoàn Kiếm — bản ghi KG nội bộ; vietnam-administrative-division-json-server; vietnam-sap-nhap-phuong-xa.csv (15 bản ghi nguồn)",
+            "citations": [
+              {
+                "number": 1,
+                "evidence_id": "E01",
+                "kind": "kg",
+                "title": "Phường Hoàn Kiếm",
+                "source": "vietnam-administrative-division-json-server; vietnam-sap-nhap-phuong-xa.csv",
+                "source_url": null,
+                "source_record_ids": [
+                  "00bce023d123231c64047b1f2bfb45aacbdf18f525f37a38c72ed38fdc903bbd",
+                  "1ea080b7e735cd00dc62ae43cdab67b7c5ed4ab4feda07a47e072604099a125c",
+                  "43e0df66051533b3a0866299d12d19d062a2abb1697a7331121230cf502891d5",
+                  "4c8e04f25a0d00f5424746e9797800861218b913642a6783f2260527dcb8e1d1",
+                  "5fb623bca580d4263da4249567e1ec41b7c93108c6f1f109888d8f97b9ca542c",
+                  "77b4190301c71f452096adf1a81d66f34bc63630a5e1860137db628e59f20950",
+                  "7e03a400c538e737677d7600db68fb337ce2747807ceb70d7bdb38a56722f330",
+                  "94a1eced857aa8da40b511c062bdc357d6d2f40a23b021b3891189b764117777",
+                  "b3f89fc9d4eb9d345c2471046f40ad98939d2f3890c002c55476cf7dec96e43a",
+                  "b6d8c1292a9f67c5816c17df66cd7c5a2833c73469e6c14dd7d0659f00ca7027",
+                  "c63e0f31b2788bcb465b27f5e25282bf7499664e0999940b13384612af76e9d5",
+                  "e690d80feb717d67e71a7ba905a527c14e409f32a6ad4be4daefec89e19643b0",
+                  "f0e6ec3fa13eb0fa76eec5ee2f3996deb1c5b32020b679271c4d693b22b5c01f",
+                  "fbacad31aa7b4d1c3886a5bb604598851e04f9c1ec36dd264d7015db8c58f7d6",
+                  "fcbe5c03b959dc1372d4ce38e60d22ef125c1cf06048bd29ecb1536ebe121978"
+                ],
+                "source_verified": false
+              }
+            ],
+            "claims": [
+              {
+                "claim_id": "E01-C01",
+                "mode": "fact",
+                "text": "Tên thực thể: Phường Hoàn Kiếm. Mã của Phường Hoàn Kiếm: 00070. Tỉnh/thành phố trực thuộc của Phường Hoàn Kiếm: Thành phố Hà Nội. Loại thực thể của Phường Hoàn Kiếm: đơn vị hành chính cấp xã.",
+                "evidence_ids": [
+                  "E01"
+                ],
+                "fields": [
+                  "name",
+                  "code",
+                  "provinceName",
+                  "type"
+                ],
+                "fact_checks": [
+                  {
+                    "evidence_id": "E01",
+                    "field": "name",
+                    "value": "Phường Hoàn Kiếm"
+                  },
+                  {
+                    "evidence_id": "E01",
+                    "field": "code",
+                    "value": "00070"
+                  },
+                  {
+                    "evidence_id": "E01",
+                    "field": "provinceName",
+                    "value": "Thành phố Hà Nội"
+                  },
+                  {
+                    "evidence_id": "E01",
+                    "field": "type",
+                    "value": "https://w3id.org/vn-assistant/ontology#Ward"
+                  }
+                ],
+                "verification": "exact_kg_fact_match",
+                "source_verified": false
+              }
+            ],
+            "cross_check": {
+              "status": "supported",
+              "supported": [
+                {
+                  "claim_id": "E01-C01",
+                  "mode": "fact",
+                  "text": "Tên thực thể: Phường Hoàn Kiếm. Mã của Phường Hoàn Kiếm: 00070. Tỉnh/thành phố trực thuộc của Phường Hoàn Kiếm: Thành phố Hà Nội. Loại thực thể của Phường Hoàn Kiếm: đơn vị hành chính cấp xã.",
+                  "evidence_ids": [
+                    "E01"
+                  ],
+                  "fields": [
+                    "name",
+                    "code",
+                    "provinceName",
+                    "type"
+                  ],
+                  "fact_checks": [
+                    {
+                      "evidence_id": "E01",
+                      "field": "name",
+                      "value": "Phường Hoàn Kiếm"
+                    },
+                    {
+                      "evidence_id": "E01",
+                      "field": "code",
+                      "value": "00070"
+                    },
+                    {
+                      "evidence_id": "E01",
+                      "field": "provinceName",
+                      "value": "Thành phố Hà Nội"
+                    },
+                    {
+                      "evidence_id": "E01",
+                      "field": "type",
+                      "value": "https://w3id.org/vn-assistant/ontology#Ward"
+                    }
+                  ],
+                  "verification": "exact_kg_fact_match",
+                  "source_verified": false
+                }
+              ],
+              "rejected": [],
+              "checked_count": 1,
+              "supported_count": 1,
+              "rejected_count": 0,
+              "verification_scope": "extractive_text_and_structured_kg_facts",
+              "constraints_checked": false,
+              "kg_rechecked": true
+            },
+            "warnings": [],
+            "llm": {
+              "backend": "transformers",
+              "model": "/Users/amyas/HK1 26-27/DATN/models/Qwen3-0.6B",
+              "device": "mps",
+              "ready": true,
+              "context_window": 4096,
+              "max_new_tokens": 384,
+              "error": null,
+              "generation_count": 1,
+              "last_latency_ms": 28928.77
+            },
+            "timings_ms": {
+              "question_processing": 59.964,
+              "generation": 28931.525,
+              "kg_refresh": 15.734,
+              "cross_check": 0.127,
+              "total": 29007.993
+            },
+            "original_question": "Đơn vị có mã 00070 là gì?",
+            "context_resolution": {
+              "question": "Đơn vị có mã 00070 là gì?",
+              "resolved": false,
+              "needs_context": false
+            },
+            "retrieval_mode": "lexical_candidates_faiss"
+          }
+        }
+      ]
+    },
+    {
+      "name": "mixed_model_requests",
+      "passed": true,
+      "requests": [
+        {
+          "path": "/v1/system/warmup",
+          "passed": true,
+          "http_status": 200,
+          "latency_ms": 25.074,
+          "response": {
+            "status": "ready",
+            "llm": {
+              "backend": "transformers",
+              "model": "/Users/amyas/HK1 26-27/DATN/models/Qwen3-0.6B",
+              "device": "mps",
+              "ready": true,
+              "context_window": 4096,
+              "max_new_tokens": 384,
+              "error": null,
+              "generation_count": 1,
+              "last_latency_ms": 28928.77
+            },
+            "kg_ready": true,
+            "rag_ready": true,
+            "elapsed_ms": 0.006
+          }
+        },
+        {
+          "path": "/v1/system/warmup",
+          "passed": true,
+          "http_status": 200,
+          "latency_ms": 21.141,
+          "response": {
+            "status": "ready",
+            "llm": {
+              "backend": "transformers",
+              "model": "/Users/amyas/HK1 26-27/DATN/models/Qwen3-0.6B",
+              "device": "mps",
+              "ready": true,
+              "context_window": 4096,
+              "max_new_tokens": 384,
+              "error": null,
+              "generation_count": 1,
+              "last_latency_ms": 28928.77
+            },
+            "kg_ready": true,
+            "rag_ready": true,
+            "elapsed_ms": 0.008
+          }
+        },
+        {
+          "path": "/v1/chat",
+          "passed": true,
+          "http_status": 200,
+          "latency_ms": 8864.363,
+          "response": {
+            "question": "Đơn vị có mã 00070 là gì?",
+            "classification": {
+              "question": "Đơn vị có mã 00070 là gì?",
+              "route": "kg",
+              "domain": "administration",
+              "route_confidence": 0.7,
+              "domain_confidence": 0.7,
+              "method": "tfidf_logistic_regression"
+            },
+            "plan": {
+              "route": "kg",
+              "kg": {
+                "query": "03_unit_by_code",
+                "params": {
+                  "code": "00070"
+                }
+              },
+              "rag": null,
+              "intent": "logical",
+              "constraints": {
+                "temporal": [],
+                "spatial": [],
+                "unsupported": []
+              },
+              "warnings": [],
+              "scope": "supported"
+            },
+            "effective_route": "kg",
+            "retrieval_status": "ready",
+            "status": "answered",
+            "answer": "Theo các minh chứng tìm được:\nTên thực thể: Phường Hoàn Kiếm. Mã của Phường Hoàn Kiếm: 00070. Tỉnh/thành phố trực thuộc của Phường Hoàn Kiếm: Thành phố Hà Nội. Loại thực thể của Phường Hoàn Kiếm: đơn vị hành chính cấp xã. [1]\n\nNguồn minh chứng:\n[1] Phường Hoàn Kiếm — bản ghi KG nội bộ; vietnam-administrative-division-json-server; vietnam-sap-nhap-phuong-xa.csv (15 bản ghi nguồn)",
+            "citations": [
+              {
+                "number": 1,
+                "evidence_id": "E01",
+                "kind": "kg",
+                "title": "Phường Hoàn Kiếm",
+                "source": "vietnam-administrative-division-json-server; vietnam-sap-nhap-phuong-xa.csv",
+                "source_url": null,
+                "source_record_ids": [
+                  "00bce023d123231c64047b1f2bfb45aacbdf18f525f37a38c72ed38fdc903bbd",
+                  "1ea080b7e735cd00dc62ae43cdab67b7c5ed4ab4feda07a47e072604099a125c",
+                  "43e0df66051533b3a0866299d12d19d062a2abb1697a7331121230cf502891d5",
+                  "4c8e04f25a0d00f5424746e9797800861218b913642a6783f2260527dcb8e1d1",
+                  "5fb623bca580d4263da4249567e1ec41b7c93108c6f1f109888d8f97b9ca542c",
+                  "77b4190301c71f452096adf1a81d66f34bc63630a5e1860137db628e59f20950",
+                  "7e03a400c538e737677d7600db68fb337ce2747807ceb70d7bdb38a56722f330",
+                  "94a1eced857aa8da40b511c062bdc357d6d2f40a23b021b3891189b764117777",
+                  "b3f89fc9d4eb9d345c2471046f40ad98939d2f3890c002c55476cf7dec96e43a",
+                  "b6d8c1292a9f67c5816c17df66cd7c5a2833c73469e6c14dd7d0659f00ca7027",
+                  "c63e0f31b2788bcb465b27f5e25282bf7499664e0999940b13384612af76e9d5",
+                  "e690d80feb717d67e71a7ba905a527c14e409f32a6ad4be4daefec89e19643b0",
+                  "f0e6ec3fa13eb0fa76eec5ee2f3996deb1c5b32020b679271c4d693b22b5c01f",
+                  "fbacad31aa7b4d1c3886a5bb604598851e04f9c1ec36dd264d7015db8c58f7d6",
+                  "fcbe5c03b959dc1372d4ce38e60d22ef125c1cf06048bd29ecb1536ebe121978"
+                ],
+                "source_verified": false
+              }
+            ],
+            "claims": [
+              {
+                "claim_id": "E01-C01",
+                "mode": "fact",
+                "text": "Tên thực thể: Phường Hoàn Kiếm. Mã của Phường Hoàn Kiếm: 00070. Tỉnh/thành phố trực thuộc của Phường Hoàn Kiếm: Thành phố Hà Nội. Loại thực thể của Phường Hoàn Kiếm: đơn vị hành chính cấp xã.",
+                "evidence_ids": [
+                  "E01"
+                ],
+                "fields": [
+                  "name",
+                  "code",
+                  "provinceName",
+                  "type"
+                ],
+                "fact_checks": [
+                  {
+                    "evidence_id": "E01",
+                    "field": "name",
+                    "value": "Phường Hoàn Kiếm"
+                  },
+                  {
+                    "evidence_id": "E01",
+                    "field": "code",
+                    "value": "00070"
+                  },
+                  {
+                    "evidence_id": "E01",
+                    "field": "provinceName",
+                    "value": "Thành phố Hà Nội"
+                  },
+                  {
+                    "evidence_id": "E01",
+                    "field": "type",
+                    "value": "https://w3id.org/vn-assistant/ontology#Ward"
+                  }
+                ],
+                "verification": "exact_kg_fact_match",
+                "source_verified": false
+              }
+            ],
+            "cross_check": {
+              "status": "supported",
+              "supported": [
+                {
+                  "claim_id": "E01-C01",
+                  "mode": "fact",
+                  "text": "Tên thực thể: Phường Hoàn Kiếm. Mã của Phường Hoàn Kiếm: 00070. Tỉnh/thành phố trực thuộc của Phường Hoàn Kiếm: Thành phố Hà Nội. Loại thực thể của Phường Hoàn Kiếm: đơn vị hành chính cấp xã.",
+                  "evidence_ids": [
+                    "E01"
+                  ],
+                  "fields": [
+                    "name",
+                    "code",
+                    "provinceName",
+                    "type"
+                  ],
+                  "fact_checks": [
+                    {
+                      "evidence_id": "E01",
+                      "field": "name",
+                      "value": "Phường Hoàn Kiếm"
+                    },
+                    {
+                      "evidence_id": "E01",
+                      "field": "code",
+                      "value": "00070"
+                    },
+                    {
+                      "evidence_id": "E01",
+                      "field": "provinceName",
+                      "value": "Thành phố Hà Nội"
+                    },
+                    {
+                      "evidence_id": "E01",
+                      "field": "type",
+                      "value": "https://w3id.org/vn-assistant/ontology#Ward"
+                    }
+                  ],
+                  "verification": "exact_kg_fact_match",
+                  "source_verified": false
+                }
+              ],
+              "rejected": [],
+              "checked_count": 1,
+              "supported_count": 1,
+              "rejected_count": 0,
+              "verification_scope": "extractive_text_and_structured_kg_facts",
+              "constraints_checked": false,
+              "kg_rechecked": true
+            },
+            "warnings": [],
+            "llm": {
+              "backend": "transformers",
+              "model": "/Users/amyas/HK1 26-27/DATN/models/Qwen3-0.6B",
+              "device": "mps",
+              "ready": true,
+              "context_window": 4096,
+              "max_new_tokens": 384,
+              "error": null,
+              "generation_count": 3,
+              "last_latency_ms": 8831.98
+            },
+            "timings_ms": {
+              "question_processing": 16.259,
+              "generation": 8834.889,
+              "kg_refresh": 3.092,
+              "cross_check": 0.098,
+              "total": 8854.58
+            },
+            "original_question": "Đơn vị có mã 00070 là gì?",
+            "context_resolution": {
+              "question": "Đơn vị có mã 00070 là gì?",
+              "resolved": false,
+              "needs_context": false
+            },
+            "retrieval_mode": "lexical_candidates_faiss"
+          }
+        },
+        {
+          "path": "/v1/chat",
+          "passed": true,
+          "http_status": 200,
+          "latency_ms": 4403.478,
+          "response": {
+            "question": "Đơn vị có mã 00070 là gì?",
+            "classification": {
+              "question": "Đơn vị có mã 00070 là gì?",
+              "route": "kg",
+              "domain": "administration",
+              "route_confidence": 0.7,
+              "domain_confidence": 0.7,
+              "method": "tfidf_logistic_regression"
+            },
+            "plan": {
+              "route": "kg",
+              "kg": {
+                "query": "03_unit_by_code",
+                "params": {
+                  "code": "00070"
+                }
+              },
+              "rag": null,
+              "intent": "logical",
+              "constraints": {
+                "temporal": [],
+                "spatial": [],
+                "unsupported": []
+              },
+              "warnings": [],
+              "scope": "supported"
+            },
+            "effective_route": "kg",
+            "retrieval_status": "ready",
+            "status": "answered",
+            "answer": "Theo các minh chứng tìm được:\nTên thực thể: Phường Hoàn Kiếm. Mã của Phường Hoàn Kiếm: 00070. Tỉnh/thành phố trực thuộc của Phường Hoàn Kiếm: Thành phố Hà Nội. Loại thực thể của Phường Hoàn Kiếm: đơn vị hành chính cấp xã. [1]\n\nNguồn minh chứng:\n[1] Phường Hoàn Kiếm — bản ghi KG nội bộ; vietnam-administrative-division-json-server; vietnam-sap-nhap-phuong-xa.csv (15 bản ghi nguồn)",
+            "citations": [
+              {
+                "number": 1,
+                "evidence_id": "E01",
+                "kind": "kg",
+                "title": "Phường Hoàn Kiếm",
+                "source": "vietnam-administrative-division-json-server; vietnam-sap-nhap-phuong-xa.csv",
+                "source_url": null,
+                "source_record_ids": [
+                  "00bce023d123231c64047b1f2bfb45aacbdf18f525f37a38c72ed38fdc903bbd",
+                  "1ea080b7e735cd00dc62ae43cdab67b7c5ed4ab4feda07a47e072604099a125c",
+                  "43e0df66051533b3a0866299d12d19d062a2abb1697a7331121230cf502891d5",
+                  "4c8e04f25a0d00f5424746e9797800861218b913642a6783f2260527dcb8e1d1",
+                  "5fb623bca580d4263da4249567e1ec41b7c93108c6f1f109888d8f97b9ca542c",
+                  "77b4190301c71f452096adf1a81d66f34bc63630a5e1860137db628e59f20950",
+                  "7e03a400c538e737677d7600db68fb337ce2747807ceb70d7bdb38a56722f330",
+                  "94a1eced857aa8da40b511c062bdc357d6d2f40a23b021b3891189b764117777",
+                  "b3f89fc9d4eb9d345c2471046f40ad98939d2f3890c002c55476cf7dec96e43a",
+                  "b6d8c1292a9f67c5816c17df66cd7c5a2833c73469e6c14dd7d0659f00ca7027",
+                  "c63e0f31b2788bcb465b27f5e25282bf7499664e0999940b13384612af76e9d5",
+                  "e690d80feb717d67e71a7ba905a527c14e409f32a6ad4be4daefec89e19643b0",
+                  "f0e6ec3fa13eb0fa76eec5ee2f3996deb1c5b32020b679271c4d693b22b5c01f",
+                  "fbacad31aa7b4d1c3886a5bb604598851e04f9c1ec36dd264d7015db8c58f7d6",
+                  "fcbe5c03b959dc1372d4ce38e60d22ef125c1cf06048bd29ecb1536ebe121978"
+                ],
+                "source_verified": false
+              }
+            ],
+            "claims": [
+              {
+                "claim_id": "E01-C01",
+                "mode": "fact",
+                "text": "Tên thực thể: Phường Hoàn Kiếm. Mã của Phường Hoàn Kiếm: 00070. Tỉnh/thành phố trực thuộc của Phường Hoàn Kiếm: Thành phố Hà Nội. Loại thực thể của Phường Hoàn Kiếm: đơn vị hành chính cấp xã.",
+                "evidence_ids": [
+                  "E01"
+                ],
+                "fields": [
+                  "name",
+                  "code",
+                  "provinceName",
+                  "type"
+                ],
+                "fact_checks": [
+                  {
+                    "evidence_id": "E01",
+                    "field": "name",
+                    "value": "Phường Hoàn Kiếm"
+                  },
+                  {
+                    "evidence_id": "E01",
+                    "field": "code",
+                    "value": "00070"
+                  },
+                  {
+                    "evidence_id": "E01",
+                    "field": "provinceName",
+                    "value": "Thành phố Hà Nội"
+                  },
+                  {
+                    "evidence_id": "E01",
+                    "field": "type",
+                    "value": "https://w3id.org/vn-assistant/ontology#Ward"
+                  }
+                ],
+                "verification": "exact_kg_fact_match",
+                "source_verified": false
+              }
+            ],
+            "cross_check": {
+              "status": "supported",
+              "supported": [
+                {
+                  "claim_id": "E01-C01",
+                  "mode": "fact",
+                  "text": "Tên thực thể: Phường Hoàn Kiếm. Mã của Phường Hoàn Kiếm: 00070. Tỉnh/thành phố trực thuộc của Phường Hoàn Kiếm: Thành phố Hà Nội. Loại thực thể của Phường Hoàn Kiếm: đơn vị hành chính cấp xã.",
+                  "evidence_ids": [
+                    "E01"
+                  ],
+                  "fields": [
+                    "name",
+                    "code",
+                    "provinceName",
+                    "type"
+                  ],
+                  "fact_checks": [
+                    {
+                      "evidence_id": "E01",
+                      "field": "name",
+                      "value": "Phường Hoàn Kiếm"
+                    },
+                    {
+                      "evidence_id": "E01",
+                      "field": "code",
+                      "value": "00070"
+                    },
+                    {
+                      "evidence_id": "E01",
+                      "field": "provinceName",
+                      "value": "Thành phố Hà Nội"
+                    },
+                    {
+                      "evidence_id": "E01",
+                      "field": "type",
+                      "value": "https://w3id.org/vn-assistant/ontology#Ward"
+                    }
+                  ],
+                  "verification": "exact_kg_fact_match",
+                  "source_verified": false
+                }
+              ],
+              "rejected": [],
+              "checked_count": 1,
+              "supported_count": 1,
+              "rejected_count": 0,
+              "verification_scope": "extractive_text_and_structured_kg_facts",
+              "constraints_checked": false,
+              "kg_rechecked": true
+            },
+            "warnings": [],
+            "llm": {
+              "backend": "transformers",
+              "model": "/Users/amyas/HK1 26-27/DATN/models/Qwen3-0.6B",
+              "device": "mps",
+              "ready": true,
+              "context_window": 4096,
+              "max_new_tokens": 384,
+              "error": null,
+              "generation_count": 2,
+              "last_latency_ms": 4375.86
+            },
+            "timings_ms": {
+              "question_processing": 17.068,
+              "generation": 4378.134,
+              "kg_refresh": 1.613,
+              "cross_check": 0.08,
+              "total": 4397.106
+            },
+            "original_question": "Đơn vị có mã 00070 là gì?",
+            "context_resolution": {
+              "question": "Đơn vị có mã 00070 là gì?",
+              "resolved": false,
+              "needs_context": false
+            },
+            "retrieval_mode": "lexical_candidates_faiss"
+          }
+        },
+        {
+          "path": "/v1/chat",
+          "passed": true,
+          "http_status": 200,
+          "latency_ms": 31012.255,
+          "response": {
+            "question": "Giới thiệu giá trị văn hóa của Ca trù.",
+            "classification": {
+              "question": "Giới thiệu giá trị văn hóa của Ca trù.",
+              "route": "rag",
+              "domain": "heritage",
+              "route_confidence": 0.7,
+              "domain_confidence": 0.7,
+              "method": "tfidf_logistic_regression"
+            },
+            "plan": {
+              "route": "rag",
+              "kg": null,
+              "rag": {
+                "domain": "heritage",
+                "top_k": 3
+              },
+              "intent": "textual",
+              "constraints": {
+                "temporal": [],
+                "spatial": [],
+                "unsupported": []
+              },
+              "warnings": [],
+              "scope": "supported"
+            },
+            "effective_route": "rag",
+            "retrieval_status": "ready",
+            "status": "answered",
+            "answer": "Theo các minh chứng tìm được:\nCa trù phản ánh giá trị tinh thần, thẩm mỹ và xã hội của người Việt, góp phần hình thành và định hình bản sắc văn hóa dân tộc. [1]\nCa trù phản ánh giá trị tinh thần, thẩm mỹ và xã hội của người Việt, góp phần hình thành và định hình bản sắc văn hóa dân tộc. [2]\nMỗi loại hình nghệ thuật truyền thống đều mang giá trị riêng, nhưng Ca trù nổi bật với sự tinh tế và sang trọng, phản ánh một khía cạnh đặc biệt trong văn hóa Việt Nam. [3]\n\nNguồn minh chứng:\n[1] Ca trù performance — tài liệu trong bộ dữ liệu cục bộ\n[2] Ca trù performance — tài liệu trong bộ dữ liệu cục bộ\n[3] Ca trù performance — tài liệu trong bộ dữ liệu cục bộ",
+            "citations": [
+              {
+                "number": 1,
+                "evidence_id": "E01",
+                "kind": "rag",
+                "title": "Ca trù performance",
+                "source": "viet-cultural-vqa",
+                "source_url": null,
+                "source_record_ids": [
+                  "331ca6d9e2326ac660cf3f5d05d9bcecc84a206fd774d52da4393878fd9bd78f"
+                ],
+                "source_verified": false
+              },
+              {
+                "number": 2,
+                "evidence_id": "E02",
+                "kind": "rag",
+                "title": "Ca trù performance",
+                "source": "viet-cultural-vqa",
+                "source_url": null,
+                "source_record_ids": [
+                  "331ca6d9e2326ac660cf3f5d05d9bcecc84a206fd774d52da4393878fd9bd78f"
+                ],
+                "source_verified": false
+              },
+              {
+                "number": 3,
+                "evidence_id": "E03",
+                "kind": "rag",
+                "title": "Ca trù performance",
+                "source": "viet-cultural-vqa",
+                "source_url": null,
+                "source_record_ids": [
+                  "614ea6fbdf1092bb6d760a9d024ceeff82b91c5f84a3f7302dcd410bb88b8fe9"
+                ],
+                "source_verified": false
+              }
+            ],
+            "claims": [
+              {
+                "claim_id": "E01-C01",
+                "mode": "extractive",
+                "text": "Ca trù phản ánh giá trị tinh thần, thẩm mỹ và xã hội của người Việt, góp phần hình thành và định hình bản sắc văn hóa dân tộc.",
+                "evidence_ids": [
+                  "E01"
+                ],
+                "verification": "exact_evidence_match",
+                "source_verified": false
+              },
+              {
+                "claim_id": "E02-C01",
+                "mode": "extractive",
+                "text": "Ca trù phản ánh giá trị tinh thần, thẩm mỹ và xã hội của người Việt, góp phần hình thành và định hình bản sắc văn hóa dân tộc.",
+                "evidence_ids": [
+                  "E02"
+                ],
+                "verification": "exact_evidence_match",
+                "source_verified": false
+              },
+              {
+                "claim_id": "E03-C01",
+                "mode": "extractive",
+                "text": "Mỗi loại hình nghệ thuật truyền thống đều mang giá trị riêng, nhưng Ca trù nổi bật với sự tinh tế và sang trọng, phản ánh một khía cạnh đặc biệt trong văn hóa Việt Nam.",
+                "evidence_ids": [
+                  "E03"
+                ],
+                "verification": "exact_evidence_match",
+                "source_verified": false
+              }
+            ],
+            "cross_check": {
+              "status": "supported",
+              "supported": [
+                {
+                  "claim_id": "E01-C01",
+                  "mode": "extractive",
+                  "text": "Ca trù phản ánh giá trị tinh thần, thẩm mỹ và xã hội của người Việt, góp phần hình thành và định hình bản sắc văn hóa dân tộc.",
+                  "evidence_ids": [
+                    "E01"
+                  ],
+                  "verification": "exact_evidence_match",
+                  "source_verified": false
+                },
+                {
+                  "claim_id": "E02-C01",
+                  "mode": "extractive",
+                  "text": "Ca trù phản ánh giá trị tinh thần, thẩm mỹ và xã hội của người Việt, góp phần hình thành và định hình bản sắc văn hóa dân tộc.",
+                  "evidence_ids": [
+                    "E02"
+                  ],
+                  "verification": "exact_evidence_match",
+                  "source_verified": false
+                },
+                {
+                  "claim_id": "E03-C01",
+                  "mode": "extractive",
+                  "text": "Mỗi loại hình nghệ thuật truyền thống đều mang giá trị riêng, nhưng Ca trù nổi bật với sự tinh tế và sang trọng, phản ánh một khía cạnh đặc biệt trong văn hóa Việt Nam.",
+                  "evidence_ids": [
+                    "E03"
+                  ],
+                  "verification": "exact_evidence_match",
+                  "source_verified": false
+                }
+              ],
+              "rejected": [],
+              "checked_count": 3,
+              "supported_count": 3,
+              "rejected_count": 0,
+              "verification_scope": "extractive_text_and_structured_kg_facts",
+              "constraints_checked": false,
+              "kg_rechecked": false
+            },
+            "warnings": [],
+            "llm": {
+              "backend": "transformers",
+              "model": "/Users/amyas/HK1 26-27/DATN/models/Qwen3-0.6B",
+              "device": "mps",
+              "ready": true,
+              "context_window": 4096,
+              "max_new_tokens": 384,
+              "error": null,
+              "generation_count": 5,
+              "last_latency_ms": 9387.01
+            },
+            "timings_ms": {
+              "question_processing": 21602.196,
+              "generation": 9390.741,
+              "kg_refresh": 0.016,
+              "cross_check": 0.222,
+              "total": 30993.871
+            },
+            "original_question": "Giới thiệu giá trị văn hóa của Ca trù.",
+            "context_resolution": {
+              "question": "Giới thiệu giá trị văn hóa của Ca trù.",
+              "resolved": false,
+              "needs_context": false
+            },
+            "retrieval_mode": "lexical_candidates_faiss"
+          }
+        },
+        {
+          "path": "/v1/chat",
+          "passed": true,
+          "http_status": 200,
+          "latency_ms": 21330.804,
+          "response": {
+            "question": "Giới thiệu giá trị văn hóa của Ca trù.",
+            "classification": {
+              "question": "Giới thiệu giá trị văn hóa của Ca trù.",
+              "route": "rag",
+              "domain": "heritage",
+              "route_confidence": 0.7,
+              "domain_confidence": 0.7,
+              "method": "tfidf_logistic_regression"
+            },
+            "plan": {
+              "route": "rag",
+              "kg": null,
+              "rag": {
+                "domain": "heritage",
+                "top_k": 3
+              },
+              "intent": "textual",
+              "constraints": {
+                "temporal": [],
+                "spatial": [],
+                "unsupported": []
+              },
+              "warnings": [],
+              "scope": "supported"
+            },
+            "effective_route": "rag",
+            "retrieval_status": "ready",
+            "status": "answered",
+            "answer": "Theo các minh chứng tìm được:\nCa trù phản ánh giá trị tinh thần, thẩm mỹ và xã hội của người Việt, góp phần hình thành và định hình bản sắc văn hóa dân tộc. [1]\nCa trù phản ánh giá trị tinh thần, thẩm mỹ và xã hội của người Việt, góp phần hình thành và định hình bản sắc văn hóa dân tộc. [2]\nMỗi loại hình nghệ thuật truyền thống đều mang giá trị riêng, nhưng Ca trù nổi bật với sự tinh tế và sang trọng, phản ánh một khía cạnh đặc biệt trong văn hóa Việt Nam. [3]\n\nNguồn minh chứng:\n[1] Ca trù performance — tài liệu trong bộ dữ liệu cục bộ\n[2] Ca trù performance — tài liệu trong bộ dữ liệu cục bộ\n[3] Ca trù performance — tài liệu trong bộ dữ liệu cục bộ",
+            "citations": [
+              {
+                "number": 1,
+                "evidence_id": "E01",
+                "kind": "rag",
+                "title": "Ca trù performance",
+                "source": "viet-cultural-vqa",
+                "source_url": null,
+                "source_record_ids": [
+                  "331ca6d9e2326ac660cf3f5d05d9bcecc84a206fd774d52da4393878fd9bd78f"
+                ],
+                "source_verified": false
+              },
+              {
+                "number": 2,
+                "evidence_id": "E02",
+                "kind": "rag",
+                "title": "Ca trù performance",
+                "source": "viet-cultural-vqa",
+                "source_url": null,
+                "source_record_ids": [
+                  "331ca6d9e2326ac660cf3f5d05d9bcecc84a206fd774d52da4393878fd9bd78f"
+                ],
+                "source_verified": false
+              },
+              {
+                "number": 3,
+                "evidence_id": "E03",
+                "kind": "rag",
+                "title": "Ca trù performance",
+                "source": "viet-cultural-vqa",
+                "source_url": null,
+                "source_record_ids": [
+                  "614ea6fbdf1092bb6d760a9d024ceeff82b91c5f84a3f7302dcd410bb88b8fe9"
+                ],
+                "source_verified": false
+              }
+            ],
+            "claims": [
+              {
+                "claim_id": "E01-C01",
+                "mode": "extractive",
+                "text": "Ca trù phản ánh giá trị tinh thần, thẩm mỹ và xã hội của người Việt, góp phần hình thành và định hình bản sắc văn hóa dân tộc.",
+                "evidence_ids": [
+                  "E01"
+                ],
+                "verification": "exact_evidence_match",
+                "source_verified": false
+              },
+              {
+                "claim_id": "E02-C01",
+                "mode": "extractive",
+                "text": "Ca trù phản ánh giá trị tinh thần, thẩm mỹ và xã hội của người Việt, góp phần hình thành và định hình bản sắc văn hóa dân tộc.",
+                "evidence_ids": [
+                  "E02"
+                ],
+                "verification": "exact_evidence_match",
+                "source_verified": false
+              },
+              {
+                "claim_id": "E03-C01",
+                "mode": "extractive",
+                "text": "Mỗi loại hình nghệ thuật truyền thống đều mang giá trị riêng, nhưng Ca trù nổi bật với sự tinh tế và sang trọng, phản ánh một khía cạnh đặc biệt trong văn hóa Việt Nam.",
+                "evidence_ids": [
+                  "E03"
+                ],
+                "verification": "exact_evidence_match",
+                "source_verified": false
+              }
+            ],
+            "cross_check": {
+              "status": "supported",
+              "supported": [
+                {
+                  "claim_id": "E01-C01",
+                  "mode": "extractive",
+                  "text": "Ca trù phản ánh giá trị tinh thần, thẩm mỹ và xã hội của người Việt, góp phần hình thành và định hình bản sắc văn hóa dân tộc.",
+                  "evidence_ids": [
+                    "E01"
+                  ],
+                  "verification": "exact_evidence_match",
+                  "source_verified": false
+                },
+                {
+                  "claim_id": "E02-C01",
+                  "mode": "extractive",
+                  "text": "Ca trù phản ánh giá trị tinh thần, thẩm mỹ và xã hội của người Việt, góp phần hình thành và định hình bản sắc văn hóa dân tộc.",
+                  "evidence_ids": [
+                    "E02"
+                  ],
+                  "verification": "exact_evidence_match",
+                  "source_verified": false
+                },
+                {
+                  "claim_id": "E03-C01",
+                  "mode": "extractive",
+                  "text": "Mỗi loại hình nghệ thuật truyền thống đều mang giá trị riêng, nhưng Ca trù nổi bật với sự tinh tế và sang trọng, phản ánh một khía cạnh đặc biệt trong văn hóa Việt Nam.",
+                  "evidence_ids": [
+                    "E03"
+                  ],
+                  "verification": "exact_evidence_match",
+                  "source_verified": false
+                }
+              ],
+              "rejected": [],
+              "checked_count": 3,
+              "supported_count": 3,
+              "rejected_count": 0,
+              "verification_scope": "extractive_text_and_structured_kg_facts",
+              "constraints_checked": false,
+              "kg_rechecked": false
+            },
+            "warnings": [],
+            "llm": {
+              "backend": "transformers",
+              "model": "/Users/amyas/HK1 26-27/DATN/models/Qwen3-0.6B",
+              "device": "mps",
+              "ready": true,
+              "context_window": 4096,
+              "max_new_tokens": 384,
+              "error": null,
+              "generation_count": 4,
+              "last_latency_ms": 8937.57
+            },
+            "timings_ms": {
+              "question_processing": 12364.5,
+              "generation": 8942.077,
+              "kg_refresh": 0.035,
+              "cross_check": 0.488,
+              "total": 21308.264
+            },
+            "original_question": "Giới thiệu giá trị văn hóa của Ca trù.",
+            "context_resolution": {
+              "question": "Giới thiệu giá trị văn hóa của Ca trù.",
+              "resolved": false,
+              "needs_context": false
+            },
+            "retrieval_mode": "lexical_candidates_faiss"
+          }
+        }
+      ]
+    }
+  ],
+  "recovery_before": {
+    "status": "encoding",
+    "pid": 98887,
+    "vectors": 26368,
+    "total": 456108,
+    "percent": 5.78,
+    "vectors_per_second": 42.54,
+    "estimated_remaining_seconds": 10103,
+    "device": "mps",
+    "updated_at": "2026-10-23T16:52:55.170396+00:00"
+  },
+  "final_health": {
+    "path": "/health",
+    "passed": true,
+    "http_status": 200,
+    "latency_ms": 2.112,
+    "response": {
+      "status": "ok",
+      "router_ready": true,
+      "kg_ready": true,
+      "faiss_ready": true,
+      "retrieval_mode": "lexical_candidates_faiss",
+      "artifacts_present": {
+        "router": true,
+        "kg": true,
+        "faiss": false
+      },
+      "llm": {
+        "backend": "transformers",
+        "model": "/Users/amyas/HK1 26-27/DATN/models/Qwen3-0.6B",
+        "device": "mps",
+        "ready": true,
+        "context_window": 4096,
+        "max_new_tokens": 384,
+        "error": null,
+        "generation_count": 5,
+        "last_latency_ms": 9387.01
+      },
+      "capabilities": {
+        "unit_at_date": true,
+        "unit_in_province_at_date": true,
+        "geometry_distance": false,
+        "citation_verification": "evidence_match"
+      }
+    }
+  },
+  "recovery_after": {
+    "status": "encoding",
+    "pid": 98887,
+    "vectors": 28416,
+    "total": 456108,
+    "percent": 6.23,
+    "vectors_per_second": 41.73,
+    "estimated_remaining_seconds": 10250,
+    "device": "mps",
+    "updated_at": "2026-10-23T16:53:55.610812+00:00"
+  },
+  "passed": true
+}

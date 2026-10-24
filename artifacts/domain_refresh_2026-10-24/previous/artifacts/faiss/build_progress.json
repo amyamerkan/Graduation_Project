@@ -1,0 +1,9 @@
+{
+  "status": "complete",
+  "vectors": 28909,
+  "resumed_vectors": 28847,
+  "elapsed_seconds": 4.360196292000182,
+  "vectors_per_second": 14.219543306743724,
+  "device": "mps",
+  "dataset": "/Users/amyas/HK1 26-27/DATN/data/rag_dataset_final.jsonl"
+}

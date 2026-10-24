@@ -1,0 +1,87 @@
+[
+  {
+    "case_id": "kg_verified_code",
+    "question": "Đơn vị có mã 00070 là gì?",
+    "expect": {
+      "status": "answered",
+      "route": "kg",
+      "domain": "administration",
+      "min_kg_rows": 1,
+      "max_rag_rows": 0,
+      "kg_must_contain": {"name": "Phường Hoàn Kiếm", "code": "00070"},
+      "citation_kinds": ["kg"],
+      "llm_calls": 1
+    }
+  },
+  {
+    "case_id": "hybrid_ca_tru",
+    "question": "Ca trù thuộc loại di sản nào và có giá trị văn hóa gì?",
+    "expect": {
+      "status": "answered",
+      "route": "hybrid",
+      "domain": "heritage",
+      "min_kg_rows": 1,
+      "min_rag_rows": 1,
+      "physical_kg_scope": true,
+      "llm_calls": 1
+    }
+  },
+  {
+    "case_id": "rag_ca_tru",
+    "question": "Giới thiệu giá trị văn hóa của Ca trù.",
+    "expect": {
+      "status": "answered",
+      "route": "rag",
+      "domain": "heritage",
+      "max_kg_rows": 0,
+      "min_rag_rows": 1,
+      "citation_kinds": ["rag"],
+      "llm_calls": 1
+    }
+  },
+  {
+    "case_id": "my_son_wrong_entity_scope",
+    "question": "Mỹ Sơn thuộc tỉnh nào và có giá trị gì?",
+    "expect": {
+      "status": "abstained",
+      "domain": "heritage",
+      "max_kg_rows": 0,
+      "warning_prefix": "domain_scope_mismatch"
+    }
+  },
+  {
+    "case_id": "unsupported_geometry",
+    "question": "Di sản nào ở gần Hội An nhất trong bán kính 5 km?",
+    "expect": {
+      "status": "abstained",
+      "route": "rag",
+      "retrieval_status": "unsupported_constraints",
+      "max_kg_rows": 0,
+      "reason": "unsupported_constraints",
+      "llm_calls": 0
+    }
+  },
+  {
+    "case_id": "unsupported_history_2020",
+    "question": "Phường Long Biên thuộc tỉnh nào trong năm 2020?",
+    "expect": {
+      "status": "abstained",
+      "route": "rag",
+      "retrieval_status": "unsupported_constraints",
+      "max_kg_rows": 0,
+      "reason": "unsupported_constraints",
+      "llm_calls": 0
+    }
+  },
+  {
+    "case_id": "missing_administrative_code",
+    "question": "Đơn vị có mã 99999 là gì?",
+    "expect": {
+      "status": "abstained",
+      "domain": "administration",
+      "max_kg_rows": 0,
+      "reason": "missing_verified_code",
+      "llm_calls": 0
+    }
+  }
+]

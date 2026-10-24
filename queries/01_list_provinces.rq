@@ -1,7 +1,0 @@
-PREFIX vn: <https://w3id.org/vn-assistant/ontology#>
-SELECT ?unit ?name ?code WHERE {
-  ?unit a vn:Province ; vn:name ?name .
-  OPTIONAL { ?unit vn:code ?code }
-}
-ORDER BY ?name
-

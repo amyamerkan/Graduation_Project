@@ -1,0 +1,17 @@
+PREFIX vn: <https://w3id.org/vn-assistant/ontology#>
+SELECT DISTINCT ?entity ?type ?name ?code ?description ?address ?provinceName ?validFrom ?validTo ?snapshotDate WHERE {
+  ?entity a ?type ; vn:name ?name .
+  OPTIONAL { ?entity vn:isCurrentSnapshot ?current }
+  FILTER(!BOUND(?current) || ?current = true)
+  OPTIONAL { ?entity vn:snapshotDate ?snapshotDate }
+  FILTER(STRSTARTS(STR(?type), "https://w3id.org/vn-assistant/ontology#"))
+  FILTER(CONTAINS(LCASE(STR(?name)), LCASE("{{keyword}}")))
+  OPTIONAL { ?entity vn:code ?code }
+  OPTIONAL { ?entity vn:description ?description }
+  OPTIONAL { ?entity vn:address ?address }
+  OPTIONAL { ?entity vn:validFrom ?validFrom }
+  OPTIONAL { ?entity vn:validTo ?validTo }
+  OPTIONAL { ?entity vn:locatedIn+ ?province . ?province a ?provinceType ; vn:name ?provinceName . FILTER(?provinceType IN (vn:Province, vn:HistoricalProvince)) }
+}
+ORDER BY ?name
+LIMIT {{limit}}

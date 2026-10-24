@@ -1,0 +1,9 @@
+{
+  "published_at": "2026-10-24T17:04:47.177414+00:00",
+  "release": "/Users/amyas/HK1 26-27/DATN/artifacts/domain_refresh_2026-10-24/release",
+  "documents": 31949,
+  "preserved_previous_destinations": 202,
+  "active_rag_sha256": "a41a6545e0b960d780ece8494dbd3ec9ca81ceff08dedf4e9933b73253f3f568",
+  "previous_version": "/Users/amyas/HK1 26-27/DATN/artifacts/domain_refresh_2026-10-24/previous",
+  "previous_version_policy": "Inactive rollback copy; never training/retrieval input"
+}

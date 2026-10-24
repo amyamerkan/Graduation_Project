@@ -1,0 +1,43 @@
+{
+  "added_documents": 15,
+  "coverage": {
+    "Hội An": [
+      "Khu phố cổ Hội An",
+      "Thành phố Hội An"
+    ],
+    "Mỹ Sơn": [
+      "Di sản văn hóa Mỹ Sơn"
+    ],
+    "Hạ Long": [
+      "Trung tâm Mỹ Ngọc - Công ty CP Ngọc trai Hạ Long",
+      "Trung tâm Thương mại Vincom Hạ Long center"
+    ],
+    "Sa Pa": [
+      "Làng Cát Cát ở Sa Pa"
+    ],
+    "Phú Quốc": [
+      "Nhà tù Phú Quốc",
+      "Vườn Quốc gia Phú Quốc"
+    ],
+    "Nha Trang": [
+      "Vịnh Nha Trang",
+      "Nhà thờ Đá Nha Trang"
+    ],
+    "Đà Lạt": [
+      "Nhà thờ Đà Lạt",
+      "Thành phố Đà Lạt"
+    ],
+    "Phong Nha": [
+      "Động Phong Nha",
+      "Di sản thiên nhiên thế giới Phong Nha - Kẻ Bàng"
+    ],
+    "Cát Bà": [
+      "Vườn Quốc Gia Cát Bà",
+      "Quần đảo Cát Bà"
+    ],
+    "Côn Đảo": [
+      "Côn Đảo"
+    ]
+  },
+  "errors": []
+}

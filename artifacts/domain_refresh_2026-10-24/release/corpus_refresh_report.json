@@ -1,0 +1,349 @@
+{
+  "created_at": "2026-10-24T16:59:00.114366+00:00",
+  "before_documents": 28377,
+  "scope": "Vietnam administrative geography and visitor destinations; no intangible-heritage QA",
+  "filtered": [
+    {
+      "record_id": "tourism_place_0fe94b023c4547f3",
+      "removed_sentences": 1
+    },
+    {
+      "record_id": "tourism_place_a636419c6f2cd553",
+      "removed_sentences": 2
+    },
+    {
+      "record_id": "tourism_place_54be96c9ee773130",
+      "removed_sentences": 10
+    },
+    {
+      "record_id": "tourism_place_b00421d0ad220428",
+      "removed_sentences": 3
+    },
+    {
+      "record_id": "tourism_place_850e947a805a3fc3",
+      "removed_sentences": 1
+    },
+    {
+      "record_id": "tourism_place_b68a1778278bf6c2",
+      "removed_sentences": 1
+    },
+    {
+      "record_id": "tourism_place_1df7dc6371459d61",
+      "removed_sentences": 1
+    },
+    {
+      "record_id": "tourism_place_4adafba5615a67a3",
+      "removed_sentences": 9
+    },
+    {
+      "record_id": "tourism_place_c3a04c6bdeb7f546",
+      "removed_sentences": 1
+    },
+    {
+      "record_id": "tourism_place_ceb4453abddc07c2",
+      "removed_sentences": 1
+    },
+    {
+      "record_id": "tourism_place_cfbf7721846fd252",
+      "removed_sentences": 2
+    },
+    {
+      "record_id": "tourism_place_59d7637c1f414364",
+      "removed_sentences": 1
+    },
+    {
+      "record_id": "tourism_place_5f5c0b8ba1f90ef1",
+      "removed_sentences": 1
+    },
+    {
+      "record_id": "tourism_place_35e13a7ba05dbafc",
+      "removed_sentences": 1
+    },
+    {
+      "record_id": "tourism_place_f5066726f8d267a8",
+      "removed_sentences": 2
+    },
+    {
+      "record_id": "tourism_place_970288edef789a8b",
+      "removed_sentences": 1
+    },
+    {
+      "record_id": "tourism_place_a1088f5d957c5fba",
+      "removed_sentences": 1
+    },
+    {
+      "record_id": "tourism_place_9c89a9f76cb4f7a5",
+      "removed_sentences": 1
+    },
+    {
+      "record_id": "tourism_place_fa5e130c9310b79b",
+      "removed_sentences": 1
+    },
+    {
+      "record_id": "tourism_place_74b18ff9f291e507",
+      "removed_sentences": 1
+    },
+    {
+      "record_id": "tourism_place_25d4c2ed1a5cf001",
+      "removed_sentences": 1
+    },
+    {
+      "record_id": "tourism_place_036cd0a369a80719",
+      "removed_sentences": 1
+    },
+    {
+      "record_id": "tourism_place_c6da931264ca1299",
+      "removed_sentences": 1
+    },
+    {
+      "record_id": "tourism_place_38fbb2f514d4f953",
+      "removed_sentences": 1
+    },
+    {
+      "record_id": "tourism_place_e57bec3b7a0e7e9a",
+      "removed_sentences": 1
+    },
+    {
+      "record_id": "tourism_place_8ac8de0cd07a8122",
+      "removed_sentences": 2
+    },
+    {
+      "record_id": "tourism_place_c46d62a2305d48dd",
+      "removed_sentences": 1
+    },
+    {
+      "record_id": "tourism_place_83bd0469a139d7c1",
+      "removed_sentences": 1
+    },
+    {
+      "record_id": "tourism_place_450fa073f3fca213",
+      "removed_sentences": 1
+    }
+  ],
+  "official_matches": {
+    "current:province": 34,
+    "current:ward": 3321,
+    "reorganized2025:province": 34
+  },
+  "official_corrections": [
+    {
+      "code": "07294",
+      "previous_name": "Xã Bố Hạ",
+      "official_name": "Phường Bố Hạ",
+      "snapshot": "current",
+      "source_url": "https://danhmuchanhchinh.nso.gov.vn/Doi_Chieu_Moi.aspx"
+    },
+    {
+      "code": "07375",
+      "previous_name": "Xã Lạng Giang",
+      "official_name": "Phường Lạng Giang",
+      "snapshot": "current",
+      "source_url": "https://danhmuchanhchinh.nso.gov.vn/Doi_Chieu_Moi.aspx"
+    },
+    {
+      "code": "07399",
+      "previous_name": "Xã Kép",
+      "official_name": "Phường Kép",
+      "snapshot": "current",
+      "source_url": "https://danhmuchanhchinh.nso.gov.vn/Doi_Chieu_Moi.aspx"
+    },
+    {
+      "code": "07444",
+      "previous_name": "Xã Lục Nam",
+      "official_name": "Phường Lục Nam",
+      "snapshot": "current",
+      "source_url": "https://danhmuchanhchinh.nso.gov.vn/Doi_Chieu_Moi.aspx"
+    },
+    {
+      "code": "07840",
+      "previous_name": "Xã Hiệp Hoà",
+      "official_name": "Phường Hiệp Hoà",
+      "snapshot": "current",
+      "source_url": "https://danhmuchanhchinh.nso.gov.vn/Doi_Chieu_Moi.aspx"
+    },
+    {
+      "code": "09193",
+      "previous_name": "Xã Yên Phong",
+      "official_name": "Phường Yên Phong",
+      "snapshot": "current",
+      "source_url": "https://danhmuchanhchinh.nso.gov.vn/Doi_Chieu_Moi.aspx"
+    },
+    {
+      "code": "09292",
+      "previous_name": "Xã Phù Lãng",
+      "official_name": "Phường Phù Lãng",
+      "snapshot": "current",
+      "source_url": "https://danhmuchanhchinh.nso.gov.vn/Doi_Chieu_Moi.aspx"
+    },
+    {
+      "code": "09313",
+      "previous_name": "Xã Chi Lăng",
+      "official_name": "Phường Chi Lăng",
+      "snapshot": "current",
+      "source_url": "https://danhmuchanhchinh.nso.gov.vn/Doi_Chieu_Moi.aspx"
+    },
+    {
+      "code": "09319",
+      "previous_name": "Xã Tiên Du",
+      "official_name": "Phường Tiên Du",
+      "snapshot": "current",
+      "source_url": "https://danhmuchanhchinh.nso.gov.vn/Doi_Chieu_Moi.aspx"
+    },
+    {
+      "code": "09454",
+      "previous_name": "Xã Gia Bình",
+      "official_name": "Phường Gia Bình",
+      "snapshot": "current",
+      "source_url": "https://danhmuchanhchinh.nso.gov.vn/Doi_Chieu_Moi.aspx"
+    },
+    {
+      "code": "09475",
+      "previous_name": "Xã Nhân Thắng",
+      "official_name": "Phường Nhân Thắng",
+      "snapshot": "current",
+      "source_url": "https://danhmuchanhchinh.nso.gov.vn/Doi_Chieu_Moi.aspx"
+    },
+    {
+      "code": "09496",
+      "previous_name": "Xã Lương Tài",
+      "official_name": "Phường Lương Tài",
+      "snapshot": "current",
+      "source_url": "https://danhmuchanhchinh.nso.gov.vn/Doi_Chieu_Moi.aspx"
+    },
+    {
+      "code": "24184",
+      "previous_name": "Xã Ea H'Leo",
+      "official_name": "Xã Ea H’Leo",
+      "snapshot": "current",
+      "source_url": "https://danhmuchanhchinh.nso.gov.vn/Doi_Chieu_Moi.aspx"
+    },
+    {
+      "code": "24280",
+      "previous_name": "Xã Cư M'gar",
+      "official_name": "Xã Cư M’gar",
+      "snapshot": "current",
+      "source_url": "https://danhmuchanhchinh.nso.gov.vn/Doi_Chieu_Moi.aspx"
+    },
+    {
+      "code": "24286",
+      "previous_name": "Xã Ea M'Droh",
+      "official_name": "Xã Ea M’Droh",
+      "snapshot": "current",
+      "source_url": "https://danhmuchanhchinh.nso.gov.vn/Doi_Chieu_Moi.aspx"
+    },
+    {
+      "code": "24412",
+      "previous_name": "Xã M'Drắk",
+      "official_name": "Xã M’Drắk",
+      "snapshot": "current",
+      "source_url": "https://danhmuchanhchinh.nso.gov.vn/Doi_Chieu_Moi.aspx"
+    },
+    {
+      "code": "24436",
+      "previous_name": "Xã Cư M'ta",
+      "official_name": "Xã Cư M’ta",
+      "snapshot": "current",
+      "source_url": "https://danhmuchanhchinh.nso.gov.vn/Doi_Chieu_Moi.aspx"
+    },
+    {
+      "code": "24829",
+      "previous_name": "Phường B'Lao",
+      "official_name": "Phường B’Lao",
+      "snapshot": "current",
+      "source_url": "https://danhmuchanhchinh.nso.gov.vn/Doi_Chieu_Moi.aspx"
+    },
+    {
+      "code": "24934",
+      "previous_name": "Xã D'Ran",
+      "official_name": "Xã D’Ran",
+      "snapshot": "current",
+      "source_url": "https://danhmuchanhchinh.nso.gov.vn/Doi_Chieu_Moi.aspx"
+    },
+    {
+      "code": "25270",
+      "previous_name": "Xã Lộc Ninh",
+      "official_name": "Phường Lộc Ninh",
+      "snapshot": "current",
+      "source_url": "https://danhmuchanhchinh.nso.gov.vn/Doi_Chieu_Moi.aspx"
+    },
+    {
+      "code": "25357",
+      "previous_name": "Xã Tân Khai",
+      "official_name": "Phường Tân Khai",
+      "snapshot": "current",
+      "source_url": "https://danhmuchanhchinh.nso.gov.vn/Doi_Chieu_Moi.aspx"
+    },
+    {
+      "code": "25363",
+      "previous_name": "Xã Đồng Phú",
+      "official_name": "Phường Đồng Phú",
+      "snapshot": "current",
+      "source_url": "https://danhmuchanhchinh.nso.gov.vn/Doi_Chieu_Moi.aspx"
+    },
+    {
+      "code": "26116",
+      "previous_name": "Xã Tân Phú",
+      "official_name": "Phường Tân Phú",
+      "snapshot": "current",
+      "source_url": "https://danhmuchanhchinh.nso.gov.vn/Doi_Chieu_Moi.aspx"
+    },
+    {
+      "code": "26170",
+      "previous_name": "Xã Trị An",
+      "official_name": "Phường Trị An",
+      "snapshot": "current",
+      "source_url": "https://danhmuchanhchinh.nso.gov.vn/Doi_Chieu_Moi.aspx"
+    },
+    {
+      "code": "26248",
+      "previous_name": "Xã Trảng Bom",
+      "official_name": "Phường Trảng Bom",
+      "snapshot": "current",
+      "source_url": "https://danhmuchanhchinh.nso.gov.vn/Doi_Chieu_Moi.aspx"
+    },
+    {
+      "code": "26326",
+      "previous_name": "Xã Dầu Giây",
+      "official_name": "Phường Dầu Giây",
+      "snapshot": "current",
+      "source_url": "https://danhmuchanhchinh.nso.gov.vn/Doi_Chieu_Moi.aspx"
+    },
+    {
+      "code": "26368",
+      "previous_name": "Xã Long Thành",
+      "official_name": "Phường Long Thành",
+      "snapshot": "current",
+      "source_url": "https://danhmuchanhchinh.nso.gov.vn/Doi_Chieu_Moi.aspx"
+    },
+    {
+      "code": "26425",
+      "previous_name": "Xã Xuân Lộc",
+      "official_name": "Phường Xuân Lộc",
+      "snapshot": "current",
+      "source_url": "https://danhmuchanhchinh.nso.gov.vn/Doi_Chieu_Moi.aspx"
+    },
+    {
+      "code": "26485",
+      "previous_name": "Xã Nhơn Trạch",
+      "official_name": "Phường Nhơn Trạch",
+      "snapshot": "current",
+      "source_url": "https://danhmuchanhchinh.nso.gov.vn/Doi_Chieu_Moi.aspx"
+    }
+  ],
+  "after_documents": 31949,
+  "added_documents": 3572,
+  "documents_by_domain": {
+    "administration": 31496,
+    "tourism": 453
+  },
+  "record_types": {
+    "administrative_snapshot": 17520,
+    "administrative_conversion": 10618,
+    "tourism_place": 453,
+    "administrative_source_document": 37,
+    "administrative_reference": 3321
+  },
+  "removed_sentences": 52,
+  "excluded_subject_matches_in_active_data": 0,
+  "rag_sha256": "a41a6545e0b960d780ece8494dbd3ec9ca81ceff08dedf4e9933b73253f3f568"
+}

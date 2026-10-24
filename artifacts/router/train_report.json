@@ -1,5 +1,5 @@
 {
-  "training_rows": 44,
+  "training_rows": 3402,
   "route_labels": [
     "hybrid",
     "kg",
@@ -7,8 +7,6 @@
   ],
   "domain_labels": [
     "administration",
-    "heritage",
-    "law",
     "tourism"
   ]
 }

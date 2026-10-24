@@ -1,9 +1,0 @@
-{
-  "status": "complete",
-  "vectors": 145,
-  "resumed_vectors": 0,
-  "elapsed_seconds": 5.363553666000371,
-  "vectors_per_second": 27.03431512565199,
-  "device": "mps",
-  "dataset": "/Users/amyas/HK1 26-27/DATN/VN_Hybrid_Assistant_Project/data/rag_dataset_final.jsonl"
-}

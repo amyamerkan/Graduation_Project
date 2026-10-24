@@ -1,5 +1,5 @@
 {
-  "cases": 11,
+  "cases": 26,
   "route_accuracy": 1.0,
   "domain_accuracy": 1.0,
   "joint_accuracy": 1.0,
@@ -8,32 +8,32 @@
       "precision": 1.0,
       "recall": 1.0,
       "f1-score": 1.0,
-      "support": 3.0
+      "support": 6.0
     },
     "kg": {
       "precision": 1.0,
       "recall": 1.0,
       "f1-score": 1.0,
-      "support": 4.0
+      "support": 13.0
     },
     "rag": {
       "precision": 1.0,
       "recall": 1.0,
       "f1-score": 1.0,
-      "support": 4.0
+      "support": 7.0
     },
     "accuracy": 1.0,
     "macro avg": {
       "precision": 1.0,
       "recall": 1.0,
       "f1-score": 1.0,
-      "support": 11.0
+      "support": 26.0
     },
     "weighted avg": {
       "precision": 1.0,
       "recall": 1.0,
       "f1-score": 1.0,
-      "support": 11.0
+      "support": 26.0
     }
   },
   "domain_metrics": {
@@ -41,43 +41,31 @@
       "precision": 1.0,
       "recall": 1.0,
       "f1-score": 1.0,
-      "support": 3.0
-    },
-    "heritage": {
-      "precision": 1.0,
-      "recall": 1.0,
-      "f1-score": 1.0,
-      "support": 3.0
-    },
-    "law": {
-      "precision": 1.0,
-      "recall": 1.0,
-      "f1-score": 1.0,
-      "support": 2.0
+      "support": 12.0
     },
     "tourism": {
       "precision": 1.0,
       "recall": 1.0,
       "f1-score": 1.0,
-      "support": 3.0
+      "support": 14.0
     },
     "accuracy": 1.0,
     "macro avg": {
       "precision": 1.0,
       "recall": 1.0,
       "f1-score": 1.0,
-      "support": 11.0
+      "support": 26.0
     },
     "weighted avg": {
       "precision": 1.0,
       "recall": 1.0,
       "f1-score": 1.0,
-      "support": 11.0
+      "support": 26.0
     }
   },
   "details": [
     {
-      "question": "Xã có mã 31261 tên gì",
+      "question": "Mã 00070 là đơn vị nào?",
       "route": "kg",
       "domain": "administration",
       "route_confidence": 0.7,
@@ -87,7 +75,7 @@
       "expected_domain": "administration"
     },
     {
-      "question": "Phường cũ này nay sáp nhập vào đâu",
+      "question": "Đơn vị mã 22 thuộc danh mục ngày 01/07/2025 tên gì?",
       "route": "kg",
       "domain": "administration",
       "route_confidence": 0.7,
@@ -97,94 +85,249 @@
       "expected_domain": "administration"
     },
     {
-      "question": "Hồ sơ đăng ký tạm trú cần những giấy tờ nào",
-      "route": "rag",
+      "question": "Phường Hoàn Kiếm thuộc tỉnh thành nào?",
+      "route": "kg",
       "domain": "administration",
-      "route_confidence": 0.5633185302067257,
+      "route_confidence": 0.7,
       "domain_confidence": 0.7,
       "method": "tfidf_logistic_regression",
-      "expected_route": "rag",
+      "expected_route": "kg",
       "expected_domain": "administration"
     },
     {
-      "question": "Điều luật nào quy định và nội dung cụ thể ra sao",
+      "question": "Tỉnh Bình Dương sáp nhập vào đâu?",
+      "route": "kg",
+      "domain": "administration",
+      "route_confidence": 0.7,
+      "domain_confidence": 0.7,
+      "method": "tfidf_logistic_regression",
+      "expected_route": "kg",
+      "expected_domain": "administration"
+    },
+    {
+      "question": "Tỉnh Bà Rịa - Vũng Tàu sắp xếp như thế nào?",
       "route": "hybrid",
-      "domain": "law",
+      "domain": "administration",
       "route_confidence": 0.7,
       "domain_confidence": 0.7,
       "method": "tfidf_logistic_regression",
       "expected_route": "hybrid",
-      "expected_domain": "law"
+      "expected_domain": "administration"
     },
     {
-      "question": "Thời hạn xử lý hồ sơ theo pháp luật là bao lâu",
-      "route": "rag",
-      "domain": "law",
-      "route_confidence": 0.5351915953226267,
-      "domain_confidence": 0.7,
-      "method": "tfidf_logistic_regression",
-      "expected_route": "rag",
-      "expected_domain": "law"
-    },
-    {
-      "question": "Ca trù được xếp vào loại di sản nào",
+      "question": "Danh sách các phường xã ở tỉnh An Giang.",
       "route": "kg",
-      "domain": "heritage",
+      "domain": "administration",
       "route_confidence": 0.7,
       "domain_confidence": 0.7,
       "method": "tfidf_logistic_regression",
       "expected_route": "kg",
-      "expected_domain": "heritage"
+      "expected_domain": "administration"
     },
     {
-      "question": "Nguồn gốc và ý nghĩa của ca trù là gì",
+      "question": "Cho mình thông tin về bảng danh mục đơn vị hành chính Việt Nam.",
       "route": "rag",
-      "domain": "heritage",
+      "domain": "administration",
+      "route_confidence": 0.6000323272841073,
+      "domain_confidence": 0.7,
+      "method": "tfidf_logistic_regression",
+      "expected_route": "rag",
+      "expected_domain": "administration"
+    },
+    {
+      "question": "Giới thiệu cách tổ chức danh mục địa giới cũ và mới.",
+      "route": "rag",
+      "domain": "administration",
       "route_confidence": 0.7,
       "domain_confidence": 0.7,
       "method": "tfidf_logistic_regression",
       "expected_route": "rag",
-      "expected_domain": "heritage"
+      "expected_domain": "administration"
     },
     {
-      "question": "Mỹ Sơn nằm ở đâu và có giá trị văn hóa gì",
+      "question": "Mô tả dữ liệu đơn vị hành chính trong danh mục cũ.",
+      "route": "rag",
+      "domain": "administration",
+      "route_confidence": 0.7,
+      "domain_confidence": 0.7,
+      "method": "tfidf_logistic_regression",
+      "expected_route": "rag",
+      "expected_domain": "administration"
+    },
+    {
+      "question": "Mã 00070 ở ngày 30/06/2025 thuộc tỉnh nào và mô tả dữ liệu.",
       "route": "hybrid",
-      "domain": "heritage",
+      "domain": "administration",
       "route_confidence": 0.7,
       "domain_confidence": 0.7,
       "method": "tfidf_logistic_regression",
       "expected_route": "hybrid",
-      "expected_domain": "heritage"
+      "expected_domain": "administration"
     },
     {
-      "question": "Mùa nào thích hợp để du lịch Đà Nẵng",
+      "question": "Tỉnh Hà Giang sáp nhập vào đâu và giải thích thông tin liên quan.",
+      "route": "kg",
+      "domain": "administration",
+      "route_confidence": 0.7,
+      "domain_confidence": 0.7,
+      "method": "tfidf_logistic_regression",
+      "expected_route": "kg",
+      "expected_domain": "administration"
+    },
+    {
+      "question": "Mã số 79 là đơn vị nào?",
+      "route": "kg",
+      "domain": "administration",
+      "route_confidence": 0.7,
+      "domain_confidence": 0.7,
+      "method": "tfidf_logistic_regression",
+      "expected_route": "kg",
+      "expected_domain": "administration"
+    },
+    {
+      "question": "Hồ Hoàn Kiếm ở đâu?",
+      "route": "kg",
+      "domain": "tourism",
+      "route_confidence": 0.7,
+      "domain_confidence": 0.7,
+      "method": "tfidf_logistic_regression",
+      "expected_route": "kg",
+      "expected_domain": "tourism"
+    },
+    {
+      "question": "Văn Miếu - Quốc Tử Giám nằm ở đâu?",
+      "route": "kg",
+      "domain": "tourism",
+      "route_confidence": 0.7,
+      "domain_confidence": 0.7,
+      "method": "tfidf_logistic_regression",
+      "expected_route": "kg",
+      "expected_domain": "tourism"
+    },
+    {
+      "question": "Địa chỉ của Vườn thú Hà Nội là gì?",
+      "route": "kg",
+      "domain": "tourism",
+      "route_confidence": 0.7,
+      "domain_confidence": 0.7,
+      "method": "tfidf_logistic_regression",
+      "expected_route": "kg",
+      "expected_domain": "tourism"
+    },
+    {
+      "question": "Rừng ngập mặn Rú Chá thuộc tỉnh nào?",
+      "route": "kg",
+      "domain": "tourism",
+      "route_confidence": 0.7,
+      "domain_confidence": 0.7,
+      "method": "tfidf_logistic_regression",
+      "expected_route": "kg",
+      "expected_domain": "tourism"
+    },
+    {
+      "question": "Các điểm du lịch nào ở tỉnh Khánh Hòa?",
+      "route": "kg",
+      "domain": "tourism",
+      "route_confidence": 0.9248405911246433,
+      "domain_confidence": 0.7,
+      "method": "tfidf_logistic_regression",
+      "expected_route": "kg",
+      "expected_domain": "tourism"
+    },
+    {
+      "question": "Danh sách điểm tham quan tại Hà Nội.",
+      "route": "kg",
+      "domain": "tourism",
+      "route_confidence": 0.7,
+      "domain_confidence": 0.7,
+      "method": "tfidf_logistic_regression",
+      "expected_route": "kg",
+      "expected_domain": "tourism"
+    },
+    {
+      "question": "Giới thiệu hoạt động tham quan tại Hồ Hoàn Kiếm.",
       "route": "rag",
       "domain": "tourism",
-      "route_confidence": 0.47921656047870714,
+      "route_confidence": 0.7,
       "domain_confidence": 0.7,
       "method": "tfidf_logistic_regression",
       "expected_route": "rag",
       "expected_domain": "tourism"
     },
     {
-      "question": "Điểm tham quan này thuộc tỉnh nào",
-      "route": "kg",
+      "question": "Mô tả cảnh quan của Rừng ngập mặn Rú Chá.",
+      "route": "rag",
       "domain": "tourism",
       "route_confidence": 0.7,
       "domain_confidence": 0.7,
       "method": "tfidf_logistic_regression",
-      "expected_route": "kg",
+      "expected_route": "rag",
       "expected_domain": "tourism"
     },
     {
-      "question": "Đà Nẵng có điểm tham quan nào đáng chú ý",
+      "question": "Du lịch ở Vườn thú Hà Nội có gì đặc sắc?",
+      "route": "rag",
+      "domain": "tourism",
+      "route_confidence": 0.7,
+      "domain_confidence": 0.7,
+      "method": "tfidf_logistic_regression",
+      "expected_route": "rag",
+      "expected_domain": "tourism"
+    },
+    {
+      "question": "Gợi ý trải nghiệm tham quan Văn Miếu - Quốc Tử Giám.",
+      "route": "rag",
+      "domain": "tourism",
+      "route_confidence": 0.7,
+      "domain_confidence": 0.7,
+      "method": "tfidf_logistic_regression",
+      "expected_route": "rag",
+      "expected_domain": "tourism"
+    },
+    {
+      "question": "Hồ Hoàn Kiếm ở đâu và có gì đáng chú ý?",
       "route": "hybrid",
       "domain": "tourism",
-      "route_confidence": 0.5961751543740259,
+      "route_confidence": 0.7,
+      "domain_confidence": 0.7,
+      "method": "tfidf_logistic_regression",
+      "expected_route": "hybrid",
+      "expected_domain": "tourism"
+    },
+    {
+      "question": "Văn Miếu - Quốc Tử Giám thuộc tỉnh nào và giới thiệu về địa điểm này.",
+      "route": "hybrid",
+      "domain": "tourism",
+      "route_confidence": 0.7,
+      "domain_confidence": 0.7,
+      "method": "tfidf_logistic_regression",
+      "expected_route": "hybrid",
+      "expected_domain": "tourism"
+    },
+    {
+      "question": "Rừng ngập mặn Rú Chá nằm ở đâu và mô tả cảnh quan.",
+      "route": "hybrid",
+      "domain": "tourism",
+      "route_confidence": 0.7,
+      "domain_confidence": 0.7,
+      "method": "tfidf_logistic_regression",
+      "expected_route": "hybrid",
+      "expected_domain": "tourism"
+    },
+    {
+      "question": "Vườn thú Hà Nội ở đâu và tham quan như thế nào?",
+      "route": "hybrid",
+      "domain": "tourism",
+      "route_confidence": 0.7,
       "domain_confidence": 0.7,
       "method": "tfidf_logistic_regression",
       "expected_route": "hybrid",
       "expected_domain": "tourism"
     }
-  ]
+  ],
+  "model_without_rules": {
+    "route_accuracy": 0.8846153846153846,
+    "domain_accuracy": 0.9230769230769231,
+    "scope": "Raw Logistic Regression predictions before deterministic routing rules"
+  }
 }

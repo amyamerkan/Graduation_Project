@@ -1,0 +1,482 @@
+{
+  "created_at": "2026-10-24T17:05:47.118537+00:00",
+  "base_url": "http://127.0.0.1:8001",
+  "warmup": {
+    "status": "ready",
+    "llm": {
+      "backend": "transformers",
+      "model": "/Users/amyas/HK1 26-27/DATN/models/Qwen3-0.6B",
+      "device": "mps",
+      "ready": true,
+      "context_window": 4096,
+      "max_new_tokens": 384,
+      "error": null,
+      "generation_count": 0,
+      "last_latency_ms": null
+    },
+    "kg_ready": true,
+    "rag_ready": true,
+    "elapsed_ms": 10931.318
+  },
+  "cases": [
+    {
+      "question": "Ca trù là gì?",
+      "passed": true,
+      "response": {
+        "question": "Ca trù là gì?",
+        "classification": {
+          "question": "Ca trù là gì?",
+          "route": "kg",
+          "domain": "tourism",
+          "route_confidence": 0.9387150133579857,
+          "domain_confidence": 0.7,
+          "method": "tfidf_logistic_regression"
+        },
+        "plan": {
+          "route": "kg",
+          "kg": {
+            "query": "08_entity_facts",
+            "params": {
+              "keyword": "Ca trù",
+              "limit": 10
+            }
+          },
+          "rag": null,
+          "intent": "logical",
+          "constraints": {
+            "temporal": [],
+            "spatial": [],
+            "unsupported": []
+          },
+          "warnings": [],
+          "scope": "out_of_scope"
+        },
+        "effective_route": "kg",
+        "retrieval_status": "out_of_scope",
+        "status": "abstained",
+        "answer": "Mình hỗ trợ tra cứu địa giới hành chính cũ–mới và du lịch Việt Nam trong bộ dữ liệu. Câu hỏi này nằm ngoài phạm vi đó; bạn có thể chọn một câu hỏi gợi ý để bắt đầu.",
+        "citations": [],
+        "claims": [],
+        "cross_check": {
+          "status": "insufficient_evidence",
+          "supported": [],
+          "rejected": [],
+          "checked_count": 0,
+          "supported_count": 0,
+          "rejected_count": 0,
+          "verification_scope": "extractive_text_and_structured_kg_facts",
+          "reason": "out_of_scope"
+        },
+        "warnings": [
+          "out_of_scope"
+        ],
+        "llm": {
+          "backend": "transformers",
+          "model": "/Users/amyas/HK1 26-27/DATN/models/Qwen3-0.6B",
+          "device": "mps",
+          "ready": true,
+          "context_window": 4096,
+          "max_new_tokens": 384,
+          "error": null,
+          "generation_count": 0,
+          "last_latency_ms": null
+        },
+        "timings_ms": {
+          "question_processing": 10.086,
+          "generation": 0.0,
+          "kg_refresh": 0.0,
+          "cross_check": 0.0,
+          "total": 10.088
+        },
+        "original_question": "Ca trù là gì?",
+        "context_resolution": {
+          "question": "Ca trù là gì?",
+          "resolved": false,
+          "needs_context": false
+        },
+        "retrieval_mode": "full_faiss"
+      }
+    },
+    {
+      "question": "Hồ Gươm ở đâu?",
+      "passed": true,
+      "response": {
+        "question": "Hồ Gươm ở đâu?",
+        "classification": {
+          "question": "Hồ Gươm ở đâu?",
+          "route": "kg",
+          "domain": "tourism",
+          "route_confidence": 0.7,
+          "domain_confidence": 0.7,
+          "method": "tfidf_logistic_regression"
+        },
+        "plan": {
+          "route": "kg",
+          "kg": {
+            "query": "08_entity_facts",
+            "params": {
+              "keyword": "Hồ Hoàn Kiếm",
+              "limit": 10
+            }
+          },
+          "rag": null,
+          "intent": "logical",
+          "constraints": {
+            "temporal": [],
+            "spatial": [],
+            "unsupported": []
+          },
+          "warnings": [],
+          "scope": "supported"
+        },
+        "effective_route": "kg",
+        "retrieval_status": "ready",
+        "status": "answered",
+        "answer": "Theo các minh chứng tìm được:\nTên thực thể: Hồ Hoàn Kiếm. Địa chỉ được nguồn ghi nhận của Hồ Hoàn Kiếm: Hồ Hoàn Kiếm còn được gọi là Hồ Gươm là một hồ nước ngọt tự nhiên, Hoàn Kiếm, Quận Hoàn Kiếm, Thành phố Hà Nội. Tỉnh/thành phố trực thuộc của Hồ Hoàn Kiếm: Thành phố Hà Nội. Loại thực thể của Hồ Hoàn Kiếm: địa điểm du lịch. [1]\n\nNguồn minh chứng:\n[1] Hồ Hoàn Kiếm — https://csdl.vietnamtourism.gov.vn/dest/?item=53",
+        "citations": [
+          {
+            "number": 1,
+            "evidence_id": "E01",
+            "kind": "kg",
+            "title": "Hồ Hoàn Kiếm",
+            "source": "Cơ sở dữ liệu ngành Du lịch — TITC",
+            "source_url": "https://csdl.vietnamtourism.gov.vn/dest/?item=53",
+            "source_record_ids": [
+              "tourism_place_490731a382b43104"
+            ],
+            "source_verified": false
+          }
+        ],
+        "claims": [
+          {
+            "claim_id": "E01-C01",
+            "mode": "fact",
+            "text": "Tên thực thể: Hồ Hoàn Kiếm. Địa chỉ được nguồn ghi nhận của Hồ Hoàn Kiếm: Hồ Hoàn Kiếm còn được gọi là Hồ Gươm là một hồ nước ngọt tự nhiên, Hoàn Kiếm, Quận Hoàn Kiếm, Thành phố Hà Nội. Tỉnh/thành phố trực thuộc của Hồ Hoàn Kiếm: Thành phố Hà Nội. Loại thực thể của Hồ Hoàn Kiếm: địa điểm du lịch.",
+            "evidence_ids": [
+              "E01"
+            ],
+            "fields": [
+              "name",
+              "address",
+              "provinceName",
+              "type"
+            ],
+            "fact_checks": [
+              {
+                "evidence_id": "E01",
+                "field": "name",
+                "value": "Hồ Hoàn Kiếm"
+              },
+              {
+                "evidence_id": "E01",
+                "field": "address",
+                "value": "Hồ Hoàn Kiếm còn được gọi là Hồ Gươm là một hồ nước ngọt tự nhiên, Hoàn Kiếm, Quận Hoàn Kiếm, Thành phố Hà Nội"
+              },
+              {
+                "evidence_id": "E01",
+                "field": "provinceName",
+                "value": "Thành phố Hà Nội"
+              },
+              {
+                "evidence_id": "E01",
+                "field": "type",
+                "value": "https://w3id.org/vn-assistant/ontology#TourismPlace"
+              }
+            ],
+            "verification": "exact_kg_fact_match",
+            "source_verified": false
+          }
+        ],
+        "cross_check": {
+          "status": "supported",
+          "supported": [
+            {
+              "claim_id": "E01-C01",
+              "mode": "fact",
+              "text": "Tên thực thể: Hồ Hoàn Kiếm. Địa chỉ được nguồn ghi nhận của Hồ Hoàn Kiếm: Hồ Hoàn Kiếm còn được gọi là Hồ Gươm là một hồ nước ngọt tự nhiên, Hoàn Kiếm, Quận Hoàn Kiếm, Thành phố Hà Nội. Tỉnh/thành phố trực thuộc của Hồ Hoàn Kiếm: Thành phố Hà Nội. Loại thực thể của Hồ Hoàn Kiếm: địa điểm du lịch.",
+              "evidence_ids": [
+                "E01"
+              ],
+              "fields": [
+                "name",
+                "address",
+                "provinceName",
+                "type"
+              ],
+              "fact_checks": [
+                {
+                  "evidence_id": "E01",
+                  "field": "name",
+                  "value": "Hồ Hoàn Kiếm"
+                },
+                {
+                  "evidence_id": "E01",
+                  "field": "address",
+                  "value": "Hồ Hoàn Kiếm còn được gọi là Hồ Gươm là một hồ nước ngọt tự nhiên, Hoàn Kiếm, Quận Hoàn Kiếm, Thành phố Hà Nội"
+                },
+                {
+                  "evidence_id": "E01",
+                  "field": "provinceName",
+                  "value": "Thành phố Hà Nội"
+                },
+                {
+                  "evidence_id": "E01",
+                  "field": "type",
+                  "value": "https://w3id.org/vn-assistant/ontology#TourismPlace"
+                }
+              ],
+              "verification": "exact_kg_fact_match",
+              "source_verified": false
+            }
+          ],
+          "rejected": [],
+          "checked_count": 1,
+          "supported_count": 1,
+          "rejected_count": 0,
+          "verification_scope": "extractive_text_and_structured_kg_facts",
+          "constraints_checked": false,
+          "kg_rechecked": true
+        },
+        "warnings": [],
+        "llm": {
+          "backend": "transformers",
+          "model": "/Users/amyas/HK1 26-27/DATN/models/Qwen3-0.6B",
+          "device": "mps",
+          "ready": true,
+          "context_window": 4096,
+          "max_new_tokens": 384,
+          "error": null,
+          "generation_count": 1,
+          "last_latency_ms": 606.19
+        },
+        "timings_ms": {
+          "question_processing": 61.203,
+          "generation": 606.89,
+          "kg_refresh": 20.073,
+          "cross_check": 0.045,
+          "total": 688.515
+        },
+        "original_question": "Hồ Gươm ở đâu?",
+        "context_resolution": {
+          "question": "Hồ Gươm ở đâu?",
+          "resolved": false,
+          "needs_context": false
+        },
+        "retrieval_mode": "full_faiss"
+      }
+    },
+    {
+      "question": "Ngày 24/10/2026, mã 07294 là đơn vị nào?",
+      "passed": true,
+      "response": {
+        "question": "Ngày 24/10/2026, mã 07294 là đơn vị nào?",
+        "classification": {
+          "question": "Ngày 24/10/2026, mã 07294 là đơn vị nào?",
+          "route": "kg",
+          "domain": "administration",
+          "route_confidence": 0.7,
+          "domain_confidence": 0.7,
+          "method": "tfidf_logistic_regression"
+        },
+        "plan": {
+          "route": "kg",
+          "kg": {
+            "query": "09_unit_at_time",
+            "params": {
+              "code": "07294",
+              "as_of": "2026-10-24",
+              "province": ""
+            }
+          },
+          "rag": null,
+          "intent": "logical",
+          "constraints": {
+            "temporal": [
+              "24/10/2026"
+            ],
+            "spatial": [],
+            "unsupported": []
+          },
+          "warnings": [],
+          "scope": "supported"
+        },
+        "effective_route": "kg",
+        "retrieval_status": "ready",
+        "status": "answered",
+        "answer": "Theo các minh chứng tìm được:\nTên thực thể: Phường Bố Hạ. Mã của Phường Bố Hạ: 07294. Ngày chụp danh mục của Phường Bố Hạ: 2026-10-24. Tỉnh/thành phố trực thuộc của Phường Bố Hạ: Thành phố Bắc Ninh. Loại thực thể của Phường Bố Hạ: đơn vị hành chính cấp xã. [1]\n\nNguồn minh chứng:\n[1] Phường Bố Hạ — https://danhmuchanhchinh.nso.gov.vn/Doi_Chieu_Moi.aspx",
+        "citations": [
+          {
+            "number": 1,
+            "evidence_id": "E01",
+            "kind": "kg",
+            "title": "Phường Bố Hạ",
+            "source": "Cục Thống kê — danh mục ĐVHC",
+            "source_url": "https://danhmuchanhchinh.nso.gov.vn/Doi_Chieu_Moi.aspx",
+            "source_record_ids": [
+              "administrative_snapshot_62aea57163fa1b11"
+            ],
+            "source_verified": false
+          }
+        ],
+        "claims": [
+          {
+            "claim_id": "E01-C01",
+            "mode": "fact",
+            "text": "Tên thực thể: Phường Bố Hạ. Mã của Phường Bố Hạ: 07294. Ngày chụp danh mục của Phường Bố Hạ: 2026-10-24. Tỉnh/thành phố trực thuộc của Phường Bố Hạ: Thành phố Bắc Ninh. Loại thực thể của Phường Bố Hạ: đơn vị hành chính cấp xã.",
+            "evidence_ids": [
+              "E01"
+            ],
+            "fields": [
+              "name",
+              "code",
+              "snapshotDate",
+              "provinceName",
+              "type"
+            ],
+            "fact_checks": [
+              {
+                "evidence_id": "E01",
+                "field": "name",
+                "value": "Phường Bố Hạ"
+              },
+              {
+                "evidence_id": "E01",
+                "field": "code",
+                "value": "07294"
+              },
+              {
+                "evidence_id": "E01",
+                "field": "snapshotDate",
+                "value": "2026-10-24"
+              },
+              {
+                "evidence_id": "E01",
+                "field": "provinceName",
+                "value": "Thành phố Bắc Ninh"
+              },
+              {
+                "evidence_id": "E01",
+                "field": "type",
+                "value": "https://w3id.org/vn-assistant/ontology#Ward"
+              }
+            ],
+            "verification": "exact_kg_fact_match",
+            "source_verified": false
+          }
+        ],
+        "cross_check": {
+          "status": "supported",
+          "supported": [
+            {
+              "claim_id": "E01-C01",
+              "mode": "fact",
+              "text": "Tên thực thể: Phường Bố Hạ. Mã của Phường Bố Hạ: 07294. Ngày chụp danh mục của Phường Bố Hạ: 2026-10-24. Tỉnh/thành phố trực thuộc của Phường Bố Hạ: Thành phố Bắc Ninh. Loại thực thể của Phường Bố Hạ: đơn vị hành chính cấp xã.",
+              "evidence_ids": [
+                "E01"
+              ],
+              "fields": [
+                "name",
+                "code",
+                "snapshotDate",
+                "provinceName",
+                "type"
+              ],
+              "fact_checks": [
+                {
+                  "evidence_id": "E01",
+                  "field": "name",
+                  "value": "Phường Bố Hạ"
+                },
+                {
+                  "evidence_id": "E01",
+                  "field": "code",
+                  "value": "07294"
+                },
+                {
+                  "evidence_id": "E01",
+                  "field": "snapshotDate",
+                  "value": "2026-10-24"
+                },
+                {
+                  "evidence_id": "E01",
+                  "field": "provinceName",
+                  "value": "Thành phố Bắc Ninh"
+                },
+                {
+                  "evidence_id": "E01",
+                  "field": "type",
+                  "value": "https://w3id.org/vn-assistant/ontology#Ward"
+                }
+              ],
+              "verification": "exact_kg_fact_match",
+              "source_verified": false
+            }
+          ],
+          "rejected": [],
+          "checked_count": 1,
+          "supported_count": 1,
+          "rejected_count": 0,
+          "verification_scope": "extractive_text_and_structured_kg_facts",
+          "constraints_checked": true,
+          "kg_rechecked": true
+        },
+        "warnings": [],
+        "llm": {
+          "backend": "transformers",
+          "model": "/Users/amyas/HK1 26-27/DATN/models/Qwen3-0.6B",
+          "device": "mps",
+          "ready": true,
+          "context_window": 4096,
+          "max_new_tokens": 384,
+          "error": null,
+          "generation_count": 2,
+          "last_latency_ms": 493.29
+        },
+        "timings_ms": {
+          "question_processing": 29.52,
+          "generation": 493.478,
+          "kg_refresh": 1.738,
+          "cross_check": 0.043,
+          "total": 524.924
+        },
+        "original_question": "Ngày 24/10/2026, mã 07294 là đơn vị nào?",
+        "context_resolution": {
+          "question": "Ngày 24/10/2026, mã 07294 là đơn vị nào?",
+          "resolved": false,
+          "needs_context": false
+        },
+        "retrieval_mode": "full_faiss"
+      }
+    }
+  ],
+  "health": {
+    "status": "ok",
+    "router_ready": true,
+    "kg_ready": true,
+    "faiss_ready": true,
+    "retrieval_mode": "full_faiss",
+    "artifacts_present": {
+      "router": true,
+      "kg": true,
+      "faiss": true
+    },
+    "llm": {
+      "backend": "transformers",
+      "model": "/Users/amyas/HK1 26-27/DATN/models/Qwen3-0.6B",
+      "device": "mps",
+      "ready": true,
+      "context_window": 4096,
+      "max_new_tokens": 384,
+      "error": null,
+      "generation_count": 2,
+      "last_latency_ms": 493.29
+    },
+    "capabilities": {
+      "unit_at_date": true,
+      "unit_in_province_at_date": true,
+      "geometry_distance": false,
+      "citation_verification": "evidence_match"
+    }
+  },
+  "passed": true
+}
