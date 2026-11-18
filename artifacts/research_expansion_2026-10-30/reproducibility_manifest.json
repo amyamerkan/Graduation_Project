@@ -1,0 +1,18 @@
+{
+  "packages": {
+    "numpy": "2.5.3",
+    "scikit-learn": "1.9.1",
+    "faiss-cpu": "1.15.1",
+    "sentence-transformers": "5.7.0",
+    "vietnam-provinces": "2026.9.0"
+  },
+  "git_head": "d3844c9b9ceb411d4b3f7af7aa6553a1a8d9dd7b",
+  "code_state": "working tree includes uncommitted changes; retain script hashes with results",
+  "dataset_sha256": "c2a1c9fc5cded0dbf5e66bf91dfdec99f3140e596006fd61c9873301411d4bca",
+  "script_sha256": {
+    "collect_research_expansion.py": "f649d30a92d4e87f448b738d24c88993129f5edae21d2f34412709a0ca4729d0",
+    "finalize_research_corpus.py": "cbd028be852622e6c02eed3cc9bcf11eacea8754dd0578155065ed3b92824805",
+    "run_research_experiments.py": "9d397f5c7856c3681b0f504f4913dfba83ccd76c8216222c3fca99ac2f6c3cd5",
+    "write_research_report.py": "129d70f47c3da69c6a10e9eb38f99e066fecd4cd9ec737164df959d87ffd959e"
+  }
+}

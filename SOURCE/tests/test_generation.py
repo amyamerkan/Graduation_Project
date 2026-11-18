@@ -19,11 +19,15 @@ def fact(name="Phường A", code="00070", uri="urn:unit:a"):
     }
 
 
-def processed(kg=None, rag=None, query="03_unit_by_code", status="ready", unsupported=False):
+def processed(kg=None, rag=None, query="08_entity_facts", status="ready", unsupported=False):
+    # Generic generation tests must still exercise LLM selection. Code lookups
+    # use a separate deterministic path, covered explicitly below and in the
+    # administrative-code regression suite.
+    is_code = query in {"03_unit_by_code", "09_unit_at_time"}
     return {
-        "question": "Đơn vị có mã 00070 là gì?",
+        "question": "Đơn vị có mã 00070 là gì?" if is_code else "Thông tin về Phường A",
         "classification": {"route": "kg", "domain": "administration"},
-        "plan": {"kg": {"query": query, "params": {"code": "00070"}} if query else None,
+        "plan": {"kg": {"query": query, "params": {"code": "00070"} if is_code else {"keyword": "Phường A"}} if query else None,
                  "constraints": {"unsupported": unsupported}},
         "kg_results": kg or [],
         "rag_results": rag or [],
@@ -85,7 +89,7 @@ def test_answer_selects_server_claim_requeries_and_renders_internal_provenance()
     assert result["claims"][0]["verification"] == "exact_kg_fact_match"
     assert result["cross_check"]["supported_count"] == 1
     assert processor.calls == [("question", 3)]
-    assert processor.kg_service.calls == [("03_unit_by_code", {"code": "00070"})]
+    assert processor.kg_service.calls == [("08_entity_facts", {"keyword": "Phường A"})]
     assert len(generator.calls) == 1
     assert all(value >= 0 for value in result["timings_ms"].values())
 
@@ -255,7 +259,7 @@ def test_kg_newly_appearing_after_rag_fallback_abstains():
 
 
 def test_missing_kg_code_cannot_answer_using_generic_rag():
-    processor = FakeProcessor(processed(rag=[rag()]))
+    processor = FakeProcessor(processed(rag=[rag()], query="03_unit_by_code"))
     generator = FakeGenerator()
     result = AnswerService(processor, generator).answer("question")
     assert result["status"] == "abstained"
@@ -310,13 +314,18 @@ def test_multiple_rdf_types_of_same_uri_do_not_trigger_homonym_warning():
     assert "ambiguous_entity" not in result["warnings"]
 
 
-def test_existing_code_requires_selected_verified_code_fact():
-    processor = FakeProcessor(processed(kg=[fact()], rag=[rag()]))
+def test_existing_code_is_answered_without_model_selecting_unrelated_rag():
+    row = {**fact(), "provinceName": "Thành phố Hà Nội", "snapshotDate": "2026-10-24"}
+    processor = FakeProcessor(processed(kg=[row], rag=[rag()], query="03_unit_by_code"))
     generator = FakeGenerator('{"claim_ids":["E02-C01"]}')
     result = AnswerService(processor, generator).answer("question")
-    assert result["status"] == "abstained"
-    assert result["cross_check"]["reason"] == "missing_requested_fact(code)"
-    assert result["claims"] == result["citations"] == []
+    assert result["status"] == "answered"
+    assert result["generation_mode"] == "structured_kg"
+    assert result["cross_check"]["question_constraints_checked"] is True
+    assert "Mã hành chính 00070 là Phường A, thuộc Thành phố Hà Nội." in result["answer"]
+    assert len(result["claims"]) == len(result["citations"]) == 1
+    assert result["citations"][0]["kind"] == "kg"
+    assert generator.calls == []
 
 
 def test_explicit_heritage_type_request_is_partial_when_only_rag_selected():

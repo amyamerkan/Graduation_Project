@@ -3,21 +3,39 @@ from __future__ import annotations
 import re
 
 from .normalization import clean_text
+from .administrative_codes import recognize_administrative_code, fold_query
 
 
 def resolve_question(question: str, history: list[dict]) -> dict:
     question = clean_text(question)
-    reference = re.compile(r"\b(?:đơn vị đó|phường đó|xã đó|mã đó|nơi đó|ở đó|di sản đó|địa điểm đó|nó)\b", re.I)
-    short = question.casefold().strip(" ?.!") in {"ở đâu", "thuộc tỉnh nào", "có giá trị gì", "còn lịch sử thì sao"}
-    if not reference.search(question) and not short:
+    if recognize_administrative_code(question).status != "none":
         return {"question": question, "resolved": False, "needs_context": False}
-    previous = next((clean_text(item.get("content")) for item in reversed(history) if item.get("role") == "user"), "")
+    reference = re.compile(r"\b(?:don vi do|phuong do|xa do|ma do|noi do|o do|di san do|dia diem do|no)\b")
+    short = fold_query(question).strip(" ?.!") in {"o dau", "thuoc tinh nao", "co gia tri gi", "con lich su thi sao"}
+    if not reference.search(fold_query(question)) and not short:
+        return {"question": question, "resolved": False, "needs_context": False}
+    previous_index = next((index for index in range(len(history) - 1, -1, -1) if history[index].get("role") == "user"), None)
+    previous = clean_text(history[previous_index].get("content")) if previous_index is not None else ""
     if not previous:
         return {"question": question, "resolved": False, "needs_context": True}
-    code = re.search(r"\bmã(?:\s+(?:số|hành chính))?\s*[:#]?\s*(\d{2,6})\b", previous, re.I)
+    # Resolve a chain of user follow-ups without borrowing any entity or code
+    # from assistant answers. Stop at an unresolved/ambiguous user turn.
+    prior_resolution = resolve_question(previous, history[:previous_index])
+    if prior_resolution["needs_context"]:
+        return {"question": question, "resolved": False, "needs_context": True}
+    previous = prior_resolution["question"]
+    code = recognize_administrative_code(previous)
     quoted = re.search(r'[“"]([^”"]+)[”"]', previous)
-    if code:
-        topic = "đơn vị có mã " + code.group(1)
+    if code.status == "clarify":
+        return {"question": question, "resolved": False, "needs_context": True}
+    if code.code:
+        topic = "đơn vị có mã " + code.code
+        from .router import _dated_unit_plan, _extract_constraints
+        if _extract_constraints(previous)["temporal"] and not _extract_constraints(question)["temporal"]:
+            dated = _dated_unit_plan(previous, code.code)
+            if not dated or not dated["params"].get("as_of"):
+                return {"question": question, "resolved": False, "needs_context": True}
+            topic += " ngày " + dated["params"]["as_of"]
     elif quoted:
         topic = quoted.group(1)
     else:
@@ -26,5 +44,8 @@ def resolve_question(question: str, history: list[dict]) -> dict:
         topic = _extract_entity_keyword(previous)
     if not topic or len(topic) > 120:
         return {"question": question, "resolved": False, "needs_context": True}
-    resolved = f"{topic} {question}" if short else reference.sub(lambda _: topic, question)
+    resolved = f"{topic} {question}" if short else question
+    if not short:
+        for match in reversed(list(reference.finditer(fold_query(question)))):
+            resolved = resolved[:match.start()] + topic + resolved[match.end():]
     return {"question": resolved, "resolved": True, "needs_context": False}

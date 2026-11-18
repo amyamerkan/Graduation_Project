@@ -1,0 +1,40 @@
+{
+  "backend": "transformer",
+  "production_ready": true,
+  "embedding": {
+    "model_name": "intfloat/multilingual-e5-base",
+    "device": "mps",
+    "batch_size": 16,
+    "query_prefix": "query: ",
+    "passage_prefix": "passage: ",
+    "expand_terms": true
+  },
+  "metric": "cosine_via_normalized_inner_product",
+  "documents": 38709,
+  "vectors": 40206,
+  "dimension": 768,
+  "chunks_by_domain": {
+    "administration": 38169,
+    "tourism": 2037
+  },
+  "chunk_size": 900,
+  "overlap": 150,
+  "reused_vectors": 33169,
+  "encoded_vectors": 7037,
+  "build_signature": {
+    "dataset": "/Users/amyas/HK1 26-27/DATN/artifacts/research_expansion_2026-10-30/data/vector_seed_dataset.jsonl",
+    "dataset_sha256": "8cf2ea6598001e7991e46a1b491b8c1de383db8f05a52f4f3080ad3e207f4f05",
+    "seed_config_sha256": "352666d0f146f9ad9f12124f46ac0b716b826baf31b2840ab14947e79ef2d3b3",
+    "embedding": {
+      "model_name": "intfloat/multilingual-e5-base",
+      "device": "mps",
+      "batch_size": 16,
+      "query_prefix": "query: ",
+      "passage_prefix": "passage: ",
+      "expand_terms": true
+    },
+    "backend": "transformer",
+    "format_version": 3
+  },
+  "refresh_scope": "Identical passage text reuses vectors with saved encoder settings; changed/new passages re-encoded. No E5 fine-tuning."
+}

@@ -219,7 +219,7 @@ def chat(request: ChatRequest, service=Depends(get_answer_service)) -> dict[str,
     resolution = resolve_question(request.question, [turn.model_dump() for turn in request.history])
     if resolution["needs_context"]:
         return {"question": request.question, "status": "needs_clarification",
-                "answer": "Bạn muốn hỏi về đơn vị hoặc di sản nào? Hãy cho mình tên đầy đủ hoặc mã đơn vị nhé.",
+                "answer": "Bạn muốn hỏi về đơn vị hành chính hoặc điểm du lịch nào? Hãy cho mình tên đầy đủ hoặc mã đơn vị và ngày cần tra nhé.",
                 "claims": [], "citations": [], "warnings": ["missing_conversation_context"],
                 "cross_check": {"status": "insufficient_evidence", "supported_count": 0}, "timings_ms": {"total": 0},
                 "context_resolution": resolution}

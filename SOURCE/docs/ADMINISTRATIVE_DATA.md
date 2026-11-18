@@ -37,6 +37,8 @@ Số node `Province=68`, `Ward=6.642` trong KG là tổng hai snapshot mới, kh
 
 Quy tắc mã: tỉnh 2 chữ số, huyện 3, xã 5 ở collector. Giữ `"00070"` dưới dạng string; đổi sang số nguyên sẽ làm mất số 0 đầu. Trong KG, định danh có context snapshot; index mã có phiên bản để tránh gộp `legacy` với `current`.
 
+Bộ nhận diện câu hỏi trong `administrative_codes.py` hiểu cả “00008 thuộc địa phương nào”, “mã địa phương 00008…” và câu không dấu. Mã đứng riêng, nhiều mã hoặc loại mã khác như mã bưu chính/đặt phòng cần làm rõ. Ngày, số lượng, giá tiền và số trong tên “Phường 12”, “Quận 10” không được tự coi là mã. Bộ quy tắc chỉ chuẩn hóa câu hỏi để so khớp, không sửa văn bản nguồn.
+
 Cha/con phải tồn tại cùng snapshot. Cấu trúc lịch sử: xã → huyện → tỉnh; cấu trúc mới trong dữ liệu: xã → tỉnh. Builder báo lỗi nếu thiếu cha hoặc chuyển đổi tham chiếu một snapshot không có.
 
 ## 4. Chuyển đổi cũ–mới
@@ -73,8 +75,9 @@ Một liên kết có thể giữ cùng mã/tên qua hai snapshot; quan hệ đ�
 2. Câu hỏi có mã + một ngày hợp lệ định dạng ISO hoặc `dd/mm/yyyy` có thể tạo kế hoạch `09_unit_at_time`.
 3. Nếu node có `snapshotDate`, ngày yêu cầu phải **đúng ngày snapshot**, không tự coi snapshot có hiệu lực tới ngày kế tiếp hoặc tới hiện tại.
 4. Với dữ liệu không có snapshot nhưng có khoảng hiệu lực đủ căn cứ, query/checker có logic kiểm tra khoảng; corpus hiện tại chủ yếu dùng snapshot. Khoảng mở một đầu không tự chứng minh mọi ngày ngoài mốc đã biết.
-5. Điều kiện tỉnh nếu có phải khớp quan hệ KG; sau khi LLM chọn, CrossChecker kiểm tra lại ngày và tỉnh.
-6. Nếu không có bản ghi phù hợp, không dùng văn bản RAG để tự xác nhận điều kiện ngày bị thiếu.
+5. Điều kiện tỉnh nếu có phải khớp đầy đủ tên tỉnh sau chuẩn hóa dấu/tiền tố, không khớp chuỗi con. CrossChecker dựng lại hợp đồng từ câu hỏi và kiểm tra mã/ngày/tỉnh sau khi truy vấn lại KG.
+6. Cả tra mã hiện tại (`03`) và theo ngày/tỉnh (`09`) không dùng RAG fallback. Câu trả lời dựng trực tiếp từ bản ghi KG đã kiểm tra, không cần LLM. Thiếu bản ghi thì từ chối; nhiều bản ghi thì yêu cầu thêm ngày/tỉnh.
+7. Hội thoại tiếp nối dùng mã từ lượt user gần nhất, giữ ngày đã hỏi nếu lượt mới không thay ngày; không lấy mã do assistant bịa trong lịch sử. Mã mới được nêu rõ ưu tiên hơn lịch sử.
 
 Ví dụ hành vi kỳ vọng theo dữ liệu/test hiện tại:
 

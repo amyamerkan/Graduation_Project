@@ -1,0 +1,74 @@
+{
+  "created_at": "2026-10-30T18:00:20.590479+00:00",
+  "previous_documents": 31949,
+  "documents": 38993,
+  "new_distinct_legal_passages": 3351,
+  "punctuation_numbering_duplicates_removed": 2757,
+  "new_destinations": 372,
+  "new_dated_table_observations": 3321,
+  "table_observed_dates": [
+    "30/10/2026"
+  ],
+  "table_reference_dates": [
+    "31/10/2025"
+  ],
+  "domains": {
+    "administration": 38168,
+    "tourism": 825
+  },
+  "types": {
+    "administrative_snapshot": 17520,
+    "administrative_conversion": 10618,
+    "tourism_place": 825,
+    "administrative_source_document": 37,
+    "administrative_reference": 6642,
+    "administrative_legal_passage": 3351
+  },
+  "tourism_by_province": {
+    "01": 36,
+    "04": 22,
+    "08": 23,
+    "11": 32,
+    "12": 2,
+    "14": 2,
+    "15": 16,
+    "19": 35,
+    "20": 2,
+    "22": 15,
+    "24": 31,
+    "25": 35,
+    "31": 28,
+    "33": 33,
+    "37": 14,
+    "38": 38,
+    "40": 19,
+    "42": 17,
+    "44": 34,
+    "46": 35,
+    "48": 38,
+    "51": 21,
+    "52": 30,
+    "56": 37,
+    "66": 29,
+    "68": 37,
+    "75": 7,
+    "79": 35,
+    "80": 18,
+    "82": 15,
+    "86": 21,
+    "91": 32,
+    "92": 25,
+    "96": 11
+  },
+  "snapshot_dates": [
+    "2025-06-30",
+    "2025-07-01",
+    "2026-10-24"
+  ],
+  "preservation": true,
+  "dataset_sha256": "c2a1c9fc5cded0dbf5e66bf91dfdec99f3140e596006fd61c9873301411d4bca",
+  "raw_path": "/Users/amyas/HK1 26-27/DATN/data/raw/2026-10-30-research",
+  "active_data_unchanged": true,
+  "observed_field_changes": [],
+  "tourism_removed_source_sentences": 38
+}

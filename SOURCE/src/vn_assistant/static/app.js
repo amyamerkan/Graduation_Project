@@ -47,6 +47,10 @@ function persist() {
                 ...m,
                 result: {
                   status: m.result.status,
+                  generation_mode: m.result.generation_mode,
+                  cross_check: {
+                    question_constraints_checked: m.result.cross_check?.question_constraints_checked === true,
+                  },
                   citations: m.result.citations?.map(
                     ({ number, kind, title, source, source_url }) => ({
                       number,
@@ -207,7 +211,9 @@ function messageView(message) {
   const text = (message.content || "").split("\n\nNguồn minh chứng:")[0];
   article.append(make("div", "answer-text", text));
   const labels = {
-    answered: "Đã đối chiếu minh chứng",
+    answered: result.generation_mode === "structured_kg" && result.cross_check?.question_constraints_checked === true
+      ? "Đã kiểm tra mã và điều kiện tra cứu"
+      : "Có minh chứng trích dẫn",
     partial: "Có thông tin cần làm rõ",
     abstained: "Chưa đủ căn cứ để kết luận",
     needs_clarification: "Cần thêm thông tin",

@@ -1,0 +1,678 @@
+<!doctype html>
+<html>
+<head>
+
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">	
+		<meta name="copyright" content="TITC">
+		<meta name="author" content="TITC">
+		<meta name="robots" content="index,follow"/>
+		<meta name="revisit-after" content="days">
+		<meta http-equiv="content-language" content="vi">
+		<meta name="geo.region" content="VN" />
+		<meta name="geo.placename" content="Hanoi" />
+		<meta name="geo.position" content="21.023897;105.844719" />
+		<meta name="ICBM" content="21.023897, 105.844719" />
+		<meta name="revisit-after" content="days">
+
+				<!-- HTML Meta Tags -->
+		<title>Cơ sở dữ liệu ngành Du lịch - csdl.vietnamtourism.gov.vn</title>
+		
+		<meta name="description" content="Cơ sở dữ liệu ngành Du lịch - csdl.vietnamtourism.gov.vn">
+		<meta name="keywords" content="Cơ sở dữ liệu ngành Du lịch, Di san, Ha Noi, Hanoi, Hue, Saigon, Ho Chi Minh, Danang, Da Nang, Hoi An, Quang Nam, Halong, Ha Long, Quang Ninh, Phong Nha - Ke Bang, Phu Quoc, Kien Giang, Mui Ne, Camau, Le hoi, thang, nam, Giao thong, di lai, khach san, nha hang, cong ty du lich, tour, dich vu, kham pha, Khách sạn ở Đà Nẵng, Khách sạn ở Khánh Hòa, Khách sạn ở Huế, Khách sạn ở Quảng Nam, Khách sạn ở Hà Nội, Khách sạn ở Quảng Ninh, Khách sạn ở Bình Thuận, Khach san, Nha nghi, Khach san tai Viet nam, Khach san tai Vietnam">
+		<link rel="canonical" href="https://csdl.vietnamtourism.gov.vn/" />
+		<link rel="publisher" href="https://csdl.vietnamtourism.gov.vn/"/>
+		<link rel="dns-prefetch" href="//www.google-analytics.com"/>
+		<link rel="amphtml" href="https://csdl.vietnamtourism.gov.vn/" />
+
+		<!-- Google / Search Engine Tags -->
+		<meta itemprop="name" content="Cơ sở dữ liệu ngành Du lịch - csdl.vietnamtourism.gov.vn">
+		<meta itemprop="description" content="Cơ sở dữ liệu ngành Du lịch - csdl.vietnamtourism.gov.vn">
+		<meta itemprop="image" content="https://csdl.vietnamtourism.gov.vn/web/templates/2018/image/logo_default.png">
+
+		<!-- Facebook Meta Tags -->
+
+
+
+
+
+		<meta property="og:url" content="https://csdl.vietnamtourism.gov.vn/">
+		<meta property="og:type" content="website">
+		<meta property="og:title" content="Cơ sở dữ liệu ngành Du lịch - csdl.vietnamtourism.gov.vn">
+		<meta property="og:description" content="Cơ sở dữ liệu ngành Du lịch - csdl.vietnamtourism.gov.vn">
+		<meta property="og:image" content="https://csdl.vietnamtourism.gov.vn/web/templates/2018/image/logo_default.png">
+
+		<!-- Twitter Meta Tags -->
+		<meta name="twitter:card" content="summary_large_image">
+		<meta name="twitter:title" content="Cơ sở dữ liệu ngành Du lịch - csdl.vietnamtourism.gov.vn">
+		<meta name="twitter:description" content="Cơ sở dữ liệu ngành Du lịch - csdl.vietnamtourism.gov.vn">
+		<meta name="twitter:image" content="https://csdl.vietnamtourism.gov.vn/web/templates/2018/image/logo_default.png">
+
+
+
+
+		
+		<meta name="dc.source" CONTENT="https://csdl.vietnamtourism.gov.vn/">
+
+		<meta name="dc.publisher" content="csdl.vietnamtourism.gov.vn" />
+		<meta name="dc.rights.copyright" content="csdl.vietnamtourism.gov.vn" />
+		<meta name="dc.creator.name" content="csdl.vietnamtourism.gov.vn" />
+		<meta name="dc.creator.email" content="httt@vietnamtourism.gov.vn" />
+		<meta name="dc.identifier" content="csdl.vietnamtourism.gov.vn" />
+		<meta name="dc.title" CONTENT="Cơ sở dữ liệu ngành Du lịch - csdl.vietnamtourism.gov.vn">
+		<meta name="dc.subject" CONTENT="Cơ sở dữ liệu ngành Du lịch - csdl.vietnamtourism.gov.vn">
+		<meta name="dc.keywords" CONTENT="Cơ sở dữ liệu ngành Du lịch, Di san, Ha Noi, Hanoi, Hue, Saigon, Ho Chi Minh, Danang, Da Nang, Hoi An, Quang Nam, Halong, Ha Long, Quang Ninh, Phong Nha - Ke Bang, Phu Quoc, Kien Giang, Mui Ne, Camau, Le hoi, thang, nam, Giao thong, di lai, khach san, nha hang, cong ty du lich, tour, dich vu, kham pha, Khách sạn ở Đà Nẵng, Khách sạn ở Khánh Hòa, Khách sạn ở Huế, Khách sạn ở Quảng Nam, Khách sạn ở Hà Nội, Khách sạn ở Quảng Ninh, Khách sạn ở Bình Thuận, Khach san, Nha nghi, Khach san tai Viet nam, Khach san tai Vietnam">
+		<meta name="dc.description" CONTENT="Website của Tổng cục Du lịch Việt Nam, Cập nhật tin tức về lĩnh vực văn hóa, du lịch, Giới thiệu về đất nước và con người Việt Nam, Danh sách khách sạn tại Việt Nam">
+		<link rel="Shortcut Icon" href="/web/templates/2025/2025/images/favicon.png" type="image/x-icon" />
+<link rel="stylesheet" type="text/css" href="/web/templates/2025/2025/css/4.0.0.0/bootstrap.min.css" />
+<link rel="stylesheet" type="text/css" href="/web/templates/2025/2025/css/ekko-lightbox.css" />
+<link rel="stylesheet" type="text/css" href="/web/templates/2025/2025/css/4.0.0.0/font-awesome.4.5.0.min.css" />
+<link rel="stylesheet" type="text/css" href="/web/templates/2025/2025/css/dropdown.css" />
+<link rel="stylesheet" type="text/css" href="/web/templates/2025/2025/css/dropdown.linear.css" />
+<link rel="stylesheet" type="text/css" href="/web/templates/2025/2025/css/styles.css" />
+<link rel="stylesheet" type="text/css" href="/web/templates/2025/2025/css/rrssb.css" />
+<link rel="stylesheet" type="text/css" href="/web/templates/2025/2025/css/ekko-lightbox.css" />
+<link rel="stylesheet" type="text/css" href="/web/templates/2025/2025/css/material-scrolltop.css" />
+
+</head>
+<script type="text/javascript">
+		var imgArr;
+</script>
+<body>	
+	<div class="container-fluid page-bg px-0 mx-0">
+		<header class="page-header menu2020">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-12 text-center">						
+						<img src="https://csdl.vietnamtourism.gov.vn/web/templates/2025/2025/image/tieude_1.png" class="img-fluid" alt="Cơ sở dữ liệu du lịch Việt Nam"/>
+					</div>
+				</div>				
+				<div class="row">
+					<div class="container">
+						<div class="col-md-12 col-sm-12">
+												<nav class="navbar navbar-expand-xl navbar-dark py-0 px-0 navbar-fixed-bottom  mt-md-3">							
+							<button class="navbar-toggler ml-lg-0" type="button" data-toggle="collapse" data-target="#top-menuid" aria-controls="top-menuid" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span>
+							</button>
+							<div class="collapse navbar-collapse" id="top-menuid" style="padding-top: 1px;">
+								<ul class="navbar-nav justify-content-center dropdown dropdown-linear  w-100">
+																	<li class="  pad0 nav-item " >
+																					<a href="/" class="nav-link" >Trang chủ</a>
+											
+									</li>
+																		<li class="  pad1 nav-item " >
+																					<a href="/nldl/news" class="nav-link" >Tin tức - Sự kiện</a>
+											
+									</li>
+																		<li class="  pad2 nav-item " >
+																					<a href="https://vietnamtourism.gov.vn/index.php/cat/2010" class="nav-link" >Văn bản pháp quy</a>
+											
+									</li>
+																		<li class="  pad3 nav-item " >
+																					<a href="https://vietnamtourism.gov.vn/index.php/cat/07" class="nav-link" >Hướng dẫn thủ tục</a>
+											
+									</li>
+									                        
+								</ul>
+							</div>
+						</nav>
+					</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="container-fluid px-0">
+						<div class="col-md-12 col-sm-12 px-0">														
+															<!-- Nav pills -->
+								<ul class="nav nav-pills justify-content-md-center">
+																	
+									<li class="active"><a href="#tab-54" data-toggle="tab" class="nav-link"><img src="https://csdl.vietnamtourism.gov.vn/uploads/images/01_3/icon/2022/white/ic-luutru.png" class="img-fluid" alt="Cơ sở lưu trú"/></a></li>
+																		
+									<li class=""><a href="#tab-55" data-toggle="tab" class="nav-link"><img src="https://csdl.vietnamtourism.gov.vn/uploads/images/01_3/icon/2022/white/ic-ctyluhanh.png" class="img-fluid" alt="Doanh nghiệp lữ hành"/></a></li>
+																		
+									<li class=""><a href="#tab-56" data-toggle="tab" class="nav-link"><img src="https://csdl.vietnamtourism.gov.vn/uploads/images/01_3/icon/2022/white/ic-huongdanvien.png" class="img-fluid" alt="Hướng dẫn viên"/></a></li>
+																		
+									<li class=""><a href="#tab-58" data-toggle="tab" class="nav-link"><img src="https://csdl.vietnamtourism.gov.vn/uploads/images/01_3/icon/2022/white/ic-nhahang.png" class="img-fluid" alt="Nhà hàng"/></a></li>
+																		
+									<li class=""><a href="#tab-57" data-toggle="tab" class="nav-link"><img src="https://csdl.vietnamtourism.gov.vn/uploads/images/01_3/icon/2022/white/ic-diemdulich.png" class="img-fluid" alt="Điểm đến"/></a></li>
+																		
+									<li class=""><a href="#tab-121" data-toggle="tab" class="nav-link"><img src="https://csdl.vietnamtourism.gov.vn/uploads/images/01_3/2026/ic-khudulich.png" class="img-fluid" alt="Khu du lịch"/></a></li>
+																		
+									<li class=""><a href="#tab-59" data-toggle="tab" class="nav-link"><img src="https://csdl.vietnamtourism.gov.vn/uploads/images/01_3/icon/2022/white/ic-muasam.png" class="img-fluid" alt="Điểm mua sắm"/></a></li>
+																		
+									<li class=""><a href="#tab-79" data-toggle="tab" class="nav-link"><img src="https://csdl.vietnamtourism.gov.vn/uploads/images/01_3/icon/2022/white/ic-vantai.png" class="img-fluid" alt="Vận tải khách du lịch"/></a></li>
+																		
+									<li class=""><a href="#tab-82" data-toggle="tab" class="nav-link"><img src="https://csdl.vietnamtourism.gov.vn/uploads/images/01_3/icon/2022/white/ic-giaitri.png" class="img-fluid" alt="Vui chơi giải trí"/></a></li>
+																		
+									<li class=""><a href="#tab-85" data-toggle="tab" class="nav-link"><img src="https://csdl.vietnamtourism.gov.vn/uploads/images/01_3/icon/2022/white/ic-thethao.png" class="img-fluid" alt="Thể thao"/></a></li>
+																		
+									<li class=""><a href="#tab-88" data-toggle="tab" class="nav-link"><img src="https://csdl.vietnamtourism.gov.vn/uploads/images/01_3/icon/2022/white/ic-suckhoe.png" class="img-fluid" alt="Chăm sóc sức khỏe"/></a></li>
+																		
+									<li class=""><a href="#tab-91" data-toggle="tab" class="nav-link"><img src="https://csdl.vietnamtourism.gov.vn/uploads/images/01_3/icon/2022/white/ic-hiephoi.png" class="img-fluid" alt="Hiệp hội"/></a></li>
+																		
+									<li class=""><a href="#tab-97" data-toggle="tab" class="nav-link"><img src="https://csdl.vietnamtourism.gov.vn/uploads/images/01_3/icon/2022/white/ic-daotao.png" class="img-fluid" alt="Cơ sở đào tạo"/></a></li>
+																		
+									<li class=""><a href="#tab-71" data-toggle="tab" class="nav-link"><img src="https://csdl.vietnamtourism.gov.vn/uploads/images/01_3/icon/2022/white/ic-nhanluc.png" class="img-fluid" alt="Nhân lực du lịch"/></a></li>
+																		
+									<li class=""><a href="#tab-61" data-toggle="tab" class="nav-link"><img src="https://csdl.vietnamtourism.gov.vn/uploads/images/01_3/icon/2022/white/ic-xuctien.png" class="img-fluid" alt="Xúc tiến du lịch"/></a></li>
+																	</ul>
+								<!-- Tab panes -->
+								<div class="tab-content well p-0" style="border: 0px;">
+																	<div class="tab-pane " id="tab-54">
+										<div class="container">
+											<div class="row">
+												<div class="col-12">
+																										<a href="https://csdl.vietnamtourism.gov.vn/index.php/cslt" class="nav-link dropdown-toggle padding-left-0">Cơ sở lưu trú</a>
+																									</div>
+											</div>
+										</div>
+																				<div class="ontainer-fluid" style="background: url('https://csdl.vietnamtourism.gov.vn/uploads/images/01_3/banner/2022/image-luutru.png') top left no-repeat; height: 140px; margin:0px;" style="">
+										</div>
+									</div>
+																		<div class="tab-pane " id="tab-55">
+										<div class="container">
+											<div class="row">
+												<div class="col-12">
+																										<a href="https://quanlyluhanh.vn/" class="nav-link dropdown-toggle padding-left-1">Doanh nghiệp lữ hành</a>
+																									</div>
+											</div>
+										</div>
+																				<div class="ontainer-fluid" style="background: url('https://csdl.vietnamtourism.gov.vn/uploads/images/01_3/banner/2022/image-luhanh.png') top left no-repeat; height: 140px; margin:0px;" style="">
+										</div>
+									</div>
+																		<div class="tab-pane " id="tab-56">
+										<div class="container">
+											<div class="row">
+												<div class="col-12">
+																										<a href="https://huongdanvien.vn/" class="nav-link dropdown-toggle padding-left-2">Hướng dẫn viên</a>
+																									</div>
+											</div>
+										</div>
+																				<div class="ontainer-fluid" style="background: url('https://csdl.vietnamtourism.gov.vn/uploads/images/01_3/banner/2022/image-huongdanvien.png') top left no-repeat; height: 140px; margin:0px;" style="">
+										</div>
+									</div>
+																		<div class="tab-pane " id="tab-58">
+										<div class="container">
+											<div class="row">
+												<div class="col-12">
+																										<a href="https://csdl.vietnamtourism.gov.vn/index.php/rest" class="nav-link dropdown-toggle padding-left-3">Nhà hàng</a>
+																									</div>
+											</div>
+										</div>
+																				<div class="ontainer-fluid" style="background: url('https://csdl.vietnamtourism.gov.vn/uploads/images/01_3/banner/2022/image-nhahang.png') top left no-repeat; height: 140px; margin:0px;" style="">
+										</div>
+									</div>
+																		<div class="tab-pane " id="tab-57">
+										<div class="container">
+											<div class="row">
+												<div class="col-12">
+																										<a href="https://csdl.vietnamtourism.gov.vn/index.php/dest" class="nav-link dropdown-toggle padding-left-4">Điểm đến</a>
+																									</div>
+											</div>
+										</div>
+																				<div class="ontainer-fluid" style="background: url('https://csdl.vietnamtourism.gov.vn/uploads/images/01_3/banner/2022/image-diemdulich.png') top left no-repeat; height: 140px; margin:0px;" style="">
+										</div>
+									</div>
+																		<div class="tab-pane " id="tab-121">
+										<div class="container">
+											<div class="row">
+												<div class="col-12">
+																										<a href="https://csdl.vietnamtourism.gov.vn/index.php/area" class="nav-link dropdown-toggle padding-left-5">Khu du lịch</a>
+																									</div>
+											</div>
+										</div>
+																				<div class="ontainer-fluid" style="background: url('https://csdl.vietnamtourism.gov.vn/uploads/images/01_3/banner/2022/image-diemdulich.png') top left no-repeat; height: 140px; margin:0px;" style="">
+										</div>
+									</div>
+																		<div class="tab-pane " id="tab-59">
+										<div class="container">
+											<div class="row">
+												<div class="col-12">
+																										<a href="https://csdl.vietnamtourism.gov.vn/index.php/shop" class="nav-link dropdown-toggle padding-left-6">Điểm mua sắm</a>
+																									</div>
+											</div>
+										</div>
+																				<div class="ontainer-fluid" style="background: url('https://csdl.vietnamtourism.gov.vn/uploads/images/01_3/banner/2022/image-muasam.png') top left no-repeat; height: 140px; margin:0px;" style="">
+										</div>
+									</div>
+																		<div class="tab-pane " id="tab-79">
+										<div class="container">
+											<div class="row">
+												<div class="col-12">
+																										<a href="https://csdl.vietnamtourism.gov.vn/index.php/vtkdl" class="nav-link dropdown-toggle padding-left-7">Vận tải khách du lịch</a>
+																									</div>
+											</div>
+										</div>
+																				<div class="ontainer-fluid" style="background: url('https://csdl.vietnamtourism.gov.vn/uploads/images/01_3/banner/2022/image-vantai.png') top left no-repeat; height: 140px; margin:0px;" style="">
+										</div>
+									</div>
+																		<div class="tab-pane " id="tab-82">
+										<div class="container">
+											<div class="row">
+												<div class="col-12">
+																										<a href="https://csdl.vietnamtourism.gov.vn/index.php/vcgt" class="nav-link dropdown-toggle padding-left-8">Vui chơi giải trí</a>
+																									</div>
+											</div>
+										</div>
+																				<div class="ontainer-fluid" style="background: url('https://csdl.vietnamtourism.gov.vn/uploads/images/01_3/banner/2022/image-giaitri.png') top left no-repeat; height: 140px; margin:0px;" style="">
+										</div>
+									</div>
+																		<div class="tab-pane " id="tab-85">
+										<div class="container">
+											<div class="row">
+												<div class="col-12">
+																										<a href="https://csdl.vietnamtourism.gov.vn/index.php/tt" class="nav-link dropdown-toggle padding-left-9">Thể thao</a>
+																									</div>
+											</div>
+										</div>
+																				<div class="ontainer-fluid" style="background: url('https://csdl.vietnamtourism.gov.vn/uploads/images/01_3/banner/2022/image-thethao.png') top left no-repeat; height: 140px; margin:0px;" style="">
+										</div>
+									</div>
+																		<div class="tab-pane " id="tab-88">
+										<div class="container">
+											<div class="row">
+												<div class="col-12">
+																										<a href="https://csdl.vietnamtourism.gov.vn/index.php/cssk" class="nav-link dropdown-toggle padding-left-10">Chăm sóc sức khỏe</a>
+																									</div>
+											</div>
+										</div>
+																				<div class="ontainer-fluid" style="background: url('https://csdl.vietnamtourism.gov.vn/uploads/images/01_3/banner/2022/image-suckhoe.png') top left no-repeat; height: 140px; margin:0px;" style="">
+										</div>
+									</div>
+																		<div class="tab-pane " id="tab-91">
+										<div class="container">
+											<div class="row">
+												<div class="col-12">
+																										<a href="https://csdl.vietnamtourism.gov.vn/index.php/hh" class="nav-link dropdown-toggle padding-left-11">Hiệp hội</a>
+																									</div>
+											</div>
+										</div>
+																				<div class="ontainer-fluid" style="background: url('https://csdl.vietnamtourism.gov.vn/uploads/images/01_3/banner/2022/image-hiephoi.png') top left no-repeat; height: 140px; margin:0px;" style="">
+										</div>
+									</div>
+																		<div class="tab-pane " id="tab-97">
+										<div class="container">
+											<div class="row">
+												<div class="col-12">
+																										<a href="https://csdl.vietnamtourism.gov.vn/index.php/csdt" class="nav-link dropdown-toggle padding-left-12">Cơ sở đào tạo</a>
+																									</div>
+											</div>
+										</div>
+																				<div class="ontainer-fluid" style="background: url('https://csdl.vietnamtourism.gov.vn/uploads/images/01_3/banner/2022/image-khoahoc.png') top left no-repeat; height: 140px; margin:0px;" style="">
+										</div>
+									</div>
+																		<div class="tab-pane " id="tab-71">
+										<div class="container">
+											<div class="row">
+												<div class="col-12">
+																										<a href="https://csdl.vietnamtourism.gov.vn/index.php/nldl" class="nav-link dropdown-toggle padding-left-13">Nhân lực du lịch</a>
+																									</div>
+											</div>
+										</div>
+																				<div class="ontainer-fluid" style="background: url('https://csdl.vietnamtourism.gov.vn/uploads/images/01_3/banner/2022/image-hiephoi.png') top left no-repeat; height: 140px; margin:0px;" style="">
+										</div>
+									</div>
+																		<div class="tab-pane " id="tab-61">
+										<div class="container">
+											<div class="row">
+												<div class="col-12">
+																										<a href="https://csdl.vietnamtourism.gov.vn/index.php/pro" class="nav-link dropdown-toggle padding-left-14">Xúc tiến du lịch</a>
+																									</div>
+											</div>
+										</div>
+																				<div class="ontainer-fluid" style="background: url('https://csdl.vietnamtourism.gov.vn/uploads/images/01_3/banner/2022/image-xuctien.png') top left no-repeat; height: 140px; margin:0px;" style="">
+										</div>
+									</div>
+																	</div>
+															
+													</div>
+					</div>
+				</div>
+			</div>
+		</header><main class="container-fluid px-0 mx-0 mt-3">
+    <form class="srcFrom" action="/hdv/" id="frmseach_doc" name="frmseach_doc" method="post" enctype="multipart/form-data" accept-charset="utf-8">
+		<input type="hidden" class="txt_csrfname" id="csrf_name" name="csrf_name" value="c5692b2d8114240f62d5eaf150f8839d">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4">                
+                <div class="card">
+                    <div class="card-body">
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">                         
+                                
+                                <span class="input-group-text" id="title1"><i class="fa fa-search" aria-hidden="true"></i></span>                                    
+                            </div>
+                            <input type="text" class="form-control" placeholder="Tên điểm du lịch" aria-label="Tên điểm du lịch" aria-describedby="title1" name="title" id="title" value="" data-url-name="dest">
+                        </div>
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="province1"><i class="fa fa-university" aria-hidden="true"></i></span>                                    
+                            </div>
+                            <select class="form-control" id="province" name="province" aria-describedby="province1" data-url-name="dest">
+                                <option selected="selected" value="">Tỉnh, thành phố</option>
+                                                                    <option value="01" >Thành phố Hà Nội</option>
+                                                                        <option value="79,77,74" >Thành phố Hồ Chí Minh</option>
+                                                                        <option value="48,49" >Thành phố Đà Nẵng</option>
+                                                                        <option value="31,30" >Thành phố Hải Phòng</option>
+                                                                        <option value="92,94,93" >Thành phố Cần Thơ</option>
+                                                                        <option value="91,89" >An Giang</option>
+                                                                        <option value="24,27" >Bắc Ninh</option>
+                                                                        <option value="96,95" >Cà Mau</option>
+                                                                        <option value="04" >Cao Bằng</option>
+                                                                        <option value="66,54" >Đắc Lắk</option>
+                                                                        <option value="75,70" >Đồng Nai</option>
+                                                                        <option value="82,87" >Đồng Tháp</option>
+                                                                        <option value="11" >Điện Biên</option>
+                                                                        <option value="52,64" >Gia Lai</option>
+                                                                        <option value="42" >Hà Tĩnh</option>
+                                                                        <option value="33,34" >Hưng Yên</option>
+                                                                        <option value="56,58" >Khánh Hoà</option>
+                                                                        <option value="12" >Lai Châu</option>
+                                                                        <option value="15,10" >Lào Cai</option>
+                                                                        <option value="20" >Lạng Sơn</option>
+                                                                        <option value="68,60,67" >Lâm Đồng</option>
+                                                                        <option value="40" >Nghệ An</option>
+                                                                        <option value="37,36,35" >Ninh Bình</option>
+                                                                        <option value="25,26,17" >Phú Thọ</option>
+                                                                        <option value="51,62" >Quảng Ngãi</option>
+                                                                        <option value="22" >Quảng Ninh</option>
+                                                                        <option value="44,45" >Quảng Trị</option>
+                                                                        <option value="14" >Sơn La</option>
+                                                                        <option value="80,72" >Tây Ninh</option>
+                                                                        <option value="19,06" >Thái Nguyên</option>
+                                                                        <option value="38" >Thanh Hoá</option>
+                                                                        <option value="46" >Thành phố Huế</option>
+                                                                        <option value="08,02" >Tuyên Quang</option>
+                                                                        <option value="86,84,83" >Vĩnh Long</option>
+                                                                </select>
+                        </div>
+                        <div class="form-group">
+                            <nav class="navbar navbar-expand-xl navbar-light  float-left flex-column px-0">
+                                <a class="navbar-brand" href="#" style="color: #495e96;font-weight: 600;font-size: 0.8rem" data-toggle="collapse" data-target="#collapsingRate">Đặc điểm&nbsp;&nbsp;<span class="d-inline d-xl-none"  style="color: #495e96;font-weight: 600;font-size: 1rem"><i class="fa fa-angle-double-down" aria-hidden="true"></i></span></a>
+                                <div class="navbar-collapse collapse" id="collapsingRate">
+                                    <ul class="no-ul-list navbar-nav">                                        
+                                                                                    <li class="nav-item">
+                                                <input id="type0" class="checkbox-custom checkBoxVal" name="type[]" type="checkbox" value="9"   data-url-name="dest">
+                                                <label for="type0" class="checkbox-custom-label">Du lịch văn hóa</label>
+                                            </li>
+                                                                                        <li class="nav-item">
+                                                <input id="type1" class="checkbox-custom checkBoxVal" name="type[]" type="checkbox" value="13"   data-url-name="dest">
+                                                <label for="type1" class="checkbox-custom-label">Di tích</label>
+                                            </li>
+                                                                                        <li class="nav-item">
+                                                <input id="type2" class="checkbox-custom checkBoxVal" name="type[]" type="checkbox" value="10"   data-url-name="dest">
+                                                <label for="type2" class="checkbox-custom-label">Du lịch tự nhiên</label>
+                                            </li>
+                                                                                        <li class="nav-item">
+                                                <input id="type3" class="checkbox-custom checkBoxVal" name="type[]" type="checkbox" value="14"   data-url-name="dest">
+                                                <label for="type3" class="checkbox-custom-label">Chùa, đình, đền, tháp, nhà thờ, lăng mộ</label>
+                                            </li>
+                                                                                        <li class="nav-item">
+                                                <input id="type4" class="checkbox-custom checkBoxVal" name="type[]" type="checkbox" value="11"   data-url-name="dest">
+                                                <label for="type4" class="checkbox-custom-label">Du lịch biển</label>
+                                            </li>
+                                                                                        <li class="nav-item">
+                                                <input id="type5" class="checkbox-custom checkBoxVal" name="type[]" type="checkbox" value="12"   data-url-name="dest">
+                                                <label for="type5" class="checkbox-custom-label">Du lịch thể thao</label>
+                                            </li>
+                                                                                        <li class="nav-item">
+                                                <input id="type6" class="checkbox-custom checkBoxVal" name="type[]" type="checkbox" value="31"   data-url-name="dest">
+                                                <label for="type6" class="checkbox-custom-label">Bảo tàng</label>
+                                            </li>
+                                                                                        <li class="nav-item">
+                                                <input id="type7" class="checkbox-custom checkBoxVal" name="type[]" type="checkbox" value="32"   data-url-name="dest">
+                                                <label for="type7" class="checkbox-custom-label">Công viên</label>
+                                            </li>
+                                                                                </ul>                                        
+                                </div>
+                            </nav>                            
+                        </div> 
+                        <div class="form-group">
+                            <button id="searchbutton" name="searchbutton" class="btn btn-success mb-2 col-md-12" type="submit" data-button-type="search" data-button-value="dest" data-action-value="/dest/">Tra cứu</button>
+                        </div>
+                    </div>                        
+                </div>                
+            </div> <!-- Tìm kiếm  -->
+            <div class="col-lg-8">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="shorting-wrap">
+                                                        <h5 class="shorting-title font-weight-bold">Tổng số: 2 kết quả </h5>
+                                                            
+                            <div class="shorting-right dropdown-toggle">
+                                <label>Sắp xếp:</label>
+                                <select name="sort_by_order" id="sort_by_order" data-button-type="search" data-button-value="dest" data-action-value="/dest/">
+                                    <option value="" selected="selected">Mặc định</option>
+                                    <option value="province_code" >Địa phương quản lý</option>
+                                    <option value="title_vn" >Tên điểm đến</option>
+                                    <option value="type_code" >Loại hình</option>
+                                </select>
+                            </div>
+                        </div>                        
+                    </div>                    
+                </div>
+                                <div class="row">
+                                            <div class="col-lg-12 col-md-12 col-sm-12 h-100">      
+                                <div class="verticleilist listing-shot">
+                                    <div class="container-fluid">
+                                        <div class="row">
+                                                                                        <div class="col-md-12 h-100 cslt-detail">
+                                                <div class="header">
+                                                    <h4><a>Khu di tích Trạng Trình Nguyễn Bỉnh Khiêm</a></h4>
+                                                </div>
+                                                                                                <span class="d-block">
+                                                    <i class="fa fa-map-marker" aria-hidden="true"></i>&nbsp;
+                                                    Địa chỉ: Thôn Trung Am, Huyện Vĩnh Bảo, Thành phố Hải Phòng                                                </span>
+                                                                                            </div>
+                                                                                        <div class="col-12 py-2 content-detail">                                                
+                                                
+	Đ&ecirc;̀n thờ Nguy&ecirc;̃n Bỉnh Khi&ecirc;m (đ&ecirc;̀n quan Trạng, đ&ecirc;̀n thờ Trạng Trình Nguy&ecirc;̃n Bỉnh Khi&ecirc;m), thuộc th&ocirc;n Trung Am, xã Lý Học, huy&ecirc;̣n Vĩnh Bảo, thành ph&ocirc;́ Hải Phòng, gắn li&ecirc;̀n với cu&ocirc;̣c đời và sự nghi&ecirc;̣p của vị Trạng nguy&ecirc;n tri&ecirc;̀u Mạc Nguy&ecirc;̃n Bỉnh Khi&ecirc;m. Đền thờ Nguyễn Bỉnh Khi&ecirc;m c&oacute; sứ mệnh lịch sử đặc biệt, vừa l&agrave; nơi để tri &acirc;n những đ&oacute;ng g&oacute;p của một danh nh&acirc;n trong lịch sử, vừa l&agrave; địa điểm diễn ra c&aacute;c hoạt động, sinh hoạt văn h&oacute;a t&iacute;n ngưỡng của nh&acirc;n d&acirc;n trong v&ugrave;ng.
+                                            </div>
+                                                                                        <div class="col-12 py-2 content-detail">
+                                                <p style="text-align: justify;">
+	Trạng Tr&igrave;nh Nguyễn Bỉnh Khi&ecirc;m (c&oacute; t&ecirc;n là Văn Đạt, tự là Hanh Phủ, hi&ecirc;̣u Bạch V&acirc;n cư sĩ), sinh năm T&acirc;n Hợi (1491), người làng Trung Am, huy&ecirc;̣n Vĩnh Lại, trấn Hải Dương (nay là th&ocirc;n Trung Am, xã Lý Học, huy&ecirc;̣n Vĩnh Bảo, th&agrave;nh phố Hải Phòng). Khoa thi năm &Acirc;́t Mùi, tri&ecirc;̀u Mạc Đăng Doanh (1535), &ocirc;ng đ&ocirc;̃ Ti&ecirc;́n sĩ đ&ecirc;̣ nh&acirc;́t danh (tức Trạng nguy&ecirc;n), được trao chức Đ&ocirc;ng các hi&ecirc;̣u thư, d&acirc;̀n thăng l&ecirc;n làm Hữu thị lang ki&ecirc;m Đ&ocirc;ng các Đại học sĩ. &Ocirc;ng được li&ecirc;̣t vào h&agrave;ng đ&ecirc;̣ nh&acirc;́t c&ocirc;ng th&acirc;̀n, được phong tước Trình tuy&ecirc;̀n h&acirc;̀u, đ&ecirc;́n Thượng thư B&ocirc;̣ Lại, Thái bảo, tước Trình Qu&ocirc;́c c&ocirc;ng. Năm 1542, sau khi d&acirc;ng sớ xin chém 18 kẻ l&ocirc;̣ng th&acirc;̀n kh&ocirc;ng được ch&acirc;́p thu&acirc;̣n, &ocirc;ng treo mũ từ quan v&ecirc;̀ qu&ecirc; nhà ở &acirc;̉n, dựng quán Trung T&acirc;n, l&acirc;̣p am Bạch V&acirc;n làm trường dạy học, sáng tác thơ ca, l&acirc;́y hi&ecirc;̣u là Bạch V&acirc;n cư sĩ. Am trở thành trung t&acirc;m đào tạo nh&acirc;n tài cho đ&acirc;́t nước, với nhi&ecirc;̀u t&ecirc;n tu&ocirc;̉i lưu danh sử sách, như: Phùng Khắc Khoan, Lương Hữu Khánh, Gi&aacute;p Hải&hellip; Nguy&ecirc;̃n Bỉnh Khi&ecirc;m kh&ocirc;ng còn tham dự qu&ocirc;́c chính, nhưng nhà Mạc v&acirc;̃n trọng vọng &ocirc;ng, thường hỏi ý kiến về những vi&ecirc;̣c trọng đại. &Ocirc;ng m&acirc;́t ngày 28 th&aacute;ng Mười Một năm &Acirc;́t D&acirc;̣u (tức 17/01/1586), thọ 95 tu&ocirc;̉i. Học trò suy t&ocirc;n &ocirc;ng là Tuy&ecirc;́t Giang phu tử.</p>
+<p style="text-align: justify;">
+	Trạng Tr&igrave;nh Nguyễn Bỉnh Khi&ecirc;m l&agrave; nh&agrave; nho y&ecirc;u nước, nhà lý học đại t&agrave;i được c&aacute;c học giả k&iacute;nh phục, sử s&aacute;ch ghi lại v&agrave; lưu truyền trong nh&acirc;n gian về t&agrave;i ti&ecirc;n đo&aacute;n hậu vận (sấm k&yacute;)... &Ocirc;ng c&ograve;n là m&ocirc;̣t nhà thơ lớn, để lại cho hậu thế tr&ecirc;n 1.000 bài thơ (620 bài thơ chữ Hán,153 bài thơ N&ocirc;m), ti&ecirc;u biểu như c&aacute;c t&acirc;̣p thơ &ldquo;Bạch V&acirc;n am thi t&acirc;̣p&quot; (chữ Hán) và Bạch V&acirc;n quốc ngữ&nbsp; thi t&acirc;̣p (chữ N&ocirc;m). Thi phẩm của Nguyễn Bỉnh Khi&ecirc;m mang gi&aacute; trị nghệ thuật cao, b&uacute;t ph&aacute;p tinh th&acirc;m, đề cập đến nhiều vấn đề của cuộc sống, như: t&igrave;nh y&ecirc;u qu&ecirc; hương, đất nước, ch&acirc;m biếm đả k&iacute;ch bọn tham quan...</p>
+<p style="text-align: justify;">
+	Theo một số ngu&ocirc;̀n tư li&ecirc;̣u, đ&ecirc;̀n thờ Nguy&ecirc;̃n Bỉnh Khi&ecirc;m được x&acirc;y dựng sau khi &ocirc;ng m&acirc;́t và hoàn thành vào cu&ocirc;́i năm 1586. C&ograve;n theo &ldquo;Từ Vũ bi ký&hellip;&quot; lập năm Vĩnh Hựu thứ hai (1736) hi&ecirc;̣n lưu tại di tích, đ&ecirc;̀n dựng từ sau khi &ocirc;ng m&acirc;́t, đ&ecirc;́n năm 1735, d&acirc;n làng Trung Am, t&ocirc;̉ng Thượng Am đóng góp c&ocirc;ng của trùng tu, t&ocirc;n tạo lại đền đ&ecirc;̉ thờ phụng. V&agrave;o năm 1928, đ&ecirc;̀n tiếp tục được tr&ugrave;ng tu, với ki&ecirc;́n trúc chữ &ldquo;đinh&rdquo;, mang đ&acirc;̣m phong cách ngh&ecirc;̣ thu&acirc;̣t thời Nguy&ecirc;̃n. Năm 1991, nh&acirc;n kỷ ni&ecirc;̣m 500 năm sinh Nguy&ecirc;̃n Bỉnh Khi&ecirc;m, di tích được tu bổ, phục hồi, mở r&ocirc;̣ng, dựng tượng đài, l&acirc;̣p quảng trường, x&acirc;y h&ocirc;̀ bán nguy&ecirc;̣t, với quy m&ocirc; và cảnh quan như hiện nay.</p>
+<p style="text-align: justify;">
+	Đền thờ Nguyễn Bỉnh Khi&ecirc;m tọa lạc giữa kh&ocirc;ng gian rộng lớn, quay hướng Đ&ocirc;ng, ph&iacute;a trước l&agrave; hồ nước; ph&iacute;a Bắc l&agrave; triền đ&ecirc; v&agrave; d&ograve;ng Tuyết giang; ph&iacute;a Đ&ocirc;ng hướng nh&igrave;n ra biển cả bao la; ph&iacute;a Nam l&agrave; x&oacute;m l&agrave;ng; ph&iacute;a T&acirc;y với những c&aacute;nh đồng l&uacute;a, thuốc l&agrave;o xanh ngắt. Đền thờ Nguyễn Bỉnh Khi&ecirc;m c&oacute; tổng diện t&iacute;ch 91.500,7m2 (khu vực I: 3.137,5m2, khu vực II: 88.327,2m2), bao gồm c&aacute;c hạng mục: Đền thờ Nguyễn Bỉnh Khi&ecirc;m; đền thờ Th&acirc;n phụ, Th&acirc;n mẫu Nguyễn Bỉnh Khi&ecirc;m; am Bạch V&acirc;n; qu&aacute;n Trung T&acirc;n; th&aacute;p B&uacute;t K&igrave;nh Thi&ecirc;n; mộ phần cụ Nguyễn Văn Định; quảng trường, tượng đ&agrave;i.</p>
+<p style="text-align: justify;">
+	1. Nghi m&ocirc;n ngoại: tạc bằng đ&aacute;, đỉnh hai cột giữa tạc c&aacute;ch điệu quả d&agrave;nh d&agrave;nh; đỉnh hai cột b&ecirc;n tạc đ&ocirc;i ngh&ecirc; hướng mặt v&agrave;o l&ograve;ng cổng. Khối đ&egrave;n lồng của trụ tạc tứ linh trong thế h&agrave;m thư, c&otilde;ng thư, cuốn thư; th&acirc;n trụ l&agrave; khối h&igrave;nh chữ nhật tạc c&aacute;c vế c&acirc;u đối chữ H&aacute;n; đế trụ tạo kiểu thắt đ&aacute;y cổ bồng.</p>
+<p style="text-align: justify;">
+	2. Nghi m&ocirc;n nội: kiến tr&uacute;c 2 tầng 8 m&aacute;i, đao cong bốn ph&iacute;a gắn c&aacute;c linh vật rồng, phượng; cổ di&ecirc;m v&agrave; th&acirc;n cổng c&oacute; đắp c&aacute;c c&acirc;u đối, đại tự chữ H&aacute;n. Mặt ngo&agrave;i đắp bức đại tự &ldquo;Trung Am từ&rdquo;, mặt trong đắp chữ &ldquo;Tr&igrave;nh Quốc C&ocirc;ng&rdquo;.</p>
+<p style="text-align: justify;">
+	3. Hồ Th&aacute;i ất, Th&aacute;i nh&acirc;m: hai hồ n&agrave;y nằm ở ph&iacute;a trước đền thờ Nguyễn Bỉnh Khi&ecirc;m. Giữa hồ c&oacute; một đảo nhỏ, được nối với bờ bằng c&acirc;y cầu đ&aacute; xanh được bắc 5 nhịp, th&acirc;n cầu được khắc hoa văn s&oacute;ng nước mềm mại. Tr&ecirc;n đảo c&oacute; đặt tấm bia đ&aacute; ghi việc dựng lại đền thờ Nguyễn Bỉnh Khi&ecirc;m.</p>
+<p style="text-align: justify;">
+	4. Đền thờ Nguyễn Bỉnh Khi&ecirc;m: c&oacute; bố cục mặt bằng theo h&igrave;nh chữ &ldquo;đinh&rdquo; với Tiền tế 03 gian 02 ch&aacute;i v&agrave; Hậu cung 02 gian.</p>
+<p style="text-align: justify;">
+	- Tiền tế: 03 gian, gian giữa rộng 3,17m, hai gian b&ecirc;n, mỗi gian rộng 2,80m v&agrave; hai gian ch&aacute;i mỗi gian rộng 2,10m. Hệ thống khung chịu lực c&oacute; 04 bộ v&igrave;, 22 cột gỗ lim. V&igrave; n&oacute;c kết cấu kiểu &ldquo;gi&aacute; chi&ecirc;ng chồng rường&rdquo;. Hoa văn trang tr&iacute;, tr&ecirc;n th&acirc;n c&aacute;c con rường v&agrave; m&aacute; c&acirc;u đầu được chạm bong k&ecirc;nh đề t&agrave;i l&aacute; lật, trụ đấu chạm c&aacute;nh sen, dạ c&acirc;u đầu khắc d&ograve;ng chữ cho biết việc tu sửa đền v&agrave;o năm 1928, đời vua Bảo Đại. Bốn đầu dư được chạm thủng kết hợp k&ecirc;nh bong bốn đầu rồng mang phong c&aacute;ch Nguyễn đầu thế kỷ XX. Hai mặt của v&igrave; n&aacute;ch &ldquo;v&aacute;n m&ecirc;&rdquo;được trang tr&iacute; dầy đặc, tỉ mỉ, với đề t&agrave;i rồng kết hợp v&acirc;n m&acirc;y, l&aacute; lật, s&oacute;ng nước, hoa văn chữ triện, hoa l&aacute; sen, thủy ba, c&aacute; ch&eacute;p, v&acirc;n h&oacute;a long.</p>
+<p style="text-align: justify;">
+	- Hậu cung: l&agrave;m kiểu tường hồi b&iacute;t đốc, hệ thống khung chịu lực gồm hai bộ v&igrave; k&egrave;o, v&igrave; n&oacute;c v&agrave; v&igrave; n&aacute;ch đều c&oacute; li&ecirc;n kết kiểu v&igrave; &ldquo;v&aacute;n m&ecirc;&rdquo;. Hoa văn trang tr&iacute; tr&ecirc;n hệ v&igrave; l&agrave; lưỡng long chầu nhật, c&acirc;y mai, c&agrave;nh sen, r&ugrave;a, long m&atilde;... Bộ v&igrave; thứ hai, kiểu biến thể &ldquo;gi&aacute; chi&ecirc;ng chồng rường&rdquo;. Trong cung cấm đặt kh&aacute;m v&agrave; tượng Nguyễn Bỉnh Khi&ecirc;m.</p>
+<p style="text-align: justify;">
+	5. Đền thờ th&acirc;n phụ - th&acirc;n mẫu Nguyễn Bỉnh Khi&ecirc;m: khởi c&ocirc;ng x&acirc;y dựng năm 2010, mặt bằng ch&iacute;nh h&igrave;nh chữ &ldquo;c&ocirc;ng&rdquo;, gồm: Tiền tế, ống muống, Hậu cung, hai t&ograve;a Giải vũ (Tả/ Hữu mạc), v&agrave; Nam - Bắc m&ocirc;n. To&agrave;n bộ c&aacute;c hạng mục đều được x&acirc;y dựng theo kiến tr&uacute;c truyền thống với c&aacute;c bộ khung, v&igrave; gỗ kết cấu kiểu &ldquo;chồng rường gi&aacute; chi&ecirc;ng&rdquo;, &ldquo;chồng rường trụ trốn&rdquo;, &ldquo;v&igrave; v&aacute;n m&ecirc;&rdquo;, m&aacute;i lợp ng&oacute;i vẩy, trang tr&iacute; tr&ecirc;n cấu kiện với c&aacute;c đề t&agrave;i hoa d&acirc;y l&aacute; lật, hoa sen...</p>
+<p style="text-align: justify;">
+	6. Am Bạch V&acirc;n: được dựng l&ecirc;n sau khi Nguyễn Bỉnh Khi&ecirc;m c&aacute;o quan về qu&ecirc;. Am xưa l&agrave; nh&agrave; ở v&agrave; trường dạy học của Trạng Tr&igrave;nh. Tại đ&acirc;y, &Ocirc;ng đ&atilde; tiếp kiến sứ giả của nh&agrave; Mạc, Trịnh, Nguyễn đến tham vấn về việc qu&acirc;n quốc, trọng sự. Trải qua thăng trầm của lịch sử, am Bạch V&acirc;n bị hư hỏng v&agrave; đổ n&aacute;t. Năm 2004, am được phục dựng, mặt bằng h&igrave;nh chữ &ldquo;nhất&rdquo;, 03 gian, hệ thống khung dựng tr&ecirc;n 04 bộ v&igrave;, 24 cột. Hoa văn trang tr&iacute; gồm c&aacute;c đề t&agrave;i như trụ đấu ho&aacute; sen, hoa văn l&aacute; lật tr&ecirc;n m&aacute; c&aacute;c con rường, m&aacute; c&acirc;u đầu, bẩy hi&ecirc;n chạm bong k&ecirc;nh l&aacute; c&aacute;ch điệu h&igrave;nh rồng...</p>
+<p style="text-align: justify;">
+	7. Qu&aacute;n Trung T&acirc;n : được dựng l&ecirc;n sau khi Nguyễn Bỉnh Khi&ecirc;m rời chốn quan trường về qu&ecirc; dạy học. Năm 1742, Vũ Phương Đề c&oacute; tới thăm qu&aacute;n Trung T&acirc;n th&igrave;: &ldquo;c&ograve;n tấm bia cũ nhưng n&eacute;t chữ đ&atilde; qu&aacute; mờ kh&ocirc;ng sao đọc nổi&rdquo;. Đến năm 1777, La sơn Phu tử Nguyễn Thiếp đến thăm l&agrave;ng Trung Am đ&atilde; c&oacute; b&agrave;i ngũ ng&ocirc;n ghi r&otilde;: &ldquo;Am, bia đều mất hết/ Man m&aacute;c d&ograve;ng Tuyết giang&rdquo;. Như vậy, sau năm 1742 đến trước năm 1777, qu&aacute;n Trung T&acirc;n đ&atilde; kh&ocirc;ng c&ograve;n. Năm 2001, qu&aacute;n Trung T&acirc;n được dựng lại b&ecirc;n bến đ&ograve; H&agrave;n với 3 gian, tổng diện t&iacute;ch l&agrave; 905,5m2.</p>
+<p style="text-align: justify;">
+	8. Th&aacute;p b&uacute;t K&igrave;nh thi&ecirc;n: tổng diện t&iacute;ch l&agrave; 845,5m2, tương truyền, th&aacute;p do học tr&ograve; của Nguyễn Bỉnh Khi&ecirc;m dựng l&ecirc;n c&aacute;ch đ&acirc;y hơn 400 năm, để ca ngợi t&agrave;i năng của thầy như cột chống trời (k&igrave;nh thi&ecirc;n). Trải qua năm th&aacute;ng, g&ograve; đất bị b&agrave;o m&ograve;n, th&aacute;p b&uacute;t K&igrave;nh Thi&ecirc;n bị đổ n&aacute;t, đến thời Nguyễn th&igrave; được x&acirc;y lại kiểu hai tầng t&aacute;m m&aacute;i, cửa th&aacute;p đắp c&aacute;c vế c&acirc;u đối, l&ograve;ng th&aacute;p để rỗng v&agrave; trong c&oacute; đặt b&aacute;t nhang.</p>
+<p style="text-align: justify;">
+	9. Mộ phần cụ Nguyễn Văn Định: l&agrave; th&acirc;n sinh ra Nguyễn Bỉnh Khi&ecirc;m, hiệu l&agrave; C&ugrave; Xuy&ecirc;n ti&ecirc;n sinh, được vua Mạc phong Th&aacute;i Bảo nghi&ecirc;m quận c&ocirc;ng. Sinh thời, Cụ l&agrave;m nghề dạy học v&agrave; từng theo học ở nh&agrave; Th&aacute;i học. Khi mất, cụ được an t&aacute;ng tại qu&ecirc; nh&agrave;, mộ đặt giữa c&aacute;nh đồng l&agrave;ng Trung Am (ph&iacute;a sau khu di t&iacute;ch b&acirc;y giờ).</p>
+<p style="text-align: justify;">
+	10. Quảng trường, tượng đ&agrave;i v&agrave; bức ph&ugrave; đi&ecirc;u<br />
+	Tượng Trạng Tr&igrave;nh Nguyễn Bỉnh Khi&ecirc;m được tạc bằng đ&aacute; granit, cao 5,7m, nặng 8,5 tấn, trong tư thế ngồi, tay phải cầm b&uacute;t, tay tr&aacute;i cầm cuốn s&aacute;ch v&agrave; mặc y phục nh&agrave; nho. Hai bức ph&ugrave; đi&ecirc;u hai b&ecirc;n, mỗi bức cao khoảng hơn 5m, d&agrave;i hơn 20m. Bức b&ecirc;n phải, khắc tả lại cuộc đời v&agrave; sự nghiệp Nguyễn Bỉnh Khi&ecirc;m; bức c&ograve;n lại khắc tả những giai đoạn lịch sử của địa phương (từ khi thực d&acirc;n Ph&aacute;p x&acirc;m lược cho đến ng&agrave;y nay). Trước tượng đ&agrave;i Nguyễn Bỉnh Khi&ecirc;m l&agrave; một quảng trường lớn, đ&acirc;y l&agrave; địa điểm tổ chức lễ hội h&agrave;ng năm của di t&iacute;ch, cũng l&agrave; khu vực để tổ chức c&aacute;c sự kiện lớn của th&agrave;nh phố Hải Ph&ograve;ng, chủ yếu li&ecirc;n quan đến lĩnh vực gi&aacute;o dục.</p>
+<p style="text-align: justify;">
+	Đền thờ Nguyễn Bỉnh Khi&ecirc;m c&ograve;n lưu giữ được một số cổ vật, c&oacute; gi&aacute; trị, ni&ecirc;n đại từ thế kỷ XVII đến đầu thế kỷ XX, như: bản ch&uacute;c, b&aacute;t bửu, long ngai, b&agrave;i vị, c&acirc;u đối, đại tự.., trong đ&oacute; đ&aacute;ng ch&uacute; &yacute; l&agrave; Bia đ&aacute; &ldquo;Từ vũ bi k&iacute;...&rdquo; thời L&ecirc; Trung Hưng, năm Vĩnh Hựu thứ hai (1736) đ&atilde; bị mờ kh&aacute; nhiều chữ, kh&ocirc;ng đọc được to&agrave;n văn, nội dung bia nhắc đến việc dựng lại đền Nguyễn Bỉnh Khi&ecirc;m v&agrave;o năm 1736; B&aacute;t hương gốm men v&agrave;ng n&acirc;u (thế kỷ XVIII)... Ngo&agrave;i ra, trong đền c&ograve;n lưu giữ một tảng đ&aacute; xanh h&igrave;nh khối chữ nhật, khắc 3 chữ H&aacute;n &ldquo;Trường Xu&acirc;n Kiều&rdquo; (Cầu Trường Xu&acirc;n), tương truyền do đ&iacute;ch th&acirc;n Nguyễn Bỉnh Khi&ecirc;m viết khi khuyến kh&iacute;ch nh&acirc;n d&acirc;n địa phương x&acirc;y dựng cầu.</p>
+<p style="text-align: justify;">
+	Đền thờ Nguyễn Bỉnh Khi&ecirc;m c&ograve;n ẩn chứa gi&aacute; trị văn h&oacute;a phi vật thể đặc sắc, thể hiện vai tr&ograve; quan trọng của di t&iacute;ch n&agrave;y trong t&acirc;m thức, đời sống tinh thần của nh&acirc;n d&acirc;n địa phương. Lễ hội đền Trạng được tổ chức từ ng&agrave;y 27 &ndash; 29 th&aacute;ng Mười Một &Acirc;m lịch h&agrave;ng năm, với những nghi thức như Lễ Mộc dục, Rước văn, C&aacute;o yết v&agrave; nhiều chương tr&igrave;nh văn ho&aacute; văn nghệ của c&aacute;c địa phương (đấu vật, cờ tướng, m&uacute;a tứ linh, đua thuyền, ph&aacute;o đất, đu s&ograve;ng/đu ti&ecirc;n, m&uacute;a rối cạn, rối nước). Ngo&agrave;i ra, h&agrave;ng năm, nh&acirc;n dịp khai giảng năm học mới, th&agrave;nh phố Hải Ph&ograve;ng c&ograve;n tổ chức Lễ biểu dương học sinh - sinh vi&ecirc;n ti&ecirc;u biểu xuất sắc, ngay tại đền thờ Nguyễn Bỉnh Khi&ecirc;m. Đ&acirc;y l&agrave; n&eacute;t văn h&oacute;a mới, thể hiện truyền thống t&ocirc;n sư trọng đạo, gi&aacute;o dục về tấm gương s&aacute;ng của Nguyễn Bỉnh Khi&ecirc;m, tạo động lực cho thế hệ trẻ phấn đấu tr&ecirc;n bước đường học tập v&agrave; lập nghiệp.</p>
+<p style="text-align: justify;">
+	Với những gi&aacute; trị đặc biệt ti&ecirc;u biểu, di t&iacute;ch lịch sử Đền thờ Nguyễn Bỉnh Khi&ecirc;m (huyện Vĩnh Bảo, th&agrave;nh phố Hải Ph&ograve;ng) được Thủ tướng Ch&iacute;nh phủ xếp hạng l&agrave; di t&iacute;ch quốc gia đặc biệt (tại Quyết định số 2367/QĐ-TTg ng&agrave;y 23/12/2015 )./.</p>
+                                            </div>
+                                                                                    </div>
+                                    </div>
+                                    
+                            
+                                    <div class="album-content row mx-0">
+                                        <div class="col-md-12 mx-0 list-3">
+                                                                                    <div class="item text-center">
+                                            <a href="https://csdl.vietnamtourism.gov.vn/uploads/images/01_3/DIEMDULICHBOSUNG2020/HaiPhong/KhuditichTrangTrinhNguyenBinhKhiem/DTTRNguyenBinhKhiem4.jpg" data-toggle="lightbox" data-gallery="titc-gallery" data-title="Khu di tích Trạng Trình Nguyễn Bỉnh Khiêm" data-footer="" class="card">
+                                            <img id="preload_0" src="https://csdl.vietnamtourism.gov.vn/web/templates/image/2025/425x280.png" class="img-responsive img-thumbnail ratio-4-3">
+                                                                                        </a>
+                                            </div>
+                                                                                        <div class="item text-center">
+                                            <a href="https://csdl.vietnamtourism.gov.vn/uploads/images/01_3/DIEMDULICHBOSUNG2020/HaiPhong/KhuditichTrangTrinhNguyenBinhKhiem/DTTRNguyenBinhKhiem3.jpg" data-toggle="lightbox" data-gallery="titc-gallery" data-title="Khu di tích Trạng Trình Nguyễn Bỉnh Khiêm" data-footer="" class="card">
+                                            <img id="preload_1" src="https://csdl.vietnamtourism.gov.vn/web/templates/image/2025/425x280.png" class="img-responsive img-thumbnail ratio-4-3">
+                                                                                        </a>
+                                            </div>
+                                                                                        <div class="item text-center">
+                                            <a href="https://csdl.vietnamtourism.gov.vn/uploads/images/01_3/DIEMDULICHBOSUNG2020/HaiPhong/KhuditichTrangTrinhNguyenBinhKhiem/DTTRNguyenBinhKhiem2.jpg" data-toggle="lightbox" data-gallery="titc-gallery" data-title="Khu di tích Trạng Trình Nguyễn Bỉnh Khiêm" data-footer="" class="card">
+                                            <img id="preload_2" src="https://csdl.vietnamtourism.gov.vn/web/templates/image/2025/425x280.png" class="img-responsive img-thumbnail ratio-4-3">
+                                                                                        </a>
+                                            </div>
+                                                                                        <div class="item text-center">
+                                            <a href="https://csdl.vietnamtourism.gov.vn/uploads/images/01_3/DIEMDULICHBOSUNG2020/HaiPhong/KhuditichTrangTrinhNguyenBinhKhiem/DTTRNguyenBinhKhiem1.jpg" data-toggle="lightbox" data-gallery="titc-gallery" data-title="Khu di tích Trạng Trình Nguyễn Bỉnh Khiêm" data-footer="" class="card">
+                                            <img id="preload_3" src="https://csdl.vietnamtourism.gov.vn/web/templates/image/2025/425x280.png" class="img-responsive img-thumbnail ratio-4-3">
+                                                                                        </a>
+                                            </div>
+                                                                                    </div>
+                                    </div>
+                                </div>
+                                <div class="verticleilist listing-shot">
+                                    <div class="row">
+                                        <div class="col-md-5 cslt-detail">
+                                                                                        <div class="header">
+                                                <h4><a href="/dest/?item=456">Làng chài Hàm Ninh</a> <span class="approve-listing"><i class="fa fa-check"></i></span></h4>
+                                            </div>
+                                                                                        
+                                        </div>
+                                        <div class="col-md-2"></div>
+                                        <div class="col-md-5 cslt-detail">
+                                                                                        <div class="header">
+                                                <h4><a href="/dest/?item=580">Khu du lịch sinh thái nước khoáng nóng Tiên Lãng</a> <span class="approve-listing"><i class="fa fa-check"></i></span></h4>
+                                            </div>
+                                                                                        
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                                                </div>
+                            </div> <!-- Nội dung phải  -->
+        </div>        
+    </div>
+    </form>
+</main>
+    <script type="text/javascript">
+		imgArr = [{"src":"https:\/\/csdl.vietnamtourism.gov.vn\/uploads\/images\/01_3\/DIEMDULICHBOSUNG2020\/HaiPhong\/KhuditichTrangTrinhNguyenBinhKhiem\/DTTRNguyenBinhKhiem4.jpg"},{"src":"https:\/\/csdl.vietnamtourism.gov.vn\/uploads\/images\/01_3\/DIEMDULICHBOSUNG2020\/HaiPhong\/KhuditichTrangTrinhNguyenBinhKhiem\/DTTRNguyenBinhKhiem3.jpg"},{"src":"https:\/\/csdl.vietnamtourism.gov.vn\/uploads\/images\/01_3\/DIEMDULICHBOSUNG2020\/HaiPhong\/KhuditichTrangTrinhNguyenBinhKhiem\/DTTRNguyenBinhKhiem2.jpg"},{"src":"https:\/\/csdl.vietnamtourism.gov.vn\/uploads\/images\/01_3\/DIEMDULICHBOSUNG2020\/HaiPhong\/KhuditichTrangTrinhNguyenBinhKhiem\/DTTRNguyenBinhKhiem1.jpg"}];
+		
+		
+    </script>
+							<footer style="margin-top: 10px;background-color: #3b4753; border-top: 3px solid #1fbcbc">			
+			<div class="container">
+				<div class="row">
+					<div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-xs-12">
+						<img src="https://csdl.vietnamtourism.gov.vn/web/templates/2025/2025/image/logo-bottom.png" width="183" height="203" alt=""/>
+						<a style="display: block;margin: 15px 0px 0px 15px;" href="https://tinnhiemmang.vn/danh-ba-tin-nhiem/csdlvietnamtourismgovvn-1717729196" title="Chứng nhận Tín Nhiệm Mạng" target="_blank"><img src="https://tinnhiemmang.vn/handle_cert?id=csdl.vietnamtourism.gov.vn" width="150px" height="auto" alt="Chứng nhận Tín Nhiệm Mạng"></a>
+					</div>
+					<div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12" style="column-gap: normal;columns: 2">
+						<ul class="navbar-nav mr-auto">
+					<li class="nav-item"><a href="/" class="nav-link text-white" >Trang chủ</a></li><li class="nav-item"><a href="http://csdl.vietnamtourism.gov.vn/index.php/search/?data=cslt" class="nav-link text-white" >Cơ sở dữ liệu</a><ul><li class="nav-item"><a href="https://csdl.vietnamtourism.gov.vn/index.php/cslt" class="nav-link text-secondary  pl-3" >Cơ sở lưu trú</a></li><li class="nav-item"><a href="https://quanlyluhanh.vn/" class="nav-link text-secondary  pl-3" >Doanh nghiệp lữ hành</a></li><li class="nav-item"><a href="https://huongdanvien.vn/" class="nav-link text-secondary  pl-3" >Hướng dẫn viên</a></li><li class="nav-item"><a href="https://csdl.vietnamtourism.gov.vn/index.php/dest" class="nav-link text-secondary  pl-3" >Điểm đến</a></li><li class="nav-item"><a href="https://csdl.vietnamtourism.gov.vn/index.php/rest" class="nav-link text-secondary  pl-3" >Nhà hàng</a></li><li class="nav-item"><a href="https://csdl.vietnamtourism.gov.vn/index.php/shop" class="nav-link text-secondary  pl-3" >Điểm mua sắm</a></li><li class="nav-item"><a href="https://csdl.vietnamtourism.gov.vn/index.php/pro" class="nav-link text-secondary  pl-3" >Xúc tiến du lịch</a></li><li class="nav-item"><a href="https://csdl.vietnamtourism.gov.vn/index.php/nldl" class="nav-link text-secondary  pl-3" >Nhân lực du lịch</a></li><li class="nav-item"><a href="https://csdl.vietnamtourism.gov.vn/index.php/vtkdl" class="nav-link text-secondary  pl-3" >Vận tải khách du lịch</a></li><li class="nav-item"><a href="https://csdl.vietnamtourism.gov.vn/index.php/vcgt" class="nav-link text-secondary  pl-3" >Vui chơi giải trí</a></li><li class="nav-item"><a href="https://csdl.vietnamtourism.gov.vn/index.php/tt" class="nav-link text-secondary  pl-3" >Thể thao</a></li><li class="nav-item"><a href="https://csdl.vietnamtourism.gov.vn/index.php/cssk" class="nav-link text-secondary  pl-3" >Chăm sóc sức khỏe</a></li><li class="nav-item"><a href="https://csdl.vietnamtourism.gov.vn/index.php/hh" class="nav-link text-secondary  pl-3" >Hiệp hội</a></li><li class="nav-item"><a href="https://csdl.vietnamtourism.gov.vn/index.php/csdt" class="nav-link text-secondary  pl-3" >Cơ sở đào tạo</a></li><li class="nav-item"><a href="https://csdl.vietnamtourism.gov.vn/index.php/area" class="nav-link text-secondary  pl-3" >Khu du lịch</a></li></ul></li><li class="nav-item"><a href="https://vietnamtourism.gov.vn/index.php/cat/2010" class="nav-link text-white" >Văn bản pháp quy</a></li><li class="nav-item"><a href="https://vietnamtourism.gov.vn/index.php/cat/07" class="nav-link text-white" >Hướng dẫn thủ tục</a></li><li class="nav-item"><a href="https://vietnamtourism.gov.vn/index.php/cat/50" class="nav-link text-white" >Tin tức - Sự kiện</a></li>						</ul>
+					</div>
+					<div class="col-xl-3 col-lg-3 col-md-12 col-sm-12 col-xs-12">
+						<div class="section-main-footer-contact-wrapper">
+							<div class="row px-0">
+								<div class="col-xl-12 col-lg-12 col-md-3 col-sm-6 col-xs-6 col-6">
+									<div class="footer-contact-image">
+										<a href="https://vietnam.travel/" class="nav-link main-nav-link px-0"><img src="https://images.vietnamtourism.gov.vn/vn//images/gov2022/ic-vietnam-travel.png"></a>
+									</div>
+								</div>
+								<div class="col-xl-12 col-lg-12 col-md-3 col-sm-6 col-xs-6 col-6">
+									<div class="footer-contact-image">
+										<a href="https://moitruongdulich.vn/" class="nav-link main-nav-link px-0"><img src="https://images.vietnamtourism.gov.vn/vn//images/gov2022/ic-moitruogndulich-vn.png"></a>
+									</div>
+								</div>
+								<div class="col-xl-12 col-lg-12 col-md-3 col-sm-6 col-xs-6 col-6">
+									<div class="footer-contact-image">
+										<a href="https://dulichvn.org.vn/" class="nav-link main-nav-link px-0"><img src="https://images.vietnamtourism.gov.vn/vn//images/gov2022/ic-dulichvn-org.png"></a>
+									</div>
+								</div>
+								<div class="col-xl-12 col-lg-12 col-md-3 col-sm-6 col-xs-6 col-6">
+									<div class="footer-contact-image">
+										<a href="https://nentangso.vietnamtourism.gov.vn/" class="nav-link main-nav-link px-0" ><img src="https://images.vietnamtourism.gov.vn/vn//images/gov2022/nentangso.png"></a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+					</footer>
+	</div>
+	<!-- Material button -->
+    <button class="material-scrolltop" type="button"></button>
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script type="application/ld+json">window.jQuery || document.write('<script src="/web/templates/2025/js/jquery.min.js"><\/script>')</script>
+		
+	<script type="text/javascript" src="/web/templates/2025/js/4.0.0/bootstrap.min.js?evl=22586"></script>
+	<script type="text/javascript" src="/web/templates/2025/js/holder.min.js?evl=22586"></script>
+	<script type="text/javascript" src="/web/templates/2025/js/popper.min.js?evl=5822"></script>
+	<script type="text/javascript" src="/web/templates/2025/js/rrssb.min.js?evl=22586"></script>
+	<script type="text/javascript" src="/web/templates/2025/js/lightbox/ekko-lightbox.min.js"></script>
+	<script type="text/javascript" src="/web/templates/2025/js/front.js"></script>
+	<script src="/web/templates/2025/js/ekko-lightbox.js"></script>
+	<script type="text/javascript" src="/web/templates/2025/js/material-scrolltop.js"></script>
+	<script type="text/javascript" src="/web/templates/2025/2025/js/bootstrap-hover-tabs.js"></script>
+	<script type="text/javascript">
+		(function () {
+		  'use strict';
+
+		  if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
+			var msViewportStyle = document.createElement('style')
+			msViewportStyle.appendChild(
+			  document.createTextNode(
+				'@-ms-viewport{width:auto!important}'
+			  )
+			)
+			document.querySelector('head').appendChild(msViewportStyle)
+		  }
+
+		})();
+		$(document).ready(function ($) {
+			$(imgArr).preload();		
+			$(document).on('click', '[data-toggle="lightbox"]', function(event) {
+				event.preventDefault();
+				$(this).ekkoLightbox();
+			});
+			
+			// CSS
+			//$("div.left-content").css("height", $("div.ad-item:last-child ").height()+parseInt($("div.ad-item:last-child ").css("top").replace("px","")));
+			$('html, body').materialScrollTop();
+		});	
+		$.fn.preload = function() {
+			this.each(function(index, value){
+				if(typeof(value) != "undefined"){
+					var tmp = new Image();
+
+					/* $.each( value, function( key, value ) {
+					  console.log( key + ": " + value );
+
+					}); */
+					tmp.src = value.src;
+					if(value.width>0){
+						tmp.width = value.width;				
+						tmp.width = '100%';//value.width;				
+					}
+					if(value.height>0){
+						tmp.height = value.height;
+					}
+					tmp.alt = value.alt;
+					tmp.srcset = value.src;
+					//console.log(value.src);
+					if(tmp.src.length>0){
+						$("img#preload_"+index).replaceWith(tmp);
+					}
+				}
+			});
+		}	
+	</script>
+</body>
+</html>

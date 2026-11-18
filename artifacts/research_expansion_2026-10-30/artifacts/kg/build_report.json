@@ -1,0 +1,19 @@
+{
+  "generated_at": "2026-10-31",
+  "dataset": "/Users/amyas/HK1 26-27/DATN/artifacts/research_expansion_2026-10-30/data/structured_records.jsonl",
+  "records_seen": 38993,
+  "nodes": 18345,
+  "relationships": 28832,
+  "counts": {
+    "node:District": 696,
+    "node:HistoricalAdministrativeUnit": 10051,
+    "node:HistoricalProvince": 63,
+    "node:Province": 68,
+    "node:TourismPlace": 825,
+    "node:Ward": 6642,
+    "records_seen": 38993,
+    "relationship:LOCATED_IN": 18214,
+    "relationship:PARTLY_MERGED_INTO": 1105,
+    "relationship:REORGANIZED_INTO": 9513
+  }
+}

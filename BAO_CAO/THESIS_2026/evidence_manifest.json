@@ -1,0 +1,62 @@
+[
+  {
+    "path": "SOURCE/src/vn_assistant/router.py",
+    "exists": true,
+    "sha256": "40d6f048aa916a1ad1a74baad7ab322c158eaad0d0645a0d8e57fc6f3bd21ad8"
+  },
+  {
+    "path": "SOURCE/src/vn_assistant/administrative_codes.py",
+    "exists": true,
+    "sha256": "c7c9780eefc2ad8ab77a8c4b2aed29a59a97e38fba9bd36928d10c127ad528e1"
+  },
+  {
+    "path": "SOURCE/src/vn_assistant/question_processing.py",
+    "exists": true,
+    "sha256": "56162c132f87ddd197e7fe8a803b8c90faaa27a4d48857cf36ce496c04210de1"
+  },
+  {
+    "path": "SOURCE/src/vn_assistant/generation.py",
+    "exists": true,
+    "sha256": "ece3e7856145d3b2b43f3ad92d2859ca9d4396d6f6ca150010633900b2dae1f3"
+  },
+  {
+    "path": "SOURCE/src/vn_assistant/cross_check.py",
+    "exists": true,
+    "sha256": "2bd41f8708c8f41015d2085b86675d265225de577727508fd1be98973eb09a3d"
+  },
+  {
+    "path": "SOURCE/src/vn_assistant/api.py",
+    "exists": true,
+    "sha256": "c8f083ba908b865d7f26887f79ff8e17245a6c97bdff5b0fcccd7bf42a3ca125"
+  },
+  {
+    "path": "SOURCE/scripts/run_research_experiments.py",
+    "exists": true,
+    "sha256": "9d397f5c7856c3681b0f504f4913dfba83ccd76c8216222c3fca99ac2f6c3cd5"
+  },
+  {
+    "path": "artifacts/research_expansion_2026-10-30/corpus_audit.json",
+    "exists": true,
+    "sha256": "491ee380ffcc0a9a3408ed8cff71d9be2e0ee70a339a6b0514c272d42cadef95"
+  },
+  {
+    "path": "artifacts/research_expansion_2026-10-30/experiment_report.json",
+    "exists": true,
+    "sha256": "9beb6995a20252ceb3c41453d482ed8d2cf629dce7956bc1594786b7c655a671"
+  },
+  {
+    "path": "artifacts/research_expansion_2026-10-30/training_report.json",
+    "exists": true,
+    "sha256": "27bcfacb17ec2aa6221cf1184d244b9b1a9fe4b6d4d140c600e607ae11e1fe98"
+  },
+  {
+    "path": "artifacts/admin_code_fix_2026-10-25/backend_report.json",
+    "exists": true,
+    "sha256": "46b8cc338792a604f79e4045967e33a2dd9ada07751b1d40202fd5255fb36c7a"
+  },
+  {
+    "path": "artifacts/admin_code_fix_2026-10-25/ui/ui_report.json",
+    "exists": true,
+    "sha256": "fac1f92fe3281da899ddfadf4a12dda6eba8c543d59012eb822603c954626802"
+  }
+]

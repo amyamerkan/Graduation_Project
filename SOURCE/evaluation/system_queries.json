@@ -329,5 +329,163 @@
     "sources": [
       "kg"
     ]
+  },
+  {
+    "id": "bare_00008",
+    "question": "00008 thuộc địa phương nào",
+    "status": "answered",
+    "contains": "Ngọc Hà",
+    "sources": [
+      "kg"
+    ],
+    "generation_mode": "structured_kg",
+    "question_constraints_checked": true
+  },
+  {
+    "id": "local_code_00008",
+    "question": "mã địa phương 00008 thuộc địa phương nào",
+    "status": "answered",
+    "contains": "Ngọc Hà",
+    "sources": [
+      "kg"
+    ],
+    "generation_mode": "structured_kg",
+    "question_constraints_checked": true
+  },
+  {
+    "id": "accentless_00008",
+    "question": "ma dia phuong 00008 thuoc tinh nao",
+    "status": "answered",
+    "contains": "Ngọc Hà",
+    "sources": [
+      "kg"
+    ],
+    "generation_mode": "structured_kg",
+    "question_constraints_checked": true
+  },
+  {
+    "id": "date_word_not_province",
+    "question": "Mã 00008 tại ngày 2026-10-24 thuộc tỉnh nào?",
+    "status": "answered",
+    "contains": "Ngọc Hà",
+    "sources": [
+      "kg"
+    ],
+    "generation_mode": "structured_kg",
+    "question_constraints_checked": true
+  },
+  {
+    "id": "accentless_province_00008",
+    "question": "Ma 00008 ngay 2026-10-24 thuoc thanh pho Ha Noi khong?",
+    "status": "answered",
+    "contains": "Ngọc Hà",
+    "sources": [
+      "kg"
+    ],
+    "generation_mode": "structured_kg",
+    "question_constraints_checked": true
+  },
+  {
+    "id": "ambiguous_number",
+    "question": "00008",
+    "status": "needs_clarification"
+  },
+  {
+    "id": "multiple_codes",
+    "question": "Mã 00008 và 00070 là gì?",
+    "status": "needs_clarification"
+  },
+  {
+    "id": "postal_code",
+    "question": "Mã bưu chính 00008 thuộc địa phương nào?",
+    "status": "needs_clarification"
+  },
+  {
+    "id": "booking_code",
+    "question": "Mã đặt phòng 00008 thuộc đâu?",
+    "status": "needs_clarification"
+  },
+  {
+    "id": "wrong_province_00008",
+    "question": "Mã 00008 thuộc Điện Biên không?",
+    "status": "abstained"
+  },
+  {
+    "id": "missing_bare_code",
+    "question": "99999 thuộc địa phương nào?",
+    "status": "abstained"
+  },
+  {
+    "id": "bare_code_history",
+    "question": "Đơn vị đó thuộc tỉnh nào?",
+    "history": [
+      {
+        "role": "user",
+        "content": "00008 thuộc địa phương nào"
+      },
+      {
+        "role": "assistant",
+        "content": "Mã 99999 thuộc Điện Biên."
+      }
+    ],
+    "status": "answered",
+    "contains": "Ngọc Hà",
+    "resolved": true,
+    "generation_mode": "structured_kg",
+    "question_constraints_checked": true
+  },
+  {
+    "id": "dated_bare_code_history",
+    "question": "Đơn vị đó thuộc tỉnh nào?",
+    "history": [
+      {
+        "role": "user",
+        "content": "Ngày 01/07/2025, 00070 thuộc địa phương nào?"
+      }
+    ],
+    "status": "answered",
+    "contains": "00070",
+    "resolved": true,
+    "generation_mode": "structured_kg",
+    "question_constraints_checked": true
+  },
+  {
+    "id": "mixed_code_tourism",
+    "question": "Mã 00008 thuộc đâu và có điểm du lịch nào?",
+    "status": "partial",
+    "contains": "Ngọc Hà",
+    "sources": [
+      "kg"
+    ],
+    "generation_mode": "structured_kg",
+    "question_constraints_checked": false
+  },
+  {
+    "id": "province_name_starts_nam",
+    "question": "Mã 00008 thuộc Nam Định không?",
+    "status": "abstained"
+  },
+  {
+    "id": "multiple_followups",
+    "question": "ở đâu?",
+    "history": [
+      {
+        "role": "user",
+        "content": "Ngày 01/07/2025, 00070 thuộc địa phương nào?"
+      },
+      {
+        "role": "assistant",
+        "content": "Mã 99999 thuộc Điện Biên."
+      },
+      {
+        "role": "user",
+        "content": "Đơn vị đó thuộc tỉnh nào?"
+      }
+    ],
+    "status": "answered",
+    "contains": "00070",
+    "resolved": true,
+    "generation_mode": "structured_kg",
+    "question_constraints_checked": true
   }
 ]

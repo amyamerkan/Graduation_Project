@@ -16,11 +16,14 @@ flowchart TB
     Q -->|kg| KG[RDFLib / SPARQL]
     Q -->|rag| RAG[Retriever E5 / FAISS]
     Q -->|hybrid| KG
-    KG -->|Phạm vi tài liệu / thực thể| RAG
+    KG -->|Chỉ khi hybrid: phạm vi tài liệu / thực thể| RAG
     KG --> E[Chuẩn bị minh chứng và mệnh đề]
     RAG --> E
-    E --> LLM[Qwen chọn tối đa 3 claim_id]
-    LLM --> C[Kiểm tra JSON + truy vấn lại KG + Cross-check]
+    E --> MODE{Tra cứu mã hành chính?}
+    MODE -->|Có| DIRECT[Dựng câu mã / tên / tỉnh / ngày từ KG]
+    MODE -->|Không| LLM[Qwen chọn tối đa 3 claim_id]
+    DIRECT --> C[Truy vấn lại KG + Cross-check]
+    LLM -->|Kiểm tra JSON| C
     C --> OUT[Định dạng câu trả lời + nguồn + cảnh báo]
     OUT --> FE
     TTL[(Turtle KG)] --> KG
@@ -32,7 +35,7 @@ flowchart TB
     PIPE --> SQL
 ```
 
-Nhánh KG có thể trả kết quả mà chưa cần nạp E5. Nhánh RAG không gọi LLM khi dùng trực tiếp `/v1/rag/search` hoặc `/v1/query`.
+Tra mã hành chính dùng quy tắc chung trong `administrative_codes.py`, ưu tiên trước router thống kê; không cần gọi E5 hoặc Qwen để trả lời. Mã thiếu hoặc mơ hồ dẫn tới từ chối/làm rõ. Nhánh RAG không gọi LLM khi dùng trực tiếp `/v1/rag/search` hoặc `/v1/query`.
 
 ## 2. Frontend
 
@@ -90,11 +93,11 @@ Thống kê đối chiếu trực tiếp: **31.949 tài liệu**, **33.169 vecto
 
 ## 6. Ba luồng truy vấn
 
-1. **KG** — “Đơn vị có mã 00070 là gì?” → kế hoạch `03_unit_by_code` → lấy dữ kiện có cấu trúc → tạo mệnh đề → LLM chọn → truy vấn lại KG và kiểm tra.
+1. **KG theo mã** — “00008 thuộc địa phương nào?” → quy tắc nhận diện mã → `03_unit_by_code` → kiểm tra đúng mã/loại đơn vị/tên/tỉnh → dựng câu theo mẫu → truy vấn lại KG và kiểm tra. Câu có ngày/tỉnh cụ thể dùng `09_unit_at_time`; nhiều bản ghi cần làm rõ.
 2. **RAG** — “Giới thiệu hoạt động tham quan tại Hội An.” → lọc miền du lịch và tên/alias khi nhận diện được → E5/FAISS → trích câu từ các chunk đủ điểm → LLM chọn → kiểm tra trích đoạn.
 3. **Hybrid** — “Hồ Hoàn Kiếm ở đâu và có gì đáng chú ý?” → KG xác định thực thể → lấy `source_record_ids`/tên làm bộ lọc ứng viên RAG → kết hợp dữ kiện và mô tả.
 
-KG không có kết quả có thể dẫn sang `rag_fallback`. Riêng truy vấn ngày `09_unit_at_time` không dùng RAG để thay thế bằng chứng thời gian bị thiếu; dịch vụ trả lời cũng từ chối xác nhận mã nếu KG không chứng thực được mã đó.
+Tra mã bằng `03_unit_by_code` và `09_unit_at_time` không dùng RAG fallback dù KG rỗng hoặc lỗi. Các truy vấn thực thể chung khác vẫn có thể dùng `rag_fallback`. CrossChecker dựng lại điều kiện mã/ngày/tỉnh từ câu hỏi để phát hiện kế hoạch hoặc dữ kiện không khớp. Giao diện phân biệt nhãn kiểm tra điều kiện tra mã với nhãn trích dẫn chung.
 
 ## 7. Trạng thái, giới hạn và hướng mở rộng
 

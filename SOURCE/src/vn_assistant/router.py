@@ -16,6 +16,8 @@ from sklearn.pipeline import FeatureUnion, Pipeline
 
 from .normalization import clean_text, expand_domain_terms
 from .domain_scope import contains_intangible
+from .administrative_codes import (recognize_administrative_code, clarification_for_code,
+                                   code_location_constraint, code_location_constraints, fold_query)
 
 
 _TEMPORAL_LITERAL = r"\b(?:\d{4}-\d{1,2}-\d{1,2}|\d{1,2}[/.-]\d{1,2}[/.-]\d{4}|(?:năm|giai đoạn)\s+\d{4}(?:\s*[-–]\s*\d{4})?)\b"
@@ -132,6 +134,9 @@ class QuestionRouter:
         question = clean_text(question)
         if not question:
             raise ValueError("Câu hỏi không được để trống")
+        reference = recognize_administrative_code(question)
+        if reference.status != "none":
+            return Classification(question, "kg", "administration", 1.0, 1.0, "administrative_code_rule")
         if self.artifact:
             expanded = expand_domain_terms(question)
             route_model = self.artifact["route_model"]
@@ -175,26 +180,31 @@ class QuestionRouter:
 def extract_query_plan(question: str, classification: Classification) -> dict[str, Any]:
     question = clean_text(question)
     lowered = question.lower()
-    code_match = re.search(r"\bmã(?:\s+(?:số|hành chính))?\s*[:#]?\s*(\d{2,6})\b", lowered)
+    reference = recognize_administrative_code(question)
+    code = reference.code
     quoted = re.findall(r'["“](.*?)["”]', question)
     province = _extract_province(question)
     constraints = _extract_constraints(question)
     warnings = list(constraints["unsupported"])
-    temporal_plan = _dated_unit_plan(question, code_match.group(1) if code_match else None)
+    temporal_plan = _dated_unit_plan(question, code)
     if temporal_plan and not constraints["spatial"]:
         constraints["unsupported"] = []
         warnings = []
     out_of_scope = bool(re.search(r"\b(?:bitcoin|chứng khoán|xổ số|lập trình python|viết code|viết mã nguồn|chẩn đoán bệnh|giải phương trình|thời tiết ngày mai)\b", lowered))
     if contains_intangible(question):
         out_of_scope = True
-    if classification.route in {"kg", "hybrid"} and not constraints["unsupported"]:
+    if reference.status == "clarify":
+        return {"route": "kg", "kg": None, "rag": None, "intent": "logical", "constraints": constraints,
+                "warnings": warnings, "scope": "supported", "administrative_code": reference.to_dict(),
+                "clarification": clarification_for_code(reference)}
+    if (code or classification.route in {"kg", "hybrid"}) and not constraints["unsupported"]:
         if temporal_plan:
             kg = temporal_plan
+        elif code:
+            kg = {"query": "03_unit_by_code", "params": {"code": code}}
         elif "sáp nhập" in lowered or "sắp xếp" in lowered or "trước đây" in lowered:
             name = quoted[0] if quoted else _extract_entity_keyword(question)
             kg = {"query": "04_merger_history", "params": {"old_name": name}}
-        elif code_match:
-            kg = {"query": "03_unit_by_code", "params": {"code": code_match.group(1)}}
         elif province and re.search(r"\b(?:phường|xã)\b", lowered) and any(t in lowered for t in ("danh sách", "các ", "bao nhiêu")):
             kg = {"query": "02_wards_in_province", "params": {"province": province}}
         elif classification.domain == "tourism" and province and any(t in lowered for t in ("danh sách", "các ", "nào", "bao nhiêu")):
@@ -209,9 +219,12 @@ def extract_query_plan(question: str, classification: Classification) -> dict[st
     else:
         kg = None
     route = "rag" if classification.route in {"kg", "hybrid"} and kg is None else classification.route
-    rag = {"domain": classification.domain, "top_k": 5} if route in {"rag", "hybrid"} else None
+    if code and kg:
+        route = "kg"
+    rag = {"domain": classification.domain, "top_k": 5} if route in {"rag", "hybrid"} and not code else None
     intent = {"kg": "logical", "rag": "textual", "hybrid": "hybrid"}[classification.route]
-    return {"route": route, "kg": kg, "rag": rag, "intent": intent, "constraints": constraints, "warnings": warnings,
+    return {"route": route, "kg": kg, "rag": rag, "intent": "logical" if code else intent,
+            "administrative_code": reference.to_dict(), "constraints": constraints, "warnings": warnings,
             "scope": "out_of_scope" if out_of_scope else "supported"}
 
 
@@ -219,10 +232,11 @@ def _dated_unit_plan(question: str, code: str | None) -> dict | None:
     if not code:
         return None
     dates = re.findall(r"\b(\d{4}-\d{1,2}-\d{1,2}|\d{1,2}/\d{1,2}/\d{4})\b", question)
-    lowered = question.casefold()
-    if len(dates) > 1 or re.findall(_TEMPORAL_LITERAL, question, re.I) != dates:
+    lowered = fold_query(question)
+    other_dates = re.findall(r"\b(?:\d{4}-\d{1,2}-\d{1,2}|\d{1,2}[/.-]\d{1,2}[/.-]\d{4}|(?:nam|giai doan)\s+\d{4}(?:\s*[-–]\s*\d{4})?)\b", lowered)
+    if len(dates) > 1 or other_dates != dates:
         return None
-    if any(term in lowered for term in _RELATIVE_TIME_TERMS) or re.search(r"\b(?:giai đoạn|năm nào|khi nào|trước ngày|sau ngày|từ ngày|đến ngày|(?:trước|sau|từ|đến)\s+\d)", question, re.I):
+    if any(fold_query(term) in lowered for term in _RELATIVE_TIME_TERMS) or re.search(r"\b(?:giai doan|nam nao|khi nao|truoc ngay|sau ngay|tu ngay|den ngay|(?:truoc|sau|tu|den)\s+\d)", lowered):
         return None
     as_of = ""
     if dates:
@@ -231,8 +245,7 @@ def _dated_unit_plan(question: str, code: str | None) -> dict | None:
             as_of = (date(*map(int, parts)) if len(parts[0]) == 4 else date(int(parts[2]), int(parts[1]), int(parts[0]))).isoformat()
         except ValueError:
             return None
-    match = re.search(r"\b(?:thuộc|tại|ở|trong)\s+(?:tỉnh|thành phố|tp\.?)\s+(.+?)(?=\s+(?:vào|ngày|tại thời điểm|từ|và|có|là|đúng|không)\b|[?!.,]|$)", question, re.I)
-    province = match.group(1).strip() if match and not re.match(r"(?:nào|gì|thành(?: phố)?\s+(?:nào|gì))\b", match.group(1), re.I) else ""
+    province = code_location_constraint(question)
     return {"query": "09_unit_at_time", "params": {"code": code, "as_of": as_of, "province": province}} if as_of or province else None
 
 
@@ -257,6 +270,21 @@ def _extract_constraints(question: str) -> dict[str, list[str]]:
         unsupported.append("KG hiện tại chưa có truy vấn hình học hoặc khoảng cách; kết quả RAG không tự xác nhận ràng buộc không gian.")
     if any(term in lowered for term in ("năm nào", "khi nào")) and "sáp nhập" not in lowered:
         unsupported.append("KG chưa có truy vấn năm công nhận hoặc sự kiện đầy đủ; cần minh chứng văn bản.")
+    if recognize_administrative_code(question).status == "lookup":
+        # Unaccented code questions receive the same temporal/spatial guards.
+        folded = fold_query(question)
+        if not temporal and (re.search(r"\b(?:nam|ngay|thang|giai doan)\b", folded) or re.search(r"\d{1,4}[-/.]\d{1,2}[-/.]\d{1,4}", folded)):
+            temporal.append("điều kiện thời gian cần xác nhận")
+        if not temporal and any(fold_query(term) in folded for term in _RELATIVE_TIME_TERMS):
+            temporal.append("điều kiện thời gian tương đối cần xác nhận")
+        if temporal and not unsupported:
+            unsupported.append("Cần ngày cụ thể và mốc thời gian được ghi nhận trong KG.")
+        if not spatial and any(term in folded for term in ("ban kinh", "toa do", "giap ranh", "gan nhat", "cach bao xa")):
+            spatial.append("ràng buộc không gian cần xác nhận")
+            unsupported.append("KG chưa hỗ trợ xác nhận ràng buộc không gian này.")
+        if len(code_location_constraints(question)) > 1:
+            spatial.append("nhiều địa phương trong cùng câu hỏi")
+            unsupported.append("Hãy chọn một tỉnh/thành phố cho mỗi lần tra mã.")
     return {"temporal": temporal, "spatial": spatial, "unsupported": unsupported}
 
 
@@ -268,7 +296,7 @@ def _extract_province(question: str) -> str | None:
     value = value.strip(' \"“”')
     if re.match(r"(?:loại|nhóm|danh mục|phân loại|hạng|mức|diện|hệ|ngành|đối tượng)\b", value, flags=re.I):
         return None
-    return value if value and not re.match(r"(?:đâu|nào|gì|bao nhiêu)\b", value, flags=re.I) else None
+    return value if value and not re.match(r"(?:(?:dia phuong|don vi|tinh thanh|tinh|thanh pho)\s+)?(?:dau|nao|gi|bao nhieu)\b", fold_query(value)) else None
 
 
 def _extract_entity_keyword(question: str) -> str:

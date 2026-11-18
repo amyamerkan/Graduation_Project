@@ -7,7 +7,8 @@ import re
 from time import perf_counter
 from urllib.parse import urlsplit
 
-from .cross_check import CrossChecker
+from .cross_check import CrossChecker, render_administrative_lookup
+from .administrative_codes import recognize_administrative_code, validate_code_facts, clarification_for_code
 from .evidence import build_evidence
 from .prompts import build_messages
 
@@ -178,19 +179,47 @@ class AnswerService:
                 "timings_ms": dict(timings),
             }
 
+        reference = recognize_administrative_code(question)
+        if processed.get("plan", {}).get("clarification") or reference.status == "clarify":
+            result = abstain("ambiguous_identifier")
+            result.update(status="needs_clarification", answer=processed.get("plan", {}).get("clarification") or clarification_for_code(reference))
+            return result
         if processed.get("status") == "out_of_scope":
             return abstain("out_of_scope")
         if processed.get("status") == "unsupported_constraints" or processed.get("plan", {}).get("constraints", {}).get("unsupported"):
             return abstain("unsupported_constraints")
         planned_kg = processed.get("plan", {}).get("kg") or {}
+        structured_code = planned_kg.get("query") in {"03_unit_by_code", "09_unit_at_time"}
+        if reference.code and (not structured_code or planned_kg.get("params", {}).get("code") != reference.code):
+            return abstain("missing_verified_code")
         if planned_kg.get("params", {}).get("code") and not processed.get("kg_results"):
             return abstain("missing_verified_code")
+        if structured_code:
+            rows = processed.get("kg_results", [])
+            if any(validate_code_facts(row, planned_kg.get("params", {})) for row in rows):
+                return abstain("missing_verified_code")
+            if len(rows) != 1:
+                result = abstain("ambiguous_code_records")
+                result.update(status="needs_clarification", answer="Mã này khớp nhiều bản ghi hành chính. Bạn hãy thêm ngày cụ thể và tỉnh/thành phố cần tra để xác định đúng đơn vị.")
+                return result
         if planned_kg and (planned_kg.get("query") == "07_kg_statistics" or re.search(r"\b(?:bao nhiêu|số lượng)\b", question.casefold())):
             if not any(isinstance(row, dict) and str(row.get("count", "")).isdigit() for row in processed.get("kg_results", [])):
                 return abstain("missing_verified_count")
-        evidence = build_evidence(processed, max_evidence=self.max_evidence, min_rag_score=self.min_rag_score)
+        evidence_input = {**processed, "rag_results": []} if structured_code else processed
+        evidence = build_evidence(evidence_input, max_evidence=self.max_evidence, min_rag_score=self.min_rag_score)
         if not evidence:
             return abstain("no_eligible_evidence")
+        if structured_code:
+            entry = evidence[0]
+            facts = entry["facts"]
+            fields = [field for field in ("name", "code", "provinceName", "snapshotDate", "validFrom", "validTo") if facts.get(field)]
+            text = render_administrative_lookup(facts, fields)
+            entry["text"] = text
+            entry["allowed_claims"] = [{
+                "claim_id": entry["id"] + "-C01", "mode": "fact", "template": "administrative_code_lookup",
+                "text": text, "evidence_ids": [entry["id"]], "fields": fields,
+                "fact_checks": [{"evidence_id": entry["id"], "field": field, "value": facts[field]} for field in fields],
+            }]
         registry = {}
         for entry in evidence:
             for claim in entry.get("allowed_claims", []):
@@ -200,13 +229,16 @@ class AnswerService:
                 registry[claim_id] = claim
         if not registry:
             return abstain("no_eligible_claims")
-        generation_started = perf_counter()
-        raw = self.generator.generate(build_messages(question, evidence))
-        timings["generation"] = round((perf_counter() - generation_started) * 1000, 3)
-        try:
-            claims = _parse_selection(raw, registry)
-        except ValueError as exc:
-            return abstain(str(exc), "invalid_output")
+        if structured_code:
+            claims = list(registry.values())
+        else:
+            generation_started = perf_counter()
+            raw = self.generator.generate(build_messages(question, evidence))
+            timings["generation"] = round((perf_counter() - generation_started) * 1000, 3)
+            try:
+                claims = _parse_selection(raw, registry)
+            except ValueError as exc:
+                return abstain(str(exc), "invalid_output")
         if not claims:
             return abstain("model_selected_no_claims")
         refresh_started = perf_counter()
@@ -214,7 +246,7 @@ class AnswerService:
             self._refresh_kg(processed, evidence)
         except Exception as exc:
             timings["kg_refresh"] = round((perf_counter() - refresh_started) * 1000, 3)
-            warnings.append("KG không thể xác nhận lại cùng tập minh chứng sau khi LLM sinh kết quả.")
+            warnings.append("KG không thể xác nhận lại cùng tập minh chứng trước khi trả lời.")
             reason = str(exc) if isinstance(exc, ValueError) and str(exc) in {"kg_service_unavailable", "invalid_refreshed_kg_rows", "kg_snapshot_membership_changed"} else "kg_refresh_failed:" + type(exc).__name__
             return abstain(reason)
         timings["kg_refresh"] = round((perf_counter() - refresh_started) * 1000, 3)
@@ -252,6 +284,10 @@ class AnswerService:
         if any(term in query_text for term in ("hết hiệu lực", "kết thúc hiệu lực", "hiệu lực đến")):
             requested_fields["validTo"] = "mốc kết thúc hiệu lực"
         missing_fields = {field: label for field, label in requested_fields.items() if field not in supported_fields}
+        if structured_code and reference.descriptive:
+            missing_fields["description"] = "phần mô tả hoặc thông tin mở rộng ngoài tra cứu mã"
+        if structured_code and missing_fields:
+            checked["question_constraints_checked"] = False
         for field in missing_fields:
             warnings.append(f"missing_requested_fact({field})")
         if checked.get("rejected"):
@@ -320,6 +356,7 @@ class AnswerService:
             "citations": citations,
             "claims": supported,
             "cross_check": checked,
+            "generation_mode": "structured_kg" if structured_code else "llm_claim_selection",
             "warnings": list(dict.fromkeys(warnings)),
             "llm": self.generator.status(),
             "timings_ms": timings,

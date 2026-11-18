@@ -1,0 +1,54 @@
+{
+  "created_at": "2026-10-30T18:00:13.725529+00:00",
+  "before": 31949,
+  "after": 38429,
+  "added_legal_passages": 6108,
+  "added_tourism": 372,
+  "legal": {
+    "linked_full_texts": 33,
+    "errors": []
+  },
+  "tourism": {
+    "coverage": {
+      "01": 20,
+      "04": 13,
+      "08": 8,
+      "11": 17,
+      "15": 1,
+      "19": 20,
+      "22": 9,
+      "24": 20,
+      "25": 20,
+      "31": 13,
+      "33": 18,
+      "38": 20,
+      "40": 4,
+      "42": 2,
+      "44": 17,
+      "46": 20,
+      "48": 20,
+      "51": 6,
+      "52": 15,
+      "56": 20,
+      "66": 14,
+      "68": 20,
+      "79": 20,
+      "80": 3,
+      "86": 6,
+      "91": 16,
+      "92": 10
+    },
+    "errors": [],
+    "target_new_per_province": 20
+  },
+  "types": {
+    "administrative_snapshot": 17520,
+    "administrative_conversion": 10618,
+    "tourism_place": 825,
+    "administrative_source_document": 37,
+    "administrative_reference": 3321,
+    "administrative_legal_passage": 6108
+  },
+  "source_dataset_sha256": "d4504db3f24f54680b7f8add69cdf318f4c39a5e5e60caec08dca1143decab8a",
+  "publication_status": "research release only; active application unchanged"
+}

@@ -1,0 +1,563 @@
+
+// JavaScript Document
+
+
+
+var frmValid = false;
+jQuery(document).ready(function($) {		
+"use strict";
+	var myFrm = $("#frmseach_doc");
+	var re = /([^&=]+)=?([^&]*)/g;
+	var decodeRE = /\+/g;  // Regex for replacing addition symbol with a space
+	var decode = function (str) {return decodeURIComponent( str.replace(decodeRE, " ") );};
+	$.parseParams = function(query) {
+		var params = {}, e;
+		while ( e = re.exec(query) ) { 
+			var k = decode( e[1] ), v = decode( e[2] );
+			if (k.substring(k.length - 2) === '[]') {
+				k = k.substring(0, k.length - 2);
+				(params[k] || (params[k] = [])).push(v);
+			}
+			else params[k] = v;
+		}
+		return params;
+	};
+    $.urlChkParam = function(name){
+        var results = new RegExp('[\?&]' + name + '=([^&#]*)').exec(window.location.href);
+        if (results==null) {
+           return null;
+        }
+        return decodeURI(results[1]) || 0;
+    }
+	$.urlArray = function(){
+		var queries = {};		
+		var URL = document.location.search.substr(1).split('&');
+		if(URL.length>0){
+			$.each(document.location.search.substr(1).split('&'),function(c,q){
+				var i = q.split('=');
+				if(i[1]){
+					queries[i[0].toString()] = i[1].toString();  
+				}				
+			});   
+		}
+		return queries;
+	}	
+	
+	$.urlParam = function(name){
+		var results = new RegExp('[\?&]' + name + '=([^&#]*)').exec(window.location.href);
+		if (results==null){
+		   return null;
+		}
+		else{
+		   return decodeURI(results[1]) || 0;
+		}
+	}
+	
+	$.getSubmit = function(){
+		var curURL = window.location.href;
+		var searchValues = $("[data-url-name]").map(function() {
+			//console.log( $(this).val());		
+			if($(this).val()){						
+				if($(this).attr('id') != undefined){
+					return $(this).attr('id')+"="+$(this).val();
+				}
+				else{
+					if($(this).attr('name') != undefined){
+						if($(this).attr('name').length>0){
+							return $(this).attr('name')+"="+$(this).val();
+						}
+					}
+				}
+			}
+		}).get();
+
+		curURL = searchValues.join("&");		
+		return curURL;
+	}
+	
+	$.pad = function(str, max){
+		str = str.toString();
+  		return str.length < max ? $.pad("0" + str, max) : str;
+	}
+	/****************************************************************************/
+	$('[data-loadajax]').change(function(event){
+		//event.preventDefault();	
+		var combbo = $(this).attr('data-loadajax');
+		var removecombbo = $(this).attr('data-clean');
+		var typeCom = $(this).attr('data-table');
+		var filter = (typeof($(this).attr('data-filter'))=='string')?$(this).attr('data-filter'):'';
+		$("#"+combbo).attr('disabled');
+		var selVal = $(this).val();
+		$.ajax({				
+			data: {	type: typeCom, value: selVal, filter: filter},
+			method: "GET",
+			url: "https://csdl.vietnamtourism.gov.vn/pro/ajax/",
+		}).done(function( data ) {
+			console.log(data);
+			$("#"+combbo).find('option').remove();
+			$("#"+combbo).append(new Option("",""));
+			$.each(data, function(key, val) {				
+				$("#"+combbo).append(new Option(val.title,val.code));
+			});
+			$("#"+combbo).removeAttr("disabled")			
+		});	
+	});
+	/****************************************************************************/
+	Date.prototype.toDateInputValue = (function() {
+		var local = new Date(this);
+		local.setMinutes(this.getMinutes() - this.getTimezoneOffset());
+		return local.toJSON().slice(0,10);
+	});
+	/****************************************************************************/
+	$('body').on('click','.goodsModal',function(){
+        var item = $(this);		
+		var modalObj = item.attr('data-modal-obj');
+		var modalName = item.attr('data-modal-name');		
+		modalObj = JSON.parse(modalObj);
+		$('#'+modalName).find('input:text, input:password, input:file, textarea').val('');
+		$('#'+modalName).find('input:radio, input:checkbox, select').removeAttr('checked').removeAttr('selected');
+		$('#'+modalName + ' select' ).find('option').removeAttr('selected');
+		$.each(modalObj, function(i, item) {
+			
+			var inputType = $("input[name='"+i+"']").attr('type');	
+			var inputID = $("input[name='"+i+"']").attr('id');
+			if(inputType == 'date'){				
+				$("input[id='"+i+"']").val(item);  				
+			}
+			if(inputType == 'radio'){
+			   $("input[name='"+i+"'][value='"+item+"']").prop('checked',true);
+			}			
+			else{
+			 	$("input[name='"+i+"']").val(item);  
+				$("textarea[name='"+i+"']").val(item);
+			}
+			$("select[name='"+i+"']").find("option[value='"+item+"']").attr('selected','selected');
+		});
+		$('#'+modalName).modal('toggle');
+    });
+	/****************************************************************************/
+	/****************************************************************************/
+	/****************************************************************************/
+	/****************************************************************************/
+	/****************************************************************************/
+	$('[data-button-type]').each(function(){
+		$(this).on("click", function(event){
+			event.preventDefault();
+			var i = $(this); // current input
+			var isLink = i.is("a");						
+			var isButton = i.is("button");						
+			var btnopt = i.attr('data-option-val');            
+			var rule = i.attr('data-button-type');
+            var action = i.attr('data-action-value');
+			var val = i.attr('data-button-value');
+			//var task = $("#frmseach_doc input[name='task']").val();		
+			var URL = $.urlArray();
+			
+			//var URL = $.urlArray();
+			
+			//var URL = $.urlArray();
+			
+			if(isLink){ // a tag
+			}
+			
+			if(isButton){
+				switch( rule ){
+					case 'reg':
+						var URLPara = decodeURIComponent(window.location.pathname+ "?" + $.param($.parseParams(decodeURIComponent($.param(URL)))));
+						if(btnopt == 'validate'){
+								//Loading								
+								if(myFrm.valid()){
+									//
+									$("#Loading").modal("show");
+									var chkDup = true;
+									$('[data-duplicate]').each(function(){											
+										event.preventDefault();			
+										var i = $(this); // current input
+										var val = i.attr('data-duplicate');
+										var URL = "https://csdl.vietnamtourism.gov.vn/pro/ajax/";
+										var uname = xoa_dau(i.val());
+										uname = uname.replace(/\s+/g, '-');
+										$.ajax({
+											url: URL,
+											type: 'get',
+											cache: false,
+											data:{"value":uname, "type":val},
+											success: function (data) {
+												//var obj = JSON.parse(JSON.stringify(data);//[{"sothe":"2447"}]			
+												var obj = data;//[{"sothe":"2447"}]															
+												//console.log(obj);
+												if(obj){													
+													if(obj.total && obj.total > 0){
+														
+														chkDup = false;
+														//error valid
+														i.addClass("error").removeClass("valid");
+														i.attr('aria-invalid', 'false');
+														i.after('<label id="'+i.attr('id')+'-error" class="error" for="'+i.attr('id')+'">Thông tin đã có trên hệ thống</label>');
+													}
+													else{
+														i.addClass("valid").removeClass("error");
+														i.attr('aria-invalid', 'true');
+													}
+												}
+											},
+											error: function (err) {				
+												console.log(err);
+											}
+										});
+									});
+									$( document ).ajaxStop(function() {
+										if(chkDup){
+											myFrm.attr('action', URLPara).submit();
+										}
+										else{
+											$("#Loading").modal("hide");
+										}
+									});
+								}
+								else{
+									$("#Loading").modal("hide");
+								}
+							}
+						else{
+							myFrm.attr('action', URLPara).submit();
+						}
+						break;
+					case 'search':
+						var URLPara = "";
+						var URLPara1 = {};
+						$('[data-url-name]').each(function(){
+							var url = $(this).attr('data-url-name');
+							var p1 = $(this).attr('id');
+							var p2 = $(this).val();						
+							var typeInput = $(this).attr('type');
+							var nameInput = $(this).attr('name');
+							if(url == val){	
+								URLPara1['data'] = url;
+								if(typeInput == 'checkbox'){
+								}
+								else{                                
+									if(p2.length > 0){
+										URLPara1[p1] = p2;
+									}
+									else{
+										delete URLPara1[p1];
+									}   
+								}														
+							}
+						});
+
+
+						if(URLPara1['active'] == '-2'){ delete URLPara1['active'];}
+						if("page" in URLPara1){ delete URLPara1['page'];}
+						/*
+						var fields = $( ":input" ).serializeArray();
+						jQuery.each( fields, function( i, field ) {
+							//$( "#results" ).append( field.value + " " );
+							console.log(i);
+							console.log(field);
+
+						});
+						*/
+						var URLPara3 = "https://"+window.location.hostname;//+ "/index.php/search/?" + $.param(URLPara1);
+						if(action){
+						   URLPara3 = URLPara3 + action;
+						}
+						else{
+							URLPara3 = URLPara3 + "/index.php/search/";
+						}
+						//URLPara3 = URLPara3 + "?" + $.param(URLPara1);
+
+						var arrayClean = function(thisArray, thisName) {
+							$.each(thisArray, function(index, item) {
+								if (item.name == thisName) {
+									delete thisArray[index];
+								}
+							});
+						};
+
+						var query = myFrm.serializeArray().filter(function (i) {
+							return i.value;
+						});
+
+						//arrayClean(query, "sort_by_order");
+						//console.log(query);
+
+						URLPara3 = URLPara3 + "?" + $.param(query);
+
+						myFrm.attr('action', URLPara3).submit();					
+
+						break;
+					case 'addsponsor': // thêm tài trợ
+						var ChkPara = {}
+						
+						ChkPara["id"] 			= $("#sponsor_id").val();
+						ChkPara["promotion_id"] = $("#sponsor_promotion_id").val();
+						ChkPara["unit_id"] 		= $("#sponsor_unit_id").val();
+						ChkPara["lucky_text"] 	= $("#sponsor_lucky_text").val();
+						ChkPara["lucky_value"] 	= $("#sponsor_lucky_value").val();
+						ChkPara["lucky_type"] 	= $("input[name=sponsor_lucky_type]:checked").val();						
+						
+						ChkPara["type"] = 3; // thêm tài trợ
+						$('#ModalSponsor').modal('toggle');
+						$.ajax({
+							data: ChkPara,
+							method: "POST",				
+							url: "https://csdl.vietnamtourism.gov.vn/pro/ajaxRequest/",
+						}).done(function( data ) {							
+							$("#sponsor_id").val(0);							
+							$("#sponsor_promotion_id").val("");
+							$("#sponsor_unit_id").val("");
+							$("#sponsor_lucky_text").val("");
+							$("#sponsor_lucky_value").val("");
+							
+							if(data){
+								var modalObj = data/*JSON.parse(data);*/
+								var objModal = {};
+								var NewRow = "";								
+								$.each(modalObj.reverse(), function(i, item) {		
+
+									objModal.sponsor_id = item.id;
+									objModal.sponsor_promotion_id = item.promotion_id;
+									objModal.sponsor_unit_id = item.unit_id;
+									objModal.sponsor_lucky_text = item.lucky_text;
+									objModal.sponsor_lucky_value = item.lucky_value;									
+									objModal.sponsor_lucky_type = item.lucky_type;
+									NewRow += '<tr><td>'+(i+1)+'</td><td><a href="javascript:void(0);" data-toggle="modal" data-backdrop="static" data-keyboard="false" data-target="#ModalSponsor" data-modal-name="ModalSponsor" data-modal-obj=\'' + JSON.stringify(objModal) + '\' class="goodsModal">' + item.lucky_text + '</a></td><td>' + item.lucky_type + '</td><td>' + item.lucky_value + '</td></tr>'; 
+								});
+								$("div#sponsor-table table.table tbody").empty();
+								$("div#sponsor-table table.table tbody").append(NewRow);
+							}
+							else{
+								$("div#sponsor-table table.table tbody").empty();
+							}
+							
+						});						
+						myFrm.attr('action', URLPara).submit();
+						break;
+					case 'deletesponsor': // xóa tài trợ
+						var ChkPara = {}
+						
+						ChkPara["id"] 			= $("#sponsor_id").val();
+						ChkPara["promotion_id"] 	= $("#sponsor_promotion_id").val();
+						ChkPara["unit_id"] 		= $("#sponsor_unit_id").val();
+						
+						ChkPara["type"] = 4; // Xóa nhân sự
+						$('#ModalSponsor').modal('toggle');
+						$.ajax({
+							data: ChkPara,
+							method: "POST",				
+							url: "https://csdl.vietnamtourism.gov.vn/pro/ajaxRequest/",
+						}).done(function( data ) {
+							
+							$("#sponsor_id").val(0);							
+							$("#sponsor_promotion_id").val("");
+							$("#sponsor_unit_id").val("");
+							$("#sponsor_lucky_text").val("");
+							$("#sponsor_lucky_value").val("");
+							
+							console.log(data);
+							
+							if(data){
+								var modalObj = data/*JSON.parse(data);*/
+								var objModal = {};
+								var NewRow = "";								
+								$.each(modalObj.reverse(), function(i, item) {		
+
+									objModal.sponsor_id = item.id;
+									objModal.sponsor_promotion_id = item.promotion_id;
+									objModal.sponsor_unit_id = item.unit_id;
+									objModal.sponsor_lucky_text = item.lucky_text;
+									objModal.sponsor_lucky_value = item.lucky_value;									
+									objModal.sponsor_lucky_type = item.lucky_type;
+									NewRow += '<tr><td>'+(i+1)+'</td><td><a href="javascript:void(0);" data-toggle="modal" data-backdrop="static" data-keyboard="false" data-target="#ModalSponsor" data-modal-name="ModalSponsor" data-modal-obj=\'' + JSON.stringify(objModal) + '\' class="goodsModal">' + item.lucky_text + '</a></td><td>' + item.lucky_type + '</td><td>' + item.lucky_value + '</td></tr>'; 
+								});
+								$("div#sponsor-table table.table tbody").empty();
+								$("div#sponsor-table table.table tbody").append(NewRow);
+							}
+							else{
+								$("div#sponsor-table table.table tbody").empty();
+							}
+						});  
+						break;
+					case 'addmanpower': // thêm nhân sự cho hội nghị hội thảo
+						var ChkPara = {}
+						
+						ChkPara["id"] 			= $("#manpower_id").val();
+						ChkPara["type_obj"] 	= $("#manpower_type").val();
+						ChkPara["type_id"] 		= $("#manpower_type_id").val();
+						ChkPara["promotion_id"] = $("#manpower_promotion_id").val();
+						ChkPara["hoten"] 		= $("#manpower_hoten").val();
+						ChkPara["tel"] 			= $("#manpower_tel").val();
+						ChkPara["ngaysinh"] 	= $("#manpower_ngaysinh").val();
+						ChkPara["gioitinh"] 	= $("input[name=manpower_gioitinh]:checked").val();						
+						ChkPara["socmt"] 		= $("#manpower_socmt").val();
+						ChkPara["ngaycap"] 		= $("#manpower_ngaycap").val();
+						ChkPara["ngayhethan"] 	= $("#manpower_ngayhethan").val();						
+						ChkPara["chucdanh"] 	= $("#manpower_chucdanh").val();
+						ChkPara["order"] 		= $("#manpower_order").val();
+						
+						ChkPara["type"] = 1; // thêm nhân sự
+						$('#ModalManPower').modal('toggle');
+						$.ajax({
+							data: ChkPara,
+							method: "POST",				
+							url: "https://csdl.vietnamtourism.gov.vn/pro/ajaxRequest/",
+						}).done(function( data ) {
+							
+							$("#manpower_id").val(0);							
+							$("#manpower_hoten").val("");
+							$("#manpower_tel").val("");
+							$("#manpower_ngaysinh").val("");
+							$("#manpower_gioitinh").val("");							
+							$("#manpower_socmt").val("");
+							$("#manpower_ngaycap").val("");
+							$("#manpower_ngayhethan").val("");
+							$("#manpower_chucdanh").val("");
+							$("#manpower_order").val(0);
+							
+							console.log(data);
+							
+							if(data){
+								var modalObj = data/*JSON.parse(data);*/
+								var objModal = {};
+								var NewRow = "";								
+								$.each(modalObj.reverse(), function(i, item) {		
+
+									objModal.manpower_id = item.id;
+									objModal.manpower_type = item.type;
+									objModal.manpower_type_id = item.type_id;
+									objModal.manpower_promotion_id = item.promotion_id;
+									objModal.manpower_hoten = item.hoten;
+									objModal.manpower_tel = item.tel;
+									objModal.manpower_ngaysinh = item.ngaysinh;									
+									objModal.manpower_gioitinh = item.gioitinh;
+									objModal.manpower_socmt = item.socmt;
+									objModal.manpower_ngaycap = item.ngaycap;
+									objModal.manpower_ngayhethan = item.ngayhethan;
+									objModal.manpower_chucdanh = item.chucdanh;
+									objModal.manpower_order = item.order;
+									NewRow += '<tr><td>'+(i+1)+'</td><td><a href="javascript:void(0);" data-toggle="modal" data-backdrop="static" data-keyboard="false" data-target="#ModalManPower" data-modal-name="ModalManPower" data-modal-obj=\'' + JSON.stringify(objModal) + '\' class="goodsModal">' + item.hoten + '</a></td><td>' + (item.gioitinh == 1 ? item.ngaysinh1:'') + '</td><td>' + (item.gioitinh == 0 ? item.ngaysinh1:'') + '</td><td>' + item.tel + '</td><td>' + item.chucdanh + '</td><td>' + item.socmt + '</td><td>' + item.ngaycap1 + '</td><td>' + item.ngayhethan + '</td></tr>'; 
+								});
+								$("div#manpower-table table.table tbody").empty();
+								$("div#manpower-table table.table tbody").append(NewRow);
+							}
+							else{
+								$("div#manpower-table table.table tbody").empty();
+							}
+							
+						});
+						myFrm.attr('action', URLPara).submit();
+						break;
+					case 'deletemanpower':
+						var ChkPara = {}
+						
+						ChkPara["id"] 			= $("#manpower_id").val();
+						ChkPara["type_obj"] 	= $("#manpower_type").val();
+						ChkPara["type_id"] 		= $("#manpower_type_id").val();
+						ChkPara["promotion_id"] = $("#manpower_promotion_id").val();
+						
+						ChkPara["type"] = 2; // Xóa nhân sự
+						$('#ModalManPower').modal('toggle');
+						$.ajax({
+							data: ChkPara,
+							method: "POST",				
+							url: "https://csdl.vietnamtourism.gov.vn/pro/ajaxRequest/",
+						}).done(function( data ) {
+							
+							$("#manpower_id").val(0);							
+							$("#manpower_hoten").val("");
+							$("#manpower_tel").val("");
+							$("#manpower_ngaysinh").val("");
+							$("#manpower_gioitinh").val("");							
+							$("#manpower_socmt").val("");
+							$("#manpower_ngaycap").val("");
+							$("#manpower_ngayhethan").val("");
+							$("#manpower_chucdanh").val("");
+							$("#manpower_order").val(0);
+							
+							console.log(data);
+							
+							if(data){
+								var modalObj = data/*JSON.parse(data);*/
+								var objModal = {};
+								var NewRow = "";								
+								$.each(modalObj.reverse(), function(i, item) {		
+
+									objModal.manpower_id = item.id;
+									objModal.manpower_type = item.type;
+									objModal.manpower_type_id = item.type_id;
+									objModal.manpower_promotion_id = item.promotion_id;
+									objModal.manpower_hoten = item.hoten;
+									objModal.manpower_tel = item.tel;
+									objModal.manpower_ngaysinh = item.ngaysinh;									
+									objModal.manpower_gioitinh = item.gioitinh;
+									objModal.manpower_socmt = item.socmt;
+									objModal.manpower_ngaycap = item.ngaycap;
+									objModal.manpower_ngayhethan = item.ngayhethan;
+									objModal.manpower_chucdanh = item.chucdanh;
+									objModal.manpower_order = item.order;
+									NewRow += '<tr><td>'+(i+1)+'</td><td><a href="javascript:void(0);" data-toggle="modal" data-backdrop="static" data-keyboard="false" data-target="#ModalManPower" data-modal-name="ModalManPower" data-modal-obj=\'' + JSON.stringify(objModal) + '\' class="goodsModal">' + item.hoten + '</a></td><td>' + (item.gioitinh == 1 ? item.ngaysinh1:'') + '</td><td>' + (item.gioitinh == 0 ? item.ngaysinh1:'') + '</td><td>' + item.tel + '</td><td>' + item.chucdanh + '</td><td>' + item.socmt + '</td><td>' + item.ngaycap1 + '</td><td>' + item.ngayhethan + '</td></tr>'; 
+								});
+								$("div#manpower-table table.table tbody").empty();
+								$("div#manpower-table table.table tbody").append(NewRow);
+							}
+							else{
+								$("div#manpower-table table.table tbody").empty();
+							}
+						});  
+						break;
+				}
+			}
+			
+		}); //END $(this).on("click", function(event)
+	}); // End $('[data-button-type]').each(function()
+	/**********************************/
+	/*************************************
+	Easy Number Separator
+	***********************************/
+	$('[data-multiply]').each(function(){
+		$(this).on('input', function(){
+			if (/^[0-9.,]+$/.test($(this).val())) {
+				//$(this).val(parseFloat($(this).val().replace(/,/g, '')).toLocaleString('en'));			
+				var number1 = parseInt($("#"+$(this).attr('data-multiply')).val());
+				var number2 = parseInt($(this).val());
+				var resultName = $(this).attr('data-result');
+				var result = (number1*number2);
+				$("#"+resultName).val(result.toLocaleString("vi-VN"));
+				//console.log($("#"+result));
+			} 
+		});
+	});
+	$('.modal').on('hide.bs.modal', function() {
+		//$(this).find('input:date, input:text, input:password, input:file, textarea').not("input[type='hidden']").val('');
+		$(this).find('input, textarea').not("input[type='hidden'], input[type=radio], input[type=checkbox]").val('');
+		$(this).find('input, textarea').not(".notdelete").val(''); // không xóa khi có class notdelete
+		//$(this).find('input:text, input:password, input:file, textarea').not("input.fix").val('');
+		//$(this).find('input:radio, input:checkbox, select').removeAttr('checked').removeAttr('selected');
+		$(this).find('input:radio, input:checkbox, select').not(".notdelete").removeAttr('checked').removeAttr('selected');
+		$(this).find('select').find('option').removeAttr('selected');
+		//$(this).find('select.delete').empty();// xóa khi có class delete
+		//$(this).modal('hide');
+	});
+	
+});
+function xoa_dau(str) {
+	str = str.replace(/à|á|ạ|ả|ã|â|ầ|ấ|ậ|ẩ|ẫ|ă|ằ|ắ|ặ|ẳ|ẵ/g, "a");
+	str = str.replace(/è|é|ẹ|ẻ|ẽ|ê|ề|ế|ệ|ể|ễ/g, "e");
+	str = str.replace(/ì|í|ị|ỉ|ĩ/g, "i");
+	str = str.replace(/ò|ó|ọ|ỏ|õ|ô|ồ|ố|ộ|ổ|ỗ|ơ|ờ|ớ|ợ|ở|ỡ/g, "o");
+	str = str.replace(/ù|ú|ụ|ủ|ũ|ư|ừ|ứ|ự|ử|ữ/g, "u");
+	str = str.replace(/ỳ|ý|ỵ|ỷ|ỹ/g, "y");
+	str = str.replace(/đ/g, "d");
+	str = str.replace(/À|Á|Ạ|Ả|Ã|Â|Ầ|Ấ|Ậ|Ẩ|Ẫ|Ă|Ằ|Ắ|Ặ|Ẳ|Ẵ/g, "a");
+	str = str.replace(/È|É|Ẹ|Ẻ|Ẽ|Ê|Ề|Ế|Ệ|Ể|Ễ/g, "e");
+	str = str.replace(/Ì|Í|Ị|Ỉ|Ĩ/g, "i");
+	str = str.replace(/Ò|Ó|Ọ|Ỏ|Õ|Ô|Ồ|Ố|Ộ|Ổ|Ỗ|Ơ|Ờ|Ớ|Ợ|Ở|Ỡ/g, "o");
+	str = str.replace(/Ù|Ú|Ụ|Ủ|Ũ|Ư|Ừ|Ứ|Ự|Ử|Ữ/g, "u");
+	str = str.replace(/Ỳ|Ý|Ỵ|Ỷ|Ỹ/g, "y");
+	str = str.replace(/Đ/g, "d");
+	str = str.replace(/\s+/g, ' ');
+	str.trim();
+	return str;
+}

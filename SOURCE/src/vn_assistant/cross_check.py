@@ -2,9 +2,9 @@ from __future__ import annotations
 
 import re
 import unicodedata
-from datetime import date
 from collections.abc import Mapping
 from typing import Any
+from .administrative_codes import recognize_administrative_code, validate_code_facts, province_matches
 
 
 _FIELD_LABELS = {
@@ -129,6 +129,23 @@ def render_fact_claim(facts: Mapping[str, Any], fields: list[str] | None = None)
     return " ".join(render_kg_fact(field, facts[field], entity_name) for field in selected)
 
 
+def render_administrative_lookup(facts: Mapping[str, Any], fields: list[str]) -> str:
+    # Validate all selected fields with the same value rules as other KG claims.
+    render_fact_claim(facts, fields)
+    if not {"name", "code"}.issubset(fields):
+        raise ValueError("Tra mã cần tên và mã đơn vị")
+    text = f"Mã hành chính {_value(facts['code'])} là {_value(facts['name'])}"
+    if "provinceName" in fields and not province_matches(str(facts["name"]), str(facts["provinceName"])):
+        text += f", thuộc {_value(facts['provinceName'])}"
+    text += "."
+    if "snapshotDate" in fields:
+        text += f" Thông tin theo bản chụp danh mục ngày {_value(facts['snapshotDate'])}."
+    for field in ("validFrom", "validTo"):
+        if field in fields:
+            text += " " + render_kg_fact(field, facts[field])
+    return text
+
+
 def _date_value(value: str) -> str:
     if "/" in value:
         day, month, year = value.split("/")
@@ -166,7 +183,7 @@ class CrossChecker:
         for index, claim in enumerate(claims):
             reasons = self._verify_claim(claim, registry)
             if not reasons:
-                reasons.extend(self._verify_constraints(claim, registry, plan or {}))
+                reasons.extend(self._verify_constraints(claim, registry, plan or {}, question))
             if reasons:
                 rejected.append({"index": index, "claim": claim, "reasons": sorted(set(reasons))})
             else:
@@ -175,6 +192,7 @@ class CrossChecker:
                 accepted["source_verified"] = all(registry[item].get("source_verified") is True for item in claim["evidence_ids"])
                 supported.append(accepted)
         status = "supported" if supported and not rejected else "partial" if supported else "insufficient_evidence"
+        code_lookup = ((plan or {}).get("kg") or {}).get("query") in {"03_unit_by_code", "09_unit_at_time"}
         return {
             "status": status,
             "supported": supported,
@@ -183,41 +201,42 @@ class CrossChecker:
             "supported_count": len(supported),
             "rejected_count": len(rejected),
             "verification_scope": "extractive_text_and_structured_kg_facts",
-            "constraints_checked": (plan or {}).get("kg", {}).get("query") == "09_unit_at_time" if (plan or {}).get("kg") else False,
+            "constraints_checked": code_lookup,
+            "question_constraints_checked": bool(code_lookup and question and recognize_administrative_code(question).code
+                                                   and supported and not rejected),
         }
 
-    def _verify_constraints(self, claim, registry, plan):
-        if (plan.get("kg") or {}).get("query") != "09_unit_at_time":
+    def _verify_constraints(self, claim, registry, plan, question=""):
+        kg_plan = plan.get("kg") or {}
+        reference = recognize_administrative_code(question)
+        if reference.status == "clarify":
+            return ["ambiguous_question_identifier"]
+        if reference.code:
+            # Reconstruct the question contract rather than trusting that the
+            # previous routing stage copied its key/date/province correctly.
+            from .router import Classification, extract_query_plan
+            expected = extract_query_plan(question, Classification(question, "kg", "administration", 1, 1, "check"))
+            if expected.get("kg") != kg_plan or expected.get("constraints", {}).get("unsupported"):
+                return ["question_plan_constraint_mismatch"]
+        if kg_plan.get("query") not in {"03_unit_by_code", "09_unit_at_time"}:
             return []
-        params = (plan.get("kg") or {}).get("params", {})
-        as_of, province = params.get("as_of"), params.get("province")
-        if not as_of and not province:
-            return []
+        params = kg_plan.get("params", {})
         if claim["mode"] != "fact":
             return ["text_does_not_verify_spatiotemporal_constraints"]
         reasons = []
         for evidence_id in claim["evidence_ids"]:
             entry = registry[evidence_id]
             facts = entry.get("current_facts", entry.get("facts", {}))
-            if as_of:
-                try:
-                    moment = date.fromisoformat(as_of)
-                    snapshot = date.fromisoformat(facts["snapshotDate"]) if facts.get("snapshotDate") else None
-                    start = date.fromisoformat(facts["validFrom"]) if facts.get("validFrom") else None
-                    end = date.fromisoformat(facts["validTo"]) if facts.get("validTo") else None
-                    if snapshot is not None:
-                        if moment != snapshot:
-                            reasons.append("outside_recorded_snapshot_date")
-                    elif start is None and end is None:
-                        reasons.append("missing_temporal_evidence")
-                    elif start and moment < start or end and moment > end:
-                        reasons.append("outside_kg_validity_interval")
-                    elif (start is None or end is None) and moment not in {start, end}:
-                        reasons.append("unbounded_snapshot_not_valid_for_arbitrary_date")
-                except (ValueError, TypeError):
-                    reasons.append("invalid_temporal_evidence")
-            if province and _normalise(province).casefold() not in _normalise(str(facts.get("provinceName", ""))).casefold():
-                reasons.append("kg_province_constraint_mismatch")
+            reasons.extend(validate_code_facts(facts, params))
+            fields = set(claim.get("fields", []))
+            if params.get("code") and not {"code", "name"}.issubset(fields):
+                reasons.append("missing_requested_code_fields")
+            if (params.get("province") or facts.get("provinceName")) and "provinceName" not in fields:
+                # Province records can identify themselves without a parent.
+                if facts.get("type", "").rsplit("#", 1)[-1] not in {"Province", "HistoricalProvince"}:
+                    reasons.append("missing_requested_province_field")
+            if params.get("as_of") and not {"snapshotDate", "validFrom", "validTo"}.intersection(fields):
+                reasons.append("missing_requested_temporal_field")
         return reasons
 
     def _invalid(self, reason: str) -> dict[str, Any]:
@@ -303,7 +322,10 @@ class CrossChecker:
                     if field not in current or str(current[field]) != str(facts.get(field)):
                         reasons.append("kg_snapshot_changed")
         try:
-            expected = render_fact_claim(facts, fields)
+            template = claim.get("template")
+            if template not in {None, "administrative_code_lookup"}:
+                raise ValueError("Mẫu diễn đạt chưa được hỗ trợ")
+            expected = render_administrative_lookup(facts, fields) if template else render_fact_claim(facts, fields)
             if _normalise(claim["text"]) != _normalise(expected):
                 reasons.append("claim_does_not_match_kg_rendering")
         except (ValueError, TypeError):

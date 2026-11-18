@@ -7,6 +7,7 @@ from typing import Any
 from rdflib import Namespace, URIRef
 
 from .router import QuestionRouter, extract_query_plan
+from .administrative_codes import validate_code_facts
 
 
 VN = Namespace("https://w3id.org/vn-assistant/ontology#")
@@ -43,12 +44,17 @@ class QuestionProcessor:
         warnings: list[str] = list(plan.get("warnings", []))
         physical_filters: dict[str, Any] = {"domain": classification.domain, "doc_ids": None, "entity_terms": None}
 
-        allow_retrieval = not plan["constraints"]["unsupported"] and plan.get("scope") != "out_of_scope"
+        allow_retrieval = not plan["constraints"]["unsupported"] and plan.get("scope") != "out_of_scope" and not plan.get("clarification")
         if plan["kg"] and allow_retrieval:
             kg_started = perf_counter()
             if self.kg_service:
                 try:
                     kg_results = self.kg_service.execute(plan["kg"]["query"], plan["kg"]["params"])
+                    if plan["kg"]["query"] in {"03_unit_by_code", "09_unit_at_time"}:
+                        accepted = [row for row in kg_results if not validate_code_facts(row, plan["kg"]["params"])]
+                        if len(accepted) != len(kg_results):
+                            warnings.append("invalid_code_evidence: Đã loại bản ghi không xác nhận đủ mã, loại đơn vị hoặc điều kiện tra cứu.")
+                        kg_results = accepted
                     if plan["kg"]["query"] == "08_entity_facts":
                         allowed_types = {str(VN[name]) for name in _DOMAIN_TYPES.get(classification.domain, set())}
                         rejected_types = [row for row in kg_results if row.get("type") and str(row["type"]) not in allowed_types]
@@ -66,7 +72,9 @@ class QuestionProcessor:
             timings["kg"] = (perf_counter() - kg_started) * 1000
 
         use_rag = allow_retrieval and (plan["rag"] is not None or (plan["kg"] is not None and not kg_results))
-        if plan["kg"] and plan["kg"]["query"] == "09_unit_at_time" and not kg_results:
+        if plan.get("administrative_code", {}).get("status") in {"lookup", "clarify"}:
+            use_rag = False
+        if plan["kg"] and plan["kg"]["query"] in {"03_unit_by_code", "09_unit_at_time"}:
             use_rag = False
         if use_rag:
             rag_started = perf_counter()
@@ -76,9 +84,6 @@ class QuestionProcessor:
                     if classification.domain == "tourism" and named_places:
                         kwargs["entity_terms"] = named_places
                         physical_filters["entity_terms"] = named_places
-                    if plan["kg"] and plan["kg"]["query"] == "03_unit_by_code" and not kg_results:
-                        kwargs["entity_terms"] = [plan["kg"]["params"]["code"]]
-                        physical_filters["entity_terms"] = kwargs["entity_terms"]
                     named = re.search(r"\b(?:Ca trù|Mỹ Sơn|Hội An|Cố đô Huế|Nhã nhạc)\b", classification.question, re.I)
                     if classification.domain == "heritage" and named and not kg_results:
                         kwargs["entity_terms"] = [named.group(0)]
@@ -106,6 +111,8 @@ class QuestionProcessor:
             status = "unsupported_constraints"
         elif plan.get("scope") == "out_of_scope":
             status = "out_of_scope"
+        elif plan.get("clarification"):
+            status = "needs_clarification"
         elif warnings and evidence_count:
             status = "partial"
         timings["total"] = (perf_counter() - started) * 1000

@@ -98,7 +98,7 @@ def test_bounded_interval_filters_and_cross_check_agree(dated_service, moment, a
     dated_service.graph.add((URIRef("urn:a"), URIRef(valid_to), Literal("2025-07-31", datatype=URIRef("http://www.w3.org/2001/XMLSchema#date"))))
     plan = {"kg": {"query": "09_unit_at_time", "params": {"code": "00070", "as_of": moment, "province": "Hà Nội"}}}
     assert bool(dated_service.execute("09_unit_at_time", plan["kg"]["params"])) is accepted
-    facts = {"name": "Phường A", "code": "00070", "provinceName": "Thành phố Hà Nội", "validFrom": "2025-07-01", "validTo": "2025-07-31"}
+    facts = {"name": "Phường A", "code": "00070", "type": "https://w3id.org/vn-assistant/ontology#Ward", "provinceName": "Thành phố Hà Nội", "validFrom": "2025-07-01", "validTo": "2025-07-31"}
     fields = list(facts)
     claim = {"mode": "fact", "text": render_fact_claim(facts, fields), "fields": fields, "evidence_ids": ["E1"],
              "fact_checks": [{"evidence_id": "E1", "field": field, "value": facts[field]} for field in fields]}
@@ -108,7 +108,7 @@ def test_bounded_interval_filters_and_cross_check_agree(dated_service, moment, a
 
 @pytest.mark.parametrize("date_value,province,accepted", [("2025-07-01", "Hà Nội", True), ("2025-06-30", "Hà Nội", False), ("2026-01-01", "Hà Nội", False), ("2025-07-01", "Quảng Ninh", False)])
 def test_cross_check_independently_checks_constraints(date_value, province, accepted):
-    facts = {"name": "Phường A", "code": "00070", "provinceName": "Thành phố Hà Nội", "validFrom": "2025-07-01"}
+    facts = {"name": "Phường A", "code": "00070", "type": "https://w3id.org/vn-assistant/ontology#Ward", "provinceName": "Thành phố Hà Nội", "validFrom": "2025-07-01"}
     fields = ["name", "code", "provinceName", "validFrom"]
     claim = {"mode": "fact", "text": render_fact_claim(facts, fields), "fields": fields, "evidence_ids": ["E1"],
              "fact_checks": [{"evidence_id": "E1", "field": field, "value": facts[field]} for field in fields]}

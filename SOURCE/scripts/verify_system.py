@@ -46,6 +46,10 @@ def main():
                 checks["source_kinds"] = set(case["sources"]).issubset({source.get("kind") for source in result.get("citations", [])})
             if case.get("constraints_checked"):
                 checks["independent_constraints_check"] = result.get("cross_check", {}).get("constraints_checked") is True
+            if "question_constraints_checked" in case:
+                checks["question_constraints_check"] = result.get("cross_check", {}).get("question_constraints_checked") is case["question_constraints_checked"]
+            if case.get("generation_mode"):
+                checks["generation_mode"] = result.get("generation_mode") == case["generation_mode"]
             if case.get("resolved"):
                 checks["context_resolution"] = result.get("context_resolution", {}).get("resolved") is True
             if result.get("status") in {"abstained", "needs_clarification"}:

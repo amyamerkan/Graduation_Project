@@ -1,0 +1,376 @@
+{
+  "pdf": "/Users/amyas/HK1 26-27/DATN/BAO_CAO/THESIS_2026/output/pdf/Bao_cao_Do_an_Tot_nghiep_Tri_Viet_2026.pdf",
+  "checks": {
+    "six_chapters": true,
+    "chapter_1_five_sections": true,
+    "chapter_2_five_sections": true,
+    "chapter_3_five_sections": true,
+    "chapter_4_five_sections": true,
+    "chapter_5_five_sections": true,
+    "chapter_6_five_sections": true,
+    "no_unresolved_markers": true,
+    "local_markdown_links_exist": true,
+    "page_count_matches_pngs": true,
+    "no_replacement_glyphs": true,
+    "required_identity": true,
+    "static_toc_mapping_stable": true,
+    "no_decorative_title_borders": true
+  },
+  "page_warnings": [
+    {
+      "page": 41,
+      "sparse_text_chars": 91,
+      "note": "Check image or ending section visually"
+    }
+  ],
+  "page_count": 56,
+  "page_stats": [
+    {
+      "page": 1,
+      "chars": 270,
+      "words": 58,
+      "first_line": "TỔNG LIÊN ĐOÀN LAO ĐỘNG VIỆT NAM"
+    },
+    {
+      "page": 2,
+      "chars": 307,
+      "words": 65,
+      "first_line": "TỔNG LIÊN ĐOÀN LAO ĐỘNG VIỆT NAM"
+    },
+    {
+      "page": 3,
+      "chars": 605,
+      "words": 132,
+      "first_line": "LỜI CẢM ƠN"
+    },
+    {
+      "page": 4,
+      "chars": 424,
+      "words": 93,
+      "first_line": "CAM ĐOAN VỀ NGUỒN VÀ KẾT QUẢ"
+    },
+    {
+      "page": 5,
+      "chars": 1440,
+      "words": 298,
+      "first_line": "TÓM TẮT"
+    },
+    {
+      "page": 6,
+      "chars": 1530,
+      "words": 204,
+      "first_line": "ABSTRACT"
+    },
+    {
+      "page": 7,
+      "chars": 5474,
+      "words": 275,
+      "first_line": "MỤC LỤC"
+    },
+    {
+      "page": 8,
+      "chars": 215,
+      "words": 48,
+      "first_line": "DANH MỤC HÌNH ẢNH"
+    },
+    {
+      "page": 9,
+      "chars": 367,
+      "words": 81,
+      "first_line": "DANH MỤC BẢNG BIỂU"
+    },
+    {
+      "page": 10,
+      "chars": 765,
+      "words": 130,
+      "first_line": "DANH MỤC TỪ VIẾT TẮT"
+    },
+    {
+      "page": 11,
+      "chars": 656,
+      "words": 140,
+      "first_line": "DANH MỤC KÝ HIỆU TOÁN HỌC"
+    },
+    {
+      "page": 12,
+      "chars": 1993,
+      "words": 442,
+      "first_line": "CHƯƠNG 1 MỞ ĐẦU"
+    },
+    {
+      "page": 13,
+      "chars": 2069,
+      "words": 450,
+      "first_line": "1.2 Công trình liên quan"
+    },
+    {
+      "page": 14,
+      "chars": 2186,
+      "words": 484,
+      "first_line": "RQ2 xem xét tác động của dữ liệu mới. Corpus mở rộng có thể bổ sung tài liệu"
+    },
+    {
+      "page": 15,
+      "chars": 2074,
+      "words": 443,
+      "first_line": "được lưu tại trình duyệt; hệ thống chưa có tài khoản người dùng hoặc đồng bộ hội"
+    },
+    {
+      "page": 16,
+      "chars": 2047,
+      "words": 442,
+      "first_line": "không hợp lệ và bản ghi thay đổi giữa hai lần đọc. Mô hình sinh và retriever được giả"
+    },
+    {
+      "page": 17,
+      "chars": 1592,
+      "words": 348,
+      "first_line": "CHƯƠNG 2 CƠ SỞ LÝ THUYẾT VÀ CÔNG TRÌNH LIÊN"
+    },
+    {
+      "page": 18,
+      "chars": 2008,
+      "words": 430,
+      "first_line": "2.2.2 Kết hợp xếp hạng và đánh giá"
+    },
+    {
+      "page": 19,
+      "chars": 2057,
+      "words": 454,
+      "first_line": "Mã cần được lưu như chuỗi. Chuỗi “00008” và số nguyên 8 không có cùng khả"
+    },
+    {
+      "page": 20,
+      "chars": 1874,
+      "words": 403,
+      "first_line": "một đường triển khai khác và không được coi là cùng kết quả chỉ vì cùng sử dụng ý"
+    },
+    {
+      "page": 21,
+      "chars": 2144,
+      "words": 477,
+      "first_line": "Qwen3-0.6B được dùng ở đường chọn mệnh đề [11]. Máy chủ tạo danh sách"
+    },
+    {
+      "page": 22,
+      "chars": 912,
+      "words": 197,
+      "first_line": "dựng mẫu hiện có; nó không sửa được thiên lệch do câu hỏi tự sinh hoặc nhãn dương"
+    },
+    {
+      "page": 23,
+      "chars": 2019,
+      "words": 440,
+      "first_line": "CHƯƠNG 3 DỮ LIỆU VÀ PHƯƠNG PHÁP NGHIÊN CỨU"
+    },
+    {
+      "page": 24,
+      "chars": 1915,
+      "words": 348,
+      "first_line": "3.3 Phương pháp và dữ liệu"
+    },
+    {
+      "page": 25,
+      "chars": 1945,
+      "words": 411,
+      "first_line": "trước tháng 7/2025. Các trường này được lưu riêng để tránh suy diễn sai thứ tự trước"
+    },
+    {
+      "page": 26,
+      "chars": 2241,
+      "words": 477,
+      "first_line": "3.3.4 Làm sạch và kiểm soát chất lượng"
+    },
+    {
+      "page": 27,
+      "chars": 1569,
+      "words": 336,
+      "first_line": "3.3.6 Các cấu hình thực nghiệm"
+    },
+    {
+      "page": 28,
+      "chars": 1955,
+      "words": 426,
+      "first_line": "Tương tự, 6.642 node Ward trong KG là tổng các phiên bản, không có nghĩa Việt Nam"
+    },
+    {
+      "page": 29,
+      "chars": 1886,
+      "words": 398,
+      "first_line": "CHƯƠNG 4 THIẾT KẾ VÀ TRIỂN KHAI HỆ THỐNG"
+    },
+    {
+      "page": 30,
+      "chars": 1095,
+      "words": 221,
+      "first_line": "4.3 Phương pháp thiết kế và triển khai"
+    },
+    {
+      "page": 31,
+      "chars": 1999,
+      "words": 413,
+      "first_line": "worker hoặc nhiều máy. Vì vậy, hướng dẫn vận hành local ưu tiên một process và"
+    },
+    {
+      "page": 32,
+      "chars": 2132,
+      "words": 443,
+      "first_line": "Processor loại dòng sai mã, sai loại thực thể, thiếu tên hoặc thiếu tỉnh ở loại đơn vị"
+    },
+    {
+      "page": 33,
+      "chars": 1564,
+      "words": 337,
+      "first_line": "nội dung vượt hợp đồng. Vì vậy, mô hình không được tự viết thêm câu mô tả hoặc suy"
+    },
+    {
+      "page": 34,
+      "chars": 1036,
+      "words": 213,
+      "first_line": "Hình 4.2 Giao diện kiểm tra mã và hỏi tiếp nối"
+    },
+    {
+      "page": 35,
+      "chars": 1744,
+      "words": 357,
+      "first_line": "Báo cáo HTTP của bản sửa mã D0 có 65 ca đạt, bao gồm câu có mã không tiền tố,"
+    },
+    {
+      "page": 36,
+      "chars": 1746,
+      "words": 379,
+      "first_line": "CHƯƠNG 5 THỰC NGHIỆM VÀ PHÂN TÍCH KẾT QUẢ"
+    },
+    {
+      "page": 37,
+      "chars": 2114,
+      "words": 445,
+      "first_line": "5.3 Phương pháp và dữ liệu thực nghiệm"
+    },
+    {
+      "page": 38,
+      "chars": 1610,
+      "words": 325,
+      "first_line": "dòng quan sát NSO có cùng nội dung liên quan có thể đều phù hợp, dù nhãn thủ công"
+    },
+    {
+      "page": 39,
+      "chars": 1742,
+      "words": 354,
+      "first_line": "Ở D0, nhiều câu hỏi về dữ liệu mới không có đủ nhãn dương trong corpus. “Độ"
+    },
+    {
+      "page": 40,
+      "chars": 1390,
+      "words": 293,
+      "first_line": "5.4.2 Phân tích theo loại câu hỏi"
+    },
+    {
+      "page": 41,
+      "chars": 91,
+      "words": 20,
+      "first_line": "Hình 5.1 MRR trên silver test và bộ thủ công"
+    },
+    {
+      "page": 42,
+      "chars": 1205,
+      "words": 245,
+      "first_line": "5.4.3 Tác động bổ sung corpus trên câu hỏi cũ"
+    },
+    {
+      "page": 43,
+      "chars": 1633,
+      "words": 340,
+      "first_line": "Phương pháp D0 MRR@10 D1 MRR@10"
+    },
+    {
+      "page": 44,
+      "chars": 2036,
+      "words": 423,
+      "first_line": "được liệt kê trên cơ chế lấy mẫu hiện tại. Tuy nhiên, các mẫu câu và nhãn đã biết vẫn"
+    },
+    {
+      "page": 45,
+      "chars": 890,
+      "words": 194,
+      "first_line": "Các bộ GS-QA, MapQA và Tourism QA mới ở mức khảo sát công trình liên quan."
+    },
+    {
+      "page": 46,
+      "chars": 1849,
+      "words": 408,
+      "first_line": "CHƯƠNG 6 KẾT LUẬN VÀ HƯỚNG PHÁT TRIỂN"
+    },
+    {
+      "page": 47,
+      "chars": 2064,
+      "words": 449,
+      "first_line": "6.3 Tổng kết phương pháp và dữ liệu"
+    },
+    {
+      "page": 48,
+      "chars": 1885,
+      "words": 410,
+      "first_line": "Tập silver có thiên lệch từ khuôn câu và nguồn tạo nhãn. Bộ thủ công chỉ có 16"
+    },
+    {
+      "page": 49,
+      "chars": 2156,
+      "words": 476,
+      "first_line": "Ưu tiên thứ hai là tổ chức đánh giá câu trả lời. Rubric cần tách tính đúng của dữ"
+    },
+    {
+      "page": 50,
+      "chars": 1376,
+      "words": 301,
+      "first_line": "mặc định; các kiểm tra này chưa thay được nghiệm thu chất lượng độc lập hoặc đo tải"
+    },
+    {
+      "page": 51,
+      "chars": 1656,
+      "words": 199,
+      "first_line": "TÀI LIỆU THAM KHẢO"
+    },
+    {
+      "page": 52,
+      "chars": 1071,
+      "words": 167,
+      "first_line": "[13] Cục Thống kê. Bảng đối chiếu đơn vị hành chính. Quan sát lưu ngày"
+    },
+    {
+      "page": 53,
+      "chars": 1084,
+      "words": 218,
+      "first_line": "PHỤ LỤC A ĐỐI CHIẾU KẾ HOẠCH"
+    },
+    {
+      "page": 54,
+      "chars": 1558,
+      "words": 304,
+      "first_line": "PHỤ LỤC B GIAO THỨC VÀ CA KIỂM TRA"
+    },
+    {
+      "page": 55,
+      "chars": 1261,
+      "words": 265,
+      "first_line": "PHỤ LỤC C THANG CHẤM ĐỀ XUẤT VÀ KẾ HOẠCH HOÀN"
+    },
+    {
+      "page": 56,
+      "chars": 779,
+      "words": 122,
+      "first_line": "PHỤ LỤC D KHẢ NĂNG TRUY NGUYÊN"
+    }
+  ],
+  "pdf_sha256": "fb400a888bf15ede0912bd4e551def19a4fba39e637d73f405333e4d7cf657f7",
+  "visual_review": {
+    "status": "passed",
+    "pages_reviewed": 56,
+    "resolution_dpi": 100,
+    "method": "Native-resolution two-page spreads; all final pages inspected, or pixel-identical to previously inspected pages. Re-rendered after layout fixes."
+  },
+  "page_warnings_reviewed": {
+    "41": "Two charts and captions; sparse text is expected."
+  },
+  "docx_sha256": "fa1e9dc18296aa627e5f9f1c75f7b5c6d8b86a9ab2cd755f5818b15e13098dcc"
+}

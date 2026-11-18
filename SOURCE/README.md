@@ -6,6 +6,8 @@ Tài liệu lý thuyết, giải thích từng module, cấu hình, cách kiểm
 
 Báo cáo Word/PDF được gom tại [DATN/BAO_CAO](../BAO_CAO/). Báo cáo triển khai giai đoạn đầu nằm trong [docs/IMPLEMENTATION_REPORT.md](docs/IMPLEMENTATION_REPORT.md). Sơ đồ toàn bộ thư mục ở [DATN/README.md](../README.md).
 
+Bộ [báo cáo tốt nghiệp và hồ sơ đối chứng](../BAO_CAO/THESIS_2026/README.md) gồm sáu chương, Word/PDF, ma trận yêu cầu, giao thức, kết quả và backlog. [Nghiệm thu D1 ngày 18/11/2026](../artifacts/research_validation_2026-11-18/README.md) ghi kết quả chạy thật, độ trễ và phiếu chấm câu trả lời để người đánh giá hoàn thiện.
+
 ## Bộ tài liệu dự án
 
 Đối chiếu mã nguồn và dữ liệu hiện có ngày 25/10/2026. Tài liệu phân biệt phần đã triển khai, giới hạn hiện tại và đề xuất mở rộng.

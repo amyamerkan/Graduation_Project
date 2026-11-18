@@ -1,0 +1,35 @@
+{
+  "validation_date": "2026-11-18",
+  "release": "artifacts/research_expansion_2026-10-30",
+  "configuration": {
+    "port": 8011,
+    "dataset": "artifacts/research_expansion_2026-10-30/data/structured_records.jsonl",
+    "kg": "artifacts/research_expansion_2026-10-30/artifacts/kg/vn_knowledge_graph.ttl",
+    "router": "artifacts/research_expansion_2026-10-30/artifacts/router/router.joblib",
+    "index": "artifacts/research_expansion_2026-10-30/artifacts/faiss/vn.index",
+    "metadata": "artifacts/research_expansion_2026-10-30/artifacts/faiss/metadata.sqlite3"
+  },
+  "checks": {
+    "http_passed": 65,
+    "http_cases": 65,
+    "ui_checks": 33,
+    "sqlite_integrity": "ok",
+    "vectors": 41280,
+    "documents": 38993
+  },
+  "scope": "Isolated D1 compatibility validation and sequential development latency; default D0 unchanged. No independent factuality, concurrency, cloud or GIS certification.",
+  "sha256": {
+    "artifacts/research_expansion_2026-10-30/data/structured_records.jsonl": "c2a1c9fc5cded0dbf5e66bf91dfdec99f3140e596006fd61c9873301411d4bca",
+    "artifacts/research_expansion_2026-10-30/data/rag_dataset_final.jsonl": "56a3dff9d56eaea82dac0995b4b2698ff60bd39095091c4dc38f9efaf0daeea8",
+    "artifacts/research_expansion_2026-10-30/artifacts/kg/vn_knowledge_graph.ttl": "c77e4f7e645787efb747051748759b97d0db51c5faf630f908d217b808f81734",
+    "artifacts/research_expansion_2026-10-30/artifacts/router/router.joblib": "c170dfe27be08d4c8da21afdae8977435276cc7107551e09537d4e935bffc2de",
+    "artifacts/research_expansion_2026-10-30/artifacts/faiss/vn.index": "dd7ed51bb15ad5278dc47629bd863ff98552f5a2f0dd6ab64ac9bba6695c10e8",
+    "artifacts/research_expansion_2026-10-30/artifacts/faiss/metadata.sqlite3": "ba488a0b80d639a39dc891ea4addf9defd5f830a2b8449f23a719d9b493cc1f7",
+    "artifacts/research_expansion_2026-10-30/artifacts/faiss/index_config.json": "367088e72e090b027848d43e997200aea2eb31e1a01e83746d3009b421077ff3",
+    "SOURCE/evaluation/system_queries.json": "d529bcb820e487b0008ef084a05d5946af7a06178ab1521572e2cde660f85b60",
+    "SOURCE/scripts/verify_system.py": "bfc6925ad7879ca6e93e34dfb998c5c32cb9b5cb292219adde5135cfb7d3314a",
+    "SOURCE/scripts/verify_ui.py": "155c684caeee7872e8b6de591fe30c0fceb0359d73f831539880cb5672ac3e23",
+    "SOURCE/scripts/measure_runtime.py": "c57b757b6c4d5d76f4cba75a8eafc1f531412cc3895a21ca016a8d3c478edd45",
+    "BAO_CAO/THESIS_2026/unit_audit.xml": "a9ccc1e69b23d7a088408c6082d22164b2db64729b4ae6e296cd4cb445bdf418"
+  }
+}

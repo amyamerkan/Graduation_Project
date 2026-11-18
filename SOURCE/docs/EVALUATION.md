@@ -1,6 +1,8 @@
 # Kiểm thử và đánh giá hệ thống
 
-> Đối chiếu code, tập câu hỏi và báo cáo ngày **25/10/2026**. Đã chạy lại unit test, KG/router, retrieval và 57 ca HTTP với E5/Qwen thật. UI vẫn dùng báo cáo lịch sử, chưa chạy lại trong đợt này.
+Đợt nghiên cứu 30–31/10/2026 đã bổ sung release riêng: 38.993 tài liệu, 7 cấu hình trên hai corpus, 263 câu silver và 16 câu phát triển thủ công. Xem [RESEARCH_EXPANSION.md](RESEARCH_EXPANSION.md) và [báo cáo số đo](../../artifacts/research_expansion_2026-10-30/RESEARCH_REPORT.md). Có 353 unit test đạt trong đợt này. Đây là kết quả nghiên cứu sơ bộ, không thay các báo cáo lịch sử hoặc bộ dữ liệu ứng dụng đang chạy.
+
+> Đối chiếu code và báo cáo ngày **25/10/2026**. Đợt sửa tra mã đã chạy 350 unit test và bộ HTTP mở rộng 65 ca; UI được chạy lại bằng Chromium với 33 kiểm tra. Kết quả KG/router/retrieval và HTTP của đợt cập nhật corpus trước đó được giữ riêng.
 > Đợt cập nhật dữ liệu và huấn luyện lại: [DATA_REFRESH_2026-10-25.md](DATA_REFRESH_2026-10-25.md).
 
 ## 1. Các câu hỏi đánh giá
@@ -22,7 +24,8 @@ Unit test và cross-check chủ yếu trả lời các câu hỏi về hành vi,
 | `SOURCE/tests/` | Chuẩn hóa, data IO, builder, router, retrieval, API, prompt/generation, cross-check, đồng bộ runtime và cập nhật miền; nhiều test dùng fixture/fake/hash encoder |
 | `SOURCE/evaluation/kg_gold.jsonl` | 17 ca SPARQL: số lượng/danh mục, mã, chuyển đổi, snapshot, không nội suy và danh sách điểm đến |
 | `SOURCE/evaluation/router_test.csv` | 26 câu gán nhãn route/domain để phát triển router |
-| `SOURCE/evaluation/system_queries.json` | 49 ca kỳ vọng cho HTTP chat hiện tại, gồm câu hỏi và input lỗi |
+| `SOURCE/evaluation/system_queries.json` | 65 ca HTTP: 49 ca nền và 16 ca bổ sung cho tra mã không dấu/không tiền tố, mã mơ hồ, tỉnh/ngày và hội thoại |
+| `SOURCE/tests/test_administrative_codes.py` | 86 trường hợp hồi quy: không gọi LLM/RAG khi tra mã, giữ số 0 đầu, phân biệt ngày/số lượng/tên đơn vị có số, bản ghi thay đổi và kiểm tra điều kiện độc lập |
 | `artifacts/domain_refresh_2026-10-24/release/system_queries.json` | 57 ca: 49 ca gốc cộng 8 ca về phạm vi loại bỏ, tên cập nhật và địa danh dễ nhầm |
 | `SOURCE/evaluation/backend_smoke.json` | Bộ smoke cũ; kiểm tra phạm vi dữ liệu trước khi dùng lại |
 | `SOURCE/scripts/verify_system.py` | Gọi HTTP thực, warmup và chạy system queries, đo latency theo trạng thái |
@@ -40,8 +43,11 @@ Các đường dẫn dữ liệu/artifacts còn lại trong tài liệu tính t�
 | Router chạy lại, sau áp quy tắc | Route/domain/joint accuracy đều 1,0 trên 26 câu | Tập phát triển nhỏ, thủ công, có mẫu gần dữ liệu huấn luyện |
 | Router Logistic Regression trước quy tắc | Route 0,8846; domain 0,9231 | Cùng 26 câu; phải tách khỏi kết quả sau quy tắc |
 | Corpus/index hiện có | 31.949 tài liệu; 33.169 vector, 768 chiều | Kiểm kê dữ liệu/config/SQLite, không phải accuracy |
-| Unit test mới | 264/264 | `artifacts/system_tests/domain_refresh_unit_report.xml` |
-| HTTP với E5/Qwen thật | 57/57 | Release `backend_evaluation_final.json`, mode `full_faiss`; tập phát triển, không phải benchmark độc lập |
+| Unit test sau sửa tra mã | 350/350 | `artifacts/admin_code_fix_2026-10-25/unit_report.xml`; gồm 86 ca hồi quy mới |
+| UI sau sửa tra mã | 33/33 | `artifacts/admin_code_fix_2026-10-25/ui/ui_report.json`; Chromium, trao đổi KG thật, kiểm tra nhãn/lưu lịch sử và mô phỏng lỗi |
+| HTTP sau sửa tra mã | 65/65 | `artifacts/admin_code_fix_2026-10-25/backend_report.json`, mode `full_faiss`; KG thật, E5/Qwen cho câu du lịch, tra mã dùng `structured_kg` |
+| Unit test của đợt cập nhật corpus | 264/264 | `artifacts/system_tests/domain_refresh_unit_report.xml`; trước sửa tra mã |
+| HTTP của đợt cập nhật corpus | 57/57 | Release `backend_evaluation_final.json`, mode `full_faiss`; tập phát triển, không phải benchmark độc lập |
 | Retrieval hai miền hiện tại | Hit@1=0,75; known-positive Hit@5=0,9375; MRR@5=0,828125 | 16 câu thủ công; 15/16 tìm được tài liệu dương trong năm chunk; mã số ngắn vẫn là ca khó cho dense retrieval |
 | Vệ sinh corpus/metadata | Không còn nội dung chủ đề bị loại theo bộ lọc; 202/202 ID du lịch cũ được giữ | Kiểm tra toàn bộ active records/chunks; kiểm tra riêng Quan Hồ Thẩn/Châu Văn Liêm để tránh nhầm dấu |
 
@@ -59,6 +65,12 @@ Kết quả huấn luyện và đánh giá mới được giữ trong thư mục
 | `evaluation/embedding_ablation.json` | Thí nghiệm E5 trên mẫu corpus cũ | Chỉ tham khảo cách làm ablation; không chứng minh cải thiện trên corpus hiện tại |
 
 Không gộp p50 của câu trả lời và câu từ chối thành tốc độ sinh. Báo cáo backend cũ có nhiều ca từ chối rất nhanh; phải đọc `latency_by_outcome_ms` và tách warmup khỏi steady state.
+
+### Hồi quy câu hỏi mã địa phương
+
+Hai câu “00008 thuộc địa phương nào” và “mã địa phương 00008 thuộc địa phương nào” phải nhận diện `administration/kg`, trả Phường Ngọc Hà, Thành phố Hà Nội theo snapshot 24/10/2026. Không chấp nhận địa chỉ du lịch có nguồn nhưng không khớp mã. Kiểm thử kiểm tra đồng thời route, mã, tên/tỉnh, snapshot, citation KG và `generation_mode=structured_kg`; LLM/RAG giả lập sẽ báo lỗi nếu bị gọi.
+
+Các ca âm gồm mã không tồn tại, bưu chính/đặt phòng, hai mã, ngày/tỉnh sai, bản ghi KG đổi giữa hai lần đọc, số trong “Phường 12”/“Quận 10” và số lượng/ngày/giá du lịch. Hội thoại giữ mã/ngày qua nhiều lượt user, bỏ qua mã do assistant ghi trong lịch sử. Các kiểm thử này đo hành vi và sự khớp với KG, chưa đo độ đúng độc lập của nguồn hoặc bao phủ mọi cách diễn đạt tiếng Việt.
 
 ## 4. Bộ câu hỏi đại diện
 

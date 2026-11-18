@@ -51,7 +51,7 @@ def test_hybrid_filters_candidates_using_kg_provenance_and_names(tmp_path):
 
 
 def test_kg_route_does_not_run_rag_when_facts_exist(tmp_path):
-    kg = RecordingKG([{"name": "Phường X", "code": "00070"}])
+    kg = RecordingKG([{"name": "Phường X", "code": "00070", "type": "https://w3id.org/vn-assistant/ontology#Ward", "provinceName": "Hà Nội"}])
     rag = RecordingRAG([{"text": "unused"}])
     result = QuestionProcessor(QuestionRouter(tmp_path / "missing"), kg, rag).process("Đơn vị có mã 00070 là gì?")
 
@@ -81,15 +81,15 @@ def test_unsupported_constraints_never_execute_current_kg(tmp_path, question):
     assert result["warnings"]
 
 
-def test_empty_kg_falls_back_without_false_entity_filter(tmp_path):
+def test_empty_code_kg_does_not_fall_back_to_rag(tmp_path):
     kg = RecordingKG()
     rag = RecordingRAG([{"text": "Minh chứng"}])
     result = QuestionProcessor(QuestionRouter(tmp_path / "missing"), kg, rag).process("Phường có mã 99999 là gì?")
 
-    assert result["effective_route"] == "rag_fallback"
-    assert rag.calls[0][1] == {"top_k": 5, "domain": "administration", "entity_terms": ["99999"]}
-    assert result["physical_filters"]["entity_terms"] == ["99999"]
-    assert result["evidence_count"] == 1
+    assert result["effective_route"] == "kg"
+    assert rag.calls == []
+    assert result["physical_filters"]["entity_terms"] is None
+    assert result["evidence_count"] == 0
 
 
 def test_missing_services_report_no_evidence(tmp_path):
@@ -98,7 +98,7 @@ def test_missing_services_report_no_evidence(tmp_path):
 
     assert result["status"] == "no_evidence"
     assert result["evidence_count"] == 0
-    assert len(result["warnings"]) == 2
+    assert result["warnings"] == ["KG chưa được nạp"]
 
 
 def test_failed_filtered_search_keeps_kg_without_broadening(tmp_path):

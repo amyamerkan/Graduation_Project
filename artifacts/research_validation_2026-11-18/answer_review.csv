@@ -1,0 +1,203 @@
+﻿id,question,answer,status,citation_urls,reviewer,factuality_0_2,faithfulness_0_2,completeness_0_2,citation_0_2,abstention_0_2,notes
+code_00070,Đơn vị có mã 00070 là gì?,"Theo các minh chứng tìm được:
+Mã hành chính 00070 là Phường Hoàn Kiếm, thuộc Thành phố Hà Nội. Thông tin theo bản chụp danh mục ngày 2026-10-24. [1]
+
+Nguồn minh chứng:
+[1] Phường Hoàn Kiếm — https://danhmuchanhchinh.nso.gov.vn/Doi_Chieu_Moi.aspx",answered,https://danhmuchanhchinh.nso.gov.vn/Doi_Chieu_Moi.aspx,,,,,,,
+province_lookup,Đơn vị mã 00070 thuộc tỉnh thành nào?,"Theo các minh chứng tìm được:
+Mã hành chính 00070 là Phường Hoàn Kiếm, thuộc Thành phố Hà Nội. Thông tin theo bản chụp danh mục ngày 2026-10-24. [1]
+
+Nguồn minh chứng:
+[1] Phường Hoàn Kiếm — https://danhmuchanhchinh.nso.gov.vn/Doi_Chieu_Moi.aspx",answered,https://danhmuchanhchinh.nso.gov.vn/Doi_Chieu_Moi.aspx,,,,,,,
+date_iso,"Ngày 2025-07-01, đơn vị có mã 00070 là gì?","Theo các minh chứng tìm được:
+Mã hành chính 00070 là Phường Hoàn Kiếm, thuộc Thành phố Hà Nội. Thông tin theo bản chụp danh mục ngày 2025-07-01. Mốc bắt đầu hiệu lực được ghi trong KG: 2025-07-01. [1]
+
+Nguồn minh chứng:
+[1] Phường Hoàn Kiếm — https://pypi.org/project/vietnam-provinces/2026.9.0/",answered,https://pypi.org/project/vietnam-provinces/2026.9.0/,,,,,,,
+joint_province_date,"Ngày 01/07/2025, đơn vị mã 00070 thuộc thành phố Hà Nội không?","Theo các minh chứng tìm được:
+Mã hành chính 00070 là Phường Hoàn Kiếm, thuộc Thành phố Hà Nội. Thông tin theo bản chụp danh mục ngày 2025-07-01. Mốc bắt đầu hiệu lực được ghi trong KG: 2025-07-01. [1]
+
+Nguồn minh chứng:
+[1] Phường Hoàn Kiếm — https://pypi.org/project/vietnam-provinces/2026.9.0/",answered,https://pypi.org/project/vietnam-provinces/2026.9.0/,,,,,,,
+joint_wrong_province,"Ngày 01/07/2025, mã 00070 thuộc tỉnh Quảng Ninh không?","Mình chưa tìm được bản ghi KG khớp mã đơn vị và các điều kiện bạn yêu cầu. Bạn kiểm tra lại mã hoặc thay đổi ngày, địa phương cần tra cứu nhé.",abstained,,,,,,,,
+before_effective_date,"Ngày 30/06/2025, mã 00070 thuộc thành phố Hà Nội không?","Theo các minh chứng tìm được:
+Mã hành chính 00070 là Phường Hàng Trống, thuộc Thành phố Hà Nội. Thông tin theo bản chụp danh mục ngày 2025-06-30. Mốc kết thúc hiệu lực được ghi trong KG: 2025-06-30. [1]
+
+Nguồn minh chứng:
+[1] Phường Hàng Trống — https://pypi.org/project/vietnam-provinces/2026.9.0/",answered,https://pypi.org/project/vietnam-provinces/2026.9.0/,,,,,,,
+future_without_interval,"Ngày 23/10/2026, mã 00070 thuộc thành phố Hà Nội không?","Mình chưa tìm được bản ghi KG khớp mã đơn vị và các điều kiện bạn yêu cầu. Bạn kiểm tra lại mã hoặc thay đổi ngày, địa phương cần tra cứu nhé.",abstained,,,,,,,,
+province_without_date,Mã 00070 thuộc thành phố Hà Nội không?,"Theo các minh chứng tìm được:
+Mã hành chính 00070 là Phường Hoàn Kiếm, thuộc Thành phố Hà Nội. Thông tin theo bản chụp danh mục ngày 2026-10-24. [1]
+
+Nguồn minh chứng:
+[1] Phường Hoàn Kiếm — https://danhmuchanhchinh.nso.gov.vn/Doi_Chieu_Moi.aspx",answered,https://danhmuchanhchinh.nso.gov.vn/Doi_Chieu_Moi.aspx,,,,,,,
+invalid_date,Ngày 31/02/2025 mã 00070 thuộc tỉnh nào?,"Dữ liệu hiện có chưa đủ để xác nhận điều kiện thời gian hoặc khoảng cách trong câu hỏi. Bạn có thể hỏi mã đơn vị, tỉnh/thành trực thuộc hoặc tra mã tại một ngày cụ thể; truy vấn bán kính cần bổ sung tọa độ.",abstained,,,,,,,,
+time_range,Mã 00070 thuộc tỉnh nào từ ngày 01/07/2025 đến ngày 01/08/2025?,"Dữ liệu hiện có chưa đủ để xác nhận điều kiện thời gian hoặc khoảng cách trong câu hỏi. Bạn có thể hỏi mã đơn vị, tỉnh/thành trực thuộc hoặc tra mã tại một ngày cụ thể; truy vấn bán kính cần bổ sung tọa độ.",abstained,,,,,,,,
+strict_before,Trước ngày 01/07/2025 mã 00070 thuộc đâu?,"Dữ liệu hiện có chưa đủ để xác nhận điều kiện thời gian hoặc khoảng cách trong câu hỏi. Bạn có thể hỏi mã đơn vị, tỉnh/thành trực thuộc hoặc tra mã tại một ngày cụ thể; truy vấn bán kính cần bổ sung tọa độ.",abstained,,,,,,,,
+relative_yesterday_joint,Hôm qua mã 00070 thuộc thành phố Hà Nội không?,"Dữ liệu hiện có chưa đủ để xác nhận điều kiện thời gian hoặc khoảng cách trong câu hỏi. Bạn có thể hỏi mã đơn vị, tỉnh/thành trực thuộc hoặc tra mã tại một ngày cụ thể; truy vấn bán kính cần bổ sung tọa độ.",abstained,,,,,,,,
+relative_today_joint,Hôm nay mã 00070 thuộc thành phố Hà Nội không?,"Dữ liệu hiện có chưa đủ để xác nhận điều kiện thời gian hoặc khoảng cách trong câu hỏi. Bạn có thể hỏi mã đơn vị, tỉnh/thành trực thuộc hoặc tra mã tại một ngày cụ thể; truy vấn bán kính cần bổ sung tọa độ.",abstained,,,,,,,,
+relative_tomorrow_joint,Ngày mai mã 00070 thuộc thành phố Hà Nội không?,"Dữ liệu hiện có chưa đủ để xác nhận điều kiện thời gian hoặc khoảng cách trong câu hỏi. Bạn có thể hỏi mã đơn vị, tỉnh/thành trực thuộc hoặc tra mã tại một ngày cụ thể; truy vấn bán kính cần bổ sung tọa độ.",abstained,,,,,,,,
+year_joint,Mã 00070 thuộc thành phố Hà Nội vào năm 2020 không?,"Dữ liệu hiện có chưa đủ để xác nhận điều kiện thời gian hoặc khoảng cách trong câu hỏi. Bạn có thể hỏi mã đơn vị, tỉnh/thành trực thuộc hoặc tra mã tại một ngày cụ thể; truy vấn bán kính cần bổ sung tọa độ.",abstained,,,,,,,,
+mixed_date_and_year,"Ngày 01/07/2025 mã 00070 thuộc thành phố Hà Nội, còn năm 2020 thì sao?","Dữ liệu hiện có chưa đủ để xác nhận điều kiện thời gian hoặc khoảng cách trong câu hỏi. Bạn có thể hỏi mã đơn vị, tỉnh/thành trực thuộc hoặc tra mã tại một ngày cụ thể; truy vấn bán kính cần bổ sung tọa độ.",abstained,,,,,,,,
+unsupported_date_format,Mã 00070 thuộc thành phố Hà Nội ngày 01.07.2025 không?,"Dữ liệu hiện có chưa đủ để xác nhận điều kiện thời gian hoặc khoảng cách trong câu hỏi. Bạn có thể hỏi mã đơn vị, tỉnh/thành trực thuộc hoặc tra mã tại một ngày cụ thể; truy vấn bán kính cần bổ sung tọa độ.",abstained,,,,,,,,
+before_without_day_word,Trước 01/07/2025 mã 00070 thuộc thành phố Hà Nội không?,"Dữ liệu hiện có chưa đủ để xác nhận điều kiện thời gian hoặc khoảng cách trong câu hỏi. Bạn có thể hỏi mã đơn vị, tỉnh/thành trực thuộc hoặc tra mã tại một ngày cụ thể; truy vấn bán kính cần bổ sung tọa độ.",abstained,,,,,,,,
+since_single_date,Mã 00070 thuộc thành phố Hà Nội từ ngày 01/07/2025 không?,"Dữ liệu hiện có chưa đủ để xác nhận điều kiện thời gian hoặc khoảng cách trong câu hỏi. Bạn có thể hỏi mã đơn vị, tỉnh/thành trực thuộc hoặc tra mã tại một ngày cụ thể; truy vấn bán kính cần bổ sung tọa độ.",abstained,,,,,,,,
+historical_year,Phường Long Biên thuộc tỉnh nào trong năm 2020?,"Dữ liệu hiện có chưa đủ để xác nhận điều kiện thời gian hoặc khoảng cách trong câu hỏi. Bạn có thể hỏi mã đơn vị, tỉnh/thành trực thuộc hoặc tra mã tại một ngày cụ thể; truy vấn bán kính cần bổ sung tọa độ.",abstained,,,,,,,,
+radius,Điểm du lịch nào gần Hồ Hoàn Kiếm nhất trong bán kính 5 km?,"Dữ liệu hiện có chưa đủ để xác nhận điều kiện thời gian hoặc khoảng cách trong câu hỏi. Bạn có thể hỏi mã đơn vị, tỉnh/thành trực thuộc hoặc tra mã tại một ngày cụ thể; truy vấn bán kính cần bổ sung tọa độ.",abstained,,,,,,,,
+distance,Từ Hội An đến Mỹ Sơn cách bao nhiêu km?,"Dữ liệu hiện có chưa đủ để xác nhận điều kiện thời gian hoặc khoảng cách trong câu hỏi. Bạn có thể hỏi mã đơn vị, tỉnh/thành trực thuộc hoặc tra mã tại một ngày cụ thể; truy vấn bán kính cần bổ sung tọa độ.",abstained,,,,,,,,
+coordinates,Tọa độ của Mỹ Sơn là gì?,"Dữ liệu hiện có chưa đủ để xác nhận điều kiện thời gian hoặc khoảng cách trong câu hỏi. Bạn có thể hỏi mã đơn vị, tỉnh/thành trực thuộc hoặc tra mã tại một ngày cụ thể; truy vấn bán kính cần bổ sung tọa độ.",abstained,,,,,,,,
+nearest,Bảo tàng nào gần Hội An nhất?,"Dữ liệu hiện có chưa đủ để xác nhận điều kiện thời gian hoặc khoảng cách trong câu hỏi. Bạn có thể hỏi mã đơn vị, tỉnh/thành trực thuộc hoặc tra mã tại một ngày cụ thể; truy vấn bán kính cần bổ sung tọa độ.",abstained,,,,,,,,
+recognition_year,Giới thiệu nguồn gốc Ca trù.,Mình hỗ trợ tra cứu địa giới hành chính cũ–mới và du lịch Việt Nam trong bộ dữ liệu. Câu hỏi này nằm ngoài phạm vi đó; bạn có thể chọn một câu hỏi gợi ý để bắt đầu.,abstained,,,,,,,,
+missing_code,Đơn vị có mã 99999 là gì?,"Mình chưa tìm được bản ghi KG khớp mã đơn vị và các điều kiện bạn yêu cầu. Bạn kiểm tra lại mã hoặc thay đổi ngày, địa phương cần tra cứu nhé.",abstained,,,,,,,,
+retained_museum_site,Mỹ Sơn thuộc tỉnh nào và có gì đáng chú ý?,"Theo các minh chứng tìm được:
+Tên thực thể: Di sản văn hóa Mỹ Sơn. Tỉnh/thành phố trực thuộc của Di sản văn hóa Mỹ Sơn: Thành phố Đà Nẵng. Loại thực thể của Di sản văn hóa Mỹ Sơn: địa điểm du lịch. [1]
+những bia ký và lịch sử nhiều triều đại xưa cho ta thấy Mỹ Sơn là khu thánh địa quan trọng nhất của dân tộc Chăm suốt từ cuối thế kỷ 4 đến thế kỷ 15. [2]
+Từ năm 1981 đến 1991, Mỹ Sơn được bảo quản và tu sửa từng phần với sự giúp đỡ về chuyên môn của công ty P.K.Z (Ba Lan). [3]
+
+Nguồn minh chứng:
+[1] Di sản văn hóa Mỹ Sơn — https://csdl.vietnamtourism.gov.vn/dest/?item=304
+[2] Di sản văn hóa Mỹ Sơn — https://csdl.vietnamtourism.gov.vn/dest/?item=304
+[3] Di sản văn hóa Mỹ Sơn — https://csdl.vietnamtourism.gov.vn/dest/?item=304",answered,https://csdl.vietnamtourism.gov.vn/dest/?item=304 | https://csdl.vietnamtourism.gov.vn/dest/?item=304 | https://csdl.vietnamtourism.gov.vn/dest/?item=304,,,,,,,
+rag_tourism,Giới thiệu các hoạt động tham quan tại Hồ Hoàn Kiếm.,"Theo các minh chứng tìm được:
+Từ đó đến nay, hồ Hoàn Kiếm được bảo tồn trở thành di tích lịch sử văn hóa có ý nghĩa quan trọng của thủ đô nói riêng và cả nước nói chung. [1]
+Nằm trên gò đất trung tâm hồ, Tháp Rùa là điểm nhấn thu hút nhất ở Hồ Gươm. [2]
+Những năm gần đây, vào các ngày cuối tuần, xung quanh hồ sẽ trở thành phố đi bộ với nhiều hoạt động hấp dẫn như âm nhạc đường phố, các trò chơi dân gian…. [3]
+
+Nguồn minh chứng:
+[1] Hồ Hoàn Kiếm — https://csdl.vietnamtourism.gov.vn/dest/?item=53
+[2] Hồ Hoàn Kiếm — https://csdl.vietnamtourism.gov.vn/dest/?item=53
+[3] Hồ Hoàn Kiếm — https://csdl.vietnamtourism.gov.vn/dest/?item=53",answered,https://csdl.vietnamtourism.gov.vn/dest/?item=53 | https://csdl.vietnamtourism.gov.vn/dest/?item=53 | https://csdl.vietnamtourism.gov.vn/dest/?item=53,,,,,,,
+hybrid_tourism,Hồ Hoàn Kiếm ở đâu và có gì đáng chú ý?,"Theo các minh chứng tìm được:
+Tên thực thể: Hồ Hoàn Kiếm. Địa chỉ được nguồn ghi nhận của Hồ Hoàn Kiếm: Hồ Hoàn Kiếm còn được gọi là Hồ Gươm là một hồ nước ngọt tự nhiên, Hoàn Kiếm, Quận Hoàn Kiếm, Thành phố Hà Nội. Tỉnh/thành phố trực thuộc của Hồ Hoàn Kiếm: Thành phố Hà Nội. Loại thực thể của Hồ Hoàn Kiếm: địa điểm du lịch. [1]
+Từ đó đến nay, hồ Hoàn Kiếm được bảo tồn trở thành di tích lịch sử văn hóa có ý nghĩa quan trọng của thủ đô nói riêng và cả nước nói chung. [2]
+Hồ Hoàn Kiếm, hay còn gọi là Hồ Gươm được mệnh danh là viên ngọc sáng của Thủ đô Hà Nội. [3]
+
+Nguồn minh chứng:
+[1] Hồ Hoàn Kiếm — https://csdl.vietnamtourism.gov.vn/dest/?item=53
+[2] Hồ Hoàn Kiếm — https://csdl.vietnamtourism.gov.vn/dest/?item=53
+[3] Hồ Hoàn Kiếm — https://csdl.vietnamtourism.gov.vn/dest/?item=53",answered,https://csdl.vietnamtourism.gov.vn/dest/?item=53 | https://csdl.vietnamtourism.gov.vn/dest/?item=53 | https://csdl.vietnamtourism.gov.vn/dest/?item=53,,,,,,,
+context_missing,Đơn vị đó thuộc tỉnh nào?,Bạn muốn hỏi về đơn vị hành chính hoặc điểm du lịch nào? Hãy cho mình tên đầy đủ hoặc mã đơn vị và ngày cần tra nhé.,needs_clarification,,,,,,,,
+context_unit,Đơn vị đó thuộc tỉnh nào?,"Theo các minh chứng tìm được:
+Mã hành chính 00070 là Phường Hoàn Kiếm, thuộc Thành phố Hà Nội. Thông tin theo bản chụp danh mục ngày 2026-10-24. [1]
+
+Nguồn minh chứng:
+[1] Phường Hoàn Kiếm — https://danhmuchanhchinh.nso.gov.vn/Doi_Chieu_Moi.aspx",answered,https://danhmuchanhchinh.nso.gov.vn/Doi_Chieu_Moi.aspx,,,,,,,
+context_tourism,Địa điểm đó ở đâu?,"Theo các minh chứng tìm được:
+Tên thực thể: Hồ Hoàn Kiếm. Địa chỉ được nguồn ghi nhận của Hồ Hoàn Kiếm: Hồ Hoàn Kiếm còn được gọi là Hồ Gươm là một hồ nước ngọt tự nhiên, Hoàn Kiếm, Quận Hoàn Kiếm, Thành phố Hà Nội. Tỉnh/thành phố trực thuộc của Hồ Hoàn Kiếm: Thành phố Hà Nội. Loại thực thể của Hồ Hoàn Kiếm: địa điểm du lịch. [1]
+
+Nguồn minh chứng:
+[1] Hồ Hoàn Kiếm — https://csdl.vietnamtourism.gov.vn/dest/?item=53",answered,https://csdl.vietnamtourism.gov.vn/dest/?item=53,,,,,,,
+out_of_scope_market,Dự đoán giá bitcoin ngày mai?,"Dữ liệu hiện có chưa đủ để xác nhận điều kiện thời gian hoặc khoảng cách trong câu hỏi. Bạn có thể hỏi mã đơn vị, tỉnh/thành trực thuộc hoặc tra mã tại một ngày cụ thể; truy vấn bán kính cần bổ sung tọa độ.",abstained,,,,,,,,
+out_of_scope_code,Viết code lập trình Python giúp tôi?,Mình hỗ trợ tra cứu địa giới hành chính cũ–mới và du lịch Việt Nam trong bộ dữ liệu. Câu hỏi này nằm ngoài phạm vi đó; bạn có thể chọn một câu hỏi gợi ý để bắt đầu.,abstained,,,,,,,,
+out_of_scope_medical,Chẩn đoán bệnh qua triệu chứng giúp tôi?,Mình hỗ trợ tra cứu địa giới hành chính cũ–mới và du lịch Việt Nam trong bộ dữ liệu. Câu hỏi này nằm ngoài phạm vi đó; bạn có thể chọn một câu hỏi gợi ý để bắt đầu.,abstained,,,,,,,,
+warm_repeat_a,Đơn vị có mã 00070 là gì?,"Theo các minh chứng tìm được:
+Mã hành chính 00070 là Phường Hoàn Kiếm, thuộc Thành phố Hà Nội. Thông tin theo bản chụp danh mục ngày 2026-10-24. [1]
+
+Nguồn minh chứng:
+[1] Phường Hoàn Kiếm — https://danhmuchanhchinh.nso.gov.vn/Doi_Chieu_Moi.aspx",answered,https://danhmuchanhchinh.nso.gov.vn/Doi_Chieu_Moi.aspx,,,,,,,
+warm_repeat_b,Giới thiệu các hoạt động tham quan tại Hồ Hoàn Kiếm.,"Theo các minh chứng tìm được:
+Từ đó đến nay, hồ Hoàn Kiếm được bảo tồn trở thành di tích lịch sử văn hóa có ý nghĩa quan trọng của thủ đô nói riêng và cả nước nói chung. [1]
+Nằm trên gò đất trung tâm hồ, Tháp Rùa là điểm nhấn thu hút nhất ở Hồ Gươm. [2]
+Những năm gần đây, vào các ngày cuối tuần, xung quanh hồ sẽ trở thành phố đi bộ với nhiều hoạt động hấp dẫn như âm nhạc đường phố, các trò chơi dân gian…. [3]
+
+Nguồn minh chứng:
+[1] Hồ Hoàn Kiếm — https://csdl.vietnamtourism.gov.vn/dest/?item=53
+[2] Hồ Hoàn Kiếm — https://csdl.vietnamtourism.gov.vn/dest/?item=53
+[3] Hồ Hoàn Kiếm — https://csdl.vietnamtourism.gov.vn/dest/?item=53",answered,https://csdl.vietnamtourism.gov.vn/dest/?item=53 | https://csdl.vietnamtourism.gov.vn/dest/?item=53 | https://csdl.vietnamtourism.gov.vn/dest/?item=53,,,,,,,
+current_snapshot,"Ngày 24/10/2026, mã 22 là đơn vị nào?","Theo các minh chứng tìm được:
+Mã hành chính 22 là Thành phố Quảng Ninh. Thông tin theo bản chụp danh mục ngày 2026-10-24. [1]
+
+Nguồn minh chứng:
+[1] Thành phố Quảng Ninh — https://danhmuchanhchinh.nso.gov.vn/",answered,https://danhmuchanhchinh.nso.gov.vn/,,,,,,,
+baseline_snapshot,"Ngày 01/07/2025, mã 22 là đơn vị nào?","Theo các minh chứng tìm được:
+Mã hành chính 22 là Tỉnh Quảng Ninh. Thông tin theo bản chụp danh mục ngày 2025-07-01. Mốc bắt đầu hiệu lực được ghi trong KG: 2025-07-01. [1]
+
+Nguồn minh chứng:
+[1] Tỉnh Quảng Ninh — https://baochinhphu.vn/bang-danh-muc-va-ma-so-cua-34-tinh-thanh-moi-3321-don-vi-hanh-chinh-cap-xa-moi-102250704153652947.htm",answered,https://baochinhphu.vn/bang-danh-muc-va-ma-so-cua-34-tinh-thanh-moi-3321-don-vi-hanh-chinh-cap-xa-moi-102250704153652947.htm,,,,,,,
+province_conversion,Tỉnh Bình Dương sáp nhập vào đâu?,"Theo các minh chứng tìm được:
+Tên đơn vị trước sắp xếp: Tỉnh Bình Dương. Tên đơn vị sau sắp xếp: Thành phố Hồ Chí Minh. Hình thức chuyển đổi của Tỉnh Bình Dương: liên kết chuyển đổi sau sắp xếp. Mã của đơn vị sau sắp xếp của Tỉnh Bình Dương: 79. [1]
+
+Nguồn minh chứng:
+[1] Tỉnh Bình Dương — https://baochinhphu.vn/bang-danh-muc-va-ma-so-cua-34-tinh-thanh-moi-3321-don-vi-hanh-chinh-cap-xa-moi-102250704153652947.htm",answered,https://baochinhphu.vn/bang-danh-muc-va-ma-so-cua-34-tinh-thanh-moi-3321-don-vi-hanh-chinh-cap-xa-moi-102250704153652947.htm,,,,,,,
+partial_conversion,Phường Hàng Trống sáp nhập vào đâu?,"Theo các minh chứng tìm được:
+Tên đơn vị trước sắp xếp: Phường Hàng Trống. Tên đơn vị sau sắp xếp: Phường Cửa Nam. Hình thức chuyển đổi của Phường Hàng Trống: chuyển một phần địa bàn. Mã của đơn vị sau sắp xếp của Phường Hàng Trống: 00082. [1]
+
+Nguồn minh chứng:
+[1] Phường Hàng Trống — https://pypi.org/project/vietnam-provinces/2026.9.0/",answered,https://pypi.org/project/vietnam-provinces/2026.9.0/,,,,,,,
+removed_intangible,Quan họ là gì?,Mình hỗ trợ tra cứu địa giới hành chính cũ–mới và du lịch Việt Nam trong bộ dữ liệu. Câu hỏi này nằm ngoài phạm vi đó; bạn có thể chọn một câu hỏi gợi ý để bắt đầu.,abstained,,,,,,,,
+tourism_address,Hồ Hoàn Kiếm ở đâu?,"Theo các minh chứng tìm được:
+Tên thực thể: Hồ Hoàn Kiếm. Địa chỉ được nguồn ghi nhận của Hồ Hoàn Kiếm: Hồ Hoàn Kiếm còn được gọi là Hồ Gươm là một hồ nước ngọt tự nhiên, Hoàn Kiếm, Quận Hoàn Kiếm, Thành phố Hà Nội. Tỉnh/thành phố trực thuộc của Hồ Hoàn Kiếm: Thành phố Hà Nội. Loại thực thể của Hồ Hoàn Kiếm: địa điểm du lịch. [1]
+
+Nguồn minh chứng:
+[1] Hồ Hoàn Kiếm — https://csdl.vietnamtourism.gov.vn/dest/?item=53",answered,https://csdl.vietnamtourism.gov.vn/dest/?item=53,,,,,,,
+retained_hoi_an,Giới thiệu hoạt động tham quan tại Hội An.,"Theo các minh chứng tìm được:
+Sự tồn tại một đô thị như Hội An là trường hợp duy nhất ở Việt Nam và cũng hiếm thấy trên thế giới. [1]
+Cảnh quan phố phường Hội An bao quát một màu rêu phong cổ kính trông hư hư, thực thực như một bức tranh sống động. [2]
+Rừng dừa Bảy Mẫu Cẩm Thanh Hội An là điểm đến hấp dẫn du khách tham quan trong và ngoài nước. [3]
+
+Nguồn minh chứng:
+[1] Thành phố Hội An — https://csdl.vietnamtourism.gov.vn/dest/?item=85
+[2] Thành phố Hội An — https://csdl.vietnamtourism.gov.vn/dest/?item=85
+[3] Rừng dừa Bảy Mẫu — https://csdl.vietnamtourism.gov.vn/dest/?item=950",answered,https://csdl.vietnamtourism.gov.vn/dest/?item=85 | https://csdl.vietnamtourism.gov.vn/dest/?item=85 | https://csdl.vietnamtourism.gov.vn/dest/?item=950,,,,,,,
+retained_halong,Vịnh Hạ Long ở đâu?,"Theo các minh chứng tìm được:
+Tên thực thể: Vịnh Hạ Long. Địa chỉ được nguồn ghi nhận của Vịnh Hạ Long: Quảng Ninh — địa danh theo trang nguồn. Tỉnh/thành phố trực thuộc của Vịnh Hạ Long: Thành phố Quảng Ninh. Loại thực thể của Vịnh Hạ Long: địa điểm du lịch. [1]
+
+Nguồn minh chứng:
+[1] Vịnh Hạ Long — https://vietnamtourism.vn/index.php/tourism/items/1627/6",answered,https://vietnamtourism.vn/index.php/tourism/items/1627/6,,,,,,,
+tourism_alias,Hồ Gươm ở đâu?,"Theo các minh chứng tìm được:
+Tên thực thể: Hồ Hoàn Kiếm. Địa chỉ được nguồn ghi nhận của Hồ Hoàn Kiếm: Hồ Hoàn Kiếm còn được gọi là Hồ Gươm là một hồ nước ngọt tự nhiên, Hoàn Kiếm, Quận Hoàn Kiếm, Thành phố Hà Nội. Tỉnh/thành phố trực thuộc của Hồ Hoàn Kiếm: Thành phố Hà Nội. Loại thực thể của Hồ Hoàn Kiếm: địa điểm du lịch. [1]
+
+Nguồn minh chứng:
+[1] Hồ Hoàn Kiếm — https://csdl.vietnamtourism.gov.vn/dest/?item=53",answered,https://csdl.vietnamtourism.gov.vn/dest/?item=53,,,,,,,
+bare_00008,00008 thuộc địa phương nào,"Theo các minh chứng tìm được:
+Mã hành chính 00008 là Phường Ngọc Hà, thuộc Thành phố Hà Nội. Thông tin theo bản chụp danh mục ngày 2026-10-24. [1]
+
+Nguồn minh chứng:
+[1] Phường Ngọc Hà — https://danhmuchanhchinh.nso.gov.vn/Doi_Chieu_Moi.aspx",answered,https://danhmuchanhchinh.nso.gov.vn/Doi_Chieu_Moi.aspx,,,,,,,
+local_code_00008,mã địa phương 00008 thuộc địa phương nào,"Theo các minh chứng tìm được:
+Mã hành chính 00008 là Phường Ngọc Hà, thuộc Thành phố Hà Nội. Thông tin theo bản chụp danh mục ngày 2026-10-24. [1]
+
+Nguồn minh chứng:
+[1] Phường Ngọc Hà — https://danhmuchanhchinh.nso.gov.vn/Doi_Chieu_Moi.aspx",answered,https://danhmuchanhchinh.nso.gov.vn/Doi_Chieu_Moi.aspx,,,,,,,
+accentless_00008,ma dia phuong 00008 thuoc tinh nao,"Theo các minh chứng tìm được:
+Mã hành chính 00008 là Phường Ngọc Hà, thuộc Thành phố Hà Nội. Thông tin theo bản chụp danh mục ngày 2026-10-24. [1]
+
+Nguồn minh chứng:
+[1] Phường Ngọc Hà — https://danhmuchanhchinh.nso.gov.vn/Doi_Chieu_Moi.aspx",answered,https://danhmuchanhchinh.nso.gov.vn/Doi_Chieu_Moi.aspx,,,,,,,
+date_word_not_province,Mã 00008 tại ngày 2026-10-24 thuộc tỉnh nào?,"Theo các minh chứng tìm được:
+Mã hành chính 00008 là Phường Ngọc Hà, thuộc Thành phố Hà Nội. Thông tin theo bản chụp danh mục ngày 2026-10-24. [1]
+
+Nguồn minh chứng:
+[1] Phường Ngọc Hà — https://danhmuchanhchinh.nso.gov.vn/Doi_Chieu_Moi.aspx",answered,https://danhmuchanhchinh.nso.gov.vn/Doi_Chieu_Moi.aspx,,,,,,,
+accentless_province_00008,Ma 00008 ngay 2026-10-24 thuoc thanh pho Ha Noi khong?,"Theo các minh chứng tìm được:
+Mã hành chính 00008 là Phường Ngọc Hà, thuộc Thành phố Hà Nội. Thông tin theo bản chụp danh mục ngày 2026-10-24. [1]
+
+Nguồn minh chứng:
+[1] Phường Ngọc Hà — https://danhmuchanhchinh.nso.gov.vn/Doi_Chieu_Moi.aspx",answered,https://danhmuchanhchinh.nso.gov.vn/Doi_Chieu_Moi.aspx,,,,,,,
+ambiguous_number,00008,Bạn muốn tra mã đơn vị hành chính hay một loại mã khác? Hãy thêm loại mã hoặc địa phương cần tra cứu.,needs_clarification,,,,,,,,
+multiple_codes,Mã 00008 và 00070 là gì?,Bạn đang hỏi nhiều mã. Hãy chọn một mã đơn vị hành chính và nêu ngày cần tra nếu muốn xem danh mục cũ.,needs_clarification,,,,,,,,
+postal_code,Mã bưu chính 00008 thuộc địa phương nào?,"Mình chưa có danh mục để xác nhận mã bưu chính, mã đặt chỗ hoặc các loại mã khác. Bạn muốn tra mã đơn vị hành chính hay loại mã nào?",needs_clarification,,,,,,,,
+booking_code,Mã đặt phòng 00008 thuộc đâu?,"Mình chưa có danh mục để xác nhận mã bưu chính, mã đặt chỗ hoặc các loại mã khác. Bạn muốn tra mã đơn vị hành chính hay loại mã nào?",needs_clarification,,,,,,,,
+wrong_province_00008,Mã 00008 thuộc Điện Biên không?,"Mình chưa tìm được bản ghi KG khớp mã đơn vị và các điều kiện bạn yêu cầu. Bạn kiểm tra lại mã hoặc thay đổi ngày, địa phương cần tra cứu nhé.",abstained,,,,,,,,
+missing_bare_code,99999 thuộc địa phương nào?,"Mình chưa tìm được bản ghi KG khớp mã đơn vị và các điều kiện bạn yêu cầu. Bạn kiểm tra lại mã hoặc thay đổi ngày, địa phương cần tra cứu nhé.",abstained,,,,,,,,
+bare_code_history,Đơn vị đó thuộc tỉnh nào?,"Theo các minh chứng tìm được:
+Mã hành chính 00008 là Phường Ngọc Hà, thuộc Thành phố Hà Nội. Thông tin theo bản chụp danh mục ngày 2026-10-24. [1]
+
+Nguồn minh chứng:
+[1] Phường Ngọc Hà — https://danhmuchanhchinh.nso.gov.vn/Doi_Chieu_Moi.aspx",answered,https://danhmuchanhchinh.nso.gov.vn/Doi_Chieu_Moi.aspx,,,,,,,
+dated_bare_code_history,Đơn vị đó thuộc tỉnh nào?,"Theo các minh chứng tìm được:
+Mã hành chính 00070 là Phường Hoàn Kiếm, thuộc Thành phố Hà Nội. Thông tin theo bản chụp danh mục ngày 2025-07-01. Mốc bắt đầu hiệu lực được ghi trong KG: 2025-07-01. [1]
+
+Nguồn minh chứng:
+[1] Phường Hoàn Kiếm — https://pypi.org/project/vietnam-provinces/2026.9.0/",answered,https://pypi.org/project/vietnam-provinces/2026.9.0/,,,,,,,
+mixed_code_tourism,Mã 00008 thuộc đâu và có điểm du lịch nào?,"Minh chứng hiện có chưa xác nhận được phần mô tả hoặc thông tin mở rộng ngoài tra cứu mã. Dưới đây là phần thông tin đã kiểm tra được:
+Mã hành chính 00008 là Phường Ngọc Hà, thuộc Thành phố Hà Nội. Thông tin theo bản chụp danh mục ngày 2026-10-24. [1]
+
+Nguồn minh chứng:
+[1] Phường Ngọc Hà — https://danhmuchanhchinh.nso.gov.vn/Doi_Chieu_Moi.aspx",partial,https://danhmuchanhchinh.nso.gov.vn/Doi_Chieu_Moi.aspx,,,,,,,
+province_name_starts_nam,Mã 00008 thuộc Nam Định không?,"Mình chưa tìm được bản ghi KG khớp mã đơn vị và các điều kiện bạn yêu cầu. Bạn kiểm tra lại mã hoặc thay đổi ngày, địa phương cần tra cứu nhé.",abstained,,,,,,,,
+multiple_followups,ở đâu?,"Theo các minh chứng tìm được:
+Mã hành chính 00070 là Phường Hoàn Kiếm, thuộc Thành phố Hà Nội. Thông tin theo bản chụp danh mục ngày 2025-07-01. Mốc bắt đầu hiệu lực được ghi trong KG: 2025-07-01. [1]
+
+Nguồn minh chứng:
+[1] Phường Hoàn Kiếm — https://pypi.org/project/vietnam-provinces/2026.9.0/",answered,https://pypi.org/project/vietnam-provinces/2026.9.0/,,,,,,,

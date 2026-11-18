@@ -1,0 +1,12 @@
+{
+  "status": "complete",
+  "vectors": 40206,
+  "total": 40206,
+  "reused_vectors": 33169,
+  "encoded_vectors": 7037,
+  "new_vectors_total": 7037,
+  "elapsed_seconds": 303.282,
+  "device": "mps",
+  "dataset": "/Users/amyas/HK1 26-27/DATN/artifacts/research_expansion_2026-10-30/data/vector_seed_dataset.jsonl",
+  "updated_at": "2026-10-30T17:57:09.446720+00:00"
+}

@@ -25,6 +25,8 @@ Giao diện tại [http://127.0.0.1:8001/](http://127.0.0.1:8001/). Nếu server
 
 ## Các tài liệu chính
 
+- [Báo cáo tốt nghiệp đầy đủ và hồ sơ đối chứng](BAO_CAO/THESIS_2026/README.md): sáu chương, Word/PDF, kết quả, protocol và backlog; cập nhật kiểm thử D1 ngày 18/11/2026.
+- [Kết quả nghiệm thu kỹ thuật D1](artifacts/research_validation_2026-11-18/README.md): 353 unit, 65 HTTP, 33 UI và đo độ trễ sơ bộ; mặc định app vẫn dùng D0.
 - [Báo cáo Chương 2](BAO_CAO/Chuong_2_Thiet_ke_he_thong_KG_RAG_LLM.docx).
 - [Báo cáo đồ án gốc](BAO_CAO/Đồ%20Án.pdf).
 - [Phân tích kiến trúc](BAO_CAO/Phân%20tích%20kiến%20trúc.pdf).

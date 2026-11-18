@@ -33,3 +33,9 @@ models/**/*.safetensors
 # FAISS vector indexes
 artifacts/**/faiss/**/*.index
 artifacts/**/faiss/**/*.f32
+
+# Rebuildable research indexes and document rendering dependencies/intermediates
+artifacts/research_expansion_*/artifacts/faiss*/vn.index
+artifacts/research_expansion_*/artifacts/faiss*/metadata.sqlite3
+artifacts/research_expansion_*/artifacts/faiss*/*.build/
+BAO_CAO/THESIS_2026/tmp/

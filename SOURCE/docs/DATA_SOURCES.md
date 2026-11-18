@@ -1,5 +1,7 @@
 # Nguồn dữ liệu, độ tin cậy và thời điểm cập nhật
 
+Đợt mở rộng 30–31/10/2026 giữ riêng các đoạn Chính phủ, quan sát bảng NSO ngày 30/10 và điểm đến TITC mới trong release nghiên cứu. Kiểm kê, URL nguồn, manifest và giới hạn thời gian nằm tại [RESEARCH_EXPANSION.md](RESEARCH_EXPANSION.md); không gộp ngày cào với hiệu lực địa giới hoặc thay các thống kê corpus hoạt động bên dưới.
+
 > Kiểm kê dữ liệu cục bộ ngày **25/10/2026**. URL, thời điểm thu thập và phạm vi trích xuất được đọc từ code, JSONL và manifest đã lưu; tài liệu này không xác nhận các website vẫn giữ nguyên nội dung tại thời điểm người đọc mở liên kết.
 > Đợt cập nhật dữ liệu và huấn luyện lại: [DATA_REFRESH_2026-10-25.md](DATA_REFRESH_2026-10-25.md).
 

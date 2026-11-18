@@ -1,0 +1,332 @@
+{
+  "created_at": "2026-11-18T15:23:38.998043+00:00",
+  "scope": "Three development questions, sequential requests, one discarded warm-up per question. No concurrent-load or independent QA-quality claim. RAG phase includes encoding and search; these are not timed separately.",
+  "platform": "macOS-27.0.1-arm64-arm-64bit-Mach-O",
+  "machine": "arm64",
+  "python": "3.13.7",
+  "repeats": 5,
+  "cases_sha256": "d529bcb820e487b0008ef084a05d5946af7a06178ab1521572e2cde660f85b60",
+  "cases": [
+    {
+      "id": "bare_00008",
+      "payload": {
+        "question": "00008 thuộc địa phương nào"
+      },
+      "discarded_warmup_ms": 11.088,
+      "samples": [
+        {
+          "repeat": 1,
+          "http_ms": 10.124,
+          "status": "answered",
+          "route": "kg",
+          "generation_mode": "structured_kg",
+          "timings_ms": {
+            "question_processing": 4.343,
+            "generation": 0.0,
+            "kg_refresh": 4.045,
+            "cross_check": 0.306,
+            "total": 8.856
+          },
+          "expected_status": true
+        },
+        {
+          "repeat": 2,
+          "http_ms": 10.499,
+          "status": "answered",
+          "route": "kg",
+          "generation_mode": "structured_kg",
+          "timings_ms": {
+            "question_processing": 4.513,
+            "generation": 0.0,
+            "kg_refresh": 4.096,
+            "cross_check": 0.329,
+            "total": 9.135
+          },
+          "expected_status": true
+        },
+        {
+          "repeat": 3,
+          "http_ms": 10.275,
+          "status": "answered",
+          "route": "kg",
+          "generation_mode": "structured_kg",
+          "timings_ms": {
+            "question_processing": 4.433,
+            "generation": 0.0,
+            "kg_refresh": 4.069,
+            "cross_check": 0.311,
+            "total": 8.982
+          },
+          "expected_status": true
+        },
+        {
+          "repeat": 4,
+          "http_ms": 12.947,
+          "status": "answered",
+          "route": "kg",
+          "generation_mode": "structured_kg",
+          "timings_ms": {
+            "question_processing": 4.842,
+            "generation": 0.0,
+            "kg_refresh": 6.02,
+            "cross_check": 0.425,
+            "total": 11.518
+          },
+          "expected_status": true
+        },
+        {
+          "repeat": 5,
+          "http_ms": 10.859,
+          "status": "answered",
+          "route": "kg",
+          "generation_mode": "structured_kg",
+          "timings_ms": {
+            "question_processing": 4.651,
+            "generation": 0.0,
+            "kg_refresh": 4.152,
+            "cross_check": 0.342,
+            "total": 9.349
+          },
+          "expected_status": true
+        }
+      ],
+      "http_ms": {
+        "p50": 10.499,
+        "p95": 12.947,
+        "min": 10.124,
+        "max": 12.947,
+        "n": 5
+      }
+    },
+    {
+      "id": "rag_tourism",
+      "payload": {
+        "question": "Giới thiệu các hoạt động tham quan tại Hồ Hoàn Kiếm."
+      },
+      "discarded_warmup_ms": 3367.207,
+      "samples": [
+        {
+          "repeat": 1,
+          "http_ms": 2466.878,
+          "status": "answered",
+          "route": "rag",
+          "generation_mode": "llm_claim_selection",
+          "timings_ms": {
+            "question_processing": 280.933,
+            "generation": 2181.53,
+            "kg_refresh": 0.001,
+            "cross_check": 0.277,
+            "total": 2463.509
+          },
+          "expected_status": true
+        },
+        {
+          "repeat": 2,
+          "http_ms": 2314.325,
+          "status": "answered",
+          "route": "rag",
+          "generation_mode": "llm_claim_selection",
+          "timings_ms": {
+            "question_processing": 56.236,
+            "generation": 2253.978,
+            "kg_refresh": 0.004,
+            "cross_check": 0.32,
+            "total": 2311.393
+          },
+          "expected_status": true
+        },
+        {
+          "repeat": 3,
+          "http_ms": 2499.195,
+          "status": "answered",
+          "route": "rag",
+          "generation_mode": "llm_claim_selection",
+          "timings_ms": {
+            "question_processing": 95.868,
+            "generation": 2399.441,
+            "kg_refresh": 0.001,
+            "cross_check": 0.307,
+            "total": 2496.578
+          },
+          "expected_status": true
+        },
+        {
+          "repeat": 4,
+          "http_ms": 2432.059,
+          "status": "answered",
+          "route": "rag",
+          "generation_mode": "llm_claim_selection",
+          "timings_ms": {
+            "question_processing": 59.686,
+            "generation": 2368.414,
+            "kg_refresh": 0.002,
+            "cross_check": 0.338,
+            "total": 2429.465
+          },
+          "expected_status": true
+        },
+        {
+          "repeat": 5,
+          "http_ms": 2258.061,
+          "status": "answered",
+          "route": "rag",
+          "generation_mode": "llm_claim_selection",
+          "timings_ms": {
+            "question_processing": 68.067,
+            "generation": 2186.143,
+            "kg_refresh": 0.001,
+            "cross_check": 0.255,
+            "total": 2255.454
+          },
+          "expected_status": true
+        }
+      ],
+      "http_ms": {
+        "p50": 2432.059,
+        "p95": 2499.195,
+        "min": 2258.061,
+        "max": 2499.195,
+        "n": 5
+      }
+    },
+    {
+      "id": "hybrid_tourism",
+      "payload": {
+        "question": "Hồ Hoàn Kiếm ở đâu và có gì đáng chú ý?"
+      },
+      "discarded_warmup_ms": 3935.264,
+      "samples": [
+        {
+          "repeat": 1,
+          "http_ms": 3149.763,
+          "status": "answered",
+          "route": "hybrid",
+          "generation_mode": "llm_claim_selection",
+          "timings_ms": {
+            "question_processing": 368.177,
+            "generation": 2705.173,
+            "kg_refresh": 69.463,
+            "cross_check": 0.393,
+            "total": 3144.345
+          },
+          "expected_status": true
+        },
+        {
+          "repeat": 2,
+          "http_ms": 3382.351,
+          "status": "answered",
+          "route": "hybrid",
+          "generation_mode": "llm_claim_selection",
+          "timings_ms": {
+            "question_processing": 110.555,
+            "generation": 3209.774,
+            "kg_refresh": 57.329,
+            "cross_check": 0.304,
+            "total": 3378.863
+          },
+          "expected_status": true
+        },
+        {
+          "repeat": 3,
+          "http_ms": 3060.969,
+          "status": "answered",
+          "route": "hybrid",
+          "generation_mode": "llm_claim_selection",
+          "timings_ms": {
+            "question_processing": 395.102,
+            "generation": 2610.443,
+            "kg_refresh": 51.297,
+            "cross_check": 0.339,
+            "total": 3058.224
+          },
+          "expected_status": true
+        },
+        {
+          "repeat": 4,
+          "http_ms": 3226.16,
+          "status": "answered",
+          "route": "hybrid",
+          "generation_mode": "llm_claim_selection",
+          "timings_ms": {
+            "question_processing": 108.799,
+            "generation": 3050.158,
+            "kg_refresh": 63.19,
+            "cross_check": 0.406,
+            "total": 3223.51
+          },
+          "expected_status": true
+        },
+        {
+          "repeat": 5,
+          "http_ms": 2400.048,
+          "status": "answered",
+          "route": "hybrid",
+          "generation_mode": "llm_claim_selection",
+          "timings_ms": {
+            "question_processing": 112.334,
+            "generation": 2236.918,
+            "kg_refresh": 46.65,
+            "cross_check": 0.303,
+            "total": 2397.069
+          },
+          "expected_status": true
+        }
+      ],
+      "http_ms": {
+        "p50": 3149.763,
+        "p95": 3382.351,
+        "min": 2400.048,
+        "max": 3382.351,
+        "n": 5
+      }
+    }
+  ],
+  "warmup": {
+    "status": "ready",
+    "llm": {
+      "backend": "transformers",
+      "model": "/Users/amyas/HK1 26-27/DATN/models/Qwen3-0.6B",
+      "device": "mps",
+      "ready": true,
+      "context_window": 4096,
+      "max_new_tokens": 384,
+      "error": null,
+      "generation_count": 23,
+      "last_latency_ms": 2294.39
+    },
+    "kg_ready": true,
+    "rag_ready": true,
+    "elapsed_ms": 0.056
+  },
+  "warmup_ms": 10.278,
+  "health": {
+    "status": "ok",
+    "router_ready": true,
+    "kg_ready": true,
+    "faiss_ready": true,
+    "retrieval_mode": "full_faiss",
+    "artifacts_present": {
+      "router": true,
+      "kg": true,
+      "faiss": true
+    },
+    "llm": {
+      "backend": "transformers",
+      "model": "/Users/amyas/HK1 26-27/DATN/models/Qwen3-0.6B",
+      "device": "mps",
+      "ready": true,
+      "context_window": 4096,
+      "max_new_tokens": 384,
+      "error": null,
+      "generation_count": 35,
+      "last_latency_ms": 2236.5
+    },
+    "capabilities": {
+      "unit_at_date": true,
+      "unit_in_province_at_date": true,
+      "geometry_distance": false,
+      "citation_verification": "evidence_match"
+    }
+  },
+  "expected_statuses_passed": true
+}

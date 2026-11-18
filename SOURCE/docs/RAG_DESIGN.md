@@ -30,8 +30,8 @@ Tên “hybrid” mô tả phối hợp KG với RAG, không có nghĩa runtime 
 ## 3. Phân tích câu hỏi
 
 1. Chuẩn hóa văn bản.
-2. Dự đoán route và miền bằng hai pipeline TF-IDF + Logistic Regression.
-3. Áp quy tắc cho câu hỏi dữ kiện, mô tả, tên/alias du lịch và mã đơn vị.
+2. Nhận diện mã hành chính bằng bộ quy tắc dùng chung ở router, planner, hội thoại và bước kiểm tra; mã rõ ràng ưu tiên route KG, mã mơ hồ cần làm rõ.
+3. Với câu còn lại, dự đoán bằng hai pipeline TF-IDF + Logistic Regression và áp quy tắc cho dữ kiện, mô tả, tên/alias du lịch.
 4. Tạo query plan: mẫu SPARQL, tham số, RAG domain/top_k, điều kiện thời gian/không gian và phạm vi.
 
 Mã có số 0 đầu được giữ dạng chuỗi. Query SPARQL lấy từ các mẫu `.rq`, không do LLM tự viết. Câu hỏi đòi bán kính/khoảng cách, thời gian tương đối hoặc khoảng năm chưa có bằng chứng sẽ bị đánh dấu unsupported. Đường xử lý ngày cụ thể theo mã dùng `09_unit_at_time`; xem [ADMINISTRATIVE_DATA.md](ADMINISTRATIVE_DATA.md).
@@ -64,7 +64,7 @@ Mode này được công bố là `lexical_candidates_faiss`. Có bước xếp 
 
 ### 4.3. Fallback
 
-KG không có dòng có thể kích hoạt RAG fallback trong processor. Riêng truy vấn thời gian `09_unit_at_time` không fallback sang văn bản để tự xác nhận ngày. Dịch vụ trả lời còn từ chối mã đơn vị chưa được KG chứng thực, dù processor tìm được văn bản có nhắc mã.
+KG không có dòng có thể kích hoạt RAG fallback với các truy vấn thực thể chung. Riêng tra mã `03_unit_by_code` và `09_unit_at_time` luôn tắt RAG; mã không được KG xác nhận dẫn tới từ chối. Điều này tránh câu hỏi mã ngắn nhận đoạn du lịch có độ tương tự cao nhưng không liên quan.
 
 ## 5. Tạo minh chứng và mệnh đề ứng viên
 
@@ -79,6 +79,8 @@ KG không có dòng có thể kích hoạt RAG fallback trong processor. Riêng 
 Ngưỡng 0,70 là mặc định cấu hình, chưa phải ngưỡng tối ưu đã được xác lập trên benchmark độc lập. Tăng ngưỡng thường làm giảm số minh chứng; giảm ngưỡng có thể đưa thêm đoạn ít liên quan vào prompt.
 
 ## 6. Prompt và sinh câu trả lời
+
+Tra mã hành chính dùng `generation_mode=structured_kg`: dựng câu trực tiếp từ đúng một bản ghi, gồm mã, tên, tỉnh và mốc snapshot/hiệu lực được ghi nhận; không gọi mô hình sinh. Nhiều dòng khớp cần làm rõ. Câu kèm yêu cầu mô tả/du lịch chỉ được trả phần tra mã với `partial`. Các quy tắc dưới đây áp dụng nhánh `llm_claim_selection` còn lại.
 
 Prompt nằm ở `prompt_templates/system.txt` và `select_claims.txt`, được đọc bởi `prompts.build_messages`. Input user chứa câu hỏi dưới dạng chuỗi JSON và danh sách `{claim_id,text,kind}`; nội dung dữ liệu không được coi là chỉ thị thay đổi quy tắc.
 
@@ -97,10 +99,10 @@ Mô hình **không viết bài trả lời tự do** trong quy trình hiện t�
 ## 7. Cross-check và trích dẫn
 
 1. Parse output JSON theo schema nghiêm ngặt: giới hạn kích thước, loại khóa trùng, giá trị không hữu hạn, schema/ID không hợp lệ. Chấp nhận lớp bọc Markdown fence hoặc đúng một dấu chấm cuối sau `}`; không chấp nhận lời giải thích hoặc một đối tượng JSON thứ hai. Tất cả mệnh đề vẫn phải qua kiểm tra ID và cross-check.
-2. Truy vấn lại cùng kế hoạch KG sau khi LLM chọn; kiểm tra tập thực thể không thay đổi và lấy dữ kiện hiện tại để so sánh.
+2. Truy vấn lại cùng kế hoạch KG trước khi xuất câu trả lời, cả nhánh dựng câu tra mã và nhánh LLM; kiểm tra tập thực thể không thay đổi và lấy dữ kiện hiện tại để so sánh.
 3. Với fact, so sánh từng trường và giá trị, bảo đảm câu đúng mẫu render từ KG.
 4. Với extractive, kiểm tra câu là trích đoạn nguyên văn theo ranh giới câu; phát hiện một số xung đột mã/ngày với KG.
-5. Với `09_unit_at_time`, kiểm tra lại ngày snapshot/khoảng hiệu lực và điều kiện tỉnh trên dữ kiện KG.
+5. Với tra mã, dựng lại kế hoạch từ câu hỏi để đối chiếu mã/ngày/tỉnh; kiểm tra loại thực thể, tên và quan hệ tỉnh. Ngày phải khớp snapshot hoặc khoảng hiệu lực đủ căn cứ; tên tỉnh được so sánh toàn bộ sau bỏ tiền tố và dấu, không dùng chứa chuỗi một phần.
 6. Loại mệnh đề không đạt; từ chối khi không còn mệnh đề hợp lệ. Nếu chỉ đáp ứng một phần thì trả `partial` và cảnh báo.
 
 Citation giữ số thứ tự, ID minh chứng, loại nguồn, tiêu đề, URL đã kiểm tra định dạng và ID bản ghi nguồn. Không có kiểm chứng URL trực tuyến trong lúc trả lời, không có xác minh ngữ nghĩa mọi thông tin trong nguồn. Trạng thái cross-check `supported` nghĩa là khớp chứng cứ trong phạm vi `extractive_text_and_structured_kg_facts`.

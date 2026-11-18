@@ -73,9 +73,9 @@ Không có endpoint cập nhật dữ liệu, nạp file, xóa hội thoại, SP
     "question": "Đơn vị có mã 00070 là gì?",
     "route": "kg",
     "domain": "administration",
-    "route_confidence": 0.7,
-    "domain_confidence": 0.7,
-    "method": "tfidf_logistic_regression"
+    "route_confidence": 1.0,
+    "domain_confidence": 1.0,
+    "method": "administrative_code_rule"
   },
   "plan": {
     "route": "kg",
@@ -89,7 +89,9 @@ Không có endpoint cập nhật dữ liệu, nạp file, xóa hội thoại, SP
 }
 ```
 
-Ví dụ theo nhánh mã đơn vị trong code; confidence có thể đổi theo mô hình/quy tắc. Khi quy tắc ghi đè dự đoán, confidence được gán 0,70, không phải xác suất đúng thực tế được hiệu chuẩn. `route` là `kg/rag/hybrid`; `intent` là `logical/textual/hybrid`; `scope` là `supported/out_of_scope`.
+Nhánh mã được nhận diện trước mô hình thống kê bằng `administrative_codes.py`; giá trị 1,0 biểu thị quy tắc nhận diện, không phải độ chính xác dữ kiện. Các quy tắc ghi đè thống kê khác vẫn dùng 0,70. `route` là `kg/rag/hybrid`; `intent` là `logical/textual/hybrid`; `scope` là `supported/out_of_scope`.
+
+Plan còn có `administrative_code={status,code,candidates,reason,descriptive}`. Hai câu “00008 thuộc địa phương nào” và “mã địa phương 00008 thuộc địa phương nào” cùng lập `03_unit_by_code`, giữ `code="00008"`. Câu không dấu được nhận diện tương tự. Số đứng riêng, nhiều mã hoặc mã bưu chính/đặt chỗ có thể trả `clarification` và không truy xuất. Số trong “Phường 12” không được coi là mã.
 
 `/v1/classify` chỉ lập kế hoạch. `scope=supported` chưa chứng minh dữ liệu có câu trả lời.
 
@@ -106,12 +108,14 @@ Trả các trường sau:
 | `kg_results` | Mảng binding SPARQL; trường phụ thuộc mẫu query, giá trị RDF thường chuyển thành string |
 | `rag_results` | Mảng chunk theo schema bên dưới |
 | `evidence_count` | Tổng số dòng KG và kết quả RAG, trước khi lọc minh chứng sinh câu |
-| `status` | `ready`, `partial`, `no_evidence`, `unsupported_constraints`, `out_of_scope` |
+| `status` | `ready`, `partial`, `no_evidence`, `unsupported_constraints`, `out_of_scope`, `needs_clarification` |
 | `physical_filters` | `domain`, `doc_ids`, `entity_terms` thực sự áp cho nhánh RAG |
 | `warnings` | Mảng chuỗi cảnh báo |
 | `timings_ms` | `classification`, `kg`, `rag`, `total` |
 
 Kết quả KG có thể được bổ sung `source_record_ids`, `source_names`, `source_urls`. Lỗi KG/RAG bên trong processor thường được đưa vào `warnings`; endpoint có thể trả HTTP 200 cùng kết quả một phần hoặc không có minh chứng.
+
+Tra mã bằng `03_unit_by_code` hoặc `09_unit_at_time` không chuyển sang RAG, kể cả KG rỗng/lỗi. Processor loại dòng sai mã, sai loại đơn vị, thiếu tên/tỉnh hoặc không thỏa ngày/tỉnh được hỏi. Cờ nhận diện trong plan không chứng minh có bản ghi phù hợp.
 
 ### `POST /v1/rag/search`
 
@@ -156,16 +160,21 @@ Các trường của `/v1/answer` và nhánh trả lời thông thường của 
 | `question` | Câu hỏi đã xử lý |
 | `classification`, `plan` | Phân loại và kế hoạch |
 | `effective_route`, `retrieval_status` | Cách truy xuất và trạng thái trước sinh |
-| `status` | `answered`, `partial`, `abstained` |
+| `status` | `answered`, `partial`, `abstained`, `needs_clarification` |
 | `answer` | Chuỗi tiếng Việt, gồm ký hiệu nguồn và phần nguồn |
 | `claims` | Mệnh đề đã qua kiểm tra: `claim_id`, `mode`, `text`, `evidence_ids`; mệnh đề fact có `fields`, `fact_checks` |
 | `citations` | Nguồn tương ứng với mệnh đề được giữ |
 | `cross_check` | Kết quả kiểm tra, số lượng supported/rejected và phạm vi xác minh |
 | `warnings` | Cảnh báo dữ liệu, mệnh đề bị loại, nội dung thiếu hoặc từ chối |
 | `llm` | Trạng thái LLM |
+| `generation_mode` | Có khi trả lời: `structured_kg` cho tra mã trực tiếp; `llm_claim_selection` cho nhánh chọn mệnh đề bằng LLM |
 | `timings_ms` | `question_processing`, `generation`, `kg_refresh`, `cross_check`, `total` |
 
 Mỗi citation có `number`, `evidence_id`, `kind` (`kg/rag`), `title`, `source`, `source_url` (có thể null), `source_record_ids`, `source_verified`. Mã minh chứng và số thứ tự chỉ có ý nghĩa trong một response. `source_verified=false` trong pipeline hiện tại, kể cả khi URL thuộc cơ quan chính thức.
+
+Nhánh `structured_kg` dựng câu từ một bản ghi KG duy nhất, truy vấn lại và kiểm tra mã/tên/tỉnh/ngày trước khi trả lời; không gọi E5/Qwen. Vì vậy `llm.ready=false` vẫn có thể đi cùng câu trả lời mã thành công. `cross_check.question_constraints_checked=true` chỉ có khi câu tra mã khớp hợp đồng truy vấn được dựng lại từ câu hỏi và các trường cần thiết. Câu hỏi kèm mô tả/du lịch chưa được đáp ứng đầy đủ trả `partial` với cờ này là false. Nhiều bản ghi khớp trả `needs_clarification`, không tự chọn dòng đầu.
+
+Giao diện dùng nhãn “Đã kiểm tra mã và điều kiện tra cứu” khi `status=answered`, `generation_mode=structured_kg` và cờ trên là true. Câu trả lời chung dùng “Có minh chứng trích dẫn”. Đây là kiểm tra dữ liệu KG cục bộ, không phải xác minh độc lập nguồn trên mạng. Lịch sử cũ thiếu cờ dùng nhãn chung.
 
 Response từ chối rút gọn:
 

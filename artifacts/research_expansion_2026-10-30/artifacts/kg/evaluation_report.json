@@ -1,0 +1,378 @@
+{
+  "cases": 17,
+  "passed": 17,
+  "accuracy": 1.0,
+  "exhaustive_cases": 14,
+  "true_positives": 9,
+  "false_positives": 0,
+  "false_negatives": 0,
+  "precision": 1.0,
+  "recall": 1.0,
+  "f1": 1.0,
+  "required_binding_recall": 1.0,
+  "metric_scope": "Precision/recall/F1 use exhaustive expected_rows cases only; must_contain cases check coverage.",
+  "details": [
+    {
+      "case_id": "province_count",
+      "passed": true,
+      "rows_returned": 34,
+      "expected_matched": 1,
+      "expected_total": 1,
+      "exhaustive": false,
+      "false_positives": null,
+      "latency_ms": 35.014166991459206,
+      "sample": [
+        {
+          "unit": "https://w3id.org/vn-assistant/resource/province_5020725bc169a062",
+          "name": "Thành phố Bắc Ninh",
+          "code": "24"
+        },
+        {
+          "unit": "https://w3id.org/vn-assistant/resource/province_e42fa65445ff785b",
+          "name": "Thành phố Cần Thơ",
+          "code": "92"
+        },
+        {
+          "unit": "https://w3id.org/vn-assistant/resource/province_3bea54f1e28e97b3",
+          "name": "Thành phố Huế",
+          "code": "46"
+        },
+        {
+          "unit": "https://w3id.org/vn-assistant/resource/province_49007d4c7b40821e",
+          "name": "Thành phố Hà Nội",
+          "code": "01"
+        },
+        {
+          "unit": "https://w3id.org/vn-assistant/resource/province_c1206ae1209e8075",
+          "name": "Thành phố Hải Phòng",
+          "code": "31"
+        }
+      ]
+    },
+    {
+      "case_id": "hanoi_ward",
+      "passed": true,
+      "rows_returned": 126,
+      "expected_matched": 1,
+      "expected_total": 1,
+      "exhaustive": false,
+      "false_positives": null,
+      "latency_ms": 501.0243750002701,
+      "sample": [
+        {
+          "ward": "https://w3id.org/vn-assistant/resource/ward_2a9e972a5a556b59",
+          "wardName": "Phường Ba Đình",
+          "code": "00004"
+        },
+        {
+          "ward": "https://w3id.org/vn-assistant/resource/ward_e0964940fcb370fd",
+          "wardName": "Phường Bạch Mai",
+          "code": "00292"
+        },
+        {
+          "ward": "https://w3id.org/vn-assistant/resource/ward_e47a73d38f2a535f",
+          "wardName": "Phường Bồ Đề",
+          "code": "00118"
+        },
+        {
+          "ward": "https://w3id.org/vn-assistant/resource/ward_451f8e5dfc146daa",
+          "wardName": "Phường Chương Mỹ",
+          "code": "10015"
+        },
+        {
+          "ward": "https://w3id.org/vn-assistant/resource/ward_1dc5d00c5192d094",
+          "wardName": "Phường Cầu Giấy",
+          "code": "00166"
+        }
+      ]
+    },
+    {
+      "case_id": "ward_code_lookup",
+      "passed": true,
+      "rows_returned": 1,
+      "expected_matched": 1,
+      "expected_total": 1,
+      "exhaustive": true,
+      "false_positives": 0,
+      "latency_ms": 18.727209011558443,
+      "sample": [
+        {
+          "unit": "https://w3id.org/vn-assistant/resource/ward_520d15edd9e66a8d",
+          "type": "https://w3id.org/vn-assistant/ontology#Ward",
+          "name": "Phường Hoàn Kiếm",
+          "code": "00070",
+          "provinceName": "Thành phố Hà Nội",
+          "snapshotDate": "2026-10-24"
+        }
+      ]
+    },
+    {
+      "case_id": "merger_co_do",
+      "passed": true,
+      "rows_returned": 1,
+      "expected_matched": 1,
+      "expected_total": 1,
+      "exhaustive": true,
+      "false_positives": 0,
+      "latency_ms": 595.1497500063851,
+      "sample": [
+        {
+          "oldUnit": "https://w3id.org/vn-assistant/resource/historicaladministrativeunit_fa1157a0af391867",
+          "oldName": "Thị trấn Cờ Đỏ",
+          "newUnit": "https://w3id.org/vn-assistant/resource/ward_bf410315c256f9b8",
+          "newName": "Xã Cờ Đỏ",
+          "newCode": "31261",
+          "validFrom": "2025-07-01",
+          "transitionType": "liên kết chuyển đổi sau sắp xếp"
+        }
+      ]
+    },
+    {
+      "case_id": "unit_00004",
+      "passed": true,
+      "rows_returned": 1,
+      "expected_matched": 1,
+      "expected_total": 1,
+      "exhaustive": true,
+      "false_positives": 0,
+      "latency_ms": 18.693167017772794,
+      "sample": [
+        {
+          "unit": "https://w3id.org/vn-assistant/resource/ward_2a9e972a5a556b59",
+          "type": "https://w3id.org/vn-assistant/ontology#Ward",
+          "name": "Phường Ba Đình",
+          "code": "00004",
+          "provinceName": "Thành phố Hà Nội",
+          "snapshotDate": "2026-10-24"
+        }
+      ]
+    },
+    {
+      "case_id": "unit_00008",
+      "passed": true,
+      "rows_returned": 1,
+      "expected_matched": 1,
+      "expected_total": 1,
+      "exhaustive": true,
+      "false_positives": 0,
+      "latency_ms": 17.509541008621454,
+      "sample": [
+        {
+          "unit": "https://w3id.org/vn-assistant/resource/ward_3f337c1dcc70a82d",
+          "type": "https://w3id.org/vn-assistant/ontology#Ward",
+          "name": "Phường Ngọc Hà",
+          "code": "00008",
+          "provinceName": "Thành phố Hà Nội",
+          "snapshotDate": "2026-10-24"
+        }
+      ]
+    },
+    {
+      "case_id": "unit_00025",
+      "passed": true,
+      "rows_returned": 1,
+      "expected_matched": 1,
+      "expected_total": 1,
+      "exhaustive": true,
+      "false_positives": 0,
+      "latency_ms": 17.354541982058436,
+      "sample": [
+        {
+          "unit": "https://w3id.org/vn-assistant/resource/ward_162cb752de2843a8",
+          "type": "https://w3id.org/vn-assistant/ontology#Ward",
+          "name": "Phường Giảng Võ",
+          "code": "00025",
+          "provinceName": "Thành phố Hà Nội",
+          "snapshotDate": "2026-10-24"
+        }
+      ]
+    },
+    {
+      "case_id": "unit_31261",
+      "passed": true,
+      "rows_returned": 1,
+      "expected_matched": 1,
+      "expected_total": 1,
+      "exhaustive": true,
+      "false_positives": 0,
+      "latency_ms": 17.083249986171722,
+      "sample": [
+        {
+          "unit": "https://w3id.org/vn-assistant/resource/ward_e5429e52e8eaa28e",
+          "type": "https://w3id.org/vn-assistant/ontology#Ward",
+          "name": "Xã Cờ Đỏ",
+          "code": "31261",
+          "provinceName": "Thành phố Cần Thơ",
+          "snapshotDate": "2026-10-24"
+        }
+      ]
+    },
+    {
+      "case_id": "unknown_code_8",
+      "passed": true,
+      "rows_returned": 0,
+      "expected_matched": 0,
+      "expected_total": 0,
+      "exhaustive": true,
+      "false_positives": 0,
+      "latency_ms": 12.963499990291893,
+      "sample": []
+    },
+    {
+      "case_id": "unknown_code_9",
+      "passed": true,
+      "rows_returned": 0,
+      "expected_matched": 0,
+      "expected_total": 0,
+      "exhaustive": true,
+      "false_positives": 0,
+      "latency_ms": 13.425999990431592,
+      "sample": []
+    },
+    {
+      "case_id": "unknown_code_10",
+      "passed": true,
+      "rows_returned": 0,
+      "expected_matched": 0,
+      "expected_total": 0,
+      "exhaustive": true,
+      "false_positives": 0,
+      "latency_ms": 12.873750005383044,
+      "sample": []
+    },
+    {
+      "case_id": "unknown_entity",
+      "passed": true,
+      "rows_returned": 0,
+      "expected_matched": 0,
+      "expected_total": 0,
+      "exhaustive": true,
+      "false_positives": 0,
+      "latency_ms": 40.443334000883624,
+      "sample": []
+    },
+    {
+      "case_id": "old_code_reuse",
+      "passed": true,
+      "rows_returned": 1,
+      "expected_matched": 1,
+      "expected_total": 1,
+      "exhaustive": true,
+      "false_positives": 0,
+      "latency_ms": 48.99658399517648,
+      "sample": [
+        {
+          "unit": "https://w3id.org/vn-assistant/resource/historicaladministrativeunit_454ac54af3e12762",
+          "type": "https://w3id.org/vn-assistant/ontology#HistoricalAdministrativeUnit",
+          "name": "Phường Hàng Trống",
+          "code": "00070",
+          "provinceName": "Thành phố Hà Nội",
+          "validTo": "2025-06-30",
+          "snapshotDate": "2025-06-30"
+        }
+      ]
+    },
+    {
+      "case_id": "2025_province_name",
+      "passed": true,
+      "rows_returned": 1,
+      "expected_matched": 1,
+      "expected_total": 1,
+      "exhaustive": true,
+      "false_positives": 0,
+      "latency_ms": 46.721374994376674,
+      "sample": [
+        {
+          "unit": "https://w3id.org/vn-assistant/resource/province_8d73d3235d23bbcb",
+          "type": "https://w3id.org/vn-assistant/ontology#Province",
+          "name": "Tỉnh Quảng Ninh",
+          "code": "22",
+          "validFrom": "2025-07-01",
+          "snapshotDate": "2025-07-01"
+        }
+      ]
+    },
+    {
+      "case_id": "2026_province_name",
+      "passed": true,
+      "rows_returned": 1,
+      "expected_matched": 1,
+      "expected_total": 1,
+      "exhaustive": true,
+      "false_positives": 0,
+      "latency_ms": 45.92837500968017,
+      "sample": [
+        {
+          "unit": "https://w3id.org/vn-assistant/resource/province_63b239eed266f02a",
+          "type": "https://w3id.org/vn-assistant/ontology#Province",
+          "name": "Thành phố Quảng Ninh",
+          "code": "22",
+          "snapshotDate": "2026-10-24"
+        }
+      ]
+    },
+    {
+      "case_id": "no_interpolation",
+      "passed": true,
+      "rows_returned": 0,
+      "expected_matched": 0,
+      "expected_total": 0,
+      "exhaustive": true,
+      "false_positives": 0,
+      "latency_ms": 47.02525000902824,
+      "sample": []
+    },
+    {
+      "case_id": "tourism_hanoi",
+      "passed": true,
+      "rows_returned": 30,
+      "expected_matched": 1,
+      "expected_total": 1,
+      "exhaustive": false,
+      "false_positives": null,
+      "latency_ms": 1541.4626249985304,
+      "sample": [
+        {
+          "entity": "https://w3id.org/vn-assistant/resource/tourismplace_7a04799f66b9962d",
+          "name": "Bảo tàng Dân tộc học Việt Nam",
+          "type": "https://w3id.org/vn-assistant/ontology#TourismPlace",
+          "province": "https://w3id.org/vn-assistant/resource/province_49007d4c7b40821e",
+          "provinceName": "Thành phố Hà Nội",
+          "address": "Đường Nguyễn Văn Huyên, Quận Cầu Giấy, Thành phố Hà Nội"
+        },
+        {
+          "entity": "https://w3id.org/vn-assistant/resource/tourismplace_61b3193f33b8a1a5",
+          "name": "Bảo tàng Lịch sử Quân sự (Bảo tàng Quân Đội)",
+          "type": "https://w3id.org/vn-assistant/ontology#TourismPlace",
+          "province": "https://w3id.org/vn-assistant/resource/province_49007d4c7b40821e",
+          "provinceName": "Thành phố Hà Nội",
+          "address": "Số 28A đường Điện Biên Phủ, Quận Ba Đình, Thành phố Hà Nội"
+        },
+        {
+          "entity": "https://w3id.org/vn-assistant/resource/tourismplace_b654a620499e51b7",
+          "name": "Bảo tàng Mỹ thuật Việt Nam",
+          "type": "https://w3id.org/vn-assistant/ontology#TourismPlace",
+          "province": "https://w3id.org/vn-assistant/resource/province_49007d4c7b40821e",
+          "provinceName": "Thành phố Hà Nội",
+          "address": "Số 66 phố Nguyễn Thái Học, Quận Ba Đình, Thành phố Hà Nội"
+        },
+        {
+          "entity": "https://w3id.org/vn-assistant/resource/tourismplace_02757dfe9d923dba",
+          "name": "Bảo tàng Phụ nữ Việt Nam",
+          "type": "https://w3id.org/vn-assistant/ontology#TourismPlace",
+          "province": "https://w3id.org/vn-assistant/resource/province_49007d4c7b40821e",
+          "provinceName": "Thành phố Hà Nội",
+          "address": "Số 36 Lý Thường Kiệt, Quận Hoàn Kiếm, Thành phố Hà Nội"
+        },
+        {
+          "entity": "https://w3id.org/vn-assistant/resource/tourismplace_8072ed8e4843db93",
+          "name": "Chùa Một Cột",
+          "type": "https://w3id.org/vn-assistant/ontology#TourismPlace",
+          "province": "https://w3id.org/vn-assistant/resource/province_49007d4c7b40821e",
+          "provinceName": "Thành phố Hà Nội",
+          "address": "Phố Chùa Một Cột, Quận Ba Đình, Thành phố Hà Nội"
+        }
+      ]
+    }
+  ]
+}

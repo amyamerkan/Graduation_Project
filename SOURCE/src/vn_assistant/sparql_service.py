@@ -8,6 +8,7 @@ from typing import Any
 
 from rdflib import Graph, URIRef
 from rdflib.plugins.sparql import prepareQuery
+from .administrative_codes import province_matches
 
 
 PLACEHOLDER = re.compile(r"\{\{([a-zA-Z_][a-zA-Z0-9_]*)\}\}")
@@ -55,7 +56,11 @@ class SparqlService:
         return PLACEHOLDER.sub(replace, template)
 
     def execute(self, query_name: str, params: dict[str, Any] | None = None) -> list[dict[str, str]]:
-        query = self.render_query(query_name, params)
+        # Match province names exactly after accent folding. SPARQL substring
+        # matching alone can accept the wrong place or miss unaccented input.
+        province = (params or {}).get("province") if query_name == "09_unit_at_time" else None
+        query_params = {**params, "province": ""} if province else params
+        query = self.render_query(query_name, query_params)
         if query_name in {"08_entity_facts", "04_merger_history", "02_wards_in_province", "10_tourism_in_province"}:
             key, variable = {"08_entity_facts": ("keyword", "entity"), "04_merger_history": ("old_name", "oldUnit"),
                              "02_wards_in_province": ("province", "province"), "10_tourism_in_province": ("province", "province")}[query_name]
@@ -70,6 +75,9 @@ class SparqlService:
         with self._query_lock:
             result = self.graph.query(self._prepare(query))
             rows = [{str(name): str(value) for name, value in row.asdict().items() if value is not None} for row in result]
+        if province:
+            rows = [row for row in rows if province_matches(province, row.get("provinceName") or
+                    (row.get("name", "") if row.get("type", "").rsplit("#", 1)[-1] in {"Province", "HistoricalProvince"} else ""))]
         return rows
 
     def search_entities(self, keyword: str, limit: int = 10) -> list[dict[str, str]]:

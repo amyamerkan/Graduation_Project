@@ -88,7 +88,7 @@ def test_kg_empty_uses_rag_and_keeps_evidence(tmp_path):
     class RAG:
         def search(self, question, top_k, domain, **kwargs): return [{'text': 'evidence', 'domain': domain}]
     processor = QuestionProcessor(QuestionRouter(tmp_path/'missing'), EmptyKG(), RAG())
-    result = processor.process('Phường có mã 99999 là gì?')
+    result = processor.process('Phường A thuộc tỉnh nào?')
     assert result['effective_route'] == 'rag_fallback'
     assert result['evidence_count'] == 1
 
