@@ -209,6 +209,12 @@ class AnswerService:
         evidence = build_evidence(evidence_input, max_evidence=self.max_evidence, min_rag_score=self.min_rag_score)
         if not evidence:
             return abstain("no_eligible_evidence")
+        kg_plan = processed.get("plan", {}).get("kg") or {}
+        related_lookup = bool(
+            processed.get("plan", {}).get("current_snapshot_lookup")
+            and kg_plan.get("query") == "08_entity_facts"
+            and not processed.get("kg_results")
+        )
         if structured_code:
             entry = evidence[0]
             facts = entry["facts"]
@@ -231,6 +237,23 @@ class AnswerService:
             return abstain("no_eligible_claims")
         if structured_code:
             claims = list(registry.values())
+        elif related_lookup:
+            # When exact current-name matching fails, show a small set of
+            # distinct, high-scoring source excerpts as related candidates.
+            # This helps the user orient themselves without asserting that
+            # similarly named units are the same unit or direct successors.
+            claims = []
+            seen_titles = set()
+            for entry in evidence:
+                title = str(entry.get("title", "")).casefold().strip()
+                if entry.get("kind") != "rag" or not title or title in seen_titles:
+                    continue
+                allowed = entry.get("allowed_claims", [])
+                if allowed:
+                    claims.append(copy.deepcopy(allowed[0]))
+                    seen_titles.add(title)
+                if len(claims) >= 2:
+                    break
         else:
             generation_started = perf_counter()
             raw = self.generator.generate(build_messages(question, evidence))
@@ -315,8 +338,9 @@ class AnswerService:
                     })
                 markers.append(f"[{numbers[evidence_id]}]")
             rendered.append(claim["text"] + " " + "".join(markers))
-        partial = bool(checked.get("rejected")) or processed.get("status") == "partial" or bool(missing_fields)
-        kg_plan = processed.get("plan", {}).get("kg") or {}
+        partial = bool(checked.get("rejected")) or processed.get("status") == "partial" or bool(missing_fields) or related_lookup
+        if related_lookup:
+            warnings.append("related_entity_candidates")
         entities = {
             str(row.get("entity") or row.get("unit") or row.get("heritage") or row.get("ward"))
             for row in processed.get("kg_results", [])
@@ -344,7 +368,14 @@ class AnswerService:
             else:
                 location = "tài liệu trong bộ dữ liệu cục bộ"
             sources.append(f"[{citation['number']}] {title} — {location}")
-        introduction = "Tên được hỏi khớp với nhiều thực thể. Các thông tin dưới đây thuộc những bản ghi được dẫn nguồn; cần thêm địa phương hoặc mã để xác định thực thể bạn muốn hỏi.\n" if ambiguous else "Theo các minh chứng tìm được:\n"
+        if related_lookup:
+            keyword = kg_plan.get("params", {}).get("keyword", "tên bạn hỏi")
+            introduction = (
+                f"Mình không tìm thấy bản ghi hiện hành khớp chính xác với “{keyword}”. "
+                "Dưới đây là các hồ sơ gần nhất trong dữ liệu; tên gần nhau không đồng nghĩa là cùng một đơn vị hoặc quan hệ kế thừa trực tiếp.\n"
+            )
+        else:
+            introduction = "Tên được hỏi khớp với nhiều thực thể. Các thông tin dưới đây thuộc những bản ghi được dẫn nguồn; cần thêm địa phương hoặc mã để xác định thực thể bạn muốn hỏi.\n" if ambiguous else "Theo các minh chứng tìm được:\n"
         if missing_fields:
             introduction = "Minh chứng hiện có chưa xác nhận được " + ", ".join(missing_fields.values()) + ". Dưới đây là phần thông tin đã kiểm tra được:\n" + (introduction if ambiguous else "")
         text = introduction + "\n".join(rendered) + "\n\nNguồn minh chứng:\n" + "\n".join(sources)

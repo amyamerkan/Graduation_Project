@@ -185,6 +185,24 @@ def extract_query_plan(question: str, classification: Classification) -> dict[st
     quoted = re.findall(r'["“](.*?)["”]', question)
     province = _extract_province(question)
     constraints = _extract_constraints(question)
+    # A code/name lookup without an explicit date uses the latest available
+    # administrative snapshot. Current KG templates already enforce this with
+    # isCurrentSnapshot; relative wording such as "hiện nay" is not a reason
+    # to reject an otherwise supported lookup.
+    current_snapshot_lookup = (
+        classification.domain == "administration"
+        and bool(re.search(r"\bmã\b|\bmã hành chính\b", lowered))
+        and not re.search(_TEMPORAL_LITERAL, lowered)
+        and not any(term in fold_query(question) for term in ("trước đây", "trước sáp nhập", "trước sắp xếp", "quận cũ", "phường cũ", "năm trước", "năm ngoái"))
+    )
+    current_time_terms = ("hiện nay", "hiện tại", "bây giờ", "hôm nay")
+    other_relative_time = any(
+        fold_query(term) in fold_query(question)
+        for term in _RELATIVE_TIME_TERMS if term not in current_time_terms
+    )
+    if current_snapshot_lookup and not constraints["spatial"] and not other_relative_time:
+        constraints["temporal"] = []
+        constraints["unsupported"] = []
     warnings = list(constraints["unsupported"])
     temporal_plan = _dated_unit_plan(question, code)
     if temporal_plan and not constraints["spatial"]:
@@ -225,6 +243,7 @@ def extract_query_plan(question: str, classification: Classification) -> dict[st
     intent = {"kg": "logical", "rag": "textual", "hybrid": "hybrid"}[classification.route]
     return {"route": route, "kg": kg, "rag": rag, "intent": "logical" if code else intent,
             "administrative_code": reference.to_dict(), "constraints": constraints, "warnings": warnings,
+            "current_snapshot_lookup": current_snapshot_lookup,
             "scope": "out_of_scope" if out_of_scope else "supported"}
 
 
@@ -302,6 +321,19 @@ def _extract_province(question: str) -> str | None:
 def _extract_entity_keyword(question: str) -> str:
     question = clean_text(question)
     question = re.sub(r"^(?:(?:hãy|vui lòng)\s+)?(?:cho (?:tôi|mình|em) biết|cho biết|giới thiệu|mô tả|thông tin|tóm tắt)\s+(?:về\s+)?", "", question, flags=re.I)
+    code_lookup = re.search(r"\bmã\b", question, flags=re.I)
+    if code_lookup:
+        before_code = question[:code_lookup.start()].strip()
+        if before_code and re.search(r"\b(?:tỉnh|thành phố|phường|xã|huyện|quận|địa phương)\b", before_code, flags=re.I):
+            before_code = re.sub(r"\s+(?:hiện nay|hiện tại|bây giờ|có|là)\b.*$", "", before_code, flags=re.I).strip()
+            return re.sub(r"^(?:tỉnh|thành phố|phường|xã|huyện|quận)\s+", "", before_code, flags=re.I)
+        match = re.search(
+            r"\bmã(?:\s+hành chính)?(?:\s+(?:đơn vị|địa phương|tỉnh|thành phố|phường|xã|huyện|quận))?\s+(?:của\s+)?(.+?)(?=\s+(?:hiện nay|hiện tại|bây giờ|là|có|nào|bao nhiêu|không)\b|[?!.]|$)",
+            question,
+            flags=re.I,
+        )
+        if match and match.group(1).strip() and match.group(1).strip().casefold() not in {"nào", "gì", "bao nhiêu", "là gì"}:
+            return re.sub(r"^(?:tỉnh|thành phố|phường|xã|huyện|quận)\s+", "", match.group(1).strip(), flags=re.I)
     patterns = [r"(?:của|về)\s+([^?.,]+)", r"^(.+?)\s+(?:nằm|thuộc|được|có|là|ở đâu|sáp nhập|hiện nay|nay)\b",
                 r"((?:thành phố|tỉnh|phường|xã|thị trấn|huyện|quận|di sản|di tích|bảo tàng|vịnh|phố cổ|cố đô|thánh địa)\s+[^?.,]+)"]
     for pattern in patterns:

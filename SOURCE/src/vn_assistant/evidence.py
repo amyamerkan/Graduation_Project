@@ -60,7 +60,8 @@ def build_evidence(processed: dict[str, Any], max_evidence: int = 6, min_rag_sco
     kg_rows = processed.get("kg_results", [])
     rag_rows = processed.get("rag_results", [])
     kg_plan = processed.get("plan", {}).get("kg") or {}
-    anchor = clean_text(kg_plan.get("params", {}).get("keyword", "")).casefold() if kg_plan.get("query") == "08_entity_facts" and not kg_rows else ""
+    related_lookup = bool(processed.get("plan", {}).get("current_snapshot_lookup") and not kg_rows)
+    anchor = clean_text(kg_plan.get("params", {}).get("keyword", "")).casefold() if kg_plan.get("query") == "08_entity_facts" and not kg_rows and not related_lookup else ""
     kg_limit = max(1, max_evidence // 2) if rag_rows else max_evidence
     records: list[dict[str, Any]] = []
     seen = set()
